@@ -7,6 +7,14 @@ This repository contains two connected systems:
 
 It is intended to be readable by humans and remote coding/research agents working from GitHub.
 
+## Initial Search Instruction
+
+Content map of this repository:
+
+https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/RESEARCH_AGENT_MAP.md
+
+Read that file first for repository access, exact paths, raw URLs, and task routing. If fetching fails, report it to the user. If the remote repository appears stale or behind local work, report that so the team can push the latest information.
+
 ## Start Here
 
 | Question type | Inspect first |
