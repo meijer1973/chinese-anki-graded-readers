@@ -62,6 +62,8 @@ Stretch words are review-first Anki candidates. Do not directly mutate the live 
 - `downloads/`, `SUBTLEX-CH-CHR/`, and `SUBTLEX-CH-WF/` are source/reference data directories.
 - `data/known_words.txt` is the active machine-readable known-word list for restricted-vocabulary fiction. It is generated from the ranked source list by `scripts/sync_known_words.py`.
 - `configs/novel_generation.default.json` is the default configuration template for graded-reader novel projects.
+- `AGENT_GITHUB_ENTRY.md`, `RESEARCH_AGENT_MAP.md`, `RESEARCH_AGENT_PROMPT.md`, and `repo_manifest.json` are the GitHub-facing machine-readable/research-agent entry points.
+- `reports/github-agent-index.md`, `reports/github-agent-index.json`, and `reports/url-index.md` are generated inventories for remote agents; refresh them with `python scripts/build_agent_index.py`.
 - `manuscripts/<project-slug>/` contains novel bibles, outlines, canonical tokenized chapters, validation reports, continuity logs, and EPUB exports.
 - `scripts/load_known_words.py`, `scripts/validate_chapter.py`, `scripts/validate_book.py`, `scripts/generate_reports.py`, `scripts/vocabulary_usage_report.py`, `scripts/repeated_phrase_report.py`, `scripts/run_quality_gate.py`, and `scripts/build_epub.py` inspect, validate, review-prep, report, and export restricted-vocabulary manuscripts.
 - `.agents/skills/` and `.codex/agents/` contain repo-local Codex workflows and role definitions for novel planning, chapter writing, validation, continuity editing, literary review, reader review, lead quality review, and EPUB export.
@@ -313,4 +315,4 @@ If a script fails on imports, install the missing package in the active Python e
 
 ## Local State Notes
 
-This checkout currently has no `.git` metadata, so `git status` and `git diff` are not available. Use file timestamps, backups, reports, and targeted content checks to understand recent changes.
+This checkout is a Git repository with `main` tracking `origin/main`. Use normal `git status`, `git diff`, and small reviewable commits. Generated/local artifacts are ignored by `.gitignore`.

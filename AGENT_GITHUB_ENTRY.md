@@ -1,0 +1,68 @@
+# GitHub Agent Entry - Chinese Anki And Graded Readers
+
+This repository contains two connected systems:
+
+1. Chinese vocabulary Anki deck tooling.
+2. A controlled-vocabulary Chinese graded-reader fiction pipeline.
+
+It is intended to be readable by humans and remote coding/research agents working from GitHub.
+
+## Start Here
+
+| Question type | Inspect first |
+|---|---|
+| How should agents work in this repo? | `AGENTS.md` |
+| What is the high-level project? | `README.md` |
+| How should remote agents traverse the repo? | `RESEARCH_AGENT_MAP.md` |
+| What prompt should a remote research agent use? | `RESEARCH_AGENT_PROMPT.md` |
+| What machine-readable manifest describes the repo? | `repo_manifest.json` |
+| How is a known-word list generated? | `scripts/sync_known_words.py`, `data/known_words.metadata.json` |
+| How is a chapter validated? | `scripts/validate_chapter.py`, `scripts/novel_tools.py` |
+| How is a whole manuscript validated? | `scripts/validate_book.py`, `scripts/generate_reports.py` |
+| How is quality reviewed? | `docs/quality-review.md`, `.agents/skills/chinese-lead-quality-review/SKILL.md` |
+| How is EPUB built? | `scripts/build_epub.py`, `.agents/skills/epub-export/SKILL.md` |
+| How do stretch words flow toward Anki? | `docs/anki-integration.md`, `scripts/export_stretch_words_for_anki.py` |
+| What is the current successful story trial? | `manuscripts/shanghai-rain-ticket/` |
+
+## Access Layer
+
+Repository:
+
+```text
+https://github.com/meijer1973/chinese-anki-graded-readers
+```
+
+Raw base URL:
+
+```text
+https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/
+```
+
+Construct raw file URLs as:
+
+```text
+<raw_base_url><relative_path>
+```
+
+Example:
+
+```text
+AGENTS.md ->
+https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/AGENTS.md
+```
+
+## Path Reliability
+
+- Prefer exact paths from `RESEARCH_AGENT_MAP.md`, `AGENT_GITHUB_ENTRY.md`, or `repo_manifest.json`.
+- Use `reports/github-agent-index.md` for existence checks.
+- Use `reports/url-index.md` when an external agent cannot construct URLs from a base path.
+- Use GitHub search mainly for discovery, then confirm through exact paths.
+- Refresh the reports with `python scripts/build_agent_index.py` after path or workflow changes.
+
+## Common Mistakes
+
+- Treating ignored Anki exports or backups as source of truth.
+- Treating EPUB files as canonical story source. The canonical source is `chapters/*.zh-tok.txt`.
+- Assuming validation quality equals literary quality.
+- Forgetting to pass stretch packs, `book_specific_words.txt`, and `proper_nouns.txt` when validating layered manuscripts.
+- Treating unknown-token allowance as a target. It is only breathing room.

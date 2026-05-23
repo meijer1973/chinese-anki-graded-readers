@@ -12,6 +12,25 @@ This repository maintains a Chinese vocabulary Anki deck and a controlled-vocabu
 - Run quality review with `scripts/run_quality_gate.py`.
 - Build EPUB files with `scripts/build_epub.py` after validation and lead approval.
 
+## Machine-Readable Entry Points
+
+Remote agents should start with:
+
+- `AGENT_GITHUB_ENTRY.md`
+- `RESEARCH_AGENT_MAP.md`
+- `RESEARCH_AGENT_PROMPT.md`
+- `repo_manifest.json`
+- `reports/url-index.md`
+- `reports/github-agent-index.md`
+
+Refresh generated indexes with:
+
+```powershell
+python scripts/build_agent_index.py
+```
+
+See `docs/machine-readable-repository.md`.
+
 ## Novel Pipeline
 
 The canonical story source is space-tokenized Chinese:
@@ -41,4 +60,3 @@ Run the test suite:
 $env:PYTHONIOENCODING='utf-8'
 python -m unittest discover -s tests
 ```
-

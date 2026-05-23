@@ -1,0 +1,107 @@
+{
+  "schema_version": 1,
+  "repository": {
+    "name": "chinese-anki-graded-readers",
+    "owner": "meijer1973",
+    "github_url": "https://github.com/meijer1973/chinese-anki-graded-readers",
+    "default_branch": "main",
+    "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
+    "purpose": "Chinese Anki deck tooling plus controlled-vocabulary Chinese graded-reader fiction generation."
+  },
+  "freshness_rule": "Refresh RESEARCH_AGENT_MAP.md, AGENT_GITHUB_ENTRY.md, reports/url-index.md, and reports/github-agent-index.md whenever repository paths, workflows, scripts, skills, agents, or manuscript conventions change.",
+  "human_entry_points": [
+    "README.md",
+    "AGENTS.md",
+    "AGENT_GITHUB_ENTRY.md",
+    "RESEARCH_AGENT_MAP.md",
+    "RESEARCH_AGENT_PROMPT.md",
+    "docs/novel-generation.md",
+    "docs/stretch-vocabulary.md",
+    "docs/anki-integration.md",
+    "docs/quality-review.md"
+  ],
+  "machine_entry_points": [
+    "repo_manifest.json",
+    "configs/novel_generation.default.json",
+    "data/known_words.metadata.json",
+    "data/known_words.txt",
+    "data/punctuation_allowlist.txt",
+    "data/stretch_packs/general_fiction_100.txt",
+    "data/stretch_packs/low_fantasy_150.txt",
+    "data/stretch_packs/shanghai_setting_150.txt",
+    "data/stretch_packs/professions_social_roles_100.txt",
+    "data/stretch_packs/urban_objects_100.txt",
+    "anki/stretch_word_candidates.tsv",
+    "manuscripts/shanghai-rain-ticket/vocabulary_report.json",
+    "manuscripts/shanghai-rain-ticket/quality/quality_gate_summary.json",
+    "reports/github-agent-index.md",
+    "reports/github-agent-index.json",
+    "reports/url-index.md"
+  ],
+  "path_namespaces": {
+    "agent_guidance": [
+      ".agents/skills",
+      ".codex/agents",
+      "AGENTS.md",
+      "AGENT_GITHUB_ENTRY.md",
+      "RESEARCH_AGENT_MAP.md",
+      "RESEARCH_AGENT_PROMPT.md"
+    ],
+    "anki_deck_tooling": [
+      "build_anki_chinese.py",
+      "sentence_example_overrides.py",
+      "apply_sentence_example_updates.py",
+      "apply_meaning_cleanup_updates.py",
+      "migrate_chinese_notes.py",
+      "setup_production_sentence_cards.py",
+      "ensure_single_character_notes.py",
+      "add_missing_single_character_notes.py",
+      "suggest_meaning_edits.py"
+    ],
+    "novel_pipeline": [
+      "scripts/novel_tools.py",
+      "scripts/validate_chapter.py",
+      "scripts/validate_book.py",
+      "scripts/generate_reports.py",
+      "scripts/run_quality_gate.py",
+      "scripts/build_epub.py",
+      "scripts/vocabulary_usage_report.py",
+      "scripts/repeated_phrase_report.py"
+    ],
+    "vocabulary": [
+      "word list chinese.txt",
+      "data/known_words.txt",
+      "data/stretch_packs",
+      "anki/stretch_word_candidates.tsv"
+    ],
+    "manuscripts": [
+      "manuscripts/sample-known-words",
+      "manuscripts/stretch-layer-fixture",
+      "manuscripts/shanghai-rain-ticket"
+    ],
+    "tests": [
+      "tests/test_novel_pipeline.py",
+      "tests/test_stretch_vocabulary.py"
+    ],
+    "generated_indexes": [
+      "reports/github-agent-index.md",
+      "reports/url-index.md"
+    ]
+  },
+  "commands": {
+    "run_tests": "$env:PYTHONIOENCODING='utf-8'; python -m unittest discover -s tests",
+    "sync_known_words": "python scripts/sync_known_words.py --limit 1000",
+    "validate_sample_book": "python scripts/validate_book.py --known data/known_words.txt --chapters manuscripts/sample-known-words/chapters --out manuscripts/sample-known-words/vocabulary_report.json",
+    "generate_agent_indexes": "python scripts/build_agent_index.py"
+  },
+  "generated_or_local_surfaces": [
+    "anki_chinese_import.tsv",
+    "anki_chinese_review.tsv",
+    "*_backup.tsv",
+    "downloads/",
+    "SUBTLEX-CH-CHR/",
+    "SUBTLEX-CH-WF/",
+    "manuscripts/*/epub/",
+    "__pycache__/"
+  ]
+}

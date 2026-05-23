@@ -1,0 +1,694 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-23T21:37:04Z",
+  "repository": "meijer1973/chinese-anki-graded-readers",
+  "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
+  "file_count": 137,
+  "files": [
+    {
+      "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-continuity-editing/SKILL.md",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".agents/skills/chinese-continuity-editing/agents/openai.yaml",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-continuity-editing/agents/openai.yaml",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".agents/skills/chinese-graded-novel-planning/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-graded-novel-planning/SKILL.md",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".agents/skills/chinese-graded-novel-planning/agents/openai.yaml",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-graded-novel-planning/agents/openai.yaml",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".agents/skills/chinese-lead-quality-review/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-lead-quality-review/SKILL.md",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".agents/skills/chinese-lead-quality-review/agents/openai.yaml",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-lead-quality-review/agents/openai.yaml",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".agents/skills/chinese-literary-critic/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-literary-critic/SKILL.md",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".agents/skills/chinese-literary-critic/agents/openai.yaml",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-literary-critic/agents/openai.yaml",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".agents/skills/chinese-normal-reader-review/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-normal-reader-review/SKILL.md",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".agents/skills/chinese-normal-reader-review/agents/openai.yaml",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-normal-reader-review/agents/openai.yaml",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".agents/skills/chinese-restricted-vocabulary-writing/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-restricted-vocabulary-writing/SKILL.md",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".agents/skills/chinese-restricted-vocabulary-writing/agents/openai.yaml",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-restricted-vocabulary-writing/agents/openai.yaml",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".agents/skills/chinese-vocabulary-validation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-vocabulary-validation/SKILL.md",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".agents/skills/chinese-vocabulary-validation/agents/openai.yaml",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-vocabulary-validation/agents/openai.yaml",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".agents/skills/epub-export/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/epub-export/SKILL.md",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".agents/skills/epub-export/agents/openai.yaml",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/epub-export/agents/openai.yaml",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".codex/agents/chapter-writer.toml",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.codex/agents/chapter-writer.toml",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".codex/agents/continuity-editor.toml",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.codex/agents/continuity-editor.toml",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".codex/agents/epub-builder.toml",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.codex/agents/epub-builder.toml",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".codex/agents/lead-quality-reviewer.toml",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.codex/agents/lead-quality-reviewer.toml",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".codex/agents/literary-critic.toml",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.codex/agents/literary-critic.toml",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".codex/agents/normal-reader.toml",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.codex/agents/normal-reader.toml",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".codex/agents/novel-planner.toml",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.codex/agents/novel-planner.toml",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".codex/agents/vocabulary-auditor.toml",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.codex/agents/vocabulary-auditor.toml",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".gitattributes",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.gitattributes",
+      "category": "root"
+    },
+    {
+      "path": ".gitignore",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.gitignore",
+      "category": "root"
+    },
+    {
+      "path": "AGENTS.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/AGENTS.md",
+      "category": "maps/prompts"
+    },
+    {
+      "path": "AGENT_GITHUB_ENTRY.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/AGENT_GITHUB_ENTRY.md",
+      "category": "maps/prompts"
+    },
+    {
+      "path": "README.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/README.md",
+      "category": "maps/prompts"
+    },
+    {
+      "path": "RESEARCH_AGENT_MAP.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/RESEARCH_AGENT_MAP.md",
+      "category": "maps/prompts"
+    },
+    {
+      "path": "RESEARCH_AGENT_PROMPT.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/RESEARCH_AGENT_PROMPT.md",
+      "category": "maps/prompts"
+    },
+    {
+      "path": "add_missing_single_character_notes.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/add_missing_single_character_notes.py",
+      "category": "scripts"
+    },
+    {
+      "path": "anki/anki_field_schema.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/anki_field_schema.md",
+      "category": "anki"
+    },
+    {
+      "path": "anki/stretch_word_candidates.tsv",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/stretch_word_candidates.tsv",
+      "category": "anki"
+    },
+    {
+      "path": "apply_meaning_cleanup_updates.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/apply_meaning_cleanup_updates.py",
+      "category": "scripts"
+    },
+    {
+      "path": "apply_sentence_example_updates.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/apply_sentence_example_updates.py",
+      "category": "scripts"
+    },
+    {
+      "path": "build_anki_chinese.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/build_anki_chinese.py",
+      "category": "scripts"
+    },
+    {
+      "path": "configs/novel_generation.default.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/configs/novel_generation.default.json",
+      "category": "configs"
+    },
+    {
+      "path": "data/cedict_ts.u8.gz",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/cedict_ts.u8.gz",
+      "category": "data"
+    },
+    {
+      "path": "data/cmn-eng_links.tsv.bz2",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/cmn-eng_links.tsv.bz2",
+      "category": "data"
+    },
+    {
+      "path": "data/cmn_sentences.tsv.bz2",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/cmn_sentences.tsv.bz2",
+      "category": "data"
+    },
+    {
+      "path": "data/cmn_transcriptions.tsv.bz2",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/cmn_transcriptions.tsv.bz2",
+      "category": "data"
+    },
+    {
+      "path": "data/eng_sentences.tsv.bz2",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/eng_sentences.tsv.bz2",
+      "category": "data"
+    },
+    {
+      "path": "data/known_words.metadata.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/known_words.metadata.json",
+      "category": "data"
+    },
+    {
+      "path": "data/known_words.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/known_words.txt",
+      "category": "data"
+    },
+    {
+      "path": "data/punctuation_allowlist.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/punctuation_allowlist.txt",
+      "category": "data"
+    },
+    {
+      "path": "data/stretch_packs/general_fiction_100.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/general_fiction_100.txt",
+      "category": "data"
+    },
+    {
+      "path": "data/stretch_packs/low_fantasy_150.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/low_fantasy_150.txt",
+      "category": "data"
+    },
+    {
+      "path": "data/stretch_packs/metadata/general_fiction_100.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/general_fiction_100.json",
+      "category": "data"
+    },
+    {
+      "path": "data/stretch_packs/metadata/low_fantasy_150.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/low_fantasy_150.json",
+      "category": "data"
+    },
+    {
+      "path": "data/stretch_packs/metadata/professions_social_roles_100.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/professions_social_roles_100.json",
+      "category": "data"
+    },
+    {
+      "path": "data/stretch_packs/metadata/shanghai_setting_150.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/shanghai_setting_150.json",
+      "category": "data"
+    },
+    {
+      "path": "data/stretch_packs/metadata/urban_objects_100.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/urban_objects_100.json",
+      "category": "data"
+    },
+    {
+      "path": "data/stretch_packs/professions_social_roles_100.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/professions_social_roles_100.txt",
+      "category": "data"
+    },
+    {
+      "path": "data/stretch_packs/shanghai_setting_150.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/shanghai_setting_150.txt",
+      "category": "data"
+    },
+    {
+      "path": "data/stretch_packs/urban_objects_100.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/urban_objects_100.txt",
+      "category": "data"
+    },
+    {
+      "path": "docs/anki-integration.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/anki-integration.md",
+      "category": "docs"
+    },
+    {
+      "path": "docs/machine-readable-repository.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/machine-readable-repository.md",
+      "category": "docs"
+    },
+    {
+      "path": "docs/novel-generation.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/novel-generation.md",
+      "category": "docs"
+    },
+    {
+      "path": "docs/quality-review.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/quality-review.md",
+      "category": "docs"
+    },
+    {
+      "path": "docs/stretch-vocabulary.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/stretch-vocabulary.md",
+      "category": "docs"
+    },
+    {
+      "path": "ensure_single_character_notes.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/ensure_single_character_notes.py",
+      "category": "scripts"
+    },
+    {
+      "path": "manuscripts/sample-known-words/chapters/chapter_01.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/chapters/chapter_01.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/sample-known-words/chapters/chapter_01.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/chapters/chapter_01.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/sample-known-words/characters.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/characters.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/sample-known-words/continuity_log.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/continuity_log.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/sample-known-words/novel_bible.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/novel_bible.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/sample-known-words/outline.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/outline.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/sample-known-words/quality/lead_quality_decision.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/quality/lead_quality_decision.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/sample-known-words/quality/literary_critic_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/quality/literary_critic_report.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/sample-known-words/quality/normal_reader_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/quality/normal_reader_report.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/sample-known-words/quality/quality_gate_summary.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/quality/quality_gate_summary.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/sample-known-words/quality/repeated_phrase_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/quality/repeated_phrase_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/sample-known-words/quality/vocabulary_usage_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/quality/vocabulary_usage_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/sample-known-words/vocabulary_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/vocabulary_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/sample-known-words/vocabulary_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/vocabulary_report.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-ticket/book_specific_words.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/book_specific_words.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-ticket/chapters/chapter_01.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/chapters/chapter_01.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-ticket/chapters/chapter_01.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/chapters/chapter_01.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-ticket/chapters/chapter_02.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/chapters/chapter_02.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-ticket/chapters/chapter_02.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/chapters/chapter_02.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-ticket/chapters/chapter_03.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/chapters/chapter_03.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-ticket/chapters/chapter_03.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/chapters/chapter_03.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-ticket/characters.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/characters.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-ticket/continuity_log.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/continuity_log.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-ticket/novel_bible.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/novel_bible.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-ticket/outline.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/outline.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-ticket/planning/chapter_01_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/planning/chapter_01_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-ticket/planning/chapter_02_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/planning/chapter_02_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-ticket/planning/chapter_03_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/planning/chapter_03_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-ticket/proper_nouns.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/proper_nouns.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-ticket/quality/lead_quality_decision.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/quality/lead_quality_decision.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-ticket/quality/literary_critic_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/quality/literary_critic_report.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-ticket/quality/normal_reader_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/quality/normal_reader_report.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-ticket/quality/quality_gate_summary.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/quality/quality_gate_summary.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-ticket/quality/repeated_phrase_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/quality/repeated_phrase_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-ticket/quality/vocabulary_usage_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/quality/vocabulary_usage_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-ticket/stretch_word_exposure.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/stretch_word_exposure.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-ticket/vocabulary_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/vocabulary_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/stretch-layer-fixture/book_specific_words.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/book_specific_words.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/stretch-layer-fixture/chapters/chapter_01.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/chapters/chapter_01.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/stretch-layer-fixture/chapters/chapter_01.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/chapters/chapter_01.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/stretch-layer-fixture/proper_nouns.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/proper_nouns.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/stretch-layer-fixture/quality/lead_quality_decision.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/quality/lead_quality_decision.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/stretch-layer-fixture/quality/literary_critic_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/quality/literary_critic_report.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/stretch-layer-fixture/quality/normal_reader_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/quality/normal_reader_report.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/stretch-layer-fixture/quality/quality_gate_summary.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/quality/quality_gate_summary.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/stretch-layer-fixture/quality/repeated_phrase_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/quality/repeated_phrase_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/stretch-layer-fixture/quality/vocabulary_usage_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/quality/vocabulary_usage_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/stretch-layer-fixture/stretch_word_exposure.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/stretch_word_exposure.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/stretch-layer-fixture/vocabulary_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/vocabulary_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "migrate_chinese_notes.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/migrate_chinese_notes.py",
+      "category": "scripts"
+    },
+    {
+      "path": "repo_manifest.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/repo_manifest.json",
+      "category": "maps/prompts"
+    },
+    {
+      "path": "reports/github-agent-index.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/reports/github-agent-index.json",
+      "category": "reports"
+    },
+    {
+      "path": "reports/github-agent-index.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/reports/github-agent-index.md",
+      "category": "reports"
+    },
+    {
+      "path": "reports/url-index.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/reports/url-index.md",
+      "category": "reports"
+    },
+    {
+      "path": "scripts/__init__.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/__init__.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/build_agent_index.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/build_agent_index.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/build_epub.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/build_epub.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/export_stretch_words_for_anki.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/export_stretch_words_for_anki.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/generate_reports.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/generate_reports.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/import_stretch_words_to_anki.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/import_stretch_words_to_anki.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/load_known_words.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/load_known_words.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/novel_tools.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/novel_tools.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/promote_stretch_words.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/promote_stretch_words.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/repeated_phrase_report.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/repeated_phrase_report.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/run_quality_gate.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/run_quality_gate.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/sync_known_words.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/sync_known_words.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/validate_book.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/validate_book.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/validate_chapter.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/validate_chapter.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/vocabulary_usage_report.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/vocabulary_usage_report.py",
+      "category": "scripts"
+    },
+    {
+      "path": "sentence_example_overrides.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/sentence_example_overrides.py",
+      "category": "scripts"
+    },
+    {
+      "path": "setup_production_sentence_cards.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/setup_production_sentence_cards.py",
+      "category": "scripts"
+    },
+    {
+      "path": "suggest_meaning_edits.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/suggest_meaning_edits.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_novel_pipeline.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_novel_pipeline.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_stretch_vocabulary.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_stretch_vocabulary.py",
+      "category": "scripts"
+    },
+    {
+      "path": "word list chinese.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/word list chinese.txt",
+      "category": "root"
+    }
+  ]
+}

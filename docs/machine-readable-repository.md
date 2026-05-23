@@ -1,0 +1,36 @@
+# Machine-Readable Repository Surface
+
+This repository follows the same broad pattern used in `meijer1973/4veco-platform`: a GitHub-facing entry file, a research-agent map, a research prompt, a machine manifest, and generated URL/file indexes.
+
+## Files
+
+- `AGENT_GITHUB_ENTRY.md`: quick orientation for agents landing on GitHub.
+- `RESEARCH_AGENT_MAP.md`: exact path and raw URL traversal rules.
+- `RESEARCH_AGENT_PROMPT.md`: reusable prompt for remote research agents.
+- `repo_manifest.json`: machine-readable manifest of entry points, namespaces, commands, and generated/local surfaces.
+- `reports/url-index.md`: full raw URLs for agents that cannot construct URLs.
+- `reports/github-agent-index.md`: tracked file inventory grouped by repository surface.
+
+## Refresh
+
+Run:
+
+```powershell
+python scripts/build_agent_index.py
+```
+
+Refresh these files when paths, scripts, workflows, skills, agents, reports, or manuscript conventions change:
+
+- `RESEARCH_AGENT_MAP.md`
+- `AGENT_GITHUB_ENTRY.md`
+- `repo_manifest.json`
+- `reports/url-index.md`
+- `reports/github-agent-index.md`
+
+## Rules For Agents
+
+- Use exact paths from the map or manifest before searching.
+- Treat `chapters/*.zh-tok.txt` as canonical story text.
+- Treat EPUBs, TSV exports, backups, and local downloads as generated or local artifacts.
+- Confirm file existence with `reports/github-agent-index.md`.
+- Use `reports/url-index.md` as a single-fetch entry point when raw URL construction is unavailable.
