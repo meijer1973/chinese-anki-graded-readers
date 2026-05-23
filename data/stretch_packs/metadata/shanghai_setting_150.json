@@ -1,0 +1,35 @@
+[
+  {
+    "word": "上海",
+    "pinyin": "Shànghǎi",
+    "english": "Shanghai",
+    "part_of_speech": "proper noun",
+    "pack": "shanghai_setting_150",
+    "priority": 1,
+    "notes": "Durable setting word for Shanghai-based stories.",
+    "example_zh_tok": "我 在 上海 看见 一个 奇怪 的 门 。",
+    "example_en": "I saw a strange door in Shanghai."
+  },
+  {
+    "word": "外滩",
+    "pinyin": "Wàitān",
+    "english": "the Bund",
+    "part_of_speech": "proper noun",
+    "pack": "shanghai_setting_150",
+    "priority": 1,
+    "notes": "Durable Shanghai landmark.",
+    "example_zh_tok": "外滩 的 夜晚 有 很 多 灯 。",
+    "example_en": "The Bund has many lights at night."
+  },
+  {
+    "word": "地铁站",
+    "pinyin": "dìtiězhàn",
+    "english": "subway station",
+    "part_of_speech": "noun",
+    "pack": "shanghai_setting_150",
+    "priority": 1,
+    "notes": "Reusable urban movement location.",
+    "example_zh_tok": "她 在 地铁站 等 我 。",
+    "example_en": "She waited for me at the subway station."
+  }
+]

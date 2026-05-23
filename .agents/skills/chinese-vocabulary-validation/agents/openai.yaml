@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chinese Vocabulary Validation"
+  short_description: "Audit tokenized Chinese manuscripts against known words."
+  default_prompt: "Validate a Chinese graded-reader chapter or book against the active known-word list."

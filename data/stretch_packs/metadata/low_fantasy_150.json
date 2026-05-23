@@ -1,0 +1,35 @@
+[
+  {
+    "word": "魔法",
+    "pinyin": "mófǎ",
+    "english": "magic",
+    "part_of_speech": "noun",
+    "pack": "low_fantasy_150",
+    "priority": 1,
+    "notes": "Use sparingly for easy urban fantasy.",
+    "example_zh_tok": "这 不是 玩笑 ， 这是 魔法 。",
+    "example_en": "This is not a joke; this is magic."
+  },
+  {
+    "word": "护符",
+    "pinyin": "hùfú",
+    "english": "protective charm",
+    "part_of_speech": "noun",
+    "pack": "low_fantasy_150",
+    "priority": 1,
+    "notes": "Concrete strange object for low fantasy.",
+    "example_zh_tok": "我 把 护符 放 在 手 里 。",
+    "example_en": "I put the charm in my hand."
+  },
+  {
+    "word": "灵门",
+    "pinyin": "língmén",
+    "english": "spirit door",
+    "part_of_speech": "noun",
+    "pack": "low_fantasy_150",
+    "priority": 2,
+    "notes": "Book-specific-feeling term suitable for one recurring impossible place.",
+    "example_zh_tok": "灵门 只 在 夜晚 出现 。",
+    "example_en": "The spirit door appears only at night."
+  }
+]

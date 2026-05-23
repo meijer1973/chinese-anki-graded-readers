@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chinese Graded Novel Planning"
+  short_description: "Plan restricted-vocabulary Chinese graded-reader novels."
+  default_prompt: "Plan a Chinese graded-reader novel from the active known-word list."

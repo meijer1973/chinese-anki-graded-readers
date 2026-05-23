@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chinese Normal Reader Review"
+  short_description: "Plain reader reaction for Chinese fiction."
+  default_prompt: "Read a restricted-vocabulary Chinese manuscript like a normal learner-reader."

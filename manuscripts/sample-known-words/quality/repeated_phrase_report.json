@@ -1,0 +1,8 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-23T13:17:35Z",
+  "chapters_path": "manuscripts\\sample-known-words\\chapters",
+  "min_count": 3,
+  "repeated_phrases": [],
+  "phrase_repetition_warning": false
+}

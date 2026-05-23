@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chinese Literary Critic"
+  short_description: "Strict literary review for Chinese readers."
+  default_prompt: "Review a restricted-vocabulary Chinese manuscript for literary quality."

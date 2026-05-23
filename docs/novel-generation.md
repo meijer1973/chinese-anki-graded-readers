@@ -1,0 +1,326 @@
+# Chinese Graded-Reader Novel Generation
+
+This repo can support repeatable long-form Chinese fiction written with the active vocabulary policy: core known words plus optional approved stretch layers.
+
+Vocabulary validation is necessary, but it is not enough. A book that passes vocabulary validation but fails reader interest is a failed book.
+
+## Vocabulary Source
+
+The active machine-readable vocabulary file is:
+
+```powershell
+data/known_words.txt
+```
+
+It is generated from `word list chinese.txt`, which is one Chinese word or phrase per line in ranked order. The current default is the first 1000 entries because `AGENTS.md` says production and sentence cards are enabled for ranks `1-1000`.
+
+Regenerate the active known list after the ranked list or known-word threshold changes:
+
+```powershell
+$env:PYTHONIOENCODING='utf-8'
+python scripts/sync_known_words.py --limit 1000
+```
+
+For future expansion, change only the limit:
+
+```powershell
+python scripts/sync_known_words.py --limit 2000
+python scripts/sync_known_words.py --limit 3000
+python scripts/sync_known_words.py --limit 5000
+```
+
+Use `--limit 0` only when the whole ranked list should be considered known.
+
+Inspect the active list:
+
+```powershell
+python scripts/load_known_words.py --known data/known_words.txt
+```
+
+## Manuscript Layout
+
+Create each new project under:
+
+```text
+manuscripts/<project-slug>/
+  novel_bible.md
+  outline.md
+  characters.md
+  continuity_log.md
+  vocabulary_report.json
+  quality/
+    vocabulary_usage_report.json
+    repeated_phrase_report.json
+    literary_critic_report.md
+    normal_reader_report.md
+    lead_quality_decision.md
+  chapters/
+    chapter_01.zh-tok.txt
+    chapter_01.validation.json
+  epub/
+    <project-slug>.epub
+```
+
+The canonical chapter format is space-tokenized Chinese:
+
+```text
+我 看到 你 在 这里 。
+```
+
+The validator ignores punctuation and whitespace, then checks every remaining story token against the active vocabulary policy. Core words, approved stretch words, book-specific words, and listed proper nouns are allowed. A chapter may also keep up to 5 forbidden unknown tokens when they improve natural prose or carry a necessary idea; those tokens remain counted, line-reported, and reviewable. Do not rely on Chinese segmentation after the fact.
+
+## Vocabulary Layers
+
+The default strict mode uses only `data/known_words.txt`. The richer controlled mode allows:
+
+- core known words: `data/known_words.txt`
+- general fiction stretch words: `data/stretch_packs/general_fiction_100.txt`
+- genre stretch words: `data/stretch_packs/low_fantasy_150.txt`
+- setting stretch words: `data/stretch_packs/shanghai_setting_150.txt`
+- profession/social-role stretch words: `data/stretch_packs/professions_social_roles_100.txt`
+- urban object stretch words: `data/stretch_packs/urban_objects_100.txt`
+- manuscript `book_specific_words.txt`
+- manuscript `proper_nouns.txt`
+
+The rule is not random leakage. Stretch words are approved learning targets. Proper nouns belong in `proper_nouns.txt` and do not count against the unknown-token budget. Each chapter may keep up to 5 forbidden unknown tokens, but the budget is breathing room, not a target. If a word appears in both core and stretch, the validator counts it as core.
+
+## Start a New Manuscript
+
+1. Pick a slug, title, mode, premise, and intended reading experience.
+2. Copy or adapt `configs/novel_generation.default.json`.
+3. Ask Codex to use the planning skill:
+
+```text
+Use the chinese-graded-novel-planning skill to create a novel bible and outline for manuscripts/<slug>.
+Use data/known_words.txt. Let chapter count and chapter length follow the story.
+```
+
+The planner should create:
+
+- premise
+- target reader level
+- point of view
+- main characters
+- setting
+- central conflict
+- emotional arc
+- chapter-by-chapter outline
+- recurring phrases inside the known vocabulary
+- risky concepts likely to cause vocabulary violations
+
+For `low_fantasy_urban_shanghai`, the planner must also create selected vocabulary packs, book-specific stretch words, proper nouns, a setting map, recurring locations, character professions/social roles, fantasy rule, strange object or place, central mystery, stretch-word introduction schedule, and quality risks.
+
+## Skills and Agent Roles
+
+Repo-local skills live under `.agents/skills/`:
+
+- `chinese-graded-novel-planning`
+- `chinese-restricted-vocabulary-writing`
+- `chinese-vocabulary-validation`
+- `chinese-continuity-editing`
+- `chinese-literary-critic`
+- `chinese-normal-reader-review`
+- `chinese-lead-quality-review`
+- `epub-export`
+
+Project-scoped role definitions live under `.codex/agents/`:
+
+- `novel-planner`
+- `chapter-writer`
+- `vocabulary-auditor`
+- `continuity-editor`
+- `literary-critic`
+- `normal-reader`
+- `lead-quality-reviewer`
+- `epub-builder`
+
+If the current Codex runtime does not auto-load these custom agents, use them as manual role prompts and rely on the skills plus scripts for enforcement.
+
+## Writing Modes
+
+## Story-First Size Policy
+
+There is no default chapter count and no chapter word-count requirement.
+
+- Let chapter breaks follow actual story turns.
+- A short complete chapter is better than a padded chapter.
+- Token totals and vocabulary coverage are diagnostics only.
+- Do not expand a validated chapter just to hit length, coverage, or stretch-word targets.
+- Add text only to fix a named story problem: unclear motivation, missing transition, weak conflict, confusing setting movement, underdeveloped emotional turn, or continuity gap.
+
+Mode A: `outline-first`
+
+- Create the full novel bible and chapter outline before drafting.
+- Best default when the whole story shape is knowable before drafting.
+- Human reviews the outline before chapter 1.
+
+Mode B: `discovery-with-control`
+
+- Start with premise, main characters, and ending direction.
+- Plan only the next 1-2 chapters.
+- Update the continuity log and validate after every chapter.
+- Every 3 chapters, write a revised forward outline.
+- Do not allow uncontrolled drift.
+
+## Draft One Chapter
+
+Ask Codex to write one chapter at a time:
+
+```text
+Use the chinese-restricted-vocabulary-writing skill to draft chapter 1 for manuscripts/<slug>.
+Read novel_bible.md, outline.md, continuity_log.md, and data/known_words.txt first.
+Write chapter 1 in canonical space-tokenized form. Stop when the scene is complete and the chapter has a meaningful change.
+```
+
+Before drafting each chapter, create:
+
+```text
+manuscripts/<slug>/planning/chapter_XX_vocab_plan.md
+```
+
+Include chapter purpose, scene goal, conflict, emotional turn, 30-80 known words that could naturally appear, and risky unavailable concepts to avoid.
+
+For layered manuscripts, also include main locations, characters and roles, stretch words to introduce, stretch words to repeat from earlier chapters, expected later repetition, chapter hook, and end-of-chapter change.
+
+Save the result as:
+
+```text
+manuscripts/<slug>/chapters/chapter_01.zh-tok.txt
+```
+
+## Validate One Chapter
+
+```powershell
+$env:PYTHONIOENCODING='utf-8'
+python scripts/validate_chapter.py --known data/known_words.txt --chapter manuscripts/<slug>/chapters/chapter_01.zh-tok.txt --out manuscripts/<slug>/chapters/chapter_01.validation.json
+```
+
+Layered low-fantasy Shanghai validation:
+
+```powershell
+python scripts/validate_chapter.py --known data/known_words.txt --chapter manuscripts/<slug>/chapters/chapter_01.zh-tok.txt --out manuscripts/<slug>/chapters/chapter_01.validation.json --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
+```
+
+The default forbidden-unknown budget is 5 tokens per chapter. Override it when needed:
+
+```powershell
+python scripts/validate_chapter.py --known data/known_words.txt --chapter manuscripts/<slug>/chapters/chapter_01.zh-tok.txt --out manuscripts/<slug>/chapters/chapter_01.validation.json --max-forbidden-unknown-tokens-per-chapter 5
+```
+
+Validation passes when the chapter stays at or below the configured forbidden-unknown budget, currently 5 tokens per chapter. Unknown tokens are still listed by line and frequency. Rewrite only the offending lines when the count is above budget, when the unknown is accidental, or when the sentence is unclear. Near matches do not count as known words.
+
+## Continuity Pass
+
+After each validated chapter, ask Codex:
+
+```text
+Use the chinese-continuity-editing skill to review chapter 1 and update manuscripts/<slug>/continuity_log.md.
+Track characters, locations, objects, events, unresolved questions, and emotional changes.
+```
+
+Before writing the next chapter, Codex must read the continuity log.
+
+Update `manuscripts/<slug>/stretch_word_exposure.md` after each chapter:
+
+```markdown
+| Word | Layer | First chapter | Total uses | Chapters used | Repeated enough? | Anki status |
+|---|---|---:|---:|---|---|---|
+```
+
+## Vocabulary Breadth
+
+After each chapter or at least before whole-book review, run:
+
+```powershell
+python scripts/vocabulary_usage_report.py --known data/known_words.txt --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/quality/vocabulary_usage_report.json
+python scripts/repeated_phrase_report.py --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/quality/repeated_phrase_report.json
+```
+
+These reports provide evidence for reviewers. They do not make literary decisions.
+
+## Validate the Whole Book
+
+```powershell
+python scripts/validate_book.py --known data/known_words.txt --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json
+```
+
+Layered manuscripts should pass the same pack arguments used for chapter validation.
+
+The whole-book report aggregates chapter count, total tokens, unique used words, unknown-token frequencies, forbidden unknown tokens over the per-chapter limit, and per-chapter details.
+
+To regenerate every chapter report plus the whole-book report:
+
+```powershell
+python scripts/generate_reports.py --manuscript manuscripts/<slug> --known data/known_words.txt
+```
+
+## Build EPUB
+
+Do not build the EPUB after validation alone. Run the quality gate first:
+
+```powershell
+python scripts/run_quality_gate.py --manuscript manuscripts/<slug> --known data/known_words.txt
+```
+
+Then run the reviews:
+
+1. Literary critic review writes `quality/literary_critic_report.md`.
+2. Normal reader review writes `quality/normal_reader_report.md`.
+3. Lead reviewer writes `quality/lead_quality_decision.md`.
+
+The lead decision must explicitly say:
+
+```text
+Final decision: PASS
+```
+
+Build only after whole-book validation passes and the lead reviewer approves:
+
+```powershell
+python scripts/build_epub.py --manuscript manuscripts/<slug> --title "<title>" --out manuscripts/<slug>/epub/<slug>.epub --report manuscripts/<slug>/epub/build_report.json
+```
+
+The EPUB builder runs whole-book validation and checks lead quality approval again before writing. By default it removes token spaces for display readability and includes a validation appendix explaining that the canonical source is the `.zh-tok.txt` files.
+
+## Improved Workflow
+
+1. Load active known-word list.
+2. Create novel bible.
+3. Create outline.
+4. Check that the outline is interesting enough before drafting.
+5. Draft one chapter.
+6. Validate vocabulary.
+7. Repair unknown tokens only when they are accidental, unclear, or above the per-chapter budget.
+8. Update continuity.
+9. Track vocabulary breadth.
+10. Repeat chapter by chapter.
+11. Run whole-book validation.
+12. Run vocabulary usage report.
+13. Run literary critic review.
+14. Run normal reader review.
+15. Lead reviewer decides: pass, polish, partial rewrite, or complete rebuild.
+16. Build EPUB only after lead reviewer approves.
+
+For `low_fantasy_urban_shanghai`, the outline and reviews should check that the story feels like a normal person in Shanghai discovering one impossible thing. Avoid epic scale, lore dumps, many monsters, and stretch words used once as decoration.
+
+## Review the Final Report
+
+The final Codex response for a generated book must include:
+
+- output file path
+- chapter count
+- total word-token count
+- unique used words
+- unknown-token count
+- forbidden unknown tokens over the configured per-chapter limit
+- validation command run
+- quality review decision
+- whether EPUB build succeeded
+
+## Repair Tips
+
+- If an unknown token appears, first decide whether it is useful. Keep it only when the chapter remains within budget and the word improves the story or learning experience.
+- If an unknown token is accidental or above budget, replace the whole token with an exact known, stretch, book-specific, or listed proper-noun token.
+- If an accidental unsegmented string appears, add spaces between known words.
+- If a plot requires too many missing nouns, simplify the plot in the outline instead of fighting the vocabulary.
+- Keep the validated `.zh-tok.txt` files as the source of truth even when EPUB display removes spaces.

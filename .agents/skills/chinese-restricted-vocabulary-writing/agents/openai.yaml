@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chinese Restricted Vocabulary Writing"
+  short_description: "Draft tokenized Chinese chapters under the active vocabulary budget."
+  default_prompt: "Write one validated Chinese chapter using only the active known-word list."

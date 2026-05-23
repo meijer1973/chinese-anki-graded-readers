@@ -1,0 +1,11 @@
+{
+  "valid_vocabulary": true,
+  "unknown_token_count": 0,
+  "quality_approval": {
+    "approved": true,
+    "decision_path": "manuscripts\\sample-known-words\\quality\\lead_quality_decision.md",
+    "decision": "PASS",
+    "reason": "Approved by lead quality decision."
+  },
+  "ready_for_epub": true
+}

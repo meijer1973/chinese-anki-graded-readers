@@ -1,0 +1,35 @@
+[
+  {
+    "word": "地图",
+    "pinyin": "dìtú",
+    "english": "map",
+    "part_of_speech": "noun",
+    "pack": "urban_objects_100",
+    "priority": 1,
+    "notes": "Concrete object for mystery and movement.",
+    "example_zh_tok": "地图 上 有 一个 黑 点 。",
+    "example_en": "There was a black dot on the map."
+  },
+  {
+    "word": "雨伞",
+    "pinyin": "yǔsǎn",
+    "english": "umbrella",
+    "part_of_speech": "noun",
+    "pack": "urban_objects_100",
+    "priority": 2,
+    "notes": "Reusable object for rainy Shanghai scenes.",
+    "example_zh_tok": "她 把 雨伞 给 我 。",
+    "example_en": "She gave me the umbrella."
+  },
+  {
+    "word": "门铃",
+    "pinyin": "ménlíng",
+    "english": "doorbell",
+    "part_of_speech": "noun",
+    "pack": "urban_objects_100",
+    "priority": 2,
+    "notes": "Useful for suspenseful doorway scenes.",
+    "example_zh_tok": "门铃 响 了 ， 但是 门 外 没有 人 。",
+    "example_en": "The doorbell rang, but no one was outside."
+  }
+]

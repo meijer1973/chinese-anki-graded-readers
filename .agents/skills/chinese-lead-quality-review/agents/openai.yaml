@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chinese Lead Quality Review"
+  short_description: "Final quality gate for Chinese novels."
+  default_prompt: "Make the lead quality decision from validation, continuity, critic, and reader reports."

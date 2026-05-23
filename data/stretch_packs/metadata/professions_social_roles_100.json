@@ -1,0 +1,35 @@
+[
+  {
+    "word": "快递员",
+    "pinyin": "kuàidìyuán",
+    "english": "delivery worker",
+    "part_of_speech": "noun",
+    "pack": "professions_social_roles_100",
+    "priority": 1,
+    "notes": "Good protagonist role for urban movement and chance encounters.",
+    "example_zh_tok": "快递员 把 包裹 送 到 门口 。",
+    "example_en": "The delivery worker brought the package to the doorway."
+  },
+  {
+    "word": "画家",
+    "pinyin": "huàjiā",
+    "english": "painter; artist",
+    "part_of_speech": "noun",
+    "pack": "professions_social_roles_100",
+    "priority": 2,
+    "notes": "Useful for visual clues and character flavor.",
+    "example_zh_tok": "画家 看 着 灯 下 的 影子 。",
+    "example_en": "The painter looked at the shadow under the light."
+  },
+  {
+    "word": "房东",
+    "pinyin": "fángdōng",
+    "english": "landlord",
+    "part_of_speech": "noun",
+    "pack": "professions_social_roles_100",
+    "priority": 2,
+    "notes": "Useful social role for housing secrets and pressure.",
+    "example_zh_tok": "房东 不 想 说 那 个 房间 。",
+    "example_en": "The landlord did not want to talk about that room."
+  }
+]

@@ -1,0 +1,97 @@
+{
+  "project_slug": "sample-known-words",
+  "title": "小 家",
+  "target_chapters": null,
+  "min_chapter_tokens": null,
+  "target_chapter_tokens": null,
+  "max_chapter_tokens": null,
+  "story_shape_policy": "No fixed chapter count or chapter word count. Let the story determine chapter breaks and length.",
+  "baseline_notes": "Quality comes first. Do not add text solely to meet a word, chapter, vocabulary coverage, or stretch-word target.",
+  "writing_mode": "outline-first",
+  "known_words_path": "data/known_words.txt",
+  "known_word_limit": 1000,
+  "vocabulary_policy": {
+    "core_known_words_path": "data/known_words.txt",
+    "general_fiction_pack": "data/stretch_packs/general_fiction_100.txt",
+    "genre_pack": "data/stretch_packs/low_fantasy_150.txt",
+    "setting_pack": "data/stretch_packs/shanghai_setting_150.txt",
+    "profession_pack": "data/stretch_packs/professions_social_roles_100.txt",
+    "urban_objects_pack": "data/stretch_packs/urban_objects_100.txt",
+    "book_specific_words_path": "manuscripts/<slug>/book_specific_words.txt",
+    "proper_nouns_path": "manuscripts/<slug>/proper_nouns.txt",
+    "allow_unknown_outside_approved_layers": true,
+    "max_forbidden_unknown_tokens_per_chapter": 5,
+    "unknown_token_policy": "A chapter may keep up to 5 forbidden unknown tokens when they improve natural prose. Treat this as breathing room, not a target.",
+    "proper_nouns_do_not_count_against_unknown_budget": true,
+    "target_core_coverage_percent": null,
+    "max_total_stretch_token_percent": null,
+    "max_new_stretch_words_per_chapter": 15,
+    "min_repetitions_for_key_stretch_words": 3,
+    "warn_if_stretch_word_used_once": true
+  },
+  "allow_punctuation": true,
+  "punctuation_allowlist_path": "data/punctuation_allowlist.txt",
+  "canonical_tokenized_source": true,
+  "export_remove_spaces": true,
+  "include_validation_appendix": true,
+  "genre": {
+    "mode": "low_fantasy_urban_shanghai",
+    "avoid_epic_fantasy": true,
+    "prefer_one_strange_object": true,
+    "prefer_one_secret_place": true,
+    "prefer_small_cast": true
+  },
+  "setting": {
+    "primary_city": "上海",
+    "require_locations_beyond_school_hospital_home": true,
+    "min_recurring_non_home_locations": 4
+  },
+  "character_variety": {
+    "min_distinct_professions_or_roles": 3,
+    "avoid_all_characters_being_teachers_doctors_students": true,
+    "min_characters_whose_role_affects_plot": 2,
+    "min_locations_that_change_meaning": 1
+  },
+  "genre_preferences": [
+    "family drama",
+    "school life",
+    "workplace",
+    "friendship",
+    "mystery-lite",
+    "easy low fantasy",
+    "urban fantasy set in Shanghai"
+  ],
+  "forbidden_genres_or_topics": [
+    "epic fantasy with many kingdoms",
+    "high fantasy with unavailable terminology",
+    "technical science fiction",
+    "dense legal thriller",
+    "war story unless the known list supports it"
+  ],
+  "tone": "clear, emotionally coherent, varied, scene-driven, and interesting within the allowed vocabulary",
+  "target_reader_notes": "Use exact known-word tokens only. Keep canonical chapters as space-tokenized Chinese.",
+  "quality_targets": {
+    "min_chapter_unique_tokens": null,
+    "target_whole_book_known_word_coverage_percent": null,
+    "warn_if_top_20_token_share_above_percent": 45,
+    "require_literary_critic_score_at_least": 7,
+    "require_normal_reader_score_at_least": 7,
+    "token_and_coverage_counts_are_diagnostics_only": true,
+    "reject_padding_for_counts": true
+  },
+  "quality_gate": {
+    "require_literary_critic_review": true,
+    "require_normal_reader_review": true,
+    "require_lead_quality_decision": true,
+    "allow_epub_build_before_quality_pass": false
+  },
+  "style_targets": {
+    "avoid_repetitive_dialogue": true,
+    "prefer_scene_conflict": true,
+    "prefer_chapter_hooks": true,
+    "require_chapter_level_change": true,
+    "avoid_bland_safe_plotting": true,
+    "avoid_padding_for_length": true,
+    "allow_short_complete_chapters": true
+  }
+}

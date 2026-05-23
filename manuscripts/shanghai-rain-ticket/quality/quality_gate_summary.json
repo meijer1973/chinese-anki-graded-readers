@@ -1,0 +1,15 @@
+{
+  "valid_vocabulary": true,
+  "unknown_token_count": 4,
+  "forbidden_unknown_tokens": 4,
+  "forbidden_unknown_tokens_over_limit": 0,
+  "max_forbidden_unknown_tokens_per_chapter": 5,
+  "stretch_token_percent": 20.54,
+  "quality_approval": {
+    "approved": true,
+    "decision_path": "manuscripts\\shanghai-rain-ticket\\quality\\lead_quality_decision.md",
+    "decision": "PASS",
+    "reason": "Approved by lead quality decision."
+  },
+  "ready_for_epub": true
+}

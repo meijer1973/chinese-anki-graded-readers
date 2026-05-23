@@ -1,0 +1,4 @@
+interface:
+  display_name: "EPUB Export"
+  short_description: "Export validated tokenized manuscripts to EPUB."
+  default_prompt: "Build an EPUB from a validated Chinese graded-reader manuscript."

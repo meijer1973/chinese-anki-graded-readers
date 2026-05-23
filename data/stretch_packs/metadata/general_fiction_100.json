@@ -1,0 +1,35 @@
+[
+  {
+    "word": "回忆",
+    "pinyin": "huíyì",
+    "english": "memory; recollection",
+    "part_of_speech": "noun / verb",
+    "pack": "general_fiction_100",
+    "priority": 1,
+    "notes": "Useful for emotional scenes and continuity.",
+    "example_zh_tok": "这个 回忆 让 我 沉默 。",
+    "example_en": "This memory made me silent."
+  },
+  {
+    "word": "沉默",
+    "pinyin": "chénmò",
+    "english": "silence; silent",
+    "part_of_speech": "noun / adjective / verb",
+    "pack": "general_fiction_100",
+    "priority": 1,
+    "notes": "Useful for tension without difficult abstract wording.",
+    "example_zh_tok": "他 沉默 了 很 久 。",
+    "example_en": "He was silent for a long time."
+  },
+  {
+    "word": "勇气",
+    "pinyin": "yǒngqì",
+    "english": "courage",
+    "part_of_speech": "noun",
+    "pack": "general_fiction_100",
+    "priority": 2,
+    "notes": "Useful for character-choice scenes.",
+    "example_zh_tok": "我 需要 勇气 。",
+    "example_en": "I need courage."
+  }
+]

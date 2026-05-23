@@ -1,0 +1,13 @@
+{
+  "valid_vocabulary": true,
+  "unknown_token_count": 0,
+  "forbidden_unknown_tokens": 0,
+  "stretch_token_percent": 45.45,
+  "quality_approval": {
+    "approved": true,
+    "decision_path": "manuscripts\\stretch-layer-fixture\\quality\\lead_quality_decision.md",
+    "decision": "PASS",
+    "reason": "Approved by lead quality decision."
+  },
+  "ready_for_epub": true
+}

@@ -1,0 +1,57 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Local downloads and extracted add-ons
+downloads/
+
+# Large local reference spreadsheets/directories
+SUBTLEX-CH-CHR/
+SUBTLEX-CH-WF/
+
+# Generated Anki exports and live-collection backups
+anki_chinese_import.tsv
+anki_chinese_review.tsv
+*_backup.tsv
+*_before_*_backup.tsv
+meaning_cleanup_applied_updates.tsv
+meaning_field_applied_updates.tsv
+sentence_examples_before_update_backup.tsv
+production_sentence_setup_backup.tsv
+chinese_notes_before_model_migration_backup.tsv
+
+# Generated review/update reports
+enrichment_report.txt
+meaning_field_suggestions.tsv
+meaning_field_suggestions_summary.md
+meaning_field_update_report.md
+meaning_cleanup_update_report.md
+sentence_examples_update_report.md
+sentence_quality_review_report.md
+production_sentence_setup_report.md
+single_character_notes_add_report.md
+single_character_notes_policy_report.md
+chinese_notes_model_migration_report.md
+inactive_sentence_quality_flags.tsv
+missing_single_character_notes_proposal.tsv
+missing_single_character_notes_summary.md
+single_character_notes_added.tsv
+single_character_notes_policy_added.tsv
+word_list_before_single_character_notes_backup.txt
+
+# Generated Anki stretch import artifacts
+anki/stretch_word_import_ready.tsv
+anki/stretch_word_import_log.json
+anki/stretch_words_added_to_anki.tsv
+
+# Local generated manuscript builds
+manuscripts/*/epub/
+
+# Early generated manuscripts kept locally but not as repository examples
+manuscripts/ci-li-de-mimi/
+manuscripts/shanghai-shadow-door/

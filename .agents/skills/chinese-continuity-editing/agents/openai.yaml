@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chinese Continuity Editing"
+  short_description: "Track continuity for restricted-vocabulary Chinese novels."
+  default_prompt: "Review continuity and update the continuity log for a Chinese graded-reader manuscript."
