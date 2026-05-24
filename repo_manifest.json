@@ -61,7 +61,10 @@
       "setup_production_sentence_cards.py",
       "ensure_single_character_notes.py",
       "add_missing_single_character_notes.py",
-      "suggest_meaning_edits.py"
+      "suggest_meaning_edits.py",
+      "scripts/export_stretch_words_for_anki.py",
+      "scripts/import_stretch_words_to_anki.py",
+      "scripts/complete_stretch_pack_metadata.py"
     ],
     "novel_pipeline": [
       "scripts/novel_tools.py",
@@ -78,6 +81,7 @@
       "word list chinese.txt",
       "data/known_words.txt",
       "data/stretch_packs",
+      "data/stretch_packs/metadata",
       "anki/stretch_word_candidates.tsv"
     ],
     "series": [

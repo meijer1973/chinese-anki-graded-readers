@@ -55,6 +55,8 @@ Use `data/stretch_packs/journalism_crime_50.txt` for journalist/crime affordance
 
 Stretch words are review-first Anki candidates. Do not directly mutate the live Anki collection from the novel workflow. Use `scripts/export_stretch_words_for_anki.py` to create `anki/stretch_word_candidates.tsv`, review it, then follow the existing Anki workflows. Promote learned stretch words into a new known-word file with `scripts/promote_stretch_words.py`; do not rewrite historical manuscript reports.
 
+Every stretch pack should have metadata for every word. Use `scripts/complete_stretch_pack_metadata.py` to fill missing starter metadata, then curate important entries by hand. If Anki notes already exist before stretch import, use `scripts/import_stretch_words_to_anki.py --mark-existing-stretch` after review to add stretch tags without overwriting study fields.
+
 ## Repository Map
 
 - `word list chinese.txt` is the ranked source list. One Chinese word or phrase per line. The line order is the frequency rank used by later scripts.

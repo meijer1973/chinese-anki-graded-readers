@@ -112,6 +112,10 @@ def source_tags(row: dict[str, str], example_source: str, meaning_source: str) -
     )
 
 
+def candidate_tags(row: dict[str, str]) -> list[str]:
+    return source_tags(row, row.get("Example Source", "existing"), row.get("Meaning Source", "existing"))
+
+
 def enrich_candidate(
     row: dict[str, str],
     entries_by_word: dict[str, list[build_anki_chinese.CedictEntry]],
@@ -324,6 +328,51 @@ def import_stretch_words(candidate_path: str | Path, *, dry_run: bool = False) -
     return report
 
 
+def is_stretch_marked(note: dict[str, Any]) -> bool:
+    source = note_field(note, "Source").lower()
+    tags = {str(tag).lower() for tag in note.get("tags", [])}
+    return source.startswith("stretch:") or "stretch_word" in tags
+
+
+def mark_existing_stretch_words(candidate_path: str | Path, *, dry_run: bool = False) -> dict[str, Any]:
+    candidates = load_candidates(candidate_path)
+    notes = load_notes()
+    notes_by_word = {note_field(note, "Word") or note_field(note, "Front"): note for note in notes}
+    candidate_by_word = {row["Hanzi"]: row for row in candidates}
+    present = [word for word in candidate_by_word if word in notes_by_word]
+    missing = [word for word in candidate_by_word if word not in notes_by_word]
+    already_marked = [word for word in present if is_stretch_marked(notes_by_word[word])]
+    to_mark = [word for word in present if word not in already_marked]
+
+    tag_groups: dict[str, list[int]] = {}
+    for word in to_mark:
+        row = candidate_by_word[word]
+        note = notes_by_word[word]
+        tags = " ".join(candidate_tags(row))
+        tag_groups.setdefault(tags, []).append(int(note["noteId"]))
+
+    if not dry_run:
+        for tags, note_ids in tag_groups.items():
+            for start in range(0, len(note_ids), 500):
+                anki("addTags", {"notes": note_ids[start : start + 500], "tags": tags})
+
+    report = {
+        "candidate_path": str(Path(candidate_path)),
+        "dry_run": dry_run,
+        "candidate_count": len(candidates),
+        "present_in_anki_count": len(present),
+        "missing_from_anki_count": len(missing),
+        "already_marked_count": len(already_marked),
+        "to_mark_count": len(to_mark),
+        "marked_count": 0 if dry_run else len(to_mark),
+        "tag_group_count": len(tag_groups),
+        "missing_from_anki": missing,
+    }
+    if not dry_run:
+        IMPORT_LOG.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return report
+
+
 def verify_candidates(candidate_path: str | Path, *, write_files: bool = True) -> dict[str, Any]:
     candidates = load_candidates(candidate_path)
     candidate_words = [row["Hanzi"] for row in candidates]
@@ -336,9 +385,7 @@ def verify_candidates(candidate_path: str | Path, *, write_files: bool = True) -
     for word in present:
         note = notes_by_word[word]
         note_ids.append(int(note["noteId"]))
-        source = note_field(note, "Source").lower()
-        tags = {str(tag).lower() for tag in note.get("tags", [])}
-        if source.startswith("stretch:") or "stretch_word" in tags:
+        if is_stretch_marked(note):
             stretch_marked.append(word)
 
     production_cards = []
@@ -366,7 +413,7 @@ def verify_candidates(candidate_path: str | Path, *, write_files: bool = True) -
         "production_cards_suspended": len(suspended_production),
         "production_cards_active": len(active_production),
         "missing_from_anki": missing,
-        "note": "Words already present before stretch import may not carry stretch_word tags.",
+        "note": "Use --mark-existing-stretch to add stretch tags to candidate words that already existed in Anki.",
     }
 
     if write_files:
@@ -426,9 +473,15 @@ def main() -> int:
     parser.add_argument("--candidates", default=str(DEFAULT_CANDIDATES))
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--verify-only", action="store_true")
+    parser.add_argument("--mark-existing-stretch", action="store_true")
     args = parser.parse_args()
 
-    report = verify_candidates(args.candidates) if args.verify_only else import_stretch_words(args.candidates, dry_run=args.dry_run)
+    if args.verify_only:
+        report = verify_candidates(args.candidates)
+    elif args.mark_existing_stretch:
+        report = mark_existing_stretch_words(args.candidates, dry_run=args.dry_run)
+    else:
+        report = import_stretch_words(args.candidates, dry_run=args.dry_run)
     print(json.dumps(report, ensure_ascii=False, indent=2))
     return 0
 

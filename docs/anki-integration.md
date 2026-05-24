@@ -37,10 +37,22 @@ After review and explicit user approval, import through AnkiConnect:
 ```powershell
 python scripts/import_stretch_words_to_anki.py --candidates anki/stretch_word_candidates.tsv --dry-run
 python scripts/import_stretch_words_to_anki.py --candidates anki/stretch_word_candidates.tsv
+python scripts/import_stretch_words_to_anki.py --candidates anki/stretch_word_candidates.tsv --mark-existing-stretch --dry-run
+python scripts/import_stretch_words_to_anki.py --candidates anki/stretch_word_candidates.tsv --mark-existing-stretch
 python scripts/import_stretch_words_to_anki.py --candidates anki/stretch_word_candidates.tsv --verify-only
 ```
 
-The import script skips words already present in the configured Anki deck and suspends production cards for newly added stretch notes. It writes local import logs and review TSVs under `anki/`.
+The import script skips words already present in the configured Anki deck and suspends production cards for newly added stretch notes. `--mark-existing-stretch` adds stretch tags to candidate words that already existed in Anki without overwriting their study fields. It writes local import logs and review TSVs under `anki/`.
+
+## Complete Metadata
+
+Every stretch pack should have metadata for every word. Complete or refresh generated starter metadata with:
+
+```powershell
+python scripts/complete_stretch_pack_metadata.py --packs data/stretch_packs/general_fiction_100.txt data/stretch_packs/low_fantasy_150.txt data/stretch_packs/shanghai_setting_150.txt data/stretch_packs/professions_social_roles_100.txt data/stretch_packs/urban_objects_100.txt
+```
+
+The script preserves existing curated metadata and fills missing entries with generated pinyin, CEDICT/fallback English, simple example sentences, story affordance notes, difficulty notes, and recommended repetition counts. Generated entries are starter metadata and can be curated later.
 
 ## Status Tracking
 

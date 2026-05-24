@@ -208,6 +208,8 @@ Use these anchors before free-form browsing.
 | Review literary quality | `.agents/skills/chinese-literary-critic/SKILL.md`, `.agents/skills/chinese-normal-reader-review/SKILL.md`, `.agents/skills/chinese-lead-quality-review/SKILL.md` |
 | Export EPUB | `scripts/build_epub.py`, `.agents/skills/epub-export/SKILL.md` |
 | Prepare stretch words for Anki | `docs/anki-integration.md`, `scripts/export_stretch_words_for_anki.py` |
+| Complete stretch-pack metadata | `scripts/complete_stretch_pack_metadata.py`, `data/stretch_packs/metadata/` |
+| Mark existing Anki notes as stretch words | `scripts/import_stretch_words_to_anki.py --mark-existing-stretch` |
 | Check plot affordances for a premise | `scripts/plot_affordance_report.py` |
 | Mutate live Anki | `AGENTS.md`, then the exact update script |
 | Verify expected behavior | `tests/` |

@@ -197,6 +197,7 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/__init__.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/build_agent_index.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/build_epub.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/complete_stretch_pack_metadata.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/export_stretch_words_for_anki.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/generate_reports.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/import_stretch_words_to_anki.py

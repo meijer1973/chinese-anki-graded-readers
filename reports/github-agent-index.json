@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-24T07:41:08Z",
+  "generated_at": "2026-05-24T18:55:54Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 199,
+  "file_count": 200,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -868,6 +868,11 @@
     {
       "path": "scripts/build_epub.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/build_epub.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/complete_stretch_pack_metadata.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/complete_stretch_pack_metadata.py",
       "category": "scripts"
     },
     {
