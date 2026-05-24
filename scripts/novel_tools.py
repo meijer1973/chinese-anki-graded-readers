@@ -20,6 +20,7 @@ DEFAULT_LOW_FANTASY_PACK = DEFAULT_STRETCH_PACKS_DIR / "low_fantasy_150.txt"
 DEFAULT_SHANGHAI_SETTING_PACK = DEFAULT_STRETCH_PACKS_DIR / "shanghai_setting_150.txt"
 DEFAULT_PROFESSIONS_PACK = DEFAULT_STRETCH_PACKS_DIR / "professions_social_roles_100.txt"
 DEFAULT_URBAN_OBJECTS_PACK = DEFAULT_STRETCH_PACKS_DIR / "urban_objects_100.txt"
+DEFAULT_JOURNALISM_CRIME_PACK = DEFAULT_STRETCH_PACKS_DIR / "journalism_crime_50.txt"
 DEFAULT_MAX_FORBIDDEN_UNKNOWN_TOKENS_PER_CHAPTER = 5
 
 DEFAULT_PUNCTUATION_CHARS = set(
@@ -37,6 +38,7 @@ GENERAL_FICTION_LAYER = "general_fiction_stretch"
 GENRE_LAYER = "genre_stretch"
 SETTING_LAYER = "setting_stretch"
 PROFESSION_LAYER = "profession_stretch"
+JOURNALISM_CRIME_LAYER = "journalism_crime_stretch"
 BOOK_SPECIFIC_LAYER = "book_specific_stretch"
 PROPER_NOUN_LAYER = "proper_noun"
 
@@ -46,6 +48,7 @@ LAYER_TOKEN_FIELDS = {
     GENRE_LAYER: "genre_stretch_tokens",
     SETTING_LAYER: "setting_stretch_tokens",
     PROFESSION_LAYER: "profession_stretch_tokens",
+    JOURNALISM_CRIME_LAYER: "journalism_crime_stretch_tokens",
     BOOK_SPECIFIC_LAYER: "book_specific_stretch_tokens",
     PROPER_NOUN_LAYER: "proper_noun_tokens",
 }
@@ -55,6 +58,7 @@ STRETCH_LAYERS = {
     GENRE_LAYER,
     SETTING_LAYER,
     PROFESSION_LAYER,
+    JOURNALISM_CRIME_LAYER,
     BOOK_SPECIFIC_LAYER,
 }
 
@@ -107,6 +111,8 @@ def infer_stretch_layer(path: str | Path) -> str:
         return GENRE_LAYER
     if "profession" in name or "social" in name or "role" in name:
         return PROFESSION_LAYER
+    if "journalism" in name or "crime" in name or "reporter" in name:
+        return JOURNALISM_CRIME_LAYER
     if "setting" in name or "shanghai" in name or "urban" in name or "object" in name:
         return SETTING_LAYER
     return BOOK_SPECIFIC_LAYER
@@ -119,6 +125,7 @@ def load_layered_vocabulary(
     genre_pack: str | Path | None = None,
     setting_pack: str | Path | None = None,
     profession_pack: str | Path | None = None,
+    journalism_crime_pack: str | Path | None = None,
     urban_objects_pack: str | Path | None = None,
     book_specific_words_path: str | Path | None = None,
     proper_nouns_path: str | Path | None = None,
@@ -152,6 +159,7 @@ def load_layered_vocabulary(
     add_words(load_optional_words(genre_pack), GENRE_LAYER, genre_pack)
     add_words(load_optional_words(setting_pack), SETTING_LAYER, setting_pack)
     add_words(load_optional_words(profession_pack), PROFESSION_LAYER, profession_pack)
+    add_words(load_optional_words(journalism_crime_pack), JOURNALISM_CRIME_LAYER, journalism_crime_pack)
     add_words(load_optional_words(urban_objects_pack), SETTING_LAYER, urban_objects_pack)
     add_words(load_optional_words(book_specific_words_path), BOOK_SPECIFIC_LAYER, book_specific_words_path)
     add_words(load_optional_words(proper_nouns_path), PROPER_NOUN_LAYER, proper_nouns_path)
@@ -346,6 +354,7 @@ def validate_chapter(
     genre_pack: str | Path | None = None,
     setting_pack: str | Path | None = None,
     profession_pack: str | Path | None = None,
+    journalism_crime_pack: str | Path | None = None,
     urban_objects_pack: str | Path | None = None,
     book_specific_words_path: str | Path | None = None,
     proper_nouns_path: str | Path | None = None,
@@ -363,6 +372,7 @@ def validate_chapter(
         genre_pack=genre_pack,
         setting_pack=setting_pack,
         profession_pack=profession_pack,
+        journalism_crime_pack=journalism_crime_pack,
         urban_objects_pack=urban_objects_pack,
         book_specific_words_path=book_specific_words_path,
         proper_nouns_path=proper_nouns_path,
@@ -414,6 +424,7 @@ def validate_book(
     genre_pack: str | Path | None = None,
     setting_pack: str | Path | None = None,
     profession_pack: str | Path | None = None,
+    journalism_crime_pack: str | Path | None = None,
     urban_objects_pack: str | Path | None = None,
     book_specific_words_path: str | Path | None = None,
     proper_nouns_path: str | Path | None = None,
@@ -430,6 +441,7 @@ def validate_book(
         genre_pack=genre_pack,
         setting_pack=setting_pack,
         profession_pack=profession_pack,
+        journalism_crime_pack=journalism_crime_pack,
         urban_objects_pack=urban_objects_pack,
         book_specific_words_path=book_specific_words_path,
         proper_nouns_path=proper_nouns_path,
@@ -796,6 +808,7 @@ def build_epub(
     genre_pack: str | Path | None = None,
     setting_pack: str | Path | None = None,
     profession_pack: str | Path | None = None,
+    journalism_crime_pack: str | Path | None = None,
     urban_objects_pack: str | Path | None = None,
     book_specific_words_path: str | Path | None = None,
     proper_nouns_path: str | Path | None = None,
@@ -815,6 +828,7 @@ def build_epub(
         genre_pack=genre_pack,
         setting_pack=setting_pack,
         profession_pack=profession_pack,
+        journalism_crime_pack=journalism_crime_pack,
         urban_objects_pack=urban_objects_pack,
         book_specific_words_path=book_specific_words_path,
         proper_nouns_path=proper_nouns_path,

@@ -29,6 +29,7 @@ def main() -> int:
     parser.add_argument("--genre-pack")
     parser.add_argument("--setting-pack")
     parser.add_argument("--profession-pack")
+    parser.add_argument("--journalism-crime-pack")
     parser.add_argument("--urban-objects-pack")
     parser.add_argument("--book-specific")
     parser.add_argument("--proper-nouns")
@@ -47,6 +48,7 @@ def main() -> int:
         "genre_pack": args.genre_pack,
         "setting_pack": args.setting_pack,
         "profession_pack": args.profession_pack,
+        "journalism_crime_pack": args.journalism_crime_pack,
         "urban_objects_pack": args.urban_objects_pack,
         "book_specific_words_path": args.book_specific,
         "proper_nouns_path": args.proper_nouns,

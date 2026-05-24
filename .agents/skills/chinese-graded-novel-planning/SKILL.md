@@ -7,6 +7,8 @@ description: Plan complete Chinese graded-reader novels under a restricted known
 
 Plan before drafting. Read `data/known_words.txt` first, then inspect any project config, selected stretch packs, proper nouns, book-specific words, and existing manuscript files.
 
+For 林安 series work, read `series/an-lin/series_bible.md`, `series/an-lin/character_registry.md`, `series/an-lin/chronology.md`, and `series/an-lin/sequel_constraints.md` before planning. Treat 林安 as the journalist/crime-reporter protagonist and 陈雨 as the recurring police contact unless the user explicitly requests a reboot.
+
 ## Required Outputs
 
 Create or update these files under `manuscripts/<project-slug>/`:
@@ -33,6 +35,7 @@ Create or update these files under `manuscripts/<project-slug>/`:
 - Prefer one strange object, one secret place, one hidden rule, one small danger, one mystery, a small cast, repeated locations, repeated magical terms, and clear emotional stakes.
 - Avoid large invented worlds, kingdoms, races, large magic systems, lore dumps, complicated politics, many monsters, battle-heavy plots, and vocabulary that appears once and disappears.
 - Include at least 3 distinct professions or social roles, at least 4 recurring locations beyond school/hospital/home, at least 2 characters whose role affects plot behavior, and at least 1 location that changes meaning over the story.
+- For journalist/crime stories, use `data/stretch_packs/journalism_crime_50.txt` and plan concrete reporting functions: interview, source verification, publication pressure, witness protection, suspect pressure, and file/evidence handling.
 
 ## Bible Contents
 
@@ -61,6 +64,8 @@ Include:
 - central mystery
 - stretch-word introduction schedule
 - quality risks
+- series continuity constraints when the manuscript belongs to an existing series
+- case function, journalist function, fantasy function, and learning function for each chapter when writing 林安 sequels
 
 Reject outline ideas that are only safe, flat, or repetitive. Vocabulary limits are a constraint, not an excuse for dull scenes.
 

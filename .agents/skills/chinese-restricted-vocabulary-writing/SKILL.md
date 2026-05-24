@@ -16,10 +16,13 @@ Write one chapter at a time. The canonical format is space-tokenized Chinese:
 - Read `data/known_words.txt`.
 - Read the configured approved stretch packs, manuscript `book_specific_words.txt`, and `proper_nouns.txt` when present.
 - Read the manuscript `novel_bible.md`, `outline.md`, `characters.md`, and `continuity_log.md`.
+- For 林安 series chapters, also read `series/an-lin/series_bible.md`, `series/an-lin/character_registry.md`, `series/an-lin/chronology.md`, and `series/an-lin/sequel_constraints.md`.
 - Confirm the target chapter file path and chapter outline. Do not use a token target as a quota.
 - Create `manuscripts/<slug>/planning/chapter_XX_vocab_plan.md` before drafting.
 
 The vocabulary plan must include chapter purpose, scene goal, conflict, emotional turn, main locations, characters and roles, 30-80 core known words that could naturally appear, stretch words to introduce, stretch words to repeat, risky unavailable concepts to avoid, chapter hook, and end-of-chapter change.
+
+For 林安 sequels, the vocabulary plan must also include case function, journalist function, fantasy function, and learning function. Use 5-10 repeated stretch words from earlier chapters and normally 3-5 new stretch words at most.
 
 ## Drafting Rules
 
@@ -38,6 +41,7 @@ The vocabulary plan must include chapter purpose, scene goal, conflict, emotiona
 - Avoid repeated dialogue loops unless the repetition is narratively justified.
 - Use available nouns, verbs, and adjectives more widely.
 - Use approved stretch vocabulary actively and naturally.
+- Use journalism/crime stretch vocabulary for real story actions: interviewing, confirming sources, checking files, protecting witnesses, publishing or withholding articles, following suspects, and comparing testimony.
 - Use Shanghai/urban locations to create scene texture when that setting is configured.
 - Use varied professions and social roles; avoid every scene depending on teachers, doctors, students, police, school, hospital, or home.
 - Use low fantasy sparingly but meaningfully: one strange object, one secret place, one hidden rule, and a small danger are usually enough.
@@ -69,7 +73,7 @@ If unknown tokens appear, review them. Keep them only when the chapter remains w
 For layered stretch manuscripts, include the configured pack arguments:
 
 ```powershell
-python scripts/validate_chapter.py --known data/known_words.txt --chapter manuscripts/<slug>/chapters/chapter_01.zh-tok.txt --out manuscripts/<slug>/chapters/chapter_01.validation.json --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
+python scripts/validate_chapter.py --known data/known_words.txt --chapter manuscripts/<slug>/chapters/chapter_01.zh-tok.txt --out manuscripts/<slug>/chapters/chapter_01.validation.json --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 ```
 
 After each chapter, run vocabulary validation, repair forbidden unknowns that exceed the budget or weaken clarity, run vocabulary usage evidence, update `continuity_log.md`, update `stretch_word_exposure.md`, and check whether stretch words are being repeated enough to become learnable rather than decorative.

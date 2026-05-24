@@ -68,6 +68,23 @@ def zh_tok_to_natural(text: str) -> str:
     return "".join(text.split())
 
 
+def metadata_notes(meta: dict) -> str:
+    extra_keys = ("story_affordance", "difficulty_note", "recommended_repetition_count")
+    if meta.get("notes") and not any(meta.get(key) not in (None, "") for key in extra_keys):
+        return str(meta["notes"])
+    parts = []
+    for key, label in (
+        ("notes", "Notes"),
+        ("story_affordance", "Story affordance"),
+        ("difficulty_note", "Difficulty"),
+        ("recommended_repetition_count", "Recommended repetitions"),
+    ):
+        value = meta.get(key)
+        if value not in (None, ""):
+            parts.append(f"{label}: {value}")
+    return " | ".join(parts)
+
+
 def export_candidates(
     packs: list[str | Path],
     *,
@@ -121,7 +138,7 @@ def export_candidates(
                     "ExampleSentenceZhNatural": zh_tok_to_natural(example_zh_tok),
                     "ExampleSentenceEnglish": meta.get("example_en", ""),
                     "Status": "candidate",
-                    "Notes": meta.get("notes", ""),
+                    "Notes": metadata_notes(meta),
                 }
             )
 

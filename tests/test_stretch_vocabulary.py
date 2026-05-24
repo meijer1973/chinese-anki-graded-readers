@@ -9,6 +9,7 @@ from scripts.export_stretch_words_for_anki import FIELDS, export_candidates
 from scripts.novel_tools import (
     GENERAL_FICTION_LAYER,
     GENRE_LAYER,
+    JOURNALISM_CRIME_LAYER,
     PROFESSION_LAYER,
     ROOT,
     SETTING_LAYER,
@@ -30,11 +31,13 @@ class StretchVocabularyTests(unittest.TestCase):
         self.genre = self.root / "low_fantasy.txt"
         self.setting = self.root / "shanghai_setting.txt"
         self.profession = self.root / "professions.txt"
+        self.journalism = self.root / "journalism_crime.txt"
         self.urban = self.root / "urban_objects.txt"
         self.general.write_text("沉默\n我\n", encoding="utf-8")
         self.genre.write_text("魔法\n", encoding="utf-8")
         self.setting.write_text("上海\n", encoding="utf-8")
         self.profession.write_text("快递员\n", encoding="utf-8")
+        self.journalism.write_text("采访\n", encoding="utf-8")
         self.urban.write_text("地图\n", encoding="utf-8")
         self.proper = self.root / "proper_nouns.txt"
         self.proper.write_text("林安\n", encoding="utf-8")
@@ -55,6 +58,7 @@ class StretchVocabularyTests(unittest.TestCase):
             "genre_pack": self.genre,
             "setting_pack": self.setting,
             "profession_pack": self.profession,
+            "journalism_crime_pack": self.journalism,
             "urban_objects_pack": self.urban,
             "proper_nouns_path": self.proper,
         }
@@ -117,15 +121,20 @@ class StretchVocabularyTests(unittest.TestCase):
         vocab = load_layered_vocabulary(ROOT / "data" / "known_words.txt", profession_pack=ROOT / "data" / "stretch_packs" / "professions_social_roles_100.txt")
         self.assertEqual(vocab["token_layers"]["快递员"], PROFESSION_LAYER)
 
+    def test_journalism_crime_pack_is_loaded(self) -> None:
+        vocab = load_layered_vocabulary(ROOT / "data" / "known_words.txt", journalism_crime_pack=ROOT / "data" / "stretch_packs" / "journalism_crime_50.txt")
+        self.assertEqual(vocab["token_layers"]["采访"], JOURNALISM_CRIME_LAYER)
+
     def test_layer_counts_are_correct(self) -> None:
-        chapters = self.chapters_dir("林安 是 快递员 。\n我 在 上海 看 魔法 。\n你 沉默 了 。\n")
+        chapters = self.chapters_dir("林安 是 快递员 。\n我 在 上海 看 魔法 。\n你 沉默 了 。\n林安 采访 你 。\n")
         report = validate_book(chapters, self.known, **self.layered_kwargs())
-        self.assertEqual(report["core_known_tokens"], 6)
+        self.assertEqual(report["core_known_tokens"], 7)
         self.assertEqual(report["general_fiction_stretch_tokens"], 1)
         self.assertEqual(report["genre_stretch_tokens"], 1)
         self.assertEqual(report["setting_stretch_tokens"], 1)
         self.assertEqual(report["profession_stretch_tokens"], 1)
-        self.assertEqual(report["proper_noun_tokens"], 1)
+        self.assertEqual(report["journalism_crime_stretch_tokens"], 1)
+        self.assertEqual(report["proper_noun_tokens"], 2)
 
     def test_stretch_token_percentage_is_calculated(self) -> None:
         chapters = self.chapters_dir("林安 是 快递员 。\n我 在 上海 看 魔法 。\n你 沉默 了 。\n")

@@ -36,6 +36,8 @@ Review the manuscript as literature under constraint. Do not excuse weak writing
 - whether Shanghai/urban setting vocabulary creates stronger scenes rather than name-dropping
 - whether professions and social roles shape behavior and plot
 - whether low fantasy creates tension while staying simple enough for the target level
+- for 林安 journalist/crime manuscripts, whether reporting work creates actual pressure rather than just labels
+- whether interviews, sources, files, articles, witnesses, suspects, and publication choices affect the plot
 
 Identify technically valid but boring passages, repetitive structures, flat chapters, filler, padding, and artificially narrow vocabulary use. Suggest improvements using concepts likely expressible inside the known-word list. Do not rewrite the whole book unless asked.
 
@@ -55,4 +57,5 @@ Write `manuscripts/<slug>/quality/literary_critic_report.md` with:
 - whether fantasy terms are natural or confusing
 - whether locations are meaningful or decorative
 - whether stretch vocabulary is learnable through repetition
+- whether journalism/crime terms are naturally repeated and story-useful
 - whether any chapter appears padded for count-based targets

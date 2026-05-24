@@ -5,6 +5,10 @@
   "forbidden_unknown_tokens_over_limit": 0,
   "max_forbidden_unknown_tokens_per_chapter": 5,
   "stretch_token_percent": 14.41,
+  "planning_files_present": true,
+  "expected_planning_file_count": 12,
+  "planning_file_count": 12,
+  "missing_chapter_planning_files": [],
   "quality_approval": {
     "approved": true,
     "decision_path": "manuscripts\\shanghai-rain-gate-crime\\quality\\lead_quality_decision.md",

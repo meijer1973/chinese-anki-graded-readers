@@ -17,7 +17,7 @@ See `anki/anki_field_schema.md` for the stretch candidate field mapping.
 Create a review TSV:
 
 ```powershell
-python scripts/export_stretch_words_for_anki.py --packs data/stretch_packs/general_fiction_100.txt data/stretch_packs/low_fantasy_150.txt data/stretch_packs/shanghai_setting_150.txt data/stretch_packs/professions_social_roles_100.txt data/stretch_packs/urban_objects_100.txt --metadata data/stretch_packs/metadata --existing-anki anki/existing_words.txt --out anki/stretch_word_candidates.tsv --report anki/stretch_word_import_log.json
+python scripts/export_stretch_words_for_anki.py --packs data/stretch_packs/general_fiction_100.txt data/stretch_packs/low_fantasy_150.txt data/stretch_packs/shanghai_setting_150.txt data/stretch_packs/professions_social_roles_100.txt data/stretch_packs/urban_objects_100.txt data/stretch_packs/journalism_crime_50.txt --metadata data/stretch_packs/metadata --existing-anki anki/existing_words.txt --out anki/stretch_word_candidates.tsv --report anki/stretch_word_import_log.json
 ```
 
 The export:
@@ -31,6 +31,16 @@ The export:
 Review candidates before import. Use the existing Anki scripts only after review.
 
 Add `--dry-run` to collect counts and missing-metadata warnings without writing the candidate TSV.
+
+After review and explicit user approval, import through AnkiConnect:
+
+```powershell
+python scripts/import_stretch_words_to_anki.py --candidates anki/stretch_word_candidates.tsv --dry-run
+python scripts/import_stretch_words_to_anki.py --candidates anki/stretch_word_candidates.tsv
+python scripts/import_stretch_words_to_anki.py --candidates anki/stretch_word_candidates.tsv --verify-only
+```
+
+The import script skips words already present in the configured Anki deck and suspends production cards for newly added stretch notes. It writes local import logs and review TSVs under `anki/`.
 
 ## Status Tracking
 

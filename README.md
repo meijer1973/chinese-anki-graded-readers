@@ -8,11 +8,12 @@ This repository maintains a Chinese vocabulary Anki deck and a controlled-vocabu
 - Keep curated sentence and pinyin fixes in `sentence_example_overrides.py`.
 - Maintain the active known-word file in `data/known_words.txt`.
 - Generate restricted-vocabulary Chinese manuscripts under `manuscripts/<slug>/`.
+- Plan 林安 journalist/crime sequels from `series/an-lin/` and `data/stretch_packs/journalism_crime_50.txt`.
 - Validate tokenized chapters with `scripts/validate_chapter.py` and `scripts/validate_book.py`.
 - Run quality review with `scripts/run_quality_gate.py`.
 - Build EPUB files with `scripts/build_epub.py` after validation and lead approval.
 
-The first series manuscript is `manuscripts/shanghai-rain-gate-crime/` (`上海雨票案`).
+The first series manuscript is `manuscripts/shanghai-rain-gate-crime/` (`上海雨票案`). Series continuity for its journalist protagonist lives in `series/an-lin/`.
 
 ## Machine-Readable Entry Points
 

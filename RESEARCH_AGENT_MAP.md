@@ -97,6 +97,9 @@ Machine-readable:
     "data/stretch_packs/shanghai_setting_150.txt",
     "data/stretch_packs/professions_social_roles_100.txt",
     "data/stretch_packs/urban_objects_100.txt",
+    "data/stretch_packs/journalism_crime_50.txt",
+    "data/stretch_packs/metadata/journalism_crime_50.json",
+    "series/an-lin/series_bible.md",
     "anki/stretch_word_candidates.tsv",
     "manuscripts/shanghai-rain-gate-crime/vocabulary_report.json",
     "manuscripts/shanghai-rain-gate-crime/quality/quality_gate_summary.json",
@@ -122,6 +125,9 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/shanghai_setting_150.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/professions_social_roles_100.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/urban_objects_100.txt
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/journalism_crime_50.txt
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/journalism_crime_50.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/an-lin/series_bible.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/novel-generation.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/stretch-vocabulary.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/anki-integration.md
@@ -153,6 +159,9 @@ Use these anchors before free-form browsing.
   "chapter_validator": "scripts/validate_chapter.py",
   "book_validator": "scripts/validate_book.py",
   "epub_builder": "scripts/build_epub.py",
+  "plot_affordance_report": "scripts/plot_affordance_report.py",
+  "lin_an_series_bible": "series/an-lin/series_bible.md",
+  "journalism_crime_pack": "data/stretch_packs/journalism_crime_50.txt",
   "first_series_manuscript": "manuscripts/shanghai-rain-gate-crime",
   "current_story_trial": "manuscripts/shanghai-rain-ticket",
   "file_inventory": "reports/github-agent-index.md"
@@ -173,6 +182,7 @@ Use these anchors before free-form browsing.
     "docs",
     "manuscripts",
     "reports",
+    "series",
     "scripts",
     "tests"
   ],
@@ -193,10 +203,12 @@ Use these anchors before free-form browsing.
 | Generate or validate known words | `scripts/sync_known_words.py`, `data/known_words.metadata.json` |
 | Validate story vocabulary | `scripts/validate_chapter.py`, `scripts/validate_book.py`, `scripts/novel_tools.py` |
 | Plan a new story | `.agents/skills/chinese-graded-novel-planning/SKILL.md`, `docs/novel-generation.md` |
+| Plan a 林安 sequel | `series/an-lin/series_bible.md`, `series/an-lin/sequel_constraints.md`, `data/stretch_packs/journalism_crime_50.txt` |
 | Draft or revise a chapter | `.agents/skills/chinese-restricted-vocabulary-writing/SKILL.md` |
 | Review literary quality | `.agents/skills/chinese-literary-critic/SKILL.md`, `.agents/skills/chinese-normal-reader-review/SKILL.md`, `.agents/skills/chinese-lead-quality-review/SKILL.md` |
 | Export EPUB | `scripts/build_epub.py`, `.agents/skills/epub-export/SKILL.md` |
 | Prepare stretch words for Anki | `docs/anki-integration.md`, `scripts/export_stretch_words_for_anki.py` |
+| Check plot affordances for a premise | `scripts/plot_affordance_report.py` |
 | Mutate live Anki | `AGENTS.md`, then the exact update script |
 | Verify expected behavior | `tests/` |
 

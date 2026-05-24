@@ -49,6 +49,8 @@ Notes
 - `Source` should identify the pack and optional source book, such as `stretch:low_fantasy_150`.
 - `Frequency Rank` should remain blank until the word is promoted into the ranked core list.
 
+When metadata includes `story_affordance`, `difficulty_note`, or `recommended_repetition_count`, the export script folds those values into `Notes` so the reviewer can see why the word exists and how often it should recur.
+
 ## Status Values
 
 - `candidate`

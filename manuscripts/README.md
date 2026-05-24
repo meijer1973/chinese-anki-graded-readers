@@ -12,7 +12,7 @@ Generated EPUB folders are ignored by Git. Rebuild EPUB output with `scripts/bui
 
 | Slug | Title | Status | Notes |
 |---|---|---|---|
-| `shanghai-rain-gate-crime` | `上海雨票案` | PASS | First manuscript in the Shanghai rain-gate series. Imported from writer-agent package and revalidated locally. |
+| `shanghai-rain-gate-crime` | `上海雨票案` | PASS | First 林安 journalist urban-fantasy crime manuscript. Read `series/an-lin/` before planning sequels. |
 
 ## Fixtures And Trials
 

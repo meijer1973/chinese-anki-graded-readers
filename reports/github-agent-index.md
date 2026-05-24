@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki And Graded Readers
 
-Generated: 2026-05-24T07:13:15Z
+Generated: 2026-05-24T07:41:08Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 176
+Files indexed: 199
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -62,7 +62,7 @@ Count: 5
 
 ## scripts
 
-Count: 26
+Count: 27
 
 - add_missing_single_character_notes.py
 - apply_meaning_cleanup_updates.py
@@ -78,6 +78,7 @@ Count: 26
 - scripts/import_stretch_words_to_anki.py
 - scripts/load_known_words.py
 - scripts/novel_tools.py
+- scripts/plot_affordance_report.py
 - scripts/promote_stretch_words.py
 - scripts/repeated_phrase_report.py
 - scripts/run_quality_gate.py
@@ -99,7 +100,7 @@ Count: 1
 
 ## data
 
-Count: 18
+Count: 20
 
 - data/cedict_ts.u8.gz
 - data/cmn-eng_links.tsv.bz2
@@ -110,8 +111,10 @@ Count: 18
 - data/known_words.txt
 - data/punctuation_allowlist.txt
 - data/stretch_packs/general_fiction_100.txt
+- data/stretch_packs/journalism_crime_50.txt
 - data/stretch_packs/low_fantasy_150.txt
 - data/stretch_packs/metadata/general_fiction_100.json
+- data/stretch_packs/metadata/journalism_crime_50.json
 - data/stretch_packs/metadata/low_fantasy_150.json
 - data/stretch_packs/metadata/professions_social_roles_100.json
 - data/stretch_packs/metadata/shanghai_setting_150.json
@@ -129,7 +132,7 @@ Count: 2
 
 ## manuscripts
 
-Count: 88
+Count: 101
 
 - manuscripts/README.md
 - manuscripts/sample-known-words/chapters/chapter_01.validation.json
@@ -175,10 +178,23 @@ Count: 88
 - manuscripts/shanghai-rain-gate-crime/continuity_log.md
 - manuscripts/shanghai-rain-gate-crime/novel_bible.md
 - manuscripts/shanghai-rain-gate-crime/outline.md
+- manuscripts/shanghai-rain-gate-crime/planning/chapter_01_vocab_plan.md
+- manuscripts/shanghai-rain-gate-crime/planning/chapter_02_vocab_plan.md
+- manuscripts/shanghai-rain-gate-crime/planning/chapter_03_vocab_plan.md
+- manuscripts/shanghai-rain-gate-crime/planning/chapter_04_vocab_plan.md
+- manuscripts/shanghai-rain-gate-crime/planning/chapter_05_vocab_plan.md
+- manuscripts/shanghai-rain-gate-crime/planning/chapter_06_vocab_plan.md
+- manuscripts/shanghai-rain-gate-crime/planning/chapter_07_vocab_plan.md
+- manuscripts/shanghai-rain-gate-crime/planning/chapter_08_vocab_plan.md
+- manuscripts/shanghai-rain-gate-crime/planning/chapter_09_vocab_plan.md
+- manuscripts/shanghai-rain-gate-crime/planning/chapter_10_vocab_plan.md
+- manuscripts/shanghai-rain-gate-crime/planning/chapter_11_vocab_plan.md
+- manuscripts/shanghai-rain-gate-crime/planning/chapter_12_vocab_plan.md
 - manuscripts/shanghai-rain-gate-crime/proper_nouns.txt
 - manuscripts/shanghai-rain-gate-crime/quality/lead_quality_decision.md
 - manuscripts/shanghai-rain-gate-crime/quality/literary_critic_report.md
 - manuscripts/shanghai-rain-gate-crime/quality/normal_reader_report.md
+- manuscripts/shanghai-rain-gate-crime/quality/plot_affordance_report.json
 - manuscripts/shanghai-rain-gate-crime/quality/quality_gate_summary.json
 - manuscripts/shanghai-rain-gate-crime/quality/repeated_phrase_report.json
 - manuscripts/shanghai-rain-gate-crime/quality/vocabulary_usage_report.json
@@ -230,8 +246,15 @@ Count: 3
 
 ## root
 
-Count: 3
+Count: 10
 
 - .gitattributes
 - .gitignore
+- series/an-lin/approved_series_words.txt
+- series/an-lin/character_registry.md
+- series/an-lin/chronology.md
+- series/an-lin/recurring_locations.md
+- series/an-lin/recurring_objects.md
+- series/an-lin/sequel_constraints.md
+- series/an-lin/series_bible.md
 - word list chinese.txt

@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-24T07:13:15Z",
+  "generated_at": "2026-05-24T07:41:08Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 176,
+  "file_count": 199,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -241,6 +241,11 @@
       "category": "data"
     },
     {
+      "path": "data/stretch_packs/journalism_crime_50.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/journalism_crime_50.txt",
+      "category": "data"
+    },
+    {
       "path": "data/stretch_packs/low_fantasy_150.txt",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/low_fantasy_150.txt",
       "category": "data"
@@ -248,6 +253,11 @@
     {
       "path": "data/stretch_packs/metadata/general_fiction_100.json",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/general_fiction_100.json",
+      "category": "data"
+    },
+    {
+      "path": "data/stretch_packs/metadata/journalism_crime_50.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/journalism_crime_50.json",
       "category": "data"
     },
     {
@@ -536,6 +546,66 @@
       "category": "manuscripts"
     },
     {
+      "path": "manuscripts/shanghai-rain-gate-crime/planning/chapter_01_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/planning/chapter_01_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/planning/chapter_02_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/planning/chapter_02_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/planning/chapter_03_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/planning/chapter_03_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/planning/chapter_04_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/planning/chapter_04_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/planning/chapter_05_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/planning/chapter_05_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/planning/chapter_06_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/planning/chapter_06_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/planning/chapter_07_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/planning/chapter_07_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/planning/chapter_08_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/planning/chapter_08_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/planning/chapter_09_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/planning/chapter_09_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/planning/chapter_10_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/planning/chapter_10_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/planning/chapter_11_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/planning/chapter_11_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/planning/chapter_12_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/planning/chapter_12_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
       "path": "manuscripts/shanghai-rain-gate-crime/proper_nouns.txt",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/proper_nouns.txt",
       "category": "manuscripts"
@@ -553,6 +623,11 @@
     {
       "path": "manuscripts/shanghai-rain-gate-crime/quality/normal_reader_report.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/quality/normal_reader_report.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/quality/plot_affordance_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/quality/plot_affordance_report.json",
       "category": "manuscripts"
     },
     {
@@ -821,6 +896,11 @@
       "category": "scripts"
     },
     {
+      "path": "scripts/plot_affordance_report.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/plot_affordance_report.py",
+      "category": "scripts"
+    },
+    {
       "path": "scripts/promote_stretch_words.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/promote_stretch_words.py",
       "category": "scripts"
@@ -859,6 +939,41 @@
       "path": "sentence_example_overrides.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/sentence_example_overrides.py",
       "category": "scripts"
+    },
+    {
+      "path": "series/an-lin/approved_series_words.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/an-lin/approved_series_words.txt",
+      "category": "root"
+    },
+    {
+      "path": "series/an-lin/character_registry.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/an-lin/character_registry.md",
+      "category": "root"
+    },
+    {
+      "path": "series/an-lin/chronology.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/an-lin/chronology.md",
+      "category": "root"
+    },
+    {
+      "path": "series/an-lin/recurring_locations.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/an-lin/recurring_locations.md",
+      "category": "root"
+    },
+    {
+      "path": "series/an-lin/recurring_objects.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/an-lin/recurring_objects.md",
+      "category": "root"
+    },
+    {
+      "path": "series/an-lin/sequel_constraints.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/an-lin/sequel_constraints.md",
+      "category": "root"
+    },
+    {
+      "path": "series/an-lin/series_bible.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/an-lin/series_bible.md",
+      "category": "root"
     },
     {
       "path": "setup_production_sentence_cards.py",

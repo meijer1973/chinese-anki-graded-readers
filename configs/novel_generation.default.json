@@ -17,6 +17,7 @@
     "setting_pack": "data/stretch_packs/shanghai_setting_150.txt",
     "profession_pack": "data/stretch_packs/professions_social_roles_100.txt",
     "urban_objects_pack": "data/stretch_packs/urban_objects_100.txt",
+    "journalism_crime_pack": "data/stretch_packs/journalism_crime_50.txt",
     "book_specific_words_path": "manuscripts/<slug>/book_specific_words.txt",
     "proper_nouns_path": "manuscripts/<slug>/proper_nouns.txt",
     "allow_unknown_outside_approved_layers": true,
@@ -36,6 +37,8 @@
   "include_validation_appendix": true,
   "genre": {
     "mode": "low_fantasy_urban_shanghai",
+    "series_bible_path": "series/an-lin/series_bible.md",
+    "series_constraints_path": "series/an-lin/sequel_constraints.md",
     "avoid_epic_fantasy": true,
     "prefer_one_strange_object": true,
     "prefer_one_secret_place": true,

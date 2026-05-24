@@ -31,6 +31,9 @@
     "data/stretch_packs/shanghai_setting_150.txt",
     "data/stretch_packs/professions_social_roles_100.txt",
     "data/stretch_packs/urban_objects_100.txt",
+    "data/stretch_packs/journalism_crime_50.txt",
+    "data/stretch_packs/metadata/journalism_crime_50.json",
+    "series/an-lin/series_bible.md",
     "anki/stretch_word_candidates.tsv",
     "manuscripts/shanghai-rain-gate-crime/vocabulary_report.json",
     "manuscripts/shanghai-rain-gate-crime/quality/quality_gate_summary.json",
@@ -68,13 +71,17 @@
       "scripts/run_quality_gate.py",
       "scripts/build_epub.py",
       "scripts/vocabulary_usage_report.py",
-      "scripts/repeated_phrase_report.py"
+      "scripts/repeated_phrase_report.py",
+      "scripts/plot_affordance_report.py"
     ],
     "vocabulary": [
       "word list chinese.txt",
       "data/known_words.txt",
       "data/stretch_packs",
       "anki/stretch_word_candidates.tsv"
+    ],
+    "series": [
+      "series/an-lin"
     ],
     "manuscripts": [
       "manuscripts/sample-known-words",

@@ -8,6 +8,7 @@ try:
         DEFAULT_KNOWN_WORDS,
         DEFAULT_MAX_FORBIDDEN_UNKNOWN_TOKENS_PER_CHAPTER,
         DEFAULT_PUNCTUATION,
+        chapter_files,
         quality_approval_status,
         repeated_phrase_report,
         validate_book,
@@ -19,6 +20,7 @@ except ModuleNotFoundError:
         DEFAULT_KNOWN_WORDS,
         DEFAULT_MAX_FORBIDDEN_UNKNOWN_TOKENS_PER_CHAPTER,
         DEFAULT_PUNCTUATION,
+        chapter_files,
         quality_approval_status,
         repeated_phrase_report,
         validate_book,
@@ -102,6 +104,24 @@ EPUB build allowed: PENDING
     )
 
 
+def expected_vocab_plan_path(manuscript: Path, chapter: Path) -> Path:
+    stem = chapter.name.replace(".zh-tok.txt", "")
+    chapter_number = stem.replace("chapter_", "")
+    return manuscript / "planning" / f"chapter_{chapter_number}_vocab_plan.md"
+
+
+def chapter_planning_status(manuscript: Path) -> dict:
+    chapters = chapter_files(manuscript / "chapters")
+    expected = [expected_vocab_plan_path(manuscript, chapter) for chapter in chapters]
+    missing = [path for path in expected if not path.exists()]
+    return {
+        "planning_files_present": not missing,
+        "expected_planning_file_count": len(expected),
+        "planning_file_count": len(expected) - len(missing),
+        "missing_chapter_planning_files": [str(path) for path in missing],
+    }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Create quality evidence artifacts for a manuscript.")
     parser.add_argument("--manuscript", required=True)
@@ -111,6 +131,7 @@ def main() -> int:
     parser.add_argument("--genre-pack")
     parser.add_argument("--setting-pack")
     parser.add_argument("--profession-pack")
+    parser.add_argument("--journalism-crime-pack")
     parser.add_argument("--urban-objects-pack")
     parser.add_argument("--book-specific")
     parser.add_argument("--proper-nouns")
@@ -135,6 +156,7 @@ def main() -> int:
         genre_pack=args.genre_pack,
         setting_pack=args.setting_pack,
         profession_pack=args.profession_pack,
+        journalism_crime_pack=args.journalism_crime_pack,
         urban_objects_pack=args.urban_objects_pack,
         book_specific_words_path=args.book_specific,
         proper_nouns_path=args.proper_nouns,
@@ -148,6 +170,7 @@ def main() -> int:
     write_json(quality / "repeated_phrase_report.json", phrases)
     init_quality_templates(quality)
     status = quality_approval_status(manuscript)
+    planning_status = chapter_planning_status(manuscript)
     summary = {
         "valid_vocabulary": validation["valid"],
         "unknown_token_count": validation["unknown_token_count"],
@@ -158,15 +181,17 @@ def main() -> int:
             args.max_forbidden_unknown_tokens_per_chapter,
         ),
         "stretch_token_percent": validation.get("stretch_token_percent", 0),
+        **planning_status,
         "quality_approval": status,
-        "ready_for_epub": validation["valid"] and status["approved"],
+        "ready_for_epub": validation["valid"] and status["approved"] and planning_status["planning_files_present"],
     }
     write_json(quality / "quality_gate_summary.json", summary)
     print(
         "valid_vocabulary={valid_vocabulary} unknown_tokens={unknown_token_count} "
-        "quality_approved={approved} ready_for_epub={ready}".format(
+        "planning_files_present={planning} quality_approved={approved} ready_for_epub={ready}".format(
             valid_vocabulary=summary["valid_vocabulary"],
             unknown_token_count=summary["unknown_token_count"],
+            planning=summary["planning_files_present"],
             approved=status["approved"],
             ready=summary["ready_for_epub"],
         )

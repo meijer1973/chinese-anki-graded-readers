@@ -37,6 +37,8 @@ Reject padding. Do not accept a chapter because it hits a token count, coverage 
 
 For low-fantasy Shanghai manuscripts, reject or require rewrite when Shanghai words are decorative only, fantasy terms are confusing, professions do not affect character behavior, stretch words are dumped without repetition, the book remains bland despite broader vocabulary, or the text is too difficult for the configured target level.
 
+For 林安 journalist/crime manuscripts, reject or require rewrite when 林安 does not function as a journalist, the case has no real investigation pressure, interviews or sources do not change the story, publication choices are decorative, or journalism/crime stretch words are dumped without meaningful repetition.
+
 ## Output
 
 Write `manuscripts/<slug>/quality/lead_quality_decision.md` with:
@@ -50,6 +52,7 @@ Write `manuscripts/<slug>/quality/lead_quality_decision.md` with:
 - whether complete rebuild is required
 - specific instructions for the next writer agent
 - whether stretch vocabulary is approved, needs polish, or should be reduced
+- whether the journalism/crime layer is approved, needs polish, or should be reduced
 - whether the current EPUB build is allowed
 
 EPUB export is allowed only when the file explicitly contains `Final decision: PASS`.

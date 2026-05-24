@@ -26,6 +26,7 @@ The validator distinguishes these layers:
 - genre stretch words
 - setting stretch words
 - profession/social-role stretch words
+- journalism/crime stretch words
 - book-specific stretch words
 - proper nouns
 - forbidden unknown tokens
@@ -44,6 +45,12 @@ For `low_fantasy_urban_shanghai`, prefer easy low fantasy: normal city life plus
 
 Every real novel in this mode should include at least 3 distinct professions or social roles, at least 4 recurring non-home/non-school/non-hospital locations, at least 2 characters whose role affects the plot, and at least 1 location that changes meaning over the story.
 
+### 林安 Series Continuity
+
+For 林安 series work, read `series/an-lin/series_bible.md`, `series/an-lin/character_registry.md`, `series/an-lin/chronology.md`, and `series/an-lin/sequel_constraints.md` before planning. 林安 is the journalist/crime-reporter protagonist for this continuity, and 陈雨 is the recurring police contact. Do not reset 林安 into another profession or ignore the first series manuscript at `manuscripts/shanghai-rain-gate-crime/`.
+
+Use `data/stretch_packs/journalism_crime_50.txt` for journalist/crime affordances such as interviews, sources, files, publication pressure, witnesses, suspects, motives, and source protection. Chapter vocabulary plans for this series must include case function, journalist function, fantasy function, and learning function.
+
 ### Stretch Words And Anki
 
 Stretch words are review-first Anki candidates. Do not directly mutate the live Anki collection from the novel workflow. Use `scripts/export_stretch_words_for_anki.py` to create `anki/stretch_word_candidates.tsv`, review it, then follow the existing Anki workflows. Promote learned stretch words into a new known-word file with `scripts/promote_stretch_words.py`; do not rewrite historical manuscript reports.
@@ -61,6 +68,8 @@ Stretch words are review-first Anki candidates. Do not directly mutate the live 
 - `data/` contains compressed source datasets used by the builder: CC-CEDICT and Tatoeba Mandarin-English exports.
 - `downloads/`, `SUBTLEX-CH-CHR/`, and `SUBTLEX-CH-WF/` are source/reference data directories.
 - `data/known_words.txt` is the active machine-readable known-word list for restricted-vocabulary fiction. It is generated from the ranked source list by `scripts/sync_known_words.py`.
+- `series/an-lin/` contains the series-level bible and continuity constraints for the 林安 journalist urban-fantasy crime series.
+- `data/stretch_packs/journalism_crime_50.txt` contains reviewed journalism/crime stretch words for 林安-style crime reporting stories.
 - `configs/novel_generation.default.json` is the default configuration template for graded-reader novel projects.
 - `AGENT_GITHUB_ENTRY.md`, `RESEARCH_AGENT_MAP.md`, `RESEARCH_AGENT_PROMPT.md`, and `repo_manifest.json` are the GitHub-facing machine-readable/research-agent entry points.
 - `reports/github-agent-index.md`, `reports/github-agent-index.json`, and `reports/url-index.md` are generated inventories for remote agents; refresh them with `python scripts/build_agent_index.py`.

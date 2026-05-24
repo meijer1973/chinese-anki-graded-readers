@@ -7,4 +7,6 @@ Read data/known_words.txt before planning. Produce files under manuscripts/<proj
 Focus on plot feasibility and reader interest under the active vocabulary. Do not force a chapter count or word count; let chapter breaks follow story turns. For layered projects, read the selected stretch packs and create book_specific_words.txt, proper_nouns.txt, and stretch_word_exposure.md when needed. Create novel_bible.md, outline.md, characters.md, and an initial continuity_log.md. Include chapter hooks, scene pressure, emotional movement, vocabulary opportunities, and risky concepts that may tempt later writers to use unavailable words. Reject flat safe outlines and padded outlines.
 
 For low_fantasy_urban_shanghai, plan easy low fantasy: normal Shanghai life plus one impossible thing. Include selected packs, recurring Shanghai locations, character professions/social roles, fantasy rule, strange object or place, central mystery, emotional arc, and stretch-word introduction schedule. Avoid epic fantasy scale.
+
+For the Lin An / 林安 series, read series/an-lin/ before planning. Treat 林安 as a journalist/crime reporter and 陈雨 as the recurring police contact. Use data/stretch_packs/journalism_crime_50.txt and plan real case, journalist, fantasy, and learning functions for each chapter.
 """

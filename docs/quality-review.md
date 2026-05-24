@@ -12,6 +12,8 @@ Every real manuscript needs these artifacts under `manuscripts/<project-slug>/qu
 
 The lead decision is the final manuscript status.
 
+For planning-heavy manuscripts, `scripts/run_quality_gate.py` also checks that every chapter has `planning/chapter_XX_vocab_plan.md`. Missing planning files are reported in `quality_gate_summary.json` and should block EPUB readiness until fixed.
+
 ## Evidence Scripts
 
 Run the whole quality evidence setup:
@@ -25,11 +27,14 @@ Run reports individually:
 ```powershell
 python scripts/vocabulary_usage_report.py --known data/known_words.txt --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/quality/vocabulary_usage_report.json
 python scripts/repeated_phrase_report.py --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/quality/repeated_phrase_report.json
+python scripts/plot_affordance_report.py --known data/known_words.txt --packs data/stretch_packs/general_fiction_100.txt data/stretch_packs/low_fantasy_150.txt data/stretch_packs/shanghai_setting_150.txt data/stretch_packs/journalism_crime_50.txt --required 采访 文章 编辑 来源 嫌犯 证人 动机 --out manuscripts/<slug>/quality/plot_affordance_report.json
 ```
 
 The reports include token totals, unique-token counts, known-list coverage percentage, chapter-level unique-token counts, unused known words, overused token warnings, and repeated phrase warnings.
 
 Layered validation reports also include core known tokens, stretch tokens by layer, proper noun tokens, forbidden unknown tokens, forbidden unknowns over the per-chapter budget, core coverage percent, stretch-token percent, stretch words used once, stretch words by chapter, and new stretch words by chapter.
+
+The plot affordance report classifies available words by story function. It helps a planner see whether a premise has enough vocabulary for action, crime, evidence, journalism, setting movement, conflict, fantasy mechanism, and dialogue variety.
 
 ## Story-First Targets
 
@@ -85,5 +90,8 @@ For low-fantasy Shanghai manuscripts, reviewers should also ask:
 - Are stretch words repeated naturally rather than dumped?
 - Does the fantasy stay simple enough for the target level?
 - Are locations meaningful, or just namedropped?
+- For 林安 journalist/crime manuscripts, did the journalism/crime pack create real reporting pressure?
+- Did interviews, sources, files, publication choices, suspects, and witnesses affect the plot?
+- Are journalism/crime stretch words repeated enough to become learnable?
 
 The lead reviewer may reject a book when stretch words make it harder but not better, when city/place words are decorative, or when the manuscript remains bland despite broader vocabulary.

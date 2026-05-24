@@ -79,10 +79,13 @@ The default strict mode uses only `data/known_words.txt`. The richer controlled 
 - setting stretch words: `data/stretch_packs/shanghai_setting_150.txt`
 - profession/social-role stretch words: `data/stretch_packs/professions_social_roles_100.txt`
 - urban object stretch words: `data/stretch_packs/urban_objects_100.txt`
+- journalism/crime stretch words: `data/stretch_packs/journalism_crime_50.txt`
 - manuscript `book_specific_words.txt`
 - manuscript `proper_nouns.txt`
 
 The rule is not random leakage. Stretch words are approved learning targets. Proper nouns belong in `proper_nouns.txt` and do not count against the unknown-token budget. Each chapter may keep up to 5 forbidden unknown tokens, but the budget is breathing room, not a target. If a word appears in both core and stretch, the validator counts it as core.
+
+For the 林安 series, read `series/an-lin/series_bible.md`, `series/an-lin/character_registry.md`, `series/an-lin/chronology.md`, and `series/an-lin/sequel_constraints.md` before planning. 林安 is the journalist/crime-reporter protagonist in that continuity; do not reset her profession or ignore `manuscripts/shanghai-rain-gate-crime/`.
 
 ## Start a New Manuscript
 
@@ -109,6 +112,8 @@ The planner should create:
 - risky concepts likely to cause vocabulary violations
 
 For `low_fantasy_urban_shanghai`, the planner must also create selected vocabulary packs, book-specific stretch words, proper nouns, a setting map, recurring locations, character professions/social roles, fantasy rule, strange object or place, central mystery, stretch-word introduction schedule, and quality risks.
+
+For 林安 journalist/crime stories, include the journalism/crime pack and make sure the outline has real story functions: interview, source verification, publication pressure, witness protection, suspect pressure, and a simple fantasy mechanism that changes the case.
 
 ## Skills and Agent Roles
 
@@ -182,6 +187,13 @@ Include chapter purpose, scene goal, conflict, emotional turn, 30-80 known words
 
 For layered manuscripts, also include main locations, characters and roles, stretch words to introduce, stretch words to repeat from earlier chapters, expected later repetition, chapter hook, and end-of-chapter change.
 
+For 林安 sequels, also include:
+
+- case function: new clue, false lead, witness pressure, suspect pressure, or public reporting consequence
+- journalist function: interview, verify, publish, protect source, or face legal/ethical risk
+- fantasy function: impossible clue, altered memory, shadow gate, or supernatural cost
+- learning function: 5-10 repeated stretch words from earlier chapters and normally 3-5 new stretch words at most
+
 Save the result as:
 
 ```text
@@ -198,7 +210,7 @@ python scripts/validate_chapter.py --known data/known_words.txt --chapter manusc
 Layered low-fantasy Shanghai validation:
 
 ```powershell
-python scripts/validate_chapter.py --known data/known_words.txt --chapter manuscripts/<slug>/chapters/chapter_01.zh-tok.txt --out manuscripts/<slug>/chapters/chapter_01.validation.json --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
+python scripts/validate_chapter.py --known data/known_words.txt --chapter manuscripts/<slug>/chapters/chapter_01.zh-tok.txt --out manuscripts/<slug>/chapters/chapter_01.validation.json --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 ```
 
 The default forbidden-unknown budget is 5 tokens per chapter. Override it when needed:
@@ -223,8 +235,8 @@ Before writing the next chapter, Codex must read the continuity log.
 Update `manuscripts/<slug>/stretch_word_exposure.md` after each chapter:
 
 ```markdown
-| Word | Layer | First chapter | Total uses | Chapters used | Repeated enough? | Anki status |
-|---|---|---:|---:|---|---|---|
+| Word | Layer | First chapter | Target repetitions | Actual repetitions | Chapters used | Exposure status | Anki status |
+|---|---|---:|---:|---:|---|---|---|
 ```
 
 ## Vocabulary Breadth
@@ -237,6 +249,12 @@ python scripts/repeated_phrase_report.py --chapters manuscripts/<slug>/chapters 
 ```
 
 These reports provide evidence for reviewers. They do not make literary decisions.
+
+Before planning a case-heavy story, run the plot affordance report to see whether the active vocabulary can support the premise:
+
+```powershell
+python scripts/plot_affordance_report.py --known data/known_words.txt --packs data/stretch_packs/general_fiction_100.txt data/stretch_packs/low_fantasy_150.txt data/stretch_packs/shanghai_setting_150.txt data/stretch_packs/professions_social_roles_100.txt data/stretch_packs/journalism_crime_50.txt --required 采访 文章 编辑 来源 嫌犯 证人 动机 --out manuscripts/<slug>/quality/plot_affordance_report.json
+```
 
 ## Validate the Whole Book
 
@@ -263,6 +281,8 @@ python scripts/run_quality_gate.py --manuscript manuscripts/<slug> --known data/
 ```
 
 Then run the reviews:
+
+The quality gate also checks that every `chapter_XX.zh-tok.txt` has a matching `planning/chapter_XX_vocab_plan.md`. Missing planning files make `quality_gate_summary.json` report `ready_for_epub: false` until the plans are added.
 
 1. Literary critic review writes `quality/literary_critic_report.md`.
 2. Normal reader review writes `quality/normal_reader_report.md`.

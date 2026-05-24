@@ -15,7 +15,8 @@ from scripts.novel_tools import (
     vocabulary_usage_report,
     write_json,
 )
-from scripts.run_quality_gate import init_quality_templates
+from scripts.plot_affordance_report import build_report as build_plot_affordance_report
+from scripts.run_quality_gate import chapter_planning_status, init_quality_templates
 
 
 class NovelPipelineTests(unittest.TestCase):
@@ -201,6 +202,30 @@ class NovelPipelineTests(unittest.TestCase):
         self.assertTrue((quality / "literary_critic_report.md").exists())
         self.assertTrue((quality / "normal_reader_report.md").exists())
         self.assertTrue((quality / "lead_quality_decision.md").exists())
+
+    def test_quality_gate_detects_missing_chapter_planning_files(self) -> None:
+        manuscript = self.root / "manuscript"
+        chapters = manuscript / "chapters"
+        chapters.mkdir(parents=True)
+        (chapters / "chapter_01.zh-tok.txt").write_text("我 看 照片 。\n", encoding="utf-8")
+        status = chapter_planning_status(manuscript)
+        self.assertFalse(status["planning_files_present"])
+        self.assertEqual(status["expected_planning_file_count"], 1)
+        self.assertEqual(status["planning_file_count"], 0)
+
+        planning = manuscript / "planning"
+        planning.mkdir()
+        (planning / "chapter_01_vocab_plan.md").write_text("# Chapter 01 Vocabulary Plan\n", encoding="utf-8")
+        status = chapter_planning_status(manuscript)
+        self.assertTrue(status["planning_files_present"])
+
+    def test_plot_affordance_report_finds_missing_required_words(self) -> None:
+        pack = self.root / "journalism_crime.txt"
+        pack.write_text("采访\n案件\n证人\n", encoding="utf-8")
+        report = build_plot_affordance_report(self.known, [pack], ["采访", "动机"])
+        self.assertIn("采访", report["available_required_words"])
+        self.assertIn("动机", report["missing_required_words"])
+        self.assertGreaterEqual(report["category_counts"]["journalism_nouns"], 1)
 
     def test_deleted_bad_manuscripts_are_not_referenced_by_docs(self) -> None:
         docs = "\n".join(path.read_text(encoding="utf-8") for path in (ROOT / "docs").glob("*.md"))

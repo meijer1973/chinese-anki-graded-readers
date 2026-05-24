@@ -27,6 +27,8 @@ Read like a real learner-reader, not a technical validator and not a literary th
 - Was the fantasy element interesting?
 - Did stretch words make the story too hard?
 - Were locations meaningful, or just names?
+- If this is a 林安 story, did she feel like a journalist solving a case?
+- Did the crime/reporting words help the story, or did they make it feel like homework?
 
 Be blunt about whether the book feels like a real story.
 
@@ -43,3 +45,4 @@ Write `manuscripts/<slug>/quality/normal_reader_report.md` with:
 - whether the reader would continue after chapter 1
 - whether the reader would finish the book
 - whether stretch vocabulary helped or hurt the reading experience
+- whether the journalism/crime layer made the story more interesting and still readable
