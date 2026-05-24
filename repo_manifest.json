@@ -32,6 +32,8 @@
     "data/stretch_packs/professions_social_roles_100.txt",
     "data/stretch_packs/urban_objects_100.txt",
     "anki/stretch_word_candidates.tsv",
+    "manuscripts/shanghai-rain-gate-crime/vocabulary_report.json",
+    "manuscripts/shanghai-rain-gate-crime/quality/quality_gate_summary.json",
     "manuscripts/shanghai-rain-ticket/vocabulary_report.json",
     "manuscripts/shanghai-rain-ticket/quality/quality_gate_summary.json",
     "reports/github-agent-index.md",
@@ -77,6 +79,7 @@
     "manuscripts": [
       "manuscripts/sample-known-words",
       "manuscripts/stretch-layer-fixture",
+      "manuscripts/shanghai-rain-gate-crime",
       "manuscripts/shanghai-rain-ticket"
     ],
     "tests": [

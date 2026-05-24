@@ -9,6 +9,7 @@ venv/
 
 # Local downloads and extracted add-ons
 downloads/
+Manuscripts from writer agent/
 
 # Large local reference spreadsheets/directories
 SUBTLEX-CH-CHR/

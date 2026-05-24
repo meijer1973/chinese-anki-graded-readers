@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki And Graded Readers
 
-Generated: 2026-05-23T21:39:22Z
+Generated: 2026-05-24T07:13:15Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 137
+Files indexed: 176
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -129,8 +129,9 @@ Count: 2
 
 ## manuscripts
 
-Count: 49
+Count: 88
 
+- manuscripts/README.md
 - manuscripts/sample-known-words/chapters/chapter_01.validation.json
 - manuscripts/sample-known-words/chapters/chapter_01.zh-tok.txt
 - manuscripts/sample-known-words/characters.md
@@ -145,6 +146,44 @@ Count: 49
 - manuscripts/sample-known-words/quality/vocabulary_usage_report.json
 - manuscripts/sample-known-words/vocabulary_report.json
 - manuscripts/sample-known-words/vocabulary_report.md
+- manuscripts/shanghai-rain-gate-crime/book_specific_words.txt
+- manuscripts/shanghai-rain-gate-crime/chapters/chapter_01.validation.json
+- manuscripts/shanghai-rain-gate-crime/chapters/chapter_01.zh-tok.txt
+- manuscripts/shanghai-rain-gate-crime/chapters/chapter_02.validation.json
+- manuscripts/shanghai-rain-gate-crime/chapters/chapter_02.zh-tok.txt
+- manuscripts/shanghai-rain-gate-crime/chapters/chapter_03.validation.json
+- manuscripts/shanghai-rain-gate-crime/chapters/chapter_03.zh-tok.txt
+- manuscripts/shanghai-rain-gate-crime/chapters/chapter_04.validation.json
+- manuscripts/shanghai-rain-gate-crime/chapters/chapter_04.zh-tok.txt
+- manuscripts/shanghai-rain-gate-crime/chapters/chapter_05.validation.json
+- manuscripts/shanghai-rain-gate-crime/chapters/chapter_05.zh-tok.txt
+- manuscripts/shanghai-rain-gate-crime/chapters/chapter_06.validation.json
+- manuscripts/shanghai-rain-gate-crime/chapters/chapter_06.zh-tok.txt
+- manuscripts/shanghai-rain-gate-crime/chapters/chapter_07.validation.json
+- manuscripts/shanghai-rain-gate-crime/chapters/chapter_07.zh-tok.txt
+- manuscripts/shanghai-rain-gate-crime/chapters/chapter_08.validation.json
+- manuscripts/shanghai-rain-gate-crime/chapters/chapter_08.zh-tok.txt
+- manuscripts/shanghai-rain-gate-crime/chapters/chapter_09.validation.json
+- manuscripts/shanghai-rain-gate-crime/chapters/chapter_09.zh-tok.txt
+- manuscripts/shanghai-rain-gate-crime/chapters/chapter_10.validation.json
+- manuscripts/shanghai-rain-gate-crime/chapters/chapter_10.zh-tok.txt
+- manuscripts/shanghai-rain-gate-crime/chapters/chapter_11.validation.json
+- manuscripts/shanghai-rain-gate-crime/chapters/chapter_11.zh-tok.txt
+- manuscripts/shanghai-rain-gate-crime/chapters/chapter_12.validation.json
+- manuscripts/shanghai-rain-gate-crime/chapters/chapter_12.zh-tok.txt
+- manuscripts/shanghai-rain-gate-crime/characters.md
+- manuscripts/shanghai-rain-gate-crime/continuity_log.md
+- manuscripts/shanghai-rain-gate-crime/novel_bible.md
+- manuscripts/shanghai-rain-gate-crime/outline.md
+- manuscripts/shanghai-rain-gate-crime/proper_nouns.txt
+- manuscripts/shanghai-rain-gate-crime/quality/lead_quality_decision.md
+- manuscripts/shanghai-rain-gate-crime/quality/literary_critic_report.md
+- manuscripts/shanghai-rain-gate-crime/quality/normal_reader_report.md
+- manuscripts/shanghai-rain-gate-crime/quality/quality_gate_summary.json
+- manuscripts/shanghai-rain-gate-crime/quality/repeated_phrase_report.json
+- manuscripts/shanghai-rain-gate-crime/quality/vocabulary_usage_report.json
+- manuscripts/shanghai-rain-gate-crime/stretch_word_exposure.md
+- manuscripts/shanghai-rain-gate-crime/vocabulary_report.json
 - manuscripts/shanghai-rain-ticket/book_specific_words.txt
 - manuscripts/shanghai-rain-ticket/chapters/chapter_01.validation.json
 - manuscripts/shanghai-rain-ticket/chapters/chapter_01.zh-tok.txt

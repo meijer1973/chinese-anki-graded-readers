@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-23T21:39:22Z",
+  "generated_at": "2026-05-24T07:13:15Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 137,
+  "file_count": 176,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -316,6 +316,11 @@
       "category": "scripts"
     },
     {
+      "path": "manuscripts/README.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/README.md",
+      "category": "manuscripts"
+    },
+    {
       "path": "manuscripts/sample-known-words/chapters/chapter_01.validation.json",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/chapters/chapter_01.validation.json",
       "category": "manuscripts"
@@ -383,6 +388,196 @@
     {
       "path": "manuscripts/sample-known-words/vocabulary_report.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/vocabulary_report.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/book_specific_words.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/book_specific_words.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/chapters/chapter_01.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/chapters/chapter_01.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/chapters/chapter_01.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/chapters/chapter_01.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/chapters/chapter_02.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/chapters/chapter_02.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/chapters/chapter_02.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/chapters/chapter_02.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/chapters/chapter_03.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/chapters/chapter_03.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/chapters/chapter_03.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/chapters/chapter_03.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/chapters/chapter_04.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/chapters/chapter_04.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/chapters/chapter_04.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/chapters/chapter_04.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/chapters/chapter_05.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/chapters/chapter_05.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/chapters/chapter_05.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/chapters/chapter_05.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/chapters/chapter_06.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/chapters/chapter_06.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/chapters/chapter_06.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/chapters/chapter_06.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/chapters/chapter_07.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/chapters/chapter_07.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/chapters/chapter_07.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/chapters/chapter_07.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/chapters/chapter_08.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/chapters/chapter_08.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/chapters/chapter_08.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/chapters/chapter_08.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/chapters/chapter_09.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/chapters/chapter_09.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/chapters/chapter_09.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/chapters/chapter_09.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/chapters/chapter_10.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/chapters/chapter_10.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/chapters/chapter_10.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/chapters/chapter_10.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/chapters/chapter_11.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/chapters/chapter_11.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/chapters/chapter_11.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/chapters/chapter_11.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/chapters/chapter_12.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/chapters/chapter_12.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/chapters/chapter_12.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/chapters/chapter_12.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/characters.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/characters.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/continuity_log.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/continuity_log.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/novel_bible.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/novel_bible.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/outline.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/outline.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/proper_nouns.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/proper_nouns.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/quality/lead_quality_decision.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/quality/lead_quality_decision.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/quality/literary_critic_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/quality/literary_critic_report.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/quality/normal_reader_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/quality/normal_reader_report.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/quality/quality_gate_summary.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/quality/quality_gate_summary.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/quality/repeated_phrase_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/quality/repeated_phrase_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/quality/vocabulary_usage_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/quality/vocabulary_usage_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/stretch_word_exposure.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/stretch_word_exposure.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/vocabulary_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/vocabulary_report.json",
       "category": "manuscripts"
     },
     {

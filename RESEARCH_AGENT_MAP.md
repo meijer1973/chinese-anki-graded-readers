@@ -98,6 +98,8 @@ Machine-readable:
     "data/stretch_packs/professions_social_roles_100.txt",
     "data/stretch_packs/urban_objects_100.txt",
     "anki/stretch_word_candidates.tsv",
+    "manuscripts/shanghai-rain-gate-crime/vocabulary_report.json",
+    "manuscripts/shanghai-rain-gate-crime/quality/quality_gate_summary.json",
     "manuscripts/shanghai-rain-ticket/vocabulary_report.json",
     "manuscripts/shanghai-rain-ticket/quality/quality_gate_summary.json"
   ]
@@ -124,6 +126,8 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/stretch-vocabulary.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/anki-integration.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/quality-review.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/vocabulary_report.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/quality/quality_gate_summary.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/vocabulary_report.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/quality/quality_gate_summary.json
 
@@ -149,6 +153,7 @@ Use these anchors before free-form browsing.
   "chapter_validator": "scripts/validate_chapter.py",
   "book_validator": "scripts/validate_book.py",
   "epub_builder": "scripts/build_epub.py",
+  "first_series_manuscript": "manuscripts/shanghai-rain-gate-crime",
   "current_story_trial": "manuscripts/shanghai-rain-ticket",
   "file_inventory": "reports/github-agent-index.md"
 }

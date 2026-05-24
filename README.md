@@ -12,6 +12,8 @@ This repository maintains a Chinese vocabulary Anki deck and a controlled-vocabu
 - Run quality review with `scripts/run_quality_gate.py`.
 - Build EPUB files with `scripts/build_epub.py` after validation and lead approval.
 
+The first series manuscript is `manuscripts/shanghai-rain-gate-crime/` (`上海雨票案`).
+
 ## Machine-Readable Entry Points
 
 Remote agents should start with:
