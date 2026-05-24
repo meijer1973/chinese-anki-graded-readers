@@ -13,7 +13,7 @@ This repository maintains a Chinese vocabulary Anki deck and a controlled-vocabu
 - Run quality review with `scripts/run_quality_gate.py`.
 - Build EPUB files with `scripts/build_epub.py` after validation and lead approval.
 
-The first series manuscript is `manuscripts/shanghai-rain-gate-crime/` (`上海雨票案`). Series continuity for its journalist protagonist lives in `series/an-lin/`.
+The 林安 series currently includes `manuscripts/shanghai-rain-gate-crime/` (`上海雨票案`) and `manuscripts/shanghai-spirit-lamp-case/` (`上海灵灯案`). Series continuity for its journalist protagonist lives in `series/an-lin/`.
 
 ## Machine-Readable Entry Points
 

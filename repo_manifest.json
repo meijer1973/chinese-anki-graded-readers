@@ -37,6 +37,8 @@
     "anki/stretch_word_candidates.tsv",
     "manuscripts/shanghai-rain-gate-crime/vocabulary_report.json",
     "manuscripts/shanghai-rain-gate-crime/quality/quality_gate_summary.json",
+    "manuscripts/shanghai-spirit-lamp-case/vocabulary_report.json",
+    "manuscripts/shanghai-spirit-lamp-case/quality/quality_gate_summary.json",
     "manuscripts/shanghai-rain-ticket/vocabulary_report.json",
     "manuscripts/shanghai-rain-ticket/quality/quality_gate_summary.json",
     "reports/github-agent-index.md",
@@ -91,6 +93,7 @@
       "manuscripts/sample-known-words",
       "manuscripts/stretch-layer-fixture",
       "manuscripts/shanghai-rain-gate-crime",
+      "manuscripts/shanghai-spirit-lamp-case",
       "manuscripts/shanghai-rain-ticket"
     ],
     "tests": [
