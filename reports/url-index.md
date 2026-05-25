@@ -99,6 +99,8 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/chapters/chapter_01.zh-tok.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/characters.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/continuity_log.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/epub/build_report.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/epub/sample-known-words.epub
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/novel_bible.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/outline.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/planning/chapter_01_vocab_plan.md
@@ -137,6 +139,8 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/chapters/chapter_12.zh-tok.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/characters.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/continuity_log.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/epub/build_report.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/epub/shanghai-rain-gate-crime.epub
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/novel_bible.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/outline.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/planning/chapter_01_vocab_plan.md
@@ -170,6 +174,8 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/chapters/chapter_03.zh-tok.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/characters.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/continuity_log.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/epub/build_report.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/epub/shanghai-rain-ticket.epub
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/novel_bible.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/outline.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/planning/chapter_01_vocab_plan.md
@@ -228,6 +234,8 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-shadow-bridge-case/chapters/chapter_21.zh-tok.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-shadow-bridge-case/characters.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-shadow-bridge-case/continuity_log.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-shadow-bridge-case/epub/build_report.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-shadow-bridge-case/epub/shanghai-shadow-bridge-case.epub
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-shadow-bridge-case/novel_bible.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-shadow-bridge-case/outline.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-shadow-bridge-case/planning/chapter_01_vocab_plan.md
@@ -305,6 +313,8 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-spirit-lamp-case/chapters/chapter_20.zh-tok.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-spirit-lamp-case/characters.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-spirit-lamp-case/continuity_log.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-spirit-lamp-case/epub/build_report.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-spirit-lamp-case/epub/shanghai-spirit-lamp-case.epub
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-spirit-lamp-case/novel_bible.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-spirit-lamp-case/outline.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-spirit-lamp-case/planning/chapter_01_vocab_plan.md
@@ -340,6 +350,8 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/book_specific_words.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/chapters/chapter_01.validation.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/chapters/chapter_01.zh-tok.txt
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/epub/build_report.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/epub/stretch-layer-fixture.epub
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/planning/chapter_01_vocab_plan.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/proper_nouns.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/quality/lead_quality_decision.md

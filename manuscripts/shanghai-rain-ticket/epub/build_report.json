@@ -1,0 +1,28 @@
+{
+  "epub_path": "manuscripts\\shanghai-rain-ticket\\epub\\shanghai-rain-ticket.epub",
+  "valid": true,
+  "chapter_count": 3,
+  "total_tokens": 881,
+  "unique_token_count": 244,
+  "unknown_token_count": 4,
+  "forbidden_unknown_tokens_over_limit": 0,
+  "max_forbidden_unknown_tokens_per_chapter": 5,
+  "quality_approval": {
+    "approved": true,
+    "decision_path": "manuscripts\\shanghai-rain-ticket\\quality\\lead_quality_decision.md",
+    "decision": "PASS",
+    "reason": "Approved by lead quality decision."
+  },
+  "built_at": "2026-05-23T21:26:41Z",
+  "epub_structure": {
+    "path": "manuscripts\\shanghai-rain-ticket\\epub\\shanghai-rain-ticket.epub",
+    "exists": true,
+    "first_entry": "mimetype",
+    "mimetype": "application/epub+zip",
+    "has_container": true,
+    "has_opf": true,
+    "has_nav": true,
+    "has_title_page": true,
+    "chapter_count": 3
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "epub_path": "manuscripts\\sample-known-words\\epub\\sample-known-words.epub",
+  "valid": true,
+  "chapter_count": 1,
+  "total_tokens": 20,
+  "unique_token_count": 17,
+  "unknown_token_count": 0,
+  "quality_approval": {
+    "approved": true,
+    "decision_path": "manuscripts\\sample-known-words\\quality\\lead_quality_decision.md",
+    "decision": "PASS",
+    "reason": "Approved by lead quality decision."
+  },
+  "built_at": "2026-05-23T13:17:35Z",
+  "epub_structure": {
+    "path": "manuscripts\\sample-known-words\\epub\\sample-known-words.epub",
+    "exists": true,
+    "first_entry": "mimetype",
+    "mimetype": "application/epub+zip",
+    "has_container": true,
+    "has_opf": true,
+    "has_nav": true,
+    "has_title_page": true,
+    "chapter_count": 1
+  }
+}

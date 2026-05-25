@@ -116,14 +116,15 @@
     "validate_sample_book": "python scripts/validate_book.py --known data/known_words.txt --chapters manuscripts/sample-known-words/chapters --out manuscripts/sample-known-words/vocabulary_report.json",
     "generate_agent_indexes": "python scripts/build_agent_index.py"
   },
-  "generated_or_local_surfaces": [
+    "generated_or_local_surfaces": [
     "anki_chinese_import.tsv",
     "anki_chinese_review.tsv",
     "*_backup.tsv",
     "downloads/",
     "SUBTLEX-CH-CHR/",
     "SUBTLEX-CH-WF/",
-    "manuscripts/*/epub/",
+    "manuscripts/*/epub/*.xhtml",
+    "manuscripts/*/epub/*.css",
     "__pycache__/"
   ]
 }

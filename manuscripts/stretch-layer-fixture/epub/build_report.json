@@ -1,0 +1,26 @@
+{
+  "epub_path": "manuscripts\\stretch-layer-fixture\\epub\\stretch-layer-fixture.epub",
+  "valid": true,
+  "chapter_count": 1,
+  "total_tokens": 11,
+  "unique_token_count": 11,
+  "unknown_token_count": 0,
+  "quality_approval": {
+    "approved": true,
+    "decision_path": "manuscripts\\stretch-layer-fixture\\quality\\lead_quality_decision.md",
+    "decision": "PASS",
+    "reason": "Approved by lead quality decision."
+  },
+  "built_at": "2026-05-23T15:49:50Z",
+  "epub_structure": {
+    "path": "manuscripts\\stretch-layer-fixture\\epub\\stretch-layer-fixture.epub",
+    "exists": true,
+    "first_entry": "mimetype",
+    "mimetype": "application/epub+zip",
+    "has_container": true,
+    "has_opf": true,
+    "has_nav": true,
+    "has_title_page": true,
+    "chapter_count": 1
+  }
+}

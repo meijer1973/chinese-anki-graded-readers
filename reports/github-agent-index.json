@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-25T11:45:34Z",
+  "generated_at": "2026-05-25T12:01:35Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 359,
+  "file_count": 371,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -361,6 +361,16 @@
       "category": "manuscripts"
     },
     {
+      "path": "manuscripts/sample-known-words/epub/build_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/epub/build_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/sample-known-words/epub/sample-known-words.epub",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/epub/sample-known-words.epub",
+      "category": "manuscripts"
+    },
+    {
       "path": "manuscripts/sample-known-words/novel_bible.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/novel_bible.md",
       "category": "manuscripts"
@@ -551,6 +561,16 @@
       "category": "manuscripts"
     },
     {
+      "path": "manuscripts/shanghai-rain-gate-crime/epub/build_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/epub/build_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-gate-crime/epub/shanghai-rain-gate-crime.epub",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/epub/shanghai-rain-gate-crime.epub",
+      "category": "manuscripts"
+    },
+    {
       "path": "manuscripts/shanghai-rain-gate-crime/novel_bible.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/novel_bible.md",
       "category": "manuscripts"
@@ -713,6 +733,16 @@
     {
       "path": "manuscripts/shanghai-rain-ticket/continuity_log.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/continuity_log.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-ticket/epub/build_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/epub/build_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-rain-ticket/epub/shanghai-rain-ticket.epub",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/epub/shanghai-rain-ticket.epub",
       "category": "manuscripts"
     },
     {
@@ -1013,6 +1043,16 @@
     {
       "path": "manuscripts/shanghai-shadow-bridge-case/continuity_log.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-shadow-bridge-case/continuity_log.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-shadow-bridge-case/epub/build_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-shadow-bridge-case/epub/build_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-shadow-bridge-case/epub/shanghai-shadow-bridge-case.epub",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-shadow-bridge-case/epub/shanghai-shadow-bridge-case.epub",
       "category": "manuscripts"
     },
     {
@@ -1401,6 +1441,16 @@
       "category": "manuscripts"
     },
     {
+      "path": "manuscripts/shanghai-spirit-lamp-case/epub/build_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-spirit-lamp-case/epub/build_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-spirit-lamp-case/epub/shanghai-spirit-lamp-case.epub",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-spirit-lamp-case/epub/shanghai-spirit-lamp-case.epub",
+      "category": "manuscripts"
+    },
+    {
       "path": "manuscripts/shanghai-spirit-lamp-case/novel_bible.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-spirit-lamp-case/novel_bible.md",
       "category": "manuscripts"
@@ -1573,6 +1623,16 @@
     {
       "path": "manuscripts/stretch-layer-fixture/chapters/chapter_01.zh-tok.txt",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/chapters/chapter_01.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/stretch-layer-fixture/epub/build_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/epub/build_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/stretch-layer-fixture/epub/stretch-layer-fixture.epub",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/epub/stretch-layer-fixture.epub",
       "category": "manuscripts"
     },
     {

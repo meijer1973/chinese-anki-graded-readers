@@ -50,8 +50,13 @@ anki/stretch_word_import_ready.tsv
 anki/stretch_word_import_log.json
 anki/stretch_words_added_to_anki.tsv
 
-# Local generated manuscript builds
-manuscripts/*/epub/
+# Generated manuscript EPUB builds
+# Track final EPUB artifacts and build reports for accepted manuscripts, but keep
+# exploded/intermediate EPUB contents local.
+manuscripts/*/epub/*
+!manuscripts/*/epub/
+!manuscripts/*/epub/*.epub
+!manuscripts/*/epub/build_report.json
 
 # Early generated manuscripts kept locally but not as repository examples
 manuscripts/ci-li-de-mimi/

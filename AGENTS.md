@@ -188,7 +188,11 @@ Usually do not hand-edit these, because scripts regenerate them:
 - `manuscripts/<project-slug>/quality/vocabulary_usage_report.json`
 - `manuscripts/<project-slug>/quality/repeated_phrase_report.json`
 - `manuscripts/<project-slug>/quality/quality_gate_summary.json`
+
+Generated but tracked for accepted manuscripts:
+
 - `manuscripts/<project-slug>/epub/*.epub`
+- `manuscripts/<project-slug>/epub/build_report.json`
 
 Backup/report artifacts are useful history and should not be deleted casually:
 

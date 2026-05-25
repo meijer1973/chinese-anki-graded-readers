@@ -1,0 +1,28 @@
+{
+  "epub_path": "manuscripts\\shanghai-spirit-lamp-case\\epub\\shanghai-spirit-lamp-case.epub",
+  "valid": true,
+  "chapter_count": 20,
+  "total_tokens": 4699,
+  "unique_token_count": 573,
+  "unknown_token_count": 0,
+  "forbidden_unknown_tokens_over_limit": 0,
+  "max_forbidden_unknown_tokens_per_chapter": 5,
+  "quality_approval": {
+    "approved": true,
+    "decision_path": "manuscripts\\shanghai-spirit-lamp-case\\quality\\lead_quality_decision.md",
+    "decision": "PASS",
+    "reason": "Approved by lead quality decision."
+  },
+  "built_at": "2026-05-24T18:58:47Z",
+  "epub_structure": {
+    "path": "manuscripts\\shanghai-spirit-lamp-case\\epub\\shanghai-spirit-lamp-case.epub",
+    "exists": true,
+    "first_entry": "mimetype",
+    "mimetype": "application/epub+zip",
+    "has_container": true,
+    "has_opf": true,
+    "has_nav": true,
+    "has_title_page": true,
+    "chapter_count": 20
+  }
+}

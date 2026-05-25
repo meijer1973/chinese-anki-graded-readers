@@ -6,7 +6,7 @@ Canonical manuscript source is stored as space-tokenized Chinese in:
 manuscripts/<slug>/chapters/*.zh-tok.txt
 ```
 
-Generated EPUB folders are ignored by Git. Rebuild EPUB output with `scripts/build_epub.py` after validation and lead quality approval.
+Final EPUB files and build reports under `manuscripts/<slug>/epub/` are tracked for accepted manuscripts. Rebuild EPUB output with `scripts/build_epub.py` after validation and lead quality approval.
 
 ## Series Manuscripts
 

@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki And Graded Readers
 
-Generated: 2026-05-25T11:45:34Z
+Generated: 2026-05-25T12:01:35Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 359
+Files indexed: 371
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -135,13 +135,15 @@ Count: 2
 
 ## manuscripts
 
-Count: 258
+Count: 270
 
 - manuscripts/README.md
 - manuscripts/sample-known-words/chapters/chapter_01.validation.json
 - manuscripts/sample-known-words/chapters/chapter_01.zh-tok.txt
 - manuscripts/sample-known-words/characters.md
 - manuscripts/sample-known-words/continuity_log.md
+- manuscripts/sample-known-words/epub/build_report.json
+- manuscripts/sample-known-words/epub/sample-known-words.epub
 - manuscripts/sample-known-words/novel_bible.md
 - manuscripts/sample-known-words/outline.md
 - manuscripts/sample-known-words/planning/chapter_01_vocab_plan.md
@@ -180,6 +182,8 @@ Count: 258
 - manuscripts/shanghai-rain-gate-crime/chapters/chapter_12.zh-tok.txt
 - manuscripts/shanghai-rain-gate-crime/characters.md
 - manuscripts/shanghai-rain-gate-crime/continuity_log.md
+- manuscripts/shanghai-rain-gate-crime/epub/build_report.json
+- manuscripts/shanghai-rain-gate-crime/epub/shanghai-rain-gate-crime.epub
 - manuscripts/shanghai-rain-gate-crime/novel_bible.md
 - manuscripts/shanghai-rain-gate-crime/outline.md
 - manuscripts/shanghai-rain-gate-crime/planning/chapter_01_vocab_plan.md
@@ -213,6 +217,8 @@ Count: 258
 - manuscripts/shanghai-rain-ticket/chapters/chapter_03.zh-tok.txt
 - manuscripts/shanghai-rain-ticket/characters.md
 - manuscripts/shanghai-rain-ticket/continuity_log.md
+- manuscripts/shanghai-rain-ticket/epub/build_report.json
+- manuscripts/shanghai-rain-ticket/epub/shanghai-rain-ticket.epub
 - manuscripts/shanghai-rain-ticket/novel_bible.md
 - manuscripts/shanghai-rain-ticket/outline.md
 - manuscripts/shanghai-rain-ticket/planning/chapter_01_vocab_plan.md
@@ -273,6 +279,8 @@ Count: 258
 - manuscripts/shanghai-shadow-bridge-case/chapters/chapter_21.zh-tok.txt
 - manuscripts/shanghai-shadow-bridge-case/characters.md
 - manuscripts/shanghai-shadow-bridge-case/continuity_log.md
+- manuscripts/shanghai-shadow-bridge-case/epub/build_report.json
+- manuscripts/shanghai-shadow-bridge-case/epub/shanghai-shadow-bridge-case.epub
 - manuscripts/shanghai-shadow-bridge-case/novel_bible.md
 - manuscripts/shanghai-shadow-bridge-case/outline.md
 - manuscripts/shanghai-shadow-bridge-case/planning/chapter_01_vocab_plan.md
@@ -350,6 +358,8 @@ Count: 258
 - manuscripts/shanghai-spirit-lamp-case/chapters/chapter_20.zh-tok.txt
 - manuscripts/shanghai-spirit-lamp-case/characters.md
 - manuscripts/shanghai-spirit-lamp-case/continuity_log.md
+- manuscripts/shanghai-spirit-lamp-case/epub/build_report.json
+- manuscripts/shanghai-spirit-lamp-case/epub/shanghai-spirit-lamp-case.epub
 - manuscripts/shanghai-spirit-lamp-case/novel_bible.md
 - manuscripts/shanghai-spirit-lamp-case/outline.md
 - manuscripts/shanghai-spirit-lamp-case/planning/chapter_01_vocab_plan.md
@@ -385,6 +395,8 @@ Count: 258
 - manuscripts/stretch-layer-fixture/book_specific_words.txt
 - manuscripts/stretch-layer-fixture/chapters/chapter_01.validation.json
 - manuscripts/stretch-layer-fixture/chapters/chapter_01.zh-tok.txt
+- manuscripts/stretch-layer-fixture/epub/build_report.json
+- manuscripts/stretch-layer-fixture/epub/stretch-layer-fixture.epub
 - manuscripts/stretch-layer-fixture/planning/chapter_01_vocab_plan.md
 - manuscripts/stretch-layer-fixture/proper_nouns.txt
 - manuscripts/stretch-layer-fixture/quality/lead_quality_decision.md
