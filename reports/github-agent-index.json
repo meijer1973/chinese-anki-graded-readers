@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-25T12:01:35Z",
+  "generated_at": "2026-05-25T15:40:45Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 371,
+  "file_count": 381,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -53,6 +53,16 @@
     {
       "path": ".agents/skills/chinese-normal-reader-review/agents/openai.yaml",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-normal-reader-review/agents/openai.yaml",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".agents/skills/chinese-prose-variety-polish/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-prose-variety-polish/SKILL.md",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".agents/skills/chinese-prose-variety-polish/agents/openai.yaml",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-prose-variety-polish/agents/openai.yaml",
       "category": "agents/skills"
     },
     {
@@ -118,6 +128,11 @@
     {
       "path": ".codex/agents/novel-planner.toml",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.codex/agents/novel-planner.toml",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".codex/agents/prose-variety-polisher.toml",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.codex/agents/prose-variety-polisher.toml",
       "category": "agents/skills"
     },
     {
@@ -311,6 +326,11 @@
       "category": "docs"
     },
     {
+      "path": "docs/creative-preflight.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/creative-preflight.md",
+      "category": "docs"
+    },
+    {
       "path": "docs/machine-readable-repository.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/machine-readable-repository.md",
       "category": "docs"
@@ -331,9 +351,29 @@
       "category": "docs"
     },
     {
+      "path": "docs/style-bank-controlled-chinese.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/style-bank-controlled-chinese.md",
+      "category": "docs"
+    },
+    {
       "path": "ensure_single_character_notes.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/ensure_single_character_notes.py",
       "category": "scripts"
+    },
+    {
+      "path": "known words from user/batch 1/lingqs (6).csv",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/known words from user/batch 1/lingqs (6).csv",
+      "category": "root"
+    },
+    {
+      "path": "known words from user/batch 1/lingqs (7).csv",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/known words from user/batch 1/lingqs (7).csv",
+      "category": "root"
+    },
+    {
+      "path": "known words from user/batch 1/lingqs (8).csv",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/known words from user/batch 1/lingqs (8).csv",
+      "category": "root"
     },
     {
       "path": "manuscripts/README.md",
@@ -1726,6 +1766,11 @@
       "category": "scripts"
     },
     {
+      "path": "scripts/build_reading_copy.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/build_reading_copy.py",
+      "category": "scripts"
+    },
+    {
       "path": "scripts/complete_stretch_pack_metadata.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/complete_stretch_pack_metadata.py",
       "category": "scripts"
@@ -1763,6 +1808,11 @@
     {
       "path": "scripts/promote_stretch_words.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/promote_stretch_words.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/prose_variety_report.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/prose_variety_report.py",
       "category": "scripts"
     },
     {

@@ -12,7 +12,7 @@ It also contains a repo-local workflow for Chinese restricted-vocabulary graded-
 4. Future novels must aim for narrative interest within the allowed vocabulary, not bland minimal correctness.
 5. Check vocabulary after every chapter and save JSON validation reports.
 6. Check continuity after every chapter and update `continuity_log.md`.
-7. Keep a novel bible and outline before drafting, unless using documented `discovery-with-control` mode.
+7. Keep `creative_preflight.md`, a novel bible, and an outline before drafting, unless using documented `discovery-with-control` mode.
 8. Do not overwrite previous manuscripts unless explicitly instructed.
 9. Every real manuscript must pass vocabulary validation, continuity review, literary critic review, normal reader review, and lead reviewer decision.
 10. EPUB export must be generated only after the whole-book validator passes and `quality/lead_quality_decision.md` explicitly contains `Final decision: PASS`.
@@ -39,6 +39,8 @@ Do not move from controlled vocabulary to random leakage. The policy is `0 invis
 Future novels should be ambitious inside the controlled vocabulary. Prefer scenes with a concrete situation, a character want, pressure or conflict, a change by the end of the scene, and a reason for the reader to continue. Avoid conservative, flat, repetitive fiction and repeated dialogue loops such as `我 不 知道`, `你 怎么 了`, or `我们 要 走` unless repetition serves the story.
 
 Track vocabulary breadth, but treat counts as diagnostics, not acceptance gates. Reports should include total tokens, unique used words, percentage of the known list used, top frequent words, repeated phrase warnings, chapter-level unique-token counts, and unused known words. There is no default chapter count and no chapter word-count requirement. Do not add text solely to satisfy length, vocabulary coverage, or stretch-word metrics.
+
+Before vocabulary planning, create `manuscripts/<project-slug>/creative_preflight.md` with 3-5 premise or scene alternatives, rejected ideas, chosen story shape, reader question, main pressure, planned reversals, and variation budget. Future manuscripts should run `scripts/prose_variety_report.py` and use `docs/style-bank-controlled-chinese.md` plus the prose-variety polish skill when repeated visible frames remain.
 
 ### Low Fantasy / Shanghai Mode
 
@@ -79,6 +81,7 @@ Every stretch pack should have metadata for every word. Use `scripts/complete_st
 - `reports/github-agent-index.md`, `reports/github-agent-index.json`, and `reports/url-index.md` are generated inventories for remote agents; refresh them with `python scripts/build_agent_index.py`.
 - `manuscripts/<project-slug>/` contains novel bibles, outlines, canonical tokenized chapters, validation reports, continuity logs, and EPUB exports.
 - `scripts/load_known_words.py`, `scripts/validate_chapter.py`, `scripts/validate_book.py`, `scripts/generate_reports.py`, `scripts/vocabulary_usage_report.py`, `scripts/repeated_phrase_report.py`, `scripts/run_quality_gate.py`, and `scripts/build_epub.py` inspect, validate, review-prep, report, and export restricted-vocabulary manuscripts.
+- `scripts/prose_variety_report.py` reports repeated dialogue tags, repeated sentence frames, and other style-polish risks. `scripts/build_reading_copy.py` creates noncanonical natural-text review copies.
 - `.agents/skills/` and `.codex/agents/` contain repo-local Codex workflows and role definitions for novel planning, chapter writing, validation, continuity editing, literary review, reader review, lead quality review, and EPUB export.
 
 ## Anki Collection
@@ -187,7 +190,9 @@ Usually do not hand-edit these, because scripts regenerate them:
 - `manuscripts/<project-slug>/vocabulary_report.json`
 - `manuscripts/<project-slug>/quality/vocabulary_usage_report.json`
 - `manuscripts/<project-slug>/quality/repeated_phrase_report.json`
+- `manuscripts/<project-slug>/quality/prose_variety_report.json`
 - `manuscripts/<project-slug>/quality/quality_gate_summary.json`
+- `manuscripts/<project-slug>/reading_copy.md`
 
 Generated but tracked for accepted manuscripts:
 

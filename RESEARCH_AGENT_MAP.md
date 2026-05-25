@@ -74,6 +74,8 @@ Human-readable:
 - `RESEARCH_AGENT_PROMPT.md`
 - `RESEARCH_AGENT_MAP.md`
 - `docs/novel-generation.md`
+- `docs/creative-preflight.md`
+- `docs/style-bank-controlled-chinese.md`
 - `docs/stretch-vocabulary.md`
 - `docs/anki-integration.md`
 - `docs/quality-review.md`
@@ -137,6 +139,8 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/business_economics_60.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/an-lin/series_bible.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/novel-generation.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/creative-preflight.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/style-bank-controlled-chinese.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/stretch-vocabulary.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/anki-integration.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/quality-review.md
@@ -164,6 +168,8 @@ Use these anchors before free-form browsing.
   "known_word_config": "data/known_words.metadata.json",
   "novel_config": "configs/novel_generation.default.json",
   "novel_generation_docs": "docs/novel-generation.md",
+  "creative_preflight_docs": "docs/creative-preflight.md",
+  "style_bank_docs": "docs/style-bank-controlled-chinese.md",
   "stretch_vocabulary_docs": "docs/stretch-vocabulary.md",
   "anki_docs": "docs/anki-integration.md",
   "quality_docs": "docs/quality-review.md",
@@ -171,7 +177,9 @@ Use these anchors before free-form browsing.
   "chapter_validator": "scripts/validate_chapter.py",
   "book_validator": "scripts/validate_book.py",
   "epub_builder": "scripts/build_epub.py",
+  "reading_copy_builder": "scripts/build_reading_copy.py",
   "plot_affordance_report": "scripts/plot_affordance_report.py",
+  "prose_variety_report": "scripts/prose_variety_report.py",
   "lin_an_series_bible": "series/an-lin/series_bible.md",
   "journalism_crime_pack": "data/stretch_packs/journalism_crime_50.txt",
   "business_economics_pack": "data/stretch_packs/business_economics_60.txt",
@@ -218,8 +226,10 @@ Use these anchors before free-form browsing.
 | Generate or validate known words | `scripts/sync_known_words.py`, `data/known_words.metadata.json` |
 | Validate story vocabulary | `scripts/validate_chapter.py`, `scripts/validate_book.py`, `scripts/novel_tools.py` |
 | Plan a new story | `.agents/skills/chinese-graded-novel-planning/SKILL.md`, `docs/novel-generation.md` |
+| Run creative preflight | `docs/creative-preflight.md` |
 | Plan a 林安 sequel | `series/an-lin/series_bible.md`, `series/an-lin/sequel_constraints.md`, `data/stretch_packs/journalism_crime_50.txt` |
 | Draft or revise a chapter | `.agents/skills/chinese-restricted-vocabulary-writing/SKILL.md` |
+| Polish prose variety | `.agents/skills/chinese-prose-variety-polish/SKILL.md`, `docs/style-bank-controlled-chinese.md`, `scripts/prose_variety_report.py` |
 | Review literary quality | `.agents/skills/chinese-literary-critic/SKILL.md`, `.agents/skills/chinese-normal-reader-review/SKILL.md`, `.agents/skills/chinese-lead-quality-review/SKILL.md` |
 | Export EPUB | `scripts/build_epub.py`, `.agents/skills/epub-export/SKILL.md` |
 | Prepare stretch words for Anki | `docs/anki-integration.md`, `scripts/export_stretch_words_for_anki.py` |

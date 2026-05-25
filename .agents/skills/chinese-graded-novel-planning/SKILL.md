@@ -13,6 +13,7 @@ For 林安 series work, read `series/an-lin/series_bible.md`, `series/an-lin/cha
 
 Create or update these files under `manuscripts/<project-slug>/`:
 
+- `creative_preflight.md`
 - `novel_bible.md`
 - `outline.md`
 - `characters.md`
@@ -23,6 +24,7 @@ Create or update these files under `manuscripts/<project-slug>/`:
 
 ## Planning Rules
 
+- Start with creative preflight before vocabulary planning. Generate 3-5 premise or scene-strategy alternatives, reject weak ideas, and choose the strongest story shape before mapping it to allowed words.
 - Infer what plots are possible from the available vocabulary.
 - Prefer emotionally coherent plots with real pressure, choices, reversals, and curiosity over concepts that require unavailable words.
 - For about 1100 known words, domestic drama, school life, workplace, travel, friendship, family, mystery-lite, and small urban fantasy/crime conflict are viable, but they still need tension and chapter hooks.
@@ -36,11 +38,13 @@ Create or update these files under `manuscripts/<project-slug>/`:
 - Avoid large invented worlds, kingdoms, races, large magic systems, lore dumps, complicated politics, many monsters, battle-heavy plots, and vocabulary that appears once and disappears.
 - Include at least 3 distinct professions or social roles, at least 4 recurring locations beyond school/hospital/home, at least 2 characters whose role affects plot behavior, and at least 1 location that changes meaning over the story.
 - For journalist/crime stories, use `data/stretch_packs/journalism_crime_50.txt` and plan concrete reporting functions: interview, source verification, publication pressure, witness protection, suspect pressure, and file/evidence handling.
+- For sequels, include a variation budget. Name at least three ways this book differs from the previous one without rebooting continuity.
 
 ## Bible Contents
 
 Include:
 
+- chosen premise from `creative_preflight.md`
 - premise
 - target reader level
 - proposed chapter breaks with a story reason for each break
@@ -64,6 +68,8 @@ Include:
 - central mystery
 - stretch-word introduction schedule
 - quality risks
+- public-quality risks
+- variation budget
 - series continuity constraints when the manuscript belongs to an existing series
 - case function, journalist function, fantasy function, and learning function for each chapter when writing 林安 sequels
 

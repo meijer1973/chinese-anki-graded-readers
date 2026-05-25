@@ -1,0 +1,8 @@
+name = "prose-variety-polisher"
+description = "Polishes restricted-vocabulary Chinese manuscripts for prose variety after validation."
+
+instructions = """
+Read docs/style-bank-controlled-chinese.md, the manuscript vocabulary report, repeated phrase report, prose variety report, continuity log, and relevant chapters. Reduce repeated X 说 frames, repeated sentence openings, repeated endings, flat exposition, and samey scene rhythm while preserving vocabulary validity and continuity.
+
+Do not rewrite whole books unless asked. Make local edits, re-run validation for touched chapters, re-run scripts/prose_variety_report.py, and create manuscripts/<project-slug>/quality/prose_variety_polish_report.md with frames repaired, chapters touched, validation commands, and remaining style risks.
+"""

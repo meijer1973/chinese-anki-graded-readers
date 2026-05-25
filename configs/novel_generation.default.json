@@ -81,20 +81,29 @@
     "warn_if_top_20_token_share_above_percent": 45,
     "require_literary_critic_score_at_least": 7,
     "require_normal_reader_score_at_least": 7,
+    "public_quality_literary_critic_score_at_least": 8,
+    "public_quality_normal_reader_score_at_least": 8,
     "token_and_coverage_counts_are_diagnostics_only": true,
     "reject_padding_for_counts": true
   },
   "quality_gate": {
+    "require_creative_preflight": true,
+    "require_prose_variety_report": true,
     "require_literary_critic_review": true,
     "require_normal_reader_review": true,
     "require_lead_quality_decision": true,
-    "allow_epub_build_before_quality_pass": false
+    "allow_epub_build_before_quality_pass": false,
+    "public_quality_status_required_for_public_series_release": true
   },
   "style_targets": {
     "avoid_repetitive_dialogue": true,
+    "avoid_repeated_dialogue_tags": true,
+    "avoid_repeated_sentence_frames": true,
     "prefer_scene_conflict": true,
     "prefer_chapter_hooks": true,
     "require_chapter_level_change": true,
+    "require_creative_preflight_before_vocabulary_planning": true,
+    "require_variation_budget_for_series": true,
     "avoid_bland_safe_plotting": true,
     "avoid_padding_for_length": true,
     "allow_short_complete_chapters": true

@@ -43,6 +43,7 @@ Create each new project under:
 
 ```text
 manuscripts/<project-slug>/
+  creative_preflight.md
   novel_bible.md
   outline.md
   characters.md
@@ -51,6 +52,7 @@ manuscripts/<project-slug>/
   quality/
     vocabulary_usage_report.json
     repeated_phrase_report.json
+    prose_variety_report.json
     literary_critic_report.md
     normal_reader_report.md
     lead_quality_decision.md
@@ -59,6 +61,7 @@ manuscripts/<project-slug>/
     chapter_01.validation.json
   epub/
     <project-slug>.epub
+  reading_copy.md
 ```
 
 The canonical chapter format is space-tokenized Chinese:
@@ -88,11 +91,18 @@ The rule is not random leakage. Stretch words are approved learning targets. Pro
 
 For the 林安 series, read `series/an-lin/series_bible.md`, `series/an-lin/character_registry.md`, `series/an-lin/chronology.md`, and `series/an-lin/sequel_constraints.md` before planning. 林安 is the journalist/crime-reporter protagonist in that continuity; do not reset her profession or ignore `manuscripts/shanghai-rain-gate-crime/`.
 
+## Creative Preflight
+
+Before token-level chapter planning, create `manuscripts/<slug>/creative_preflight.md`. Use `docs/creative-preflight.md` as the template.
+
+The preflight compares 3-5 possible premises or scene strategies, rejects weak ideas, chooses the strongest story shape, names the reader question, and states the variation budget. This keeps the first vocabulary-feasible idea from becoming the final book by accident.
+
 ## Start a New Manuscript
 
 1. Pick a slug, title, mode, premise, and intended reading experience.
 2. Copy or adapt `configs/novel_generation.default.json`.
-3. Ask Codex to use the planning skill:
+3. Ask Codex to create `creative_preflight.md`.
+4. Ask Codex to use the planning skill:
 
 ```text
 Use the chinese-graded-novel-planning skill to create a novel bible and outline for manuscripts/<slug>.
@@ -129,6 +139,7 @@ Repo-local skills live under `.agents/skills/`:
 - `chinese-literary-critic`
 - `chinese-normal-reader-review`
 - `chinese-lead-quality-review`
+- `chinese-prose-variety-polish`
 - `epub-export`
 
 Project-scoped role definitions live under `.codex/agents/`:
@@ -140,6 +151,7 @@ Project-scoped role definitions live under `.codex/agents/`:
 - `literary-critic`
 - `normal-reader`
 - `lead-quality-reviewer`
+- `prose-variety-polisher`
 - `epub-builder`
 
 If the current Codex runtime does not auto-load these custom agents, use them as manual role prompts and rely on the skills plus scripts for enforcement.
@@ -249,6 +261,7 @@ After each chapter or at least before whole-book review, run:
 ```powershell
 python scripts/vocabulary_usage_report.py --known data/known_words.txt --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/quality/vocabulary_usage_report.json
 python scripts/repeated_phrase_report.py --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/quality/repeated_phrase_report.json
+python scripts/prose_variety_report.py --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/quality/prose_variety_report.json
 ```
 
 These reports provide evidence for reviewers. They do not make literary decisions.
@@ -268,6 +281,14 @@ python scripts/validate_book.py --known data/known_words.txt --chapters manuscri
 Layered manuscripts should pass the same pack arguments used for chapter validation.
 
 The whole-book report aggregates chapter count, total tokens, unique used words, unknown-token frequencies, forbidden unknown tokens over the per-chapter limit, and per-chapter details.
+
+Build a noncanonical reading copy for human rhythm review:
+
+```powershell
+python scripts/build_reading_copy.py --manuscript manuscripts/<slug> --title "<title>" --out manuscripts/<slug>/reading_copy.md
+```
+
+Do not edit the reading copy directly. Edit and validate `chapters/*.zh-tok.txt`.
 
 To regenerate every chapter report plus the whole-book report:
 
@@ -289,7 +310,8 @@ The quality gate also checks that every `chapter_XX.zh-tok.txt` has a matching `
 
 1. Literary critic review writes `quality/literary_critic_report.md`.
 2. Normal reader review writes `quality/normal_reader_report.md`.
-3. Lead reviewer writes `quality/lead_quality_decision.md`.
+3. Prose-variety polish repairs repeated visible frames when `prose_variety_report.json` requires it.
+4. Lead reviewer writes `quality/lead_quality_decision.md`.
 
 The lead decision must explicitly say:
 
@@ -308,21 +330,24 @@ The EPUB builder runs whole-book validation and checks lead quality approval aga
 ## Improved Workflow
 
 1. Load active known-word list.
-2. Create novel bible.
-3. Create outline.
-4. Check that the outline is interesting enough before drafting.
-5. Draft one chapter.
-6. Validate vocabulary.
-7. Repair unknown tokens only when they are accidental, unclear, or above the per-chapter budget.
-8. Update continuity.
-9. Track vocabulary breadth.
-10. Repeat chapter by chapter.
-11. Run whole-book validation.
-12. Run vocabulary usage report.
-13. Run literary critic review.
-14. Run normal reader review.
-15. Lead reviewer decides: pass, polish, partial rewrite, or complete rebuild.
-16. Build EPUB only after lead reviewer approves.
+2. Create creative preflight with alternatives and a variation budget.
+3. Create novel bible.
+4. Create outline.
+5. Check that the outline is interesting enough before drafting.
+6. Draft one chapter.
+7. Validate vocabulary.
+8. Repair unknown tokens only when they are accidental, unclear, or above the per-chapter budget.
+9. Update continuity.
+10. Track vocabulary breadth.
+11. Repeat chapter by chapter.
+12. Run whole-book validation.
+13. Run vocabulary usage, repeated phrase, and prose variety reports.
+14. Build a noncanonical reading copy.
+15. Run literary critic review.
+16. Run normal reader review.
+17. Run prose-variety polish when needed.
+18. Lead reviewer decides: pass, polish, partial rewrite, or complete rebuild.
+19. Build EPUB only after lead reviewer approves.
 
 For `low_fantasy_urban_shanghai`, the outline and reviews should check that the story feels like a normal person in Shanghai discovering one impossible thing. Avoid epic scale, lore dumps, many monsters, and stretch words used once as decoration.
 

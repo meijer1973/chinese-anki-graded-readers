@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chinese Prose Variety Polish"
+  short_description: "Polish repeated frames and flat rhythm in restricted-vocabulary Chinese."
+  default_prompt: "Polish a validated Chinese graded-reader manuscript for prose variety without breaking vocabulary validation."

@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki And Graded Readers
 
-Generated: 2026-05-25T12:01:35Z
+Generated: 2026-05-25T15:40:45Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 371
+Files indexed: 381
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -23,7 +23,7 @@ Count: 6
 
 ## agents/skills
 
-Count: 24
+Count: 27
 
 - .agents/skills/chinese-continuity-editing/SKILL.md
 - .agents/skills/chinese-continuity-editing/agents/openai.yaml
@@ -35,6 +35,8 @@ Count: 24
 - .agents/skills/chinese-literary-critic/agents/openai.yaml
 - .agents/skills/chinese-normal-reader-review/SKILL.md
 - .agents/skills/chinese-normal-reader-review/agents/openai.yaml
+- .agents/skills/chinese-prose-variety-polish/SKILL.md
+- .agents/skills/chinese-prose-variety-polish/agents/openai.yaml
 - .agents/skills/chinese-restricted-vocabulary-writing/SKILL.md
 - .agents/skills/chinese-restricted-vocabulary-writing/agents/openai.yaml
 - .agents/skills/chinese-vocabulary-validation/SKILL.md
@@ -48,21 +50,24 @@ Count: 24
 - .codex/agents/literary-critic.toml
 - .codex/agents/normal-reader.toml
 - .codex/agents/novel-planner.toml
+- .codex/agents/prose-variety-polisher.toml
 - .codex/agents/vocabulary-auditor.toml
 
 ## docs
 
-Count: 5
+Count: 7
 
 - docs/anki-integration.md
+- docs/creative-preflight.md
 - docs/machine-readable-repository.md
 - docs/novel-generation.md
 - docs/quality-review.md
 - docs/stretch-vocabulary.md
+- docs/style-bank-controlled-chinese.md
 
 ## scripts
 
-Count: 28
+Count: 30
 
 - add_missing_single_character_notes.py
 - apply_meaning_cleanup_updates.py
@@ -73,6 +78,7 @@ Count: 28
 - scripts/__init__.py
 - scripts/build_agent_index.py
 - scripts/build_epub.py
+- scripts/build_reading_copy.py
 - scripts/complete_stretch_pack_metadata.py
 - scripts/export_stretch_words_for_anki.py
 - scripts/generate_reports.py
@@ -81,6 +87,7 @@ Count: 28
 - scripts/novel_tools.py
 - scripts/plot_affordance_report.py
 - scripts/promote_stretch_words.py
+- scripts/prose_variety_report.py
 - scripts/repeated_phrase_report.py
 - scripts/run_quality_gate.py
 - scripts/sync_known_words.py
@@ -418,10 +425,13 @@ Count: 3
 
 ## root
 
-Count: 10
+Count: 13
 
 - .gitattributes
 - .gitignore
+- known words from user/batch 1/lingqs (6).csv
+- known words from user/batch 1/lingqs (7).csv
+- known words from user/batch 1/lingqs (8).csv
 - series/an-lin/approved_series_words.txt
 - series/an-lin/character_registry.md
 - series/an-lin/chronology.md

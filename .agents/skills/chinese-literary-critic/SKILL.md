@@ -16,6 +16,8 @@ Review the manuscript as literature under constraint. Do not excuse weak writing
 - `vocabulary_report.json`
 - `quality/vocabulary_usage_report.json`
 - `quality/repeated_phrase_report.json`
+- `quality/prose_variety_report.json`
+- `creative_preflight.md`
 - all `chapters/*.zh-tok.txt`
 
 ## Evaluate
@@ -59,3 +61,5 @@ Write `manuscripts/<slug>/quality/literary_critic_report.md` with:
 - whether stretch vocabulary is learnable through repetition
 - whether journalism/crime terms are naturally repeated and story-useful
 - whether any chapter appears padded for count-based targets
+- public-quality score from 1 to 10, distinct from baseline acceptability
+- whether prose-variety warnings require mandatory polish before public release

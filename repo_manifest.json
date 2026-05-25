@@ -16,6 +16,8 @@
     "RESEARCH_AGENT_MAP.md",
     "RESEARCH_AGENT_PROMPT.md",
     "docs/novel-generation.md",
+    "docs/creative-preflight.md",
+    "docs/style-bank-controlled-chinese.md",
     "docs/stretch-vocabulary.md",
     "docs/anki-integration.md",
     "docs/quality-review.md"
@@ -79,8 +81,10 @@
       "scripts/generate_reports.py",
       "scripts/run_quality_gate.py",
       "scripts/build_epub.py",
+      "scripts/build_reading_copy.py",
       "scripts/vocabulary_usage_report.py",
       "scripts/repeated_phrase_report.py",
+      "scripts/prose_variety_report.py",
       "scripts/plot_affordance_report.py"
     ],
     "vocabulary": [
@@ -125,6 +129,7 @@
     "SUBTLEX-CH-WF/",
     "manuscripts/*/epub/*.xhtml",
     "manuscripts/*/epub/*.css",
+    "manuscripts/*/reading_copy.md",
     "__pycache__/"
   ]
 }

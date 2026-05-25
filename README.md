@@ -8,6 +8,7 @@ This repository maintains a Chinese vocabulary Anki deck and a controlled-vocabu
 - Keep curated sentence and pinyin fixes in `sentence_example_overrides.py`.
 - Maintain the active known-word file in `data/known_words.txt`.
 - Generate restricted-vocabulary Chinese manuscripts under `manuscripts/<slug>/`.
+- Use `creative_preflight.md` and the controlled Chinese style bank before token-level chapter planning.
 - Plan 林安 journalist/crime sequels from `series/an-lin/` and `data/stretch_packs/journalism_crime_50.txt`.
 - Validate tokenized chapters with `scripts/validate_chapter.py` and `scripts/validate_book.py`.
 - Run quality review with `scripts/run_quality_gate.py`.
@@ -45,6 +46,8 @@ The canonical story source is space-tokenized Chinese:
 The validator checks core known words, approved stretch packs, book-specific words, proper nouns, and a small per-chapter unknown-token budget. See:
 
 - `docs/novel-generation.md`
+- `docs/creative-preflight.md`
+- `docs/style-bank-controlled-chinese.md`
 - `docs/stretch-vocabulary.md`
 - `docs/quality-review.md`
 - `AGENTS.md`

@@ -9,6 +9,7 @@ from scripts.novel_tools import (
     ROOT,
     build_epub,
     check_epub_structure,
+    prose_variety_report,
     repeated_phrase_report,
     validate_book,
     validate_text,
@@ -16,7 +17,8 @@ from scripts.novel_tools import (
     write_json,
 )
 from scripts.plot_affordance_report import build_report as build_plot_affordance_report
-from scripts.run_quality_gate import chapter_planning_status, init_quality_templates
+from scripts.build_reading_copy import build_reading_copy
+from scripts.run_quality_gate import chapter_planning_status, creative_preflight_status, init_quality_templates
 
 
 class NovelPipelineTests(unittest.TestCase):
@@ -155,6 +157,18 @@ class NovelPipelineTests(unittest.TestCase):
         self.assertTrue(out.exists())
         self.assertTrue(report["quality_approval"]["approved"])
 
+    def test_reading_copy_removes_token_spaces_for_review(self) -> None:
+        manuscript = self.root / "manuscript"
+        chapters = manuscript / "chapters"
+        chapters.mkdir(parents=True)
+        (chapters / "chapter_01.zh-tok.txt").write_text("我 看 照片 。\n妈妈 说 好 。\n", encoding="utf-8")
+        out = manuscript / "reading_copy.md"
+        report = build_reading_copy(manuscript, out, title="Sample")
+        text = out.read_text(encoding="utf-8")
+        self.assertEqual(report["chapter_count"], 1)
+        self.assertIn("我看照片。", text)
+        self.assertIn("妈妈说好。", text)
+
     def test_json_report_can_be_written(self) -> None:
         report_path = self.root / "report.json"
         report = validate_text("我 看 朋友 。", self.known_words)
@@ -195,6 +209,24 @@ class NovelPipelineTests(unittest.TestCase):
         phrases = {item["phrase"]: item["count"] for item in report["repeated_phrases"]}
         self.assertGreaterEqual(phrases["我 看"], 3)
         self.assertGreaterEqual(phrases["我 看 照片"], 3)
+
+    def test_prose_variety_report_flags_repeated_dialogue_tags(self) -> None:
+        chapters = self.root / "chapters"
+        chapters.mkdir()
+        repeated = " ".join(["妈妈 说 。"] * 10)
+        (chapters / "chapter_01.zh-tok.txt").write_text(repeated + "\n", encoding="utf-8")
+        report = prose_variety_report(chapters, dialogue_tag_warning_count=5)
+        self.assertTrue(report["style_revision_required"])
+        self.assertEqual(report["repeated_dialogue_tags"][0]["frame"], "妈妈 说")
+
+    def test_creative_preflight_status(self) -> None:
+        manuscript = self.root / "manuscript"
+        manuscript.mkdir()
+        missing = creative_preflight_status(manuscript)
+        self.assertFalse(missing["creative_preflight_present"])
+        (manuscript / "creative_preflight.md").write_text("# Creative Preflight\n", encoding="utf-8")
+        present = creative_preflight_status(manuscript)
+        self.assertTrue(present["creative_preflight_present"])
 
     def test_quality_directory_and_templates_are_created(self) -> None:
         quality = self.root / "manuscript" / "quality"

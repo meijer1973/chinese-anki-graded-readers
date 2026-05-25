@@ -16,9 +16,12 @@ Write one chapter at a time. The canonical format is space-tokenized Chinese:
 - Read `data/known_words.txt`.
 - Read the configured approved stretch packs, manuscript `book_specific_words.txt`, and `proper_nouns.txt` when present.
 - Read the manuscript `novel_bible.md`, `outline.md`, `characters.md`, and `continuity_log.md`.
+- Read `creative_preflight.md` when present. Preserve the chosen story shape, reader question, and variation budget.
+- Read `docs/style-bank-controlled-chinese.md` before drafting or polishing.
 - For 林安 series chapters, also read `series/an-lin/series_bible.md`, `series/an-lin/character_registry.md`, `series/an-lin/chronology.md`, and `series/an-lin/sequel_constraints.md`.
 - Confirm the target chapter file path and chapter outline. Do not use a token target as a quota.
 - Create `manuscripts/<slug>/planning/chapter_XX_vocab_plan.md` before drafting.
+- Do not begin with vocabulary feasibility alone. Confirm the scene want, pressure, reversal, and end change before choosing the token set.
 
 The vocabulary plan must include chapter purpose, scene goal, conflict, emotional turn, main locations, characters and roles, 30-80 core known words that could naturally appear, stretch words to introduce, stretch words to repeat, risky unavailable concepts to avoid, chapter hook, and end-of-chapter change.
 
@@ -39,6 +42,8 @@ For 林安 sequels, the vocabulary plan must also include case function, journal
 - Avoid chapters where characters only talk in circles.
 - Avoid repeating the same emotional beat.
 - Avoid repeated dialogue loops unless the repetition is narratively justified.
+- Avoid repeated `X 说` frames. Use action, silence, object handling, or reaction beats when they are clearer and still valid.
+- Vary sentence openings and scene rhythm. A chapter should not sound like the previous chapter with names changed.
 - Use available nouns, verbs, and adjectives more widely.
 - Use approved stretch vocabulary actively and naturally.
 - Use journalism/crime stretch vocabulary for real story actions: interviewing, confirming sources, checking files, protecting witnesses, publishing or withholding articles, following suspects, and comparing testimony.
@@ -77,3 +82,11 @@ python scripts/validate_chapter.py --known data/known_words.txt --chapter manusc
 ```
 
 After each chapter, run vocabulary validation, repair forbidden unknowns that exceed the budget or weaken clarity, run vocabulary usage evidence, update `continuity_log.md`, update `stretch_word_exposure.md`, and check whether stretch words are being repeated enough to become learnable rather than decorative.
+
+Before final review, run:
+
+```powershell
+python scripts/prose_variety_report.py --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/quality/prose_variety_report.json
+```
+
+If the report flags repeated dialogue tags or repeated sentence frames, use the `chinese-prose-variety-polish` skill before lead approval.

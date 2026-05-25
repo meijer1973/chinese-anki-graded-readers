@@ -114,6 +114,8 @@ def write_url_index(paths: list[str]) -> None:
         "repo_manifest.json",
         "reports/github-agent-index.md",
         "docs/novel-generation.md",
+        "docs/creative-preflight.md",
+        "docs/style-bank-controlled-chinese.md",
         "docs/stretch-vocabulary.md",
         "docs/anki-integration.md",
         "docs/quality-review.md",

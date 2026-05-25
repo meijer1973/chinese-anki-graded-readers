@@ -647,6 +647,156 @@ def repeated_phrase_report(
     }
 
 
+def sentence_token_reports(chapters_dir: str | Path, *, punctuation_path: str | Path = DEFAULT_PUNCTUATION) -> list[dict]:
+    punctuation = load_punctuation(punctuation_path)
+    sentence_endings = set("。！？!?")
+    reports = []
+    for chapter in chapter_files(chapters_dir):
+        sentences = []
+        current: list[str] = []
+        for raw_token in chapter.read_text(encoding="utf-8").split():
+            token = normalize_token(raw_token, punctuation)
+            if token:
+                current.append(token)
+            if any(char in sentence_endings for char in raw_token) and current:
+                sentences.append(current)
+                current = []
+        if current:
+            sentences.append(current)
+        reports.append({"chapter_name": chapter.name, "chapter_path": str(chapter), "sentences": sentences})
+    return reports
+
+
+def prose_variety_report(
+    chapters_dir: str | Path,
+    *,
+    punctuation_path: str | Path = DEFAULT_PUNCTUATION,
+    dialogue_tag_warning_count: int = 10,
+    phrase_warning_count: int = 8,
+    sentence_frame_warning_count: int = 5,
+    max_items: int = 50,
+) -> dict:
+    sentence_reports = sentence_token_reports(chapters_dir, punctuation_path=punctuation_path)
+    phrase_counts: dict[int, Counter[tuple[str, ...]]] = {2: Counter(), 3: Counter(), 4: Counter()}
+    dialogue_tags: Counter[str] = Counter()
+    sentence_openings: Counter[str] = Counter()
+    sentence_endings: Counter[str] = Counter()
+    risk_frames = {
+        ("我", "不", "知道"),
+        ("你", "怎么", "了"),
+        ("我们", "要", "走"),
+        ("看", "着"),
+        ("想", "到"),
+    }
+    risk_frame_counts: Counter[str] = Counter()
+    total_sentences = 0
+    total_tokens = 0
+
+    for chapter in sentence_reports:
+        for tokens in chapter["sentences"]:
+            total_sentences += 1
+            total_tokens += len(tokens)
+            if tokens:
+                sentence_openings[" ".join(tokens[: min(3, len(tokens))])] += 1
+                sentence_endings[" ".join(tokens[-min(3, len(tokens)) :])] += 1
+            for index, token in enumerate(tokens):
+                if token == "说" and index > 0:
+                    dialogue_tags[f"{tokens[index - 1]} 说"] += 1
+            for size in (2, 3, 4):
+                for index in range(0, max(0, len(tokens) - size + 1)):
+                    phrase = tuple(tokens[index : index + size])
+                    phrase_counts[size][phrase] += 1
+                    if phrase in risk_frames:
+                        risk_frame_counts[" ".join(phrase)] += 1
+
+    repeated_phrases = []
+    for size in (2, 3, 4):
+        for phrase, count in phrase_counts[size].most_common():
+            if count < phrase_warning_count:
+                continue
+            repeated_phrases.append({"phrase": " ".join(phrase), "token_count": size, "count": count})
+            if len(repeated_phrases) >= max_items:
+                break
+        if len(repeated_phrases) >= max_items:
+            break
+
+    repeated_dialogue_tags = [
+        {"frame": frame, "count": count}
+        for frame, count in dialogue_tags.most_common(max_items)
+        if count >= dialogue_tag_warning_count
+    ]
+    repeated_openings = [
+        {"frame": frame, "count": count}
+        for frame, count in sentence_openings.most_common(max_items)
+        if count >= sentence_frame_warning_count
+    ]
+    repeated_endings = [
+        {"frame": frame, "count": count}
+        for frame, count in sentence_endings.most_common(max_items)
+        if count >= sentence_frame_warning_count
+    ]
+    visible_risk_frames = [
+        {"frame": frame, "count": count}
+        for frame, count in risk_frame_counts.most_common(max_items)
+        if count >= sentence_frame_warning_count
+    ]
+    warnings = []
+    if repeated_dialogue_tags:
+        warnings.append(
+            {
+                "type": "repeated_dialogue_tags",
+                "message": "Visible X 说 repetition should trigger a prose-variety polish pass.",
+                "items": repeated_dialogue_tags,
+            }
+        )
+    if repeated_phrases:
+        warnings.append(
+            {
+                "type": "repeated_phrase_frames",
+                "message": "High-count repeated phrase frames should be reviewed for mechanical rhythm.",
+                "items": repeated_phrases[:10],
+            }
+        )
+    if repeated_openings or repeated_endings:
+        warnings.append(
+            {
+                "type": "repeated_sentence_frames",
+                "message": "Repeated sentence openings or endings can make chapters feel formulaic.",
+                "openings": repeated_openings[:10],
+                "endings": repeated_endings[:10],
+            }
+        )
+    if visible_risk_frames:
+        warnings.append(
+            {
+                "type": "known_risk_frames",
+                "message": "Common flat frames appear often enough to require review.",
+                "items": visible_risk_frames,
+            }
+        )
+
+    return {
+        "schema_version": 1,
+        "generated_at": utc_now(),
+        "chapters_path": str(Path(chapters_dir)),
+        "chapter_count": len(sentence_reports),
+        "sentence_count": total_sentences,
+        "total_tokens": total_tokens,
+        "dialogue_tag_warning_count": dialogue_tag_warning_count,
+        "phrase_warning_count": phrase_warning_count,
+        "sentence_frame_warning_count": sentence_frame_warning_count,
+        "top_dialogue_tags": [{"frame": frame, "count": count} for frame, count in dialogue_tags.most_common(25)],
+        "repeated_dialogue_tags": repeated_dialogue_tags,
+        "repeated_phrase_frames": repeated_phrases,
+        "repeated_sentence_openings": repeated_openings,
+        "repeated_sentence_endings": repeated_endings,
+        "known_risk_frames": visible_risk_frames,
+        "warnings": warnings,
+        "style_revision_required": bool(warnings),
+        "counts_are_revision_evidence_not_final_literary_judgment": True,
+    }
+
+
 def vocabulary_usage_report(
     chapters_dir: str | Path,
     known_path: str | Path = DEFAULT_KNOWN_WORDS,

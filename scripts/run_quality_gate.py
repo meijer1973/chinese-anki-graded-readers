@@ -10,6 +10,7 @@ try:
         DEFAULT_PUNCTUATION,
         chapter_files,
         quality_approval_status,
+        prose_variety_report,
         repeated_phrase_report,
         validate_book,
         vocabulary_usage_report,
@@ -22,6 +23,7 @@ except ModuleNotFoundError:
         DEFAULT_PUNCTUATION,
         chapter_files,
         quality_approval_status,
+        prose_variety_report,
         repeated_phrase_report,
         validate_book,
         vocabulary_usage_report,
@@ -56,6 +58,7 @@ Too repetitive: PENDING
 Vocabulary use artificially narrow: PENDING
 Fantasy/setting stretch vocabulary useful: PENDING
 Professions/social roles meaningful: PENDING
+Public-quality score: PENDING
 """,
     )
     write_if_missing(
@@ -77,6 +80,7 @@ Would continue after chapter 1: PENDING
 Would finish the book: PENDING
 City felt alive: PENDING
 Stretch words too hard: PENDING
+Public-quality score: PENDING
 """,
     )
     write_if_missing(
@@ -98,6 +102,7 @@ Complete rebuild required: PENDING
 Stretch vocabulary status: PENDING
 Unknown-token budget status: PENDING
 EPUB build allowed: PENDING
+Public-quality status: PENDING
 
 ## Instructions For Next Writer Agent
 """,
@@ -119,6 +124,14 @@ def chapter_planning_status(manuscript: Path) -> dict:
         "expected_planning_file_count": len(expected),
         "planning_file_count": len(expected) - len(missing),
         "missing_chapter_planning_files": [str(path) for path in missing],
+    }
+
+
+def creative_preflight_status(manuscript: Path) -> dict:
+    path = manuscript / "creative_preflight.md"
+    return {
+        "creative_preflight_path": str(path),
+        "creative_preflight_present": path.exists(),
     }
 
 
@@ -168,9 +181,12 @@ def main() -> int:
     write_json(quality / "vocabulary_usage_report.json", usage)
     phrases = repeated_phrase_report(chapters, punctuation_path=args.punctuation)
     write_json(quality / "repeated_phrase_report.json", phrases)
+    prose = prose_variety_report(chapters, punctuation_path=args.punctuation)
+    write_json(quality / "prose_variety_report.json", prose)
     init_quality_templates(quality)
     status = quality_approval_status(manuscript)
     planning_status = chapter_planning_status(manuscript)
+    preflight_status = creative_preflight_status(manuscript)
     summary = {
         "valid_vocabulary": validation["valid"],
         "unknown_token_count": validation["unknown_token_count"],
@@ -182,8 +198,18 @@ def main() -> int:
         ),
         "stretch_token_percent": validation.get("stretch_token_percent", 0),
         **planning_status,
+        **preflight_status,
+        "style_revision_required": prose["style_revision_required"],
+        "style_warning_count": len(prose["warnings"]),
         "quality_approval": status,
         "ready_for_epub": validation["valid"] and status["approved"] and planning_status["planning_files_present"],
+        "public_quality_ready": (
+            validation["valid"]
+            and status["approved"]
+            and planning_status["planning_files_present"]
+            and preflight_status["creative_preflight_present"]
+            and not prose["style_revision_required"]
+        ),
     }
     write_json(quality / "quality_gate_summary.json", summary)
     print(

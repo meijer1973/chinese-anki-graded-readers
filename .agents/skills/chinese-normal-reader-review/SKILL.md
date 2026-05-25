@@ -22,6 +22,7 @@ Read like a real learner-reader, not a technical validator and not a literary th
 - Was there too much repeated dialogue?
 - Did the ending satisfy something?
 - Did the restricted vocabulary feel natural or mechanical?
+- Did the natural reading copy feel like prose, or like token-valid sentences?
 - Did the city feel alive?
 - Did characters feel different from each other?
 - Was the fantasy element interesting?
@@ -46,3 +47,4 @@ Write `manuscripts/<slug>/quality/normal_reader_report.md` with:
 - whether the reader would finish the book
 - whether stretch vocabulary helped or hurt the reading experience
 - whether the journalism/crime layer made the story more interesting and still readable
+- public-quality score from 1 to 10, distinct from "acceptable for a constrained draft"

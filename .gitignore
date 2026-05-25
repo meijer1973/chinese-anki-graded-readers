@@ -61,3 +61,6 @@ manuscripts/*/epub/*
 # Early generated manuscripts kept locally but not as repository examples
 manuscripts/ci-li-de-mimi/
 manuscripts/shanghai-shadow-door/
+
+# Noncanonical manuscript review renders
+manuscripts/*/reading_copy.md

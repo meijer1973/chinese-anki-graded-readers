@@ -33,6 +33,19 @@ This pack should make scenes possible, not merely decorate them. A chapter using
 
 For the 林安 series, read `series/an-lin/series_bible.md` before planning. 林安 is the journalist protagonist in that continuity.
 
+## Function-Pack Priority
+
+Future stretch packs should not only add nouns. Prioritize story-affordance words that change how scenes move:
+
+- dialogue actions: answer, refuse, admit, interrupt, explain, hide, reveal
+- scene motion: turn, step back, follow, avoid, reach, open, close
+- emotion gradients: uneasy, relieved, ashamed, stubborn, doubtful, tired
+- sensory setting: wet, cold, bright, dark, noisy, quiet, narrow, empty, heavy
+- social pressure: promise, duty, blame, expectation, debt, trust
+- causality and contrast: although, therefore, instead, almost, unless, otherwise, however
+
+Do not add a function pack until entries are reviewed for usefulness, metadata, and Anki flow. The goal is prose movement and scene pressure, not random difficulty.
+
 ## Business / Economics Pack
 
 Use `business_economics_60.txt` for nonfiction or case-based stories about shops, companies, money, customers, prices, costs, wages, banks, risk, and simple market decisions.
