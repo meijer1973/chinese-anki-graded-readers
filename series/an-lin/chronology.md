@@ -22,6 +22,15 @@
 - Case frame: old Shanghai street death, witness pressure, altered video, source protection, and publication ethics.
 - Outcome: the series now has a stronger journalist-crime procedure pattern: interview, verify, protect source, publish carefully, and separate fantasy clues from legal evidence.
 
+## Book 3: 上海影子桥案
+
+- Repository path: `manuscripts/shanghai-shadow-bridge-case/`
+- Status: third series manuscript imported from the writer agent and revalidated locally.
+- Core continuity: 林安 remains the journalist protagonist. 陈雨 remains the recurring police contact. 何青 remains the editor/newsroom pressure.
+- Fantasy mechanism: 影子桥 connects black tickets, memory, shadow action, and a hidden bridge mechanism. Fantasy clues guide investigation but are not used as legal proof.
+- Case frame: a photographer/source dies near a bridge after investigating old-street property files; the visible suspect in police video has no shadow.
+- Outcome: 林安 protects a vulnerable witness, publishes enough truth to create pressure, and keeps the fantasy mechanism out of the public article.
+
 ## Open Series Direction
 
-The next story should not restart 林安 from zero. It should treat her as someone who has already faced the rain-ticket case and the spirit-lamp case, and now knows that a normal clue may have a hidden cost.
+The next story should not restart 林安 from zero. It should treat her as someone who has already faced the rain-ticket case, the spirit-lamp case, and the shadow-bridge case, and now knows that a normal clue may have a hidden cost.

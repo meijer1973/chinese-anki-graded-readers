@@ -105,6 +105,8 @@ Machine-readable:
     "manuscripts/shanghai-rain-gate-crime/quality/quality_gate_summary.json",
     "manuscripts/shanghai-spirit-lamp-case/vocabulary_report.json",
     "manuscripts/shanghai-spirit-lamp-case/quality/quality_gate_summary.json",
+    "manuscripts/shanghai-shadow-bridge-case/vocabulary_report.json",
+    "manuscripts/shanghai-shadow-bridge-case/quality/quality_gate_summary.json",
     "manuscripts/shanghai-rain-ticket/vocabulary_report.json",
     "manuscripts/shanghai-rain-ticket/quality/quality_gate_summary.json"
   ]
@@ -138,6 +140,8 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/quality/quality_gate_summary.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-spirit-lamp-case/vocabulary_report.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-spirit-lamp-case/quality/quality_gate_summary.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-shadow-bridge-case/vocabulary_report.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-shadow-bridge-case/quality/quality_gate_summary.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/vocabulary_report.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/quality/quality_gate_summary.json
 
@@ -168,6 +172,7 @@ Use these anchors before free-form browsing.
   "journalism_crime_pack": "data/stretch_packs/journalism_crime_50.txt",
   "first_series_manuscript": "manuscripts/shanghai-rain-gate-crime",
   "second_series_manuscript": "manuscripts/shanghai-spirit-lamp-case",
+  "third_series_manuscript": "manuscripts/shanghai-shadow-bridge-case",
   "current_story_trial": "manuscripts/shanghai-rain-ticket",
   "file_inventory": "reports/github-agent-index.md"
 }

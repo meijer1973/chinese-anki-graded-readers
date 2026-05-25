@@ -39,6 +39,8 @@
     "manuscripts/shanghai-rain-gate-crime/quality/quality_gate_summary.json",
     "manuscripts/shanghai-spirit-lamp-case/vocabulary_report.json",
     "manuscripts/shanghai-spirit-lamp-case/quality/quality_gate_summary.json",
+    "manuscripts/shanghai-shadow-bridge-case/vocabulary_report.json",
+    "manuscripts/shanghai-shadow-bridge-case/quality/quality_gate_summary.json",
     "manuscripts/shanghai-rain-ticket/vocabulary_report.json",
     "manuscripts/shanghai-rain-ticket/quality/quality_gate_summary.json",
     "reports/github-agent-index.md",
@@ -94,6 +96,7 @@
       "manuscripts/stretch-layer-fixture",
       "manuscripts/shanghai-rain-gate-crime",
       "manuscripts/shanghai-spirit-lamp-case",
+      "manuscripts/shanghai-shadow-bridge-case",
       "manuscripts/shanghai-rain-ticket"
     ],
     "tests": [

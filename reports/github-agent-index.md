@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki And Graded Readers
 
-Generated: 2026-05-25T08:58:41Z
+Generated: 2026-05-25T11:36:26Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 277
+Files indexed: 357
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -133,7 +133,7 @@ Count: 2
 
 ## manuscripts
 
-Count: 178
+Count: 258
 
 - manuscripts/README.md
 - manuscripts/sample-known-words/chapters/chapter_01.validation.json
@@ -225,6 +225,86 @@ Count: 178
 - manuscripts/shanghai-rain-ticket/quality/vocabulary_usage_report.json
 - manuscripts/shanghai-rain-ticket/stretch_word_exposure.md
 - manuscripts/shanghai-rain-ticket/vocabulary_report.json
+- manuscripts/shanghai-shadow-bridge-case/README.md
+- manuscripts/shanghai-shadow-bridge-case/book_specific_words.txt
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_01.validation.json
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_01.zh-tok.txt
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_02.validation.json
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_02.zh-tok.txt
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_03.validation.json
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_03.zh-tok.txt
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_04.validation.json
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_04.zh-tok.txt
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_05.validation.json
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_05.zh-tok.txt
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_06.validation.json
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_06.zh-tok.txt
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_07.validation.json
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_07.zh-tok.txt
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_08.validation.json
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_08.zh-tok.txt
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_09.validation.json
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_09.zh-tok.txt
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_10.validation.json
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_10.zh-tok.txt
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_11.validation.json
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_11.zh-tok.txt
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_12.validation.json
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_12.zh-tok.txt
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_13.validation.json
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_13.zh-tok.txt
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_14.validation.json
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_14.zh-tok.txt
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_15.validation.json
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_15.zh-tok.txt
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_16.validation.json
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_16.zh-tok.txt
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_17.validation.json
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_17.zh-tok.txt
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_18.validation.json
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_18.zh-tok.txt
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_19.validation.json
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_19.zh-tok.txt
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_20.validation.json
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_20.zh-tok.txt
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_21.validation.json
+- manuscripts/shanghai-shadow-bridge-case/chapters/chapter_21.zh-tok.txt
+- manuscripts/shanghai-shadow-bridge-case/characters.md
+- manuscripts/shanghai-shadow-bridge-case/continuity_log.md
+- manuscripts/shanghai-shadow-bridge-case/novel_bible.md
+- manuscripts/shanghai-shadow-bridge-case/outline.md
+- manuscripts/shanghai-shadow-bridge-case/planning/chapter_01_vocab_plan.md
+- manuscripts/shanghai-shadow-bridge-case/planning/chapter_02_vocab_plan.md
+- manuscripts/shanghai-shadow-bridge-case/planning/chapter_03_vocab_plan.md
+- manuscripts/shanghai-shadow-bridge-case/planning/chapter_04_vocab_plan.md
+- manuscripts/shanghai-shadow-bridge-case/planning/chapter_05_vocab_plan.md
+- manuscripts/shanghai-shadow-bridge-case/planning/chapter_06_vocab_plan.md
+- manuscripts/shanghai-shadow-bridge-case/planning/chapter_07_vocab_plan.md
+- manuscripts/shanghai-shadow-bridge-case/planning/chapter_08_vocab_plan.md
+- manuscripts/shanghai-shadow-bridge-case/planning/chapter_09_vocab_plan.md
+- manuscripts/shanghai-shadow-bridge-case/planning/chapter_10_vocab_plan.md
+- manuscripts/shanghai-shadow-bridge-case/planning/chapter_11_vocab_plan.md
+- manuscripts/shanghai-shadow-bridge-case/planning/chapter_12_vocab_plan.md
+- manuscripts/shanghai-shadow-bridge-case/planning/chapter_13_vocab_plan.md
+- manuscripts/shanghai-shadow-bridge-case/planning/chapter_14_vocab_plan.md
+- manuscripts/shanghai-shadow-bridge-case/planning/chapter_15_vocab_plan.md
+- manuscripts/shanghai-shadow-bridge-case/planning/chapter_16_vocab_plan.md
+- manuscripts/shanghai-shadow-bridge-case/planning/chapter_17_vocab_plan.md
+- manuscripts/shanghai-shadow-bridge-case/planning/chapter_18_vocab_plan.md
+- manuscripts/shanghai-shadow-bridge-case/planning/chapter_19_vocab_plan.md
+- manuscripts/shanghai-shadow-bridge-case/planning/chapter_20_vocab_plan.md
+- manuscripts/shanghai-shadow-bridge-case/planning/chapter_21_vocab_plan.md
+- manuscripts/shanghai-shadow-bridge-case/proper_nouns.txt
+- manuscripts/shanghai-shadow-bridge-case/quality/lead_quality_decision.md
+- manuscripts/shanghai-shadow-bridge-case/quality/literary_critic_report.md
+- manuscripts/shanghai-shadow-bridge-case/quality/normal_reader_report.md
+- manuscripts/shanghai-shadow-bridge-case/quality/plot_affordance_report.json
+- manuscripts/shanghai-shadow-bridge-case/quality/quality_gate_summary.json
+- manuscripts/shanghai-shadow-bridge-case/quality/repeated_phrase_report.json
+- manuscripts/shanghai-shadow-bridge-case/quality/vocabulary_usage_report.json
+- manuscripts/shanghai-shadow-bridge-case/stretch_word_exposure.md
+- manuscripts/shanghai-shadow-bridge-case/vocabulary_report.json
+- manuscripts/shanghai-shadow-bridge-case/vocabulary_report.md
 - manuscripts/shanghai-spirit-lamp-case/book_specific_words.txt
 - manuscripts/shanghai-spirit-lamp-case/chapters/chapter_01.validation.json
 - manuscripts/shanghai-spirit-lamp-case/chapters/chapter_01.zh-tok.txt

@@ -1,0 +1,19 @@
+{
+  "valid_vocabulary": true,
+  "unknown_token_count": 0,
+  "forbidden_unknown_tokens": 0,
+  "forbidden_unknown_tokens_over_limit": 0,
+  "max_forbidden_unknown_tokens_per_chapter": 5,
+  "stretch_token_percent": 21.13,
+  "planning_files_present": true,
+  "expected_planning_file_count": 21,
+  "planning_file_count": 21,
+  "missing_chapter_planning_files": [],
+  "quality_approval": {
+    "approved": true,
+    "decision_path": "manuscripts\\shanghai-shadow-bridge-case\\quality\\lead_quality_decision.md",
+    "decision": "PASS",
+    "reason": "Approved by lead quality decision."
+  },
+  "ready_for_epub": true
+}

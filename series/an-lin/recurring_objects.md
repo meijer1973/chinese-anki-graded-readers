@@ -5,6 +5,7 @@
 - 雨票
 - 黑票
 - 灵灯
+- 影子桥
 
 ## Approved Recurring Evidence Objects
 
