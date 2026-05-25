@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki And Graded Readers
 
-Generated: 2026-05-25T11:36:26Z
+Generated: 2026-05-25T11:45:34Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 357
+Files indexed: 359
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -101,7 +101,7 @@ Count: 1
 
 ## data
 
-Count: 20
+Count: 22
 
 - data/cedict_ts.u8.gz
 - data/cmn-eng_links.tsv.bz2
@@ -111,9 +111,11 @@ Count: 20
 - data/known_words.metadata.json
 - data/known_words.txt
 - data/punctuation_allowlist.txt
+- data/stretch_packs/business_economics_60.txt
 - data/stretch_packs/general_fiction_100.txt
 - data/stretch_packs/journalism_crime_50.txt
 - data/stretch_packs/low_fantasy_150.txt
+- data/stretch_packs/metadata/business_economics_60.json
 - data/stretch_packs/metadata/general_fiction_100.json
 - data/stretch_packs/metadata/journalism_crime_50.json
 - data/stretch_packs/metadata/low_fantasy_150.json

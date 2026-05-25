@@ -39,6 +39,7 @@ GENRE_LAYER = "genre_stretch"
 SETTING_LAYER = "setting_stretch"
 PROFESSION_LAYER = "profession_stretch"
 JOURNALISM_CRIME_LAYER = "journalism_crime_stretch"
+BUSINESS_ECONOMICS_LAYER = "business_economics_stretch"
 BOOK_SPECIFIC_LAYER = "book_specific_stretch"
 PROPER_NOUN_LAYER = "proper_noun"
 
@@ -49,6 +50,7 @@ LAYER_TOKEN_FIELDS = {
     SETTING_LAYER: "setting_stretch_tokens",
     PROFESSION_LAYER: "profession_stretch_tokens",
     JOURNALISM_CRIME_LAYER: "journalism_crime_stretch_tokens",
+    BUSINESS_ECONOMICS_LAYER: "business_economics_stretch_tokens",
     BOOK_SPECIFIC_LAYER: "book_specific_stretch_tokens",
     PROPER_NOUN_LAYER: "proper_noun_tokens",
 }
@@ -113,6 +115,8 @@ def infer_stretch_layer(path: str | Path) -> str:
         return PROFESSION_LAYER
     if "journalism" in name or "crime" in name or "reporter" in name:
         return JOURNALISM_CRIME_LAYER
+    if "business" in name or "economic" in name or "market" in name:
+        return BUSINESS_ECONOMICS_LAYER
     if "setting" in name or "shanghai" in name or "urban" in name or "object" in name:
         return SETTING_LAYER
     return BOOK_SPECIFIC_LAYER

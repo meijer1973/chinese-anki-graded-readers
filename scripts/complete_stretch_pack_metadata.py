@@ -50,6 +50,12 @@ PACK_DEFAULTS = {
         "example_en": "Lin An sees a {word}.",
         "story_affordance": "Adds concrete objects for clues, movement, or atmosphere.",
     },
+    "business_economics_60": {
+        "part_of_speech": "business/economics word",
+        "example_template": "这个 {word} 会 影响 生意 。",
+        "example_en": "This business factor affects the business.",
+        "story_affordance": "Supports concrete scenes about shops, money, customers, prices, costs, risk, banks, and simple business decisions.",
+    },
 }
 
 

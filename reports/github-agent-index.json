@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-25T11:36:26Z",
+  "generated_at": "2026-05-25T11:45:34Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 357,
+  "file_count": 359,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -236,6 +236,11 @@
       "category": "data"
     },
     {
+      "path": "data/stretch_packs/business_economics_60.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/business_economics_60.txt",
+      "category": "data"
+    },
+    {
       "path": "data/stretch_packs/general_fiction_100.txt",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/general_fiction_100.txt",
       "category": "data"
@@ -248,6 +253,11 @@
     {
       "path": "data/stretch_packs/low_fantasy_150.txt",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/low_fantasy_150.txt",
+      "category": "data"
+    },
+    {
+      "path": "data/stretch_packs/metadata/business_economics_60.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/business_economics_60.json",
       "category": "data"
     },
     {

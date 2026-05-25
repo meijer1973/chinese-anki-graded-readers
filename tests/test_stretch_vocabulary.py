@@ -7,6 +7,7 @@ from pathlib import Path
 
 from scripts.export_stretch_words_for_anki import FIELDS, export_candidates
 from scripts.novel_tools import (
+    BUSINESS_ECONOMICS_LAYER,
     GENERAL_FICTION_LAYER,
     GENRE_LAYER,
     JOURNALISM_CRIME_LAYER,
@@ -15,7 +16,9 @@ from scripts.novel_tools import (
     SETTING_LAYER,
     build_epub,
     check_epub_structure,
+    load_known_words,
     load_layered_vocabulary,
+    load_optional_words,
     validate_book,
     validate_text,
 )
@@ -125,6 +128,34 @@ class StretchVocabularyTests(unittest.TestCase):
         vocab = load_layered_vocabulary(ROOT / "data" / "known_words.txt", journalism_crime_pack=ROOT / "data" / "stretch_packs" / "journalism_crime_50.txt")
         self.assertEqual(vocab["token_layers"]["采访"], JOURNALISM_CRIME_LAYER)
 
+    def test_business_economics_pack_is_loaded_as_extra_pack(self) -> None:
+        vocab = load_layered_vocabulary(
+            ROOT / "data" / "known_words.txt",
+            extra_packs=[ROOT / "data" / "stretch_packs" / "business_economics_60.txt"],
+        )
+        self.assertEqual(vocab["token_layers"]["市场"], BUSINESS_ECONOMICS_LAYER)
+
+    def test_business_economics_pack_has_no_core_or_prior_pack_duplicates(self) -> None:
+        business_pack = ROOT / "data" / "stretch_packs" / "business_economics_60.txt"
+        business_words = set(load_optional_words(business_pack))
+        core_words = set(load_known_words(ROOT / "data" / "known_words.txt"))
+        prior_words: set[str] = set()
+        for pack in (ROOT / "data" / "stretch_packs").glob("*.txt"):
+            if pack != business_pack:
+                prior_words.update(load_optional_words(pack))
+        self.assertFalse(business_words & core_words)
+        self.assertFalse(business_words & prior_words)
+
+    def test_business_economics_sample_token_validates_with_extra_pack(self) -> None:
+        chapters = self.chapters_dir("市场 会 影响 生意 。\n")
+        report = validate_book(
+            chapters,
+            ROOT / "data" / "known_words.txt",
+            extra_packs=[ROOT / "data" / "stretch_packs" / "business_economics_60.txt"],
+        )
+        self.assertTrue(report["valid"])
+        self.assertEqual(report["business_economics_stretch_tokens"], 1)
+
     def test_layer_counts_are_correct(self) -> None:
         chapters = self.chapters_dir("林安 是 快递员 。\n我 在 上海 看 魔法 。\n你 沉默 了 。\n林安 采访 你 。\n")
         report = validate_book(chapters, self.known, **self.layered_kwargs())
@@ -176,6 +207,22 @@ class StretchVocabularyTests(unittest.TestCase):
         with out.open(encoding="utf-8") as fh:
             rows = list(csv.DictReader(fh, delimiter="\t"))
         self.assertEqual(set(rows[0]), set(FIELDS))
+
+    def test_anki_candidate_export_includes_business_economics_pack(self) -> None:
+        out = self.root / "business_candidates.tsv"
+        export_candidates(
+            [ROOT / "data" / "stretch_packs" / "business_economics_60.txt"],
+            core_path=ROOT / "data" / "known_words.txt",
+            metadata_dir=ROOT / "data" / "stretch_packs" / "metadata",
+            out_path=out,
+        )
+        with out.open(encoding="utf-8") as fh:
+            rows = list(csv.DictReader(fh, delimiter="\t"))
+        words = {row["Hanzi"] for row in rows}
+        self.assertIn("市场", words)
+        self.assertIn("价格", words)
+        self.assertTrue(all(row["Pack"] == "business_economics_60" for row in rows))
+        self.assertTrue(all(row["Layer"] == BUSINESS_ECONOMICS_LAYER for row in rows))
 
     def test_layered_epub_requires_validation_and_quality_approval(self) -> None:
         manuscript = self.root / "manuscript"

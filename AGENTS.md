@@ -27,6 +27,7 @@ The validator distinguishes these layers:
 - setting stretch words
 - profession/social-role stretch words
 - journalism/crime stretch words
+- business/economics stretch words
 - book-specific stretch words
 - proper nouns
 - forbidden unknown tokens
@@ -72,6 +73,7 @@ Every stretch pack should have metadata for every word. Use `scripts/complete_st
 - `data/known_words.txt` is the active machine-readable known-word list for restricted-vocabulary fiction. It is generated from the ranked source list by `scripts/sync_known_words.py`.
 - `series/an-lin/` contains the series-level bible and continuity constraints for the 林安 journalist urban-fantasy crime series.
 - `data/stretch_packs/journalism_crime_50.txt` contains reviewed journalism/crime stretch words for 林安-style crime reporting stories.
+- `data/stretch_packs/business_economics_60.txt` contains reviewed business/economics stretch words for concrete shops, money, prices, customers, costs, risk, and simple market-decision stories. Pass it with `--extra-pack`.
 - `configs/novel_generation.default.json` is the default configuration template for graded-reader novel projects.
 - `AGENT_GITHUB_ENTRY.md`, `RESEARCH_AGENT_MAP.md`, `RESEARCH_AGENT_PROMPT.md`, and `repo_manifest.json` are the GitHub-facing machine-readable/research-agent entry points.
 - `reports/github-agent-index.md`, `reports/github-agent-index.json`, and `reports/url-index.md` are generated inventories for remote agents; refresh them with `python scripts/build_agent_index.py`.

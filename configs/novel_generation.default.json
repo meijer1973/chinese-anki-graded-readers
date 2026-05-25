@@ -18,6 +18,8 @@
     "profession_pack": "data/stretch_packs/professions_social_roles_100.txt",
     "urban_objects_pack": "data/stretch_packs/urban_objects_100.txt",
     "journalism_crime_pack": "data/stretch_packs/journalism_crime_50.txt",
+    "business_economics_pack": "data/stretch_packs/business_economics_60.txt",
+    "business_economics_pack_usage": "Pass this pack to validation and EPUB commands with --extra-pack data/stretch_packs/business_economics_60.txt.",
     "book_specific_words_path": "manuscripts/<slug>/book_specific_words.txt",
     "proper_nouns_path": "manuscripts/<slug>/proper_nouns.txt",
     "allow_unknown_outside_approved_layers": true,

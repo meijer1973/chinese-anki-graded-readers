@@ -78,9 +78,11 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/cmn_transcriptions.tsv.bz2
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/eng_sentences.tsv.bz2
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/punctuation_allowlist.txt
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/business_economics_60.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/general_fiction_100.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/journalism_crime_50.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/low_fantasy_150.txt
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/business_economics_60.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/general_fiction_100.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/journalism_crime_50.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/low_fantasy_150.json

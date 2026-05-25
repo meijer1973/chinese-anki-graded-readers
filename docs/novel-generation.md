@@ -80,6 +80,7 @@ The default strict mode uses only `data/known_words.txt`. The richer controlled 
 - profession/social-role stretch words: `data/stretch_packs/professions_social_roles_100.txt`
 - urban object stretch words: `data/stretch_packs/urban_objects_100.txt`
 - journalism/crime stretch words: `data/stretch_packs/journalism_crime_50.txt`
+- business/economics stretch words: `data/stretch_packs/business_economics_60.txt`, passed as `--extra-pack` when a story needs concrete shops, money, prices, costs, customers, wages, risk, or simple market decisions
 - manuscript `book_specific_words.txt`
 - manuscript `proper_nouns.txt`
 
@@ -114,6 +115,8 @@ The planner should create:
 For `low_fantasy_urban_shanghai`, the planner must also create selected vocabulary packs, book-specific stretch words, proper nouns, a setting map, recurring locations, character professions/social roles, fantasy rule, strange object or place, central mystery, stretch-word introduction schedule, and quality risks.
 
 For 林安 journalist/crime stories, include the journalism/crime pack and make sure the outline has real story functions: interview, source verification, publication pressure, witness protection, suspect pressure, and a simple fantasy mechanism that changes the case.
+
+For business/economics readers, pass `data/stretch_packs/business_economics_60.txt` with `--extra-pack`. Use it for concrete cases such as a shop under rent pressure, a customer choosing between products, a company deciding whether to hire, or a journalist explaining why a local business failed.
 
 ## Skills and Agent Roles
 

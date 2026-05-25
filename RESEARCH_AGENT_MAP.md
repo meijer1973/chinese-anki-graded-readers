@@ -99,6 +99,8 @@ Machine-readable:
     "data/stretch_packs/urban_objects_100.txt",
     "data/stretch_packs/journalism_crime_50.txt",
     "data/stretch_packs/metadata/journalism_crime_50.json",
+    "data/stretch_packs/business_economics_60.txt",
+    "data/stretch_packs/metadata/business_economics_60.json",
     "series/an-lin/series_bible.md",
     "anki/stretch_word_candidates.tsv",
     "manuscripts/shanghai-rain-gate-crime/vocabulary_report.json",
@@ -131,6 +133,8 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/urban_objects_100.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/journalism_crime_50.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/journalism_crime_50.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/business_economics_60.txt
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/business_economics_60.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/an-lin/series_bible.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/novel-generation.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/stretch-vocabulary.md
@@ -170,6 +174,7 @@ Use these anchors before free-form browsing.
   "plot_affordance_report": "scripts/plot_affordance_report.py",
   "lin_an_series_bible": "series/an-lin/series_bible.md",
   "journalism_crime_pack": "data/stretch_packs/journalism_crime_50.txt",
+  "business_economics_pack": "data/stretch_packs/business_economics_60.txt",
   "first_series_manuscript": "manuscripts/shanghai-rain-gate-crime",
   "second_series_manuscript": "manuscripts/shanghai-spirit-lamp-case",
   "third_series_manuscript": "manuscripts/shanghai-shadow-bridge-case",
@@ -219,6 +224,7 @@ Use these anchors before free-form browsing.
 | Export EPUB | `scripts/build_epub.py`, `.agents/skills/epub-export/SKILL.md` |
 | Prepare stretch words for Anki | `docs/anki-integration.md`, `scripts/export_stretch_words_for_anki.py` |
 | Complete stretch-pack metadata | `scripts/complete_stretch_pack_metadata.py`, `data/stretch_packs/metadata/` |
+| Plan business/economics readers | `docs/stretch-vocabulary.md`, `data/stretch_packs/business_economics_60.txt`, pass it with `--extra-pack` |
 | Mark existing Anki notes as stretch words | `scripts/import_stretch_words_to_anki.py --mark-existing-stretch` |
 | Check plot affordances for a premise | `scripts/plot_affordance_report.py` |
 | Mutate live Anki | `AGENTS.md`, then the exact update script |

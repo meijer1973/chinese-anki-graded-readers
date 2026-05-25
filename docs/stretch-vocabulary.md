@@ -17,6 +17,7 @@ Do not use random unknown words. Prefer tokens from approved layers. A chapter m
 - Professions/social roles: `data/stretch_packs/professions_social_roles_100.txt`
 - Urban objects: `data/stretch_packs/urban_objects_100.txt`
 - Journalism/crime: `data/stretch_packs/journalism_crime_50.txt`
+- Business/economics: `data/stretch_packs/business_economics_60.txt`
 - Book-specific: `manuscripts/<slug>/book_specific_words.txt`
 - Proper nouns: `manuscripts/<slug>/proper_nouns.txt`
 
@@ -31,6 +32,18 @@ Use `journalism_crime_50.txt` for 林安-style stories where the protagonist is 
 This pack should make scenes possible, not merely decorate them. A chapter using it should show at least one real journalism or crime function: interviewing, confirming a source, protecting a witness, deciding whether to publish, following a suspect, comparing testimony, or checking files.
 
 For the 林安 series, read `series/an-lin/series_bible.md` before planning. 林安 is the journalist protagonist in that continuity.
+
+## Business / Economics Pack
+
+Use `business_economics_60.txt` for nonfiction or case-based stories about shops, companies, money, customers, prices, costs, wages, banks, risk, and simple market decisions.
+
+This pack is for concrete business/economic situations, not dense textbook exposition. Prefer scenes where a character must choose, pay, sell, hire, borrow, compare, lose money, gain trust, or understand why a business problem happened.
+
+Pass this reusable pack with `--extra-pack`:
+
+```powershell
+python scripts/validate_book.py --known data/known_words.txt --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json --extra-pack data/stretch_packs/business_economics_60.txt
+```
 
 ## Low Fantasy / Shanghai Use
 
