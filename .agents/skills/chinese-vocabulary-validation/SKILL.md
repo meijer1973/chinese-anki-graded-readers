@@ -7,6 +7,11 @@ description: Mechanically validate space-tokenized Chinese chapters or books aga
 
 Treat validation as mechanical and auditable. Near matches do not count. A token is counted by its exact layer when it is in core known words or an approved layer. Forbidden unknown tokens are allowed only up to the configured per-chapter budget, currently 5, and every one must be reported.
 
+Before validating, state the vocabulary profile:
+
+- Public mode: core known words plus approved stretch/book/proper-noun layers only.
+- Marcel personalized mode: core known words plus `data/learner_profiles/marcel/personal_known_words.txt` plus approved stretch/book/proper-noun layers.
+
 ## Chapter Validation
 
 Run:

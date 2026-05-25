@@ -58,7 +58,7 @@ def main() -> int:
     write_json(args.out, report)
     print(
         "valid={valid} total_tokens={total_tokens} unique_words={unique_token_count} "
-        "personal_known_tokens={personal_known_tokens} "
+        "vocabulary_profile={vocabulary_profile} personal_known_tokens={personal_known_tokens} "
         "unknown_tokens={unknown_token_count} unknown_over_limit={forbidden_unknown_tokens_over_limit} "
         "stretch_percent={stretch_token_percent}".format(**report)
     )

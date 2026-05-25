@@ -65,7 +65,8 @@ def main() -> int:
     write_json(manuscript / "vocabulary_report.json", book_report)
     print(
         "valid={valid} chapters={chapter_count} total_tokens={total_tokens} "
-        "unique_words={unique_token_count} personal_known_tokens={personal_known_tokens} "
+        "unique_words={unique_token_count} vocabulary_profile={vocabulary_profile} "
+        "personal_known_tokens={personal_known_tokens} "
         "unknown_tokens={unknown_token_count} "
         "unknown_over_limit={forbidden_unknown_tokens_over_limit}".format(**book_report)
     )

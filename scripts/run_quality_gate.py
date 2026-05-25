@@ -194,6 +194,8 @@ def main() -> int:
         "unknown_token_count": validation["unknown_token_count"],
         "forbidden_unknown_tokens": validation.get("forbidden_unknown_tokens", validation["unknown_token_count"]),
         "forbidden_unknown_tokens_over_limit": validation.get("forbidden_unknown_tokens_over_limit", 0),
+        "vocabulary_profile": validation.get("vocabulary_profile", "public"),
+        "learner_profile_name": validation.get("learner_profile_name"),
         "personal_known_tokens": validation.get("personal_known_tokens", 0),
         "unique_personal_known_words_used": validation.get("unique_personal_known_words_used", 0),
         "max_forbidden_unknown_tokens_per_chapter": validation.get(

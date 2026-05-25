@@ -13,6 +13,9 @@ Write one chapter at a time. The canonical format is space-tokenized Chinese:
 
 ## Before Writing
 
+- Choose and state the vocabulary profile before drafting:
+  - Public mode = core known words plus approved stretch/book/proper-noun layers only.
+  - Marcel personalized mode = core known words plus `data/learner_profiles/marcel/personal_known_words.txt` plus approved stretch/book/proper-noun layers.
 - Read `data/known_words.txt`.
 - If the project uses Marcel personalized mode, read `data/learner_profiles/marcel/personal_known_words.txt` and count those words as the `personal_known` layer, not as stretch.
 - Read the configured approved stretch packs, manuscript `book_specific_words.txt`, and `proper_nouns.txt` when present.

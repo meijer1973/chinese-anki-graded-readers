@@ -184,6 +184,8 @@ def load_layered_vocabulary(
         "known_word_count": len(core_words),
         "personal_known_word_count": len(set(layer_words[PERSONAL_KNOWN_LAYER])),
         "personal_known_words_path": str(Path(personal_known_words_path)) if personal_known_words_path else None,
+        "vocabulary_profile": "personalized" if personal_known_words_path else "public",
+        "learner_profile_name": "marcel" if personal_known_words_path and "marcel" in Path(personal_known_words_path).parts else None,
         "allowed_token_count": len(token_layers),
         "duplicate_as_core": sorted(set(duplicate_as_core)),
         "duplicate_as_earlier_layer": duplicate_as_earlier_layer,
@@ -357,6 +359,8 @@ def validate_text(
             "known_word_count": known_word_count,
             "personal_known_word_count": vocabulary.get("personal_known_word_count", 0),
             "personal_known_words_path": vocabulary.get("personal_known_words_path"),
+            "vocabulary_profile": vocabulary.get("vocabulary_profile", "public"),
+            "learner_profile_name": vocabulary.get("learner_profile_name"),
             "allowed_token_count": vocabulary.get("allowed_token_count", len(token_layers)),
             "duplicate_stretch_words_already_core": vocabulary.get("duplicate_as_core", []),
             "duplicate_stretch_words_ignored": vocabulary.get("duplicate_as_earlier_layer", []),
@@ -420,6 +424,8 @@ def validate_chapter(
             "known_word_count": len(known_words),
             "personal_known_words_path": vocabulary.get("personal_known_words_path"),
             "personal_known_word_count": vocabulary.get("personal_known_word_count", 0),
+            "vocabulary_profile": vocabulary.get("vocabulary_profile", "public"),
+            "learner_profile_name": vocabulary.get("learner_profile_name"),
             "allowed_token_count": vocabulary["allowed_token_count"],
         }
     )
@@ -576,6 +582,8 @@ def validate_book(
         "known_word_count": len(known_words),
         "personal_known_words_path": vocabulary.get("personal_known_words_path"),
         "personal_known_word_count": vocabulary.get("personal_known_word_count", 0),
+        "vocabulary_profile": vocabulary.get("vocabulary_profile", "public"),
+        "learner_profile_name": vocabulary.get("learner_profile_name"),
         "allowed_token_count": vocabulary["allowed_token_count"],
         "chapters_path": str(Path(chapters_dir)),
         "chapter_count": len(chapter_reports),
@@ -1098,6 +1106,7 @@ code { font-family: monospace; }
 <p>Total word tokens: <code>{validation['total_tokens']}</code></p>
 <p>Unique used words: <code>{validation['unique_token_count']}</code></p>
 <p>Core known tokens: <code>{validation['core_known_tokens']}</code></p>
+<p>Vocabulary profile: <code>{validation.get('vocabulary_profile', 'public')}</code></p>
 <p>Personal known tokens: <code>{validation.get('personal_known_tokens', 0)}</code></p>
 <p>Stretch-token percent: <code>{validation['stretch_token_percent']}</code></p>
 <p>Unknown-token count: <code>{validation['unknown_token_count']}</code></p>
@@ -1113,6 +1122,8 @@ code { font-family: monospace; }
         "total_tokens": validation["total_tokens"],
         "unique_token_count": validation["unique_token_count"],
         "core_known_tokens": validation["core_known_tokens"],
+        "vocabulary_profile": validation.get("vocabulary_profile", "public"),
+        "learner_profile_name": validation.get("learner_profile_name"),
         "personal_known_tokens": validation.get("personal_known_tokens", 0),
         "personal_known_word_count": validation.get("personal_known_word_count", 0),
         "unique_personal_known_words_used": validation.get("unique_personal_known_words_used", 0),

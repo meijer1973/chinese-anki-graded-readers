@@ -1,6 +1,9 @@
 from __future__ import annotations
 
 import csv
+import json
+import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -326,6 +329,73 @@ class StretchVocabularyTests(unittest.TestCase):
         self.assertTrue(out.exists())
         self.assertEqual(report["unknown_token_count"], 0)
         self.assertEqual(check_epub_structure(out)["chapter_count"], 1)
+
+    def test_epub_cli_uses_personal_known_profile_when_supplied(self) -> None:
+        personal_path = ROOT / "data" / "learner_profiles" / "marcel" / "personal_known_words.txt"
+        personal_token = "分散"
+        self.assertIn(personal_token, load_optional_words(personal_path))
+        self.assertNotIn(personal_token, load_known_words(ROOT / "data" / "known_words.txt"))
+
+        manuscript = self.root / "personal_manuscript"
+        chapters = manuscript / "chapters"
+        chapters.mkdir(parents=True)
+        (chapters / "chapter_01.zh-tok.txt").write_text(f"我 看 {personal_token} 。\n", encoding="utf-8")
+        self.approve_quality(manuscript)
+
+        public_report_path = manuscript / "epub" / "public_report.json"
+        subprocess.run(
+            [
+                sys.executable,
+                "scripts/build_epub.py",
+                "--manuscript",
+                str(manuscript),
+                "--title",
+                "Personal Test",
+                "--out",
+                str(manuscript / "epub" / "public.epub"),
+                "--known",
+                str(ROOT / "data" / "known_words.txt"),
+                "--report",
+                str(public_report_path),
+            ],
+            cwd=ROOT,
+            check=True,
+            text=True,
+            capture_output=True,
+        )
+        public_report = json.loads(public_report_path.read_text(encoding="utf-8"))
+        self.assertEqual(public_report["vocabulary_profile"], "public")
+        self.assertEqual(public_report["unknown_token_count"], 1)
+        self.assertEqual(public_report["personal_known_tokens"], 0)
+
+        personal_report_path = manuscript / "epub" / "personal_report.json"
+        subprocess.run(
+            [
+                sys.executable,
+                "scripts/build_epub.py",
+                "--manuscript",
+                str(manuscript),
+                "--title",
+                "Personal Test",
+                "--out",
+                str(manuscript / "epub" / "personal.epub"),
+                "--known",
+                str(ROOT / "data" / "known_words.txt"),
+                "--personal-known",
+                str(personal_path),
+                "--report",
+                str(personal_report_path),
+            ],
+            cwd=ROOT,
+            check=True,
+            text=True,
+            capture_output=True,
+        )
+        personal_report = json.loads(personal_report_path.read_text(encoding="utf-8"))
+        self.assertEqual(personal_report["vocabulary_profile"], "personalized")
+        self.assertEqual(personal_report["learner_profile_name"], "marcel")
+        self.assertEqual(personal_report["unknown_token_count"], 0)
+        self.assertEqual(personal_report["personal_known_tokens"], 1)
 
 
 if __name__ == "__main__":
