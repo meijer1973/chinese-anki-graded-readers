@@ -4,6 +4,7 @@
   "genre_stretch_tokens": 16,
   "setting_stretch_tokens": 11,
   "profession_stretch_tokens": 3,
+  "journalism_crime_stretch_tokens": 0,
   "book_specific_stretch_tokens": 3,
   "proper_noun_tokens": 23,
   "forbidden_unknown_tokens": 0,
@@ -268,12 +269,17 @@
   "unknown_unique_count": 0,
   "unknown_token_frequency": {},
   "violations": [],
-  "known_word_count": 1000,
-  "allowed_token_count": 1184,
-  "duplicate_stretch_words_already_core": [],
+  "known_word_count": 1100,
+  "allowed_token_count": 1330,
+  "duplicate_stretch_words_already_core": [
+    "安静",
+    "怀疑",
+    "演员",
+    "答案"
+  ],
   "duplicate_stretch_words_ignored": [],
   "schema_version": 3,
-  "generated_at": "2026-05-24T07:11:28Z",
+  "generated_at": "2026-05-25T08:57:46Z",
   "chapter_path": "manuscripts\\shanghai-rain-gate-crime\\chapters\\chapter_09.zh-tok.txt",
   "known_words_path": "data\\known_words.txt"
 }

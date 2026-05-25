@@ -1,6 +1,6 @@
 {
-  "core_known_tokens": 155,
-  "general_fiction_stretch_tokens": 3,
+  "core_known_tokens": 156,
+  "general_fiction_stretch_tokens": 2,
   "genre_stretch_tokens": 0,
   "setting_stretch_tokens": 10,
   "profession_stretch_tokens": 1,
@@ -11,14 +11,13 @@
   "max_forbidden_unknown_tokens_per_chapter": 5,
   "forbidden_unknown_tokens_over_limit": 0,
   "forbidden_unknown_tokens_allowed": true,
-  "core_coverage_percent": 84.24,
-  "stretch_token_percent": 15.76,
-  "unique_core_words_used": 79,
-  "unique_stretch_words_used": 17,
+  "core_coverage_percent": 84.78,
+  "stretch_token_percent": 15.22,
+  "unique_core_words_used": 80,
+  "unique_stretch_words_used": 16,
   "unique_proper_nouns_used": 3,
   "stretch_words_used_once": [
     "公开",
-    "安静",
     "案件",
     "沉默",
     "灯",
@@ -35,7 +34,6 @@
     "chapter_07.zh-tok.txt": [
       "保密",
       "公开",
-      "安静",
       "案件",
       "沉默",
       "灯",
@@ -56,7 +54,6 @@
     "chapter_07.zh-tok.txt": [
       "保密",
       "公开",
-      "安静",
       "案件",
       "沉默",
       "灯",
@@ -80,7 +77,6 @@
       "message": "Approved stretch words used only once should be reviewed for meaningful repetition.",
       "tokens": [
         "公开",
-        "安静",
         "案件",
         "沉默",
         "灯",
@@ -204,12 +200,17 @@
   "unknown_unique_count": 0,
   "unknown_token_frequency": {},
   "violations": [],
-  "known_word_count": 1000,
-  "allowed_token_count": 1233,
-  "duplicate_stretch_words_already_core": [],
+  "known_word_count": 1100,
+  "allowed_token_count": 1329,
+  "duplicate_stretch_words_already_core": [
+    "安静",
+    "怀疑",
+    "演员",
+    "答案"
+  ],
   "duplicate_stretch_words_ignored": [],
   "schema_version": 3,
-  "generated_at": "2026-05-24T18:58:38Z",
+  "generated_at": "2026-05-25T08:57:46Z",
   "chapter_path": "manuscripts\\shanghai-spirit-lamp-case\\chapters\\chapter_07.zh-tok.txt",
   "known_words_path": "data\\known_words.txt"
 }

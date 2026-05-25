@@ -25,7 +25,7 @@ Create or update these files under `manuscripts/<project-slug>/`:
 
 - Infer what plots are possible from the available vocabulary.
 - Prefer emotionally coherent plots with real pressure, choices, reversals, and curiosity over concepts that require unavailable words.
-- For about 1000 known words, domestic drama, school life, workplace, travel, friendship, family, mystery-lite, and small-town conflict are viable, but they still need tension and chapter hooks.
+- For about 1100 known words, domestic drama, school life, workplace, travel, friendship, family, mystery-lite, and small urban fantasy/crime conflict are viable, but they still need tension and chapter hooks.
 - For larger lists, allow more complex genres only when the needed nouns, verbs, and abstract terms are present.
 - Avoid plots requiring many unavailable legal, technical, medical, political, or epic-fantasy terms unless those exact tokens exist in core or approved stretch layers.
 - Do not force a chapter count. Let chapter breaks follow the story's natural turns.

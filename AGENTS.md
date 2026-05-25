@@ -142,7 +142,7 @@ Default workflow:
 
 ```powershell
 $env:PYTHONIOENCODING='utf-8'
-python scripts/sync_known_words.py --limit 1000
+python scripts/sync_known_words.py --limit 1100
 python scripts/validate_chapter.py --known data/known_words.txt --chapter manuscripts/<slug>/chapters/chapter_01.zh-tok.txt --out manuscripts/<slug>/chapters/chapter_01.validation.json
 python scripts/validate_book.py --known data/known_words.txt --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json
 python scripts/run_quality_gate.py --manuscript manuscripts/<slug> --known data/known_words.txt

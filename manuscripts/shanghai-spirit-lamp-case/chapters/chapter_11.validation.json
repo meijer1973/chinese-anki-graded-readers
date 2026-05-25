@@ -214,12 +214,17 @@
   "unknown_unique_count": 0,
   "unknown_token_frequency": {},
   "violations": [],
-  "known_word_count": 1000,
-  "allowed_token_count": 1233,
-  "duplicate_stretch_words_already_core": [],
+  "known_word_count": 1100,
+  "allowed_token_count": 1329,
+  "duplicate_stretch_words_already_core": [
+    "安静",
+    "怀疑",
+    "演员",
+    "答案"
+  ],
   "duplicate_stretch_words_ignored": [],
   "schema_version": 3,
-  "generated_at": "2026-05-24T18:58:38Z",
+  "generated_at": "2026-05-25T08:57:47Z",
   "chapter_path": "manuscripts\\shanghai-spirit-lamp-case\\chapters\\chapter_11.zh-tok.txt",
   "known_words_path": "data\\known_words.txt"
 }

@@ -4,7 +4,7 @@
   "forbidden_unknown_tokens": 0,
   "forbidden_unknown_tokens_over_limit": 0,
   "max_forbidden_unknown_tokens_per_chapter": 5,
-  "stretch_token_percent": 18.64,
+  "stretch_token_percent": 18.47,
   "planning_files_present": true,
   "expected_planning_file_count": 20,
   "planning_file_count": 20,

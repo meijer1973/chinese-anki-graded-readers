@@ -1,6 +1,14 @@
 {
   "valid_vocabulary": true,
   "unknown_token_count": 0,
+  "forbidden_unknown_tokens": 0,
+  "forbidden_unknown_tokens_over_limit": 0,
+  "max_forbidden_unknown_tokens_per_chapter": 5,
+  "stretch_token_percent": 0.0,
+  "planning_files_present": true,
+  "expected_planning_file_count": 1,
+  "planning_file_count": 1,
+  "missing_chapter_planning_files": [],
   "quality_approval": {
     "approved": true,
     "decision_path": "manuscripts\\sample-known-words\\quality\\lead_quality_decision.md",

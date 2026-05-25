@@ -4,6 +4,7 @@
   "genre_stretch_tokens": 9,
   "setting_stretch_tokens": 9,
   "profession_stretch_tokens": 1,
+  "journalism_crime_stretch_tokens": 0,
   "book_specific_stretch_tokens": 3,
   "proper_noun_tokens": 35,
   "forbidden_unknown_tokens": 3,
@@ -275,12 +276,17 @@
       "contains_hanzi": true
     }
   ],
-  "known_word_count": 1000,
-  "allowed_token_count": 1178,
-  "duplicate_stretch_words_already_core": [],
+  "known_word_count": 1100,
+  "allowed_token_count": 1324,
+  "duplicate_stretch_words_already_core": [
+    "安静",
+    "怀疑",
+    "演员",
+    "答案"
+  ],
   "duplicate_stretch_words_ignored": [],
   "schema_version": 3,
-  "generated_at": "2026-05-23T21:25:05Z",
+  "generated_at": "2026-05-25T08:57:46Z",
   "chapter_path": "manuscripts\\shanghai-rain-ticket\\chapters\\chapter_02.zh-tok.txt",
   "known_words_path": "data\\known_words.txt"
 }

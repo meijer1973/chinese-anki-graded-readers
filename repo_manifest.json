@@ -107,7 +107,7 @@
   },
   "commands": {
     "run_tests": "$env:PYTHONIOENCODING='utf-8'; python -m unittest discover -s tests",
-    "sync_known_words": "python scripts/sync_known_words.py --limit 1000",
+    "sync_known_words": "python scripts/sync_known_words.py --limit 1100",
     "validate_sample_book": "python scripts/validate_book.py --known data/known_words.txt --chapters manuscripts/sample-known-words/chapters --out manuscripts/sample-known-words/vocabulary_report.json",
     "generate_agent_indexes": "python scripts/build_agent_index.py"
   },

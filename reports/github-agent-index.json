@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-24T18:59:56Z",
+  "generated_at": "2026-05-25T08:58:41Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 275,
+  "file_count": 277,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -358,6 +358,11 @@
     {
       "path": "manuscripts/sample-known-words/outline.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/outline.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/sample-known-words/planning/chapter_01_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/planning/chapter_01_vocab_plan.md",
       "category": "manuscripts"
     },
     {
@@ -1158,6 +1163,11 @@
     {
       "path": "manuscripts/stretch-layer-fixture/chapters/chapter_01.zh-tok.txt",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/chapters/chapter_01.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/stretch-layer-fixture/planning/chapter_01_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/planning/chapter_01_vocab_plan.md",
       "category": "manuscripts"
     },
     {

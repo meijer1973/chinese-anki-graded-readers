@@ -99,6 +99,7 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/continuity_log.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/novel_bible.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/outline.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/planning/chapter_01_vocab_plan.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/quality/lead_quality_decision.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/quality/literary_critic_report.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/quality/normal_reader_report.md
@@ -257,6 +258,7 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/book_specific_words.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/chapters/chapter_01.validation.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/chapters/chapter_01.zh-tok.txt
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/planning/chapter_01_vocab_plan.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/proper_nouns.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/quality/lead_quality_decision.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/quality/literary_critic_report.md

@@ -1,10 +1,10 @@
 {
-  "schema_version": 2,
-  "generated_at": "2026-05-23T15:49:44Z",
+  "schema_version": 3,
+  "generated_at": "2026-05-25T08:58:31Z",
   "valid": true,
   "known_words_path": "data\\known_words.txt",
-  "known_word_count": 1000,
-  "allowed_token_count": 1173,
+  "known_word_count": 1100,
+  "allowed_token_count": 1319,
   "chapters_path": "manuscripts\\stretch-layer-fixture\\chapters",
   "chapter_count": 1,
   "total_tokens": 11,
@@ -26,6 +26,10 @@
   "unknown_unique_count": 0,
   "unknown_token_frequency": {},
   "forbidden_unknown_tokens": 0,
+  "max_forbidden_unknown_tokens_per_chapter": 5,
+  "forbidden_unknown_tokens_over_limit": 0,
+  "forbidden_unknown_tokens_allowed": true,
+  "chapters_over_unknown_limit": [],
   "forbidden_unknown_token_frequency": {},
   "core_coverage_percent": 54.55,
   "stretch_token_percent": 45.45,
@@ -72,9 +76,13 @@
       "genre_stretch_tokens": 1,
       "setting_stretch_tokens": 1,
       "profession_stretch_tokens": 1,
+      "journalism_crime_stretch_tokens": 0,
       "book_specific_stretch_tokens": 0,
       "proper_noun_tokens": 1,
       "forbidden_unknown_tokens": 0,
+      "max_forbidden_unknown_tokens_per_chapter": 5,
+      "forbidden_unknown_tokens_over_limit": 0,
+      "forbidden_unknown_tokens_allowed": true,
       "core_coverage_percent": 54.55,
       "stretch_token_percent": 45.45,
       "unique_core_words_used": 6,
@@ -136,41 +144,15 @@
       "unknown_unique_count": 0,
       "unknown_token_frequency": {},
       "violations": [],
-      "known_word_count": 1000,
-      "allowed_token_count": 1173,
-      "duplicate_stretch_words_already_core": [],
-      "duplicate_stretch_words_ignored": [
-        {
-          "word": "电梯",
-          "kept_layer": "setting_stretch",
-          "ignored_layer": "setting_stretch",
-          "source": "data/stretch_packs/urban_objects_100.txt"
-        },
-        {
-          "word": "楼梯",
-          "kept_layer": "setting_stretch",
-          "ignored_layer": "setting_stretch",
-          "source": "data/stretch_packs/urban_objects_100.txt"
-        },
-        {
-          "word": "路灯",
-          "kept_layer": "setting_stretch",
-          "ignored_layer": "setting_stretch",
-          "source": "data/stretch_packs/urban_objects_100.txt"
-        },
-        {
-          "word": "公交车",
-          "kept_layer": "setting_stretch",
-          "ignored_layer": "setting_stretch",
-          "source": "data/stretch_packs/urban_objects_100.txt"
-        },
-        {
-          "word": "出租车",
-          "kept_layer": "setting_stretch",
-          "ignored_layer": "setting_stretch",
-          "source": "data/stretch_packs/urban_objects_100.txt"
-        }
+      "known_word_count": 1100,
+      "allowed_token_count": 1319,
+      "duplicate_stretch_words_already_core": [
+        "安静",
+        "怀疑",
+        "演员",
+        "答案"
       ],
+      "duplicate_stretch_words_ignored": [],
       "chapter_path": "manuscripts\\stretch-layer-fixture\\chapters\\chapter_01.zh-tok.txt",
       "chapter_name": "chapter_01.zh-tok.txt"
     }
@@ -180,6 +162,7 @@
   "genre_stretch_tokens": 1,
   "setting_stretch_tokens": 1,
   "profession_stretch_tokens": 1,
+  "journalism_crime_stretch_tokens": 0,
   "book_specific_stretch_tokens": 0,
   "proper_noun_tokens": 1
 }

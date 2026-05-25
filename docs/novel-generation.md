@@ -12,13 +12,13 @@ The active machine-readable vocabulary file is:
 data/known_words.txt
 ```
 
-It is generated from `word list chinese.txt`, which is one Chinese word or phrase per line in ranked order. The current default is the first 1000 entries because `AGENTS.md` says production and sentence cards are enabled for ranks `1-1000`.
+It is generated from `word list chinese.txt`, which is one Chinese word or phrase per line in ranked order. The current graded-reader default is the first 1100 entries. This is separate from live Anki card scheduling policy.
 
 Regenerate the active known list after the ranked list or known-word threshold changes:
 
 ```powershell
 $env:PYTHONIOENCODING='utf-8'
-python scripts/sync_known_words.py --limit 1000
+python scripts/sync_known_words.py --limit 1100
 ```
 
 For future expansion, change only the limit:

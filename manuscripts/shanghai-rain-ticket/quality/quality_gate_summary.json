@@ -4,7 +4,11 @@
   "forbidden_unknown_tokens": 4,
   "forbidden_unknown_tokens_over_limit": 0,
   "max_forbidden_unknown_tokens_per_chapter": 5,
-  "stretch_token_percent": 20.54,
+  "stretch_token_percent": 20.43,
+  "planning_files_present": true,
+  "expected_planning_file_count": 3,
+  "planning_file_count": 3,
+  "missing_chapter_planning_files": [],
   "quality_approval": {
     "approved": true,
     "decision_path": "manuscripts\\shanghai-rain-ticket\\quality\\lead_quality_decision.md",

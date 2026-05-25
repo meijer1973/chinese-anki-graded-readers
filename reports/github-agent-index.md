@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki And Graded Readers
 
-Generated: 2026-05-24T18:59:56Z
+Generated: 2026-05-25T08:58:41Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 275
+Files indexed: 277
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -133,7 +133,7 @@ Count: 2
 
 ## manuscripts
 
-Count: 176
+Count: 178
 
 - manuscripts/README.md
 - manuscripts/sample-known-words/chapters/chapter_01.validation.json
@@ -142,6 +142,7 @@ Count: 176
 - manuscripts/sample-known-words/continuity_log.md
 - manuscripts/sample-known-words/novel_bible.md
 - manuscripts/sample-known-words/outline.md
+- manuscripts/sample-known-words/planning/chapter_01_vocab_plan.md
 - manuscripts/sample-known-words/quality/lead_quality_decision.md
 - manuscripts/sample-known-words/quality/literary_critic_report.md
 - manuscripts/sample-known-words/quality/normal_reader_report.md
@@ -302,6 +303,7 @@ Count: 176
 - manuscripts/stretch-layer-fixture/book_specific_words.txt
 - manuscripts/stretch-layer-fixture/chapters/chapter_01.validation.json
 - manuscripts/stretch-layer-fixture/chapters/chapter_01.zh-tok.txt
+- manuscripts/stretch-layer-fixture/planning/chapter_01_vocab_plan.md
 - manuscripts/stretch-layer-fixture/proper_nouns.txt
 - manuscripts/stretch-layer-fixture/quality/lead_quality_decision.md
 - manuscripts/stretch-layer-fixture/quality/literary_critic_report.md

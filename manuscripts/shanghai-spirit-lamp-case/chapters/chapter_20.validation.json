@@ -1,6 +1,6 @@
 {
-  "core_known_tokens": 174,
-  "general_fiction_stretch_tokens": 2,
+  "core_known_tokens": 175,
+  "general_fiction_stretch_tokens": 1,
   "genre_stretch_tokens": 2,
   "setting_stretch_tokens": 7,
   "profession_stretch_tokens": 3,
@@ -11,16 +11,15 @@
   "max_forbidden_unknown_tokens_per_chapter": 5,
   "forbidden_unknown_tokens_over_limit": 0,
   "forbidden_unknown_tokens_allowed": true,
-  "core_coverage_percent": 88.32,
-  "stretch_token_percent": 11.68,
-  "unique_core_words_used": 96,
-  "unique_stretch_words_used": 10,
+  "core_coverage_percent": 88.83,
+  "stretch_token_percent": 11.17,
+  "unique_core_words_used": 97,
+  "unique_stretch_words_used": 9,
   "unique_proper_nouns_used": 5,
   "stretch_words_used_once": [
     "江边",
     "灯",
     "笔记本",
-    "答案",
     "谎言",
     "黄浦江"
   ],
@@ -32,7 +31,6 @@
       "灯",
       "白光",
       "笔记本",
-      "答案",
       "记者",
       "谎言",
       "黄浦江"
@@ -46,7 +44,6 @@
       "灯",
       "白光",
       "笔记本",
-      "答案",
       "记者",
       "谎言",
       "黄浦江"
@@ -61,7 +58,6 @@
         "江边",
         "灯",
         "笔记本",
-        "答案",
         "谎言",
         "黄浦江"
       ]
@@ -188,12 +184,17 @@
   "unknown_unique_count": 0,
   "unknown_token_frequency": {},
   "violations": [],
-  "known_word_count": 1000,
-  "allowed_token_count": 1233,
-  "duplicate_stretch_words_already_core": [],
+  "known_word_count": 1100,
+  "allowed_token_count": 1329,
+  "duplicate_stretch_words_already_core": [
+    "安静",
+    "怀疑",
+    "演员",
+    "答案"
+  ],
   "duplicate_stretch_words_ignored": [],
   "schema_version": 3,
-  "generated_at": "2026-05-24T18:58:38Z",
+  "generated_at": "2026-05-25T08:57:47Z",
   "chapter_path": "manuscripts\\shanghai-spirit-lamp-case\\chapters\\chapter_20.zh-tok.txt",
   "known_words_path": "data\\known_words.txt"
 }
