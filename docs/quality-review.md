@@ -36,7 +36,9 @@ python scripts/plot_affordance_report.py --known data/known_words.txt --packs da
 
 The reports include token totals, unique-token counts, known-list coverage percentage, chapter-level unique-token counts, unused known words, overused token warnings, and repeated phrase warnings.
 
-Layered validation reports also include core known tokens, stretch tokens by layer, proper noun tokens, forbidden unknown tokens, forbidden unknowns over the per-chapter budget, core coverage percent, stretch-token percent, stretch words used once, stretch words by chapter, and new stretch words by chapter.
+Layered validation reports also include core known tokens, personal-known tokens when a learner profile is configured, stretch tokens by layer, proper noun tokens, forbidden unknown tokens, forbidden unknowns over the per-chapter budget, core coverage percent, stretch-token percent, stretch words used once, stretch words by chapter, and new stretch words by chapter.
+
+When a manuscript uses Marcel personalized mode, reviewers should treat `personal_known_tokens` as low-load known vocabulary for Marcel, not as public-level core vocabulary and not as stretch learning load.
 
 The plot affordance report classifies available words by story function. It helps a planner see whether a premise has enough vocabulary for action, crime, evidence, journalism, setting movement, conflict, fantasy mechanism, and dialogue variety.
 

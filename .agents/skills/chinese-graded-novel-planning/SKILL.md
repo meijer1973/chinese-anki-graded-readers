@@ -5,7 +5,7 @@ description: Plan complete Chinese graded-reader novels under a restricted known
 
 # Chinese Graded Novel Planning
 
-Plan before drafting. Read `data/known_words.txt` first, then inspect any project config, selected stretch packs, proper nouns, book-specific words, and existing manuscript files.
+Plan before drafting. Read `data/known_words.txt` first, then inspect any project config, learner-profile personal-known list if configured, selected stretch packs, proper nouns, book-specific words, and existing manuscript files.
 
 For 林安 series work, read `series/an-lin/series_bible.md`, `series/an-lin/character_registry.md`, `series/an-lin/chronology.md`, and `series/an-lin/sequel_constraints.md` before planning. Treat 林安 as the journalist/crime-reporter protagonist and 陈雨 as the recurring police contact unless the user explicitly requests a reboot.
 
@@ -26,10 +26,11 @@ Create or update these files under `manuscripts/<project-slug>/`:
 
 - Start with creative preflight before vocabulary planning. Generate 3-5 premise or scene-strategy alternatives, reject weak ideas, and choose the strongest story shape before mapping it to allowed words.
 - Infer what plots are possible from the available vocabulary.
+- State whether the manuscript is public mode or learner-profile personalized mode. If it uses Marcel personalized mode, treat `data/learner_profiles/marcel/personal_known_words.txt` as an allowed known layer but keep it separate from core and stretch in reports.
 - Prefer emotionally coherent plots with real pressure, choices, reversals, and curiosity over concepts that require unavailable words.
 - For about 1100 known words, domestic drama, school life, workplace, travel, friendship, family, mystery-lite, and small urban fantasy/crime conflict are viable, but they still need tension and chapter hooks.
 - For larger lists, allow more complex genres only when the needed nouns, verbs, and abstract terms are present.
-- Avoid plots requiring many unavailable legal, technical, medical, political, or epic-fantasy terms unless those exact tokens exist in core or approved stretch layers.
+- Avoid plots requiring many unavailable legal, technical, medical, political, or epic-fantasy terms unless those exact tokens exist in core, configured personal-known, or approved stretch layers.
 - Do not force a chapter count. Let chapter breaks follow the story's natural turns.
 - Do not plan to a chapter word-count requirement. Chapter length is a story-shape decision, not a quota.
 - Prefer the smallest chapter count that gives the premise, conflict, reversal, and ending enough room.
@@ -59,6 +60,7 @@ Include:
 - chapter-level changes and hooks
 - likely vocabulary breadth opportunities
 - selected vocabulary packs
+- selected reader profile and personal-known list when used
 - book-specific stretch words
 - proper noun list
 - setting map and recurring locations

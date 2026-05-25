@@ -16,6 +16,7 @@
     "RESEARCH_AGENT_MAP.md",
     "RESEARCH_AGENT_PROMPT.md",
     "docs/novel-generation.md",
+    "docs/personal-known-vocabulary.md",
     "docs/creative-preflight.md",
     "docs/style-bank-controlled-chinese.md",
     "docs/stretch-vocabulary.md",
@@ -27,6 +28,10 @@
     "configs/novel_generation.default.json",
     "data/known_words.metadata.json",
     "data/known_words.txt",
+    "data/learner_profiles/marcel/personal_known_words.tsv",
+    "data/learner_profiles/marcel/personal_known_words.txt",
+    "data/learner_profiles/marcel/personal_known_words.metadata.json",
+    "data/learner_profiles/marcel/personal_known_audit.json",
     "data/punctuation_allowlist.txt",
     "data/stretch_packs/general_fiction_100.txt",
     "data/stretch_packs/low_fantasy_150.txt",
@@ -76,6 +81,8 @@
     ],
     "novel_pipeline": [
       "scripts/novel_tools.py",
+      "scripts/import_personal_known_words.py",
+      "scripts/sync_personal_known_words.py",
       "scripts/validate_chapter.py",
       "scripts/validate_book.py",
       "scripts/generate_reports.py",
@@ -90,6 +97,7 @@
     "vocabulary": [
       "word list chinese.txt",
       "data/known_words.txt",
+      "data/learner_profiles",
       "data/stretch_packs",
       "data/stretch_packs/metadata",
       "anki/stretch_word_candidates.tsv"
@@ -117,6 +125,7 @@
   "commands": {
     "run_tests": "$env:PYTHONIOENCODING='utf-8'; python -m unittest discover -s tests",
     "sync_known_words": "python scripts/sync_known_words.py --limit 1100",
+    "sync_marcel_personal_known_words": "python scripts/sync_personal_known_words.py --profile data/learner_profiles/marcel --core data/known_words.txt",
     "validate_sample_book": "python scripts/validate_book.py --known data/known_words.txt --chapters manuscripts/sample-known-words/chapters --out manuscripts/sample-known-words/vocabulary_report.json",
     "generate_agent_indexes": "python scripts/build_agent_index.py"
   },

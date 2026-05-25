@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-25T15:40:45Z",
+  "generated_at": "2026-05-25T18:03:20Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 381,
+  "file_count": 386,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -246,6 +246,31 @@
       "category": "data"
     },
     {
+      "path": "data/learner_profiles/marcel/personal_known_audit.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/learner_profiles/marcel/personal_known_audit.json",
+      "category": "data"
+    },
+    {
+      "path": "data/learner_profiles/marcel/personal_known_exclusions.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/learner_profiles/marcel/personal_known_exclusions.txt",
+      "category": "data"
+    },
+    {
+      "path": "data/learner_profiles/marcel/personal_known_words.metadata.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/learner_profiles/marcel/personal_known_words.metadata.json",
+      "category": "data"
+    },
+    {
+      "path": "data/learner_profiles/marcel/personal_known_words.tsv",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/learner_profiles/marcel/personal_known_words.tsv",
+      "category": "data"
+    },
+    {
+      "path": "data/learner_profiles/marcel/personal_known_words.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/learner_profiles/marcel/personal_known_words.txt",
+      "category": "data"
+    },
+    {
       "path": "data/punctuation_allowlist.txt",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/punctuation_allowlist.txt",
       "category": "data"
@@ -341,6 +366,11 @@
       "category": "docs"
     },
     {
+      "path": "docs/personal-known-vocabulary.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/personal-known-vocabulary.md",
+      "category": "docs"
+    },
+    {
       "path": "docs/quality-review.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/quality-review.md",
       "category": "docs"
@@ -359,21 +389,6 @@
       "path": "ensure_single_character_notes.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/ensure_single_character_notes.py",
       "category": "scripts"
-    },
-    {
-      "path": "known words from user/batch 1/lingqs (6).csv",
-      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/known words from user/batch 1/lingqs (6).csv",
-      "category": "root"
-    },
-    {
-      "path": "known words from user/batch 1/lingqs (7).csv",
-      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/known words from user/batch 1/lingqs (7).csv",
-      "category": "root"
-    },
-    {
-      "path": "known words from user/batch 1/lingqs (8).csv",
-      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/known words from user/batch 1/lingqs (8).csv",
-      "category": "root"
     },
     {
       "path": "manuscripts/README.md",
@@ -1786,6 +1801,11 @@
       "category": "scripts"
     },
     {
+      "path": "scripts/import_personal_known_words.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/import_personal_known_words.py",
+      "category": "scripts"
+    },
+    {
       "path": "scripts/import_stretch_words_to_anki.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/import_stretch_words_to_anki.py",
       "category": "scripts"
@@ -1828,6 +1848,11 @@
     {
       "path": "scripts/sync_known_words.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/sync_known_words.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/sync_personal_known_words.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/sync_personal_known_words.py",
       "category": "scripts"
     },
     {

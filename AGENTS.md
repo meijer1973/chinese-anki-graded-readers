@@ -22,6 +22,7 @@ It also contains a repo-local workflow for Chinese restricted-vocabulary graded-
 The validator distinguishes these layers:
 
 - core known words from `data/known_words.txt`
+- learner-profile personal-known words, such as `data/learner_profiles/marcel/personal_known_words.txt`
 - general fiction stretch words
 - genre stretch words
 - setting stretch words
@@ -32,7 +33,13 @@ The validator distinguishes these layers:
 - proper nouns
 - forbidden unknown tokens
 
-Do not move from controlled vocabulary to random leakage. The policy is `0 invisible unknown words`: every unknown is counted, reported, and reviewed, but each chapter may keep up to 5 forbidden unknown tokens when that preserves better prose or a necessary idea. Approved stretch words are allowed when they are listed in the configured pack, manuscript `book_specific_words.txt`, or manuscript `proper_nouns.txt`. Proper nouns do not spend the five-token unknown budget when listed in `proper_nouns.txt`. If a token appears in both core and stretch, count it as core.
+Do not move from controlled vocabulary to random leakage. The policy is `0 invisible unknown words`: every unknown is counted, reported, and reviewed, but each chapter may keep up to 5 forbidden unknown tokens when that preserves better prose or a necessary idea. Approved personal-known words are allowed only when the manuscript is explicitly built in a learner-profile mode such as Marcel personalized mode. Approved stretch words are allowed when they are listed in the configured pack, manuscript `book_specific_words.txt`, or manuscript `proper_nouns.txt`. Proper nouns do not spend the five-token unknown budget when listed in `proper_nouns.txt`. If a token appears in both core and another layer, count it as core. If a token appears in personal-known and stretch, count it as personal-known.
+
+### Personal-Known Learner Profiles
+
+Keep personal-known vocabulary separate from the ranked frequency list. `data/known_words.txt` remains frequency-core; `data/learner_profiles/marcel/personal_known_words.txt` is a generated validator allowlist for words Marcel already recognizes. Hand-edit `data/learner_profiles/marcel/personal_known_words.tsv`, then regenerate the `.txt`, metadata, and audit files with `scripts/sync_personal_known_words.py`.
+
+Use public mode for general graded readers: core known words plus approved stretch packs. Use Marcel personalized mode only when requested or when the project config says so: core known words plus `--personal-known data/learner_profiles/marcel/personal_known_words.txt` plus approved stretch packs. Reports must keep `personal_known_tokens` separate from core and stretch tokens.
 
 ### Creative Quality
 
@@ -73,6 +80,7 @@ Every stretch pack should have metadata for every word. Use `scripts/complete_st
 - `data/` contains compressed source datasets used by the builder: CC-CEDICT and Tatoeba Mandarin-English exports.
 - `downloads/`, `SUBTLEX-CH-CHR/`, and `SUBTLEX-CH-WF/` are source/reference data directories.
 - `data/known_words.txt` is the active machine-readable known-word list for restricted-vocabulary fiction. It is generated from the ranked source list by `scripts/sync_known_words.py`.
+- `data/learner_profiles/marcel/` contains Marcel's personal-known learner profile. Use `personal_known_words.tsv` as the editable source and `personal_known_words.txt` as the generated validator layer.
 - `series/an-lin/` contains the series-level bible and continuity constraints for the 林安 journalist urban-fantasy crime series.
 - `data/stretch_packs/journalism_crime_50.txt` contains reviewed journalism/crime stretch words for 林安-style crime reporting stories.
 - `data/stretch_packs/business_economics_60.txt` contains reviewed business/economics stretch words for concrete shops, money, prices, customers, costs, risk, and simple market-decision stories. Pass it with `--extra-pack`.
@@ -80,7 +88,7 @@ Every stretch pack should have metadata for every word. Use `scripts/complete_st
 - `AGENT_GITHUB_ENTRY.md`, `RESEARCH_AGENT_MAP.md`, `RESEARCH_AGENT_PROMPT.md`, and `repo_manifest.json` are the GitHub-facing machine-readable/research-agent entry points.
 - `reports/github-agent-index.md`, `reports/github-agent-index.json`, and `reports/url-index.md` are generated inventories for remote agents; refresh them with `python scripts/build_agent_index.py`.
 - `manuscripts/<project-slug>/` contains novel bibles, outlines, canonical tokenized chapters, validation reports, continuity logs, and EPUB exports.
-- `scripts/load_known_words.py`, `scripts/validate_chapter.py`, `scripts/validate_book.py`, `scripts/generate_reports.py`, `scripts/vocabulary_usage_report.py`, `scripts/repeated_phrase_report.py`, `scripts/run_quality_gate.py`, and `scripts/build_epub.py` inspect, validate, review-prep, report, and export restricted-vocabulary manuscripts.
+- `scripts/load_known_words.py`, `scripts/sync_personal_known_words.py`, `scripts/import_personal_known_words.py`, `scripts/validate_chapter.py`, `scripts/validate_book.py`, `scripts/generate_reports.py`, `scripts/vocabulary_usage_report.py`, `scripts/repeated_phrase_report.py`, `scripts/run_quality_gate.py`, and `scripts/build_epub.py` inspect, validate, review-prep, report, and export restricted-vocabulary manuscripts.
 - `scripts/prose_variety_report.py` reports repeated dialogue tags, repeated sentence frames, and other style-polish risks. `scripts/build_reading_copy.py` creates noncanonical natural-text review copies.
 - `.agents/skills/` and `.codex/agents/` contain repo-local Codex workflows and role definitions for novel planning, chapter writing, validation, continuity editing, literary review, reader review, lead quality review, and EPUB export.
 
@@ -154,6 +162,8 @@ python scripts/run_quality_gate.py --manuscript manuscripts/<slug> --known data/
 python scripts/build_epub.py --manuscript manuscripts/<slug> --title "<title>" --out manuscripts/<slug>/epub/<slug>.epub --report manuscripts/<slug>/epub/build_report.json
 ```
 
+For Marcel personalized mode, add `--personal-known data/learner_profiles/marcel/personal_known_words.txt` to validation, quality-gate, report-generation, and EPUB commands.
+
 For future known-word expansion, regenerate `data/known_words.txt` with a larger `--limit` such as `2000`, `3000`, or `5000`; the validators and manuscript layout do not change.
 
 When completing a novel-generation task, the final response must report:
@@ -162,6 +172,7 @@ When completing a novel-generation task, the final response must report:
 - chapter count
 - total word-token count
 - unique used words
+- vocabulary profile and personal-known token count, when used
 - unknown-token count
 - forbidden unknown tokens over the configured per-chapter limit
 - validation command run

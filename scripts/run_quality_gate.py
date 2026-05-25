@@ -140,6 +140,7 @@ def main() -> int:
     parser.add_argument("--manuscript", required=True)
     parser.add_argument("--known", default=str(DEFAULT_KNOWN_WORDS))
     parser.add_argument("--punctuation", default=str(DEFAULT_PUNCTUATION))
+    parser.add_argument("--personal-known", help="Optional learner-profile personal-known word list.")
     parser.add_argument("--general-fiction-pack")
     parser.add_argument("--genre-pack")
     parser.add_argument("--setting-pack")
@@ -165,6 +166,7 @@ def main() -> int:
         chapters,
         args.known,
         punctuation_path=args.punctuation,
+        personal_known_words_path=args.personal_known,
         general_fiction_pack=args.general_fiction_pack,
         genre_pack=args.genre_pack,
         setting_pack=args.setting_pack,
@@ -192,6 +194,8 @@ def main() -> int:
         "unknown_token_count": validation["unknown_token_count"],
         "forbidden_unknown_tokens": validation.get("forbidden_unknown_tokens", validation["unknown_token_count"]),
         "forbidden_unknown_tokens_over_limit": validation.get("forbidden_unknown_tokens_over_limit", 0),
+        "personal_known_tokens": validation.get("personal_known_tokens", 0),
+        "unique_personal_known_words_used": validation.get("unique_personal_known_words_used", 0),
         "max_forbidden_unknown_tokens_per_chapter": validation.get(
             "max_forbidden_unknown_tokens_per_chapter",
             args.max_forbidden_unknown_tokens_per_chapter,

@@ -14,6 +14,7 @@ Write one chapter at a time. The canonical format is space-tokenized Chinese:
 ## Before Writing
 
 - Read `data/known_words.txt`.
+- If the project uses Marcel personalized mode, read `data/learner_profiles/marcel/personal_known_words.txt` and count those words as the `personal_known` layer, not as stretch.
 - Read the configured approved stretch packs, manuscript `book_specific_words.txt`, and `proper_nouns.txt` when present.
 - Read the manuscript `novel_bible.md`, `outline.md`, `characters.md`, and `continuity_log.md`.
 - Read `creative_preflight.md` when present. Preserve the chosen story shape, reader question, and variation budget.
@@ -23,13 +24,13 @@ Write one chapter at a time. The canonical format is space-tokenized Chinese:
 - Create `manuscripts/<slug>/planning/chapter_XX_vocab_plan.md` before drafting.
 - Do not begin with vocabulary feasibility alone. Confirm the scene want, pressure, reversal, and end change before choosing the token set.
 
-The vocabulary plan must include chapter purpose, scene goal, conflict, emotional turn, main locations, characters and roles, 30-80 core known words that could naturally appear, stretch words to introduce, stretch words to repeat, risky unavailable concepts to avoid, chapter hook, and end-of-chapter change.
+The vocabulary plan must include chapter purpose, scene goal, conflict, emotional turn, main locations, characters and roles, 30-80 core or personal-known words that could naturally appear, stretch words to introduce, stretch words to repeat, risky unavailable concepts to avoid, chapter hook, and end-of-chapter change.
 
 For 林安 sequels, the vocabulary plan must also include case function, journalist function, fantasy function, and learning function. Use 5-10 repeated stretch words from earlier chapters and normally 3-5 new stretch words at most.
 
 ## Drafting Rules
 
-- Use only exact tokens from core known words and approved vocabulary layers.
+- Use only exact tokens from core known words and approved vocabulary layers. In Marcel personalized mode, personal-known words are approved known words for that learner profile.
 - Prefer approved vocabulary, but do not mangle natural sentences solely to force zero unknowns. Each chapter may keep up to 5 reported forbidden unknown tokens when they are useful, intentional, and not confusing.
 - Use punctuation freely from `data/punctuation_allowlist.txt`.
 - Use the known vocabulary actively and naturally.
@@ -62,7 +63,7 @@ After the first draft, revise only for story quality and vocabulary validity:
 - Find places where the same word is repeated too often.
 - Replace or rewrite with other allowed words where natural.
 - Add scene detail using allowed words only when it clarifies setting movement, motivation, conflict, or emotional change.
-- Keep every token inside core or approved stretch layers.
+- Keep every token inside core, personal-known when configured, or approved stretch layers.
 - Run vocabulary validation after the expansion pass.
 
 ## After Drafting
@@ -79,6 +80,12 @@ For layered stretch manuscripts, include the configured pack arguments:
 
 ```powershell
 python scripts/validate_chapter.py --known data/known_words.txt --chapter manuscripts/<slug>/chapters/chapter_01.zh-tok.txt --out manuscripts/<slug>/chapters/chapter_01.validation.json --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
+```
+
+For Marcel personalized mode, also include:
+
+```powershell
+--personal-known data/learner_profiles/marcel/personal_known_words.txt
 ```
 
 After each chapter, run vocabulary validation, repair forbidden unknowns that exceed the budget or weaken clarity, run vocabulary usage evidence, update `continuity_log.md`, update `stretch_word_exposure.md`, and check whether stretch words are being repeated enough to become learnable rather than decorative.

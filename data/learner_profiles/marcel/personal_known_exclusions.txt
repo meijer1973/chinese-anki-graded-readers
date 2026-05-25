@@ -1,0 +1,1 @@
+# One excluded personal-known word per line.

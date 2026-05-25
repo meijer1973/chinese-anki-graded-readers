@@ -1,6 +1,6 @@
 # Chinese Graded-Reader Novel Generation
 
-This repo can support repeatable long-form Chinese fiction written with the active vocabulary policy: core known words plus optional approved stretch layers.
+This repo can support repeatable long-form Chinese fiction written with the active vocabulary policy: core known words plus optional learner-profile personal-known words and approved stretch layers.
 
 Vocabulary validation is necessary, but it is not enough. A book that passes vocabulary validation but fails reader interest is a failed book.
 
@@ -36,6 +36,31 @@ Inspect the active list:
 ```powershell
 python scripts/load_known_words.py --known data/known_words.txt
 ```
+
+## Reader Profiles
+
+Use public mode when a book should represent only the frequency-core level plus approved stretch words.
+
+Use Marcel personalized mode when the book is for Marcel and may use words he already recognizes outside the top 1100. The personal-known layer is generated from:
+
+```text
+data/learner_profiles/marcel/personal_known_words.tsv
+```
+
+into:
+
+```text
+data/learner_profiles/marcel/personal_known_words.txt
+```
+
+Regenerate the profile allowlist after editing the TSV:
+
+```powershell
+$env:PYTHONIOENCODING='utf-8'
+python scripts/sync_personal_known_words.py --profile data/learner_profiles/marcel --core data/known_words.txt
+```
+
+Do not merge personal-known words into `data/known_words.txt`. Validation reports count `personal_known_tokens` separately from `core_known_tokens` and stretch tokens.
 
 ## Manuscript Layout
 
@@ -77,6 +102,7 @@ The validator ignores punctuation and whitespace, then checks every remaining st
 The default strict mode uses only `data/known_words.txt`. The richer controlled mode allows:
 
 - core known words: `data/known_words.txt`
+- learner-profile personal-known words: `data/learner_profiles/marcel/personal_known_words.txt`, enabled with `--personal-known` only for personalized readers
 - general fiction stretch words: `data/stretch_packs/general_fiction_100.txt`
 - genre stretch words: `data/stretch_packs/low_fantasy_150.txt`
 - setting stretch words: `data/stretch_packs/shanghai_setting_150.txt`
@@ -87,7 +113,7 @@ The default strict mode uses only `data/known_words.txt`. The richer controlled 
 - manuscript `book_specific_words.txt`
 - manuscript `proper_nouns.txt`
 
-The rule is not random leakage. Stretch words are approved learning targets. Proper nouns belong in `proper_nouns.txt` and do not count against the unknown-token budget. Each chapter may keep up to 5 forbidden unknown tokens, but the budget is breathing room, not a target. If a word appears in both core and stretch, the validator counts it as core.
+The rule is not random leakage. Personal-known words are recognized words for a named learner profile, not new learning targets. Stretch words are approved learning targets. Proper nouns belong in `proper_nouns.txt` and do not count against the unknown-token budget. Each chapter may keep up to 5 forbidden unknown tokens, but the budget is breathing room, not a target. If a word appears in both core and another layer, the validator counts it as core. If a word appears in both personal-known and stretch, it counts as personal-known.
 
 For the 林安 series, read `series/an-lin/series_bible.md`, `series/an-lin/character_registry.md`, `series/an-lin/chronology.md`, and `series/an-lin/sequel_constraints.md` before planning. 林安 is the journalist/crime-reporter protagonist in that continuity; do not reset her profession or ignore `manuscripts/shanghai-rain-gate-crime/`.
 
@@ -228,6 +254,12 @@ Layered low-fantasy Shanghai validation:
 python scripts/validate_chapter.py --known data/known_words.txt --chapter manuscripts/<slug>/chapters/chapter_01.zh-tok.txt --out manuscripts/<slug>/chapters/chapter_01.validation.json --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 ```
 
+For Marcel personalized readers, add this option to chapter, book, report, quality-gate, and EPUB commands:
+
+```powershell
+--personal-known data/learner_profiles/marcel/personal_known_words.txt
+```
+
 The default forbidden-unknown budget is 5 tokens per chapter. Override it when needed:
 
 ```powershell
@@ -280,7 +312,7 @@ python scripts/validate_book.py --known data/known_words.txt --chapters manuscri
 
 Layered manuscripts should pass the same pack arguments used for chapter validation.
 
-The whole-book report aggregates chapter count, total tokens, unique used words, unknown-token frequencies, forbidden unknown tokens over the per-chapter limit, and per-chapter details.
+The whole-book report aggregates chapter count, total tokens, unique used words, unknown-token frequencies, `core_known_tokens`, `personal_known_tokens`, stretch-layer counts, forbidden unknown tokens over the per-chapter limit, and per-chapter details.
 
 Build a noncanonical reading copy for human rhythm review:
 
@@ -330,24 +362,25 @@ The EPUB builder runs whole-book validation and checks lead quality approval aga
 ## Improved Workflow
 
 1. Load active known-word list.
-2. Create creative preflight with alternatives and a variation budget.
-3. Create novel bible.
-4. Create outline.
-5. Check that the outline is interesting enough before drafting.
-6. Draft one chapter.
-7. Validate vocabulary.
-8. Repair unknown tokens only when they are accidental, unclear, or above the per-chapter budget.
-9. Update continuity.
-10. Track vocabulary breadth.
-11. Repeat chapter by chapter.
-12. Run whole-book validation.
-13. Run vocabulary usage, repeated phrase, and prose variety reports.
-14. Build a noncanonical reading copy.
-15. Run literary critic review.
-16. Run normal reader review.
-17. Run prose-variety polish when needed.
-18. Lead reviewer decides: pass, polish, partial rewrite, or complete rebuild.
-19. Build EPUB only after lead reviewer approves.
+2. Choose vocabulary profile: public mode or Marcel personalized mode.
+3. Create creative preflight with alternatives and a variation budget.
+4. Create novel bible.
+5. Create outline.
+6. Check that the outline is interesting enough before drafting.
+7. Draft one chapter.
+8. Validate vocabulary.
+9. Repair unknown tokens only when they are accidental, unclear, or above the per-chapter budget.
+10. Update continuity.
+11. Track vocabulary breadth.
+12. Repeat chapter by chapter.
+13. Run whole-book validation.
+14. Run vocabulary usage, repeated phrase, and prose variety reports.
+15. Build a noncanonical reading copy.
+16. Run literary critic review.
+17. Run normal reader review.
+18. Run prose-variety polish when needed.
+19. Lead reviewer decides: pass, polish, partial rewrite, or complete rebuild.
+20. Build EPUB only after lead reviewer approves.
 
 For `low_fantasy_urban_shanghai`, the outline and reviews should check that the story feels like a normal person in Shanghai discovering one impossible thing. Avoid epic scale, lore dumps, many monsters, and stretch words used once as decoration.
 
@@ -359,6 +392,7 @@ The final Codex response for a generated book must include:
 - chapter count
 - total word-token count
 - unique used words
+- vocabulary profile and personal-known token count, when used
 - unknown-token count
 - forbidden unknown tokens over the configured per-chapter limit
 - validation command run

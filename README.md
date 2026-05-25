@@ -7,6 +7,7 @@ This repository maintains a Chinese vocabulary Anki deck and a controlled-vocabu
 - Build Anki TSV exports from `word list chinese.txt` with `build_anki_chinese.py`.
 - Keep curated sentence and pinyin fixes in `sentence_example_overrides.py`.
 - Maintain the active known-word file in `data/known_words.txt`.
+- Maintain learner-profile personal-known vocabulary under `data/learner_profiles/marcel/` for Marcel-personalized readers.
 - Generate restricted-vocabulary Chinese manuscripts under `manuscripts/<slug>/`.
 - Use `creative_preflight.md` and the controlled Chinese style bank before token-level chapter planning.
 - Plan 林安 journalist/crime sequels from `series/an-lin/` and `data/stretch_packs/journalism_crime_50.txt`.
@@ -46,6 +47,7 @@ The canonical story source is space-tokenized Chinese:
 The validator checks core known words, approved stretch packs, book-specific words, proper nouns, and a small per-chapter unknown-token budget. See:
 
 - `docs/novel-generation.md`
+- `docs/personal-known-vocabulary.md`
 - `docs/creative-preflight.md`
 - `docs/style-bank-controlled-chinese.md`
 - `docs/stretch-vocabulary.md`

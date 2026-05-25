@@ -11,6 +11,7 @@ from scripts.novel_tools import (
     GENERAL_FICTION_LAYER,
     GENRE_LAYER,
     JOURNALISM_CRIME_LAYER,
+    PERSONAL_KNOWN_LAYER,
     PROFESSION_LAYER,
     ROOT,
     SETTING_LAYER,
@@ -22,6 +23,7 @@ from scripts.novel_tools import (
     validate_book,
     validate_text,
 )
+from scripts.sync_personal_known_words import sync_personal_known_words
 
 
 class StretchVocabularyTests(unittest.TestCase):
@@ -36,12 +38,14 @@ class StretchVocabularyTests(unittest.TestCase):
         self.profession = self.root / "professions.txt"
         self.journalism = self.root / "journalism_crime.txt"
         self.urban = self.root / "urban_objects.txt"
+        self.personal = self.root / "personal_known_words.txt"
         self.general.write_text("沉默\n我\n", encoding="utf-8")
         self.genre.write_text("魔法\n", encoding="utf-8")
         self.setting.write_text("上海\n", encoding="utf-8")
         self.profession.write_text("快递员\n", encoding="utf-8")
         self.journalism.write_text("采访\n", encoding="utf-8")
         self.urban.write_text("地图\n", encoding="utf-8")
+        self.personal.write_text("犹豫\n沉默\n", encoding="utf-8")
         self.proper = self.root / "proper_nouns.txt"
         self.proper.write_text("林安\n", encoding="utf-8")
 
@@ -102,6 +106,46 @@ class StretchVocabularyTests(unittest.TestCase):
         self.assertEqual(report["core_known_tokens"], 3)
         self.assertEqual(report["general_fiction_stretch_tokens"], 0)
 
+    def test_personal_known_word_validates_as_separate_layer(self) -> None:
+        chapters = self.chapters_dir("我 犹豫 了 。\n")
+        report = validate_book(chapters, self.known, personal_known_words_path=self.personal)
+        self.assertTrue(report["valid"])
+        self.assertEqual(report["personal_known_tokens"], 1)
+        self.assertEqual(report["unique_personal_known_words_used"], 1)
+        self.assertEqual(report["forbidden_unknown_tokens"], 0)
+
+    def test_personal_known_word_is_unknown_without_profile(self) -> None:
+        chapters = self.chapters_dir("我 犹豫 了 。\n")
+        report = validate_book(chapters, self.known)
+        self.assertTrue(report["valid"])
+        self.assertEqual(report["personal_known_tokens"], 0)
+        self.assertEqual(report["forbidden_unknown_tokens"], 1)
+
+    def test_same_token_in_core_and_personal_counts_as_core(self) -> None:
+        personal = self.root / "personal_core_overlap.txt"
+        personal.write_text("我\n犹豫\n", encoding="utf-8")
+        chapters = self.chapters_dir("我 犹豫 了 。\n")
+        report = validate_book(chapters, self.known, personal_known_words_path=personal)
+        self.assertEqual(report["core_known_tokens"], 2)
+        self.assertEqual(report["personal_known_tokens"], 1)
+
+    def test_same_token_in_personal_and_stretch_counts_as_personal(self) -> None:
+        chapters = self.chapters_dir("你 沉默 了 。\n")
+        report = validate_book(
+            chapters,
+            self.known,
+            personal_known_words_path=self.personal,
+            general_fiction_pack=self.general,
+        )
+        self.assertEqual(report["personal_known_tokens"], 1)
+        self.assertEqual(report["general_fiction_stretch_tokens"], 0)
+        vocab = load_layered_vocabulary(
+            self.known,
+            personal_known_words_path=self.personal,
+            general_fiction_pack=self.general,
+        )
+        self.assertEqual(vocab["token_layers"]["沉默"], PERSONAL_KNOWN_LAYER)
+
     def test_proper_noun_passes_only_when_listed(self) -> None:
         chapters = self.chapters_dir("林安 看 你 。\n")
         allowed = validate_book(chapters, self.known, **self.layered_kwargs())
@@ -155,6 +199,15 @@ class StretchVocabularyTests(unittest.TestCase):
         )
         self.assertTrue(report["valid"])
         self.assertEqual(report["business_economics_stretch_tokens"], 1)
+
+    def test_business_economics_extra_pack_counts_as_stretch(self) -> None:
+        chapters = self.chapters_dir("市场 会 影响 生意 。\n")
+        report = validate_book(
+            chapters,
+            ROOT / "data" / "known_words.txt",
+            extra_packs=[ROOT / "data" / "stretch_packs" / "business_economics_60.txt"],
+        )
+        self.assertGreater(report["stretch_token_percent"], 0)
 
     def test_layer_counts_are_correct(self) -> None:
         chapters = self.chapters_dir("林安 是 快递员 。\n我 在 上海 看 魔法 。\n你 沉默 了 。\n林安 采访 你 。\n")
@@ -223,6 +276,41 @@ class StretchVocabularyTests(unittest.TestCase):
         self.assertIn("价格", words)
         self.assertTrue(all(row["Pack"] == "business_economics_60" for row in rows))
         self.assertTrue(all(row["Layer"] == BUSINESS_ECONOMICS_LAYER for row in rows))
+
+    def test_personal_known_sync_generates_allowed_profile_words(self) -> None:
+        profile = self.root / "profile"
+        profile.mkdir()
+        tsv = profile / "personal_known_words.tsv"
+        tsv.write_text(
+            "\t".join(
+                [
+                    "word",
+                    "pinyin",
+                    "meaning",
+                    "source",
+                    "status",
+                    "reading_confidence",
+                    "allow_in_personal_readers",
+                    "notes",
+                ]
+            )
+            + "\n"
+            + "犹豫\tyou2 yu4\thesitate\tmanual\tknown_passive\t4\tyes\t\n"
+            + "学习\txue2 xi2\tstudy\tmanual\tlearning\t5\tyes\t\n"
+            + "低\tdi1\tlow\tmanual\tknown_active\t3\tyes\t\n"
+            + "我\two3\tI\tmanual\tknown_active\t5\tyes\t\n"
+            + "沉默\tchen2 mo4\tsilent\tmanual\tknown_active\t5\tno\t\n",
+            encoding="utf-8",
+        )
+        (profile / "personal_known_exclusions.txt").write_text("不用\n", encoding="utf-8")
+        report = sync_personal_known_words(profile_dir=profile, core_path=self.known)
+        words = load_optional_words(profile / "personal_known_words.txt")
+        self.assertEqual(words, ["犹豫"])
+        self.assertEqual(report["generated_personal_known_word_count"], 1)
+        self.assertEqual(report["excluded_by_status_count"], 1)
+        self.assertEqual(report["excluded_by_confidence_count"], 1)
+        self.assertEqual(report["excluded_by_flag_count"], 1)
+        self.assertEqual(report["core_duplicate_count"], 1)
 
     def test_layered_epub_requires_validation_and_quality_approval(self) -> None:
         manuscript = self.root / "manuscript"

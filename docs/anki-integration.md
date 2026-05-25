@@ -2,6 +2,8 @@
 
 Stretch words must flow into Anki safely. The novel workflow does not directly mutate the live Anki collection.
 
+Personal-known words are different from stretch words. They live under `data/learner_profiles/marcel/` and are allowed for Marcel-personalized readers because they are already recognized. Do not export the personal-known profile as new stretch cards unless a separate review says those words need Anki work.
+
 ## Existing Deck
 
 The repo already assumes:

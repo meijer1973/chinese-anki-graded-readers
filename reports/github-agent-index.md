@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki And Graded Readers
 
-Generated: 2026-05-25T15:40:45Z
+Generated: 2026-05-25T18:03:20Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 381
+Files indexed: 386
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -55,19 +55,20 @@ Count: 27
 
 ## docs
 
-Count: 7
+Count: 8
 
 - docs/anki-integration.md
 - docs/creative-preflight.md
 - docs/machine-readable-repository.md
 - docs/novel-generation.md
+- docs/personal-known-vocabulary.md
 - docs/quality-review.md
 - docs/stretch-vocabulary.md
 - docs/style-bank-controlled-chinese.md
 
 ## scripts
 
-Count: 30
+Count: 32
 
 - add_missing_single_character_notes.py
 - apply_meaning_cleanup_updates.py
@@ -82,6 +83,7 @@ Count: 30
 - scripts/complete_stretch_pack_metadata.py
 - scripts/export_stretch_words_for_anki.py
 - scripts/generate_reports.py
+- scripts/import_personal_known_words.py
 - scripts/import_stretch_words_to_anki.py
 - scripts/load_known_words.py
 - scripts/novel_tools.py
@@ -91,6 +93,7 @@ Count: 30
 - scripts/repeated_phrase_report.py
 - scripts/run_quality_gate.py
 - scripts/sync_known_words.py
+- scripts/sync_personal_known_words.py
 - scripts/validate_book.py
 - scripts/validate_chapter.py
 - scripts/vocabulary_usage_report.py
@@ -108,7 +111,7 @@ Count: 1
 
 ## data
 
-Count: 22
+Count: 27
 
 - data/cedict_ts.u8.gz
 - data/cmn-eng_links.tsv.bz2
@@ -117,6 +120,11 @@ Count: 22
 - data/eng_sentences.tsv.bz2
 - data/known_words.metadata.json
 - data/known_words.txt
+- data/learner_profiles/marcel/personal_known_audit.json
+- data/learner_profiles/marcel/personal_known_exclusions.txt
+- data/learner_profiles/marcel/personal_known_words.metadata.json
+- data/learner_profiles/marcel/personal_known_words.tsv
+- data/learner_profiles/marcel/personal_known_words.txt
 - data/punctuation_allowlist.txt
 - data/stretch_packs/business_economics_60.txt
 - data/stretch_packs/general_fiction_100.txt
@@ -425,13 +433,10 @@ Count: 3
 
 ## root
 
-Count: 13
+Count: 10
 
 - .gitattributes
 - .gitignore
-- known words from user/batch 1/lingqs (6).csv
-- known words from user/batch 1/lingqs (7).csv
-- known words from user/batch 1/lingqs (8).csv
 - series/an-lin/approved_series_words.txt
 - series/an-lin/character_registry.md
 - series/an-lin/chronology.md

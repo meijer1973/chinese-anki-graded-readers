@@ -36,6 +36,12 @@ Fail the workflow if any chapter has `forbidden_unknown_tokens_over_limit > 0`.
 
 For layered reports, listed proper nouns count as the proper-noun layer and do not spend the forbidden-unknown budget.
 
+For Marcel personalized readers, pass the learner-profile layer:
+
+```powershell
+--personal-known data/learner_profiles/marcel/personal_known_words.txt
+```
+
 ## Parsing Contract
 
 - Load known words from `data/known_words.txt`.
@@ -44,8 +50,9 @@ For layered reports, listed proper nouns count as the proper-noun layer and do n
 - Count every non-empty remaining token.
 - Accidental unsegmented Chinese strings are unknown unless the whole string is an allowed token.
 - Produce JSON reports and a concise human-readable summary.
-- Count core known tokens, general fiction stretch tokens, genre stretch tokens, setting stretch tokens, profession stretch tokens, book-specific stretch tokens, proper noun tokens, and forbidden unknown tokens.
+- Count core known tokens, learner-profile personal-known tokens, general fiction stretch tokens, genre stretch tokens, setting stretch tokens, profession stretch tokens, book-specific stretch tokens, proper noun tokens, and forbidden unknown tokens.
 - If a token appears in both core and a stretch pack, count it as core.
+- If a token appears in both personal-known and a stretch pack, count it as personal-known.
 - Pass validation only when forbidden unknowns are at or below the configured per-chapter budget.
 - Warn on too many new stretch words in one chapter, stretch words used only once, low core coverage, excessive stretch-token share, repeated phrase overuse, and narrow vocabulary.
 - Do not forgive proper nouns unless they are listed in `proper_nouns.txt`.

@@ -15,6 +15,8 @@ ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_KNOWN_WORDS = ROOT / "data" / "known_words.txt"
 DEFAULT_PUNCTUATION = ROOT / "data" / "punctuation_allowlist.txt"
 DEFAULT_STRETCH_PACKS_DIR = ROOT / "data" / "stretch_packs"
+DEFAULT_LEARNER_PROFILES_DIR = ROOT / "data" / "learner_profiles"
+DEFAULT_MARCEL_PERSONAL_KNOWN_WORDS = DEFAULT_LEARNER_PROFILES_DIR / "marcel" / "personal_known_words.txt"
 DEFAULT_GENERAL_FICTION_PACK = DEFAULT_STRETCH_PACKS_DIR / "general_fiction_100.txt"
 DEFAULT_LOW_FANTASY_PACK = DEFAULT_STRETCH_PACKS_DIR / "low_fantasy_150.txt"
 DEFAULT_SHANGHAI_SETTING_PACK = DEFAULT_STRETCH_PACKS_DIR / "shanghai_setting_150.txt"
@@ -34,6 +36,7 @@ HANZI_RE = re.compile(r"[\u3400-\u9fff]")
 QUALITY_DECISION_FILE = "lead_quality_decision.md"
 
 CORE_LAYER = "core_known"
+PERSONAL_KNOWN_LAYER = "personal_known"
 GENERAL_FICTION_LAYER = "general_fiction_stretch"
 GENRE_LAYER = "genre_stretch"
 SETTING_LAYER = "setting_stretch"
@@ -45,6 +48,7 @@ PROPER_NOUN_LAYER = "proper_noun"
 
 LAYER_TOKEN_FIELDS = {
     CORE_LAYER: "core_known_tokens",
+    PERSONAL_KNOWN_LAYER: "personal_known_tokens",
     GENERAL_FICTION_LAYER: "general_fiction_stretch_tokens",
     GENRE_LAYER: "genre_stretch_tokens",
     SETTING_LAYER: "setting_stretch_tokens",
@@ -61,6 +65,7 @@ STRETCH_LAYERS = {
     SETTING_LAYER,
     PROFESSION_LAYER,
     JOURNALISM_CRIME_LAYER,
+    BUSINESS_ECONOMICS_LAYER,
     BOOK_SPECIFIC_LAYER,
 }
 
@@ -126,6 +131,7 @@ def load_layered_vocabulary(
     core_known_path: str | Path = DEFAULT_KNOWN_WORDS,
     *,
     general_fiction_pack: str | Path | None = None,
+    personal_known_words_path: str | Path | None = None,
     genre_pack: str | Path | None = None,
     setting_pack: str | Path | None = None,
     profession_pack: str | Path | None = None,
@@ -159,6 +165,7 @@ def load_layered_vocabulary(
             token_layers[word] = layer
             layer_words[layer].append(word)
 
+    add_words(load_optional_words(personal_known_words_path), PERSONAL_KNOWN_LAYER, personal_known_words_path)
     add_words(load_optional_words(general_fiction_pack), GENERAL_FICTION_LAYER, general_fiction_pack)
     add_words(load_optional_words(genre_pack), GENRE_LAYER, genre_pack)
     add_words(load_optional_words(setting_pack), SETTING_LAYER, setting_pack)
@@ -175,6 +182,8 @@ def load_layered_vocabulary(
         "token_layers": token_layers,
         "layer_words": {layer: sorted(set(words)) for layer, words in layer_words.items()},
         "known_word_count": len(core_words),
+        "personal_known_word_count": len(set(layer_words[PERSONAL_KNOWN_LAYER])),
+        "personal_known_words_path": str(Path(personal_known_words_path)) if personal_known_words_path else None,
         "allowed_token_count": len(token_layers),
         "duplicate_as_core": sorted(set(duplicate_as_core)),
         "duplicate_as_earlier_layer": duplicate_as_earlier_layer,
@@ -259,6 +268,9 @@ def validate_text(
     stretch_counter: Counter[str] = Counter(token for token in tokens if token_layers.get(token) in STRETCH_LAYERS)
     approved_non_core_count = sum(layer_counts[layer] for layer in STRETCH_LAYERS | {PROPER_NOUN_LAYER})
     core_coverage_percent = (layer_counts[CORE_LAYER] / total_tokens * 100) if total_tokens else 0.0
+    known_token_percent = (
+        (layer_counts[CORE_LAYER] + layer_counts[PERSONAL_KNOWN_LAYER]) / total_tokens * 100
+    ) if total_tokens else 0.0
     stretch_token_percent = (approved_non_core_count / total_tokens * 100) if total_tokens else 0.0
     warnings: list[dict] = []
     stretch_words_used_once = sorted(token for token, count in stretch_counter.items() if count == 1)
@@ -317,8 +329,10 @@ def validate_text(
             "forbidden_unknown_tokens_over_limit": unknowns_over_limit,
             "forbidden_unknown_tokens_allowed": unknowns_over_limit == 0,
             "core_coverage_percent": round(core_coverage_percent, 2),
+            "known_token_percent": round(known_token_percent, 2),
             "stretch_token_percent": round(stretch_token_percent, 2),
             "unique_core_words_used": len(unique_by_layer[CORE_LAYER]),
+            "unique_personal_known_words_used": len(unique_by_layer[PERSONAL_KNOWN_LAYER]),
             "unique_stretch_words_used": len(set().union(*(unique_by_layer[layer] for layer in STRETCH_LAYERS))),
             "unique_proper_nouns_used": len(unique_by_layer[PROPER_NOUN_LAYER]),
             "stretch_words_used_once": stretch_words_used_once,
@@ -341,6 +355,8 @@ def validate_text(
             "unknown_token_frequency": dict(sorted(unknown_counter.items())),
             "violations": violations,
             "known_word_count": known_word_count,
+            "personal_known_word_count": vocabulary.get("personal_known_word_count", 0),
+            "personal_known_words_path": vocabulary.get("personal_known_words_path"),
             "allowed_token_count": vocabulary.get("allowed_token_count", len(token_layers)),
             "duplicate_stretch_words_already_core": vocabulary.get("duplicate_as_core", []),
             "duplicate_stretch_words_ignored": vocabulary.get("duplicate_as_earlier_layer", []),
@@ -354,6 +370,7 @@ def validate_chapter(
     known_path: str | Path = DEFAULT_KNOWN_WORDS,
     *,
     punctuation_path: str | Path = DEFAULT_PUNCTUATION,
+    personal_known_words_path: str | Path | None = None,
     general_fiction_pack: str | Path | None = None,
     genre_pack: str | Path | None = None,
     setting_pack: str | Path | None = None,
@@ -372,6 +389,7 @@ def validate_chapter(
     known_words = load_known_words(known)
     vocabulary = load_layered_vocabulary(
         known,
+        personal_known_words_path=personal_known_words_path,
         general_fiction_pack=general_fiction_pack,
         genre_pack=genre_pack,
         setting_pack=setting_pack,
@@ -395,11 +413,13 @@ def validate_chapter(
     )
     report.update(
         {
-            "schema_version": 3,
+            "schema_version": 4,
             "generated_at": utc_now(),
             "chapter_path": str(chapter),
             "known_words_path": str(known),
             "known_word_count": len(known_words),
+            "personal_known_words_path": vocabulary.get("personal_known_words_path"),
+            "personal_known_word_count": vocabulary.get("personal_known_word_count", 0),
             "allowed_token_count": vocabulary["allowed_token_count"],
         }
     )
@@ -424,6 +444,7 @@ def validate_book(
     known_path: str | Path = DEFAULT_KNOWN_WORDS,
     *,
     punctuation_path: str | Path = DEFAULT_PUNCTUATION,
+    personal_known_words_path: str | Path | None = None,
     general_fiction_pack: str | Path | None = None,
     genre_pack: str | Path | None = None,
     setting_pack: str | Path | None = None,
@@ -441,6 +462,7 @@ def validate_book(
     known_words = load_known_words(known_path)
     vocabulary = load_layered_vocabulary(
         known_path,
+        personal_known_words_path=personal_known_words_path,
         general_fiction_pack=general_fiction_pack,
         genre_pack=genre_pack,
         setting_pack=setting_pack,
@@ -514,6 +536,9 @@ def validate_book(
         )
     approved_non_core_count = sum(layer_counts[layer] for layer in STRETCH_LAYERS | {PROPER_NOUN_LAYER})
     core_coverage_percent = (layer_counts[CORE_LAYER] / total_tokens * 100) if total_tokens else 0.0
+    known_token_percent = (
+        (layer_counts[CORE_LAYER] + layer_counts[PERSONAL_KNOWN_LAYER]) / total_tokens * 100
+    ) if total_tokens else 0.0
     stretch_token_percent = (approved_non_core_count / total_tokens * 100) if total_tokens else 0.0
     if target_core_coverage_percent is not None and core_coverage_percent < target_core_coverage_percent:
         warnings.append(
@@ -544,11 +569,13 @@ def validate_book(
     forbidden_unknown_tokens_over_limit = sum(item["over_limit"] for item in chapters_over_unknown_limit)
 
     report = {
-        "schema_version": 3,
+        "schema_version": 4,
         "generated_at": utc_now(),
         "valid": all(report["valid"] for report in chapter_reports),
         "known_words_path": str(Path(known_path)),
         "known_word_count": len(known_words),
+        "personal_known_words_path": vocabulary.get("personal_known_words_path"),
+        "personal_known_word_count": vocabulary.get("personal_known_word_count", 0),
         "allowed_token_count": vocabulary["allowed_token_count"],
         "chapters_path": str(Path(chapters_dir)),
         "chapter_count": len(chapter_reports),
@@ -565,8 +592,12 @@ def validate_book(
         "chapters_over_unknown_limit": chapters_over_unknown_limit,
         "forbidden_unknown_token_frequency": dict(sorted(aggregate_unknown.items())),
         "core_coverage_percent": round(core_coverage_percent, 2),
+        "known_token_percent": round(known_token_percent, 2),
         "stretch_token_percent": round(stretch_token_percent, 2),
         "unique_core_words_used": len({token for token in aggregate_unique if token_layers.get(token) == CORE_LAYER}),
+        "unique_personal_known_words_used": len(
+            {token for token in aggregate_unique if token_layers.get(token) == PERSONAL_KNOWN_LAYER}
+        ),
         "unique_stretch_words_used": len({token for token in aggregate_unique if token_layers.get(token) in STRETCH_LAYERS}),
         "stretch_words_used_once": stretch_words_used_once,
         "stretch_words_by_chapter": stretch_words_by_chapter,
@@ -958,6 +989,7 @@ def build_epub(
     *,
     known_path: str | Path = DEFAULT_KNOWN_WORDS,
     punctuation_path: str | Path = DEFAULT_PUNCTUATION,
+    personal_known_words_path: str | Path | None = None,
     general_fiction_pack: str | Path | None = None,
     genre_pack: str | Path | None = None,
     setting_pack: str | Path | None = None,
@@ -978,6 +1010,7 @@ def build_epub(
         chapters_dir,
         known_path,
         punctuation_path=punctuation_path,
+        personal_known_words_path=personal_known_words_path,
         general_fiction_pack=general_fiction_pack,
         genre_pack=genre_pack,
         setting_pack=setting_pack,
@@ -1064,6 +1097,9 @@ code { font-family: monospace; }
 <p>Canonical validation was run on the space-tokenized .zh-tok.txt source files.</p>
 <p>Total word tokens: <code>{validation['total_tokens']}</code></p>
 <p>Unique used words: <code>{validation['unique_token_count']}</code></p>
+<p>Core known tokens: <code>{validation['core_known_tokens']}</code></p>
+<p>Personal known tokens: <code>{validation.get('personal_known_tokens', 0)}</code></p>
+<p>Stretch-token percent: <code>{validation['stretch_token_percent']}</code></p>
 <p>Unknown-token count: <code>{validation['unknown_token_count']}</code></p>
 <p>Allowed forbidden unknown tokens per chapter: <code>{validation['max_forbidden_unknown_tokens_per_chapter']}</code></p>
 <p>Forbidden unknown tokens over limit: <code>{validation['forbidden_unknown_tokens_over_limit']}</code></p>
@@ -1076,6 +1112,10 @@ code { font-family: monospace; }
         "chapter_count": validation["chapter_count"],
         "total_tokens": validation["total_tokens"],
         "unique_token_count": validation["unique_token_count"],
+        "core_known_tokens": validation["core_known_tokens"],
+        "personal_known_tokens": validation.get("personal_known_tokens", 0),
+        "personal_known_word_count": validation.get("personal_known_word_count", 0),
+        "unique_personal_known_words_used": validation.get("unique_personal_known_words_used", 0),
         "unknown_token_count": validation["unknown_token_count"],
         "forbidden_unknown_tokens_over_limit": validation["forbidden_unknown_tokens_over_limit"],
         "max_forbidden_unknown_tokens_per_chapter": validation["max_forbidden_unknown_tokens_per_chapter"],
