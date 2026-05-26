@@ -13,6 +13,9 @@ Use recurring locations as story tools, not decoration.
 - narrow lane
 - riverside bridge
 - archive or file room
+- bank
+- hotel
+- underground station or hidden transit space
 
 ## Location Continuity Guidance
 

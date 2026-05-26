@@ -29,6 +29,9 @@ These terms are approved for recurring series use when they are also included in
 - 影门
 - 灵灯
 - 影子桥
+- 回声
+- 声门
+- 规则
 - 黑雾
 - 白光
 

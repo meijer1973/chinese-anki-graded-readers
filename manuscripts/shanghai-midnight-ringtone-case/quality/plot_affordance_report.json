@@ -1,0 +1,81 @@
+{
+  "title": "上海零点铃声案",
+  "generated_at": "2026-05-26T08:52:54Z",
+  "premise": "voice-black-market urban fantasy crime",
+  "available_affordances_used": {
+    "journalism": [
+      "采访",
+      "报道",
+      "文章",
+      "编辑",
+      "标题",
+      "来源",
+      "发布",
+      "公开",
+      "证词",
+      "举报"
+    ],
+    "crime": [
+      "案件",
+      "证人",
+      "嫌犯",
+      "动机",
+      "搜查",
+      "跟踪",
+      "证据",
+      "线索",
+      "犯罪",
+      "警察"
+    ],
+    "evidence": [
+      "文件",
+      "资料",
+      "录音",
+      "录像",
+      "监控",
+      "照片",
+      "合同",
+      "密码",
+      "记录"
+    ],
+    "personal_known_technical": [
+      "黑客",
+      "黑市",
+      "网络",
+      "屏幕",
+      "软件",
+      "通话",
+      "邮件"
+    ],
+    "business_or_money": [
+      "银行",
+      "保险",
+      "信用卡",
+      "客户",
+      "费用",
+      "交易",
+      "合同",
+      "钱"
+    ],
+    "low_fantasy": [
+      "回声",
+      "声门",
+      "灵灯",
+      "白光",
+      "黑暗",
+      "影子"
+    ],
+    "setting": [
+      "上海",
+      "人民广场",
+      "地铁站",
+      "老街",
+      "外滩",
+      "黄浦江",
+      "酒店",
+      "公园",
+      "小巷"
+    ]
+  },
+  "assessment": "Sufficient vocabulary for active reporting, witness protection, evidence handling, public reporting pressure, and one small fantasy mechanism."
+}

@@ -31,6 +31,15 @@
 - Case frame: a photographer/source dies near a bridge after investigating old-street property files; the visible suspect in police video has no shadow.
 - Outcome: 林安 protects a vulnerable witness, publishes enough truth to create pressure, and keeps the fantasy mechanism out of the public article.
 
+## Book 4: 上海零点铃声案
+
+- Repository path: `manuscripts/shanghai-midnight-ringtone-case/`
+- Status: fourth series manuscript imported from the writer agent and revalidated locally.
+- Core continuity: 林安 remains the journalist protagonist. 陈雨 remains the recurring police contact. 何青 remains the editor/newsroom pressure. 许白 remains a source/contact.
+- Fantasy mechanism: 回声盒子 and 声门 turn hidden, feared, or future-possible speech into ringtone-like clues. The voices can guide investigation but cannot act as legal proof by themselves.
+- Case frame: stolen voice recordings, false contracts, bank/client pressure, a dead hacker/source, black-market help, and a visible suspect hiding a deeper operator.
+- Outcome: 林安 uses reporting ethics to protect witnesses, separates fantasy clues from publishable evidence, and treats the final article as a moral decision rather than a simple victory.
+
 ## Open Series Direction
 
-The next story should not restart 林安 from zero. It should treat her as someone who has already faced the rain-ticket case, the spirit-lamp case, and the shadow-bridge case, and now knows that a normal clue may have a hidden cost.
+The next story should not restart 林安 from zero. It should treat her as someone who has already faced the rain-ticket case, the spirit-lamp case, the shadow-bridge case, and the midnight-ringtone case, and now knows that a normal clue may have a hidden cost.

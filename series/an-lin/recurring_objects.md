@@ -6,6 +6,8 @@
 - 黑票
 - 灵灯
 - 影子桥
+- 回声盒子
+- 声门
 
 ## Approved Recurring Evidence Objects
 
@@ -16,6 +18,9 @@
 - 录像
 - 照片
 - 密码
+- 铃声
+- 合同
+- 录音文件
 
 ## Object Guidance
 

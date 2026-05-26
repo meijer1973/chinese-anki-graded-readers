@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-26T05:36:41Z",
+  "generated_at": "2026-05-26T10:06:19Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 463,
+  "file_count": 599,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -478,6 +478,686 @@
     {
       "path": "manuscripts/sample-known-words/vocabulary_report.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/vocabulary_report.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/README.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/README.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/book_specific_words.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/book_specific_words.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_01.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_01.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_01.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_01.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_02.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_02.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_02.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_02.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_03.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_03.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_03.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_03.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_04.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_04.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_04.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_04.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_05.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_05.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_05.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_05.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_06.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_06.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_06.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_06.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_07.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_07.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_07.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_07.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_08.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_08.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_08.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_08.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_09.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_09.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_09.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_09.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_10.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_10.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_10.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_10.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_11.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_11.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_11.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_11.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_12.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_12.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_12.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_12.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_13.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_13.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_13.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_13.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_14.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_14.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_14.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_14.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_15.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_15.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_15.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_15.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_16.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_16.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_16.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_16.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_17.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_17.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_17.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_17.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_18.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_18.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_18.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_18.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_19.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_19.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_19.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_19.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_20.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_20.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_20.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_20.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_21.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_21.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_21.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_21.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_22.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_22.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_22.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_22.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_23.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_23.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_23.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_23.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_24.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_24.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_24.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_24.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_25.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_25.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_25.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_25.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_26.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_26.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_26.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_26.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_27.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_27.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_27.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_27.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_28.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_28.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_28.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_28.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_29.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_29.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_29.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_29.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_30.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_30.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_30.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_30.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_31.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_31.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_31.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_31.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_32.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_32.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_32.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_32.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_33.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_33.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_33.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_33.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_34.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_34.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_34.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_34.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_35.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_35.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_35.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_35.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_36.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_36.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_36.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_36.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_37.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_37.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_37.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_37.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_38.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_38.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_38.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_38.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/characters.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/characters.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/continuity_log.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/continuity_log.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/creative_preflight.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/creative_preflight.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/epub/build_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/epub/build_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/epub/shanghai-midnight-ringtone-case.epub",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/epub/shanghai-midnight-ringtone-case.epub",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/novel_bible.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/novel_bible.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/outline.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/outline.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_01_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_01_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_02_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_02_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_03_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_03_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_04_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_04_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_05_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_05_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_06_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_06_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_07_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_07_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_08_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_08_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_09_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_09_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_10_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_10_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_11_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_11_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_12_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_12_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_13_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_13_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_14_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_14_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_15_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_15_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_16_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_16_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_17_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_17_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_18_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_18_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_19_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_19_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_20_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_20_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_21_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_21_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_22_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_22_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_23_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_23_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_24_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_24_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_25_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_25_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_26_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_26_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_27_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_27_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_28_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_28_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_29_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_29_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_30_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_30_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_31_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_31_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_32_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_32_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_33_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_33_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_34_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_34_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_35_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_35_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_36_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_36_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_37_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_37_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/planning/chapter_38_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/planning/chapter_38_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/proper_nouns.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/proper_nouns.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/quality/lead_quality_decision.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/quality/lead_quality_decision.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/quality/literary_critic_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/quality/literary_critic_report.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/quality/normal_reader_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/quality/normal_reader_report.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/quality/plot_affordance_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/quality/plot_affordance_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/quality/prose_variety_polish_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/quality/prose_variety_polish_report.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/quality/prose_variety_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/quality/prose_variety_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/quality/quality_gate_summary.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/quality/quality_gate_summary.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/quality/repeated_phrase_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/quality/repeated_phrase_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/quality/vocabulary_usage_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/quality/vocabulary_usage_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/stretch_word_exposure.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/stretch_word_exposure.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/vocabulary_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/vocabulary_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-midnight-ringtone-case/vocabulary_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/vocabulary_report.md",
       "category": "manuscripts"
     },
     {
