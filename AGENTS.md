@@ -103,9 +103,9 @@ The live collection scripts assume:
 
 Current card policy from the latest report:
 
-- Production cards enabled for ranks `1-1000`.
-- Sentence cards enabled for ranks `1-1000`.
-- Production cards above rank `1000` are suspended.
+- Standard word-recognition meaning cards are active for every deck note unless manually suspended.
+- Sentence cards are active for every deck note with `Example` and `Example Meaning` fields.
+- Production / meaning-recall cards remain available in the model but are suspended by the setup script.
 
 ## Chinese Graded-Reader Novel Generation
 

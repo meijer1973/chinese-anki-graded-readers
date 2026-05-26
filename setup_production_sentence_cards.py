@@ -17,9 +17,6 @@ ANKI_CONNECT_URL = "http://127.0.0.1:8765"
 DECK_QUERY = "deck:Default"
 MODEL_NAME = "Chinese Vocabulary"
 
-PRODUCTION_LIMIT = 1000
-SENTENCE_LIMIT = 1000
-
 PRODUCTION_FIELD = "Production Card"
 SENTENCE_FIELD = "Sentence Card"
 RANK_FIELD = "Frequency Rank"
@@ -165,6 +162,10 @@ def ensure_fields() -> None:
         anki("modelFieldAdd", {"modelName": MODEL_NAME, "fieldName": RANK_FIELD, "index": 9})
 
 
+def has_sentence_fields(note: dict[str, Any]) -> bool:
+    return bool(note_field(note, "Example") and note_field(note, "Example Meaning"))
+
+
 def update_note_flags(notes: list[dict[str, Any]], ranks: dict[str, int]) -> None:
     actions = []
     missing_words: list[str] = []
@@ -172,6 +173,7 @@ def update_note_flags(notes: list[dict[str, Any]], ranks: dict[str, int]) -> Non
     for note in notes:
         word = note_field(note, "Word")
         rank = ranks.get(word)
+        sentence_value = "yes" if has_sentence_fields(note) else ""
         if not rank:
             if is_stretch_note(note):
                 actions.append(
@@ -182,8 +184,7 @@ def update_note_flags(notes: list[dict[str, Any]], ranks: dict[str, int]) -> Non
                                 "id": int(note["noteId"]),
                                 "fields": {
                                     RANK_FIELD: "",
-                                    PRODUCTION_FIELD: "",
-                                    SENTENCE_FIELD: "",
+                                    SENTENCE_FIELD: sentence_value,
                                 },
                             }
                         },
@@ -195,8 +196,7 @@ def update_note_flags(notes: list[dict[str, Any]], ranks: dict[str, int]) -> Non
 
         fields = {
             RANK_FIELD: str(rank),
-            PRODUCTION_FIELD: "yes" if rank <= PRODUCTION_LIMIT else "",
-            SENTENCE_FIELD: "yes" if rank <= SENTENCE_LIMIT else "",
+            SENTENCE_FIELD: sentence_value,
         }
         actions.append(
             {
@@ -228,28 +228,12 @@ def ensure_sentence_template() -> None:
         anki("updateModelStyling", {"model": {"name": MODEL_NAME, "css": styling.rstrip() + "\n" + CSS_APPEND + "\n"}})
 
 
-def cards_by_rank(notes: list[dict[str, Any]], ranks: dict[str, int], cards: list[dict[str, Any]]) -> tuple[list[int], list[int]]:
-    rank_by_note_id = {int(note["noteId"]): ranks[note_field(note, "Word")] for note in notes if note_field(note, "Word") in ranks}
-    stretch_note_ids = {int(note["noteId"]) for note in notes if is_stretch_note(note)}
-    production_to_suspend: list[int] = []
-    production_to_keep_active: list[int] = []
+def production_cards_to_suspend(cards: list[dict[str, Any]]) -> list[int]:
+    return [int(card["cardId"]) for card in cards if int(card["ord"]) == 1 and int(card["queue"]) >= 0]
 
-    for card in cards:
-        if int(card["ord"]) != 1:
-            continue
-        note_id = int(card["note"])
-        if note_id in stretch_note_ids:
-            production_to_suspend.append(int(card["cardId"]))
-            continue
-        rank = rank_by_note_id.get(note_id)
-        if rank is None:
-            continue
-        if rank <= PRODUCTION_LIMIT:
-            production_to_keep_active.append(int(card["cardId"]))
-        else:
-            production_to_suspend.append(int(card["cardId"]))
 
-    return production_to_suspend, production_to_keep_active
+def sentence_cards_to_unsuspend(cards: list[dict[str, Any]]) -> list[int]:
+    return [int(card["cardId"]) for card in cards if int(card["ord"]) == 2 and int(card["queue"]) < 0]
 
 
 def suspend_cards(card_ids: list[int]) -> None:
@@ -257,11 +241,17 @@ def suspend_cards(card_ids: list[int]) -> None:
         anki("suspend", {"cards": card_ids[start : start + 500]})
 
 
+def unsuspend_cards(card_ids: list[int]) -> None:
+    for start in range(0, len(card_ids), 500):
+        anki("unsuspend", {"cards": card_ids[start : start + 500]})
+
+
 def verify() -> dict[str, Any]:
     notes = load_notes()
     cards = load_cards()
     field_counts = Counter()
     template_counts = Counter()
+    active_by_ord = Counter()
     suspended_by_ord = Counter()
 
     for note in notes:
@@ -271,12 +261,20 @@ def verify() -> dict[str, Any]:
             field_counts["sentence_yes"] += 1
         if note_field(note, RANK_FIELD):
             field_counts["ranked"] += 1
+        if note_field(note, "Meaning"):
+            field_counts["meaning"] += 1
+        if note_field(note, "Example"):
+            field_counts["example"] += 1
+        if note_field(note, "Example Meaning"):
+            field_counts["example_meaning"] += 1
 
     for card in cards:
         ord_value = int(card["ord"])
         template_counts[ord_value] += 1
         if int(card["queue"]) < 0:
             suspended_by_ord[ord_value] += 1
+        else:
+            active_by_ord[ord_value] += 1
 
     return {
         "notes": len(notes),
@@ -284,28 +282,41 @@ def verify() -> dict[str, Any]:
         "production_field_yes": field_counts["production_yes"],
         "sentence_field_yes": field_counts["sentence_yes"],
         "ranked_notes": field_counts["ranked"],
+        "notes_with_meaning": field_counts["meaning"],
+        "notes_with_example": field_counts["example"],
+        "notes_with_example_meaning": field_counts["example_meaning"],
         "card_counts_by_ord": dict(sorted(template_counts.items())),
+        "active_counts_by_ord": dict(sorted(active_by_ord.items())),
         "suspended_counts_by_ord": dict(sorted(suspended_by_ord.items())),
     }
 
 
-def write_report(result: dict[str, Any], suspended_count: int) -> None:
+def write_report(result: dict[str, Any], suspended_count: int, unsuspended_sentence_count: int) -> None:
     lines = [
         "# Production And Sentence Card Setup Report",
         "",
-        f"Production cards enabled by field for ranks 1-{PRODUCTION_LIMIT}.",
-        f"Sentence cards enabled by field for ranks 1-{SENTENCE_LIMIT}.",
-        f"Suspended production cards above rank {PRODUCTION_LIMIT}: {suspended_count}",
+        "Standard word-recognition meaning cards are active for every note unless manually suspended.",
+        "Sentence cards are enabled for every note with `Example` and `Example Meaning` fields.",
+        "Production / meaning-recall cards are suspended by this script.",
+        f"Suspended production cards: {suspended_count}",
+        f"Unsuspended sentence cards: {unsuspended_sentence_count}",
         "",
         f"Notes: {result['notes']}",
         f"Cards: {result['cards']}",
         f"Notes with Production Card = yes: {result['production_field_yes']}",
         f"Notes with Sentence Card = yes: {result['sentence_field_yes']}",
         f"Notes with Frequency Rank: {result['ranked_notes']}",
+        f"Notes with Meaning: {result['notes_with_meaning']}",
+        f"Notes with Example: {result['notes_with_example']}",
+        f"Notes with Example Meaning: {result['notes_with_example_meaning']}",
         "",
         "Card counts by template ord:",
     ]
     for ord_value, count in result["card_counts_by_ord"].items():
+        lines.append(f"- ord {ord_value}: {count}")
+    lines.append("")
+    lines.append("Active counts by template ord:")
+    for ord_value, count in result["active_counts_by_ord"].items():
         lines.append(f"- ord {ord_value}: {count}")
     lines.append("")
     lines.append("Suspended counts by template ord:")
@@ -327,11 +338,14 @@ def main() -> None:
 
     notes_after_template = load_notes()
     cards_after_template = load_cards()
-    cards_to_suspend, _ = cards_by_rank(notes_after_template, ranks, cards_after_template)
+    cards_to_suspend = production_cards_to_suspend(cards_after_template)
     suspend_cards(cards_to_suspend)
+    cards_after_suspend = load_cards()
+    sentence_cards_to_restore = sentence_cards_to_unsuspend(cards_after_suspend)
+    unsuspend_cards(sentence_cards_to_restore)
 
     result = verify()
-    write_report(result, suspended_count=len(cards_to_suspend))
+    write_report(result, suspended_count=len(cards_to_suspend), unsuspended_sentence_count=len(sentence_cards_to_restore))
     print(json.dumps(result, ensure_ascii=False, indent=2))
 
 
