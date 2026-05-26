@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-25T19:52:49Z",
+  "generated_at": "2026-05-26T05:36:41Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 386,
+  "file_count": 463,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -1663,6 +1663,391 @@
     {
       "path": "manuscripts/shanghai-spirit-lamp-case/vocabulary_report.json",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-spirit-lamp-case/vocabulary_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/README.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/README.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/book_specific_words.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/book_specific_words.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_01.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_01.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_01.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_01.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_02.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_02.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_02.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_02.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_03.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_03.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_03.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_03.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_04.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_04.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_04.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_04.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_05.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_05.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_05.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_05.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_06.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_06.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_06.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_06.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_07.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_07.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_07.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_07.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_08.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_08.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_08.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_08.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_09.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_09.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_09.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_09.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_10.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_10.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_10.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_10.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_11.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_11.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_11.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_11.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_12.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_12.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_12.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_12.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_13.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_13.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_13.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_13.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_14.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_14.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_14.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_14.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_15.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_15.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_15.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_15.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_16.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_16.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/chapters/chapter_16.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/chapters/chapter_16.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/characters.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/characters.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/continuity_log.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/continuity_log.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/creative_preflight.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/creative_preflight.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/data_snapshot/known_words.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/data_snapshot/known_words.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/data_snapshot/stretch_packs/business_economics_60.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/data_snapshot/stretch_packs/business_economics_60.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/data_snapshot/stretch_packs/general_fiction_100.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/data_snapshot/stretch_packs/general_fiction_100.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/data_snapshot/stretch_packs/professions_social_roles_100.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/data_snapshot/stretch_packs/professions_social_roles_100.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/data_snapshot/stretch_packs/shanghai_setting_150.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/data_snapshot/stretch_packs/shanghai_setting_150.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/data_snapshot/stretch_packs/urban_objects_100.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/data_snapshot/stretch_packs/urban_objects_100.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/epub/build_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/epub/build_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/epub/small-shop-survival-economics.epub",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/epub/small-shop-survival-economics.epub",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/manuscript_display.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/manuscript_display.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/manuscript_tokenized.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/manuscript_tokenized.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/novel_bible.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/novel_bible.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/outline.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/outline.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/package_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/package_report.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/planning/chapter_01_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/planning/chapter_01_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/planning/chapter_02_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/planning/chapter_02_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/planning/chapter_03_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/planning/chapter_03_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/planning/chapter_04_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/planning/chapter_04_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/planning/chapter_05_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/planning/chapter_05_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/planning/chapter_06_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/planning/chapter_06_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/planning/chapter_07_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/planning/chapter_07_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/planning/chapter_08_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/planning/chapter_08_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/planning/chapter_09_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/planning/chapter_09_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/planning/chapter_10_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/planning/chapter_10_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/planning/chapter_11_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/planning/chapter_11_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/planning/chapter_12_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/planning/chapter_12_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/planning/chapter_13_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/planning/chapter_13_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/planning/chapter_14_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/planning/chapter_14_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/planning/chapter_15_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/planning/chapter_15_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/planning/chapter_16_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/planning/chapter_16_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/proper_nouns.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/proper_nouns.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/quality/lead_quality_decision.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/quality/lead_quality_decision.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/quality/literary_critic_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/quality/literary_critic_report.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/quality/normal_reader_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/quality/normal_reader_report.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/quality/prose_variety_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/quality/prose_variety_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/quality/quality_gate_summary.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/quality/quality_gate_summary.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/quality/repeated_phrase_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/quality/repeated_phrase_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/quality/vocabulary_usage_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/quality/vocabulary_usage_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/stretch_word_exposure.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/stretch_word_exposure.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/vocabulary_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/vocabulary_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/small-shop-survival-economics/vocabulary_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/vocabulary_report.md",
       "category": "manuscripts"
     },
     {

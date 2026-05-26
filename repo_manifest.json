@@ -50,6 +50,8 @@
     "manuscripts/shanghai-spirit-lamp-case/quality/quality_gate_summary.json",
     "manuscripts/shanghai-shadow-bridge-case/vocabulary_report.json",
     "manuscripts/shanghai-shadow-bridge-case/quality/quality_gate_summary.json",
+    "manuscripts/small-shop-survival-economics/vocabulary_report.json",
+    "manuscripts/small-shop-survival-economics/quality/quality_gate_summary.json",
     "manuscripts/shanghai-rain-ticket/vocabulary_report.json",
     "manuscripts/shanghai-rain-ticket/quality/quality_gate_summary.json",
     "reports/github-agent-index.md",
@@ -111,6 +113,7 @@
       "manuscripts/shanghai-rain-gate-crime",
       "manuscripts/shanghai-spirit-lamp-case",
       "manuscripts/shanghai-shadow-bridge-case",
+      "manuscripts/small-shop-survival-economics",
       "manuscripts/shanghai-rain-ticket"
     ],
     "tests": [

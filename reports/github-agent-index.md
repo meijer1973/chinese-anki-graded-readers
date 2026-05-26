@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki And Graded Readers
 
-Generated: 2026-05-25T19:52:49Z
+Generated: 2026-05-26T05:36:41Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 386
+Files indexed: 463
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -150,7 +150,7 @@ Count: 2
 
 ## manuscripts
 
-Count: 270
+Count: 347
 
 - manuscripts/README.md
 - manuscripts/sample-known-words/chapters/chapter_01.validation.json
@@ -407,6 +407,83 @@ Count: 270
 - manuscripts/shanghai-spirit-lamp-case/quality/vocabulary_usage_report.json
 - manuscripts/shanghai-spirit-lamp-case/stretch_word_exposure.md
 - manuscripts/shanghai-spirit-lamp-case/vocabulary_report.json
+- manuscripts/small-shop-survival-economics/README.md
+- manuscripts/small-shop-survival-economics/book_specific_words.txt
+- manuscripts/small-shop-survival-economics/chapters/chapter_01.validation.json
+- manuscripts/small-shop-survival-economics/chapters/chapter_01.zh-tok.txt
+- manuscripts/small-shop-survival-economics/chapters/chapter_02.validation.json
+- manuscripts/small-shop-survival-economics/chapters/chapter_02.zh-tok.txt
+- manuscripts/small-shop-survival-economics/chapters/chapter_03.validation.json
+- manuscripts/small-shop-survival-economics/chapters/chapter_03.zh-tok.txt
+- manuscripts/small-shop-survival-economics/chapters/chapter_04.validation.json
+- manuscripts/small-shop-survival-economics/chapters/chapter_04.zh-tok.txt
+- manuscripts/small-shop-survival-economics/chapters/chapter_05.validation.json
+- manuscripts/small-shop-survival-economics/chapters/chapter_05.zh-tok.txt
+- manuscripts/small-shop-survival-economics/chapters/chapter_06.validation.json
+- manuscripts/small-shop-survival-economics/chapters/chapter_06.zh-tok.txt
+- manuscripts/small-shop-survival-economics/chapters/chapter_07.validation.json
+- manuscripts/small-shop-survival-economics/chapters/chapter_07.zh-tok.txt
+- manuscripts/small-shop-survival-economics/chapters/chapter_08.validation.json
+- manuscripts/small-shop-survival-economics/chapters/chapter_08.zh-tok.txt
+- manuscripts/small-shop-survival-economics/chapters/chapter_09.validation.json
+- manuscripts/small-shop-survival-economics/chapters/chapter_09.zh-tok.txt
+- manuscripts/small-shop-survival-economics/chapters/chapter_10.validation.json
+- manuscripts/small-shop-survival-economics/chapters/chapter_10.zh-tok.txt
+- manuscripts/small-shop-survival-economics/chapters/chapter_11.validation.json
+- manuscripts/small-shop-survival-economics/chapters/chapter_11.zh-tok.txt
+- manuscripts/small-shop-survival-economics/chapters/chapter_12.validation.json
+- manuscripts/small-shop-survival-economics/chapters/chapter_12.zh-tok.txt
+- manuscripts/small-shop-survival-economics/chapters/chapter_13.validation.json
+- manuscripts/small-shop-survival-economics/chapters/chapter_13.zh-tok.txt
+- manuscripts/small-shop-survival-economics/chapters/chapter_14.validation.json
+- manuscripts/small-shop-survival-economics/chapters/chapter_14.zh-tok.txt
+- manuscripts/small-shop-survival-economics/chapters/chapter_15.validation.json
+- manuscripts/small-shop-survival-economics/chapters/chapter_15.zh-tok.txt
+- manuscripts/small-shop-survival-economics/chapters/chapter_16.validation.json
+- manuscripts/small-shop-survival-economics/chapters/chapter_16.zh-tok.txt
+- manuscripts/small-shop-survival-economics/characters.md
+- manuscripts/small-shop-survival-economics/continuity_log.md
+- manuscripts/small-shop-survival-economics/creative_preflight.md
+- manuscripts/small-shop-survival-economics/data_snapshot/known_words.txt
+- manuscripts/small-shop-survival-economics/data_snapshot/stretch_packs/business_economics_60.txt
+- manuscripts/small-shop-survival-economics/data_snapshot/stretch_packs/general_fiction_100.txt
+- manuscripts/small-shop-survival-economics/data_snapshot/stretch_packs/professions_social_roles_100.txt
+- manuscripts/small-shop-survival-economics/data_snapshot/stretch_packs/shanghai_setting_150.txt
+- manuscripts/small-shop-survival-economics/data_snapshot/stretch_packs/urban_objects_100.txt
+- manuscripts/small-shop-survival-economics/epub/build_report.json
+- manuscripts/small-shop-survival-economics/epub/small-shop-survival-economics.epub
+- manuscripts/small-shop-survival-economics/manuscript_display.md
+- manuscripts/small-shop-survival-economics/manuscript_tokenized.md
+- manuscripts/small-shop-survival-economics/novel_bible.md
+- manuscripts/small-shop-survival-economics/outline.md
+- manuscripts/small-shop-survival-economics/package_report.md
+- manuscripts/small-shop-survival-economics/planning/chapter_01_vocab_plan.md
+- manuscripts/small-shop-survival-economics/planning/chapter_02_vocab_plan.md
+- manuscripts/small-shop-survival-economics/planning/chapter_03_vocab_plan.md
+- manuscripts/small-shop-survival-economics/planning/chapter_04_vocab_plan.md
+- manuscripts/small-shop-survival-economics/planning/chapter_05_vocab_plan.md
+- manuscripts/small-shop-survival-economics/planning/chapter_06_vocab_plan.md
+- manuscripts/small-shop-survival-economics/planning/chapter_07_vocab_plan.md
+- manuscripts/small-shop-survival-economics/planning/chapter_08_vocab_plan.md
+- manuscripts/small-shop-survival-economics/planning/chapter_09_vocab_plan.md
+- manuscripts/small-shop-survival-economics/planning/chapter_10_vocab_plan.md
+- manuscripts/small-shop-survival-economics/planning/chapter_11_vocab_plan.md
+- manuscripts/small-shop-survival-economics/planning/chapter_12_vocab_plan.md
+- manuscripts/small-shop-survival-economics/planning/chapter_13_vocab_plan.md
+- manuscripts/small-shop-survival-economics/planning/chapter_14_vocab_plan.md
+- manuscripts/small-shop-survival-economics/planning/chapter_15_vocab_plan.md
+- manuscripts/small-shop-survival-economics/planning/chapter_16_vocab_plan.md
+- manuscripts/small-shop-survival-economics/proper_nouns.txt
+- manuscripts/small-shop-survival-economics/quality/lead_quality_decision.md
+- manuscripts/small-shop-survival-economics/quality/literary_critic_report.md
+- manuscripts/small-shop-survival-economics/quality/normal_reader_report.md
+- manuscripts/small-shop-survival-economics/quality/prose_variety_report.json
+- manuscripts/small-shop-survival-economics/quality/quality_gate_summary.json
+- manuscripts/small-shop-survival-economics/quality/repeated_phrase_report.json
+- manuscripts/small-shop-survival-economics/quality/vocabulary_usage_report.json
+- manuscripts/small-shop-survival-economics/stretch_word_exposure.md
+- manuscripts/small-shop-survival-economics/vocabulary_report.json
+- manuscripts/small-shop-survival-economics/vocabulary_report.md
 - manuscripts/stretch-layer-fixture/book_specific_words.txt
 - manuscripts/stretch-layer-fixture/chapters/chapter_01.validation.json
 - manuscripts/stretch-layer-fixture/chapters/chapter_01.zh-tok.txt

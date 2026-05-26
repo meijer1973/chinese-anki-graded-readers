@@ -1,0 +1,34 @@
+{
+  "epub_path": "manuscripts\\small-shop-survival-economics\\epub\\small-shop-survival-economics.epub",
+  "valid": true,
+  "chapter_count": 16,
+  "total_tokens": 4890,
+  "unique_token_count": 544,
+  "core_known_tokens": 3904,
+  "vocabulary_profile": "public",
+  "learner_profile_name": null,
+  "personal_known_tokens": 0,
+  "personal_known_word_count": 0,
+  "unique_personal_known_words_used": 0,
+  "unknown_token_count": 0,
+  "forbidden_unknown_tokens_over_limit": 0,
+  "max_forbidden_unknown_tokens_per_chapter": 5,
+  "quality_approval": {
+    "approved": true,
+    "decision_path": "manuscripts\\small-shop-survival-economics\\quality\\lead_quality_decision.md",
+    "decision": "PASS",
+    "reason": "Approved by lead quality decision."
+  },
+  "built_at": "2026-05-26T05:35:54Z",
+  "epub_structure": {
+    "path": "manuscripts\\small-shop-survival-economics\\epub\\small-shop-survival-economics.epub",
+    "exists": true,
+    "first_entry": "mimetype",
+    "mimetype": "application/epub+zip",
+    "has_container": true,
+    "has_opf": true,
+    "has_nav": true,
+    "has_title_page": true,
+    "chapter_count": 16
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-26T05:35:45Z",
+  "chapters_path": "manuscripts\\small-shop-survival-economics\\chapters",
+  "chapter_count": 16,
+  "sentence_count": 498,
+  "total_tokens": 4890,
+  "dialogue_tag_warning_count": 10,
+  "phrase_warning_count": 8,
+  "sentence_frame_warning_count": 5,
+  "top_dialogue_tags": [
+    {
+      "frame": "数据 说",
+      "count": 4
+    },
+    {
+      "frame": "价格 说",
+      "count": 2
+    },
+    {
+      "frame": "他们 说",
+      "count": 1
+    },
+    {
+      "frame": "广告 说",
+      "count": 1
+    },
+    {
+      "frame": "它 说",
+      "count": 1
+    },
+    {
+      "frame": "店主 说",
+      "count": 1
+    },
+    {
+      "frame": "顾客 说",
+      "count": 1
+    },
+    {
+      "frame": "怎么 说",
+      "count": 1
+    },
+    {
+      "frame": "时候 说",
+      "count": 1
+    },
+    {
+      "frame": "任务 说",
+      "count": 1
+    },
+    {
+      "frame": "话 说",
+      "count": 1
+    },
+    {
+      "frame": "行动 说",
+      "count": 1
+    }
+  ],
+  "repeated_dialogue_tags": [],
+  "repeated_phrase_frames": [
+    {
+      "phrase": "不 是",
+      "token_count": 2,
+      "count": 41
+    },
+    {
+      "phrase": "好 的",
+      "token_count": 2,
+      "count": 17
+    },
+    {
+      "phrase": "小店 的",
+      "token_count": 2,
+      "count": 16
+    },
+    {
+      "phrase": "有 时",
+      "token_count": 2,
+      "count": 16
+    },
+    {
+      "phrase": "一 次",
+      "token_count": 2,
+      "count": 15
+    },
+    {
+      "phrase": "也 会",
+      "token_count": 2,
+      "count": 13
+    },
+    {
+      "phrase": "是 小店",
+      "token_count": 2,
+      "count": 13
+    },
+    {
+      "phrase": "活 下来",
+      "token_count": 2,
+      "count": 12
+    },
+    {
+      "phrase": "也 是",
+      "token_count": 2,
+      "count": 12
+    },
+    {
+      "phrase": "就 是",
+      "token_count": 2,
+      "count": 10
+    },
+    {
+      "phrase": "这 个",
+      "token_count": 2,
+      "count": 10
+    },
+    {
+      "phrase": "不 够",
+      "token_count": 2,
+      "count": 10
+    },
+    {
+      "phrase": "如果 店主",
+      "token_count": 2,
+      "count": 10
+    },
+    {
+      "phrase": "更 多",
+      "token_count": 2,
+      "count": 10
+    },
+    {
+      "phrase": "是 一个",
+      "token_count": 2,
+      "count": 9
+    },
+    {
+      "phrase": "的 顾客",
+      "token_count": 2,
+      "count": 9
+    },
+    {
+      "phrase": "哪 个",
+      "token_count": 2,
+      "count": 9
+    },
+    {
+      "phrase": "顾客 可能",
+      "token_count": 2,
+      "count": 9
+    },
+    {
+      "phrase": "一个 产品",
+      "token_count": 2,
+      "count": 9
+    },
+    {
+      "phrase": "是 一",
+      "token_count": 2,
+      "count": 8
+    },
+    {
+      "phrase": "也 不",
+      "token_count": 2,
+      "count": 8
+    },
+    {
+      "phrase": "一个 小店",
+      "token_count": 2,
+      "count": 8
+    },
+    {
+      "phrase": "不 能",
+      "token_count": 2,
+      "count": 8
+    },
+    {
+      "phrase": "个 产品",
+      "token_count": 2,
+      "count": 8
+    },
+    {
+      "phrase": "另 一个",
+      "token_count": 2,
+      "count": 8
+    },
+    {
+      "phrase": "店主 不",
+      "token_count": 2,
+      "count": 8
+    },
+    {
+      "phrase": "能 不能",
+      "token_count": 2,
+      "count": 8
+    },
+    {
+      "phrase": "不 只是",
+      "token_count": 2,
+      "count": 8
+    }
+  ],
+  "repeated_sentence_openings": [
+    {
+      "frame": "它 要 知道",
+      "count": 6
+    },
+    {
+      "frame": "这 就 是",
+      "count": 5
+    }
+  ],
+  "repeated_sentence_endings": [],
+  "known_risk_frames": [],
+  "warnings": [
+    {
+      "type": "repeated_phrase_frames",
+      "message": "High-count repeated phrase frames should be reviewed for mechanical rhythm.",
+      "items": [
+        {
+          "phrase": "不 是",
+          "token_count": 2,
+          "count": 41
+        },
+        {
+          "phrase": "好 的",
+          "token_count": 2,
+          "count": 17
+        },
+        {
+          "phrase": "小店 的",
+          "token_count": 2,
+          "count": 16
+        },
+        {
+          "phrase": "有 时",
+          "token_count": 2,
+          "count": 16
+        },
+        {
+          "phrase": "一 次",
+          "token_count": 2,
+          "count": 15
+        },
+        {
+          "phrase": "也 会",
+          "token_count": 2,
+          "count": 13
+        },
+        {
+          "phrase": "是 小店",
+          "token_count": 2,
+          "count": 13
+        },
+        {
+          "phrase": "活 下来",
+          "token_count": 2,
+          "count": 12
+        },
+        {
+          "phrase": "也 是",
+          "token_count": 2,
+          "count": 12
+        },
+        {
+          "phrase": "就 是",
+          "token_count": 2,
+          "count": 10
+        }
+      ]
+    },
+    {
+      "type": "repeated_sentence_frames",
+      "message": "Repeated sentence openings or endings can make chapters feel formulaic.",
+      "openings": [
+        {
+          "frame": "它 要 知道",
+          "count": 6
+        },
+        {
+          "frame": "这 就 是",
+          "count": 5
+        }
+      ],
+      "endings": []
+    }
+  ],
+  "style_revision_required": true,
+  "counts_are_revision_evidence_not_final_literary_judgment": true
+}

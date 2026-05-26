@@ -1,0 +1,28 @@
+{
+  "valid_vocabulary": true,
+  "unknown_token_count": 0,
+  "forbidden_unknown_tokens": 0,
+  "forbidden_unknown_tokens_over_limit": 0,
+  "vocabulary_profile": "public",
+  "learner_profile_name": null,
+  "personal_known_tokens": 0,
+  "unique_personal_known_words_used": 0,
+  "max_forbidden_unknown_tokens_per_chapter": 5,
+  "stretch_token_percent": 20.16,
+  "planning_files_present": true,
+  "expected_planning_file_count": 16,
+  "planning_file_count": 16,
+  "missing_chapter_planning_files": [],
+  "creative_preflight_path": "manuscripts\\small-shop-survival-economics\\creative_preflight.md",
+  "creative_preflight_present": true,
+  "style_revision_required": true,
+  "style_warning_count": 2,
+  "quality_approval": {
+    "approved": true,
+    "decision_path": "manuscripts\\small-shop-survival-economics\\quality\\lead_quality_decision.md",
+    "decision": "PASS",
+    "reason": "Approved by lead quality decision."
+  },
+  "ready_for_epub": true,
+  "public_quality_ready": false
+}

@@ -117,6 +117,8 @@ Machine-readable:
     "manuscripts/shanghai-spirit-lamp-case/quality/quality_gate_summary.json",
     "manuscripts/shanghai-shadow-bridge-case/vocabulary_report.json",
     "manuscripts/shanghai-shadow-bridge-case/quality/quality_gate_summary.json",
+    "manuscripts/small-shop-survival-economics/vocabulary_report.json",
+    "manuscripts/small-shop-survival-economics/quality/quality_gate_summary.json",
     "manuscripts/shanghai-rain-ticket/vocabulary_report.json",
     "manuscripts/shanghai-rain-ticket/quality/quality_gate_summary.json"
   ]
@@ -161,6 +163,8 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-spirit-lamp-case/quality/quality_gate_summary.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-shadow-bridge-case/vocabulary_report.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-shadow-bridge-case/quality/quality_gate_summary.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/vocabulary_report.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/quality/quality_gate_summary.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/vocabulary_report.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/quality/quality_gate_summary.json
 
@@ -202,6 +206,7 @@ Use these anchors before free-form browsing.
   "first_series_manuscript": "manuscripts/shanghai-rain-gate-crime",
   "second_series_manuscript": "manuscripts/shanghai-spirit-lamp-case",
   "third_series_manuscript": "manuscripts/shanghai-shadow-bridge-case",
+  "business_economics_nonfiction_manuscript": "manuscripts/small-shop-survival-economics",
   "current_story_trial": "manuscripts/shanghai-rain-ticket",
   "file_inventory": "reports/github-agent-index.md"
 }
@@ -253,6 +258,7 @@ Use these anchors before free-form browsing.
 | Prepare stretch words for Anki | `docs/anki-integration.md`, `scripts/export_stretch_words_for_anki.py` |
 | Complete stretch-pack metadata | `scripts/complete_stretch_pack_metadata.py`, `data/stretch_packs/metadata/` |
 | Plan business/economics readers | `docs/stretch-vocabulary.md`, `data/stretch_packs/business_economics_60.txt`, pass it with `--extra-pack` |
+| Inspect business/economics nonfiction example | `manuscripts/small-shop-survival-economics`, `manuscripts/small-shop-survival-economics/vocabulary_report.json` |
 | Mark existing Anki notes as stretch words | `scripts/import_stretch_words_to_anki.py --mark-existing-stretch` |
 | Check plot affordances for a premise | `scripts/plot_affordance_report.py` |
 | Mutate live Anki | `AGENTS.md`, then the exact update script |

@@ -17,6 +17,8 @@ This repository maintains a Chinese vocabulary Anki deck and a controlled-vocabu
 
 The 林安 series currently includes `manuscripts/shanghai-rain-gate-crime/` (`上海雨票案`), `manuscripts/shanghai-spirit-lamp-case/` (`上海灵灯案`), and `manuscripts/shanghai-shadow-bridge-case/` (`上海影子桥案`). Series continuity for its journalist protagonist lives in `series/an-lin/`.
 
+Standalone nonfiction includes `manuscripts/small-shop-survival-economics/` (`小店怎么活下来`), a public-mode business/economics graded reader about how a small Shanghai shop survives.
+
 ## Machine-Readable Entry Points
 
 Remote agents should start with:
