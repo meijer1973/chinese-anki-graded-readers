@@ -49,6 +49,16 @@
 - Case frame: 静海公司 uses insurance-contract pressure, money routes, hidden client pages, witness pressure, and financial paperwork to target vulnerable victims.
 - Outcome: 林安 exposes the method and evidence while protecting names, sources, and victims from becoming public spectacle.
 
+## Book 6: 上海失物柜案
+
+- Repository path: `manuscripts/shanghai-lost-property-locker-case/`
+- Status: sixth series manuscript imported from the writer agent and locally revalidated.
+- Core continuity: 林安 remains the journalist protagonist. 陈雨 remains the procedural police contact. 何青, 许白, 宋岚, 老赵, 阿洛, and 江小北 retain their established functions.
+- Fantasy mechanism: 失物柜 returns objects tied to what a person is losing. It is also framed as one of several 记录口 connected to a hidden civic memory/record system.
+- Case frame: 海安旧物公司 uses lost-property management, client contracts, passwords, intimidation, and corporate blackmail around a missing employee/source.
+- Arc movement: 白先生 / 白策 and 旧档会 become visible as institutional memory-control pressure, and prior mechanisms begin to connect into a larger pattern.
+- Outcome: 林安 preserves source protection while pushing publishable truth and refuses to let 白先生 control the rhythm of the case.
+
 ## Open Series Direction
 
-The next story should not restart 林安 from zero. It should treat her as someone who has already faced the rain-ticket case, the spirit-lamp case, the shadow-bridge case, the midnight-ringtone case, and the still-water list case, and now knows that a normal clue may have a hidden cost.
+The next story should not restart 林安 from zero. It should treat her as someone who has already faced the rain-ticket case, the spirit-lamp case, the shadow-bridge case, the midnight-ringtone case, the still-water list case, and the lost-property locker case, and now knows that a normal clue may have a hidden cost and may connect to a larger hidden record system.

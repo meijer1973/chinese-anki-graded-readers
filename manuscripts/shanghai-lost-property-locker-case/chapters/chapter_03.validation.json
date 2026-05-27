@@ -1,0 +1,702 @@
+{
+  "core_known_tokens": 343,
+  "personal_known_tokens": 27,
+  "general_fiction_stretch_tokens": 1,
+  "genre_stretch_tokens": 0,
+  "setting_stretch_tokens": 9,
+  "profession_stretch_tokens": 0,
+  "journalism_crime_stretch_tokens": 4,
+  "business_economics_stretch_tokens": 0,
+  "book_specific_stretch_tokens": 9,
+  "proper_noun_tokens": 31,
+  "forbidden_unknown_tokens": 0,
+  "max_forbidden_unknown_tokens_per_chapter": 5,
+  "forbidden_unknown_tokens_over_limit": 0,
+  "forbidden_unknown_tokens_allowed": true,
+  "core_coverage_percent": 80.9,
+  "known_token_percent": 87.26,
+  "stretch_token_percent": 12.74,
+  "unique_core_words_used": 155,
+  "unique_personal_known_words_used": 24,
+  "unique_stretch_words_used": 18,
+  "unique_proper_nouns_used": 7,
+  "stretch_words_used_once": [
+    "人民广场",
+    "包裹",
+    "南京路",
+    "失物",
+    "录像",
+    "旧物",
+    "正式",
+    "沉默",
+    "背包",
+    "语气",
+    "路口",
+    "采访",
+    "静水"
+  ],
+  "stretch_words_by_chapter": {
+    "chapter_03.zh-tok.txt": [
+      "人民广场",
+      "包裹",
+      "南京路",
+      "地铁站",
+      "失物",
+      "失物柜",
+      "录像",
+      "招牌",
+      "旧物",
+      "正式",
+      "水镜",
+      "沉默",
+      "背包",
+      "警察局",
+      "语气",
+      "路口",
+      "采访",
+      "静水"
+    ]
+  },
+  "new_stretch_words_by_chapter": {
+    "chapter_03.zh-tok.txt": [
+      "人民广场",
+      "包裹",
+      "南京路",
+      "地铁站",
+      "失物",
+      "失物柜",
+      "录像",
+      "招牌",
+      "旧物",
+      "正式",
+      "水镜",
+      "沉默",
+      "背包",
+      "警察局",
+      "语气",
+      "路口",
+      "采访",
+      "静水"
+    ]
+  },
+  "forbidden_unknown_token_frequency": {},
+  "warnings": [
+    {
+      "type": "stretch_words_used_once",
+      "message": "Approved stretch words used only once should be reviewed for meaningful repetition.",
+      "tokens": [
+        "人民广场",
+        "包裹",
+        "南京路",
+        "失物",
+        "录像",
+        "旧物",
+        "正式",
+        "沉默",
+        "背包",
+        "语气",
+        "路口",
+        "采访",
+        "静水"
+      ]
+    }
+  ],
+  "valid": true,
+  "line_count": 34,
+  "total_tokens": 424,
+  "unique_token_count": 204,
+  "unique_tokens": [
+    "一",
+    "一下",
+    "一个",
+    "三",
+    "上",
+    "下",
+    "下来",
+    "不",
+    "不要",
+    "东西",
+    "两",
+    "个",
+    "为",
+    "也",
+    "了",
+    "事",
+    "人",
+    "人民广场",
+    "仓库",
+    "他",
+    "件",
+    "会",
+    "但",
+    "你",
+    "偷",
+    "像",
+    "先",
+    "公司",
+    "关",
+    "内部",
+    "再",
+    "冷",
+    "几",
+    "出",
+    "出现",
+    "利用",
+    "到",
+    "包裹",
+    "南京路",
+    "却",
+    "压力",
+    "去",
+    "又",
+    "反",
+    "另",
+    "只",
+    "只有",
+    "可",
+    "可能",
+    "名字",
+    "后",
+    "向",
+    "听",
+    "吴梅",
+    "员工",
+    "和",
+    "哪个",
+    "哪里",
+    "回",
+    "回家",
+    "回答",
+    "因",
+    "因为",
+    "在",
+    "地铁站",
+    "声音",
+    "多",
+    "天",
+    "失物",
+    "失物柜",
+    "失踪",
+    "她",
+    "她们",
+    "好",
+    "如果",
+    "字",
+    "它",
+    "安全",
+    "安静",
+    "宋岚",
+    "客户",
+    "家人",
+    "小偷",
+    "小时",
+    "少",
+    "就",
+    "已经",
+    "带走",
+    "平",
+    "张",
+    "当",
+    "录像",
+    "很",
+    "律师",
+    "得",
+    "快",
+    "恐惧",
+    "想",
+    "想到",
+    "成",
+    "我",
+    "所以",
+    "手",
+    "手机",
+    "打电话",
+    "找",
+    "把",
+    "报",
+    "报纸",
+    "报警",
+    "招牌",
+    "拿",
+    "挂",
+    "指",
+    "接",
+    "控制",
+    "放",
+    "文件",
+    "方敏",
+    "旧物",
+    "时间",
+    "明天",
+    "昨天",
+    "昨晚",
+    "是",
+    "普通",
+    "曹卓",
+    "最后",
+    "有",
+    "有些",
+    "有人",
+    "来",
+    "林安",
+    "查",
+    "案",
+    "案子",
+    "次",
+    "正式",
+    "水",
+    "水镜",
+    "沉默",
+    "没有",
+    "活",
+    "海安旧物公司",
+    "清楚",
+    "物品",
+    "现在",
+    "玻璃",
+    "甚至",
+    "用",
+    "电话",
+    "的",
+    "监控",
+    "直接",
+    "相信",
+    "看",
+    "看上去",
+    "真",
+    "眼睛",
+    "着",
+    "知道",
+    "离开",
+    "种",
+    "秒",
+    "突然",
+    "笔",
+    "等",
+    "系统",
+    "经理",
+    "给",
+    "继续",
+    "背包",
+    "背后",
+    "自己",
+    "被",
+    "要",
+    "警",
+    "警察局",
+    "警方",
+    "让",
+    "证据",
+    "语气",
+    "说",
+    "走",
+    "路",
+    "路口",
+    "还",
+    "还有",
+    "进",
+    "送",
+    "那",
+    "那个",
+    "那些",
+    "那边",
+    "采访",
+    "里",
+    "钱",
+    "银行卡",
+    "闭",
+    "问",
+    "问题",
+    "陈雨",
+    "静水",
+    "面"
+  ],
+  "unknown_token_count": 0,
+  "unknown_unique_count": 0,
+  "unknown_token_frequency": {},
+  "violations": [],
+  "known_word_count": 1100,
+  "personal_known_word_count": 1553,
+  "personal_known_words_path": "data\\learner_profiles\\marcel\\personal_known_words.txt",
+  "vocabulary_profile": "personalized",
+  "learner_profile_name": "marcel",
+  "allowed_token_count": 2916,
+  "duplicate_stretch_words_already_core": [
+    "安静",
+    "怀疑",
+    "演员",
+    "答案"
+  ],
+  "duplicate_stretch_words_ignored": [
+    {
+      "word": "回忆",
+      "kept_layer": "personal_known",
+      "ignored_layer": "general_fiction_stretch",
+      "source": "data\\stretch_packs\\general_fiction_100.txt"
+    },
+    {
+      "word": "命运",
+      "kept_layer": "personal_known",
+      "ignored_layer": "general_fiction_stretch",
+      "source": "data\\stretch_packs\\general_fiction_100.txt"
+    },
+    {
+      "word": "真心",
+      "kept_layer": "personal_known",
+      "ignored_layer": "general_fiction_stretch",
+      "source": "data\\stretch_packs\\general_fiction_100.txt"
+    },
+    {
+      "word": "压力",
+      "kept_layer": "personal_known",
+      "ignored_layer": "general_fiction_stretch",
+      "source": "data\\stretch_packs\\general_fiction_100.txt"
+    },
+    {
+      "word": "记忆",
+      "kept_layer": "personal_known",
+      "ignored_layer": "general_fiction_stretch",
+      "source": "data\\stretch_packs\\general_fiction_100.txt"
+    },
+    {
+      "word": "等待",
+      "kept_layer": "personal_known",
+      "ignored_layer": "general_fiction_stretch",
+      "source": "data\\stretch_packs\\general_fiction_100.txt"
+    },
+    {
+      "word": "黑暗",
+      "kept_layer": "personal_known",
+      "ignored_layer": "general_fiction_stretch",
+      "source": "data\\stretch_packs\\general_fiction_100.txt"
+    },
+    {
+      "word": "伤口",
+      "kept_layer": "personal_known",
+      "ignored_layer": "general_fiction_stretch",
+      "source": "data\\stretch_packs\\general_fiction_100.txt"
+    },
+    {
+      "word": "温暖",
+      "kept_layer": "personal_known",
+      "ignored_layer": "general_fiction_stretch",
+      "source": "data\\stretch_packs\\general_fiction_100.txt"
+    },
+    {
+      "word": "回头",
+      "kept_layer": "personal_known",
+      "ignored_layer": "general_fiction_stretch",
+      "source": "data\\stretch_packs\\general_fiction_100.txt"
+    },
+    {
+      "word": "神秘",
+      "kept_layer": "personal_known",
+      "ignored_layer": "genre_stretch",
+      "source": "data\\stretch_packs\\low_fantasy_150.txt"
+    },
+    {
+      "word": "隐藏",
+      "kept_layer": "personal_known",
+      "ignored_layer": "genre_stretch",
+      "source": "data\\stretch_packs\\low_fantasy_150.txt"
+    },
+    {
+      "word": "梦境",
+      "kept_layer": "personal_known",
+      "ignored_layer": "genre_stretch",
+      "source": "data\\stretch_packs\\low_fantasy_150.txt"
+    },
+    {
+      "word": "地铁",
+      "kept_layer": "personal_known",
+      "ignored_layer": "setting_stretch",
+      "source": "data\\stretch_packs\\shanghai_setting_150.txt"
+    },
+    {
+      "word": "车站",
+      "kept_layer": "personal_known",
+      "ignored_layer": "setting_stretch",
+      "source": "data\\stretch_packs\\shanghai_setting_150.txt"
+    },
+    {
+      "word": "公园",
+      "kept_layer": "personal_known",
+      "ignored_layer": "setting_stretch",
+      "source": "data\\stretch_packs\\shanghai_setting_150.txt"
+    },
+    {
+      "word": "屋顶",
+      "kept_layer": "personal_known",
+      "ignored_layer": "setting_stretch",
+      "source": "data\\stretch_packs\\shanghai_setting_150.txt"
+    },
+    {
+      "word": "饭店",
+      "kept_layer": "personal_known",
+      "ignored_layer": "setting_stretch",
+      "source": "data\\stretch_packs\\shanghai_setting_150.txt"
+    },
+    {
+      "word": "酒店",
+      "kept_layer": "personal_known",
+      "ignored_layer": "setting_stretch",
+      "source": "data\\stretch_packs\\shanghai_setting_150.txt"
+    },
+    {
+      "word": "雨",
+      "kept_layer": "personal_known",
+      "ignored_layer": "setting_stretch",
+      "source": "data\\stretch_packs\\shanghai_setting_150.txt"
+    },
+    {
+      "word": "灯",
+      "kept_layer": "personal_known",
+      "ignored_layer": "setting_stretch",
+      "source": "data\\stretch_packs\\shanghai_setting_150.txt"
+    },
+    {
+      "word": "影子",
+      "kept_layer": "personal_known",
+      "ignored_layer": "setting_stretch",
+      "source": "data\\stretch_packs\\shanghai_setting_150.txt"
+    },
+    {
+      "word": "广场",
+      "kept_layer": "personal_known",
+      "ignored_layer": "setting_stretch",
+      "source": "data\\stretch_packs\\shanghai_setting_150.txt"
+    },
+    {
+      "word": "出租车",
+      "kept_layer": "personal_known",
+      "ignored_layer": "setting_stretch",
+      "source": "data\\stretch_packs\\shanghai_setting_150.txt"
+    },
+    {
+      "word": "商店",
+      "kept_layer": "personal_known",
+      "ignored_layer": "setting_stretch",
+      "source": "data\\stretch_packs\\shanghai_setting_150.txt"
+    },
+    {
+      "word": "电梯",
+      "kept_layer": "personal_known",
+      "ignored_layer": "setting_stretch",
+      "source": "data\\stretch_packs\\shanghai_setting_150.txt"
+    },
+    {
+      "word": "楼梯",
+      "kept_layer": "personal_known",
+      "ignored_layer": "setting_stretch",
+      "source": "data\\stretch_packs\\shanghai_setting_150.txt"
+    },
+    {
+      "word": "夜晚",
+      "kept_layer": "personal_known",
+      "ignored_layer": "setting_stretch",
+      "source": "data\\stretch_packs\\shanghai_setting_150.txt"
+    },
+    {
+      "word": "作家",
+      "kept_layer": "personal_known",
+      "ignored_layer": "profession_stretch",
+      "source": "data\\stretch_packs\\professions_social_roles_100.txt"
+    },
+    {
+      "word": "司机",
+      "kept_layer": "personal_known",
+      "ignored_layer": "profession_stretch",
+      "source": "data\\stretch_packs\\professions_social_roles_100.txt"
+    },
+    {
+      "word": "保安",
+      "kept_layer": "personal_known",
+      "ignored_layer": "profession_stretch",
+      "source": "data\\stretch_packs\\professions_social_roles_100.txt"
+    },
+    {
+      "word": "记者",
+      "kept_layer": "personal_known",
+      "ignored_layer": "profession_stretch",
+      "source": "data\\stretch_packs\\professions_social_roles_100.txt"
+    },
+    {
+      "word": "护士",
+      "kept_layer": "personal_known",
+      "ignored_layer": "profession_stretch",
+      "source": "data\\stretch_packs\\professions_social_roles_100.txt"
+    },
+    {
+      "word": "警卫",
+      "kept_layer": "personal_known",
+      "ignored_layer": "profession_stretch",
+      "source": "data\\stretch_packs\\professions_social_roles_100.txt"
+    },
+    {
+      "word": "经理",
+      "kept_layer": "personal_known",
+      "ignored_layer": "profession_stretch",
+      "source": "data\\stretch_packs\\professions_social_roles_100.txt"
+    },
+    {
+      "word": "报道",
+      "kept_layer": "personal_known",
+      "ignored_layer": "journalism_crime_stretch",
+      "source": "data\\stretch_packs\\journalism_crime_50.txt"
+    },
+    {
+      "word": "报纸",
+      "kept_layer": "personal_known",
+      "ignored_layer": "journalism_crime_stretch",
+      "source": "data\\stretch_packs\\journalism_crime_50.txt"
+    },
+    {
+      "word": "网站",
+      "kept_layer": "personal_known",
+      "ignored_layer": "journalism_crime_stretch",
+      "source": "data\\stretch_packs\\journalism_crime_50.txt"
+    },
+    {
+      "word": "发表",
+      "kept_layer": "personal_known",
+      "ignored_layer": "journalism_crime_stretch",
+      "source": "data\\stretch_packs\\journalism_crime_50.txt"
+    },
+    {
+      "word": "邮件",
+      "kept_layer": "personal_known",
+      "ignored_layer": "journalism_crime_stretch",
+      "source": "data\\stretch_packs\\journalism_crime_50.txt"
+    },
+    {
+      "word": "公开",
+      "kept_layer": "personal_known",
+      "ignored_layer": "journalism_crime_stretch",
+      "source": "data\\stretch_packs\\journalism_crime_50.txt"
+    },
+    {
+      "word": "文件",
+      "kept_layer": "personal_known",
+      "ignored_layer": "journalism_crime_stretch",
+      "source": "data\\stretch_packs\\journalism_crime_50.txt"
+    },
+    {
+      "word": "资料",
+      "kept_layer": "personal_known",
+      "ignored_layer": "journalism_crime_stretch",
+      "source": "data\\stretch_packs\\journalism_crime_50.txt"
+    },
+    {
+      "word": "拍照",
+      "kept_layer": "personal_known",
+      "ignored_layer": "journalism_crime_stretch",
+      "source": "data\\stretch_packs\\journalism_crime_50.txt"
+    },
+    {
+      "word": "密码",
+      "kept_layer": "personal_known",
+      "ignored_layer": "journalism_crime_stretch",
+      "source": "data\\stretch_packs\\journalism_crime_50.txt"
+    },
+    {
+      "word": "机密",
+      "kept_layer": "personal_known",
+      "ignored_layer": "journalism_crime_stretch",
+      "source": "data\\stretch_packs\\journalism_crime_50.txt"
+    },
+    {
+      "word": "案件",
+      "kept_layer": "personal_known",
+      "ignored_layer": "journalism_crime_stretch",
+      "source": "data\\stretch_packs\\journalism_crime_50.txt"
+    },
+    {
+      "word": "证人",
+      "kept_layer": "personal_known",
+      "ignored_layer": "journalism_crime_stretch",
+      "source": "data\\stretch_packs\\journalism_crime_50.txt"
+    },
+    {
+      "word": "警方",
+      "kept_layer": "personal_known",
+      "ignored_layer": "journalism_crime_stretch",
+      "source": "data\\stretch_packs\\journalism_crime_50.txt"
+    },
+    {
+      "word": "报警",
+      "kept_layer": "personal_known",
+      "ignored_layer": "journalism_crime_stretch",
+      "source": "data\\stretch_packs\\journalism_crime_50.txt"
+    },
+    {
+      "word": "搜查",
+      "kept_layer": "personal_known",
+      "ignored_layer": "journalism_crime_stretch",
+      "source": "data\\stretch_packs\\journalism_crime_50.txt"
+    },
+    {
+      "word": "搜索",
+      "kept_layer": "personal_known",
+      "ignored_layer": "journalism_crime_stretch",
+      "source": "data\\stretch_packs\\journalism_crime_50.txt"
+    },
+    {
+      "word": "保密",
+      "kept_layer": "personal_known",
+      "ignored_layer": "journalism_crime_stretch",
+      "source": "data\\stretch_packs\\journalism_crime_50.txt"
+    },
+    {
+      "word": "地图",
+      "kept_layer": "personal_known",
+      "ignored_layer": "setting_stretch",
+      "source": "data\\stretch_packs\\urban_objects_100.txt"
+    },
+    {
+      "word": "监控",
+      "kept_layer": "personal_known",
+      "ignored_layer": "setting_stretch",
+      "source": "data\\stretch_packs\\urban_objects_100.txt"
+    },
+    {
+      "word": "自行车",
+      "kept_layer": "personal_known",
+      "ignored_layer": "setting_stretch",
+      "source": "data\\stretch_packs\\urban_objects_100.txt"
+    },
+    {
+      "word": "钟",
+      "kept_layer": "personal_known",
+      "ignored_layer": "setting_stretch",
+      "source": "data\\stretch_packs\\urban_objects_100.txt"
+    },
+    {
+      "word": "镜子",
+      "kept_layer": "personal_known",
+      "ignored_layer": "setting_stretch",
+      "source": "data\\stretch_packs\\urban_objects_100.txt"
+    },
+    {
+      "word": "口袋",
+      "kept_layer": "personal_known",
+      "ignored_layer": "setting_stretch",
+      "source": "data\\stretch_packs\\urban_objects_100.txt"
+    },
+    {
+      "word": "玻璃",
+      "kept_layer": "personal_known",
+      "ignored_layer": "setting_stretch",
+      "source": "data\\stretch_packs\\urban_objects_100.txt"
+    },
+    {
+      "word": "窗",
+      "kept_layer": "personal_known",
+      "ignored_layer": "setting_stretch",
+      "source": "data\\stretch_packs\\urban_objects_100.txt"
+    }
+  ],
+  "schema_version": 4,
+  "generated_at": "2026-05-27T12:23:36Z",
+  "chapter_path": "manuscripts\\shanghai-lost-property-locker-case\\chapters\\chapter_03.zh-tok.txt",
+  "known_words_path": "data\\known_words.txt"
+}

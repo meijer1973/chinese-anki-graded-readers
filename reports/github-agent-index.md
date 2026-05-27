@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki And Graded Readers
 
-Generated: 2026-05-27T11:47:03Z
+Generated: 2026-05-27T12:27:43Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 662
+Files indexed: 743
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -150,7 +150,7 @@ Count: 2
 
 ## manuscripts
 
-Count: 546
+Count: 627
 
 - manuscripts/README.md
 - manuscripts/sample-known-words/chapters/chapter_01.validation.json
@@ -170,6 +170,87 @@ Count: 546
 - manuscripts/sample-known-words/quality/vocabulary_usage_report.json
 - manuscripts/sample-known-words/vocabulary_report.json
 - manuscripts/sample-known-words/vocabulary_report.md
+- manuscripts/shanghai-lost-property-locker-case/book_specific_words.txt
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_01.validation.json
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_01.zh-tok.txt
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_02.validation.json
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_02.zh-tok.txt
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_03.validation.json
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_03.zh-tok.txt
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_04.validation.json
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_04.zh-tok.txt
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_05.validation.json
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_05.zh-tok.txt
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_06.validation.json
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_06.zh-tok.txt
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_07.validation.json
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_07.zh-tok.txt
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_08.validation.json
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_08.zh-tok.txt
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_09.validation.json
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_09.zh-tok.txt
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_10.validation.json
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_10.zh-tok.txt
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_11.validation.json
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_11.zh-tok.txt
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_12.validation.json
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_12.zh-tok.txt
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_13.validation.json
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_13.zh-tok.txt
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_14.validation.json
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_14.zh-tok.txt
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_15.validation.json
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_15.zh-tok.txt
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_16.validation.json
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_16.zh-tok.txt
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_17.validation.json
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_17.zh-tok.txt
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_18.validation.json
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_18.zh-tok.txt
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_19.validation.json
+- manuscripts/shanghai-lost-property-locker-case/chapters/chapter_19.zh-tok.txt
+- manuscripts/shanghai-lost-property-locker-case/characters.md
+- manuscripts/shanghai-lost-property-locker-case/continuity_log.md
+- manuscripts/shanghai-lost-property-locker-case/creative_preflight.md
+- manuscripts/shanghai-lost-property-locker-case/epub/build_report.json
+- manuscripts/shanghai-lost-property-locker-case/epub/shanghai-lost-property-locker-case.epub
+- manuscripts/shanghai-lost-property-locker-case/novel_bible.md
+- manuscripts/shanghai-lost-property-locker-case/outline.md
+- manuscripts/shanghai-lost-property-locker-case/planning/chapter_01_vocab_plan.md
+- manuscripts/shanghai-lost-property-locker-case/planning/chapter_02_vocab_plan.md
+- manuscripts/shanghai-lost-property-locker-case/planning/chapter_03_vocab_plan.md
+- manuscripts/shanghai-lost-property-locker-case/planning/chapter_04_vocab_plan.md
+- manuscripts/shanghai-lost-property-locker-case/planning/chapter_05_vocab_plan.md
+- manuscripts/shanghai-lost-property-locker-case/planning/chapter_06_vocab_plan.md
+- manuscripts/shanghai-lost-property-locker-case/planning/chapter_07_vocab_plan.md
+- manuscripts/shanghai-lost-property-locker-case/planning/chapter_08_vocab_plan.md
+- manuscripts/shanghai-lost-property-locker-case/planning/chapter_09_vocab_plan.md
+- manuscripts/shanghai-lost-property-locker-case/planning/chapter_10_vocab_plan.md
+- manuscripts/shanghai-lost-property-locker-case/planning/chapter_11_vocab_plan.md
+- manuscripts/shanghai-lost-property-locker-case/planning/chapter_12_vocab_plan.md
+- manuscripts/shanghai-lost-property-locker-case/planning/chapter_13_vocab_plan.md
+- manuscripts/shanghai-lost-property-locker-case/planning/chapter_14_vocab_plan.md
+- manuscripts/shanghai-lost-property-locker-case/planning/chapter_15_vocab_plan.md
+- manuscripts/shanghai-lost-property-locker-case/planning/chapter_16_vocab_plan.md
+- manuscripts/shanghai-lost-property-locker-case/planning/chapter_17_vocab_plan.md
+- manuscripts/shanghai-lost-property-locker-case/planning/chapter_18_vocab_plan.md
+- manuscripts/shanghai-lost-property-locker-case/planning/chapter_19_vocab_plan.md
+- manuscripts/shanghai-lost-property-locker-case/proper_nouns.txt
+- manuscripts/shanghai-lost-property-locker-case/quality/chapter_structure_report.json
+- manuscripts/shanghai-lost-property-locker-case/quality/continuity_review.md
+- manuscripts/shanghai-lost-property-locker-case/quality/lead_quality_decision.md
+- manuscripts/shanghai-lost-property-locker-case/quality/literary_critic_report.md
+- manuscripts/shanghai-lost-property-locker-case/quality/literary_critic_review.md
+- manuscripts/shanghai-lost-property-locker-case/quality/normal_reader_report.md
+- manuscripts/shanghai-lost-property-locker-case/quality/normal_reader_review.md
+- manuscripts/shanghai-lost-property-locker-case/quality/prose_variety_report.json
+- manuscripts/shanghai-lost-property-locker-case/quality/quality_gate_summary.json
+- manuscripts/shanghai-lost-property-locker-case/quality/repeated_phrase_report.json
+- manuscripts/shanghai-lost-property-locker-case/quality/vocabulary_usage_report.json
+- manuscripts/shanghai-lost-property-locker-case/remote_continuity_note.md
+- manuscripts/shanghai-lost-property-locker-case/stretch_word_exposure.md
+- manuscripts/shanghai-lost-property-locker-case/vocabulary_report.json
+- manuscripts/shanghai-lost-property-locker-case/vocabulary_report.md
 - manuscripts/shanghai-midnight-ringtone-case/README.md
 - manuscripts/shanghai-midnight-ringtone-case/book_specific_words.txt
 - manuscripts/shanghai-midnight-ringtone-case/chapters/chapter_01.validation.json

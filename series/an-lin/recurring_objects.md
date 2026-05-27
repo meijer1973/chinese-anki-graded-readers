@@ -11,6 +11,9 @@
 - 静水
 - 水镜
 - 名单
+- 失物柜
+- 记录口
+- 旧城门
 
 ## Approved Recurring Evidence Objects
 
@@ -27,6 +30,9 @@
 - 名片
 - 保险箱
 - 账号
+- 密码
+- 包
+- 钥匙
 
 ## Object Guidance
 

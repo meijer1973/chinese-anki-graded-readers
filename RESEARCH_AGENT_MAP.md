@@ -121,6 +121,8 @@ Machine-readable:
     "manuscripts/shanghai-midnight-ringtone-case/quality/quality_gate_summary.json",
     "manuscripts/shanghai-still-water-list-case-revised/vocabulary_report.json",
     "manuscripts/shanghai-still-water-list-case-revised/quality/quality_gate_summary.json",
+    "manuscripts/shanghai-lost-property-locker-case/vocabulary_report.json",
+    "manuscripts/shanghai-lost-property-locker-case/quality/quality_gate_summary.json",
     "manuscripts/small-shop-survival-economics/vocabulary_report.json",
     "manuscripts/small-shop-survival-economics/quality/quality_gate_summary.json",
     "manuscripts/shanghai-rain-ticket/vocabulary_report.json",
@@ -171,6 +173,8 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-midnight-ringtone-case/quality/quality_gate_summary.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/vocabulary_report.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/quality/quality_gate_summary.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-lost-property-locker-case/vocabulary_report.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-lost-property-locker-case/quality/quality_gate_summary.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/vocabulary_report.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/quality/quality_gate_summary.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/vocabulary_report.json
@@ -216,6 +220,7 @@ Use these anchors before free-form browsing.
   "third_series_manuscript": "manuscripts/shanghai-shadow-bridge-case",
   "fourth_series_manuscript": "manuscripts/shanghai-midnight-ringtone-case",
   "fifth_series_manuscript": "manuscripts/shanghai-still-water-list-case-revised",
+  "sixth_series_manuscript": "manuscripts/shanghai-lost-property-locker-case",
   "business_economics_nonfiction_manuscript": "manuscripts/small-shop-survival-economics",
   "current_story_trial": "manuscripts/shanghai-rain-ticket",
   "file_inventory": "reports/github-agent-index.md"
@@ -261,7 +266,7 @@ Use these anchors before free-form browsing.
 | Plan a new story | `.agents/skills/chinese-graded-novel-planning/SKILL.md`, `docs/novel-generation.md` |
 | Run creative preflight | `docs/creative-preflight.md` |
 | Plan a 林安 sequel | `series/an-lin/series_bible.md`, `series/an-lin/sequel_constraints.md`, `data/stretch_packs/journalism_crime_50.txt` |
-| Inspect current 林安 series continuity | `series/an-lin/chronology.md`, `manuscripts/shanghai-still-water-list-case-revised/vocabulary_report.json`, `manuscripts/shanghai-still-water-list-case-revised/quality/quality_gate_summary.json` |
+| Inspect current 林安 series continuity | `series/an-lin/chronology.md`, `manuscripts/shanghai-lost-property-locker-case/vocabulary_report.json`, `manuscripts/shanghai-lost-property-locker-case/quality/quality_gate_summary.json` |
 | Draft or revise a chapter | `.agents/skills/chinese-restricted-vocabulary-writing/SKILL.md` |
 | Polish prose variety | `.agents/skills/chinese-prose-variety-polish/SKILL.md`, `docs/style-bank-controlled-chinese.md`, `scripts/prose_variety_report.py` |
 | Review literary quality | `.agents/skills/chinese-literary-critic/SKILL.md`, `.agents/skills/chinese-normal-reader-review/SKILL.md`, `.agents/skills/chinese-lead-quality-review/SKILL.md` |

@@ -54,6 +54,8 @@
     "manuscripts/shanghai-midnight-ringtone-case/quality/quality_gate_summary.json",
     "manuscripts/shanghai-still-water-list-case-revised/vocabulary_report.json",
     "manuscripts/shanghai-still-water-list-case-revised/quality/quality_gate_summary.json",
+    "manuscripts/shanghai-lost-property-locker-case/vocabulary_report.json",
+    "manuscripts/shanghai-lost-property-locker-case/quality/quality_gate_summary.json",
     "manuscripts/small-shop-survival-economics/vocabulary_report.json",
     "manuscripts/small-shop-survival-economics/quality/quality_gate_summary.json",
     "manuscripts/shanghai-rain-ticket/vocabulary_report.json",
@@ -119,6 +121,7 @@
       "manuscripts/shanghai-shadow-bridge-case",
       "manuscripts/shanghai-midnight-ringtone-case",
       "manuscripts/shanghai-still-water-list-case-revised",
+      "manuscripts/shanghai-lost-property-locker-case",
       "manuscripts/small-shop-survival-economics",
       "manuscripts/shanghai-rain-ticket"
     ],

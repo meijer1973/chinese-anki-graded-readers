@@ -54,3 +54,8 @@ Avoid making every important person a teacher, doctor, student, or generic polic
 - 黄姨: affected client whose family illness reveals the emotional mechanism in `上海静水名单案`.
 - 程远: public-facing manager from `上海静水名单案`.
 - 陆静: finance director and main operator from `上海静水名单案`.
+- 吴梅: station guard and witness from `上海失物柜案`.
+- 方敏: company employee, protected source, and missing witness from `上海失物柜案`.
+- 夏宁: victimized shop owner/client from `上海失物柜案`.
+- 曹卓: visible corporate antagonist from `上海失物柜案`.
+- 白先生 / 白策: emerging arc antagonist from `上海失物柜案`; a former journalist who now tries to manage truth through hidden records.

@@ -20,6 +20,9 @@ Use recurring locations as story tools, not decoration.
 - warehouse
 - library basement
 - company office
+- lost-property office or locker area
+- old-object company
+- newsroom/archive connection
 
 ## Location Continuity Guidance
 
