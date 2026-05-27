@@ -40,6 +40,15 @@
 - Case frame: stolen voice recordings, false contracts, bank/client pressure, a dead hacker/source, black-market help, and a visible suspect hiding a deeper operator.
 - Outcome: 林安 uses reporting ethics to protect witnesses, separates fantasy clues from publishable evidence, and treats the final article as a moral decision rather than a simple victory.
 
+## Book 5: 上海静水名单案
+
+- Repository path: `manuscripts/shanghai-still-water-list-case-revised/`
+- Status: revised fifth series manuscript imported from the writer agent, locally revalidated, and repaired from 74 microchapters into 13 story chapters.
+- Core continuity: 林安 remains the journalist protagonist. 陈雨 remains the recurring police contact. 何青 remains the editor/newsroom pressure. 许白, 宋岚, 阿洛, 周明, and 老赵 remain available as continuity-linked contacts.
+- Fantasy mechanism: 静水 and 水镜 reveal a 名单 of people whose fear can be exploited. The list guides investigation but should not be published directly.
+- Case frame: 静海公司 uses insurance-contract pressure, money routes, hidden client pages, witness pressure, and financial paperwork to target vulnerable victims.
+- Outcome: 林安 exposes the method and evidence while protecting names, sources, and victims from becoming public spectacle.
+
 ## Open Series Direction
 
-The next story should not restart 林安 from zero. It should treat her as someone who has already faced the rain-ticket case, the spirit-lamp case, the shadow-bridge case, and the midnight-ringtone case, and now knows that a normal clue may have a hidden cost.
+The next story should not restart 林安 from zero. It should treat her as someone who has already faced the rain-ticket case, the spirit-lamp case, the shadow-bridge case, the midnight-ringtone case, and the still-water list case, and now knows that a normal clue may have a hidden cost.

@@ -48,3 +48,9 @@ Avoid making every important person a teacher, doctor, student, or generic polic
 - 江小北: photographer from `上海零点铃声案`.
 - 赵晴: affected client from `上海零点铃声案`.
 - 周明: bank manager from `上海零点铃声案`.
+- 赵梅 / 赵叔: first reader-source family from `上海静水名单案`.
+- 吴叔: compromised guard turned witness from `上海静水名单案`.
+- 黄平: planted counter-witness who becomes another exploited person in `上海静水名单案`.
+- 黄姨: affected client whose family illness reveals the emotional mechanism in `上海静水名单案`.
+- 程远: public-facing manager from `上海静水名单案`.
+- 陆静: finance director and main operator from `上海静水名单案`.

@@ -1,0 +1,9 @@
+{
+  "status": "PASS",
+  "original_chapter_count": 74,
+  "revised_chapter_count": 13,
+  "average_word_tokens_per_chapter": 550.46,
+  "min_word_tokens": 462,
+  "max_word_tokens": 721,
+  "repair": "Microchapters consolidated into story chapters."
+}

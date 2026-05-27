@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "journalism_actions": [
+    "reader comments",
+    "interviews",
+    "bank-source protection",
+    "undercover observation",
+    "document verification",
+    "public article",
+    "follow-up practical article"
+  ],
+  "crime_affordances": [
+    "insurance fraud",
+    "money route",
+    "planted counter-witness",
+    "forged/pressured contracts",
+    "hidden page",
+    "warehouse evidence",
+    "police search",
+    "testimony"
+  ],
+  "fantasy_affordances": [
+    "still water list",
+    "water mirror",
+    "name as vulnerability signal",
+    "fantasy clue separated from legal proof"
+  ],
+  "locations": [
+    "office",
+    "old apartment",
+    "market",
+    "bank",
+    "company building",
+    "warehouse",
+    "library basement",
+    "river bank",
+    "police station",
+    "park"
+  ]
+}

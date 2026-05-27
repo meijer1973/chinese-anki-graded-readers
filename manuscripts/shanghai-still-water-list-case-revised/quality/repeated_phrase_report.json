@@ -1,0 +1,1449 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-05-27T11:46:53Z",
+  "chapters_path": "manuscripts\\shanghai-still-water-list-case-revised\\chapters",
+  "min_count": 3,
+  "repeated_phrases": [
+    {
+      "phrase": "不 是",
+      "token_count": 2,
+      "count": 52,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "high"
+    },
+    {
+      "phrase": "看 着",
+      "token_count": 2,
+      "count": 27,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "high"
+    },
+    {
+      "phrase": "一 个",
+      "token_count": 2,
+      "count": 26,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "high"
+    },
+    {
+      "phrase": "林安 看",
+      "token_count": 2,
+      "count": 22,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "high"
+    },
+    {
+      "phrase": "林安 把",
+      "token_count": 2,
+      "count": 22,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "high"
+    },
+    {
+      "phrase": "的 名字",
+      "token_count": 2,
+      "count": 19,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_12.zh-tok.txt"
+      ],
+      "warning_level": "high"
+    },
+    {
+      "phrase": "静海 公司",
+      "token_count": 2,
+      "count": 18,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "high"
+    },
+    {
+      "phrase": "句 话",
+      "token_count": 2,
+      "count": 17,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_02.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "high"
+    },
+    {
+      "phrase": "林安 没有",
+      "token_count": 2,
+      "count": 17,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_12.zh-tok.txt"
+      ],
+      "warning_level": "high"
+    },
+    {
+      "phrase": "的 人",
+      "token_count": 2,
+      "count": 17,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "high"
+    },
+    {
+      "phrase": "打 开",
+      "token_count": 2,
+      "count": 16,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "high"
+    },
+    {
+      "phrase": "他 说",
+      "token_count": 2,
+      "count": 16,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "high"
+    },
+    {
+      "phrase": "水 里",
+      "token_count": 2,
+      "count": 14,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "high"
+    },
+    {
+      "phrase": "很 多",
+      "token_count": 2,
+      "count": 14,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "high"
+    },
+    {
+      "phrase": "她 说",
+      "token_count": 2,
+      "count": 13,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "high"
+    },
+    {
+      "phrase": "后 面",
+      "token_count": 2,
+      "count": 13,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "high"
+    },
+    {
+      "phrase": "林安 问",
+      "token_count": 2,
+      "count": 13,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_12.zh-tok.txt"
+      ],
+      "warning_level": "high"
+    },
+    {
+      "phrase": "放 在",
+      "token_count": 2,
+      "count": 12,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "high"
+    },
+    {
+      "phrase": "第 一",
+      "token_count": 2,
+      "count": 12,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "high"
+    },
+    {
+      "phrase": "一 次",
+      "token_count": 2,
+      "count": 12,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "high"
+    },
+    {
+      "phrase": "这 句",
+      "token_count": 2,
+      "count": 12,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "high"
+    },
+    {
+      "phrase": "桌 上",
+      "token_count": 2,
+      "count": 11,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_02.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "她 没有",
+      "token_count": 2,
+      "count": 11,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "这 是",
+      "token_count": 2,
+      "count": 11,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "水 面",
+      "token_count": 2,
+      "count": 11,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "她 把",
+      "token_count": 2,
+      "count": 10,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "的 声音",
+      "token_count": 2,
+      "count": 10,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_11.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "公司 的",
+      "token_count": 2,
+      "count": 10,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "是 一",
+      "token_count": 2,
+      "count": 10,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_12.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "说 我",
+      "token_count": 2,
+      "count": 10,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "这 不",
+      "token_count": 2,
+      "count": 10,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "碗 水",
+      "token_count": 2,
+      "count": 9,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "了 一下",
+      "token_count": 2,
+      "count": 9,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "一 张",
+      "token_count": 2,
+      "count": 9,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "个 字",
+      "token_count": 2,
+      "count": 9,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "很 久",
+      "token_count": 2,
+      "count": 9,
+      "chapters": [
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "有人 说",
+      "token_count": 2,
+      "count": 9,
+      "chapters": [
+        "chapter_05.zh-tok.txt",
+        "chapter_12.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "看 了",
+      "token_count": 2,
+      "count": 8,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_02.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "变 成",
+      "token_count": 2,
+      "count": 8,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_12.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "把 一",
+      "token_count": 2,
+      "count": 8,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_12.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "的 水",
+      "token_count": 2,
+      "count": 8,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "有 人",
+      "token_count": 2,
+      "count": 8,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "不 知道",
+      "token_count": 2,
+      "count": 8,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_11.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "站 在",
+      "token_count": 2,
+      "count": 8,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "人 的",
+      "token_count": 2,
+      "count": 8,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "了 她",
+      "token_count": 2,
+      "count": 8,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "了 林安",
+      "token_count": 2,
+      "count": 8,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_12.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "你 的",
+      "token_count": 2,
+      "count": 8,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "陈雨 说",
+      "token_count": 2,
+      "count": 8,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_12.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "我 不",
+      "token_count": 2,
+      "count": 8,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_12.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "笑 了",
+      "token_count": 2,
+      "count": 8,
+      "chapters": [
+        "chapter_04.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "里 的",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_12.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "这 次",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "里 有",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "面 的",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_02.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "上 有",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "白 碗",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_10.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "坐 在",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_12.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "写 下",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "的 话",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "的 合同",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_12.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "也 不",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "他 看",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "让 人",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_11.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "两 个",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "那 是",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_11.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "上 的",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_10.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "不 会",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "水 碗",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "放 进",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "也 有",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_12.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "何青 看",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_12.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "三 个",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "问 你",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_12.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "林安 想",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "客户 资料",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_11.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "何青 说",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_04.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "着 她",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_04.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_12.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "林安 说",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_04.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_12.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "找 到",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_05.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_12.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "给 林安",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_05.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "发 来",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_05.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "一 句",
+      "token_count": 2,
+      "count": 6,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "林安 的",
+      "token_count": 2,
+      "count": 6,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_11.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "说 林安",
+      "token_count": 2,
+      "count": 6,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_06.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "没有 回答",
+      "token_count": 2,
+      "count": 6,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "我 爸",
+      "token_count": 2,
+      "count": 6,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "水 水",
+      "token_count": 2,
+      "count": 6,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_07.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "看 向",
+      "token_count": 2,
+      "count": 6,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_11.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "得 很",
+      "token_count": 2,
+      "count": 6,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_06.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "是 记者",
+      "token_count": 2,
+      "count": 6,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "觉得 这",
+      "token_count": 2,
+      "count": 6,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "林安 站",
+      "token_count": 2,
+      "count": 6,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "很 快",
+      "token_count": 2,
+      "count": 6,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_12.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "不 想",
+      "token_count": 2,
+      "count": 6,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "篇 文章",
+      "token_count": 2,
+      "count": 6,
+      "chapters": [
+        "chapter_04.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_12.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "也 没有",
+      "token_count": 2,
+      "count": 6,
+      "chapters": [
+        "chapter_04.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "有 没有",
+      "token_count": 2,
+      "count": 6,
+      "chapters": [
+        "chapter_04.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "你 不",
+      "token_count": 2,
+      "count": 6,
+      "chapters": [
+        "chapter_04.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "说 你",
+      "token_count": 2,
+      "count": 6,
+      "chapters": [
+        "chapter_04.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_10.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    }
+  ],
+  "phrase_repetition_warning": true
+}

@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-26T16:55:27Z",
+  "generated_at": "2026-05-27T11:47:03Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 599,
+  "file_count": 662,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -2343,6 +2343,321 @@
     {
       "path": "manuscripts/shanghai-spirit-lamp-case/vocabulary_report.json",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-spirit-lamp-case/vocabulary_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/README.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/README.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/book_specific_words.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/book_specific_words.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_01.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_01.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_01.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_01.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_02.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_02.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_02.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_02.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_03.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_03.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_03.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_03.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_04.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_04.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_04.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_04.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_05.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_05.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_05.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_05.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_06.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_06.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_06.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_06.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_07.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_07.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_07.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_07.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_08.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_08.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_08.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_08.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_09.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_09.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_09.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_09.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_10.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_10.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_10.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_10.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_11.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_11.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_11.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_11.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_12.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_12.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_12.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_12.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_13.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_13.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_13.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_13.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/characters.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/characters.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/continuity_log.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/continuity_log.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/creative_preflight.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/creative_preflight.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/epub/build_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/epub/build_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/epub/shanghai-still-water-list-case-revised.epub",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/epub/shanghai-still-water-list-case-revised.epub",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/novel_bible.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/novel_bible.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/outline.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/outline.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/planning/chapter_01_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/planning/chapter_01_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/planning/chapter_02_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/planning/chapter_02_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/planning/chapter_03_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/planning/chapter_03_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/planning/chapter_04_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/planning/chapter_04_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/planning/chapter_05_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/planning/chapter_05_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/planning/chapter_06_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/planning/chapter_06_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/planning/chapter_07_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/planning/chapter_07_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/planning/chapter_08_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/planning/chapter_08_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/planning/chapter_09_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/planning/chapter_09_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/planning/chapter_10_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/planning/chapter_10_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/planning/chapter_11_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/planning/chapter_11_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/planning/chapter_12_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/planning/chapter_12_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/planning/chapter_13_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/planning/chapter_13_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/proper_nouns.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/proper_nouns.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/quality/chapter_structure_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/quality/chapter_structure_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/quality/lead_quality_decision.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/quality/lead_quality_decision.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/quality/literary_critic_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/quality/literary_critic_report.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/quality/normal_reader_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/quality/normal_reader_report.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/quality/plot_affordance_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/quality/plot_affordance_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/quality/prose_variety_polish_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/quality/prose_variety_polish_report.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/quality/prose_variety_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/quality/prose_variety_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/quality/quality_gate_summary.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/quality/quality_gate_summary.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/quality/repeated_phrase_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/quality/repeated_phrase_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/quality/vocabulary_usage_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/quality/vocabulary_usage_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/repair_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/repair_report.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/stretch_word_exposure.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/stretch_word_exposure.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/vocabulary_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/vocabulary_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-still-water-list-case-revised/vocabulary_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/vocabulary_report.md",
       "category": "manuscripts"
     },
     {

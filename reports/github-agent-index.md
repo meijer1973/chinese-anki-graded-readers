@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki And Graded Readers
 
-Generated: 2026-05-26T16:55:27Z
+Generated: 2026-05-27T11:47:03Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 599
+Files indexed: 662
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -150,7 +150,7 @@ Count: 2
 
 ## manuscripts
 
-Count: 483
+Count: 546
 
 - manuscripts/README.md
 - manuscripts/sample-known-words/chapters/chapter_01.validation.json
@@ -543,6 +543,69 @@ Count: 483
 - manuscripts/shanghai-spirit-lamp-case/quality/vocabulary_usage_report.json
 - manuscripts/shanghai-spirit-lamp-case/stretch_word_exposure.md
 - manuscripts/shanghai-spirit-lamp-case/vocabulary_report.json
+- manuscripts/shanghai-still-water-list-case-revised/README.md
+- manuscripts/shanghai-still-water-list-case-revised/book_specific_words.txt
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_01.validation.json
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_01.zh-tok.txt
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_02.validation.json
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_02.zh-tok.txt
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_03.validation.json
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_03.zh-tok.txt
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_04.validation.json
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_04.zh-tok.txt
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_05.validation.json
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_05.zh-tok.txt
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_06.validation.json
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_06.zh-tok.txt
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_07.validation.json
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_07.zh-tok.txt
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_08.validation.json
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_08.zh-tok.txt
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_09.validation.json
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_09.zh-tok.txt
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_10.validation.json
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_10.zh-tok.txt
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_11.validation.json
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_11.zh-tok.txt
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_12.validation.json
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_12.zh-tok.txt
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_13.validation.json
+- manuscripts/shanghai-still-water-list-case-revised/chapters/chapter_13.zh-tok.txt
+- manuscripts/shanghai-still-water-list-case-revised/characters.md
+- manuscripts/shanghai-still-water-list-case-revised/continuity_log.md
+- manuscripts/shanghai-still-water-list-case-revised/creative_preflight.md
+- manuscripts/shanghai-still-water-list-case-revised/epub/build_report.json
+- manuscripts/shanghai-still-water-list-case-revised/epub/shanghai-still-water-list-case-revised.epub
+- manuscripts/shanghai-still-water-list-case-revised/novel_bible.md
+- manuscripts/shanghai-still-water-list-case-revised/outline.md
+- manuscripts/shanghai-still-water-list-case-revised/planning/chapter_01_vocab_plan.md
+- manuscripts/shanghai-still-water-list-case-revised/planning/chapter_02_vocab_plan.md
+- manuscripts/shanghai-still-water-list-case-revised/planning/chapter_03_vocab_plan.md
+- manuscripts/shanghai-still-water-list-case-revised/planning/chapter_04_vocab_plan.md
+- manuscripts/shanghai-still-water-list-case-revised/planning/chapter_05_vocab_plan.md
+- manuscripts/shanghai-still-water-list-case-revised/planning/chapter_06_vocab_plan.md
+- manuscripts/shanghai-still-water-list-case-revised/planning/chapter_07_vocab_plan.md
+- manuscripts/shanghai-still-water-list-case-revised/planning/chapter_08_vocab_plan.md
+- manuscripts/shanghai-still-water-list-case-revised/planning/chapter_09_vocab_plan.md
+- manuscripts/shanghai-still-water-list-case-revised/planning/chapter_10_vocab_plan.md
+- manuscripts/shanghai-still-water-list-case-revised/planning/chapter_11_vocab_plan.md
+- manuscripts/shanghai-still-water-list-case-revised/planning/chapter_12_vocab_plan.md
+- manuscripts/shanghai-still-water-list-case-revised/planning/chapter_13_vocab_plan.md
+- manuscripts/shanghai-still-water-list-case-revised/proper_nouns.txt
+- manuscripts/shanghai-still-water-list-case-revised/quality/chapter_structure_report.json
+- manuscripts/shanghai-still-water-list-case-revised/quality/lead_quality_decision.md
+- manuscripts/shanghai-still-water-list-case-revised/quality/literary_critic_report.md
+- manuscripts/shanghai-still-water-list-case-revised/quality/normal_reader_report.md
+- manuscripts/shanghai-still-water-list-case-revised/quality/plot_affordance_report.json
+- manuscripts/shanghai-still-water-list-case-revised/quality/prose_variety_polish_report.md
+- manuscripts/shanghai-still-water-list-case-revised/quality/prose_variety_report.json
+- manuscripts/shanghai-still-water-list-case-revised/quality/quality_gate_summary.json
+- manuscripts/shanghai-still-water-list-case-revised/quality/repeated_phrase_report.json
+- manuscripts/shanghai-still-water-list-case-revised/quality/vocabulary_usage_report.json
+- manuscripts/shanghai-still-water-list-case-revised/repair_report.md
+- manuscripts/shanghai-still-water-list-case-revised/stretch_word_exposure.md
+- manuscripts/shanghai-still-water-list-case-revised/vocabulary_report.json
+- manuscripts/shanghai-still-water-list-case-revised/vocabulary_report.md
 - manuscripts/small-shop-survival-economics/README.md
 - manuscripts/small-shop-survival-economics/book_specific_words.txt
 - manuscripts/small-shop-survival-economics/chapters/chapter_01.validation.json

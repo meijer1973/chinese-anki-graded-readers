@@ -16,6 +16,10 @@ Use recurring locations as story tools, not decoration.
 - bank
 - hotel
 - underground station or hidden transit space
+- market
+- warehouse
+- library basement
+- company office
 
 ## Location Continuity Guidance
 

@@ -8,6 +8,9 @@
 - 影子桥
 - 回声盒子
 - 声门
+- 静水
+- 水镜
+- 名单
 
 ## Approved Recurring Evidence Objects
 
@@ -21,6 +24,9 @@
 - 铃声
 - 合同
 - 录音文件
+- 名片
+- 保险箱
+- 账号
 
 ## Object Guidance
 

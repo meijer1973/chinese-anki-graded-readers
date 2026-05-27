@@ -32,6 +32,9 @@ These terms are approved for recurring series use when they are also included in
 - 回声
 - 声门
 - 规则
+- 静水
+- 水镜
+- 名单
 - 黑雾
 - 白光
 

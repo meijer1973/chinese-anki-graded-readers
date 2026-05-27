@@ -1,0 +1,34 @@
+{
+  "epub_path": "manuscripts\\shanghai-still-water-list-case-revised\\epub\\shanghai-still-water-list-case-revised.epub",
+  "valid": true,
+  "chapter_count": 13,
+  "total_tokens": 7156,
+  "unique_token_count": 945,
+  "core_known_tokens": 5435,
+  "vocabulary_profile": "personalized",
+  "learner_profile_name": "marcel",
+  "personal_known_tokens": 725,
+  "personal_known_word_count": 1553,
+  "unique_personal_known_words_used": 193,
+  "unknown_token_count": 0,
+  "forbidden_unknown_tokens_over_limit": 0,
+  "max_forbidden_unknown_tokens_per_chapter": 5,
+  "quality_approval": {
+    "approved": true,
+    "decision_path": "manuscripts\\shanghai-still-water-list-case-revised\\quality\\lead_quality_decision.md",
+    "decision": "PASS",
+    "reason": "Approved by lead quality decision."
+  },
+  "built_at": "2026-05-27T11:46:53Z",
+  "epub_structure": {
+    "path": "manuscripts\\shanghai-still-water-list-case-revised\\epub\\shanghai-still-water-list-case-revised.epub",
+    "exists": true,
+    "first_entry": "mimetype",
+    "mimetype": "application/epub+zip",
+    "has_container": true,
+    "has_opf": true,
+    "has_nav": true,
+    "has_title_page": true,
+    "chapter_count": 13
+  }
+}

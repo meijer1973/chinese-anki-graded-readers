@@ -1,0 +1,28 @@
+{
+  "valid_vocabulary": true,
+  "unknown_token_count": 0,
+  "forbidden_unknown_tokens": 0,
+  "forbidden_unknown_tokens_over_limit": 0,
+  "vocabulary_profile": "personalized",
+  "learner_profile_name": "marcel",
+  "personal_known_tokens": 725,
+  "unique_personal_known_words_used": 193,
+  "max_forbidden_unknown_tokens_per_chapter": 5,
+  "stretch_token_percent": 13.92,
+  "planning_files_present": true,
+  "expected_planning_file_count": 13,
+  "planning_file_count": 13,
+  "missing_chapter_planning_files": [],
+  "creative_preflight_path": "manuscripts\\shanghai-still-water-list-case-revised\\creative_preflight.md",
+  "creative_preflight_present": true,
+  "style_revision_required": true,
+  "style_warning_count": 4,
+  "quality_approval": {
+    "approved": true,
+    "decision_path": "manuscripts\\shanghai-still-water-list-case-revised\\quality\\lead_quality_decision.md",
+    "decision": "PASS",
+    "reason": "Approved by lead quality decision."
+  },
+  "ready_for_epub": true,
+  "public_quality_ready": false
+}
