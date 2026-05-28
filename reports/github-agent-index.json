@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-28T13:39:57Z",
+  "generated_at": "2026-05-28T13:52:36Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 768,
+  "file_count": 773,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -273,6 +273,31 @@
     {
       "path": "adaptations/chinese-economic-news-reading-pack-2026-05-28/vocabulary_profile_baseline.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28/vocabulary_profile_baseline.md",
+      "category": "adaptations"
+    },
+    {
+      "path": "adaptations/heyishengxiaomo-vocab-mining/adaptation_config.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/heyishengxiaomo-vocab-mining/adaptation_config.json",
+      "category": "adaptations"
+    },
+    {
+      "path": "adaptations/heyishengxiaomo-vocab-mining/adaptation_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/heyishengxiaomo-vocab-mining/adaptation_plan.md",
+      "category": "adaptations"
+    },
+    {
+      "path": "adaptations/heyishengxiaomo-vocab-mining/proper_noun_candidates.tsv",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/heyishengxiaomo-vocab-mining/proper_noun_candidates.tsv",
+      "category": "adaptations"
+    },
+    {
+      "path": "adaptations/heyishengxiaomo-vocab-mining/source_map.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/heyishengxiaomo-vocab-mining/source_map.json",
+      "category": "adaptations"
+    },
+    {
+      "path": "adaptations/heyishengxiaomo-vocab-mining/stretch_candidates.tsv",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/heyishengxiaomo-vocab-mining/stretch_candidates.tsv",
       "category": "adaptations"
     },
     {

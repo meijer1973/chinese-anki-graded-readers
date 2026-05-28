@@ -28,6 +28,12 @@ Proper nouns are the right place for character, place, and organization names. L
 
 Personal-known words are not stretch words. They are words a named learner already recognizes and should be tracked under `personal_known_tokens`, not as new learning targets. See `docs/personal-known-vocabulary.md`.
 
+## General Fiction Pack
+
+Use `general_fiction_100.txt` for reusable fiction craft vocabulary: memory, hesitation, emotional pressure, dialogue movement, small actions, body-language cues, and ordinary scene texture.
+
+This pack is intentionally genre-neutral. It should help a writer vary scenes without reaching immediately for a specialized topic pack. Good uses include showing a character hesitate, look away, speak quietly, remember something, misread another person, or notice a room/window/sound detail. Do not use these words as random decoration; each word should make a sentence more natural or a scene easier to follow.
+
 ## Journalism / Crime Pack
 
 Use `journalism_crime_50.txt` for 林安-style stories where the protagonist is a journalist or crime reporter. It adds durable terms such as `采访`, `报道`, `文章`, `编辑`, `来源`, `文件`, `案件`, `嫌犯`, `证人`, `动机`, `警察局`, `跟踪`, `观察`, `确认`, and `保密`.

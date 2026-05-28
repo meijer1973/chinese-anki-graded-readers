@@ -193,6 +193,19 @@ class StretchVocabularyTests(unittest.TestCase):
         self.assertFalse(business_words & core_words)
         self.assertFalse(business_words & prior_words)
 
+    def test_general_fiction_pack_has_100_non_core_words(self) -> None:
+        general_pack = ROOT / "data" / "stretch_packs" / "general_fiction_100.txt"
+        general_words = load_optional_words(general_pack)
+        core_words = set(load_known_words(ROOT / "data" / "known_words.txt"))
+        other_words: set[str] = set()
+        for pack in (ROOT / "data" / "stretch_packs").glob("*.txt"):
+            if pack != general_pack:
+                other_words.update(load_optional_words(pack))
+        self.assertEqual(len(general_words), 100)
+        self.assertEqual(len(set(general_words)), 100)
+        self.assertFalse(set(general_words) & core_words)
+        self.assertFalse(set(general_words) & other_words)
+
     def test_business_economics_sample_token_validates_with_extra_pack(self) -> None:
         chapters = self.chapters_dir("市场 会 影响 生意 。\n")
         report = validate_book(

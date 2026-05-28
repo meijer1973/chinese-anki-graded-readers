@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki And Graded Readers
 
-Generated: 2026-05-28T13:39:57Z
+Generated: 2026-05-28T13:52:36Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 768
+Files indexed: 773
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -158,7 +158,7 @@ Count: 2
 
 ## adaptations
 
-Count: 17
+Count: 22
 
 - adaptations/README.md
 - adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/adaptation_config.json
@@ -177,6 +177,11 @@ Count: 17
 - adaptations/chinese-economic-news-reading-pack-2026-05-28/stretch_candidates.tsv
 - adaptations/chinese-economic-news-reading-pack-2026-05-28/vocabulary_profile_baseline.json
 - adaptations/chinese-economic-news-reading-pack-2026-05-28/vocabulary_profile_baseline.md
+- adaptations/heyishengxiaomo-vocab-mining/adaptation_config.json
+- adaptations/heyishengxiaomo-vocab-mining/adaptation_plan.md
+- adaptations/heyishengxiaomo-vocab-mining/proper_noun_candidates.tsv
+- adaptations/heyishengxiaomo-vocab-mining/source_map.json
+- adaptations/heyishengxiaomo-vocab-mining/stretch_candidates.tsv
 
 ## manuscripts
 
