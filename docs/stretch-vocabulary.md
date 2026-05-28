@@ -79,6 +79,8 @@ Use easy low fantasy:
 - normal Shanghai life plus a small fantasy layer
 - small cast and repeated locations
 
+`low_fantasy_150.txt` now includes a fuller set of reusable fantasy mechanisms, forces, places, objects, and creature classes. These words can support fairy/devil-style inspiration, but the graded-reader default is still low fantasy: choose a few recurring terms and make them matter.
+
 Avoid epic fantasy scale, many invented names, many monsters, complicated politics, and one-off magical terms.
 
 ## Chapter Planning

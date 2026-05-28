@@ -167,6 +167,19 @@ class StretchVocabularyTests(unittest.TestCase):
         vocab = load_layered_vocabulary(ROOT / "data" / "known_words.txt", genre_pack=ROOT / "data" / "stretch_packs" / "low_fantasy_150.txt")
         self.assertEqual(vocab["token_layers"]["魔法"], GENRE_LAYER)
 
+    def test_low_fantasy_pack_has_150_non_core_words(self) -> None:
+        fantasy_pack = ROOT / "data" / "stretch_packs" / "low_fantasy_150.txt"
+        fantasy_words = load_optional_words(fantasy_pack)
+        core_words = set(load_known_words(ROOT / "data" / "known_words.txt"))
+        other_words: set[str] = set()
+        for pack in (ROOT / "data" / "stretch_packs").glob("*.txt"):
+            if pack != fantasy_pack:
+                other_words.update(load_optional_words(pack))
+        self.assertEqual(len(fantasy_words), 150)
+        self.assertEqual(len(set(fantasy_words)), 150)
+        self.assertFalse(set(fantasy_words) & core_words)
+        self.assertFalse(set(fantasy_words) & other_words)
+
     def test_profession_pack_is_loaded(self) -> None:
         vocab = load_layered_vocabulary(ROOT / "data" / "known_words.txt", profession_pack=ROOT / "data" / "stretch_packs" / "professions_social_roles_100.txt")
         self.assertEqual(vocab["token_layers"]["快递员"], PROFESSION_LAYER)
