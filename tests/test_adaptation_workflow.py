@@ -112,6 +112,33 @@ class AdaptationWorkflowTests(unittest.TestCase):
         proper_candidates = (adaptation / "proper_noun_candidates.tsv").read_text(encoding="utf-8")
         self.assertIn("黑门", proper_candidates)
 
+    def test_adaptation_profile_segments_natural_chinese_source(self) -> None:
+        known = self.root / "known_words.txt"
+        known.write_text("我\n看\n市场\n价格\n上升\n", encoding="utf-8")
+        adaptation = self.root / "adaptations" / "natural"
+        units = adaptation / "source_units"
+        units.mkdir(parents=True)
+        (units / "unit_001_source.md").write_text("我看市场价格上升。陌生词出现。\n", encoding="utf-8")
+
+        report = profile_adaptation_vocabulary(adaptation, known_path=known)
+        self.assertGreater(report["readable_coverage_percent"], 40)
+        unknowns = report["unknown_token_frequency"]
+        self.assertNotIn("我看市场价格上升陌生词出现", unknowns)
+        self.assertTrue({"陌生词", "陌生"} & set(unknowns))
+
+    def test_adaptation_profile_separates_non_hanzi_support_tokens(self) -> None:
+        known = self.root / "known_words.txt"
+        known.write_text("我\n看\n市场\n", encoding="utf-8")
+        adaptation = self.root / "adaptations" / "latin"
+        units = adaptation / "source_units"
+        units.mkdir(parents=True)
+        (units / "unit_001_source.md").write_text("我看市场。market growth 2026。\n", encoding="utf-8")
+
+        report = profile_adaptation_vocabulary(adaptation, known_path=known)
+        self.assertEqual(report["forbidden_unknown_tokens"], 0)
+        self.assertGreaterEqual(report["ignored_non_hanzi_token_count"], 3)
+        self.assertIn("market", report["ignored_non_hanzi_token_frequency"])
+
     def test_quality_gate_requires_source_fidelity_when_requested(self) -> None:
         known = self.root / "known_words.txt"
         known.write_text("我\n你\n看\n", encoding="utf-8")

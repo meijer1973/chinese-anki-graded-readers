@@ -84,6 +84,8 @@ adaptations/<slug>/stretch_candidates.tsv
 
 It reports token-weighted coverage, layer counts, top unknown tokens by frequency and dispersion, unknown clusters, sentence-length risks, and a recommended adaptation level per unit.
 
+By default the profiler separates Latin, pinyin, URL, and numeric-only tokens from Chinese vocabulary pressure. Pass `--include-non-hanzi-unknowns` when those tokens should count as source unknowns.
+
 ## Candidate Review
 
 Review unknown words in this order:

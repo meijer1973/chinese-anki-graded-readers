@@ -28,6 +28,11 @@ def main() -> int:
     parser.add_argument("--proper-nouns")
     parser.add_argument("--extra-pack", action="append", default=[])
     parser.add_argument("--target-readable-coverage-percent", type=float, default=98.0)
+    parser.add_argument(
+        "--include-non-hanzi-unknowns",
+        action="store_true",
+        help="Count Latin, pinyin, number, and URL tokens as unknowns in source profiling. By default they are reported separately.",
+    )
     args = parser.parse_args()
 
     report = profile_adaptation_vocabulary(
@@ -45,6 +50,7 @@ def main() -> int:
         proper_nouns_path=args.proper_nouns,
         extra_packs=args.extra_pack,
         target_readable_coverage_percent=args.target_readable_coverage_percent,
+        ignore_non_hanzi_unknowns=not args.include_non_hanzi_unknowns,
     )
     print(
         "adaptation={adaptation_dir} units={unit_count} total_tokens={total_tokens} "

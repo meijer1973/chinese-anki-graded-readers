@@ -80,6 +80,13 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.gitattributes
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.gitignore
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/README.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28/adaptation_config.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28/adaptation_plan.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28/proper_noun_candidates.tsv
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28/source_map.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28/stretch_candidates.tsv
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28/vocabulary_profile_baseline.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28/vocabulary_profile_baseline.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/add_missing_single_character_notes.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/anki_field_schema.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/apply_meaning_cleanup_updates.py

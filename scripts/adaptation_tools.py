@@ -3,6 +3,7 @@ from __future__ import annotations
 import csv
 import html
 import json
+import logging
 import re
 import shutil
 import zipfile
@@ -43,6 +44,10 @@ DEFAULT_ADAPTATIONS_DIR = ROOT / "adaptations"
 RIGHTS_STATUSES = {"public_domain", "licensed", "own_text", "private_study", "unclear"}
 SOURCE_SKIP_NAME_RE = re.compile(r"(nav|toc|cover|copyright|contents?|title[-_ ]?page|ads?)", re.IGNORECASE)
 SENTENCE_SPLIT_RE = re.compile(r"[。！？!?]+")
+HANZI_ONLY_RE = re.compile(r"^[\u3400-\u9fff]+$")
+HANZI_RUN_RE = re.compile(r"[\u3400-\u9fff]+")
+NON_HANZI_WORD_RE = re.compile(r"[A-Za-z0-9]+")
+_JIEBA_ADDED_WORDS: set[str] = set()
 
 
 class BodyTextExtractor(HTMLParser):
@@ -360,64 +365,99 @@ def source_unit_files(source_units_dir: str | Path) -> list[Path]:
     return files
 
 
-def tokenize_source_text(text: str, vocabulary_tokens: set[str] | None = None, punctuation: set[str] | None = None) -> list[str]:
-    punctuation = punctuation or load_punctuation()
-    vocabulary_tokens = vocabulary_tokens or set()
+def greedy_hanzi_segments(run: str, vocabulary_tokens: set[str]) -> list[str]:
     max_token_len = max((len(token) for token in vocabulary_tokens), default=1)
-    if re.search(r"\s", text):
-        tokens = []
-        for raw in text.split():
-            token = normalize_token(raw, punctuation)
-            if token:
-                tokens.append(token)
-        return tokens
-
     tokens = []
     index = 0
-    while index < len(text):
-        char = text[index]
-        if char in punctuation or char.isspace():
-            index += 1
-            continue
+    while index < len(run):
         matched = None
-        if HANZI_RE.match(char):
-            upper = min(len(text), index + max_token_len)
-            for end in range(upper, index, -1):
-                candidate = text[index:end]
-                if candidate in vocabulary_tokens:
-                    matched = candidate
-                    break
-            if matched:
-                tokens.append(matched)
-                index += len(matched)
-            else:
-                tokens.append(char)
-                index += 1
-            continue
-        match = re.match(r"[A-Za-z0-9]+", text[index:])
-        if match:
-            tokens.append(match.group(0))
-            index += len(match.group(0))
+        upper = min(len(run), index + max_token_len)
+        for end in range(upper, index, -1):
+            candidate = run[index:end]
+            if candidate in vocabulary_tokens:
+                matched = candidate
+                break
+        if matched:
+            tokens.append(matched)
+            index += len(matched)
         else:
+            tokens.append(run[index])
             index += 1
     return tokens
 
 
-def classify_tokens(tokens: list[str], token_layers: dict[str, str]) -> dict:
+def segment_hanzi_run(run: str, vocabulary_tokens: set[str]) -> list[str]:
+    if run in vocabulary_tokens:
+        return [run]
+    try:
+        import jieba  # type: ignore
+    except ModuleNotFoundError:
+        return greedy_hanzi_segments(run, vocabulary_tokens)
+
+    jieba.setLogLevel(logging.WARNING)
+    for word in vocabulary_tokens:
+        if len(word) > 1 and word not in _JIEBA_ADDED_WORDS and HANZI_ONLY_RE.match(word):
+            jieba.add_word(word, freq=1_000_000)
+            _JIEBA_ADDED_WORDS.add(word)
+    return [part for part in jieba.lcut(run, HMM=True) if part.strip()]
+
+
+def tokenize_source_segment(segment: str, vocabulary_tokens: set[str], punctuation: set[str]) -> list[str]:
+    tokens: list[str] = []
+    index = 0
+    while index < len(segment):
+        char = segment[index]
+        if char in punctuation or char.isspace():
+            index += 1
+            continue
+        hanzi_match = HANZI_RUN_RE.match(segment, index)
+        if hanzi_match:
+            tokens.extend(segment_hanzi_run(hanzi_match.group(0), vocabulary_tokens))
+            index = hanzi_match.end()
+            continue
+        word_match = NON_HANZI_WORD_RE.match(segment, index)
+        if word_match:
+            tokens.append(word_match.group(0))
+            index = word_match.end()
+            continue
+        index += 1
+    return tokens
+
+
+def tokenize_source_text(text: str, vocabulary_tokens: set[str] | None = None, punctuation: set[str] | None = None) -> list[str]:
+    punctuation = punctuation or load_punctuation()
+    vocabulary_tokens = vocabulary_tokens or set()
+    tokens: list[str] = []
+    for raw_segment in re.split(r"\s+", text):
+        if raw_segment:
+            tokens.extend(tokenize_source_segment(raw_segment, vocabulary_tokens, punctuation))
+    return tokens
+
+
+def classify_tokens(tokens: list[str], token_layers: dict[str, str], *, ignore_non_hanzi_unknowns: bool = False) -> dict:
     layer_counts = Counter()
     unknown = Counter()
+    ignored_non_hanzi = Counter()
+    counted_total = 0
     for token in tokens:
         layer = token_layers.get(token)
         if layer:
+            counted_total += 1
             layer_counts[layer] += 1
+        elif ignore_non_hanzi_unknowns and not HANZI_RE.search(token):
+            ignored_non_hanzi[token] += 1
         else:
+            counted_total += 1
             unknown[token] += 1
-    total = len(tokens)
+    total = counted_total
     known_total = total - sum(unknown.values())
     result = {field: layer_counts[layer] for layer, field in LAYER_TOKEN_FIELDS.items()}
     result.update(
         {
             "total_tokens": total,
+            "raw_token_count": len(tokens),
+            "ignored_non_hanzi_token_count": sum(ignored_non_hanzi.values()),
+            "ignored_non_hanzi_token_frequency": dict(sorted(ignored_non_hanzi.items())),
             "readable_coverage_percent": round((known_total / total * 100) if total else 0, 2),
             "forbidden_unknown_tokens": sum(unknown.values()),
             "unknown_token_frequency": dict(sorted(unknown.items())),
@@ -538,6 +578,7 @@ def profile_adaptation_vocabulary(
     proper_nouns_path: str | Path | None = None,
     extra_packs: list[str | Path] | None = None,
     target_readable_coverage_percent: float = 98.0,
+    ignore_non_hanzi_unknowns: bool = True,
 ) -> dict:
     root = Path(adaptation_dir)
     units_dir = root / "source_units"
@@ -568,7 +609,7 @@ def profile_adaptation_vocabulary(
         unit_id = path.stem.replace("_source", "")
         text = path.read_text(encoding="utf-8")
         tokens = tokenize_source_text(text, vocabulary_tokens, punctuation)
-        classified = classify_tokens(tokens, token_layers)
+        classified = classify_tokens(tokens, token_layers, ignore_non_hanzi_unknowns=ignore_non_hanzi_unknowns)
         clusters = unknown_clusters(tokens, token_layers)
         risks = sentence_length_risks(text, vocabulary_tokens, punctuation)
         max_cluster = max((cluster["length"] for cluster in clusters), default=0)
@@ -587,7 +628,7 @@ def profile_adaptation_vocabulary(
         )
         unit_reports.append(classified)
         all_tokens.extend(tokens)
-        for token, count in Counter(token for token in tokens if token not in token_layers).items():
+        for token, count in Counter(token for token in tokens if token not in token_layers and (not ignore_non_hanzi_unknowns or HANZI_RE.search(token))).items():
             unknown_frequency[token] += count
             unknown_units[token].add(unit_id)
         for cluster in clusters:
@@ -595,7 +636,7 @@ def profile_adaptation_vocabulary(
         for risk in risks:
             all_sentence_risks.append({"unit_id": unit_id, **risk})
 
-    total_report = classify_tokens(all_tokens, token_layers)
+    total_report = classify_tokens(all_tokens, token_layers, ignore_non_hanzi_unknowns=ignore_non_hanzi_unknowns)
     total_report.update(
         {
             "schema_version": 1,
@@ -606,6 +647,7 @@ def profile_adaptation_vocabulary(
             "vocabulary_profile": vocabulary.get("vocabulary_profile", "public"),
             "learner_profile_name": vocabulary.get("learner_profile_name"),
             "target_readable_coverage_percent": target_readable_coverage_percent,
+            "ignore_non_hanzi_unknowns": ignore_non_hanzi_unknowns,
             "unit_count": len(unit_reports),
             "units": unit_reports,
             "top_unknown_tokens_by_frequency": [

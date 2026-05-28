@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-28T09:53:42Z",
+  "generated_at": "2026-05-28T11:10:34Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 752,
+  "file_count": 759,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -193,6 +193,41 @@
     {
       "path": "adaptations/README.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/README.md",
+      "category": "adaptations"
+    },
+    {
+      "path": "adaptations/chinese-economic-news-reading-pack-2026-05-28/adaptation_config.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28/adaptation_config.json",
+      "category": "adaptations"
+    },
+    {
+      "path": "adaptations/chinese-economic-news-reading-pack-2026-05-28/adaptation_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28/adaptation_plan.md",
+      "category": "adaptations"
+    },
+    {
+      "path": "adaptations/chinese-economic-news-reading-pack-2026-05-28/proper_noun_candidates.tsv",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28/proper_noun_candidates.tsv",
+      "category": "adaptations"
+    },
+    {
+      "path": "adaptations/chinese-economic-news-reading-pack-2026-05-28/source_map.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28/source_map.json",
+      "category": "adaptations"
+    },
+    {
+      "path": "adaptations/chinese-economic-news-reading-pack-2026-05-28/stretch_candidates.tsv",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28/stretch_candidates.tsv",
+      "category": "adaptations"
+    },
+    {
+      "path": "adaptations/chinese-economic-news-reading-pack-2026-05-28/vocabulary_profile_baseline.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28/vocabulary_profile_baseline.json",
+      "category": "adaptations"
+    },
+    {
+      "path": "adaptations/chinese-economic-news-reading-pack-2026-05-28/vocabulary_profile_baseline.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28/vocabulary_profile_baseline.md",
       "category": "adaptations"
     },
     {
