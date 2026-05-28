@@ -59,6 +59,16 @@
 - Arc movement: 白先生 / 白策 and 旧档会 become visible as institutional memory-control pressure, and prior mechanisms begin to connect into a larger pattern.
 - Outcome: 林安 preserves source protection while pushing publishable truth and refuses to let 白先生 control the rhythm of the case.
 
+## Book 7: 上海无声档案案
+
+- Repository path: `manuscripts/shanghai-silent-archive-case/`
+- Status: seventh series manuscript imported from the writer agent and locally revalidated.
+- Core continuity: 林安 remains the journalist protagonist. 陈雨 remains the procedural police contact. 何青, 许白, 老赵, 阿洛, and 夏宁 remain continuity-linked contacts.
+- Fantasy mechanism: 无声档案 can make names and records fall silent in old archives. It is connected to 记录口 and the larger hidden record-control system.
+- Case frame: 清页公司 uses data-cleaning, reputation management, payments, contracts, invoices, backup files, and old drafts to erase a missing child's name and protect a client.
+- Arc movement: 白先生 / 白策 and 旧档会 become more direct pressure, and the case points toward 旧城门 as the next large continuity site.
+- Outcome: 林安 restores 沈望's name, protects living witnesses, rejects managed truth, and keeps publishable evidence separate from fantasy proof.
+
 ## Open Series Direction
 
-The next story should not restart 林安 from zero. It should treat her as someone who has already faced the rain-ticket case, the spirit-lamp case, the shadow-bridge case, the midnight-ringtone case, the still-water list case, and the lost-property locker case, and now knows that a normal clue may have a hidden cost and may connect to a larger hidden record system.
+The next story should not restart 林安 from zero. It should treat her as someone who has already faced the rain-ticket case, the spirit-lamp case, the shadow-bridge case, the midnight-ringtone case, the still-water list case, the lost-property locker case, and the silent-archive case, and now knows that a normal clue may have a hidden cost and may connect to a larger hidden record system.

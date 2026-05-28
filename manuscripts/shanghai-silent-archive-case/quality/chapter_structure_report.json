@@ -1,0 +1,23 @@
+{
+  "chapter_count": 12,
+  "word_tokens_per_chapter": [
+    568,
+    516,
+    513,
+    674,
+    952,
+    683,
+    425,
+    701,
+    439,
+    468,
+    601,
+    638
+  ],
+  "min_chapter_tokens": 425,
+  "median_chapter_tokens": 584.5,
+  "mean_chapter_tokens": 598.17,
+  "max_chapter_tokens": 952,
+  "chapters_under_250": 0,
+  "status": "PASS"
+}

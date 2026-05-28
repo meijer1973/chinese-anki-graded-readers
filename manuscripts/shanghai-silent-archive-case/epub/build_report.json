@@ -1,0 +1,34 @@
+{
+  "epub_path": "manuscripts\\shanghai-silent-archive-case\\epub\\shanghai-silent-archive-case.epub",
+  "valid": true,
+  "chapter_count": 12,
+  "total_tokens": 7554,
+  "unique_token_count": 1017,
+  "core_known_tokens": 5895,
+  "vocabulary_profile": "personalized",
+  "learner_profile_name": "marcel",
+  "personal_known_tokens": 533,
+  "personal_known_word_count": 1335,
+  "unique_personal_known_words_used": 176,
+  "unknown_token_count": 0,
+  "forbidden_unknown_tokens_over_limit": 0,
+  "max_forbidden_unknown_tokens_per_chapter": 5,
+  "quality_approval": {
+    "approved": true,
+    "decision_path": "manuscripts\\shanghai-silent-archive-case\\quality\\lead_quality_decision.md",
+    "decision": "PASS",
+    "reason": "Approved by lead quality decision."
+  },
+  "built_at": "2026-05-28T16:52:05Z",
+  "epub_structure": {
+    "path": "manuscripts\\shanghai-silent-archive-case\\epub\\shanghai-silent-archive-case.epub",
+    "exists": true,
+    "first_entry": "mimetype",
+    "mimetype": "application/epub+zip",
+    "has_container": true,
+    "has_opf": true,
+    "has_nav": true,
+    "has_title_page": true,
+    "chapter_count": 12
+  }
+}

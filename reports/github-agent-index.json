@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-28T13:57:37Z",
+  "generated_at": "2026-05-28T16:52:28Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 773,
+  "file_count": 830,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -2493,6 +2493,291 @@
     {
       "path": "manuscripts/shanghai-shadow-bridge-case/vocabulary_report.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-shadow-bridge-case/vocabulary_report.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/book_specific_words.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/book_specific_words.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/build_summary.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/build_summary.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/chapters/chapter_01.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/chapters/chapter_01.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/chapters/chapter_01.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/chapters/chapter_01.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/chapters/chapter_02.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/chapters/chapter_02.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/chapters/chapter_02.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/chapters/chapter_02.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/chapters/chapter_03.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/chapters/chapter_03.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/chapters/chapter_03.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/chapters/chapter_03.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/chapters/chapter_04.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/chapters/chapter_04.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/chapters/chapter_04.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/chapters/chapter_04.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/chapters/chapter_05.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/chapters/chapter_05.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/chapters/chapter_05.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/chapters/chapter_05.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/chapters/chapter_06.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/chapters/chapter_06.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/chapters/chapter_06.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/chapters/chapter_06.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/chapters/chapter_07.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/chapters/chapter_07.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/chapters/chapter_07.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/chapters/chapter_07.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/chapters/chapter_08.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/chapters/chapter_08.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/chapters/chapter_08.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/chapters/chapter_08.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/chapters/chapter_09.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/chapters/chapter_09.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/chapters/chapter_09.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/chapters/chapter_09.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/chapters/chapter_10.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/chapters/chapter_10.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/chapters/chapter_10.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/chapters/chapter_10.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/chapters/chapter_11.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/chapters/chapter_11.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/chapters/chapter_11.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/chapters/chapter_11.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/chapters/chapter_12.validation.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/chapters/chapter_12.validation.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/chapters/chapter_12.zh-tok.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/chapters/chapter_12.zh-tok.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/characters.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/characters.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/continuity_log.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/continuity_log.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/creative_preflight.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/creative_preflight.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/epub/build_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/epub/build_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/epub/shanghai-silent-archive-case.epub",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/epub/shanghai-silent-archive-case.epub",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/novel_bible.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/novel_bible.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/outline.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/outline.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/planning/chapter_01_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/planning/chapter_01_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/planning/chapter_02_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/planning/chapter_02_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/planning/chapter_03_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/planning/chapter_03_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/planning/chapter_04_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/planning/chapter_04_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/planning/chapter_05_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/planning/chapter_05_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/planning/chapter_06_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/planning/chapter_06_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/planning/chapter_07_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/planning/chapter_07_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/planning/chapter_08_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/planning/chapter_08_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/planning/chapter_09_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/planning/chapter_09_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/planning/chapter_10_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/planning/chapter_10_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/planning/chapter_11_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/planning/chapter_11_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/planning/chapter_12_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/planning/chapter_12_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/proper_nouns.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/proper_nouns.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/quality/chapter_structure_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/quality/chapter_structure_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/quality/lead_quality_decision.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/quality/lead_quality_decision.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/quality/literary_critic_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/quality/literary_critic_report.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/quality/normal_reader_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/quality/normal_reader_report.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/quality/plot_affordance_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/quality/plot_affordance_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/quality/prose_variety_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/quality/prose_variety_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/quality/quality_gate_summary.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/quality/quality_gate_summary.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/quality/repeated_phrase_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/quality/repeated_phrase_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/quality/vocabulary_usage_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/quality/vocabulary_usage_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/vocabulary_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/vocabulary_report.json",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/shanghai-silent-archive-case/vocabulary_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/vocabulary_report.md",
       "category": "manuscripts"
     },
     {

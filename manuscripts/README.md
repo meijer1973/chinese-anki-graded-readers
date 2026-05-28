@@ -15,6 +15,10 @@ Final EPUB files and build reports under `manuscripts/<slug>/epub/` are tracked 
 | `shanghai-rain-gate-crime` | `上海雨票案` | PASS | First 林安 journalist urban-fantasy crime manuscript. Read `series/an-lin/` before planning sequels. |
 | `shanghai-spirit-lamp-case` | `上海灵灯案` | PASS | Second 林安 journalist urban-fantasy crime manuscript. Revalidated locally after writer-agent import. |
 | `shanghai-shadow-bridge-case` | `上海影子桥案` | PASS | Third 林安 journalist urban-fantasy crime manuscript. Revalidated locally after writer-agent import. |
+| `shanghai-midnight-ringtone-case` | `上海零点铃声案` | PASS | Fourth 林安 journalist urban-fantasy crime manuscript. Revalidated locally after writer-agent import. |
+| `shanghai-still-water-list-case-revised` | `上海静水名单案` | PASS | Revised fifth 林安 manuscript. Revalidated locally after writer-agent import and repaired into 13 story chapters. |
+| `shanghai-lost-property-locker-case` | `上海失物柜案` | PASS | Sixth 林安 journalist urban-fantasy crime manuscript. Revalidated locally after writer-agent import. |
+| `shanghai-silent-archive-case` | `上海无声档案案` | PASS | Seventh 林安 journalist urban-fantasy crime manuscript. Revalidated locally after writer-agent import. |
 
 ## Fixtures And Trials
 

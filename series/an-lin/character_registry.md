@@ -59,3 +59,8 @@ Avoid making every important person a teacher, doctor, student, or generic polic
 - 夏宁: victimized shop owner/client from `上海失物柜案`.
 - 曹卓: visible corporate antagonist from `上海失物柜案`.
 - 白先生 / 白策: emerging arc antagonist from `上海失物柜案`; a former journalist who now tries to manage truth through hidden records.
+- 唐岚: old-reporting contact from `上海无声档案案`.
+- 胡越: present-day source/witness pressure point from `上海无声档案案`.
+- 贺庭: 清页-side antagonist/business pressure figure from `上海无声档案案`.
+- 叶秋: source/helper connected to old draft and backup evidence from `上海无声档案案`.
+- 沈望: erased-name victim at the center of `上海无声档案案`.

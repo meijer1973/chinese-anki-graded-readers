@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki And Graded Readers
 
-Generated: 2026-05-28T13:57:37Z
+Generated: 2026-05-28T16:52:28Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 773
+Files indexed: 830
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -185,7 +185,7 @@ Count: 22
 
 ## manuscripts
 
-Count: 627
+Count: 684
 
 - manuscripts/README.md
 - manuscripts/sample-known-words/chapters/chapter_01.validation.json
@@ -582,6 +582,63 @@ Count: 627
 - manuscripts/shanghai-shadow-bridge-case/stretch_word_exposure.md
 - manuscripts/shanghai-shadow-bridge-case/vocabulary_report.json
 - manuscripts/shanghai-shadow-bridge-case/vocabulary_report.md
+- manuscripts/shanghai-silent-archive-case/book_specific_words.txt
+- manuscripts/shanghai-silent-archive-case/build_summary.md
+- manuscripts/shanghai-silent-archive-case/chapters/chapter_01.validation.json
+- manuscripts/shanghai-silent-archive-case/chapters/chapter_01.zh-tok.txt
+- manuscripts/shanghai-silent-archive-case/chapters/chapter_02.validation.json
+- manuscripts/shanghai-silent-archive-case/chapters/chapter_02.zh-tok.txt
+- manuscripts/shanghai-silent-archive-case/chapters/chapter_03.validation.json
+- manuscripts/shanghai-silent-archive-case/chapters/chapter_03.zh-tok.txt
+- manuscripts/shanghai-silent-archive-case/chapters/chapter_04.validation.json
+- manuscripts/shanghai-silent-archive-case/chapters/chapter_04.zh-tok.txt
+- manuscripts/shanghai-silent-archive-case/chapters/chapter_05.validation.json
+- manuscripts/shanghai-silent-archive-case/chapters/chapter_05.zh-tok.txt
+- manuscripts/shanghai-silent-archive-case/chapters/chapter_06.validation.json
+- manuscripts/shanghai-silent-archive-case/chapters/chapter_06.zh-tok.txt
+- manuscripts/shanghai-silent-archive-case/chapters/chapter_07.validation.json
+- manuscripts/shanghai-silent-archive-case/chapters/chapter_07.zh-tok.txt
+- manuscripts/shanghai-silent-archive-case/chapters/chapter_08.validation.json
+- manuscripts/shanghai-silent-archive-case/chapters/chapter_08.zh-tok.txt
+- manuscripts/shanghai-silent-archive-case/chapters/chapter_09.validation.json
+- manuscripts/shanghai-silent-archive-case/chapters/chapter_09.zh-tok.txt
+- manuscripts/shanghai-silent-archive-case/chapters/chapter_10.validation.json
+- manuscripts/shanghai-silent-archive-case/chapters/chapter_10.zh-tok.txt
+- manuscripts/shanghai-silent-archive-case/chapters/chapter_11.validation.json
+- manuscripts/shanghai-silent-archive-case/chapters/chapter_11.zh-tok.txt
+- manuscripts/shanghai-silent-archive-case/chapters/chapter_12.validation.json
+- manuscripts/shanghai-silent-archive-case/chapters/chapter_12.zh-tok.txt
+- manuscripts/shanghai-silent-archive-case/characters.md
+- manuscripts/shanghai-silent-archive-case/continuity_log.md
+- manuscripts/shanghai-silent-archive-case/creative_preflight.md
+- manuscripts/shanghai-silent-archive-case/epub/build_report.json
+- manuscripts/shanghai-silent-archive-case/epub/shanghai-silent-archive-case.epub
+- manuscripts/shanghai-silent-archive-case/novel_bible.md
+- manuscripts/shanghai-silent-archive-case/outline.md
+- manuscripts/shanghai-silent-archive-case/planning/chapter_01_vocab_plan.md
+- manuscripts/shanghai-silent-archive-case/planning/chapter_02_vocab_plan.md
+- manuscripts/shanghai-silent-archive-case/planning/chapter_03_vocab_plan.md
+- manuscripts/shanghai-silent-archive-case/planning/chapter_04_vocab_plan.md
+- manuscripts/shanghai-silent-archive-case/planning/chapter_05_vocab_plan.md
+- manuscripts/shanghai-silent-archive-case/planning/chapter_06_vocab_plan.md
+- manuscripts/shanghai-silent-archive-case/planning/chapter_07_vocab_plan.md
+- manuscripts/shanghai-silent-archive-case/planning/chapter_08_vocab_plan.md
+- manuscripts/shanghai-silent-archive-case/planning/chapter_09_vocab_plan.md
+- manuscripts/shanghai-silent-archive-case/planning/chapter_10_vocab_plan.md
+- manuscripts/shanghai-silent-archive-case/planning/chapter_11_vocab_plan.md
+- manuscripts/shanghai-silent-archive-case/planning/chapter_12_vocab_plan.md
+- manuscripts/shanghai-silent-archive-case/proper_nouns.txt
+- manuscripts/shanghai-silent-archive-case/quality/chapter_structure_report.json
+- manuscripts/shanghai-silent-archive-case/quality/lead_quality_decision.md
+- manuscripts/shanghai-silent-archive-case/quality/literary_critic_report.md
+- manuscripts/shanghai-silent-archive-case/quality/normal_reader_report.md
+- manuscripts/shanghai-silent-archive-case/quality/plot_affordance_report.json
+- manuscripts/shanghai-silent-archive-case/quality/prose_variety_report.json
+- manuscripts/shanghai-silent-archive-case/quality/quality_gate_summary.json
+- manuscripts/shanghai-silent-archive-case/quality/repeated_phrase_report.json
+- manuscripts/shanghai-silent-archive-case/quality/vocabulary_usage_report.json
+- manuscripts/shanghai-silent-archive-case/vocabulary_report.json
+- manuscripts/shanghai-silent-archive-case/vocabulary_report.md
 - manuscripts/shanghai-spirit-lamp-case/book_specific_words.txt
 - manuscripts/shanghai-spirit-lamp-case/chapters/chapter_01.validation.json
 - manuscripts/shanghai-spirit-lamp-case/chapters/chapter_01.zh-tok.txt
