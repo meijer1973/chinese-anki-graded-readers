@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-28T11:10:34Z",
+  "generated_at": "2026-05-28T13:39:57Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 759,
+  "file_count": 768,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -196,6 +196,36 @@
       "category": "adaptations"
     },
     {
+      "path": "adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/adaptation_config.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/adaptation_config.json",
+      "category": "adaptations"
+    },
+    {
+      "path": "adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/proper_noun_candidates.tsv",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/proper_noun_candidates.tsv",
+      "category": "adaptations"
+    },
+    {
+      "path": "adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/source_map.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/source_map.json",
+      "category": "adaptations"
+    },
+    {
+      "path": "adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/stretch_candidates.tsv",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/stretch_candidates.tsv",
+      "category": "adaptations"
+    },
+    {
+      "path": "adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/vocabulary_profile_baseline.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/vocabulary_profile_baseline.json",
+      "category": "adaptations"
+    },
+    {
+      "path": "adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/vocabulary_profile_baseline.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/vocabulary_profile_baseline.md",
+      "category": "adaptations"
+    },
+    {
       "path": "adaptations/chinese-economic-news-reading-pack-2026-05-28/adaptation_config.json",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28/adaptation_config.json",
       "category": "adaptations"
@@ -206,8 +236,23 @@
       "category": "adaptations"
     },
     {
+      "path": "adaptations/chinese-economic-news-reading-pack-2026-05-28/adaptation_trial_report.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28/adaptation_trial_report.md",
+      "category": "adaptations"
+    },
+    {
       "path": "adaptations/chinese-economic-news-reading-pack-2026-05-28/proper_noun_candidates.tsv",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28/proper_noun_candidates.tsv",
+      "category": "adaptations"
+    },
+    {
+      "path": "adaptations/chinese-economic-news-reading-pack-2026-05-28/reviewed_book_specific_words.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28/reviewed_book_specific_words.txt",
+      "category": "adaptations"
+    },
+    {
+      "path": "adaptations/chinese-economic-news-reading-pack-2026-05-28/reviewed_proper_nouns.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/chinese-economic-news-reading-pack-2026-05-28/reviewed_proper_nouns.txt",
       "category": "adaptations"
     },
     {

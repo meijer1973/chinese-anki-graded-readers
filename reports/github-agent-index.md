@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki And Graded Readers
 
-Generated: 2026-05-28T11:10:34Z
+Generated: 2026-05-28T13:39:57Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 759
+Files indexed: 768
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -158,12 +158,21 @@ Count: 2
 
 ## adaptations
 
-Count: 8
+Count: 17
 
 - adaptations/README.md
+- adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/adaptation_config.json
+- adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/proper_noun_candidates.tsv
+- adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/source_map.json
+- adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/stretch_candidates.tsv
+- adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/vocabulary_profile_baseline.json
+- adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/vocabulary_profile_baseline.md
 - adaptations/chinese-economic-news-reading-pack-2026-05-28/adaptation_config.json
 - adaptations/chinese-economic-news-reading-pack-2026-05-28/adaptation_plan.md
+- adaptations/chinese-economic-news-reading-pack-2026-05-28/adaptation_trial_report.md
 - adaptations/chinese-economic-news-reading-pack-2026-05-28/proper_noun_candidates.tsv
+- adaptations/chinese-economic-news-reading-pack-2026-05-28/reviewed_book_specific_words.txt
+- adaptations/chinese-economic-news-reading-pack-2026-05-28/reviewed_proper_nouns.txt
 - adaptations/chinese-economic-news-reading-pack-2026-05-28/source_map.json
 - adaptations/chinese-economic-news-reading-pack-2026-05-28/stretch_candidates.tsv
 - adaptations/chinese-economic-news-reading-pack-2026-05-28/vocabulary_profile_baseline.json

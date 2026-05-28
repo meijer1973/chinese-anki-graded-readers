@@ -140,21 +140,6 @@
       "recommended_repetition_count": 3
     },
     {
-      "word": "客户",
-      "pinyin": "ke4 hu4",
-      "english": "client",
-      "part_of_speech": "noun",
-      "pack": "business_economics_60",
-      "priority": 2,
-      "notes": "Curated starter metadata for concrete business/economics graded-reader scenes.",
-      "example_zh_tok": "客户 对 生意 很 重要 。",
-      "example_zh_natural": "客户对生意很重要。",
-      "example_en": "Client is important for the business.",
-      "story_affordance": "Supports concrete scenes about shops, money, customers, prices, costs, risk, banks, and simple business decisions.",
-      "difficulty_note": "Starter metadata; verify nuance before promoting this word into the core known list.",
-      "recommended_repetition_count": 3
-    },
-    {
       "word": "产品",
       "pinyin": "chan3 pin3",
       "english": "product",
@@ -165,21 +150,6 @@
       "example_zh_tok": "产品 对 生意 很 重要 。",
       "example_zh_natural": "产品对生意很重要。",
       "example_en": "Product is important for the business.",
-      "story_affordance": "Supports concrete scenes about shops, money, customers, prices, costs, risk, banks, and simple business decisions.",
-      "difficulty_note": "Starter metadata; verify nuance before promoting this word into the core known list.",
-      "recommended_repetition_count": 3
-    },
-    {
-      "word": "服务",
-      "pinyin": "fu2 wu4",
-      "english": "service",
-      "part_of_speech": "noun",
-      "pack": "business_economics_60",
-      "priority": 2,
-      "notes": "Curated starter metadata for concrete business/economics graded-reader scenes.",
-      "example_zh_tok": "服务 对 生意 很 重要 。",
-      "example_zh_natural": "服务对生意很重要。",
-      "example_en": "Service is important for the business.",
       "story_affordance": "Supports concrete scenes about shops, money, customers, prices, costs, risk, banks, and simple business decisions.",
       "difficulty_note": "Starter metadata; verify nuance before promoting this word into the core known list.",
       "recommended_repetition_count": 3
@@ -635,21 +605,6 @@
       "recommended_repetition_count": 3
     },
     {
-      "word": "广告",
-      "pinyin": "guang3 gao4",
-      "english": "advertising",
-      "part_of_speech": "noun",
-      "pack": "business_economics_60",
-      "priority": 2,
-      "notes": "Curated starter metadata for concrete business/economics graded-reader scenes.",
-      "example_zh_tok": "广告 对 生意 很 重要 。",
-      "example_zh_natural": "广告对生意很重要。",
-      "example_en": "Advertising is important for the business.",
-      "story_affordance": "Supports concrete scenes about shops, money, customers, prices, costs, risk, banks, and simple business decisions.",
-      "difficulty_note": "Starter metadata; verify nuance before promoting this word into the core known list.",
-      "recommended_repetition_count": 3
-    },
-    {
       "word": "销售",
       "pinyin": "xiao1 shou4",
       "english": "sales",
@@ -755,6 +710,21 @@
       "recommended_repetition_count": 3
     },
     {
+      "word": "顾客群",
+      "pinyin": "gu4 ke4 qun2",
+      "english": "Needs review: 顾客群",
+      "part_of_speech": "business/economics word",
+      "pack": "business_economics_60",
+      "priority": 2,
+      "notes": "Generated starter metadata for business_economics_60; review during future curation.",
+      "example_zh_tok": "这个 顾客群 会 影响 生意 。",
+      "example_zh_natural": "这个顾客群会影响生意。",
+      "example_en": "This business factor affects the business.",
+      "story_affordance": "Supports concrete scenes about shops, money, customers, prices, costs, risk, banks, and simple business decisions.",
+      "difficulty_note": "Starter metadata; verify nuance before promoting this word into the core known list.",
+      "recommended_repetition_count": 3
+    },
+    {
       "word": "现金流",
       "pinyin": "xian4 jin1 liu2",
       "english": "cash flow",
@@ -765,6 +735,36 @@
       "example_zh_tok": "现金流 对 生意 很 重要 。",
       "example_zh_natural": "现金流对生意很重要。",
       "example_en": "Cash flow is important for the business.",
+      "story_affordance": "Supports concrete scenes about shops, money, customers, prices, costs, risk, banks, and simple business decisions.",
+      "difficulty_note": "Starter metadata; verify nuance before promoting this word into the core known list.",
+      "recommended_repetition_count": 3
+    },
+    {
+      "word": "毛利",
+      "pinyin": "mao2 li4",
+      "english": "gross profit",
+      "part_of_speech": "business/economics word",
+      "pack": "business_economics_60",
+      "priority": 2,
+      "notes": "Generated starter metadata for business_economics_60; review during future curation.",
+      "example_zh_tok": "这个 毛利 会 影响 生意 。",
+      "example_zh_natural": "这个毛利会影响生意。",
+      "example_en": "This business factor affects the business.",
+      "story_affordance": "Supports concrete scenes about shops, money, customers, prices, costs, risk, banks, and simple business decisions.",
+      "difficulty_note": "Starter metadata; verify nuance before promoting this word into the core known list.",
+      "recommended_repetition_count": 3
+    },
+    {
+      "word": "净利",
+      "pinyin": "jing4 li4",
+      "english": "net profit",
+      "part_of_speech": "business/economics word",
+      "pack": "business_economics_60",
+      "priority": 2,
+      "notes": "Generated starter metadata for business_economics_60; review during future curation.",
+      "example_zh_tok": "这个 净利 会 影响 生意 。",
+      "example_zh_natural": "这个净利会影响生意。",
+      "example_en": "This business factor affects the business.",
       "story_affordance": "Supports concrete scenes about shops, money, customers, prices, costs, risk, banks, and simple business decisions.",
       "difficulty_note": "Starter metadata; verify nuance before promoting this word into the core known list.",
       "recommended_repetition_count": 3

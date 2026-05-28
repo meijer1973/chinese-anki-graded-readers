@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-05-25T08:57:17Z",
+  "generated_at": "2026-05-28T13:38:32Z",
   "source_path": "C:\\Projects\\anki\\word list chinese.txt",
   "output_path": "C:\\Projects\\anki\\data\\known_words.txt",
   "source_word_count": 3575,
-  "known_word_count": 1100,
-  "limit": 1100,
-  "derivation": "First N ranked entries from word list chinese.txt. Current graded-reader default N=1100; Anki card scheduling policy is managed separately."
+  "known_word_count": 1500,
+  "limit": 1500,
+  "derivation": "First N ranked entries from word list chinese.txt. Current graded-reader default N=1500; Anki card scheduling policy is managed separately."
 }

@@ -14,13 +14,13 @@ The active machine-readable vocabulary file is:
 data/known_words.txt
 ```
 
-It is generated from `word list chinese.txt`, which is one Chinese word or phrase per line in ranked order. The current graded-reader default is the first 1100 entries. This is separate from live Anki card scheduling policy.
+It is generated from `word list chinese.txt`, which is one Chinese word or phrase per line in ranked order. The current graded-reader default is the first 1500 entries. This is separate from live Anki card scheduling policy.
 
 Regenerate the active known list after the ranked list or known-word threshold changes:
 
 ```powershell
 $env:PYTHONIOENCODING='utf-8'
-python scripts/sync_known_words.py --limit 1100
+python scripts/sync_known_words.py --limit 1500
 ```
 
 For future expansion, change only the limit:
@@ -43,7 +43,7 @@ python scripts/load_known_words.py --known data/known_words.txt
 
 Use public mode when a book should represent only the frequency-core level plus approved stretch words.
 
-Use Marcel personalized mode when the book is for Marcel and may use words he already recognizes outside the top 1100. The personal-known layer is generated from:
+Use Marcel personalized mode when the book is for Marcel and may use words he already recognizes outside the top 1500. The personal-known layer is generated from:
 
 ```text
 data/learner_profiles/marcel/personal_known_words.tsv
