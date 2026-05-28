@@ -28,6 +28,8 @@ adaptations/<slug>/source_private/
 adaptations/<slug>/source_units/
 ```
 
+The `0.` prefix marks user-managed local intake. Agents may read these folders when the user asks, but should not rename, delete, reorganize, or bulk-edit them.
+
 Do not commit copyrighted source or derivative source units unless rights are explicit.
 
 ## Intake

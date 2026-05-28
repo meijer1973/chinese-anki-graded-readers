@@ -32,6 +32,7 @@ Refresh these files when paths, scripts, workflows, skills, agents, reports, or 
 - Use exact paths from the map or manifest before searching.
 - Treat `chapters/*.zh-tok.txt` as canonical story text.
 - Treat EPUBs, TSV exports, backups, and local downloads as generated or local artifacts.
+- Treat `0.`-prefixed folders as user-managed local intake. Agents may read them when asked, but should not reorganize or bulk-edit them.
 - Treat `adaptations/*/source_private/` and `adaptations/*/source_units/` as private/local unless rights explicitly allow publishing.
 - Confirm file existence with `reports/github-agent-index.md`.
 - Use `reports/url-index.md` as a single-fetch entry point when raw URL construction is unavailable.

@@ -62,8 +62,10 @@ Bootstrap or refresh the TSV from LingQ CSV or one-word-per-line text exports:
 
 ```powershell
 $env:PYTHONIOENCODING='utf-8'
-python scripts/import_personal_known_words.py --sources "personal known words" --out data/learner_profiles/marcel/personal_known_words.tsv --status known_passive --reading-confidence 4 --allow yes
+python scripts/import_personal_known_words.py --sources "0. personal known words" --out data/learner_profiles/marcel/personal_known_words.tsv --status known_passive --reading-confidence 4 --allow yes
 ```
+
+`0. personal known words/` is a user-managed local intake folder. Read it when importing user-provided lists, but do not reorganize or bulk-edit it unless the user asks.
 
 After editing the TSV, regenerate the validator list and audit files:
 

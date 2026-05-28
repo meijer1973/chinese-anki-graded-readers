@@ -302,6 +302,7 @@ These are useful locally but are not source-of-truth:
 - `anki_chinese_import.tsv`
 - `anki_chinese_review.tsv`
 - `*_backup.tsv`
+- user-managed local intake folders prefixed with `0.`, such as `0. Manuscripts from writer agent/`, `0. epubs for conversion/`, and `0. personal known words/`
 - exploded/intermediate EPUB contents under `manuscripts/*/epub/`
 - private EPUB/adaptation source under `adaptations/*/source_private/` and `adaptations/*/source_units/`
 - `downloads/`

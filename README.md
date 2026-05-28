@@ -64,6 +64,8 @@ The live Anki collection is not mutated by ordinary exports. Scripts that update
 
 Generated import files, live-collection backups, local downloads, and old trial manuscripts are intentionally ignored by Git.
 
+Local intake folders prefixed with `0.` are user-managed input areas. Agents should read them only when requested and should not reorganize or bulk-edit them.
+
 ## Validation
 
 Run the test suite:

@@ -81,6 +81,8 @@ Rights gate first:
 
 Raw EPUBs and extracted source units belong under ignored local paths such as `adaptations/<slug>/source_private/`, `adaptations/<slug>/source_units/`, or `0. epubs for conversion/`. Do not commit them unless rights are explicit and the user asks.
 
+Folders prefixed with `0.` are user-managed local intake folders, not agent-owned repository surfaces. Treat `0. Manuscripts from writer agent/`, `0. epubs for conversion/`, and `0. personal known words/` as places to read user-provided input from when requested, but do not reorganize, delete, rename, or bulk-edit them unless the user explicitly asks.
+
 The adaptation workflow is:
 
 1. import EPUB source units with `scripts/import_epub_for_adaptation.py`;
