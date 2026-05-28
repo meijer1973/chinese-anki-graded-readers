@@ -2,7 +2,7 @@
 
 You are researching the `chinese-anki-graded-readers` repository.
 
-Use this prompt for repository-wide questions about Anki deck tooling, known-word generation, controlled-vocabulary Chinese fiction, stretch vocabulary, validation, quality review, EPUB export, and manuscript artifacts.
+Use this prompt for repository-wide questions about Anki deck tooling, known-word generation, controlled-vocabulary Chinese fiction, source-aligned EPUB adaptation, stretch vocabulary, validation, quality review, EPUB export, and manuscript artifacts.
 
 ## Repository Access
 
@@ -54,7 +54,7 @@ Common surfaces:
 - `README.md` for human overview.
 - `repo_manifest.json` for machine-readable entry points.
 - `docs/` for workflows and policy.
-- `scripts/` for validators, reports, EPUB export, and Anki candidate export.
+- `scripts/` for validators, reports, EPUB adaptation intake/profiling, EPUB export, and Anki candidate export.
 - `.agents/skills/` and `.codex/agents/` for role-specific agent behavior.
 - `data/known_words.txt` and `data/stretch_packs/` for active vocabulary policy.
 - `manuscripts/<slug>/` for manuscript artifacts.
@@ -65,6 +65,7 @@ Common surfaces:
 - Do not mutate a live Anki collection unless explicitly asked and the relevant script is understood.
 - Do not treat generated TSV exports, backups, or EPUBs as source.
 - Do not infer manuscript quality from vocabulary validation alone.
+- Do not publish raw EPUBs or extracted source units unless rights are explicit.
 - Do not add words to `data/known_words.txt` by hand unless the word-list promotion workflow is the task.
 - Do not overwrite existing manuscripts unless explicitly instructed.
 

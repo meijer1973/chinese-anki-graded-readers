@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chinese Source Adaptation"
+  short_description: "Adapt EPUBs into graded readers"
+  default_prompt: "Use this skill to import, profile, and adapt a Chinese EPUB into a source-aligned graded reader with minimal intervention."

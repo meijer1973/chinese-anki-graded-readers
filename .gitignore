@@ -12,6 +12,13 @@ downloads/
 Manuscripts from writer agent/
 personal known words/
 known words from user/
+0. Manuscripts from writer agent/
+0. personal known words/
+0. epubs for conversion/
+
+# EPUB adaptation intake: source text is private unless rights explicitly allow tracking.
+adaptations/*/source_private/
+adaptations/*/source_units/*_source.md
 
 # Large local reference spreadsheets/directories
 SUBTLEX-CH-CHR/

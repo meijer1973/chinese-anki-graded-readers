@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-27T12:27:43Z",
+  "generated_at": "2026-05-28T09:51:15Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 743,
+  "file_count": 752,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -76,6 +76,16 @@
       "category": "agents/skills"
     },
     {
+      "path": ".agents/skills/chinese-source-aligned-adaptation/SKILL.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-source-aligned-adaptation/SKILL.md",
+      "category": "agents/skills"
+    },
+    {
+      "path": ".agents/skills/chinese-source-aligned-adaptation/agents/openai.yaml",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-source-aligned-adaptation/agents/openai.yaml",
+      "category": "agents/skills"
+    },
+    {
       "path": ".agents/skills/chinese-vocabulary-validation/SKILL.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-vocabulary-validation/SKILL.md",
       "category": "agents/skills"
@@ -136,6 +146,11 @@
       "category": "agents/skills"
     },
     {
+      "path": ".codex/agents/source-adaptation-auditor.toml",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.codex/agents/source-adaptation-auditor.toml",
+      "category": "agents/skills"
+    },
+    {
       "path": ".codex/agents/vocabulary-auditor.toml",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.codex/agents/vocabulary-auditor.toml",
       "category": "agents/skills"
@@ -174,6 +189,11 @@
       "path": "RESEARCH_AGENT_PROMPT.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/RESEARCH_AGENT_PROMPT.md",
       "category": "maps/prompts"
+    },
+    {
+      "path": "adaptations/README.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/README.md",
+      "category": "adaptations"
     },
     {
       "path": "add_missing_single_character_notes.py",
@@ -344,6 +364,11 @@
       "path": "data/stretch_packs/urban_objects_100.txt",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/urban_objects_100.txt",
       "category": "data"
+    },
+    {
+      "path": "docs/adaptation-workflow.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/adaptation-workflow.md",
+      "category": "docs"
     },
     {
       "path": "docs/anki-integration.md",
@@ -3556,6 +3581,11 @@
       "category": "scripts"
     },
     {
+      "path": "scripts/adaptation_tools.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/adaptation_tools.py",
+      "category": "scripts"
+    },
+    {
       "path": "scripts/build_agent_index.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/build_agent_index.py",
       "category": "scripts"
@@ -3586,6 +3616,11 @@
       "category": "scripts"
     },
     {
+      "path": "scripts/import_epub_for_adaptation.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/import_epub_for_adaptation.py",
+      "category": "scripts"
+    },
+    {
       "path": "scripts/import_personal_known_words.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/import_personal_known_words.py",
       "category": "scripts"
@@ -3608,6 +3643,11 @@
     {
       "path": "scripts/plot_affordance_report.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/plot_affordance_report.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/profile_adaptation_vocabulary.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/profile_adaptation_vocabulary.py",
       "category": "scripts"
     },
     {
@@ -3703,6 +3743,11 @@
     {
       "path": "suggest_meaning_edits.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/suggest_meaning_edits.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_adaptation_workflow.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_adaptation_workflow.py",
       "category": "scripts"
     },
     {

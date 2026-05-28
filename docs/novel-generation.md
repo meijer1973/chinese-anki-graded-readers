@@ -4,6 +4,8 @@ This repo can support repeatable long-form Chinese fiction written with the acti
 
 Vocabulary validation is necessary, but it is not enough. A book that passes vocabulary validation but fails reader interest is a failed book.
 
+For existing-source EPUB adaptation, use `docs/adaptation-workflow.md` before creating `manuscripts/<slug>/`. Adaptation is diagnostic first and source-aligned: profile the source, classify proper nouns and reusable vocabulary, then change only what is necessary.
+
 ## Vocabulary Source
 
 The active machine-readable vocabulary file is:
@@ -154,6 +156,30 @@ For 林安 journalist/crime stories, include the journalism/crime pack and make 
 
 For business/economics readers, pass `data/stretch_packs/business_economics_60.txt` with `--extra-pack`. Use it for concrete cases such as a shop under rent pressure, a customer choosing between products, a company deciding whether to hire, or a journalist explaining why a local business failed.
 
+## Adapt An Existing EPUB
+
+Do not start by rewriting. First import and profile the EPUB:
+
+```powershell
+$env:PYTHONIOENCODING='utf-8'
+python scripts/import_epub_for_adaptation.py --epub "0. epubs for conversion/<file>.epub" --slug <slug> --rights-status private_study --copy-source-private
+python scripts/profile_adaptation_vocabulary.py --adaptation adaptations/<slug> --known data/known_words.txt --personal-known data/learner_profiles/marcel/personal_known_words.txt
+```
+
+Then review:
+
+- `adaptations/<slug>/proper_noun_candidates.tsv`
+- `adaptations/<slug>/stretch_candidates.tsv`
+- `adaptations/<slug>/vocabulary_profile_baseline.json`
+
+Only after rights and vocabulary policy are clear, create the normal manuscript folder. Add `adaptation_log.md` and `quality/source_fidelity_report.md`. For adapted manuscripts, run the quality gate with:
+
+```powershell
+python scripts/run_quality_gate.py --manuscript manuscripts/<slug> --known data/known_words.txt --personal-known data/learner_profiles/marcel/personal_known_words.txt --require-source-fidelity
+```
+
+The fidelity report must contain `Fidelity decision: PASS` before the adaptation is ready for EPUB.
+
 ## Skills and Agent Roles
 
 Repo-local skills live under `.agents/skills/`:
@@ -166,6 +192,7 @@ Repo-local skills live under `.agents/skills/`:
 - `chinese-normal-reader-review`
 - `chinese-lead-quality-review`
 - `chinese-prose-variety-polish`
+- `chinese-source-aligned-adaptation`
 - `epub-export`
 
 Project-scoped role definitions live under `.codex/agents/`:
@@ -178,6 +205,7 @@ Project-scoped role definitions live under `.codex/agents/`:
 - `normal-reader`
 - `lead-quality-reviewer`
 - `prose-variety-polisher`
+- `source-adaptation-auditor`
 - `epub-builder`
 
 If the current Codex runtime does not auto-load these custom agents, use them as manual role prompts and rely on the skills plus scripts for enforcement.

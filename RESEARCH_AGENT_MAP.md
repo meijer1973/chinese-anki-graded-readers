@@ -76,6 +76,7 @@ Human-readable:
 - `RESEARCH_AGENT_MAP.md`
 - `docs/novel-generation.md`
 - `docs/personal-known-vocabulary.md`
+- `docs/adaptation-workflow.md`
 - `docs/creative-preflight.md`
 - `docs/style-bank-controlled-chinese.md`
 - `docs/stretch-vocabulary.md`
@@ -85,6 +86,7 @@ Human-readable:
 - `.agents/skills/chinese-restricted-vocabulary-writing/SKILL.md`
 - `.agents/skills/chinese-vocabulary-validation/SKILL.md`
 - `.agents/skills/chinese-lead-quality-review/SKILL.md`
+- `.agents/skills/chinese-source-aligned-adaptation/SKILL.md`
 
 Machine-readable:
 
@@ -109,6 +111,9 @@ Machine-readable:
     "data/stretch_packs/metadata/journalism_crime_50.json",
     "data/stretch_packs/business_economics_60.txt",
     "data/stretch_packs/metadata/business_economics_60.json",
+    "scripts/import_epub_for_adaptation.py",
+    "scripts/profile_adaptation_vocabulary.py",
+    "scripts/adaptation_tools.py",
     "series/an-lin/series_bible.md",
     "anki/stretch_word_candidates.tsv",
     "manuscripts/shanghai-rain-gate-crime/vocabulary_report.json",
@@ -155,9 +160,13 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/journalism_crime_50.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/business_economics_60.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/business_economics_60.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/import_epub_for_adaptation.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/profile_adaptation_vocabulary.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/adaptation_tools.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/an-lin/series_bible.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/novel-generation.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/personal-known-vocabulary.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/adaptation-workflow.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/creative-preflight.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/style-bank-controlled-chinese.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/stretch-vocabulary.md
@@ -198,6 +207,7 @@ Use these anchors before free-form browsing.
   "novel_config": "configs/novel_generation.default.json",
   "novel_generation_docs": "docs/novel-generation.md",
   "personal_known_docs": "docs/personal-known-vocabulary.md",
+  "adaptation_workflow_docs": "docs/adaptation-workflow.md",
   "creative_preflight_docs": "docs/creative-preflight.md",
   "style_bank_docs": "docs/style-bank-controlled-chinese.md",
   "stretch_vocabulary_docs": "docs/stretch-vocabulary.md",
@@ -209,6 +219,9 @@ Use these anchors before free-form browsing.
   "chapter_validator": "scripts/validate_chapter.py",
   "book_validator": "scripts/validate_book.py",
   "epub_builder": "scripts/build_epub.py",
+  "epub_adaptation_intake": "scripts/import_epub_for_adaptation.py",
+  "epub_adaptation_profiler": "scripts/profile_adaptation_vocabulary.py",
+  "epub_adaptation_tools": "scripts/adaptation_tools.py",
   "reading_copy_builder": "scripts/build_reading_copy.py",
   "plot_affordance_report": "scripts/plot_affordance_report.py",
   "prose_variety_report": "scripts/prose_variety_report.py",
@@ -240,6 +253,7 @@ Use these anchors before free-form browsing.
     "data/learner_profiles",
     "data/stretch_packs",
     "docs",
+    "adaptations",
     "manuscripts",
     "reports",
     "series",
@@ -263,6 +277,7 @@ Use these anchors before free-form browsing.
 | Generate or validate known words | `scripts/sync_known_words.py`, `data/known_words.metadata.json` |
 | Sync Marcel personal-known words | `docs/personal-known-vocabulary.md`, `scripts/sync_personal_known_words.py`, `data/learner_profiles/marcel/personal_known_words.tsv` |
 | Validate story vocabulary | `scripts/validate_chapter.py`, `scripts/validate_book.py`, `scripts/novel_tools.py` |
+| Adapt an existing EPUB into a graded reader | `docs/adaptation-workflow.md`, `scripts/import_epub_for_adaptation.py`, `scripts/profile_adaptation_vocabulary.py`, `.agents/skills/chinese-source-aligned-adaptation/SKILL.md` |
 | Plan a new story | `.agents/skills/chinese-graded-novel-planning/SKILL.md`, `docs/novel-generation.md` |
 | Run creative preflight | `docs/creative-preflight.md` |
 | Plan a 林安 sequel | `series/an-lin/series_bible.md`, `series/an-lin/sequel_constraints.md`, `data/stretch_packs/journalism_crime_50.txt` |
@@ -288,6 +303,7 @@ These are useful locally but are not source-of-truth:
 - `anki_chinese_review.tsv`
 - `*_backup.tsv`
 - exploded/intermediate EPUB contents under `manuscripts/*/epub/`
+- private EPUB/adaptation source under `adaptations/*/source_private/` and `adaptations/*/source_units/`
 - `downloads/`
 - `SUBTLEX-CH-CHR/`
 - `SUBTLEX-CH-WF/`

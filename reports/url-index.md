@@ -12,6 +12,7 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/repo_manifest.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/reports/github-agent-index.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/novel-generation.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/adaptation-workflow.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/creative-preflight.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/style-bank-controlled-chinese.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/stretch-vocabulary.md
@@ -34,6 +35,7 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/repo_manifest.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/reports/github-agent-index.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/novel-generation.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/adaptation-workflow.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/creative-preflight.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/style-bank-controlled-chinese.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/stretch-vocabulary.md
@@ -59,6 +61,8 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-prose-variety-polish/agents/openai.yaml
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-restricted-vocabulary-writing/SKILL.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-restricted-vocabulary-writing/agents/openai.yaml
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-source-aligned-adaptation/SKILL.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-source-aligned-adaptation/agents/openai.yaml
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-vocabulary-validation/SKILL.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/chinese-vocabulary-validation/agents/openai.yaml
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.agents/skills/epub-export/SKILL.md
@@ -71,9 +75,11 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.codex/agents/normal-reader.toml
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.codex/agents/novel-planner.toml
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.codex/agents/prose-variety-polisher.toml
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.codex/agents/source-adaptation-auditor.toml
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.codex/agents/vocabulary-auditor.toml
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.gitattributes
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/.gitignore
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/adaptations/README.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/add_missing_single_character_notes.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/anki_field_schema.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/apply_meaning_cleanup_updates.py
@@ -736,17 +742,20 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/reports/github-agent-index.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/reports/url-index.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/__init__.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/adaptation_tools.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/build_agent_index.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/build_epub.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/build_reading_copy.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/complete_stretch_pack_metadata.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/export_stretch_words_for_anki.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/generate_reports.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/import_epub_for_adaptation.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/import_personal_known_words.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/import_stretch_words_to_anki.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/load_known_words.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/novel_tools.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/plot_affordance_report.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/profile_adaptation_vocabulary.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/promote_stretch_words.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/prose_variety_report.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/repeated_phrase_report.py
@@ -766,6 +775,7 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/an-lin/series_bible.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/setup_production_sentence_cards.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/suggest_meaning_edits.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_adaptation_workflow.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_novel_pipeline.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_stretch_vocabulary.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/word list chinese.txt

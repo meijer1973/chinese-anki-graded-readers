@@ -104,6 +104,7 @@
   "quality_gate": {
     "require_creative_preflight": true,
     "require_prose_variety_report": true,
+    "require_source_fidelity_review_for_adaptations": true,
     "require_literary_critic_review": true,
     "require_normal_reader_review": true,
     "require_lead_quality_decision": true,
@@ -122,5 +123,35 @@
     "avoid_bland_safe_plotting": true,
     "avoid_padding_for_length": true,
     "allow_short_complete_chapters": true
+  },
+  "adaptation_workflow": {
+    "enabled": false,
+    "source_intake_root": "adaptations/<slug>",
+    "source_private_path": "adaptations/<slug>/source_private",
+    "source_units_path": "adaptations/<slug>/source_units",
+    "source_map_path": "adaptations/<slug>/source_map.json",
+    "baseline_profile_path": "adaptations/<slug>/vocabulary_profile_baseline.json",
+    "proper_noun_candidates_path": "adaptations/<slug>/proper_noun_candidates.tsv",
+    "stretch_candidates_path": "adaptations/<slug>/stretch_candidates.tsv",
+    "adaptation_log_path": "manuscripts/<slug>/adaptation_log.md",
+    "source_fidelity_report_path": "manuscripts/<slug>/quality/source_fidelity_report.md",
+    "target_readable_coverage_percent": 98,
+    "preferred_forbidden_unknown_tokens_per_chapter": 0,
+    "maximum_forbidden_unknown_tokens_per_chapter": 5,
+    "default_unit_token_range": [800, 1500],
+    "rights_policy": {
+      "public_domain_licensed_or_own_text": "Full adapted graded reader may be tracked and exported.",
+      "private_study": "Keep source EPUB and extracted source private/local; do not publish derivative source artifacts unless rights allow.",
+      "unclear": "Create analysis reports and transformation plans only."
+    },
+    "minimal_intervention_order": [
+      "classify proper nouns and personal-known words",
+      "approve high-value stretch or book-specific words",
+      "replace hard word with an easier known synonym",
+      "simplify phrase",
+      "split or simplify sentence",
+      "rewrite paragraph while preserving source facts",
+      "condense or summarize only when required"
+    ]
   }
 }

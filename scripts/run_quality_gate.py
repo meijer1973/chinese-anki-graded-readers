@@ -109,6 +109,32 @@ Public-quality status: PENDING
     )
 
 
+def init_source_fidelity_template(quality_dir: Path) -> None:
+    write_if_missing(
+        quality_dir / "source_fidelity_report.md",
+        """# Source Fidelity Report
+
+Fidelity decision: PENDING
+
+## Source Scope
+
+## Major Plot Beats Preserved
+
+## Character Motivations Preserved
+
+## Scene Order And Causality
+
+## Removed Facts
+
+## Invented Additions
+
+## Heavy Rewrites And Rationale
+
+## Final Notes
+""",
+    )
+
+
 def expected_vocab_plan_path(manuscript: Path, chapter: Path) -> Path:
     stem = chapter.name.replace(".zh-tok.txt", "")
     chapter_number = stem.replace("chapter_", "")
@@ -135,6 +161,28 @@ def creative_preflight_status(manuscript: Path) -> dict:
     }
 
 
+def source_fidelity_status(manuscript: Path, *, required: bool) -> dict:
+    path = manuscript / "quality" / "source_fidelity_report.md"
+    reviewed = False
+    decision = "NOT_REQUIRED"
+    if path.exists():
+        text = path.read_text(encoding="utf-8")
+        reviewed = "Fidelity decision: PASS" in text or "Fidelity decision: APPROVED" in text
+        if reviewed:
+            decision = "PASS"
+        elif "Fidelity decision:" in text:
+            decision = "PENDING"
+    elif required:
+        decision = "MISSING"
+    return {
+        "source_fidelity_required": required,
+        "source_fidelity_path": str(path),
+        "source_fidelity_present": path.exists(),
+        "source_fidelity_reviewed": reviewed,
+        "source_fidelity_decision": decision,
+    }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Create quality evidence artifacts for a manuscript.")
     parser.add_argument("--manuscript", required=True)
@@ -150,6 +198,11 @@ def main() -> int:
     parser.add_argument("--book-specific")
     parser.add_argument("--proper-nouns")
     parser.add_argument("--extra-pack", action="append", default=[])
+    parser.add_argument(
+        "--require-source-fidelity",
+        action="store_true",
+        help="Require quality/source_fidelity_report.md with Fidelity decision: PASS for adapted manuscripts.",
+    )
     parser.add_argument(
         "--max-forbidden-unknown-tokens-per-chapter",
         type=int,
@@ -186,9 +239,13 @@ def main() -> int:
     prose = prose_variety_report(chapters, punctuation_path=args.punctuation)
     write_json(quality / "prose_variety_report.json", prose)
     init_quality_templates(quality)
+    source_fidelity_required = args.require_source_fidelity or (manuscript / "adaptation_log.md").exists()
+    if source_fidelity_required:
+        init_source_fidelity_template(quality)
     status = quality_approval_status(manuscript)
     planning_status = chapter_planning_status(manuscript)
     preflight_status = creative_preflight_status(manuscript)
+    fidelity_status = source_fidelity_status(manuscript, required=source_fidelity_required)
     summary = {
         "valid_vocabulary": validation["valid"],
         "unknown_token_count": validation["unknown_token_count"],
@@ -205,15 +262,22 @@ def main() -> int:
         "stretch_token_percent": validation.get("stretch_token_percent", 0),
         **planning_status,
         **preflight_status,
+        **fidelity_status,
         "style_revision_required": prose["style_revision_required"],
         "style_warning_count": len(prose["warnings"]),
         "quality_approval": status,
-        "ready_for_epub": validation["valid"] and status["approved"] and planning_status["planning_files_present"],
+        "ready_for_epub": (
+            validation["valid"]
+            and status["approved"]
+            and planning_status["planning_files_present"]
+            and (not source_fidelity_required or fidelity_status["source_fidelity_reviewed"])
+        ),
         "public_quality_ready": (
             validation["valid"]
             and status["approved"]
             and planning_status["planning_files_present"]
             and preflight_status["creative_preflight_present"]
+            and (not source_fidelity_required or fidelity_status["source_fidelity_reviewed"])
             and not prose["style_revision_required"]
         ),
     }

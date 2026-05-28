@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki And Graded Readers
 
-Generated: 2026-05-27T12:27:43Z
+Generated: 2026-05-28T09:51:15Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 743
+Files indexed: 752
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -23,7 +23,7 @@ Count: 6
 
 ## agents/skills
 
-Count: 27
+Count: 30
 
 - .agents/skills/chinese-continuity-editing/SKILL.md
 - .agents/skills/chinese-continuity-editing/agents/openai.yaml
@@ -39,6 +39,8 @@ Count: 27
 - .agents/skills/chinese-prose-variety-polish/agents/openai.yaml
 - .agents/skills/chinese-restricted-vocabulary-writing/SKILL.md
 - .agents/skills/chinese-restricted-vocabulary-writing/agents/openai.yaml
+- .agents/skills/chinese-source-aligned-adaptation/SKILL.md
+- .agents/skills/chinese-source-aligned-adaptation/agents/openai.yaml
 - .agents/skills/chinese-vocabulary-validation/SKILL.md
 - .agents/skills/chinese-vocabulary-validation/agents/openai.yaml
 - .agents/skills/epub-export/SKILL.md
@@ -51,12 +53,14 @@ Count: 27
 - .codex/agents/normal-reader.toml
 - .codex/agents/novel-planner.toml
 - .codex/agents/prose-variety-polisher.toml
+- .codex/agents/source-adaptation-auditor.toml
 - .codex/agents/vocabulary-auditor.toml
 
 ## docs
 
-Count: 8
+Count: 9
 
+- docs/adaptation-workflow.md
 - docs/anki-integration.md
 - docs/creative-preflight.md
 - docs/machine-readable-repository.md
@@ -68,7 +72,7 @@ Count: 8
 
 ## scripts
 
-Count: 32
+Count: 36
 
 - add_missing_single_character_notes.py
 - apply_meaning_cleanup_updates.py
@@ -77,17 +81,20 @@ Count: 32
 - ensure_single_character_notes.py
 - migrate_chinese_notes.py
 - scripts/__init__.py
+- scripts/adaptation_tools.py
 - scripts/build_agent_index.py
 - scripts/build_epub.py
 - scripts/build_reading_copy.py
 - scripts/complete_stretch_pack_metadata.py
 - scripts/export_stretch_words_for_anki.py
 - scripts/generate_reports.py
+- scripts/import_epub_for_adaptation.py
 - scripts/import_personal_known_words.py
 - scripts/import_stretch_words_to_anki.py
 - scripts/load_known_words.py
 - scripts/novel_tools.py
 - scripts/plot_affordance_report.py
+- scripts/profile_adaptation_vocabulary.py
 - scripts/promote_stretch_words.py
 - scripts/prose_variety_report.py
 - scripts/repeated_phrase_report.py
@@ -100,6 +107,7 @@ Count: 32
 - sentence_example_overrides.py
 - setup_production_sentence_cards.py
 - suggest_meaning_edits.py
+- tests/test_adaptation_workflow.py
 - tests/test_novel_pipeline.py
 - tests/test_stretch_vocabulary.py
 
@@ -147,6 +155,12 @@ Count: 2
 
 - anki/anki_field_schema.md
 - anki/stretch_word_candidates.tsv
+
+## adaptations
+
+Count: 1
+
+- adaptations/README.md
 
 ## manuscripts
 

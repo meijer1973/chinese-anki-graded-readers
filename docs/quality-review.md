@@ -13,6 +13,12 @@ Every real manuscript needs these artifacts under `manuscripts/<project-slug>/qu
 
 The lead decision is the final manuscript status.
 
+Adapted manuscripts also need:
+
+- `source_fidelity_report.md`
+
+Run `scripts/run_quality_gate.py --require-source-fidelity` for adaptations. The report must contain `Fidelity decision: PASS` before `ready_for_epub` can be true in adaptation mode.
+
 Every new real manuscript should also have `manuscripts/<project-slug>/creative_preflight.md` before chapter vocabulary plans begin. Historical manuscripts may lack this file, but new public-quality work should not.
 
 For planning-heavy manuscripts, `scripts/run_quality_gate.py` also checks that every chapter has `planning/chapter_XX_vocab_plan.md`. Missing planning files are reported in `quality_gate_summary.json` and should block EPUB readiness until fixed.
@@ -59,18 +65,38 @@ Padding for length, vocabulary breadth, stretch exposure, or chapter count is a 
 ## Review Order
 
 1. Run vocabulary validation and review any unknown tokens, even when they are within budget.
-2. Run continuity review.
-3. Run vocabulary usage and repeated phrase reports.
-4. Run prose-variety evidence and create a natural reading copy when the manuscript is ready for review:
+2. For adapted manuscripts, run source fidelity review before normal quality approval.
+3. Run continuity review.
+4. Run vocabulary usage and repeated phrase reports.
+5. Run prose-variety evidence and create a natural reading copy when the manuscript is ready for review:
 
 ```powershell
 python scripts/build_reading_copy.py --manuscript manuscripts/<slug> --title "<title>" --out manuscripts/<slug>/reading_copy.md
 ```
 
-5. Literary critic writes `literary_critic_report.md`.
-6. Normal reader writes `normal_reader_report.md`.
-7. Prose-variety polisher repairs local rhythm issues when needed.
-8. Lead reviewer writes `lead_quality_decision.md`.
+6. Literary critic writes `literary_critic_report.md`.
+7. Normal reader writes `normal_reader_report.md`.
+8. Prose-variety polisher repairs local rhythm issues when needed.
+9. Lead reviewer writes `lead_quality_decision.md`.
+
+## Source Fidelity Review
+
+Use this only for EPUB/source adaptations. It checks whether simplification preserved the source rather than merely creating plausible new prose.
+
+`quality/source_fidelity_report.md` must check:
+
+- major plot beats preserved;
+- character motivations preserved;
+- scene order and causality preserved;
+- removed facts listed;
+- invented additions listed;
+- heavy rewrites justified by vocabulary or readability pressure.
+
+The adapted manuscript is not ready for EPUB in adaptation mode until the report says:
+
+```text
+Fidelity decision: PASS
+```
 
 ## Lead Decisions
 

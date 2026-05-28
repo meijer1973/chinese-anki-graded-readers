@@ -7,6 +7,8 @@ description: Export validated restricted-vocabulary Chinese manuscripts to EPUB.
 
 Build EPUBs only after whole-book vocabulary validation passes under the configured per-chapter forbidden-unknown budget and `quality/lead_quality_decision.md` explicitly says `Final decision: PASS`.
 
+For adapted manuscripts, also require `quality/source_fidelity_report.md` with `Fidelity decision: PASS` and run the quality gate with `--require-source-fidelity` before export.
+
 ## Public Graded-Reader Command
 
 ```powershell

@@ -65,6 +65,8 @@ def category_for(path: str) -> str:
         return "anki"
     if path.startswith("configs/"):
         return "configs"
+    if path.startswith("adaptations/"):
+        return "adaptations"
     if path.startswith("manuscripts/"):
         return "manuscripts"
     if path.startswith("reports/"):
@@ -92,7 +94,20 @@ def write_github_agent_index(paths: list[str]) -> None:
         "",
     ]
 
-    order = ["maps/prompts", "agents/skills", "docs", "scripts", "tests", "configs", "data", "anki", "manuscripts", "reports", "root"]
+    order = [
+        "maps/prompts",
+        "agents/skills",
+        "docs",
+        "scripts",
+        "tests",
+        "configs",
+        "data",
+        "anki",
+        "adaptations",
+        "manuscripts",
+        "reports",
+        "root",
+    ]
     for category in order:
         items = grouped.get(category, [])
         if not items:
@@ -114,6 +129,7 @@ def write_url_index(paths: list[str]) -> None:
         "repo_manifest.json",
         "reports/github-agent-index.md",
         "docs/novel-generation.md",
+        "docs/adaptation-workflow.md",
         "docs/creative-preflight.md",
         "docs/style-bank-controlled-chinese.md",
         "docs/stretch-vocabulary.md",

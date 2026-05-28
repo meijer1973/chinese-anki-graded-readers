@@ -4,6 +4,8 @@ This repository builds and maintains a Chinese vocabulary Anki deck. The main wo
 
 It also contains a repo-local workflow for Chinese restricted-vocabulary graded-reader fiction. All Chinese creative output intended for graded readers must use the active vocabulary policy and remain mechanically auditable.
 
+It also supports source-aligned EPUB-to-graded-reader adaptation. Adaptation is diagnostic first, minimally invasive second, and rewriting last. Do not treat 98% readable coverage as automatic repo validity: forbidden unknowns must remain visible and within the configured per-chapter budget, and proper nouns count only when explicitly listed.
+
 ## Restricted-Vocabulary Fiction Rules
 
 1. Vocabulary validity is necessary but not sufficient.
@@ -67,6 +69,29 @@ Stretch words are review-first Anki candidates. Do not directly mutate the live 
 
 Every stretch pack should have metadata for every word. Use `scripts/complete_stretch_pack_metadata.py` to fill missing starter metadata, then curate important entries by hand. If Anki notes already exist before stretch import, use `scripts/import_stretch_words_to_anki.py --mark-existing-stretch` after review to add stretch tags without overwriting study fields.
 
+### EPUB-To-Graded-Reader Adaptation
+
+Use `docs/adaptation-workflow.md` and the `chinese-source-aligned-adaptation` skill when converting an existing EPUB into a graded reader.
+
+Rights gate first:
+
+- public domain, licensed, or user-owned text: full adapted manuscript may be tracked and exported.
+- copyrighted text for private study: keep raw EPUBs, extracted source, and derivative source units local/private unless the user explicitly confirms rights for publication.
+- unclear rights: create only analysis reports, vocabulary profiles, candidate lists, and transformation plans.
+
+Raw EPUBs and extracted source units belong under ignored local paths such as `adaptations/<slug>/source_private/`, `adaptations/<slug>/source_units/`, or `0. epubs for conversion/`. Do not commit them unless rights are explicit and the user asks.
+
+The adaptation workflow is:
+
+1. import EPUB source units with `scripts/import_epub_for_adaptation.py`;
+2. profile vocabulary with `scripts/profile_adaptation_vocabulary.py`;
+3. review `proper_noun_candidates.tsv` and `stretch_candidates.tsv`;
+4. create the normal `manuscripts/<slug>/` structure only after rights and vocabulary policy are clear;
+5. keep `adaptation_log.md` with source-unit IDs, intervention levels, changes, and rationale;
+6. add `quality/source_fidelity_report.md` and require `Fidelity decision: PASS` before final adapted EPUB approval.
+
+Use the minimal-intervention cascade: classify proper nouns and personal-known words, approve high-value stretch or book-specific words, replace only genuinely hard words, simplify only when necessary, and rewrite or condense only when lower-impact steps cannot meet the readability target. No reason, no change.
+
 ## Repository Map
 
 - `word list chinese.txt` is the ranked source list. One Chinese word or phrase per line. The line order is the frequency rank used by later scripts.
@@ -89,6 +114,7 @@ Every stretch pack should have metadata for every word. Use `scripts/complete_st
 - `reports/github-agent-index.md`, `reports/github-agent-index.json`, and `reports/url-index.md` are generated inventories for remote agents; refresh them with `python scripts/build_agent_index.py`.
 - `manuscripts/<project-slug>/` contains novel bibles, outlines, canonical tokenized chapters, validation reports, continuity logs, and EPUB exports.
 - `scripts/load_known_words.py`, `scripts/sync_personal_known_words.py`, `scripts/import_personal_known_words.py`, `scripts/validate_chapter.py`, `scripts/validate_book.py`, `scripts/generate_reports.py`, `scripts/vocabulary_usage_report.py`, `scripts/repeated_phrase_report.py`, `scripts/run_quality_gate.py`, and `scripts/build_epub.py` inspect, validate, review-prep, report, and export restricted-vocabulary manuscripts.
+- `scripts/import_epub_for_adaptation.py`, `scripts/profile_adaptation_vocabulary.py`, and `scripts/adaptation_tools.py` support source-aligned EPUB intake and vocabulary-pressure diagnostics before any graded-reader adaptation is drafted.
 - `scripts/prose_variety_report.py` reports repeated dialogue tags, repeated sentence frames, and other style-polish risks. `scripts/build_reading_copy.py` creates noncanonical natural-text review copies.
 - `.agents/skills/` and `.codex/agents/` contain repo-local Codex workflows and role definitions for novel planning, chapter writing, validation, continuity editing, literary review, reader review, lead quality review, and EPUB export.
 
