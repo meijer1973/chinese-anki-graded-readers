@@ -821,6 +821,8 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/reports/url-index.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/__init__.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/adaptation_tools.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/anki_card_distribution.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/audit_anki_card_distribution.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/build_agent_index.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/build_epub.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/build_reading_copy.py
@@ -838,6 +840,7 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/prose_variety_report.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/repeated_phrase_report.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/run_quality_gate.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/schedule_anki_learning_order.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/sync_known_words.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/sync_personal_known_words.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/validate_book.py
@@ -854,6 +857,7 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/setup_production_sentence_cards.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/suggest_meaning_edits.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_adaptation_workflow.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_anki_card_distribution.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_novel_pipeline.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_stretch_vocabulary.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/word list chinese.txt

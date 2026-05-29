@@ -5,6 +5,7 @@ This repository maintains a Chinese vocabulary Anki deck and a controlled-vocabu
 ## Main Workflows
 
 - Build Anki TSV exports from `word list chinese.txt` with `build_anki_chinese.py`.
+- Keep Anki new-card order mixed with `scripts/audit_anki_card_distribution.py` and `scripts/schedule_anki_learning_order.py`.
 - Keep curated sentence and pinyin fixes in `sentence_example_overrides.py`.
 - Maintain the active known-word file in `data/known_words.txt`.
 - Maintain learner-profile personal-known vocabulary under `data/learner_profiles/marcel/` for Marcel-personalized readers.

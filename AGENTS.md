@@ -102,6 +102,8 @@ Use the minimal-intervention cascade: classify proper nouns and personal-known w
 - `apply_meaning_cleanup_updates.py` contains the current meaning cleanup rules and concise meaning overrides. It can update live Anki meaning fields through AnkiConnect.
 - `add_missing_single_character_notes.py` appends proposed missing single-character notes to the source word list, rebuilds TSVs, adds the notes to Anki, and reruns card flag setup.
 - `ensure_single_character_notes.py` enforces the standing character-closure policy after word-list edits.
+- `scripts/audit_anki_card_distribution.py` audits single-character clumping in the ranked source list.
+- `scripts/schedule_anki_learning_order.py` writes `anki/learning_order_plan.tsv` and sets live new-card due order so single-character and multi-character Chinese-to-English cards stay mixed.
 - `anki_chinese_review.tsv` is the regenerated TSV with a header for human review.
 - `anki_chinese_import.tsv` is the regenerated TSV without a header for Anki import.
 - `data/` contains compressed source datasets used by the builder: CC-CEDICT and Tatoeba Mandarin-English exports.
@@ -131,7 +133,7 @@ The live collection scripts assume:
 
 Current card policy from the latest report:
 
-- Standard word-recognition meaning cards are active for every deck note unless manually suspended.
+- Standard word-recognition meaning cards are active for every deck note.
 - Sentence cards are active for every deck note with `Example` and `Example Meaning` fields.
 - Production / meaning-recall cards remain available in the model but are suspended by the setup script.
 
@@ -261,6 +263,16 @@ python ensure_single_character_notes.py
 ```
 
 Policy: every Hanzi character used in any multi-character deck word must also exist as its own single-character note. This script scans the current word list, appends missing characters to the end of `word list chinese.txt`, rebuilds TSVs, adds the new character notes to Anki, and reruns `setup_production_sentence_cards.py`. If coverage is already complete, it only writes a report and adds nothing.
+
+Single-character closure does not define study order. Keep `word list chinese.txt` as the frequency-ranked source list, then use the generated learning-order scheduler to prevent a long run of isolated character cards:
+
+```powershell
+$env:PYTHONIOENCODING='utf-8'
+python scripts/audit_anki_card_distribution.py
+python scripts/schedule_anki_learning_order.py
+```
+
+The scheduler writes `anki/learning_order_plan.tsv` with separate `Source Rank` and `Learning Order` columns, and writes `single_character_distribution_report.md`. Chinese-to-English cards stay unsuspended; the scheduler changes new-card order rather than using suspension to solve clumping.
 
 Apply rebuilt sentence/example fields to the live Anki notes:
 

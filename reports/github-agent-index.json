@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-28T16:52:28Z",
+  "generated_at": "2026-05-29T19:36:20Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 830,
+  "file_count": 834,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -3976,6 +3976,16 @@
       "category": "scripts"
     },
     {
+      "path": "scripts/anki_card_distribution.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/anki_card_distribution.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/audit_anki_card_distribution.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/audit_anki_card_distribution.py",
+      "category": "scripts"
+    },
+    {
       "path": "scripts/build_agent_index.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/build_agent_index.py",
       "category": "scripts"
@@ -4061,6 +4071,11 @@
       "category": "scripts"
     },
     {
+      "path": "scripts/schedule_anki_learning_order.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/schedule_anki_learning_order.py",
+      "category": "scripts"
+    },
+    {
       "path": "scripts/sync_known_words.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/sync_known_words.py",
       "category": "scripts"
@@ -4138,6 +4153,11 @@
     {
       "path": "tests/test_adaptation_workflow.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_adaptation_workflow.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_anki_card_distribution.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_anki_card_distribution.py",
       "category": "scripts"
     },
     {

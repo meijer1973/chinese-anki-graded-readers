@@ -114,6 +114,9 @@ Machine-readable:
     "scripts/import_epub_for_adaptation.py",
     "scripts/profile_adaptation_vocabulary.py",
     "scripts/adaptation_tools.py",
+    "scripts/anki_card_distribution.py",
+    "scripts/audit_anki_card_distribution.py",
+    "scripts/schedule_anki_learning_order.py",
     "series/an-lin/series_bible.md",
     "anki/stretch_word_candidates.tsv",
     "manuscripts/shanghai-rain-gate-crime/vocabulary_report.json",
@@ -163,6 +166,9 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/import_epub_for_adaptation.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/profile_adaptation_vocabulary.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/adaptation_tools.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/anki_card_distribution.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/audit_anki_card_distribution.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/schedule_anki_learning_order.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/an-lin/series_bible.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/novel-generation.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/personal-known-vocabulary.md
@@ -225,6 +231,8 @@ Use these anchors before free-form browsing.
   "reading_copy_builder": "scripts/build_reading_copy.py",
   "plot_affordance_report": "scripts/plot_affordance_report.py",
   "prose_variety_report": "scripts/prose_variety_report.py",
+  "anki_distribution_audit": "scripts/audit_anki_card_distribution.py",
+  "anki_learning_order_scheduler": "scripts/schedule_anki_learning_order.py",
   "lin_an_series_bible": "series/an-lin/series_bible.md",
   "journalism_crime_pack": "data/stretch_packs/journalism_crime_50.txt",
   "business_economics_pack": "data/stretch_packs/business_economics_60.txt",
@@ -287,6 +295,7 @@ Use these anchors before free-form browsing.
 | Review literary quality | `.agents/skills/chinese-literary-critic/SKILL.md`, `.agents/skills/chinese-normal-reader-review/SKILL.md`, `.agents/skills/chinese-lead-quality-review/SKILL.md` |
 | Export EPUB | `scripts/build_epub.py`, `.agents/skills/epub-export/SKILL.md` |
 | Prepare stretch words for Anki | `docs/anki-integration.md`, `scripts/export_stretch_words_for_anki.py` |
+| Audit or schedule Anki new-card distribution | `docs/anki-integration.md`, `scripts/audit_anki_card_distribution.py`, `scripts/schedule_anki_learning_order.py` |
 | Complete stretch-pack metadata | `scripts/complete_stretch_pack_metadata.py`, `data/stretch_packs/metadata/` |
 | Plan business/economics readers | `docs/stretch-vocabulary.md`, `data/stretch_packs/business_economics_60.txt`, pass it with `--extra-pack` |
 | Inspect business/economics nonfiction example | `manuscripts/small-shop-survival-economics`, `manuscripts/small-shop-survival-economics/vocabulary_report.json` |

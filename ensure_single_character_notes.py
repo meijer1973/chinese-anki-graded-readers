@@ -9,6 +9,7 @@ from typing import Any
 import add_missing_single_character_notes as character_add
 import build_anki_chinese
 import setup_production_sentence_cards
+from scripts.schedule_anki_learning_order import run_learning_order_scheduler
 
 
 ROOT = Path(__file__).resolve().parent
@@ -143,6 +144,7 @@ def write_report(
     appended_chars: list[str],
     added_rows: list[dict[str, str]],
     verification: dict[str, Any] | None,
+    scheduler_result: dict[str, Any] | None = None,
 ) -> None:
     lines = [
         "# Single Character Notes Policy Report",
@@ -184,8 +186,24 @@ def write_report(
             f"- {WORD_LIST_BACKUP.name}: source word-list backup, created only when characters are appended",
             f"- {APPLIED_TSV.name}: note IDs and fields added by the latest policy run",
             f"- {SOURCE_TSV.name}: rebuilt TSV source data, when additions were needed",
+            "- anki/learning_order_plan.tsv: generated learning-order plan",
+            "- single_character_distribution_report.md: before/after character distribution report",
         ]
     )
+    if scheduler_result:
+        scheduler_summary = scheduler_result["summary"]
+        anki_scheduler = scheduler_result.get("anki_result", {})
+        lines.extend(
+            [
+                "",
+                "Learning order scheduling:",
+                f"- active learning-order rows: {scheduler_summary['active_rows']}",
+                f"- live new normal notes available: {anki_scheduler.get('new_normal_notes', 0)}",
+                f"- live single-character notes included: {anki_scheduler.get('released_single_character_notes', 0)}",
+                f"- Chinese-to-English cards unsuspended this run: {anki_scheduler.get('cn_to_en_cards_unsuspended', 0)}",
+                f"- suspended Chinese-to-English new cards remaining: {anki_scheduler.get('cn_to_en_new_cards_still_suspended', 0)}",
+            ]
+        )
     REPORT_MD.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
@@ -196,8 +214,20 @@ def main() -> None:
 
     if not missing_rows:
         write_added([])
-        write_report(before, before, [], [], [], verification=None)
-        print(json.dumps({**before, "missing_character_rows": 0, "notes_added": 0}, ensure_ascii=False, indent=2))
+        scheduler_result = run_learning_order_scheduler(apply_anki=False)
+        write_report(before, before, [], [], [], verification=None, scheduler_result=scheduler_result)
+        print(
+            json.dumps(
+                {
+                    **before,
+                    "missing_character_rows": 0,
+                    "notes_added": 0,
+                    "learning_order_summary": scheduler_result["summary"],
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
         return
 
     appended_chars = append_missing_chars(words_before, missing_rows)
@@ -209,9 +239,10 @@ def main() -> None:
     write_added(added_rows)
 
     setup_production_sentence_cards.main()
+    scheduler_result = run_learning_order_scheduler(apply_anki=True)
     verification = character_add.verify([row["Character"] for row in missing_rows])
     after = coverage_stats(read_words())
-    write_report(before, after, missing_rows, appended_chars, added_rows, verification)
+    write_report(before, after, missing_rows, appended_chars, added_rows, verification, scheduler_result=scheduler_result)
     print(
         json.dumps(
             {
@@ -221,6 +252,8 @@ def main() -> None:
                 "notes_added": len(added_rows),
                 "anki_notes": verification["notes"],
                 "anki_cards": verification["cards"],
+                "learning_order_summary": scheduler_result["summary"],
+                "anki_scheduler": scheduler_result.get("anki_result", {}),
             },
             ensure_ascii=False,
             indent=2,

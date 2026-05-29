@@ -8,6 +8,7 @@ from urllib.request import Request, urlopen
 
 import build_anki_chinese
 import setup_production_sentence_cards
+from scripts.schedule_anki_learning_order import run_learning_order_scheduler
 
 
 ROOT = Path(__file__).resolve().parent
@@ -235,6 +236,7 @@ def write_report(
     appended_chars: list[str],
     added_rows: list[dict[str, str]],
     verification: dict[str, Any],
+    scheduler_result: dict[str, Any],
 ) -> None:
     priority_counts: dict[str, int] = {}
     for row in added_rows:
@@ -262,6 +264,21 @@ def write_report(
             f"- {WORD_LIST_BACKUP.name}: source word-list backup before append",
             f"- {APPLIED_TSV.name}: added note IDs and fields",
             f"- {SOURCE_TSV.name}: rebuilt TSV source data",
+            f"- anki/learning_order_plan.tsv: generated learning-order plan",
+            f"- single_character_distribution_report.md: before/after character distribution report",
+        ]
+    )
+    scheduler_summary = scheduler_result["summary"]
+    anki_scheduler = scheduler_result.get("anki_result", {})
+    lines.extend(
+        [
+            "",
+            "Learning order scheduling:",
+            f"- active learning-order rows: {scheduler_summary['active_rows']}",
+            f"- live new normal notes available: {anki_scheduler.get('new_normal_notes', 0)}",
+            f"- live single-character notes included: {anki_scheduler.get('released_single_character_notes', 0)}",
+            f"- Chinese-to-English cards unsuspended this run: {anki_scheduler.get('cn_to_en_cards_unsuspended', 0)}",
+            f"- suspended Chinese-to-English new cards remaining: {anki_scheduler.get('cn_to_en_new_cards_still_suspended', 0)}",
         ]
     )
     if verification["blank_required_fields"]:
@@ -282,9 +299,22 @@ def main() -> None:
     write_applied(added_rows)
 
     setup_production_sentence_cards.main()
+    scheduler_result = run_learning_order_scheduler(apply_anki=True)
     verification = verify(proposed_chars)
-    write_report(proposal_rows, appended_chars, added_rows, verification)
-    print(json.dumps({**verification, "appended_chars": len(appended_chars), "notes_added": len(added_rows)}, ensure_ascii=False, indent=2))
+    write_report(proposal_rows, appended_chars, added_rows, verification, scheduler_result)
+    print(
+        json.dumps(
+            {
+                **verification,
+                "appended_chars": len(appended_chars),
+                "notes_added": len(added_rows),
+                "learning_order_summary": scheduler_result["summary"],
+                "anki_scheduler": scheduler_result.get("anki_result", {}),
+            },
+            ensure_ascii=False,
+            indent=2,
+        )
+    )
 
 
 if __name__ == "__main__":

@@ -30,6 +30,7 @@ Read that file first for repository access, exact paths, raw URLs, and task rout
 | How is quality reviewed? | `docs/quality-review.md`, `.agents/skills/chinese-lead-quality-review/SKILL.md` |
 | How is EPUB built? | `scripts/build_epub.py`, `.agents/skills/epub-export/SKILL.md` |
 | How do stretch words flow toward Anki? | `docs/anki-integration.md`, `scripts/export_stretch_words_for_anki.py` |
+| How is Anki new-card order kept mixed? | `docs/anki-integration.md`, `scripts/audit_anki_card_distribution.py`, `scripts/schedule_anki_learning_order.py` |
 | What is the first series manuscript? | `manuscripts/shanghai-rain-gate-crime/` |
 | What is the current successful story trial? | `manuscripts/shanghai-rain-ticket/` |
 

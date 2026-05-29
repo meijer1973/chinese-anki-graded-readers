@@ -859,6 +859,10 @@ SENTENCE_EXAMPLE_OVERRIDES: dict[str, tuple[str, str]] = {
     "玛": ("玛瑙很漂亮。", "Agate is beautiful."),
     "陛": ("陛下在大厅里。", "His Majesty is in the hall."),
     "尉": ("他是一名上尉。", "He is a captain."),
+    "茜": ("她穿了一件茜色外套。", "She wore a dark red coat."),
+    "汀": ("小船停在河边的沙汀上。", "The small boat stopped on the sandbar by the river."),
+    "坎": ("门口有一道小坎。", "There is a small threshold at the doorway."),
+    "肾": ("医生说他的肾需要检查。", "The doctor said his kidneys need to be checked."),
 }
 
 

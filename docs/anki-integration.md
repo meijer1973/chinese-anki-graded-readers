@@ -14,6 +14,19 @@ The repo already assumes:
 
 See `anki/anki_field_schema.md` for the stretch candidate field mapping.
 
+## New-Card Learning Order
+
+`word list chinese.txt` remains the frequency-ranked source list. Do not hand-mix appended single-character closure notes into the middle unless the frequency-rank meaning is explicitly redesigned.
+
+Single-character coverage and study order are handled separately:
+
+```powershell
+python scripts/audit_anki_card_distribution.py
+python scripts/schedule_anki_learning_order.py
+```
+
+The scheduler writes `anki/learning_order_plan.tsv` and `single_character_distribution_report.md`. It keeps Chinese-to-English cards unsuspended, then sets new-card due order so single-character and multi-character notes are interleaved as evenly as the available queue allows. `Frequency Rank` continues to mean the source-list rank; learning order is a generated plan, not a replacement rank.
+
 ## Export Candidates
 
 Create a review TSV:

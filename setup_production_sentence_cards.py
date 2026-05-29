@@ -232,8 +232,8 @@ def production_cards_to_suspend(cards: list[dict[str, Any]]) -> list[int]:
     return [int(card["cardId"]) for card in cards if int(card["ord"]) == 1 and int(card["queue"]) >= 0]
 
 
-def sentence_cards_to_unsuspend(cards: list[dict[str, Any]]) -> list[int]:
-    return [int(card["cardId"]) for card in cards if int(card["ord"]) == 2 and int(card["queue"]) < 0]
+def chinese_to_english_cards_to_unsuspend(cards: list[dict[str, Any]]) -> list[int]:
+    return [int(card["cardId"]) for card in cards if int(card["ord"]) in {0, 2} and int(card["queue"]) < 0]
 
 
 def suspend_cards(card_ids: list[int]) -> None:
@@ -291,15 +291,15 @@ def verify() -> dict[str, Any]:
     }
 
 
-def write_report(result: dict[str, Any], suspended_count: int, unsuspended_sentence_count: int) -> None:
+def write_report(result: dict[str, Any], suspended_count: int, unsuspended_cn_to_en_count: int) -> None:
     lines = [
         "# Production And Sentence Card Setup Report",
         "",
-        "Standard word-recognition meaning cards are active for every note unless manually suspended.",
+        "Standard word-recognition meaning cards are active for every note.",
         "Sentence cards are enabled for every note with `Example` and `Example Meaning` fields.",
         "Production / meaning-recall cards are suspended by this script.",
         f"Suspended production cards: {suspended_count}",
-        f"Unsuspended sentence cards: {unsuspended_sentence_count}",
+        f"Unsuspended Chinese-to-English cards: {unsuspended_cn_to_en_count}",
         "",
         f"Notes: {result['notes']}",
         f"Cards: {result['cards']}",
@@ -336,16 +336,15 @@ def main() -> None:
     update_note_flags(notes_before, ranks)
     ensure_sentence_template()
 
-    notes_after_template = load_notes()
     cards_after_template = load_cards()
     cards_to_suspend = production_cards_to_suspend(cards_after_template)
     suspend_cards(cards_to_suspend)
     cards_after_suspend = load_cards()
-    sentence_cards_to_restore = sentence_cards_to_unsuspend(cards_after_suspend)
-    unsuspend_cards(sentence_cards_to_restore)
+    cn_to_en_cards_to_restore = chinese_to_english_cards_to_unsuspend(cards_after_suspend)
+    unsuspend_cards(cn_to_en_cards_to_restore)
 
     result = verify()
-    write_report(result, suspended_count=len(cards_to_suspend), unsuspended_sentence_count=len(sentence_cards_to_restore))
+    write_report(result, suspended_count=len(cards_to_suspend), unsuspended_cn_to_en_count=len(cn_to_en_cards_to_restore))
     print(json.dumps(result, ensure_ascii=False, indent=2))
 
 

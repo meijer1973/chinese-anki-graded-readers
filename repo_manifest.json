@@ -87,6 +87,9 @@
       "ensure_single_character_notes.py",
       "add_missing_single_character_notes.py",
       "suggest_meaning_edits.py",
+      "scripts/audit_anki_card_distribution.py",
+      "scripts/schedule_anki_learning_order.py",
+      "scripts/anki_card_distribution.py",
       "scripts/export_stretch_words_for_anki.py",
       "scripts/import_stretch_words_to_anki.py",
       "scripts/complete_stretch_pack_metadata.py"
@@ -141,6 +144,7 @@
     ],
     "tests": [
       "tests/test_novel_pipeline.py",
+      "tests/test_anki_card_distribution.py",
       "tests/test_stretch_vocabulary.py"
     ],
     "generated_indexes": [

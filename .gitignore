@@ -19,6 +19,9 @@ known words from user/
 # EPUB adaptation intake: source text is private unless rights explicitly allow tracking.
 adaptations/*/source_private/
 adaptations/*/source_units/*_source.md
+adaptations/chinese-economic-news-reading-pack-2026-05-28/
+adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/
+adaptations/heyishengxiaomo-vocab-mining/
 
 # Large local reference spreadsheets/directories
 SUBTLEX-CH-CHR/
@@ -46,6 +49,8 @@ sentence_quality_review_report.md
 production_sentence_setup_report.md
 single_character_notes_add_report.md
 single_character_notes_policy_report.md
+single_character_distribution_report.md
+single_character_source_audit.md
 chinese_notes_model_migration_report.md
 inactive_sentence_quality_flags.tsv
 missing_single_character_notes_proposal.tsv
@@ -58,6 +63,7 @@ word_list_before_single_character_notes_backup.txt
 anki/stretch_word_import_ready.tsv
 anki/stretch_word_import_log.json
 anki/stretch_words_added_to_anki.tsv
+anki/learning_order_plan.tsv
 
 # Generated manuscript EPUB builds
 # Track final EPUB artifacts and build reports for accepted manuscripts, but keep

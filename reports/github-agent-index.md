@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki And Graded Readers
 
-Generated: 2026-05-28T16:52:28Z
+Generated: 2026-05-29T19:36:20Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 830
+Files indexed: 834
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -72,7 +72,7 @@ Count: 9
 
 ## scripts
 
-Count: 36
+Count: 40
 
 - add_missing_single_character_notes.py
 - apply_meaning_cleanup_updates.py
@@ -82,6 +82,8 @@ Count: 36
 - migrate_chinese_notes.py
 - scripts/__init__.py
 - scripts/adaptation_tools.py
+- scripts/anki_card_distribution.py
+- scripts/audit_anki_card_distribution.py
 - scripts/build_agent_index.py
 - scripts/build_epub.py
 - scripts/build_reading_copy.py
@@ -99,6 +101,7 @@ Count: 36
 - scripts/prose_variety_report.py
 - scripts/repeated_phrase_report.py
 - scripts/run_quality_gate.py
+- scripts/schedule_anki_learning_order.py
 - scripts/sync_known_words.py
 - scripts/sync_personal_known_words.py
 - scripts/validate_book.py
@@ -108,6 +111,7 @@ Count: 36
 - setup_production_sentence_cards.py
 - suggest_meaning_edits.py
 - tests/test_adaptation_workflow.py
+- tests/test_anki_card_distribution.py
 - tests/test_novel_pipeline.py
 - tests/test_stretch_vocabulary.py
 
