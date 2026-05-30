@@ -76,11 +76,29 @@ Use this file for durable fantasy rules, costs, limits, and links between mechan
 ## 旧城门
 
 - First major use: seeded by `manuscripts/shanghai-lost-property-locker-case/` and made more visible by `manuscripts/shanghai-silent-archive-case/`.
-- Function: unresolved next-direction site for the larger hidden record system.
-- Cost or risk: not fully defined yet; avoid mythology dumps.
-- Publicly explainable evidence: should be grounded in a concrete Shanghai case before it becomes an arc reveal.
-- Private / fantasy-only clue: to be defined by the accepted story that uses it.
-- Current status: open thread; do not resolve casually.
+- Function: partially revealed in `manuscripts/shanghai-old-city-gate-case/` as a larger route behind earlier 记录口 mechanisms, moving records between public files and hidden civic memory.
+- Cost or risk: it can make people lose names, homes, and public existence while offering the false comfort that disappearance is protection.
+- Publicly explainable evidence: property records, phone-card recovery, email, video, bank/payment records, contracts, warehouse labels, witness testimony, fibers/blood trace, and security logs.
+- Private / fantasy-only clue: 门印, 门线, 白纸令, and gate behavior point toward the ordinary evidence but cannot be published as proof.
+- Current status: no longer only a clue; it is an active mechanism. Future stories should inherit it without turning it into epic-fantasy transit.
+
+## 白纸令 / 门印 / 门线
+
+- First major use: `manuscripts/shanghai-old-city-gate-case/`
+- Function: marks how 旧城门 pressure touches visible records, names, rooms, and property/person files.
+- Cost or risk: a mark that looks bureaucratic can become a private erasure tool.
+- Publicly explainable evidence: altered files, security logs, contract routes, photos, labels, and witness testimony.
+- Private / fantasy-only clue: white-paper orders and gate marks reveal which record was moved or emptied.
+- Current status: tied to 旧城门; reuse only when a case needs record manipulation, not as decorative magic.
+
+## 镜街
+
+- First major use: seeded by `manuscripts/shanghai-old-city-gate-case/`
+- Function: next active arc clue; not yet defined.
+- Cost or risk: unknown.
+- Publicly explainable evidence: must be established through a concrete case before any mechanism explanation.
+- Private / fantasy-only clue: "那条街照不出真人 / 镜街未开."
+- Current status: open thread for the next story.
 
 ## Update Rule
 

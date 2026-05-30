@@ -43,6 +43,8 @@ Before drafting, `creative_preflight.md` must state at least three deliberate di
 
 Continuity is not a formula. The next book should keep 林安, 陈雨, Shanghai, journalism pressure, and one small impossible mechanism, but it should not simply repeat crime, strange object, memory cost, and publication choice in the same rhythm.
 
+After `上海旧城门案`, the next 林安 story should treat `镜街` as the active arc clue. It should not reopen 旧城门 from zero or repeat the same old-street/property-record case structure unless the variation budget gives a strong reason.
+
 ## Required Pre-Planning Memory Check
 
 Before planning the next 林安 manuscript, confirm that the previous accepted story has:

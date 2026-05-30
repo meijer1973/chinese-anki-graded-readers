@@ -66,3 +66,13 @@ Avoid making every important person a teacher, doctor, student, or generic polic
 - 贺庭: 清页-side antagonist/business pressure figure from `上海无声档案案`.
 - 叶秋: source/helper connected to old draft and backup evidence from `上海无声档案案`.
 - 沈望: erased-name victim at the center of `上海无声档案案`.
+- 秦海: dead 青门公司 employee/source from `上海旧城门案`; discovered name/property record manipulation before his death.
+- 小梅: 秦海's sister and protected witness from `上海旧城门案`.
+- 梁叔: old-street security guard from `上海旧城门案`; disappears into the gate but leaves logs and evidence.
+- 顾澄: 青门公司负责人 and visible company antagonist from `上海旧城门案`.
+- 马林: coerced false confessor from `上海旧城门案`, pressured through his child.
+
+## Relationship Movement
+
+- 何青: by `上海旧城门案`, she is not only newsroom pressure; she actively helps protect sources, shape publishable evidence, and hold the ethical line between protection and concealment.
+- 陈雨: by `上海旧城门案`, he trusts 林安 enough to preserve procedural evidence while acknowledging some private/fantasy-linked facts do not yet fit formal reports.

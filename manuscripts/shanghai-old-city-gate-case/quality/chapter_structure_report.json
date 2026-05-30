@@ -1,0 +1,31 @@
+{
+  "chapter_count": 17,
+  "word_tokens_per_chapter": [
+    397,
+    439,
+    449,
+    429,
+    424,
+    428,
+    413,
+    421,
+    409,
+    399,
+    414,
+    441,
+    406,
+    422,
+    413,
+    440,
+    443
+  ],
+  "min": 397,
+  "median": 422,
+  "mean": 422.7647058823529,
+  "max": 449,
+  "chapters_under_100": 0,
+  "chapters_under_150": 0,
+  "chapters_under_250": 0,
+  "microchapter_risk_status": "PASS",
+  "notes": "Consolidated story chapters, not beat-level microchapters."
+}

@@ -19,6 +19,7 @@ Final EPUB files and build reports under `manuscripts/<slug>/epub/` are tracked 
 | `shanghai-still-water-list-case-revised` | `上海静水名单案` | PASS | Revised fifth 林安 manuscript. Revalidated locally after writer-agent import and repaired into 13 story chapters. |
 | `shanghai-lost-property-locker-case` | `上海失物柜案` | PASS | Sixth 林安 journalist urban-fantasy crime manuscript. Revalidated locally after writer-agent import. |
 | `shanghai-silent-archive-case` | `上海无声档案案` | PASS | Seventh 林安 journalist urban-fantasy crime manuscript. Revalidated locally after writer-agent import. |
+| `shanghai-old-city-gate-case` | `上海旧城门案` | PASS | Eighth 林安 journalist urban-fantasy crime manuscript. Imported from writer agent, retokenized/revalidated locally, and series memory updated. |
 
 ## Fixtures And Trials
 

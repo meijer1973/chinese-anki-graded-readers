@@ -70,6 +70,8 @@
     "manuscripts/shanghai-lost-property-locker-case/quality/quality_gate_summary.json",
     "manuscripts/shanghai-silent-archive-case/vocabulary_report.json",
     "manuscripts/shanghai-silent-archive-case/quality/quality_gate_summary.json",
+    "manuscripts/shanghai-old-city-gate-case/vocabulary_report.json",
+    "manuscripts/shanghai-old-city-gate-case/quality/quality_gate_summary.json",
     "manuscripts/small-shop-survival-economics/vocabulary_report.json",
     "manuscripts/small-shop-survival-economics/quality/quality_gate_summary.json",
     "manuscripts/shanghai-rain-ticket/vocabulary_report.json",
@@ -151,6 +153,7 @@
       "manuscripts/shanghai-still-water-list-case-revised",
       "manuscripts/shanghai-lost-property-locker-case",
       "manuscripts/shanghai-silent-archive-case",
+      "manuscripts/shanghai-old-city-gate-case",
       "manuscripts/small-shop-survival-economics",
       "manuscripts/shanghai-rain-ticket"
     ],

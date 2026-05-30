@@ -13,10 +13,17 @@ Use this file for unresolved series questions and future story seeds. Close or r
 
 ### 旧城门
 
-- Status: visible next-direction clue.
-- Current question: is it a place, a mechanism, a record mouth, or a public-facing cover for the larger system?
-- Story use: can anchor the next larger continuity case if the case remains grounded in ordinary Shanghai evidence.
-- Constraint: do not resolve it as a sudden epic-fantasy portal or full mythology dump.
+- Status: partially revealed by `上海旧城门案`.
+- Current question: who built or controls the route behind 旧城门, and why does it connect public files to hidden civic memory?
+- Story use: background pressure for the larger arc; future stories may reference it as an active mechanism.
+- Constraint: do not repeat the same old-street/property-record structure unless the variation budget names a strong reason.
+
+### 镜街
+
+- Status: active next-story clue.
+- Current question: what does it mean that "那条街照不出真人" and "镜街未开"?
+- Story use: can create a case about public image, reflection, edited identity, rumor, or a person whose public face and evidence diverge.
+- Constraint: reveal through ordinary reporting pressure first; do not begin with a mythology explanation.
 
 ### Record Mouth Pattern
 
@@ -27,8 +34,8 @@ Use this file for unresolved series questions and future story seeds. Close or r
 
 ### Public Truth Versus Protected Truth
 
-- Status: recurring moral pressure.
-- Current question: when does publishing help a victim, and when does it expose a witness or repeat the harm?
+- Status: sharpened by `上海旧城门案`.
+- Current question: how can 林安 protect names and locations without allowing 白策's managed-truth logic to hide criminal methods, power, or responsibility?
 - Story use: keep final article decisions morally alive.
 - Constraint: the answer should vary by case; do not make every ending the same protected-source compromise.
 
@@ -50,6 +57,7 @@ Use this file for unresolved series questions and future story seeds. Close or r
 
 - `上海失物柜案`: 方敏 and 吴梅 are protected as sources; 海安旧物公司 pressure is exposed enough for the case outcome.
 - `上海无声档案案`: 沈望's erased name is restored; 清页公司's data-cleaning pressure is exposed through publishable evidence.
+- `上海旧城门案`: 秦海's death and 青门公司's record/property manipulation are exposed through publishable evidence; 小梅 and vulnerable old-street witnesses remain protected; 旧城门 is opened enough to point toward 镜街.
 
 ## Update Rule
 

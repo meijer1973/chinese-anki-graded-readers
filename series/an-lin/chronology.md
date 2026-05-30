@@ -71,6 +71,17 @@ This file is the concise accepted-story timeline. Put mechanism rules in `mechan
 - Arc movement: 白先生 / 白策 and 旧档会 become more direct pressure, and the case points toward 旧城门 as the next large continuity site.
 - Outcome: 林安 restores 沈望's name, protects living witnesses, rejects managed truth, and keeps publishable evidence separate from fantasy proof.
 
+## Book 8: 上海旧城门案
+
+- Repository path: `manuscripts/shanghai-old-city-gate-case/`
+- Status: eighth series manuscript imported from the writer agent, locally retokenized/revalidated, and rebuilt as EPUB.
+- Core continuity: 林安 remains the journalist protagonist. 陈雨 remains the procedural police contact. 何青 becomes a more active editorial and evidence-protection partner.
+- Recurring support: 许白, 阿洛, 老赵, 唐岚, and 白策 / 白先生 keep their continuity-linked functions.
+- Fantasy mechanism: 旧城门 is partially revealed as a larger route behind earlier 记录口 mechanisms. 白纸令, 门印, and 门线 connect public property/person records to hidden civic memory.
+- Case frame: 青门公司 uses old-street property records, intimidation, false confession pressure, payments, contracts, security logs, phone-card evidence, and altered records around 秦海's death and 梁叔's disappearance.
+- Arc movement: 白策 directly argues that managed truth is protection; 林安 defines the counter-rule that journalism may protect witnesses but must not hide criminal method, power, or responsibility.
+- Outcome: 林安 and 何青 publish ordinary evidence while protecting vulnerable names and locations. 陈雨 keeps gathering facts that do not yet fit formal reports. The next active clue is 镜街.
+
 ## Open Series Direction
 
-The next story should not restart 林安 from zero. It should treat her as someone who has already faced the rain-ticket case, the spirit-lamp case, the shadow-bridge case, the midnight-ringtone case, the still-water list case, the lost-property locker case, and the silent-archive case, and now knows that a normal clue may have a hidden cost and may connect to a larger hidden record system.
+The next story should not restart 林安 from zero. It should treat her as someone who has already faced the rain-ticket case, the spirit-lamp case, the shadow-bridge case, the midnight-ringtone case, the still-water list case, the lost-property locker case, the silent-archive case, and the old-city-gate case. She now knows that a normal clue may have a hidden cost, that 旧城门 sits behind earlier record-mouth mechanisms, and that 镜街 is the next active arc clue.
