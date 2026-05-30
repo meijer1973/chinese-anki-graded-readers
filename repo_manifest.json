@@ -22,7 +22,8 @@
     "docs/style-bank-controlled-chinese.md",
     "docs/stretch-vocabulary.md",
     "docs/anki-integration.md",
-    "docs/quality-review.md"
+    "docs/quality-review.md",
+    "docs/series-memory.md"
   ],
   "machine_entry_points": [
     "repo_manifest.json",
@@ -46,7 +47,14 @@
     "scripts/import_epub_for_adaptation.py",
     "scripts/profile_adaptation_vocabulary.py",
     "scripts/adaptation_tools.py",
+    "scripts/check_series_memory_update.py",
     "series/an-lin/series_bible.md",
+    "series/an-lin/chronology.md",
+    "series/an-lin/character_registry.md",
+    "series/an-lin/mechanism_registry.md",
+    "series/an-lin/open_threads.md",
+    "series/an-lin/sequel_constraints.md",
+    "series/an-lin/series_update_log.md",
     "anki/stretch_word_candidates.tsv",
     "manuscripts/shanghai-rain-gate-crime/vocabulary_report.json",
     "manuscripts/shanghai-rain-gate-crime/quality/quality_gate_summary.json",
@@ -60,6 +68,8 @@
     "manuscripts/shanghai-still-water-list-case-revised/quality/quality_gate_summary.json",
     "manuscripts/shanghai-lost-property-locker-case/vocabulary_report.json",
     "manuscripts/shanghai-lost-property-locker-case/quality/quality_gate_summary.json",
+    "manuscripts/shanghai-silent-archive-case/vocabulary_report.json",
+    "manuscripts/shanghai-silent-archive-case/quality/quality_gate_summary.json",
     "manuscripts/small-shop-survival-economics/vocabulary_report.json",
     "manuscripts/small-shop-survival-economics/quality/quality_gate_summary.json",
     "manuscripts/shanghai-rain-ticket/vocabulary_report.json",
@@ -102,6 +112,7 @@
       "scripts/validate_book.py",
       "scripts/generate_reports.py",
       "scripts/run_quality_gate.py",
+      "scripts/check_series_memory_update.py",
       "scripts/build_epub.py",
       "scripts/build_reading_copy.py",
       "scripts/import_epub_for_adaptation.py",
@@ -139,13 +150,15 @@
       "manuscripts/shanghai-midnight-ringtone-case",
       "manuscripts/shanghai-still-water-list-case-revised",
       "manuscripts/shanghai-lost-property-locker-case",
+      "manuscripts/shanghai-silent-archive-case",
       "manuscripts/small-shop-survival-economics",
       "manuscripts/shanghai-rain-ticket"
     ],
     "tests": [
       "tests/test_novel_pipeline.py",
       "tests/test_anki_card_distribution.py",
-      "tests/test_stretch_vocabulary.py"
+      "tests/test_stretch_vocabulary.py",
+      "tests/test_series_memory_update.py"
     ],
     "generated_indexes": [
       "reports/github-agent-index.md",
@@ -154,9 +167,10 @@
   },
   "commands": {
     "run_tests": "$env:PYTHONIOENCODING='utf-8'; python -m unittest discover -s tests",
-    "sync_known_words": "python scripts/sync_known_words.py --limit 1100",
+    "sync_known_words": "python scripts/sync_known_words.py --limit 1700",
     "sync_marcel_personal_known_words": "python scripts/sync_personal_known_words.py --profile data/learner_profiles/marcel --core data/known_words.txt",
     "validate_sample_book": "python scripts/validate_book.py --known data/known_words.txt --chapters manuscripts/sample-known-words/chapters --out manuscripts/sample-known-words/vocabulary_report.json",
+    "check_series_memory_update": "python scripts/check_series_memory_update.py --manuscript manuscripts/<slug> --series-dir series/an-lin",
     "generate_agent_indexes": "python scripts/build_agent_index.py"
   },
     "generated_or_local_surfaces": [

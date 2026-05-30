@@ -129,6 +129,25 @@ For public series releases, also include:
 Public-quality status: PASS
 ```
 
+## Series Memory Follow-Up
+
+After a series manuscript is accepted, run the post-story memory update before planning the next book. For 林安, use `docs/series-memory.md` and update:
+
+- `series/an-lin/chronology.md`
+- `series/an-lin/character_registry.md`
+- `series/an-lin/mechanism_registry.md`
+- `series/an-lin/open_threads.md`
+- `series/an-lin/series_update_log.md`
+- `series/an-lin/series_bible.md` or `series/an-lin/sequel_constraints.md` only when stable arc pressure or hard constraints changed
+
+Verify:
+
+```powershell
+python scripts/check_series_memory_update.py --manuscript manuscripts/<slug> --series-dir series/an-lin
+```
+
+Use `--require-epub-build` when the accepted story should already have an EPUB artifact. This check is a gate for the next series plan, not a replacement for manuscript quality review.
+
 ## Stretch-Vocabulary Review
 
 For low-fantasy Shanghai manuscripts, reviewers should also ask:

@@ -59,9 +59,11 @@ Every real novel in this mode should include at least 3 distinct professions or 
 
 ### 林安 Series Continuity
 
-For 林安 series work, read `series/an-lin/series_bible.md`, `series/an-lin/character_registry.md`, `series/an-lin/chronology.md`, and `series/an-lin/sequel_constraints.md` before planning. 林安 is the journalist/crime-reporter protagonist for this continuity, and 陈雨 is the recurring police contact. Do not reset 林安 into another profession or ignore the first series manuscript at `manuscripts/shanghai-rain-gate-crime/`.
+For 林安 series work, read `series/an-lin/series_bible.md`, `series/an-lin/character_registry.md`, `series/an-lin/chronology.md`, `series/an-lin/mechanism_registry.md`, `series/an-lin/open_threads.md`, `series/an-lin/recurring_locations.md`, `series/an-lin/recurring_objects.md`, `series/an-lin/sequel_constraints.md`, and `series/an-lin/series_update_log.md` before planning. 林安 is the journalist/crime-reporter protagonist for this continuity, and 陈雨 is the recurring police contact. Do not reset 林安 into another profession or ignore the first series manuscript at `manuscripts/shanghai-rain-gate-crime/`.
 
 Use `data/stretch_packs/journalism_crime_50.txt` for journalist/crime affordances such as interviews, sources, files, publication pressure, witnesses, suspects, motives, and source protection. Chapter vocabulary plans for this series must include case function, journalist function, fantasy function, and learning function.
+
+After an accepted 林安 story reaches vocabulary validation PASS, lead quality decision PASS, and EPUB build success if applicable, update the living series memory package before planning the next story: `chronology.md`, `character_registry.md`, `mechanism_registry.md`, `open_threads.md`, `series_update_log.md`, and only update `series_bible.md` or `sequel_constraints.md` when stable arc pressure or hard constraints changed. Verify with `python scripts/check_series_memory_update.py --manuscript manuscripts/<slug> --series-dir series/an-lin`; add `--require-epub-build` when the EPUB should already exist.
 
 ### Stretch Words And Anki
 
@@ -110,14 +112,14 @@ Use the minimal-intervention cascade: classify proper nouns and personal-known w
 - `downloads/`, `SUBTLEX-CH-CHR/`, and `SUBTLEX-CH-WF/` are source/reference data directories.
 - `data/known_words.txt` is the active machine-readable known-word list for restricted-vocabulary fiction. It is generated from the ranked source list by `scripts/sync_known_words.py`.
 - `data/learner_profiles/marcel/` contains Marcel's personal-known learner profile. Use `personal_known_words.tsv` as the editable source and `personal_known_words.txt` as the generated validator layer.
-- `series/an-lin/` contains the series-level bible and continuity constraints for the 林安 journalist urban-fantasy crime series.
+- `series/an-lin/` contains the living series memory package for the 林安 journalist urban-fantasy crime series: bible, chronology, character registry, mechanism registry, open threads, recurring objects/locations, sequel constraints, and update log.
 - `data/stretch_packs/journalism_crime_50.txt` contains reviewed journalism/crime stretch words for 林安-style crime reporting stories.
 - `data/stretch_packs/business_economics_60.txt` contains reviewed business/economics stretch words for concrete shops, money, prices, customers, costs, risk, and simple market-decision stories. Pass it with `--extra-pack`.
 - `configs/novel_generation.default.json` is the default configuration template for graded-reader novel projects.
 - `AGENT_GITHUB_ENTRY.md`, `RESEARCH_AGENT_MAP.md`, `RESEARCH_AGENT_PROMPT.md`, and `repo_manifest.json` are the GitHub-facing machine-readable/research-agent entry points.
 - `reports/github-agent-index.md`, `reports/github-agent-index.json`, and `reports/url-index.md` are generated inventories for remote agents; refresh them with `python scripts/build_agent_index.py`.
 - `manuscripts/<project-slug>/` contains novel bibles, outlines, canonical tokenized chapters, validation reports, continuity logs, and EPUB exports.
-- `scripts/load_known_words.py`, `scripts/sync_personal_known_words.py`, `scripts/import_personal_known_words.py`, `scripts/validate_chapter.py`, `scripts/validate_book.py`, `scripts/generate_reports.py`, `scripts/vocabulary_usage_report.py`, `scripts/repeated_phrase_report.py`, `scripts/run_quality_gate.py`, and `scripts/build_epub.py` inspect, validate, review-prep, report, and export restricted-vocabulary manuscripts.
+- `scripts/load_known_words.py`, `scripts/sync_personal_known_words.py`, `scripts/import_personal_known_words.py`, `scripts/validate_chapter.py`, `scripts/validate_book.py`, `scripts/generate_reports.py`, `scripts/vocabulary_usage_report.py`, `scripts/repeated_phrase_report.py`, `scripts/run_quality_gate.py`, `scripts/check_series_memory_update.py`, and `scripts/build_epub.py` inspect, validate, review-prep, report, verify series-memory updates, and export restricted-vocabulary manuscripts.
 - `scripts/import_epub_for_adaptation.py`, `scripts/profile_adaptation_vocabulary.py`, and `scripts/adaptation_tools.py` support source-aligned EPUB intake and vocabulary-pressure diagnostics before any graded-reader adaptation is drafted.
 - `scripts/prose_variety_report.py` reports repeated dialogue tags, repeated sentence frames, and other style-polish risks. `scripts/build_reading_copy.py` creates noncanonical natural-text review copies.
 - `.agents/skills/` and `.codex/agents/` contain repo-local Codex workflows and role definitions for novel planning, chapter writing, validation, continuity editing, literary review, reader review, lead quality review, and EPUB export.
@@ -185,11 +187,17 @@ Default workflow:
 
 ```powershell
 $env:PYTHONIOENCODING='utf-8'
-python scripts/sync_known_words.py --limit 1500
+python scripts/sync_known_words.py --limit 1700
 python scripts/validate_chapter.py --known data/known_words.txt --chapter manuscripts/<slug>/chapters/chapter_01.zh-tok.txt --out manuscripts/<slug>/chapters/chapter_01.validation.json
 python scripts/validate_book.py --known data/known_words.txt --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json
 python scripts/run_quality_gate.py --manuscript manuscripts/<slug> --known data/known_words.txt
 python scripts/build_epub.py --manuscript manuscripts/<slug> --title "<title>" --out manuscripts/<slug>/epub/<slug>.epub --report manuscripts/<slug>/epub/build_report.json
+```
+
+For accepted 林安 series manuscripts, update `series/an-lin/` after the EPUB step and verify before the next story:
+
+```powershell
+python scripts/check_series_memory_update.py --manuscript manuscripts/<slug> --series-dir series/an-lin --require-epub-build
 ```
 
 For Marcel personalized mode, add `--personal-known data/learner_profiles/marcel/personal_known_words.txt` to validation, quality-gate, report-generation, and EPUB commands.

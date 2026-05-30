@@ -46,6 +46,8 @@ For 林安 journalist/crime manuscripts, reject or require rewrite when 林安 d
 
 For series manuscripts, reject or require polish when the variation budget is missing or the book repeats the previous investigation structure, emotional wound, fantasy mechanism, location ecosystem, or ending type without a deliberate reason.
 
+For accepted 林安 manuscripts, note that post-story series memory must be updated after EPUB build and before the next story is planned. The update is verified with `scripts/check_series_memory_update.py`.
+
 For adapted manuscripts, reject or require rewrite when source fidelity is not reviewed, plot beats were silently removed, character motivations changed, scene order or causality drifted, invented additions appear without approval, or heavy rewrites lack a vocabulary/readability reason. Do not approve adapted EPUB export unless `quality/source_fidelity_report.md` says `Fidelity decision: PASS`.
 
 ## Output
@@ -67,5 +69,6 @@ Write `manuscripts/<slug>/quality/lead_quality_decision.md` with:
 - public-quality status: PASS, POLISH, PARTIAL_REWRITE, or COMPLETE_REBUILD
 - any prose-variety warnings waived, with reasons
 - for adaptations, whether source fidelity passed and which heavy rewrites were accepted
+- for 林安 series manuscripts, whether a post-story series memory update is required before the next plan
 
 EPUB export is allowed only when the file explicitly contains `Final decision: PASS`.

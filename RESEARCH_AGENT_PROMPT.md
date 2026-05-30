@@ -2,7 +2,7 @@
 
 You are researching the `chinese-anki-graded-readers` repository.
 
-Use this prompt for repository-wide questions about Anki deck tooling, known-word generation, controlled-vocabulary Chinese fiction, source-aligned EPUB adaptation, stretch vocabulary, validation, quality review, EPUB export, and manuscript artifacts.
+Use this prompt for repository-wide questions about Anki deck tooling, known-word generation, controlled-vocabulary Chinese fiction, source-aligned EPUB adaptation, stretch vocabulary, validation, quality review, series memory, EPUB export, and manuscript artifacts.
 
 ## Repository Access
 
@@ -57,6 +57,7 @@ Common surfaces:
 - `scripts/` for validators, reports, EPUB adaptation intake/profiling, EPUB export, and Anki candidate export.
 - `.agents/skills/` and `.codex/agents/` for role-specific agent behavior.
 - `data/known_words.txt` and `data/stretch_packs/` for active vocabulary policy.
+- `series/an-lin/` and `docs/series-memory.md` for living series continuity.
 - `manuscripts/<slug>/` for manuscript artifacts.
 - `tests/` for expected validator and EPUB behavior.
 
@@ -68,6 +69,7 @@ Common surfaces:
 - Do not publish raw EPUBs or extracted source units unless rights are explicit.
 - Do not add words to `data/known_words.txt` by hand unless the word-list promotion workflow is the task.
 - Do not overwrite existing manuscripts unless explicitly instructed.
+- Do not plan a new 林安 sequel before checking that the previous accepted story updated `series/an-lin/series_update_log.md`.
 
 ## Research Question
 

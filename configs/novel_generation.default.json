@@ -9,7 +9,7 @@
   "baseline_notes": "Quality comes first. Do not add text solely to meet a word, chapter, vocabulary coverage, or stretch-word target.",
   "writing_mode": "outline-first",
   "known_words_path": "data/known_words.txt",
-  "known_word_limit": 1500,
+  "known_word_limit": 1700,
   "learner_profile": {
     "mode": "public",
     "profile_name": null,
@@ -55,7 +55,12 @@
   "genre": {
     "mode": "low_fantasy_urban_shanghai",
     "series_bible_path": "series/an-lin/series_bible.md",
+    "series_chronology_path": "series/an-lin/chronology.md",
+    "series_character_registry_path": "series/an-lin/character_registry.md",
+    "series_mechanism_registry_path": "series/an-lin/mechanism_registry.md",
+    "series_open_threads_path": "series/an-lin/open_threads.md",
     "series_constraints_path": "series/an-lin/sequel_constraints.md",
+    "series_update_log_path": "series/an-lin/series_update_log.md",
     "avoid_epic_fantasy": true,
     "prefer_one_strange_object": true,
     "prefer_one_secret_place": true,
@@ -108,6 +113,7 @@
     "require_literary_critic_review": true,
     "require_normal_reader_review": true,
     "require_lead_quality_decision": true,
+    "require_series_memory_update_before_next_story": true,
     "allow_epub_build_before_quality_pass": false,
     "public_quality_status_required_for_public_series_release": true
   },

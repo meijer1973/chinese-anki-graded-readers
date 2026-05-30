@@ -7,7 +7,9 @@ description: Plan complete Chinese graded-reader novels under a restricted known
 
 Plan before drafting. Read `data/known_words.txt` first, then inspect any project config, learner-profile personal-known list if configured, selected stretch packs, proper nouns, book-specific words, and existing manuscript files.
 
-For 林安 series work, read `series/an-lin/series_bible.md`, `series/an-lin/character_registry.md`, `series/an-lin/chronology.md`, and `series/an-lin/sequel_constraints.md` before planning. Treat 林安 as the journalist/crime-reporter protagonist and 陈雨 as the recurring police contact unless the user explicitly requests a reboot.
+For 林安 series work, read `series/an-lin/series_bible.md`, `series/an-lin/character_registry.md`, `series/an-lin/chronology.md`, `series/an-lin/mechanism_registry.md`, `series/an-lin/open_threads.md`, `series/an-lin/recurring_locations.md`, `series/an-lin/recurring_objects.md`, `series/an-lin/sequel_constraints.md`, and `series/an-lin/series_update_log.md` before planning. Treat 林安 as the journalist/crime-reporter protagonist and 陈雨 as the recurring police contact unless the user explicitly requests a reboot.
+
+Before planning the next 林安 story, confirm that the previous accepted story has passed `python scripts/check_series_memory_update.py --manuscript manuscripts/<previous-slug> --series-dir series/an-lin`. If it has not, update the series memory first.
 
 ## Required Outputs
 
@@ -73,6 +75,7 @@ Include:
 - public-quality risks
 - variation budget
 - series continuity constraints when the manuscript belongs to an existing series
+- open series threads and mechanism constraints when the manuscript belongs to an existing series
 - case function, journalist function, fantasy function, and learning function for each chapter when writing 林安 sequels
 
 Reject outline ideas that are only safe, flat, or repetitive. Vocabulary limits are a constraint, not an excuse for dull scenes.

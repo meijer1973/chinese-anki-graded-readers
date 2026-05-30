@@ -8,6 +8,7 @@
 - Each book should have a Shanghai crime case plus one impossible low-fantasy mechanism.
 - The fantasy should be small, repeated, and emotionally relevant.
 - The story should use journalism actions: interview, confirm, protect a source, write or publish, and face pressure.
+- Planning must begin from the current living series memory package, including `chronology.md`, `character_registry.md`, `mechanism_registry.md`, `open_threads.md`, and `series_update_log.md`.
 
 ## Must Avoid
 
@@ -41,3 +42,21 @@ Before drafting, `creative_preflight.md` must state at least three deliberate di
 - ending type
 
 Continuity is not a formula. The next book should keep 林安, 陈雨, Shanghai, journalism pressure, and one small impossible mechanism, but it should not simply repeat crime, strange object, memory cost, and publication choice in the same rhythm.
+
+## Required Pre-Planning Memory Check
+
+Before planning the next 林安 manuscript, confirm that the previous accepted story has:
+
+- a concise `chronology.md` entry;
+- durable character changes added to `character_registry.md`, if any;
+- mechanism rules, costs, and limits captured in `mechanism_registry.md`;
+- resolved and new unresolved questions reflected in `open_threads.md`;
+- an audit entry in `series_update_log.md`.
+
+Use:
+
+```powershell
+python scripts/check_series_memory_update.py --manuscript manuscripts/<previous-slug> --series-dir series/an-lin
+```
+
+If the checker fails, update the series memory package before creating the next `creative_preflight.md`.

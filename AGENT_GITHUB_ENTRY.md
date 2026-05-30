@@ -28,6 +28,7 @@ Read that file first for repository access, exact paths, raw URLs, and task rout
 | How is a chapter validated? | `scripts/validate_chapter.py`, `scripts/novel_tools.py` |
 | How is a whole manuscript validated? | `scripts/validate_book.py`, `scripts/generate_reports.py` |
 | How is quality reviewed? | `docs/quality-review.md`, `.agents/skills/chinese-lead-quality-review/SKILL.md` |
+| How is series memory updated after an accepted story? | `docs/series-memory.md`, `scripts/check_series_memory_update.py` |
 | How is EPUB built? | `scripts/build_epub.py`, `.agents/skills/epub-export/SKILL.md` |
 | How do stretch words flow toward Anki? | `docs/anki-integration.md`, `scripts/export_stretch_words_for_anki.py` |
 | How is Anki new-card order kept mixed? | `docs/anki-integration.md`, `scripts/audit_anki_card_distribution.py`, `scripts/schedule_anki_learning_order.py` |
@@ -76,3 +77,4 @@ https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/AG
 - Assuming validation quality equals literary quality.
 - Forgetting to pass stretch packs, `book_specific_words.txt`, and `proper_nouns.txt` when validating layered manuscripts.
 - Treating unknown-token allowance as a target. It is only breathing room.
+- Planning a new 林安 sequel before the previous accepted story has updated `series/an-lin/series_update_log.md`.

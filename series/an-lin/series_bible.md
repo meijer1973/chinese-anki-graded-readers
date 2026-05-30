@@ -22,7 +22,7 @@ She is brave but not reckless. She wants truth, but she must also decide when pu
 
 ## Recurring Fantasy Terms
 
-These terms are approved for recurring series use when they are also included in the active manuscript vocabulary files:
+These terms are approved for recurring series use when they are also included in the active manuscript vocabulary files. Detailed rules, costs, limits, and current status belong in `mechanism_registry.md`, not here.
 
 - 雨票
 - 黑票
@@ -59,4 +59,13 @@ Future stories should keep the case concrete, but they may let this hidden recor
 
 ## Continuity Rule
 
-Future manuscripts in this series must read this file, `character_registry.md`, `chronology.md`, and `sequel_constraints.md` before planning. If a writer wants to contradict an established fact, they must create a visible continuity note and ask for approval.
+Future manuscripts in this series must read this file, `character_registry.md`, `chronology.md`, `mechanism_registry.md`, `open_threads.md`, `recurring_locations.md`, `recurring_objects.md`, `sequel_constraints.md`, and `series_update_log.md` before planning. If a writer wants to contradict an established fact, they must create a visible continuity note and ask for approval.
+
+After an accepted 林安 story passes vocabulary validation, lead quality review, and EPUB build if applicable, update the series memory package before planning the next story:
+
+- add a concise entry to `chronology.md`;
+- add only durable character facts to `character_registry.md`;
+- update `mechanism_registry.md` with the fantasy rule, cost, limit, and relationship to earlier mechanisms;
+- close or add questions in `open_threads.md`;
+- update this bible only if the stable identity or current arc pressure changed;
+- append an audit entry to `series_update_log.md`.

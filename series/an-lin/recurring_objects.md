@@ -1,5 +1,7 @@
 # 林安 Recurring Objects
 
+For fantasy-rule detail, costs, limits, and current mechanism status, use `mechanism_registry.md`. This file is only the reusable object vocabulary checklist.
+
 ## Approved Recurring Fantasy Objects
 
 - 雨票

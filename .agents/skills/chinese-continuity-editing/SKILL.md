@@ -29,6 +29,35 @@ Update `manuscripts/<slug>/continuity_log.md` with:
 - timeline notes
 - required setup for the next chapter
 
+## After Each Accepted Series Story
+
+For 林安 series manuscripts that have vocabulary validation PASS, lead quality decision PASS, and EPUB build success if applicable, update the living series memory package before the next story is planned.
+
+Read:
+
+- `manuscripts/<slug>/novel_bible.md`
+- `manuscripts/<slug>/outline.md`
+- `manuscripts/<slug>/continuity_log.md`
+- `manuscripts/<slug>/quality/lead_quality_decision.md`
+- `series/an-lin/series_bible.md`
+- `series/an-lin/chronology.md`
+- `series/an-lin/character_registry.md`
+- `series/an-lin/mechanism_registry.md`
+- `series/an-lin/open_threads.md`
+- `series/an-lin/sequel_constraints.md`
+- `series/an-lin/series_update_log.md`
+
+Then update:
+
+- `chronology.md` with case frame, fantasy mechanism, outcome, and arc movement;
+- `character_registry.md` with durable character facts only;
+- `mechanism_registry.md` with mechanism rule, cost, limits, evidence split, and relation to earlier mechanisms;
+- `open_threads.md` with resolved and new threads;
+- `series_bible.md` only when stable identity or current arc pressure changed;
+- `series_update_log.md` with date, slug, changed files, rationale, and next-story warning.
+
+Run `python scripts/check_series_memory_update.py --manuscript manuscripts/<slug> --series-dir series/an-lin` after the update.
+
 ## Contradiction Checks
 
 Look for name changes, impossible event order, location drift, forgotten unresolved plot points, unexplained emotional resets, and objects that appear or disappear without reason.

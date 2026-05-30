@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki And Graded Readers
 
-Generated: 2026-05-29T19:36:20Z
+Generated: 2026-05-30T21:17:54Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 834
+Files indexed: 819
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -58,7 +58,7 @@ Count: 30
 
 ## docs
 
-Count: 9
+Count: 10
 
 - docs/adaptation-workflow.md
 - docs/anki-integration.md
@@ -67,12 +67,13 @@ Count: 9
 - docs/novel-generation.md
 - docs/personal-known-vocabulary.md
 - docs/quality-review.md
+- docs/series-memory.md
 - docs/stretch-vocabulary.md
 - docs/style-bank-controlled-chinese.md
 
 ## scripts
 
-Count: 40
+Count: 42
 
 - add_missing_single_character_notes.py
 - apply_meaning_cleanup_updates.py
@@ -87,6 +88,7 @@ Count: 40
 - scripts/build_agent_index.py
 - scripts/build_epub.py
 - scripts/build_reading_copy.py
+- scripts/check_series_memory_update.py
 - scripts/complete_stretch_pack_metadata.py
 - scripts/export_stretch_words_for_anki.py
 - scripts/generate_reports.py
@@ -113,6 +115,7 @@ Count: 40
 - tests/test_adaptation_workflow.py
 - tests/test_anki_card_distribution.py
 - tests/test_novel_pipeline.py
+- tests/test_series_memory_update.py
 - tests/test_stretch_vocabulary.py
 
 ## configs
@@ -162,30 +165,9 @@ Count: 2
 
 ## adaptations
 
-Count: 22
+Count: 1
 
 - adaptations/README.md
-- adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/adaptation_config.json
-- adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/proper_noun_candidates.tsv
-- adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/source_map.json
-- adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/stretch_candidates.tsv
-- adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/vocabulary_profile_baseline.json
-- adaptations/chinese-economic-news-reading-pack-2026-05-28-body-only/vocabulary_profile_baseline.md
-- adaptations/chinese-economic-news-reading-pack-2026-05-28/adaptation_config.json
-- adaptations/chinese-economic-news-reading-pack-2026-05-28/adaptation_plan.md
-- adaptations/chinese-economic-news-reading-pack-2026-05-28/adaptation_trial_report.md
-- adaptations/chinese-economic-news-reading-pack-2026-05-28/proper_noun_candidates.tsv
-- adaptations/chinese-economic-news-reading-pack-2026-05-28/reviewed_book_specific_words.txt
-- adaptations/chinese-economic-news-reading-pack-2026-05-28/reviewed_proper_nouns.txt
-- adaptations/chinese-economic-news-reading-pack-2026-05-28/source_map.json
-- adaptations/chinese-economic-news-reading-pack-2026-05-28/stretch_candidates.tsv
-- adaptations/chinese-economic-news-reading-pack-2026-05-28/vocabulary_profile_baseline.json
-- adaptations/chinese-economic-news-reading-pack-2026-05-28/vocabulary_profile_baseline.md
-- adaptations/heyishengxiaomo-vocab-mining/adaptation_config.json
-- adaptations/heyishengxiaomo-vocab-mining/adaptation_plan.md
-- adaptations/heyishengxiaomo-vocab-mining/proper_noun_candidates.tsv
-- adaptations/heyishengxiaomo-vocab-mining/source_map.json
-- adaptations/heyishengxiaomo-vocab-mining/stretch_candidates.tsv
 
 ## manuscripts
 
@@ -884,17 +866,25 @@ Count: 3
 - reports/github-agent-index.md
 - reports/url-index.md
 
-## root
+## series
 
 Count: 10
 
-- .gitattributes
-- .gitignore
 - series/an-lin/approved_series_words.txt
 - series/an-lin/character_registry.md
 - series/an-lin/chronology.md
+- series/an-lin/mechanism_registry.md
+- series/an-lin/open_threads.md
 - series/an-lin/recurring_locations.md
 - series/an-lin/recurring_objects.md
 - series/an-lin/sequel_constraints.md
 - series/an-lin/series_bible.md
+- series/an-lin/series_update_log.md
+
+## root
+
+Count: 3
+
+- .gitattributes
+- .gitignore
 - word list chinese.txt

@@ -71,6 +71,8 @@ def category_for(path: str) -> str:
         return "manuscripts"
     if path.startswith("reports/"):
         return "reports"
+    if path.startswith("series/"):
+        return "series"
     return "root"
 
 
@@ -106,6 +108,7 @@ def write_github_agent_index(paths: list[str]) -> None:
         "adaptations",
         "manuscripts",
         "reports",
+        "series",
         "root",
     ]
     for category in order:
@@ -135,6 +138,8 @@ def write_url_index(paths: list[str]) -> None:
         "docs/stretch-vocabulary.md",
         "docs/anki-integration.md",
         "docs/quality-review.md",
+        "docs/series-memory.md",
+        "scripts/check_series_memory_update.py",
         "configs/novel_generation.default.json",
         "data/known_words.metadata.json",
         "data/known_words.txt",

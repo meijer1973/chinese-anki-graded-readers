@@ -1,5 +1,7 @@
 # 林安 Character Registry
 
+Keep only durable character facts, roles, relationship changes, and continuity locks here. Put one-book-only events in the manuscript `continuity_log.md`.
+
 ## 林安
 
 - Stable role: journalist / crime reporter

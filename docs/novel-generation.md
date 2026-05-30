@@ -14,13 +14,13 @@ The active machine-readable vocabulary file is:
 data/known_words.txt
 ```
 
-It is generated from `word list chinese.txt`, which is one Chinese word or phrase per line in ranked order. The current graded-reader default is the first 1500 entries. This is separate from live Anki card scheduling policy.
+It is generated from `word list chinese.txt`, which is one Chinese word or phrase per line in ranked order. The current graded-reader default is the first 1700 entries. This is separate from live Anki card scheduling policy.
 
 Regenerate the active known list after the ranked list or known-word threshold changes:
 
 ```powershell
 $env:PYTHONIOENCODING='utf-8'
-python scripts/sync_known_words.py --limit 1500
+python scripts/sync_known_words.py --limit 1700
 ```
 
 For future expansion, change only the limit:
@@ -43,7 +43,7 @@ python scripts/load_known_words.py --known data/known_words.txt
 
 Use public mode when a book should represent only the frequency-core level plus approved stretch words.
 
-Use Marcel personalized mode when the book is for Marcel and may use words he already recognizes outside the top 1500. The personal-known layer is generated from:
+Use Marcel personalized mode when the book is for Marcel and may use words he already recognizes outside the top 1700. The personal-known layer is generated from:
 
 ```text
 data/learner_profiles/marcel/personal_known_words.tsv
@@ -117,7 +117,7 @@ The default strict mode uses only `data/known_words.txt`. The richer controlled 
 
 The rule is not random leakage. Personal-known words are recognized words for a named learner profile, not new learning targets. Stretch words are approved learning targets. Proper nouns belong in `proper_nouns.txt` and do not count against the unknown-token budget. Each chapter may keep up to 5 forbidden unknown tokens, but the budget is breathing room, not a target. If a word appears in both core and another layer, the validator counts it as core. If a word appears in both personal-known and stretch, it counts as personal-known.
 
-For the 林安 series, read `series/an-lin/series_bible.md`, `series/an-lin/character_registry.md`, `series/an-lin/chronology.md`, and `series/an-lin/sequel_constraints.md` before planning. 林安 is the journalist/crime-reporter protagonist in that continuity; do not reset her profession or ignore `manuscripts/shanghai-rain-gate-crime/`.
+For the 林安 series, read `series/an-lin/series_bible.md`, `series/an-lin/character_registry.md`, `series/an-lin/chronology.md`, `series/an-lin/mechanism_registry.md`, `series/an-lin/open_threads.md`, `series/an-lin/recurring_locations.md`, `series/an-lin/recurring_objects.md`, `series/an-lin/sequel_constraints.md`, and `series/an-lin/series_update_log.md` before planning. 林安 is the journalist/crime-reporter protagonist in that continuity; do not reset her profession or ignore `manuscripts/shanghai-rain-gate-crime/`.
 
 ## Creative Preflight
 
@@ -405,6 +405,28 @@ python scripts/build_epub.py --manuscript manuscripts/<slug> --title "<title>" -
 
 The EPUB builder runs whole-book validation and checks lead quality approval again before writing. By default it removes token spaces for display readability and includes a validation appendix explaining that the canonical source is the `.zh-tok.txt` files.
 
+## Post-Story Series Memory Update
+
+For series manuscripts, do not rely on memory after a book is accepted. Use `docs/series-memory.md`.
+
+After a 林安 manuscript reaches vocabulary validation PASS, lead quality decision PASS, and EPUB build success if applicable, update the living series memory package before planning the next story:
+
+1. Add a concise accepted-story entry to `series/an-lin/chronology.md`.
+2. Add only durable character facts to `series/an-lin/character_registry.md`.
+3. Record fantasy mechanism rules, costs, limits, evidence split, and relationship to earlier mechanisms in `series/an-lin/mechanism_registry.md`.
+4. Close resolved questions and add useful sequel seeds in `series/an-lin/open_threads.md`.
+5. Update `series/an-lin/series_bible.md` only if stable identity or arc pressure changed.
+6. Update `series/an-lin/sequel_constraints.md` only if the next writer needs a new hard rule.
+7. Append an audit entry to `series/an-lin/series_update_log.md`.
+
+Verify the update:
+
+```powershell
+python scripts/check_series_memory_update.py --manuscript manuscripts/<slug> --series-dir series/an-lin
+```
+
+Add `--require-epub-build` when the EPUB should already exist. The next 林安 story may not begin planning until the previous accepted story passes this check.
+
 ## Improved Workflow
 
 1. Load active known-word list.
@@ -427,6 +449,7 @@ The EPUB builder runs whole-book validation and checks lead quality approval aga
 18. Run prose-variety polish when needed.
 19. Lead reviewer decides: pass, polish, partial rewrite, or complete rebuild.
 20. Build EPUB only after lead reviewer approves.
+21. For series manuscripts, update and verify the living series memory package before planning the next book.
 
 For `low_fantasy_urban_shanghai`, the outline and reviews should check that the story feels like a normal person in Shanghai discovering one impossible thing. Avoid epic scale, lore dumps, many monsters, and stretch words used once as decoration.
 

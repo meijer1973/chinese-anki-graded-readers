@@ -22,7 +22,7 @@ Write one chapter at a time. The canonical format is space-tokenized Chinese:
 - Read the manuscript `novel_bible.md`, `outline.md`, `characters.md`, and `continuity_log.md`.
 - Read `creative_preflight.md` when present. Preserve the chosen story shape, reader question, and variation budget.
 - Read `docs/style-bank-controlled-chinese.md` before drafting or polishing.
-- For 林安 series chapters, also read `series/an-lin/series_bible.md`, `series/an-lin/character_registry.md`, `series/an-lin/chronology.md`, and `series/an-lin/sequel_constraints.md`.
+- For 林安 series chapters, also read `series/an-lin/series_bible.md`, `series/an-lin/character_registry.md`, `series/an-lin/chronology.md`, `series/an-lin/mechanism_registry.md`, `series/an-lin/open_threads.md`, `series/an-lin/recurring_locations.md`, `series/an-lin/recurring_objects.md`, `series/an-lin/sequel_constraints.md`, and `series/an-lin/series_update_log.md`.
 - Confirm the target chapter file path and chapter outline. Do not use a token target as a quota.
 - Create `manuscripts/<slug>/planning/chapter_XX_vocab_plan.md` before drafting.
 - Do not begin with vocabulary feasibility alone. Confirm the scene want, pressure, reversal, and end change before choosing the token set.

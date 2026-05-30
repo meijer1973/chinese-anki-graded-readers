@@ -15,6 +15,7 @@ This repository answers:
 - how controlled-vocabulary Chinese fiction is planned, drafted, validated, reviewed, and exported
 - how personal-known vocabulary, approved stretch vocabulary, and proper nouns are handled
 - how stretch words become Anki candidates
+- how living series memory is updated after accepted stories
 - which story text is canonical and which artifacts are generated
 
 Repository boundaries:
@@ -82,9 +83,11 @@ Human-readable:
 - `docs/stretch-vocabulary.md`
 - `docs/anki-integration.md`
 - `docs/quality-review.md`
+- `docs/series-memory.md`
 - `.agents/skills/chinese-graded-novel-planning/SKILL.md`
 - `.agents/skills/chinese-restricted-vocabulary-writing/SKILL.md`
 - `.agents/skills/chinese-vocabulary-validation/SKILL.md`
+- `.agents/skills/chinese-continuity-editing/SKILL.md`
 - `.agents/skills/chinese-lead-quality-review/SKILL.md`
 - `.agents/skills/chinese-source-aligned-adaptation/SKILL.md`
 
@@ -114,10 +117,17 @@ Machine-readable:
     "scripts/import_epub_for_adaptation.py",
     "scripts/profile_adaptation_vocabulary.py",
     "scripts/adaptation_tools.py",
+    "scripts/check_series_memory_update.py",
     "scripts/anki_card_distribution.py",
     "scripts/audit_anki_card_distribution.py",
     "scripts/schedule_anki_learning_order.py",
     "series/an-lin/series_bible.md",
+    "series/an-lin/chronology.md",
+    "series/an-lin/character_registry.md",
+    "series/an-lin/mechanism_registry.md",
+    "series/an-lin/open_threads.md",
+    "series/an-lin/sequel_constraints.md",
+    "series/an-lin/series_update_log.md",
     "anki/stretch_word_candidates.tsv",
     "manuscripts/shanghai-rain-gate-crime/vocabulary_report.json",
     "manuscripts/shanghai-rain-gate-crime/quality/quality_gate_summary.json",
@@ -131,6 +141,8 @@ Machine-readable:
     "manuscripts/shanghai-still-water-list-case-revised/quality/quality_gate_summary.json",
     "manuscripts/shanghai-lost-property-locker-case/vocabulary_report.json",
     "manuscripts/shanghai-lost-property-locker-case/quality/quality_gate_summary.json",
+    "manuscripts/shanghai-silent-archive-case/vocabulary_report.json",
+    "manuscripts/shanghai-silent-archive-case/quality/quality_gate_summary.json",
     "manuscripts/small-shop-survival-economics/vocabulary_report.json",
     "manuscripts/small-shop-survival-economics/quality/quality_gate_summary.json",
     "manuscripts/shanghai-rain-ticket/vocabulary_report.json",
@@ -166,10 +178,17 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/import_epub_for_adaptation.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/profile_adaptation_vocabulary.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/adaptation_tools.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/check_series_memory_update.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/anki_card_distribution.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/audit_anki_card_distribution.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/schedule_anki_learning_order.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/an-lin/series_bible.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/an-lin/chronology.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/an-lin/character_registry.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/an-lin/mechanism_registry.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/an-lin/open_threads.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/an-lin/sequel_constraints.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/an-lin/series_update_log.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/novel-generation.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/personal-known-vocabulary.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/adaptation-workflow.md
@@ -178,6 +197,7 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/stretch-vocabulary.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/anki-integration.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/quality-review.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/series-memory.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/vocabulary_report.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/quality/quality_gate_summary.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-spirit-lamp-case/vocabulary_report.json
@@ -190,6 +210,8 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-still-water-list-case-revised/quality/quality_gate_summary.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-lost-property-locker-case/vocabulary_report.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-lost-property-locker-case/quality/quality_gate_summary.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/vocabulary_report.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-silent-archive-case/quality/quality_gate_summary.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/vocabulary_report.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/small-shop-survival-economics/quality/quality_gate_summary.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-ticket/vocabulary_report.json
@@ -219,6 +241,7 @@ Use these anchors before free-form browsing.
   "stretch_vocabulary_docs": "docs/stretch-vocabulary.md",
   "anki_docs": "docs/anki-integration.md",
   "quality_docs": "docs/quality-review.md",
+  "series_memory_docs": "docs/series-memory.md",
   "validator_core": "scripts/novel_tools.py",
   "personal_known_importer": "scripts/import_personal_known_words.py",
   "personal_known_sync": "scripts/sync_personal_known_words.py",
@@ -231,9 +254,14 @@ Use these anchors before free-form browsing.
   "reading_copy_builder": "scripts/build_reading_copy.py",
   "plot_affordance_report": "scripts/plot_affordance_report.py",
   "prose_variety_report": "scripts/prose_variety_report.py",
+  "series_memory_checker": "scripts/check_series_memory_update.py",
   "anki_distribution_audit": "scripts/audit_anki_card_distribution.py",
   "anki_learning_order_scheduler": "scripts/schedule_anki_learning_order.py",
   "lin_an_series_bible": "series/an-lin/series_bible.md",
+  "lin_an_chronology": "series/an-lin/chronology.md",
+  "lin_an_mechanism_registry": "series/an-lin/mechanism_registry.md",
+  "lin_an_open_threads": "series/an-lin/open_threads.md",
+  "lin_an_series_update_log": "series/an-lin/series_update_log.md",
   "journalism_crime_pack": "data/stretch_packs/journalism_crime_50.txt",
   "business_economics_pack": "data/stretch_packs/business_economics_60.txt",
   "first_series_manuscript": "manuscripts/shanghai-rain-gate-crime",
@@ -242,6 +270,7 @@ Use these anchors before free-form browsing.
   "fourth_series_manuscript": "manuscripts/shanghai-midnight-ringtone-case",
   "fifth_series_manuscript": "manuscripts/shanghai-still-water-list-case-revised",
   "sixth_series_manuscript": "manuscripts/shanghai-lost-property-locker-case",
+  "seventh_series_manuscript": "manuscripts/shanghai-silent-archive-case",
   "business_economics_nonfiction_manuscript": "manuscripts/small-shop-survival-economics",
   "current_story_trial": "manuscripts/shanghai-rain-ticket",
   "file_inventory": "reports/github-agent-index.md"
@@ -288,8 +317,9 @@ Use these anchors before free-form browsing.
 | Adapt an existing EPUB into a graded reader | `docs/adaptation-workflow.md`, `scripts/import_epub_for_adaptation.py`, `scripts/profile_adaptation_vocabulary.py`, `.agents/skills/chinese-source-aligned-adaptation/SKILL.md` |
 | Plan a new story | `.agents/skills/chinese-graded-novel-planning/SKILL.md`, `docs/novel-generation.md` |
 | Run creative preflight | `docs/creative-preflight.md` |
-| Plan a 林安 sequel | `series/an-lin/series_bible.md`, `series/an-lin/sequel_constraints.md`, `data/stretch_packs/journalism_crime_50.txt` |
-| Inspect current 林安 series continuity | `series/an-lin/chronology.md`, `manuscripts/shanghai-lost-property-locker-case/vocabulary_report.json`, `manuscripts/shanghai-lost-property-locker-case/quality/quality_gate_summary.json` |
+| Plan a 林安 sequel | `series/an-lin/series_bible.md`, `series/an-lin/chronology.md`, `series/an-lin/mechanism_registry.md`, `series/an-lin/open_threads.md`, `series/an-lin/sequel_constraints.md`, `series/an-lin/series_update_log.md`, `data/stretch_packs/journalism_crime_50.txt` |
+| Inspect current 林安 series continuity | `series/an-lin/chronology.md`, `series/an-lin/open_threads.md`, `series/an-lin/mechanism_registry.md`, `manuscripts/shanghai-silent-archive-case/vocabulary_report.json`, `manuscripts/shanghai-silent-archive-case/quality/quality_gate_summary.json` |
+| Verify post-story series memory update | `docs/series-memory.md`, `scripts/check_series_memory_update.py`, `series/an-lin/series_update_log.md` |
 | Draft or revise a chapter | `.agents/skills/chinese-restricted-vocabulary-writing/SKILL.md` |
 | Polish prose variety | `.agents/skills/chinese-prose-variety-polish/SKILL.md`, `docs/style-bank-controlled-chinese.md`, `scripts/prose_variety_report.py` |
 | Review literary quality | `.agents/skills/chinese-literary-critic/SKILL.md`, `.agents/skills/chinese-normal-reader-review/SKILL.md`, `.agents/skills/chinese-lead-quality-review/SKILL.md` |

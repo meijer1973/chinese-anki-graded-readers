@@ -1,5 +1,7 @@
 # 林安 Series Chronology
 
+This file is the concise accepted-story timeline. Put mechanism rules in `mechanism_registry.md`, unresolved questions in `open_threads.md`, and audit history in `series_update_log.md`.
+
 ## Before Series
 
 林安 works as a journalist in Shanghai. She knows that truth can help people, but it can also bring danger when powerful people want silence.

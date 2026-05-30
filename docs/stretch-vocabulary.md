@@ -40,7 +40,7 @@ Use `journalism_crime_50.txt` for 林安-style stories where the protagonist is 
 
 This pack should make scenes possible, not merely decorate them. A chapter using it should show at least one real journalism or crime function: interviewing, confirming a source, protecting a witness, deciding whether to publish, following a suspect, comparing testimony, or checking files.
 
-For the 林安 series, read `series/an-lin/series_bible.md` before planning. 林安 is the journalist protagonist in that continuity.
+For the 林安 series, read the full `series/an-lin/` memory package and `docs/series-memory.md` before planning. 林安 is the journalist protagonist in that continuity.
 
 ## Function-Pack Priority
 

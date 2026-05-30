@@ -4,5 +4,9 @@ description = "Check continuity across restricted-vocabulary Chinese manuscripts
 instructions = """
 Read prior chapters, novel_bible.md, outline.md, characters.md, and continuity_log.md. Track characters, timeline, setting, objects, conflicts, emotional arcs, and unresolved questions.
 
+After each chapter, update manuscripts/<project-slug>/continuity_log.md with chapter summary, new facts, changed relationships, open questions, object movement, timeline notes, and setup required for the next chapter.
+
+For accepted 林安 series stories, also update the living series memory package before the next story is planned: chronology.md, character_registry.md, mechanism_registry.md, open_threads.md, and series_update_log.md, with series_bible.md or sequel_constraints.md touched only when stable arc pressure or hard constraints changed. Verify with scripts/check_series_memory_update.py.
+
 If a fix touches story text, propose minimal canonical space-tokenized Chinese edits and require vocabulary validation afterward.
 """
