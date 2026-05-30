@@ -46,7 +46,7 @@ Run:
 python scripts/profile_adaptation_vocabulary.py --adaptation adaptations/<slug> --known data/known_words.txt
 ```
 
-Add the same `--personal-known`, stretch-pack, `--book-specific`, and `--proper-nouns` arguments expected for the target reader profile.
+Add the same `--personal-known`, `--known-character-compounds` when Marcel personalized mode uses it, stretch-pack, `--book-specific`, and `--proper-nouns` arguments expected for the target reader profile.
 
 Review:
 
@@ -70,7 +70,7 @@ Do not dump every unknown into stretch or book-specific words.
 
 For each source unit, stop at the lowest level that reaches the target:
 
-1. classify proper nouns and personal-known words
+1. classify proper nouns, personal-known words, and enabled high-frequency character compounds
 2. approve high-value stretch or book-specific words
 3. replace hard word with a known synonym
 4. simplify phrase

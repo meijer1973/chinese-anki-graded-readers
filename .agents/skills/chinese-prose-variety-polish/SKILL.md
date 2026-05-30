@@ -23,7 +23,7 @@ For 林安 sequels, also read `series/an-lin/series_bible.md`, `series/an-lin/ch
 - Reduce visible `X 说` repetition.
 - Reduce repeated sentence openings, repeated endings, and mechanical phrase frames.
 - Replace flat exposition with small action, reaction, object handling, setting movement, or emotional consequence.
-- Make sure every change still uses exact core known, configured personal-known, stretch, book-specific, proper-noun, or intentionally budgeted unknown tokens.
+- Make sure every change still uses exact core known, configured personal-known, enabled high-frequency character compounds, stretch, book-specific, proper-noun, or intentionally budgeted unknown tokens.
 - Preserve plot facts, chronology, and character continuity.
 - Do not pad chapters or add decorative stretch words.
 

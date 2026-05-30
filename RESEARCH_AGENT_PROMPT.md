@@ -56,7 +56,7 @@ Common surfaces:
 - `docs/` for workflows and policy.
 - `scripts/` for validators, reports, EPUB adaptation intake/profiling, EPUB export, and Anki candidate export.
 - `.agents/skills/` and `.codex/agents/` for role-specific agent behavior.
-- `data/known_words.txt` and `data/stretch_packs/` for active vocabulary policy.
+- `data/known_words.txt`, `data/learner_profiles/marcel/high_frequency_characters.txt`, and `data/stretch_packs/` for active vocabulary policy.
 - `series/an-lin/` and `docs/series-memory.md` for living series continuity.
 - `manuscripts/<slug>/` for manuscript artifacts.
 - `tests/` for expected validator and EPUB behavior.

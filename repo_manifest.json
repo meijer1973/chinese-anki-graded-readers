@@ -32,6 +32,7 @@
     "data/known_words.txt",
     "data/learner_profiles/marcel/personal_known_words.tsv",
     "data/learner_profiles/marcel/personal_known_words.txt",
+    "data/learner_profiles/marcel/high_frequency_characters.txt",
     "data/learner_profiles/marcel/personal_known_words.metadata.json",
     "data/learner_profiles/marcel/personal_known_audit.json",
     "data/punctuation_allowlist.txt",
@@ -128,6 +129,7 @@
     "vocabulary": [
       "word list chinese.txt",
       "data/known_words.txt",
+      "data/learner_profiles/marcel/high_frequency_characters.txt",
       "data/learner_profiles",
       "data/stretch_packs",
       "data/stretch_packs/metadata",
@@ -172,6 +174,7 @@
     "run_tests": "$env:PYTHONIOENCODING='utf-8'; python -m unittest discover -s tests",
     "sync_known_words": "python scripts/sync_known_words.py --limit 1700",
     "sync_marcel_personal_known_words": "python scripts/sync_personal_known_words.py --profile data/learner_profiles/marcel --core data/known_words.txt",
+    "validate_marcel_with_known_character_compounds": "python scripts/validate_book.py --known data/known_words.txt --personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 300 --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json",
     "validate_sample_book": "python scripts/validate_book.py --known data/known_words.txt --chapters manuscripts/sample-known-words/chapters --out manuscripts/sample-known-words/vocabulary_report.json",
     "check_series_memory_update": "python scripts/check_series_memory_update.py --manuscript manuscripts/<slug> --series-dir series/an-lin",
     "generate_agent_indexes": "python scripts/build_agent_index.py",

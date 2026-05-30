@@ -94,6 +94,7 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/cmn_sentences.tsv.bz2
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/cmn_transcriptions.tsv.bz2
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/eng_sentences.tsv.bz2
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/learner_profiles/marcel/high_frequency_characters.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/learner_profiles/marcel/personal_known_audit.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/learner_profiles/marcel/personal_known_exclusions.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/learner_profiles/marcel/personal_known_words.metadata.json
@@ -117,7 +118,6 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/machine-readable-repository.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/personal-known-vocabulary.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/ensure_single_character_notes.py
-- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/high frequency characters.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/README.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/chapters/chapter_01.validation.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/sample-known-words/chapters/chapter_01.zh-tok.txt

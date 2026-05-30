@@ -5,7 +5,9 @@ from pathlib import Path
 
 try:
     from novel_tools import (
+        DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT,
         DEFAULT_KNOWN_WORDS,
+        DEFAULT_MARCEL_HIGH_FREQUENCY_CHARACTERS,
         DEFAULT_MAX_FORBIDDEN_UNKNOWN_TOKENS_PER_CHAPTER,
         DEFAULT_PUNCTUATION,
         chapter_files,
@@ -18,7 +20,9 @@ try:
     )
 except ModuleNotFoundError:
     from scripts.novel_tools import (
+        DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT,
         DEFAULT_KNOWN_WORDS,
+        DEFAULT_MARCEL_HIGH_FREQUENCY_CHARACTERS,
         DEFAULT_MAX_FORBIDDEN_UNKNOWN_TOKENS_PER_CHAPTER,
         DEFAULT_PUNCTUATION,
         chapter_files,
@@ -189,6 +193,20 @@ def main() -> int:
     parser.add_argument("--known", default=str(DEFAULT_KNOWN_WORDS))
     parser.add_argument("--punctuation", default=str(DEFAULT_PUNCTUATION))
     parser.add_argument("--personal-known", help="Optional learner-profile personal-known word list.")
+    parser.add_argument(
+        "--known-character-compounds",
+        nargs="?",
+        const=str(DEFAULT_MARCEL_HIGH_FREQUENCY_CHARACTERS),
+        default=None,
+        metavar="PATH",
+        help="Enable the derived high-frequency-character compound layer; defaults to Marcel's ranked character list.",
+    )
+    parser.add_argument(
+        "--known-character-compound-limit",
+        type=int,
+        default=DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT,
+        help="Number of ranked characters to use for the derived compound layer. Use 0 for all.",
+    )
     parser.add_argument("--general-fiction-pack")
     parser.add_argument("--genre-pack")
     parser.add_argument("--setting-pack")
@@ -220,6 +238,8 @@ def main() -> int:
         args.known,
         punctuation_path=args.punctuation,
         personal_known_words_path=args.personal_known,
+        known_character_compounds_path=args.known_character_compounds,
+        known_character_compound_limit=args.known_character_compound_limit,
         general_fiction_pack=args.general_fiction_pack,
         genre_pack=args.genre_pack,
         setting_pack=args.setting_pack,
@@ -255,6 +275,14 @@ def main() -> int:
         "learner_profile_name": validation.get("learner_profile_name"),
         "personal_known_tokens": validation.get("personal_known_tokens", 0),
         "unique_personal_known_words_used": validation.get("unique_personal_known_words_used", 0),
+        "known_character_compounds_path": validation.get("known_character_compounds_path"),
+        "known_character_compound_limit": validation.get("known_character_compound_limit", 0),
+        "high_frequency_character_compound_tokens": validation.get(
+            "high_frequency_character_compound_tokens", 0
+        ),
+        "unique_high_frequency_character_compounds_used": validation.get(
+            "unique_high_frequency_character_compounds_used", 0
+        ),
         "max_forbidden_unknown_tokens_per_chapter": validation.get(
             "max_forbidden_unknown_tokens_per_chapter",
             args.max_forbidden_unknown_tokens_per_chapter,
@@ -284,9 +312,11 @@ def main() -> int:
     write_json(quality / "quality_gate_summary.json", summary)
     print(
         "valid_vocabulary={valid_vocabulary} unknown_tokens={unknown_token_count} "
+        "high_frequency_character_compound_tokens={high_frequency_character_compound_tokens} "
         "planning_files_present={planning} quality_approved={approved} ready_for_epub={ready}".format(
             valid_vocabulary=summary["valid_vocabulary"],
             unknown_token_count=summary["unknown_token_count"],
+            high_frequency_character_compound_tokens=summary["high_frequency_character_compound_tokens"],
             planning=summary["planning_files_present"],
             approved=status["approved"],
             ready=summary["ready_for_epub"],

@@ -12,6 +12,7 @@ Do not use random unknown words. Prefer tokens from approved layers. A chapter m
 
 - Core known words: `data/known_words.txt`
 - Personal known words: `data/learner_profiles/marcel/personal_known_words.txt`, enabled only with `--personal-known`
+- High-frequency character compounds: `data/learner_profiles/marcel/high_frequency_characters.txt`, enabled only for Marcel personalized readers with `--known-character-compounds --known-character-compound-limit 300`
 - General fiction: `data/stretch_packs/general_fiction_100.txt`
 - Low fantasy: `data/stretch_packs/low_fantasy_150.txt`
 - Shanghai setting: `data/stretch_packs/shanghai_setting_150.txt`
@@ -26,7 +27,7 @@ Pack names are aspirational sizes. Starter packs are intentionally smaller than 
 
 Proper nouns are the right place for character, place, and organization names. Listed proper nouns are counted as the proper-noun layer, not as forbidden unknowns.
 
-Personal-known words are not stretch words. They are words a named learner already recognizes and should be tracked under `personal_known_tokens`, not as new learning targets. See `docs/personal-known-vocabulary.md`.
+Personal-known words and high-frequency character compounds are not stretch words. They are vocabulary a named learner already recognizes and should be tracked under `personal_known_tokens` or `high_frequency_character_compound_tokens`, not as new learning targets. See `docs/personal-known-vocabulary.md`.
 
 ## General Fiction Pack
 
@@ -114,9 +115,9 @@ Use layered validation:
 python scripts/validate_book.py --known data/known_words.txt --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 ```
 
-Add `--personal-known data/learner_profiles/marcel/personal_known_words.txt` for Marcel personalized readers. Omit it for public graded-reader mode.
+Add `--personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 300` for Marcel personalized readers. Omit those flags for public graded-reader mode.
 
-The report counts tokens by layer, forbidden unknowns, forbidden unknowns over the per-chapter limit, core coverage, personal-known token use, stretch-token share, stretch words used once, stretch words by chapter, and new stretch words by chapter.
+The report counts tokens by layer, forbidden unknowns, forbidden unknowns over the per-chapter limit, core coverage, personal-known token use, high-frequency character-compound token use, stretch-token share, stretch words used once, stretch words by chapter, and new stretch words by chapter.
 
 Use `scripts/plot_affordance_report.py` before planning a case-heavy premise:
 

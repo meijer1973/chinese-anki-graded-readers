@@ -18,12 +18,12 @@ python scripts/build_epub.py --manuscript manuscripts/<slug> --title "<title>" -
 ## Marcel Personalized Command
 
 ```powershell
-python scripts/build_epub.py --manuscript manuscripts/<slug> --title "<title>" --out manuscripts/<slug>/epub/<slug>.epub --report manuscripts/<slug>/epub/build_report.json --personal-known data/learner_profiles/marcel/personal_known_words.txt
+python scripts/build_epub.py --manuscript manuscripts/<slug> --title "<title>" --out manuscripts/<slug>/epub/<slug>.epub --report manuscripts/<slug>/epub/build_report.json --personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 300
 ```
 
 Add the same stretch pack arguments used during validation, such as `--journalism-crime-pack data/stretch_packs/journalism_crime_50.txt`, `--genre-pack`, `--setting-pack`, `--profession-pack`, `--urban-objects-pack`, `--book-specific`, `--proper-nouns`, and any `--extra-pack`.
 
-The builder runs validation and quality approval checks again before writing. It refuses to export when a chapter exceeds the forbidden-unknown budget or lead quality approval is missing. The build report includes `vocabulary_profile`, `personal_known_tokens`, and `unique_personal_known_words_used` when a learner profile is used.
+The builder runs validation and quality approval checks again before writing. It refuses to export when a chapter exceeds the forbidden-unknown budget or lead quality approval is missing. The build report includes `vocabulary_profile`, `personal_known_tokens`, `unique_personal_known_words_used`, and high-frequency character-compound counts when a learner profile uses them.
 
 ## Output Rules
 
@@ -31,4 +31,4 @@ The builder runs validation and quality approval checks again before writing. It
 - Save under `manuscripts/<project-slug>/epub/`.
 - Include a title page/table of contents structure, chapters, and the validation appendix by default.
 - Display text may remove token spaces for readability, but the `.zh-tok.txt` source remains canonical.
-- Run the EPUB structural check and report path, chapter count, total tokens, unique words, vocabulary profile, personal-known token count when used, unknown tokens, lead quality decision, and build status.
+- Run the EPUB structural check and report path, chapter count, total tokens, unique words, vocabulary profile, personal-known token count and high-frequency character-compound token count when used, unknown tokens, lead quality decision, and build status.

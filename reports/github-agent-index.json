@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-30T22:12:45Z",
+  "generated_at": "2026-05-30T22:42:06Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
   "file_count": 892,
@@ -266,6 +266,11 @@
       "category": "data"
     },
     {
+      "path": "data/learner_profiles/marcel/high_frequency_characters.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/learner_profiles/marcel/high_frequency_characters.txt",
+      "category": "data"
+    },
+    {
       "path": "data/learner_profiles/marcel/personal_known_audit.json",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/learner_profiles/marcel/personal_known_audit.json",
       "category": "data"
@@ -419,11 +424,6 @@
       "path": "ensure_single_character_notes.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/ensure_single_character_notes.py",
       "category": "scripts"
-    },
-    {
-      "path": "high frequency characters.txt",
-      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/high frequency characters.txt",
-      "category": "root"
     },
     {
       "path": "manuscripts/README.md",

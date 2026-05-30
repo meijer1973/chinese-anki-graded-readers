@@ -15,10 +15,13 @@ from xml.etree import ElementTree as ET
 
 try:
     from novel_tools import (
+        DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT,
         DEFAULT_KNOWN_WORDS,
+        DEFAULT_MARCEL_HIGH_FREQUENCY_CHARACTERS,
         DEFAULT_PUNCTUATION,
         HANZI_RE,
         LAYER_TOKEN_FIELDS,
+        classify_token_layer,
         load_layered_vocabulary,
         load_punctuation,
         normalize_token,
@@ -27,10 +30,13 @@ try:
     )
 except ModuleNotFoundError:
     from scripts.novel_tools import (
+        DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT,
         DEFAULT_KNOWN_WORDS,
+        DEFAULT_MARCEL_HIGH_FREQUENCY_CHARACTERS,
         DEFAULT_PUNCTUATION,
         HANZI_RE,
         LAYER_TOKEN_FIELDS,
+        classify_token_layer,
         load_layered_vocabulary,
         load_punctuation,
         normalize_token,
@@ -310,7 +316,7 @@ def import_epub_for_adaptation(
         "preferred_forbidden_unknown_tokens_per_chapter": 0,
         "maximum_forbidden_unknown_tokens_per_chapter": 5,
         "minimal_intervention_cascade": [
-            "classify proper nouns and personal-known words",
+            "classify proper nouns, personal-known words, and enabled high-frequency character compounds",
             "approve high-value stretch or book-specific words",
             "replace hard word with easy known synonym",
             "simplify phrase",
@@ -434,13 +440,20 @@ def tokenize_source_text(text: str, vocabulary_tokens: set[str] | None = None, p
     return tokens
 
 
-def classify_tokens(tokens: list[str], token_layers: dict[str, str], *, ignore_non_hanzi_unknowns: bool = False) -> dict:
+def classify_tokens(
+    tokens: list[str],
+    token_layers: dict[str, str],
+    *,
+    known_character_compound_characters: set[str] | None = None,
+    ignore_non_hanzi_unknowns: bool = False,
+) -> dict:
+    known_character_compound_characters = known_character_compound_characters or set()
     layer_counts = Counter()
     unknown = Counter()
     ignored_non_hanzi = Counter()
     counted_total = 0
     for token in tokens:
-        layer = token_layers.get(token)
+        layer = classify_token_layer(token, token_layers, known_character_compound_characters)
         if layer:
             counted_total += 1
             layer_counts[layer] += 1
@@ -466,12 +479,19 @@ def classify_tokens(tokens: list[str], token_layers: dict[str, str], *, ignore_n
     return result
 
 
-def unknown_clusters(tokens: list[str], token_layers: dict[str, str], *, min_cluster_size: int = 2) -> list[dict]:
+def unknown_clusters(
+    tokens: list[str],
+    token_layers: dict[str, str],
+    *,
+    known_character_compound_characters: set[str] | None = None,
+    min_cluster_size: int = 2,
+) -> list[dict]:
+    known_character_compound_characters = known_character_compound_characters or set()
     clusters = []
     current: list[str] = []
     start = 0
     for index, token in enumerate(tokens):
-        if token not in token_layers:
+        if not classify_token_layer(token, token_layers, known_character_compound_characters):
             if not current:
                 start = index
             current.append(token)
@@ -568,6 +588,8 @@ def profile_adaptation_vocabulary(
     known_path: str | Path = DEFAULT_KNOWN_WORDS,
     punctuation_path: str | Path = DEFAULT_PUNCTUATION,
     personal_known_words_path: str | Path | None = None,
+    known_character_compounds_path: str | Path | None = None,
+    known_character_compound_limit: int = DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT,
     general_fiction_pack: str | Path | None = None,
     genre_pack: str | Path | None = None,
     setting_pack: str | Path | None = None,
@@ -585,6 +607,8 @@ def profile_adaptation_vocabulary(
     vocabulary = load_layered_vocabulary(
         known_path,
         personal_known_words_path=personal_known_words_path,
+        known_character_compounds_path=known_character_compounds_path,
+        known_character_compound_limit=known_character_compound_limit,
         general_fiction_pack=general_fiction_pack,
         genre_pack=genre_pack,
         setting_pack=setting_pack,
@@ -597,6 +621,7 @@ def profile_adaptation_vocabulary(
     )
     punctuation = load_punctuation(punctuation_path)
     token_layers = vocabulary["token_layers"]
+    known_character_compound_characters = vocabulary.get("known_character_compound_characters", set())
     vocabulary_tokens = set(token_layers)
     unit_reports = []
     all_tokens: list[str] = []
@@ -609,8 +634,17 @@ def profile_adaptation_vocabulary(
         unit_id = path.stem.replace("_source", "")
         text = path.read_text(encoding="utf-8")
         tokens = tokenize_source_text(text, vocabulary_tokens, punctuation)
-        classified = classify_tokens(tokens, token_layers, ignore_non_hanzi_unknowns=ignore_non_hanzi_unknowns)
-        clusters = unknown_clusters(tokens, token_layers)
+        classified = classify_tokens(
+            tokens,
+            token_layers,
+            known_character_compound_characters=known_character_compound_characters,
+            ignore_non_hanzi_unknowns=ignore_non_hanzi_unknowns,
+        )
+        clusters = unknown_clusters(
+            tokens,
+            token_layers,
+            known_character_compound_characters=known_character_compound_characters,
+        )
         risks = sentence_length_risks(text, vocabulary_tokens, punctuation)
         max_cluster = max((cluster["length"] for cluster in clusters), default=0)
         classified.update(
@@ -628,7 +662,12 @@ def profile_adaptation_vocabulary(
         )
         unit_reports.append(classified)
         all_tokens.extend(tokens)
-        for token, count in Counter(token for token in tokens if token not in token_layers and (not ignore_non_hanzi_unknowns or HANZI_RE.search(token))).items():
+        for token, count in Counter(
+            token
+            for token in tokens
+            if not classify_token_layer(token, token_layers, known_character_compound_characters)
+            and (not ignore_non_hanzi_unknowns or HANZI_RE.search(token))
+        ).items():
             unknown_frequency[token] += count
             unknown_units[token].add(unit_id)
         for cluster in clusters:
@@ -636,14 +675,24 @@ def profile_adaptation_vocabulary(
         for risk in risks:
             all_sentence_risks.append({"unit_id": unit_id, **risk})
 
-    total_report = classify_tokens(all_tokens, token_layers, ignore_non_hanzi_unknowns=ignore_non_hanzi_unknowns)
+    total_report = classify_tokens(
+        all_tokens,
+        token_layers,
+        known_character_compound_characters=known_character_compound_characters,
+        ignore_non_hanzi_unknowns=ignore_non_hanzi_unknowns,
+    )
     total_report.update(
         {
-            "schema_version": 1,
+            "schema_version": 2,
             "generated_at": utc_now(),
             "adaptation_dir": str(root),
             "known_words_path": str(Path(known_path)),
             "personal_known_words_path": str(Path(personal_known_words_path)) if personal_known_words_path else None,
+            "known_character_compounds_path": (
+                str(Path(known_character_compounds_path)) if known_character_compounds_path else None
+            ),
+            "known_character_compound_limit": known_character_compound_limit,
+            "known_character_compound_character_count": len(known_character_compound_characters),
             "vocabulary_profile": vocabulary.get("vocabulary_profile", "public"),
             "learner_profile_name": vocabulary.get("learner_profile_name"),
             "target_readable_coverage_percent": target_readable_coverage_percent,

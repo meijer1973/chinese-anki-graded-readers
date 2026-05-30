@@ -10,7 +10,7 @@ Treat validation as mechanical and auditable. Near matches do not count. A token
 Before validating, state the vocabulary profile:
 
 - Public mode: core known words plus approved stretch/book/proper-noun layers only.
-- Marcel personalized mode: core known words plus `data/learner_profiles/marcel/personal_known_words.txt` plus approved stretch/book/proper-noun layers.
+- Marcel personalized mode: core known words plus `data/learner_profiles/marcel/personal_known_words.txt`, optional top-300 high-frequency character compounds, plus approved stretch/book/proper-noun layers.
 
 ## Chapter Validation
 
@@ -44,20 +44,25 @@ For layered reports, listed proper nouns count as the proper-noun layer and do n
 For Marcel personalized readers, pass the learner-profile layer:
 
 ```powershell
---personal-known data/learner_profiles/marcel/personal_known_words.txt
+--personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 300
 ```
+
+The `--known-character-compounds` flag defaults to `data/learner_profiles/marcel/high_frequency_characters.txt`. It is a conservative, auditable Marcel-specific layer: top 300 ranked characters now, with later increases made by changing only the limit.
 
 ## Parsing Contract
 
 - Load known words from `data/known_words.txt`.
+- In Marcel personalized mode, an optional derived layer may allow tokens made only from the top ranked characters in `data/learner_profiles/marcel/high_frequency_characters.txt`; start with `--known-character-compounds --known-character-compound-limit 300`.
 - Parse canonical story text as whitespace-separated tokens.
 - Strip allowlisted punctuation from tokens.
 - Count every non-empty remaining token.
 - Accidental unsegmented Chinese strings are unknown unless the whole string is an allowed token.
 - Produce JSON reports and a concise human-readable summary.
 - Count core known tokens, learner-profile personal-known tokens, general fiction stretch tokens, genre stretch tokens, setting stretch tokens, profession stretch tokens, book-specific stretch tokens, proper noun tokens, and forbidden unknown tokens.
+- Count high-frequency character-compound tokens separately from core, personal-known, stretch, proper nouns, and forbidden unknowns.
 - If a token appears in both core and a stretch pack, count it as core.
 - If a token appears in both personal-known and a stretch pack, count it as personal-known.
+- If a token is not in any exact word layer but every Hanzi character in it is within the enabled top-N ranked character set, count it as `high_frequency_character_compound`, not as an invisible unknown.
 - Pass validation only when forbidden unknowns are at or below the configured per-chapter budget.
 - Warn on too many new stretch words in one chapter, stretch words used only once, low core coverage, excessive stretch-token share, repeated phrase overuse, and narrow vocabulary.
 - Do not forgive proper nouns unless they are listed in `proper_nouns.txt`.

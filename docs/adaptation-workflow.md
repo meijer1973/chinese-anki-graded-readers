@@ -69,6 +69,8 @@ python scripts/profile_adaptation_vocabulary.py `
   --adaptation adaptations/<slug> `
   --known data/known_words.txt `
   --personal-known data/learner_profiles/marcel/personal_known_words.txt `
+  --known-character-compounds `
+  --known-character-compound-limit 300 `
   --general-fiction-pack data/stretch_packs/general_fiction_100.txt `
   --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt
 ```
@@ -106,7 +108,7 @@ For every source unit, stop at the lowest level that reaches the readability tar
 
 | Level | Operation |
 |---:|---|
-| 0 | classify proper nouns and personal-known words |
+| 0 | classify proper nouns, personal-known words, and enabled high-frequency character compounds |
 | 1 | approve high-value stretch or book-specific words |
 | 2 | replace hard word with known synonym |
 | 3 | simplify phrase |
@@ -175,6 +177,8 @@ python scripts/run_quality_gate.py `
   --manuscript manuscripts/<slug> `
   --known data/known_words.txt `
   --personal-known data/learner_profiles/marcel/personal_known_words.txt `
+  --known-character-compounds `
+  --known-character-compound-limit 300 `
   --require-source-fidelity
 ```
 

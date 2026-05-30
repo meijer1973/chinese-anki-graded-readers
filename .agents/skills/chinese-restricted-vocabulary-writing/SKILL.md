@@ -15,9 +15,10 @@ Write one chapter at a time. The canonical format is space-tokenized Chinese:
 
 - Choose and state the vocabulary profile before drafting:
   - Public mode = core known words plus approved stretch/book/proper-noun layers only.
-  - Marcel personalized mode = core known words plus `data/learner_profiles/marcel/personal_known_words.txt` plus approved stretch/book/proper-noun layers.
+  - Marcel personalized mode = core known words plus `data/learner_profiles/marcel/personal_known_words.txt`, optional top-300 high-frequency character compounds, plus approved stretch/book/proper-noun layers.
 - Read `data/known_words.txt`.
 - If the project uses Marcel personalized mode, read `data/learner_profiles/marcel/personal_known_words.txt` and count those words as the `personal_known` layer, not as stretch.
+- If Marcel personalized mode enables known-character compounds, use `data/learner_profiles/marcel/high_frequency_characters.txt` with limit 300 and keep those tokens separate as `high_frequency_character_compound`, not core or stretch.
 - Read the configured approved stretch packs, manuscript `book_specific_words.txt`, and `proper_nouns.txt` when present.
 - Read the manuscript `novel_bible.md`, `outline.md`, `characters.md`, and `continuity_log.md`.
 - Read `creative_preflight.md` when present. Preserve the chosen story shape, reader question, and variation budget.
@@ -33,7 +34,7 @@ For 林安 sequels, the vocabulary plan must also include case function, journal
 
 ## Drafting Rules
 
-- Use only exact tokens from core known words and approved vocabulary layers. In Marcel personalized mode, personal-known words are approved known words for that learner profile.
+- Use only exact tokens from core known words and approved vocabulary layers. In Marcel personalized mode, personal-known words and enabled high-frequency character compounds are approved known vocabulary for that learner profile.
 - Prefer approved vocabulary, but do not mangle natural sentences solely to force zero unknowns. Each chapter may keep up to 5 reported forbidden unknown tokens when they are useful, intentional, and not confusing.
 - Use punctuation freely from `data/punctuation_allowlist.txt`.
 - Use the known vocabulary actively and naturally.
@@ -66,7 +67,7 @@ After the first draft, revise only for story quality and vocabulary validity:
 - Find places where the same word is repeated too often.
 - Replace or rewrite with other allowed words where natural.
 - Add scene detail using allowed words only when it clarifies setting movement, motivation, conflict, or emotional change.
-- Keep every token inside core, personal-known when configured, or approved stretch layers.
+- Keep every token inside core, personal-known when configured, enabled high-frequency character compounds, or approved stretch layers.
 - Run vocabulary validation after the expansion pass.
 
 ## After Drafting
@@ -88,7 +89,7 @@ python scripts/validate_chapter.py --known data/known_words.txt --chapter manusc
 For Marcel personalized mode, also include:
 
 ```powershell
---personal-known data/learner_profiles/marcel/personal_known_words.txt
+--personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 300
 ```
 
 After each chapter, run vocabulary validation, repair forbidden unknowns that exceed the budget or weaken clarity, run vocabulary usage evidence, update `continuity_log.md`, update `stretch_word_exposure.md`, and check whether stretch words are being repeated enough to become learnable rather than decorative.

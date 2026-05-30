@@ -1,6 +1,6 @@
 # Chinese Graded-Reader Novel Generation
 
-This repo can support repeatable long-form Chinese fiction written with the active vocabulary policy: core known words plus optional learner-profile personal-known words and approved stretch layers.
+This repo can support repeatable long-form Chinese fiction written with the active vocabulary policy: core known words plus optional learner-profile personal-known words, optional learner-profile high-frequency character compounds, and approved stretch layers.
 
 Vocabulary validation is necessary, but it is not enough. A book that passes vocabulary validation but fails reader interest is a failed book.
 
@@ -62,7 +62,15 @@ $env:PYTHONIOENCODING='utf-8'
 python scripts/sync_personal_known_words.py --profile data/learner_profiles/marcel --core data/known_words.txt
 ```
 
-Do not merge personal-known words into `data/known_words.txt`. Validation reports count `personal_known_tokens` separately from `core_known_tokens` and stretch tokens.
+Marcel personalized mode may also use a derived high-frequency character-compound layer from:
+
+```text
+data/learner_profiles/marcel/high_frequency_characters.txt
+```
+
+Enable it with `--known-character-compounds --known-character-compound-limit 300`. This starts conservatively with the first 300 ranked characters. Later increases should be small and reviewed.
+
+Do not merge personal-known words or high-frequency character compounds into `data/known_words.txt`. Validation reports count `personal_known_tokens` and `high_frequency_character_compound_tokens` separately from `core_known_tokens` and stretch tokens.
 
 ## Manuscript Layout
 
@@ -97,7 +105,7 @@ The canonical chapter format is space-tokenized Chinese:
 我 看到 你 在 这里 。
 ```
 
-The validator ignores punctuation and whitespace, then checks every remaining story token against the active vocabulary policy. Core words, approved stretch words, book-specific words, and listed proper nouns are allowed. A chapter may also keep up to 5 forbidden unknown tokens when they improve natural prose or carry a necessary idea; those tokens remain counted, line-reported, and reviewable. Do not rely on Chinese segmentation after the fact.
+The validator ignores punctuation and whitespace, then checks every remaining story token against the active vocabulary policy. Core words, approved learner-profile layers, approved stretch words, book-specific words, and listed proper nouns are allowed. A chapter may also keep up to 5 forbidden unknown tokens when they improve natural prose or carry a necessary idea; those tokens remain counted, line-reported, and reviewable. Do not rely on Chinese segmentation after the fact.
 
 ## Vocabulary Layers
 
@@ -105,6 +113,7 @@ The default strict mode uses only `data/known_words.txt`. The richer controlled 
 
 - core known words: `data/known_words.txt`
 - learner-profile personal-known words: `data/learner_profiles/marcel/personal_known_words.txt`, enabled with `--personal-known` only for personalized readers
+- learner-profile high-frequency character compounds: `data/learner_profiles/marcel/high_frequency_characters.txt`, enabled with `--known-character-compounds --known-character-compound-limit 300` only for personalized readers
 - general fiction stretch words: `data/stretch_packs/general_fiction_100.txt`
 - genre stretch words: `data/stretch_packs/low_fantasy_150.txt`
 - setting stretch words: `data/stretch_packs/shanghai_setting_150.txt`
@@ -115,7 +124,7 @@ The default strict mode uses only `data/known_words.txt`. The richer controlled 
 - manuscript `book_specific_words.txt`
 - manuscript `proper_nouns.txt`
 
-The rule is not random leakage. Personal-known words are recognized words for a named learner profile, not new learning targets. Stretch words are approved learning targets. Proper nouns belong in `proper_nouns.txt` and do not count against the unknown-token budget. Each chapter may keep up to 5 forbidden unknown tokens, but the budget is breathing room, not a target. If a word appears in both core and another layer, the validator counts it as core. If a word appears in both personal-known and stretch, it counts as personal-known.
+The rule is not random leakage. Personal-known words and high-frequency character compounds are recognized vocabulary for a named learner profile, not public core and not new stretch learning targets. Stretch words are approved learning targets. Proper nouns belong in `proper_nouns.txt` and do not count against the unknown-token budget. Each chapter may keep up to 5 forbidden unknown tokens, but the budget is breathing room, not a target. If a word appears in both core and another layer, the validator counts it as core. If a word appears in both personal-known and stretch, it counts as personal-known.
 
 For the 林安 series, read `series/an-lin/series_bible.md`, `series/an-lin/character_registry.md`, `series/an-lin/chronology.md`, `series/an-lin/mechanism_registry.md`, `series/an-lin/open_threads.md`, `series/an-lin/recurring_locations.md`, `series/an-lin/recurring_objects.md`, `series/an-lin/sequel_constraints.md`, and `series/an-lin/series_update_log.md` before planning. 林安 is the journalist/crime-reporter protagonist in that continuity; do not reset her profession or ignore `manuscripts/shanghai-rain-gate-crime/`.
 
@@ -358,20 +367,20 @@ python scripts/generate_reports.py --manuscript manuscripts/<slug> --known data/
 
 ## Complete Marcel-Mode Command Set
 
-Use the same `--personal-known` option consistently from chapter validation through EPUB export:
+Use the same `--personal-known` and known-character-compound options consistently from chapter validation through EPUB export:
 
 ```powershell
 $personal = "data/learner_profiles/marcel/personal_known_words.txt"
 
-python scripts/validate_chapter.py --known data/known_words.txt --personal-known $personal --chapter manuscripts/<slug>/chapters/chapter_01.zh-tok.txt --out manuscripts/<slug>/chapters/chapter_01.validation.json --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
+python scripts/validate_chapter.py --known data/known_words.txt --personal-known $personal --known-character-compounds --known-character-compound-limit 300 --chapter manuscripts/<slug>/chapters/chapter_01.zh-tok.txt --out manuscripts/<slug>/chapters/chapter_01.validation.json --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 
-python scripts/validate_book.py --known data/known_words.txt --personal-known $personal --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
+python scripts/validate_book.py --known data/known_words.txt --personal-known $personal --known-character-compounds --known-character-compound-limit 300 --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 
-python scripts/generate_reports.py --manuscript manuscripts/<slug> --known data/known_words.txt --personal-known $personal --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
+python scripts/generate_reports.py --manuscript manuscripts/<slug> --known data/known_words.txt --personal-known $personal --known-character-compounds --known-character-compound-limit 300 --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 
-python scripts/run_quality_gate.py --manuscript manuscripts/<slug> --known data/known_words.txt --personal-known $personal --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
+python scripts/run_quality_gate.py --manuscript manuscripts/<slug> --known data/known_words.txt --personal-known $personal --known-character-compounds --known-character-compound-limit 300 --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 
-python scripts/build_epub.py --manuscript manuscripts/<slug> --title "<title>" --out manuscripts/<slug>/epub/<slug>.epub --report manuscripts/<slug>/epub/build_report.json --personal-known $personal --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
+python scripts/build_epub.py --manuscript manuscripts/<slug> --title "<title>" --out manuscripts/<slug>/epub/<slug>.epub --report manuscripts/<slug>/epub/build_report.json --personal-known $personal --known-character-compounds --known-character-compound-limit 300 --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 ```
 
 ## Build EPUB
@@ -461,7 +470,7 @@ The final Codex response for a generated book must include:
 - chapter count
 - total word-token count
 - unique used words
-- vocabulary profile and personal-known token count, when used
+- vocabulary profile, personal-known token count, and high-frequency character-compound token count when used
 - unknown-token count
 - forbidden unknown tokens over the configured per-chapter limit
 - validation command run

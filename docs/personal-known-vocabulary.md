@@ -1,6 +1,6 @@
 # Personal-Known Vocabulary
 
-Personal-known words are a learner-profile layer for words Marcel already recognizes with low cognitive load, even when they are outside the current frequency-core list.
+Personal-known words are a learner-profile layer for words Marcel already recognizes with low cognitive load, even when they are outside the current frequency-core list. Marcel personalized mode also has an auditable high-frequency character-compound layer for tokens made entirely from the first 300 ranked known characters.
 
 Do not merge these words into `data/known_words.txt`. That file remains the first N ranked frequency entries from `word list chinese.txt`. Personal-known words answer a different question: "Can this learner read this word comfortably?"
 
@@ -10,13 +10,14 @@ Use these categories separately:
 
 - core frequency known: `data/known_words.txt`
 - personal known: `data/learner_profiles/marcel/personal_known_words.txt`
+- high-frequency character compounds: `data/learner_profiles/marcel/high_frequency_characters.txt` with `--known-character-compound-limit 300`
 - approved stretch packs: genre, setting, profession, business, journalism, and other reviewed packs
 - book-specific words: `manuscripts/<slug>/book_specific_words.txt`
 - proper nouns: `manuscripts/<slug>/proper_nouns.txt`
 
 Public graded-reader mode uses core frequency words plus approved stretch words.
 
-Marcel personalized mode uses core frequency words plus Marcel personal-known words plus approved stretch words.
+Marcel personalized mode uses core frequency words plus Marcel personal-known words, the optional top-300 high-frequency character-compound layer, plus approved stretch words.
 
 ## Marcel Profile Files
 
@@ -29,9 +30,10 @@ data/learner_profiles/marcel/
   personal_known_words.metadata.json
   personal_known_exclusions.txt
   personal_known_audit.json
+  high_frequency_characters.txt
 ```
 
-Hand-edit `personal_known_words.tsv`. The validator reads the generated `.txt`.
+Hand-edit `personal_known_words.tsv`. The validator reads the generated `.txt`. The ranked character file is a separate source; keep the default compound limit at 300 until a reviewed increase.
 
 Required TSV columns:
 
@@ -82,33 +84,35 @@ Get-Content -LiteralPath data/learner_profiles/marcel/personal_known_audit.json 
 
 ## Validation
 
-Use public mode by omitting `--personal-known`.
+Use public mode by omitting `--personal-known` and `--known-character-compounds`.
 
 Use Marcel personalized mode by adding:
 
 ```powershell
---personal-known data/learner_profiles/marcel/personal_known_words.txt
+--personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 300
 ```
 
 Example:
 
 ```powershell
-python scripts/validate_book.py --known data/known_words.txt --personal-known data/learner_profiles/marcel/personal_known_words.txt --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
+python scripts/validate_book.py --known data/known_words.txt --personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 300 --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 ```
 
 The report distinguishes:
 
 - `core_known_tokens`
 - `personal_known_tokens`
+- `high_frequency_character_compound_tokens`
 - stretch-layer tokens
 - `proper_noun_tokens`
 - `forbidden_unknown_tokens`
 
-Personal-known words are allowed, but they are not stretch words and do not count as core frequency coverage.
+Personal-known words and high-frequency character compounds are allowed in Marcel personalized mode, but they are not stretch words and do not count as core frequency coverage.
 
 ## Policy
 
 - Do not use rare personal-known words merely because they are available.
+- Do not raise the high-frequency character-compound limit above 300 without a reviewed step.
 - Prefer high-utility words that make the story clearer, more natural, or more emotionally precise.
 - Keep `learning` words out of the personal-known allowlist until they are genuinely comfortable.
 - For public graded readers, personal-known words do not count as generally known.

@@ -42,6 +42,7 @@ class StretchVocabularyTests(unittest.TestCase):
         self.journalism = self.root / "journalism_crime.txt"
         self.urban = self.root / "urban_objects.txt"
         self.personal = self.root / "personal_known_words.txt"
+        self.high_frequency_characters = self.root / "high_frequency_characters.txt"
         self.general.write_text("沉默\n我\n", encoding="utf-8")
         self.genre.write_text("魔法\n", encoding="utf-8")
         self.setting.write_text("上海\n", encoding="utf-8")
@@ -49,6 +50,7 @@ class StretchVocabularyTests(unittest.TestCase):
         self.journalism.write_text("采访\n", encoding="utf-8")
         self.urban.write_text("地图\n", encoding="utf-8")
         self.personal.write_text("犹豫\n沉默\n", encoding="utf-8")
+        self.high_frequency_characters.write_text("旧\n城\n门\n我\n看\n你\n", encoding="utf-8")
         self.proper = self.root / "proper_nouns.txt"
         self.proper.write_text("林安\n", encoding="utf-8")
 
@@ -123,6 +125,43 @@ class StretchVocabularyTests(unittest.TestCase):
         self.assertTrue(report["valid"])
         self.assertEqual(report["personal_known_tokens"], 0)
         self.assertEqual(report["forbidden_unknown_tokens"], 1)
+
+    def test_known_character_compound_layer_is_audited_separately(self) -> None:
+        chapters = self.chapters_dir("旧城门 看 你 。\n")
+        report = validate_book(
+            chapters,
+            self.known,
+            known_character_compounds_path=self.high_frequency_characters,
+            known_character_compound_limit=3,
+        )
+        self.assertTrue(report["valid"])
+        self.assertEqual(report["vocabulary_profile"], "personalized")
+        self.assertEqual(report["forbidden_unknown_tokens"], 0)
+        self.assertEqual(report["high_frequency_character_compound_tokens"], 1)
+        self.assertEqual(report["unique_high_frequency_character_compounds_used"], 1)
+        self.assertEqual(report["high_frequency_character_compound_frequency"], {"旧城门": 1})
+
+    def test_known_character_compound_limit_is_enforced(self) -> None:
+        chapters = self.chapters_dir("旧城门 看 你 。\n")
+        report = validate_book(
+            chapters,
+            self.known,
+            known_character_compounds_path=self.high_frequency_characters,
+            known_character_compound_limit=2,
+        )
+        self.assertTrue(report["valid"])
+        self.assertEqual(report["high_frequency_character_compound_tokens"], 0)
+        self.assertEqual(report["forbidden_unknown_tokens"], 1)
+
+    def test_known_character_compound_layer_does_not_override_exact_core_words(self) -> None:
+        vocab = load_layered_vocabulary(
+            self.known,
+            known_character_compounds_path=self.high_frequency_characters,
+        )
+        report = validate_text("我 看 你 。", load_known_words(self.known), vocabulary=vocab)
+        self.assertEqual(vocab["token_layers"]["看"], "core_known")
+        self.assertEqual(report["core_known_tokens"], 3)
+        self.assertEqual(report["high_frequency_character_compound_tokens"], 0)
 
     def test_same_token_in_core_and_personal_counts_as_core(self) -> None:
         personal = self.root / "personal_core_overlap.txt"

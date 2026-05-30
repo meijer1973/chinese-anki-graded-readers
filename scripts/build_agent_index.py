@@ -29,7 +29,7 @@ def utc_now() -> str:
 
 def git_paths() -> list[str]:
     result = subprocess.run(
-        ["git", "ls-files", "--cached", "--others", "--exclude-standard"],
+        ["git", "ls-files", "--cached"],
         cwd=ROOT,
         text=True,
         capture_output=True,
