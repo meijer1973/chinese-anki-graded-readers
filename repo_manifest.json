@@ -8,7 +8,7 @@
     "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
     "purpose": "Chinese Anki deck tooling plus controlled-vocabulary Chinese graded-reader fiction generation."
   },
-  "freshness_rule": "Refresh RESEARCH_AGENT_MAP.md, AGENT_GITHUB_ENTRY.md, reports/url-index.md, and reports/github-agent-index.md whenever repository paths, workflows, scripts, skills, agents, or manuscript conventions change.",
+  "freshness_rule": "Refresh RESEARCH_AGENT_MAP.md, AGENT_GITHUB_ENTRY.md, reports/url-index.md, and reports/github-agent-index.md whenever repository paths, workflows, scripts, skills, agents, or manuscript conventions change. Commit and push accepted tracked work to origin before calling it done unless the user explicitly says not to or Git/validation blocks publication.",
   "human_entry_points": [
     "README.md",
     "AGENTS.md",
@@ -171,7 +171,8 @@
     "sync_marcel_personal_known_words": "python scripts/sync_personal_known_words.py --profile data/learner_profiles/marcel --core data/known_words.txt",
     "validate_sample_book": "python scripts/validate_book.py --known data/known_words.txt --chapters manuscripts/sample-known-words/chapters --out manuscripts/sample-known-words/vocabulary_report.json",
     "check_series_memory_update": "python scripts/check_series_memory_update.py --manuscript manuscripts/<slug> --series-dir series/an-lin",
-    "generate_agent_indexes": "python scripts/build_agent_index.py"
+    "generate_agent_indexes": "python scripts/build_agent_index.py",
+    "publish_completed_work": "git status --short; git add -A; git commit -m \"<concise change summary>\"; git push origin <current-branch>"
   },
     "generated_or_local_surfaces": [
     "anki_chinese_import.tsv",

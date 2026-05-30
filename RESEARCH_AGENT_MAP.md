@@ -4,7 +4,9 @@ Agent-executable access and traversal specification for the `chinese-anki-graded
 
 This file is for remote research and coding agents. Every path below is intended to be fetchable through raw GitHub URL construction or readable through a GitHub connector.
 
-Freshness rule: refresh this map, `AGENT_GITHUB_ENTRY.md`, `repo_manifest.json`, `reports/url-index.md`, and `reports/github-agent-index.md` whenever repository paths, workflows, scripts, generated reports, skills, agents, or manuscript conventions change. Off-site agents work from GitHub, so unpushed map changes are not done.
+Freshness rule: refresh this map, `AGENT_GITHUB_ENTRY.md`, `repo_manifest.json`, `reports/url-index.md`, and `reports/github-agent-index.md` whenever repository paths, workflows, scripts, generated reports, skills, agents, or manuscript conventions change. Off-site agents work from GitHub, so unpushed workflow or map changes are not done.
+
+Remote publication rule: after completing accepted work that changes tracked files, commit the reviewable change set and push the active branch to `origin` unless the user explicitly says not to, validation failed, the work is intentionally left exploratory, or Git credentials/divergence block the push.
 
 ## Minimal Research Guidance
 

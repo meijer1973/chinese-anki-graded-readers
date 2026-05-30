@@ -69,6 +69,7 @@ https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/AG
 - Use `reports/url-index.md` when an external agent cannot construct URLs from a base path.
 - Use GitHub search mainly for discovery, then confirm through exact paths.
 - Refresh the reports with `python scripts/build_agent_index.py` after path or workflow changes.
+- After accepted tracked work is complete, commit and push the active branch to `origin` unless the user explicitly asks not to or Git/validation blocks publication.
 
 ## Common Mistakes
 
@@ -78,3 +79,4 @@ https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/AG
 - Forgetting to pass stretch packs, `book_specific_words.txt`, and `proper_nouns.txt` when validating layered manuscripts.
 - Treating unknown-token allowance as a target. It is only breathing room.
 - Planning a new 林安 sequel before the previous accepted story has updated `series/an-lin/series_update_log.md`.
+- Leaving completed tracked work only in a local checkout. Remote writer agents read GitHub, so pushed commits are the handoff.

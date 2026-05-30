@@ -397,3 +397,25 @@ If a script fails on imports, install the missing package in the active Python e
 ## Local State Notes
 
 This checkout is a Git repository with `main` tracking `origin/main`. Use normal `git status`, `git diff`, and small reviewable commits. Generated/local artifacts are ignored by `.gitignore`.
+
+## Remote Agent Publishing Policy
+
+Remote writer and research agents often work from GitHub, not this local checkout. After completing any accepted work that changes tracked repository files, commit the reviewable change set and push the active branch to `origin` before reporting the task as done.
+
+Use this as the default finish step:
+
+```powershell
+git status --short
+git add -A
+git commit -m "<concise change summary>"
+git push origin <current-branch>
+```
+
+Exceptions:
+
+- The user explicitly asks not to commit or push.
+- The work is exploratory, rejected, or intentionally left uncommitted.
+- Validation has failed and the change should not be published yet.
+- The remote has diverged, credentials fail, or pushing would require resolving an external Git state; in that case, report the blocker and exact local commit status.
+
+For GitHub-facing workflow, map, script, skill, manuscript convention, or agent-prompt changes, unpushed changes are not done because remote agents will keep reading stale instructions.

@@ -70,6 +70,7 @@ Common surfaces:
 - Do not add words to `data/known_words.txt` by hand unless the word-list promotion workflow is the task.
 - Do not overwrite existing manuscripts unless explicitly instructed.
 - Do not plan a new 林安 sequel before checking that the previous accepted story updated `series/an-lin/series_update_log.md`.
+- Do not leave accepted tracked work only in a local checkout; commit and push to `origin` unless the user explicitly says not to or Git/validation blocks publication.
 
 ## Research Question
 

@@ -36,3 +36,4 @@ Refresh these files when paths, scripts, workflows, skills, agents, reports, or 
 - Treat `adaptations/*/source_private/` and `adaptations/*/source_units/` as private/local unless rights explicitly allow publishing.
 - Confirm file existence with `reports/github-agent-index.md`.
 - Use `reports/url-index.md` as a single-fetch entry point when raw URL construction is unavailable.
+- Commit and push accepted tracked work to `origin` before calling it done, unless the user explicitly asks not to or Git/validation blocks publication.
