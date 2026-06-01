@@ -82,6 +82,17 @@ This file is the concise accepted-story timeline. Put mechanism rules in `mechan
 - Arc movement: 白策 directly argues that managed truth is protection; 林安 defines the counter-rule that journalism may protect witnesses but must not hide criminal method, power, or responsibility.
 - Outcome: 林安 and 何青 publish ordinary evidence while protecting vulnerable names and locations. 陈雨 keeps gathering facts that do not yet fit formal reports. The next active clue is 镜街.
 
+## Book 9: 上海镜街案
+
+- Repository path: `manuscripts/shanghai-mirror-street-case/`
+- Status: ninth series manuscript imported from the writer agent, locally repaired into canonical vocabulary layers, revalidated, and rebuilt as EPUB.
+- Core continuity: 林安 remains the journalist protagonist. 陈雨 remains the procedural police contact. 何青 is now an active editorial partner in source protection and public-interest framing.
+- Recurring support: 许白, 老赵, 阿洛, and 白策 / 白先生 keep their continuity-linked functions.
+- Fantasy mechanism: 镜街 / 第二面 turns public voices, bought accounts, edited images, and managed records into a false public face. It extends 旧城门's name/record pressure into face/public-identity pressure.
+- Case frame: 清镜公司 and 明面传媒 use reputation contracts, accounts, comments, edited video, door-access records, mirror-linked devices, and witness intimidation to frame 方舟 and silence 罗雨 after 谢宁 tries to stop the project.
+- Arc movement: 白策 argues more openly that managed truth is protection; 林安 answers that protected truth must still answer to sources, evidence, editors, law, and public responsibility.
+- Outcome: 清镜公司's visible operators are exposed through ordinary evidence while 罗雨 and 方小雨's privacy are protected. The next active clue is 明日报 / tomorrow's newspaper.
+
 ## Open Series Direction
 
-The next story should not restart 林安 from zero. It should treat her as someone who has already faced the rain-ticket case, the spirit-lamp case, the shadow-bridge case, the midnight-ringtone case, the still-water list case, the lost-property locker case, the silent-archive case, and the old-city-gate case. She now knows that a normal clue may have a hidden cost, that 旧城门 sits behind earlier record-mouth mechanisms, and that 镜街 is the next active arc clue.
+The next story should not restart 林安 from zero. It should treat her as someone who has already faced the rain-ticket case, the spirit-lamp case, the shadow-bridge case, the midnight-ringtone case, the still-water list case, the lost-property locker case, the silent-archive case, the old-city-gate case, and the mirror-street case. She now knows that a normal clue may have a hidden cost, that 旧城门 sits behind earlier record-mouth mechanisms, that 镜街 can attack a person's public face, and that 明日报 is the next active arc clue.

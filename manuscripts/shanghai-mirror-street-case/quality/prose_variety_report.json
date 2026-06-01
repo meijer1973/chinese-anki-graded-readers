@@ -1,0 +1,414 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-01T09:21:49Z",
+  "chapters_path": "manuscripts\\shanghai-mirror-street-case\\chapters",
+  "chapter_count": 18,
+  "sentence_count": 800,
+  "total_tokens": 7014,
+  "dialogue_tag_warning_count": 10,
+  "phrase_warning_count": 8,
+  "sentence_frame_warning_count": 5,
+  "top_dialogue_tags": [
+    {
+      "frame": "林安 说",
+      "count": 14
+    },
+    {
+      "frame": "她 说",
+      "count": 13
+    },
+    {
+      "frame": "陈雨 说",
+      "count": 11
+    },
+    {
+      "frame": "人 说",
+      "count": 6
+    },
+    {
+      "frame": "他 说",
+      "count": 4
+    },
+    {
+      "frame": "低声 说",
+      "count": 4
+    },
+    {
+      "frame": "又 说",
+      "count": 3
+    },
+    {
+      "frame": "老赵 说",
+      "count": 3
+    },
+    {
+      "frame": "记者 说",
+      "count": 3
+    },
+    {
+      "frame": "我 说",
+      "count": 2
+    },
+    {
+      "frame": "来 说",
+      "count": 2
+    },
+    {
+      "frame": "都 说",
+      "count": 2
+    },
+    {
+      "frame": "方舟 说",
+      "count": 2
+    },
+    {
+      "frame": "他们 说",
+      "count": 2
+    },
+    {
+      "frame": "罗雨 说",
+      "count": 2
+    },
+    {
+      "frame": "许白 说",
+      "count": 2
+    },
+    {
+      "frame": "法务 说",
+      "count": 2
+    },
+    {
+      "frame": "自己 说",
+      "count": 1
+    },
+    {
+      "frame": "怎么 说",
+      "count": 1
+    },
+    {
+      "frame": "就 说",
+      "count": 1
+    },
+    {
+      "frame": "先 说",
+      "count": 1
+    },
+    {
+      "frame": "电话 说",
+      "count": 1
+    },
+    {
+      "frame": "没 说",
+      "count": 1
+    },
+    {
+      "frame": "也 说",
+      "count": 1
+    },
+    {
+      "frame": "网上 说",
+      "count": 1
+    }
+  ],
+  "repeated_dialogue_tags": [
+    {
+      "frame": "林安 说",
+      "count": 14
+    },
+    {
+      "frame": "她 说",
+      "count": 13
+    },
+    {
+      "frame": "陈雨 说",
+      "count": 11
+    }
+  ],
+  "repeated_phrase_frames": [
+    {
+      "phrase": "一 张",
+      "token_count": 2,
+      "count": 22
+    },
+    {
+      "phrase": "一 个",
+      "token_count": 2,
+      "count": 18
+    },
+    {
+      "phrase": "的 人",
+      "token_count": 2,
+      "count": 16
+    },
+    {
+      "phrase": "有 一",
+      "token_count": 2,
+      "count": 15
+    },
+    {
+      "phrase": "的 脸",
+      "token_count": 2,
+      "count": 14
+    },
+    {
+      "phrase": "林安 说",
+      "token_count": 2,
+      "count": 14
+    },
+    {
+      "phrase": "第二 面",
+      "token_count": 2,
+      "count": 14
+    },
+    {
+      "phrase": "站 在",
+      "token_count": 2,
+      "count": 13
+    },
+    {
+      "phrase": "她 说",
+      "token_count": 2,
+      "count": 13
+    },
+    {
+      "phrase": "有 人",
+      "token_count": 2,
+      "count": 13
+    },
+    {
+      "phrase": "林安 问",
+      "token_count": 2,
+      "count": 13
+    },
+    {
+      "phrase": "人 的",
+      "token_count": 2,
+      "count": 13
+    },
+    {
+      "phrase": "看 着",
+      "token_count": 2,
+      "count": 12
+    },
+    {
+      "phrase": "镜子 里",
+      "token_count": 2,
+      "count": 12
+    },
+    {
+      "phrase": "面 镜子",
+      "token_count": 2,
+      "count": 12
+    },
+    {
+      "phrase": "很 多",
+      "token_count": 2,
+      "count": 11
+    },
+    {
+      "phrase": "林安 没有",
+      "token_count": 2,
+      "count": 11
+    },
+    {
+      "phrase": "林安 看",
+      "token_count": 2,
+      "count": 11
+    },
+    {
+      "phrase": "里 的",
+      "token_count": 2,
+      "count": 11
+    },
+    {
+      "phrase": "清镜公司 的",
+      "token_count": 2,
+      "count": 11
+    },
+    {
+      "phrase": "陈雨 说",
+      "token_count": 2,
+      "count": 11
+    },
+    {
+      "phrase": "的 名字",
+      "token_count": 2,
+      "count": 11
+    },
+    {
+      "phrase": "一 条",
+      "token_count": 2,
+      "count": 10
+    },
+    {
+      "phrase": "一个 人",
+      "token_count": 2,
+      "count": 9
+    },
+    {
+      "phrase": "上 有",
+      "token_count": 2,
+      "count": 9
+    },
+    {
+      "phrase": "说 我",
+      "token_count": 2,
+      "count": 9
+    },
+    {
+      "phrase": "变 成",
+      "token_count": 2,
+      "count": 9
+    },
+    {
+      "phrase": "的 证据",
+      "token_count": 2,
+      "count": 9
+    },
+    {
+      "phrase": "不 写",
+      "token_count": 2,
+      "count": 9
+    },
+    {
+      "phrase": "罗雨 的",
+      "token_count": 2,
+      "count": 9
+    },
+    {
+      "phrase": "这 不是",
+      "token_count": 2,
+      "count": 8
+    },
+    {
+      "phrase": "那 张",
+      "token_count": 2,
+      "count": 8
+    },
+    {
+      "phrase": "林安 把",
+      "token_count": 2,
+      "count": 8
+    }
+  ],
+  "repeated_sentence_openings": [
+    {
+      "frame": "林安 看 着",
+      "count": 5
+    }
+  ],
+  "repeated_sentence_endings": [],
+  "known_risk_frames": [
+    {
+      "frame": "看 着",
+      "count": 12
+    },
+    {
+      "frame": "想 到",
+      "count": 5
+    }
+  ],
+  "warnings": [
+    {
+      "type": "repeated_dialogue_tags",
+      "message": "Visible X 说 repetition should trigger a prose-variety polish pass.",
+      "items": [
+        {
+          "frame": "林安 说",
+          "count": 14
+        },
+        {
+          "frame": "她 说",
+          "count": 13
+        },
+        {
+          "frame": "陈雨 说",
+          "count": 11
+        }
+      ]
+    },
+    {
+      "type": "repeated_phrase_frames",
+      "message": "High-count repeated phrase frames should be reviewed for mechanical rhythm.",
+      "items": [
+        {
+          "phrase": "一 张",
+          "token_count": 2,
+          "count": 22
+        },
+        {
+          "phrase": "一 个",
+          "token_count": 2,
+          "count": 18
+        },
+        {
+          "phrase": "的 人",
+          "token_count": 2,
+          "count": 16
+        },
+        {
+          "phrase": "有 一",
+          "token_count": 2,
+          "count": 15
+        },
+        {
+          "phrase": "的 脸",
+          "token_count": 2,
+          "count": 14
+        },
+        {
+          "phrase": "林安 说",
+          "token_count": 2,
+          "count": 14
+        },
+        {
+          "phrase": "第二 面",
+          "token_count": 2,
+          "count": 14
+        },
+        {
+          "phrase": "站 在",
+          "token_count": 2,
+          "count": 13
+        },
+        {
+          "phrase": "她 说",
+          "token_count": 2,
+          "count": 13
+        },
+        {
+          "phrase": "有 人",
+          "token_count": 2,
+          "count": 13
+        }
+      ]
+    },
+    {
+      "type": "repeated_sentence_frames",
+      "message": "Repeated sentence openings or endings can make chapters feel formulaic.",
+      "openings": [
+        {
+          "frame": "林安 看 着",
+          "count": 5
+        }
+      ],
+      "endings": []
+    },
+    {
+      "type": "known_risk_frames",
+      "message": "Common flat frames appear often enough to require review.",
+      "items": [
+        {
+          "frame": "看 着",
+          "count": 12
+        },
+        {
+          "frame": "想 到",
+          "count": 5
+        }
+      ]
+    }
+  ],
+  "style_revision_required": true,
+  "counts_are_revision_evidence_not_final_literary_judgment": true
+}

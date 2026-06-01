@@ -94,11 +94,20 @@ Use this file for durable fantasy rules, costs, limits, and links between mechan
 ## 镜街
 
 - First major use: seeded by `manuscripts/shanghai-old-city-gate-case/`
-- Function: next active arc clue; not yet defined.
-- Cost or risk: unknown.
+- Function: established in `manuscripts/shanghai-mirror-street-case/` as the face/public-identity branch of the hidden record system. The first mirror reflects the person; the second mirror reflects the public face created by repeated voices, bought accounts, rumor, edited images, and managed records.
+- Cost or risk: a person can lose credibility, public identity, and the ability to be believed. A witness can become unusable if their second face is released.
+- Publicly explainable evidence: reputation contracts, accounts, payment records, door-access logs, vehicle records, server files, witness testimony, recordings, edited video, and seized mirror equipment.
+- Private / fantasy-only clue: second-mirror reflections and false public faces point toward ordinary evidence but cannot be published as proof.
+- Current status: no longer only a clue. It extends 旧城门's name/record pressure into public face and reputation pressure.
+
+## 明日报
+
+- First major use: hooked by `manuscripts/shanghai-mirror-street-case/`.
+- Function: next active arc clue; appears to point toward tomorrow's newspaper or future-facing public record.
+- Cost or risk: unknown, but it should pressure publication timing, headlines, responsibility, and who gets harmed by a public story.
 - Publicly explainable evidence: must be established through a concrete case before any mechanism explanation.
-- Private / fantasy-only clue: "那条街照不出真人 / 镜街未开."
-- Current status: open thread for the next story.
+- Private / fantasy-only clue: a future-paper / tomorrow-headline behavior implied by the ending of `上海镜街案`.
+- Current status: open thread for the next story. Do not explain it through lore before it has a case function.
 
 ## Update Rule
 

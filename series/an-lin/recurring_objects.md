@@ -19,6 +19,9 @@ For fantasy-rule detail, costs, limits, and current mechanism status, use `mecha
 - 白页
 - 记录口
 - 旧城门
+- 镜街
+- 第二面
+- 明日报
 
 ## Approved Recurring Evidence Objects
 

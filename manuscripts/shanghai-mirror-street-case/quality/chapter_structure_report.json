@@ -1,0 +1,14 @@
+{
+  "chapter_count": 18,
+  "word_tokens_total": 7014,
+  "mean": 389.6666666666667,
+  "median": 382.0,
+  "min": 322,
+  "max": 522,
+  "chapters_under_100": 0,
+  "chapters_under_150": 0,
+  "chapters_under_250": 0,
+  "chapters_under_300": 0,
+  "status": "PASS",
+  "note": "No microchapter pattern; all chapters are above 300 word tokens."
+}

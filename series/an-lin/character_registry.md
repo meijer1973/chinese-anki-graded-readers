@@ -71,8 +71,15 @@ Avoid making every important person a teacher, doctor, student, or generic polic
 - 梁叔: old-street security guard from `上海旧城门案`; disappears into the gate but leaves logs and evidence.
 - 顾澄: 青门公司负责人 and visible company antagonist from `上海旧城门案`.
 - 马林: coerced false confessor from `上海旧城门案`, pressured through his child.
+- 方舟: public suspect from `上海镜街案` whose false public face is manufactured through edited image, comment, and account pressure.
+- 方小雨: 方舟's dead sister from `上海镜街案`; her privacy becomes an ethical limit for 林安's final article.
+- 谢宁: dead 清镜公司 employee from `上海镜街案` who tried to stop the 镜街 / 第二面 project.
+- 罗雨: missing witness and former 清镜 employee from `上海镜街案`; protected as a source after the case.
+- 许澄: 清镜公司副总 and visible corporate antagonist from `上海镜街案`.
 
 ## Relationship Movement
 
 - 何青: by `上海旧城门案`, she is not only newsroom pressure; she actively helps protect sources, shape publishable evidence, and hold the ethical line between protection and concealment.
 - 陈雨: by `上海旧城门案`, he trusts 林安 enough to preserve procedural evidence while acknowledging some private/fantasy-linked facts do not yet fit formal reports.
+- By `上海镜街案`, 林安 and 何青 function as a clearer ethical publication team: selection is unavoidable, but it must answer to sources, evidence, law, editors, and public responsibility.
+- By `上海镜街案`, 陈雨 continues to cooperate through ordinary evidence and timing while keeping fantasy-linked facts outside formal reports.

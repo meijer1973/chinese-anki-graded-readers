@@ -18,7 +18,7 @@ This repository maintains a Chinese vocabulary Anki deck and a controlled-vocabu
 - Run quality review with `scripts/run_quality_gate.py`.
 - Build EPUB files with `scripts/build_epub.py` after validation and lead approval.
 
-The 林安 series currently includes `manuscripts/shanghai-rain-gate-crime/` (`上海雨票案`), `manuscripts/shanghai-spirit-lamp-case/` (`上海灵灯案`), `manuscripts/shanghai-shadow-bridge-case/` (`上海影子桥案`), `manuscripts/shanghai-midnight-ringtone-case/` (`上海零点铃声案`), `manuscripts/shanghai-still-water-list-case-revised/` (`上海静水名单案`), `manuscripts/shanghai-lost-property-locker-case/` (`上海失物柜案`), `manuscripts/shanghai-silent-archive-case/` (`上海无声档案案`), and `manuscripts/shanghai-old-city-gate-case/` (`上海旧城门案`). Series continuity for its journalist protagonist lives in `series/an-lin/`.
+The 林安 series currently includes `manuscripts/shanghai-rain-gate-crime/` (`上海雨票案`), `manuscripts/shanghai-spirit-lamp-case/` (`上海灵灯案`), `manuscripts/shanghai-shadow-bridge-case/` (`上海影子桥案`), `manuscripts/shanghai-midnight-ringtone-case/` (`上海零点铃声案`), `manuscripts/shanghai-still-water-list-case-revised/` (`上海静水名单案`), `manuscripts/shanghai-lost-property-locker-case/` (`上海失物柜案`), `manuscripts/shanghai-silent-archive-case/` (`上海无声档案案`), `manuscripts/shanghai-old-city-gate-case/` (`上海旧城门案`), and `manuscripts/shanghai-mirror-street-case/` (`上海镜街案`). Series continuity for its journalist protagonist lives in `series/an-lin/`.
 
 Standalone nonfiction includes `manuscripts/small-shop-survival-economics/` (`小店怎么活下来`), a public-mode business/economics graded reader about how a small Shanghai shop survives.
 

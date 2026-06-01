@@ -71,3 +71,20 @@ Append one entry after each accepted 林安 story updates the living series memo
   - `series/an-lin/series_update_log.md`
 - Rationale: record Book 8 as the accepted 旧城门 continuation, preserve the protection-versus-control ethical turn, and carry forward 镜街 as the next active clue.
 - Next-story warning: do not restart 旧城门 as unopened; the next book should build from 镜街 and vary the case structure.
+
+## 2026-06-01 - shanghai-mirror-street-case
+
+- Status: POST_STORY_SERIES_MEMORY_UPDATE
+- Manuscript path: `manuscripts/shanghai-mirror-street-case/`
+- Trigger: local repository validation PASS; lead quality decision PASS; EPUB build success.
+- Files changed:
+  - `series/an-lin/chronology.md`
+  - `series/an-lin/character_registry.md`
+  - `series/an-lin/mechanism_registry.md`
+  - `series/an-lin/open_threads.md`
+  - `series/an-lin/series_bible.md`
+  - `series/an-lin/sequel_constraints.md`
+  - `series/an-lin/recurring_objects.md`
+  - `series/an-lin/series_update_log.md`
+- Rationale: record Book 9 as the accepted 镜街 continuation, preserve the public-face / reputation branch of the record-mouth system, and carry forward 明日报 as the next active clue.
+- Next-story warning: do not restart 旧城门 or 镜街 from zero; the next book should build from 明日报 and vary the case structure away from reputation-contract and edited-face pressure.

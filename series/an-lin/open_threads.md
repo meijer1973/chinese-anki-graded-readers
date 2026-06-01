@@ -18,17 +18,17 @@ Use this file for unresolved series questions and future story seeds. Close or r
 - Story use: background pressure for the larger arc; future stories may reference it as an active mechanism.
 - Constraint: do not repeat the same old-street/property-record structure unless the variation budget names a strong reason.
 
-### 镜街
+### 明日报
 
-- Status: active next-story clue.
-- Current question: what does it mean that "那条街照不出真人" and "镜街未开"?
-- Story use: can create a case about public image, reflection, edited identity, rumor, or a person whose public face and evidence diverge.
-- Constraint: reveal through ordinary reporting pressure first; do not begin with a mythology explanation.
+- Status: active next-story clue after `上海镜街案`.
+- Current question: what does tomorrow's newspaper show, who can alter a public story before it happens, and what cost does publication timing carry?
+- Story use: can create a case about headlines, predicted public judgment, future-facing records, edited responsibility, or an article that harms someone if published too early.
+- Constraint: reveal through ordinary newsroom and case pressure first; do not begin with a mythology explanation.
 
 ### Record Mouth Pattern
 
 - Status: established but not fully explained.
-- Current question: why do rain tickets, spirit lamps, shadow bridges, still water, lost-property lockers, and silent archives all behave like record mouths?
+- Current question: why do rain tickets, spirit lamps, shadow bridges, still water, lost-property lockers, silent archives, old gates, and mirror streets all behave like record mouths?
 - Story use: let 林安 recognize patterns faster without becoming all-knowing.
 - Constraint: every mechanism still needs its own local case function and cost.
 
@@ -58,6 +58,7 @@ Use this file for unresolved series questions and future story seeds. Close or r
 - `上海失物柜案`: 方敏 and 吴梅 are protected as sources; 海安旧物公司 pressure is exposed enough for the case outcome.
 - `上海无声档案案`: 沈望's erased name is restored; 清页公司's data-cleaning pressure is exposed through publishable evidence.
 - `上海旧城门案`: 秦海's death and 青门公司's record/property manipulation are exposed through publishable evidence; 小梅 and vulnerable old-street witnesses remain protected; 旧城门 is opened enough to point toward 镜街.
+- `上海镜街案`: 镜街 is established as the public-face branch of the record system; 清镜公司 and 明面传媒's visible operators are exposed through ordinary evidence while 罗雨 and 方小雨's privacy are protected; 明日报 becomes the next active clue.
 
 ## Update Rule
 

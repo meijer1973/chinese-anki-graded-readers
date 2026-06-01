@@ -49,6 +49,8 @@ These terms are approved for recurring series use when they are also included in
 - 门印
 - 门线
 - 镜街
+- 第二面
+- 明日报
 - 记录口
 - 黑雾
 - 白光
@@ -57,9 +59,9 @@ Use a small number of fantasy terms repeatedly. Do not add a new magic system fo
 
 ## Current Arc Pressure
 
-By `上海旧城门案`, 林安 has seen that several impossible places act like record mouths: rain tickets, spirit lamps, shadow bridges, still water, the lost-property locker, silent archives, and now the old city gate. The larger pressure is no longer only one company or one case. 白先生 / 白策 and 旧档会 try to manage what the city remembers, what becomes public, and which witnesses are allowed to keep their own records.
+By `上海镜街案`, 林安 has seen that several impossible places act like record mouths: rain tickets, spirit lamps, shadow bridges, still water, the lost-property locker, silent archives, the old city gate, and now mirror street. The larger pressure is no longer only one company or one case. 白先生 / 白策 and 旧档会 try to manage what the city remembers, what becomes public, which witnesses are allowed to keep their own records, and what public face a person is allowed to have.
 
-Future stories should keep the case concrete, but they may let this hidden record system become clearer a little at a time. `旧城门` is now an active mechanism, and `镜街` is the next visible clue. Handle both through grounded cases rather than sudden mythology dumps.
+Future stories should keep the case concrete, but they may let this hidden record system become clearer a little at a time. `旧城门` and `镜街` are now established mechanisms, and `明日报` is the next visible clue. Handle it through grounded newsroom/case pressure rather than sudden mythology dumps.
 
 ## Continuity Rule
 
