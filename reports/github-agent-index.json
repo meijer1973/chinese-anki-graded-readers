@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-03T12:57:18Z",
+  "generated_at": "2026-06-03T13:19:31Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 1086,
+  "file_count": 1087,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -424,6 +424,11 @@
       "path": "ensure_single_character_notes.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/ensure_single_character_notes.py",
       "category": "scripts"
+    },
+    {
+      "path": "high frequency characters.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/high frequency characters.txt",
+      "category": "root"
     },
     {
       "path": "manuscripts/README.md",

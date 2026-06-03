@@ -118,6 +118,7 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/machine-readable-repository.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/personal-known-vocabulary.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/ensure_single_character_notes.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/high frequency characters.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/README.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/china-energy-policy-hormuz-long-read/README.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/china-energy-policy-hormuz-long-read/book_specific_words.txt
