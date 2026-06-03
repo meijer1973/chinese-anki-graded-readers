@@ -1,0 +1,39 @@
+{
+  "epub_path": "manuscripts\\china-energy-policy-hormuz-long-read\\epub\\china-energy-policy-hormuz-long-read.epub",
+  "valid": true,
+  "chapter_count": 33,
+  "total_tokens": 3945,
+  "unique_token_count": 751,
+  "core_known_tokens": 2547,
+  "vocabulary_profile": "public",
+  "learner_profile_name": null,
+  "personal_known_tokens": 0,
+  "personal_known_word_count": 0,
+  "unique_personal_known_words_used": 0,
+  "known_character_compounds_path": null,
+  "known_character_compound_limit": 300,
+  "known_character_compound_character_count": 0,
+  "high_frequency_character_compound_tokens": 0,
+  "unique_high_frequency_character_compounds_used": 0,
+  "unknown_token_count": 0,
+  "forbidden_unknown_tokens_over_limit": 0,
+  "max_forbidden_unknown_tokens_per_chapter": 5,
+  "quality_approval": {
+    "approved": true,
+    "decision_path": "manuscripts\\china-energy-policy-hormuz-long-read\\quality\\lead_quality_decision.md",
+    "decision": "PASS",
+    "reason": "Approved by lead quality decision."
+  },
+  "built_at": "2026-06-03T12:53:56Z",
+  "epub_structure": {
+    "path": "manuscripts\\china-energy-policy-hormuz-long-read\\epub\\china-energy-policy-hormuz-long-read.epub",
+    "exists": true,
+    "first_entry": "mimetype",
+    "mimetype": "application/epub+zip",
+    "has_container": true,
+    "has_opf": true,
+    "has_nav": true,
+    "has_title_page": true,
+    "chapter_count": 33
+  }
+}

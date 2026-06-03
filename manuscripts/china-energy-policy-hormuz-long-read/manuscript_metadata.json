@@ -1,0 +1,16 @@
+{
+  "slug": "china-energy-policy-hormuz-long-read",
+  "title": "中国能源为什么要变",
+  "subtitle": "从煤和石油到新能源与霍尔木兹危机",
+  "author": "OpenAI ChatGPT",
+  "language": "zh-CN",
+  "created_at": "2026-06-03T00:00:00+00:00",
+  "chapter_count": 33,
+  "total_space_token_count": 4739,
+  "validator_total_token_count": 3945,
+  "unique_validator_token_count": 751,
+  "unique_used_words_excluding_punctuation_and_numeric": 746,
+  "topic": "China energy policy, energy security, and the Strait of Hormuz shock",
+  "mode": "standalone nonfiction economic-news graded reader",
+  "epub_display_policy": "token spaces removed for readability; canonical source remains chapters/*.zh-tok.txt"
+}

@@ -20,7 +20,7 @@ This repository maintains a Chinese vocabulary Anki deck and a controlled-vocabu
 
 The 林安 series currently includes `manuscripts/shanghai-rain-gate-crime/` (`上海雨票案`), `manuscripts/shanghai-spirit-lamp-case/` (`上海灵灯案`), `manuscripts/shanghai-shadow-bridge-case/` (`上海影子桥案`), `manuscripts/shanghai-midnight-ringtone-case/` (`上海零点铃声案`), `manuscripts/shanghai-still-water-list-case-revised/` (`上海静水名单案`), `manuscripts/shanghai-lost-property-locker-case/` (`上海失物柜案`), `manuscripts/shanghai-silent-archive-case/` (`上海无声档案案`), `manuscripts/shanghai-old-city-gate-case/` (`上海旧城门案`), and `manuscripts/shanghai-mirror-street-case/` (`上海镜街案`). Series continuity for its journalist protagonist lives in `series/an-lin/`.
 
-Standalone nonfiction includes `manuscripts/small-shop-survival-economics/` (`小店怎么活下来`), a public-mode business/economics graded reader about how a small Shanghai shop survives.
+Standalone nonfiction includes `manuscripts/small-shop-survival-economics/` (`小店怎么活下来`), a public-mode business/economics graded reader about how a small Shanghai shop survives, and `manuscripts/china-energy-policy-hormuz-long-read/` (`中国能源为什么要变`), a public-mode energy-policy long-read about energy security and the Strait of Hormuz.
 
 ## Machine-Readable Entry Points
 

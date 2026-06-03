@@ -34,6 +34,7 @@ Read that file first for repository access, exact paths, raw URLs, and task rout
 | How is Anki new-card order kept mixed? | `docs/anki-integration.md`, `scripts/audit_anki_card_distribution.py`, `scripts/schedule_anki_learning_order.py` |
 | What is the first series manuscript? | `manuscripts/shanghai-rain-gate-crime/` |
 | What is the latest accepted 林安 manuscript? | `manuscripts/shanghai-mirror-street-case/` |
+| What is the energy-policy long-read? | `manuscripts/china-energy-policy-hormuz-long-read/` |
 | What is the current standalone story trial? | `manuscripts/shanghai-rain-ticket/` |
 
 ## Access Layer

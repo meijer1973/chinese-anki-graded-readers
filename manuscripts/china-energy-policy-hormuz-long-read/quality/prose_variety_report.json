@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-03T12:53:46Z",
+  "chapters_path": "manuscripts\\china-energy-policy-hormuz-long-read\\chapters",
+  "chapter_count": 33,
+  "sentence_count": 344,
+  "total_tokens": 3945,
+  "dialogue_tag_warning_count": 10,
+  "phrase_warning_count": 8,
+  "sentence_frame_warning_count": 5,
+  "top_dialogue_tags": [
+    {
+      "frame": "在 说",
+      "count": 2
+    },
+    {
+      "frame": "文章 说",
+      "count": 1
+    },
+    {
+      "frame": "还 说",
+      "count": 1
+    },
+    {
+      "frame": "只是 说",
+      "count": 1
+    }
+  ],
+  "repeated_dialogue_tags": [],
+  "repeated_phrase_frames": [
+    {
+      "phrase": "能源 政策",
+      "token_count": 2,
+      "count": 17
+    },
+    {
+      "phrase": "新 能源",
+      "token_count": 2,
+      "count": 17
+    },
+    {
+      "phrase": "不 只是",
+      "token_count": 2,
+      "count": 12
+    },
+    {
+      "phrase": "能源 安全",
+      "token_count": 2,
+      "count": 11
+    },
+    {
+      "phrase": "液化 天然气",
+      "token_count": 2,
+      "count": 10
+    },
+    {
+      "phrase": "也 有",
+      "token_count": 2,
+      "count": 10
+    },
+    {
+      "phrase": "中国 能源",
+      "token_count": 2,
+      "count": 10
+    },
+    {
+      "phrase": "很 快",
+      "token_count": 2,
+      "count": 9
+    },
+    {
+      "phrase": "也 是",
+      "token_count": 2,
+      "count": 9
+    },
+    {
+      "phrase": "这 就",
+      "token_count": 2,
+      "count": 9
+    },
+    {
+      "phrase": "中国 的",
+      "token_count": 2,
+      "count": 9
+    },
+    {
+      "phrase": "受 阻",
+      "token_count": 2,
+      "count": 8
+    },
+    {
+      "phrase": "价格 上升",
+      "token_count": 2,
+      "count": 8
+    },
+    {
+      "phrase": "不 是",
+      "token_count": 2,
+      "count": 8
+    },
+    {
+      "phrase": "就 是",
+      "token_count": 2,
+      "count": 8
+    },
+    {
+      "phrase": "它 要",
+      "token_count": 2,
+      "count": 8
+    },
+    {
+      "phrase": "中国 能源 政策",
+      "token_count": 3,
+      "count": 8
+    }
+  ],
+  "repeated_sentence_openings": [
+    {
+      "frame": "这 就 是",
+      "count": 7
+    }
+  ],
+  "repeated_sentence_endings": [],
+  "known_risk_frames": [],
+  "warnings": [
+    {
+      "type": "repeated_phrase_frames",
+      "message": "High-count repeated phrase frames should be reviewed for mechanical rhythm.",
+      "items": [
+        {
+          "phrase": "能源 政策",
+          "token_count": 2,
+          "count": 17
+        },
+        {
+          "phrase": "新 能源",
+          "token_count": 2,
+          "count": 17
+        },
+        {
+          "phrase": "不 只是",
+          "token_count": 2,
+          "count": 12
+        },
+        {
+          "phrase": "能源 安全",
+          "token_count": 2,
+          "count": 11
+        },
+        {
+          "phrase": "液化 天然气",
+          "token_count": 2,
+          "count": 10
+        },
+        {
+          "phrase": "也 有",
+          "token_count": 2,
+          "count": 10
+        },
+        {
+          "phrase": "中国 能源",
+          "token_count": 2,
+          "count": 10
+        },
+        {
+          "phrase": "很 快",
+          "token_count": 2,
+          "count": 9
+        },
+        {
+          "phrase": "也 是",
+          "token_count": 2,
+          "count": 9
+        },
+        {
+          "phrase": "这 就",
+          "token_count": 2,
+          "count": 9
+        }
+      ]
+    },
+    {
+      "type": "repeated_sentence_frames",
+      "message": "Repeated sentence openings or endings can make chapters feel formulaic.",
+      "openings": [
+        {
+          "frame": "这 就 是",
+          "count": 7
+        }
+      ],
+      "endings": []
+    }
+  ],
+  "style_revision_required": true,
+  "counts_are_revision_evidence_not_final_literary_judgment": true
+}

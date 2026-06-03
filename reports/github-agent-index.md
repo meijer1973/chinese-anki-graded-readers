@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki And Graded Readers
 
-Generated: 2026-06-01T09:27:12Z
+Generated: 2026-06-03T12:57:18Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 967
+Files indexed: 1086
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -172,9 +172,128 @@ Count: 1
 
 ## manuscripts
 
-Count: 831
+Count: 950
 
 - manuscripts/README.md
+- manuscripts/china-energy-policy-hormuz-long-read/README.md
+- manuscripts/china-energy-policy-hormuz-long-read/book_specific_words.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_01.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_01.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_02.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_02.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_03.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_03.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_04.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_04.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_05.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_05.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_06.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_06.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_07.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_07.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_08.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_08.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_09.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_09.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_10.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_10.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_11.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_11.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_12.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_12.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_13.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_13.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_14.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_14.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_15.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_15.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_16.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_16.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_17.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_17.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_18.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_18.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_19.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_19.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_20.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_20.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_21.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_21.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_22.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_22.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_23.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_23.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_24.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_24.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_25.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_25.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_26.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_26.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_27.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_27.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_28.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_28.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_29.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_29.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_30.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_30.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_31.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_31.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_32.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_32.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_33.validation.json
+- manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_33.zh-tok.txt
+- manuscripts/china-energy-policy-hormuz-long-read/china-energy-policy-hormuz-long-read-package-report.md
+- manuscripts/china-energy-policy-hormuz-long-read/continuity_log.md
+- manuscripts/china-energy-policy-hormuz-long-read/creative_preflight.md
+- manuscripts/china-energy-policy-hormuz-long-read/epub/build_report.json
+- manuscripts/china-energy-policy-hormuz-long-read/epub/china-energy-policy-hormuz-long-read.epub
+- manuscripts/china-energy-policy-hormuz-long-read/manuscript_metadata.json
+- manuscripts/china-energy-policy-hormuz-long-read/novel_bible.md
+- manuscripts/china-energy-policy-hormuz-long-read/outline.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_01_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_02_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_03_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_04_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_05_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_06_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_07_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_08_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_09_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_10_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_11_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_12_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_13_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_14_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_15_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_16_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_17_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_18_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_19_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_20_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_21_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_22_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_23_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_24_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_25_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_26_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_27_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_28_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_29_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_30_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_31_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_32_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/planning/chapter_33_vocab_plan.md
+- manuscripts/china-energy-policy-hormuz-long-read/proper_nouns.txt
+- manuscripts/china-energy-policy-hormuz-long-read/quality/lead_quality_decision.md
+- manuscripts/china-energy-policy-hormuz-long-read/quality/literary_critic_report.md
+- manuscripts/china-energy-policy-hormuz-long-read/quality/normal_reader_report.md
+- manuscripts/china-energy-policy-hormuz-long-read/quality/prose_variety_report.json
+- manuscripts/china-energy-policy-hormuz-long-read/quality/quality_gate_summary.json
+- manuscripts/china-energy-policy-hormuz-long-read/quality/repeated_phrase_report.json
+- manuscripts/china-energy-policy-hormuz-long-read/quality/vocabulary_usage_report.json
+- manuscripts/china-energy-policy-hormuz-long-read/source_notes.md
+- manuscripts/china-energy-policy-hormuz-long-read/vocabulary_report.json
 - manuscripts/sample-known-words/chapters/chapter_01.validation.json
 - manuscripts/sample-known-words/chapters/chapter_01.zh-tok.txt
 - manuscripts/sample-known-words/characters.md

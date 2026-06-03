@@ -77,6 +77,8 @@
     "manuscripts/shanghai-mirror-street-case/quality/quality_gate_summary.json",
     "manuscripts/small-shop-survival-economics/vocabulary_report.json",
     "manuscripts/small-shop-survival-economics/quality/quality_gate_summary.json",
+    "manuscripts/china-energy-policy-hormuz-long-read/vocabulary_report.json",
+    "manuscripts/china-energy-policy-hormuz-long-read/quality/quality_gate_summary.json",
     "manuscripts/shanghai-rain-ticket/vocabulary_report.json",
     "manuscripts/shanghai-rain-ticket/quality/quality_gate_summary.json",
     "reports/github-agent-index.md",
@@ -160,6 +162,7 @@
       "manuscripts/shanghai-old-city-gate-case",
       "manuscripts/shanghai-mirror-street-case",
       "manuscripts/small-shop-survival-economics",
+      "manuscripts/china-energy-policy-hormuz-long-read",
       "manuscripts/shanghai-rain-ticket"
     ],
     "tests": [

@@ -1,0 +1,1265 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-06-03T12:53:46Z",
+  "chapters_path": "manuscripts\\china-energy-policy-hormuz-long-read\\chapters",
+  "min_count": 3,
+  "repeated_phrases": [
+    {
+      "phrase": "能源 政策",
+      "token_count": 2,
+      "count": 17,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_13.zh-tok.txt",
+        "chapter_22.zh-tok.txt",
+        "chapter_23.zh-tok.txt",
+        "chapter_25.zh-tok.txt",
+        "chapter_26.zh-tok.txt",
+        "chapter_30.zh-tok.txt",
+        "chapter_32.zh-tok.txt",
+        "chapter_33.zh-tok.txt"
+      ],
+      "warning_level": "high"
+    },
+    {
+      "phrase": "新 能源",
+      "token_count": 2,
+      "count": 17,
+      "chapters": [
+        "chapter_04.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_21.zh-tok.txt",
+        "chapter_22.zh-tok.txt",
+        "chapter_23.zh-tok.txt",
+        "chapter_24.zh-tok.txt",
+        "chapter_28.zh-tok.txt",
+        "chapter_31.zh-tok.txt",
+        "chapter_32.zh-tok.txt",
+        "chapter_33.zh-tok.txt"
+      ],
+      "warning_level": "high"
+    },
+    {
+      "phrase": "不 只是",
+      "token_count": 2,
+      "count": 12,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_13.zh-tok.txt",
+        "chapter_15.zh-tok.txt",
+        "chapter_17.zh-tok.txt",
+        "chapter_24.zh-tok.txt",
+        "chapter_33.zh-tok.txt"
+      ],
+      "warning_level": "high"
+    },
+    {
+      "phrase": "能源 安全",
+      "token_count": 2,
+      "count": 11,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_24.zh-tok.txt",
+        "chapter_26.zh-tok.txt",
+        "chapter_28.zh-tok.txt",
+        "chapter_33.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "液化 天然气",
+      "token_count": 2,
+      "count": 10,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_02.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_14.zh-tok.txt",
+        "chapter_18.zh-tok.txt",
+        "chapter_25.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "也 有",
+      "token_count": 2,
+      "count": 10,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_13.zh-tok.txt",
+        "chapter_22.zh-tok.txt",
+        "chapter_23.zh-tok.txt",
+        "chapter_32.zh-tok.txt",
+        "chapter_33.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "中国 能源",
+      "token_count": 2,
+      "count": 10,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_22.zh-tok.txt",
+        "chapter_23.zh-tok.txt",
+        "chapter_26.zh-tok.txt",
+        "chapter_32.zh-tok.txt",
+        "chapter_33.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "很 快",
+      "token_count": 2,
+      "count": 9,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_14.zh-tok.txt",
+        "chapter_17.zh-tok.txt",
+        "chapter_23.zh-tok.txt",
+        "chapter_28.zh-tok.txt",
+        "chapter_33.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "也 是",
+      "token_count": 2,
+      "count": 9,
+      "chapters": [
+        "chapter_04.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_13.zh-tok.txt",
+        "chapter_22.zh-tok.txt",
+        "chapter_23.zh-tok.txt",
+        "chapter_24.zh-tok.txt",
+        "chapter_33.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "这 就",
+      "token_count": 2,
+      "count": 9,
+      "chapters": [
+        "chapter_04.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_15.zh-tok.txt",
+        "chapter_17.zh-tok.txt",
+        "chapter_20.zh-tok.txt",
+        "chapter_24.zh-tok.txt",
+        "chapter_26.zh-tok.txt",
+        "chapter_28.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "中国 的",
+      "token_count": 2,
+      "count": 9,
+      "chapters": [
+        "chapter_07.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_13.zh-tok.txt",
+        "chapter_18.zh-tok.txt",
+        "chapter_19.zh-tok.txt",
+        "chapter_21.zh-tok.txt",
+        "chapter_23.zh-tok.txt",
+        "chapter_25.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "受 阻",
+      "token_count": 2,
+      "count": 8,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_14.zh-tok.txt",
+        "chapter_16.zh-tok.txt",
+        "chapter_18.zh-tok.txt",
+        "chapter_23.zh-tok.txt",
+        "chapter_28.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "价格 上升",
+      "token_count": 2,
+      "count": 8,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_15.zh-tok.txt",
+        "chapter_16.zh-tok.txt",
+        "chapter_25.zh-tok.txt",
+        "chapter_33.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "不 是",
+      "token_count": 2,
+      "count": 8,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_16.zh-tok.txt",
+        "chapter_18.zh-tok.txt",
+        "chapter_29.zh-tok.txt",
+        "chapter_33.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "就 是",
+      "token_count": 2,
+      "count": 8,
+      "chapters": [
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_15.zh-tok.txt",
+        "chapter_17.zh-tok.txt",
+        "chapter_24.zh-tok.txt",
+        "chapter_26.zh-tok.txt",
+        "chapter_28.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "它 要",
+      "token_count": 2,
+      "count": 8,
+      "chapters": [
+        "chapter_25.zh-tok.txt",
+        "chapter_29.zh-tok.txt",
+        "chapter_31.zh-tok.txt",
+        "chapter_32.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "就 会",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_20.zh-tok.txt",
+        "chapter_28.zh-tok.txt",
+        "chapter_29.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "也 会",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_05.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_13.zh-tok.txt",
+        "chapter_14.zh-tok.txt",
+        "chapter_16.zh-tok.txt",
+        "chapter_22.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "这 是",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_08.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_20.zh-tok.txt",
+        "chapter_30.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "也 要",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_08.zh-tok.txt",
+        "chapter_15.zh-tok.txt",
+        "chapter_20.zh-tok.txt",
+        "chapter_25.zh-tok.txt",
+        "chapter_29.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "成本 上升",
+      "token_count": 2,
+      "count": 7,
+      "chapters": [
+        "chapter_14.zh-tok.txt",
+        "chapter_19.zh-tok.txt",
+        "chapter_25.zh-tok.txt",
+        "chapter_29.zh-tok.txt",
+        "chapter_30.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "听 起来",
+      "token_count": 2,
+      "count": 6,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_15.zh-tok.txt",
+        "chapter_17.zh-tok.txt",
+        "chapter_21.zh-tok.txt",
+        "chapter_31.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "条 线",
+      "token_count": 2,
+      "count": 6,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_22.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "石油 和",
+      "token_count": 2,
+      "count": 6,
+      "chapters": [
+        "chapter_05.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_14.zh-tok.txt",
+        "chapter_15.zh-tok.txt",
+        "chapter_23.zh-tok.txt",
+        "chapter_24.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "一个 国家",
+      "token_count": 2,
+      "count": 6,
+      "chapters": [
+        "chapter_05.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_16.zh-tok.txt",
+        "chapter_24.zh-tok.txt",
+        "chapter_28.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "政策 的",
+      "token_count": 2,
+      "count": 6,
+      "chapters": [
+        "chapter_07.zh-tok.txt",
+        "chapter_21.zh-tok.txt",
+        "chapter_22.zh-tok.txt",
+        "chapter_30.zh-tok.txt",
+        "chapter_33.zh-tok.txt"
+      ],
+      "warning_level": "medium"
+    },
+    {
+      "phrase": "霍尔木兹 海峡",
+      "token_count": 2,
+      "count": 5,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_14.zh-tok.txt",
+        "chapter_30.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "很 重要",
+      "token_count": 2,
+      "count": 5,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_12.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "的 问题",
+      "token_count": 2,
+      "count": 5,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_15.zh-tok.txt",
+        "chapter_16.zh-tok.txt",
+        "chapter_21.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "它 是",
+      "token_count": 2,
+      "count": 5,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_23.zh-tok.txt",
+        "chapter_31.zh-tok.txt",
+        "chapter_32.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "是 一个",
+      "token_count": 2,
+      "count": 5,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_14.zh-tok.txt",
+        "chapter_16.zh-tok.txt",
+        "chapter_31.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "霍尔木兹 危机",
+      "token_count": 2,
+      "count": 5,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_27.zh-tok.txt",
+        "chapter_32.zh-tok.txt",
+        "chapter_33.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "风电 光伏",
+      "token_count": 2,
+      "count": 5,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_21.zh-tok.txt",
+        "chapter_22.zh-tok.txt",
+        "chapter_31.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "都 会",
+      "token_count": 2,
+      "count": 5,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_16.zh-tok.txt",
+        "chapter_19.zh-tok.txt",
+        "chapter_22.zh-tok.txt",
+        "chapter_33.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "出 问题",
+      "token_count": 2,
+      "count": 5,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_16.zh-tok.txt",
+        "chapter_20.zh-tok.txt",
+        "chapter_24.zh-tok.txt",
+        "chapter_25.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "的 能源",
+      "token_count": 2,
+      "count": 5,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_13.zh-tok.txt",
+        "chapter_25.zh-tok.txt",
+        "chapter_27.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "一个 很",
+      "token_count": 2,
+      "count": 5,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_14.zh-tok.txt",
+        "chapter_16.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "的 时候",
+      "token_count": 2,
+      "count": 5,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_21.zh-tok.txt",
+        "chapter_31.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "不 一定",
+      "token_count": 2,
+      "count": 5,
+      "chapters": [
+        "chapter_04.zh-tok.txt",
+        "chapter_17.zh-tok.txt",
+        "chapter_20.zh-tok.txt",
+        "chapter_23.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "不 会",
+      "token_count": 2,
+      "count": 5,
+      "chapters": [
+        "chapter_04.zh-tok.txt",
+        "chapter_14.zh-tok.txt",
+        "chapter_18.zh-tok.txt",
+        "chapter_20.zh-tok.txt",
+        "chapter_30.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "电网 储能",
+      "token_count": 2,
+      "count": 5,
+      "chapters": [
+        "chapter_04.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_21.zh-tok.txt",
+        "chapter_24.zh-tok.txt",
+        "chapter_26.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "价格 也",
+      "token_count": 2,
+      "count": 5,
+      "chapters": [
+        "chapter_05.zh-tok.txt",
+        "chapter_14.zh-tok.txt",
+        "chapter_15.zh-tok.txt",
+        "chapter_19.zh-tok.txt",
+        "chapter_28.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "是 能源",
+      "token_count": 2,
+      "count": 5,
+      "chapters": [
+        "chapter_05.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_15.zh-tok.txt",
+        "chapter_20.zh-tok.txt",
+        "chapter_26.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "水电 核电",
+      "token_count": 2,
+      "count": 5,
+      "chapters": [
+        "chapter_08.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_21.zh-tok.txt",
+        "chapter_26.zh-tok.txt",
+        "chapter_31.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "能源 危机",
+      "token_count": 2,
+      "count": 5,
+      "chapters": [
+        "chapter_15.zh-tok.txt",
+        "chapter_17.zh-tok.txt",
+        "chapter_23.zh-tok.txt",
+        "chapter_29.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "会 感到",
+      "token_count": 2,
+      "count": 5,
+      "chapters": [
+        "chapter_16.zh-tok.txt",
+        "chapter_19.zh-tok.txt",
+        "chapter_30.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "篇 文章",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_15.zh-tok.txt",
+        "chapter_27.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "海峡 受",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_14.zh-tok.txt",
+        "chapter_23.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "的 一",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_13.zh-tok.txt",
+        "chapter_20.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "要 看",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_28.zh-tok.txt",
+        "chapter_29.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "看 中国",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_21.zh-tok.txt",
+        "chapter_32.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "低碳 转型",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_31.zh-tok.txt",
+        "chapter_33.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "能源 不是",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_22.zh-tok.txt",
+        "chapter_25.zh-tok.txt",
+        "chapter_30.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "也 可以",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_09.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "里 的",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_04.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_17.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "中国 有",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_18.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "也 需要",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_10.zh-tok.txt",
+        "chapter_16.zh-tok.txt",
+        "chapter_26.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "哪种 能源",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_27.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "还 要",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_24.zh-tok.txt",
+        "chapter_33.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "所以 中国",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_19.zh-tok.txt",
+        "chapter_33.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "能源 系统",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_20.zh-tok.txt",
+        "chapter_33.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "风电 和",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_04.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "和 光伏",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_04.zh-tok.txt",
+        "chapter_08.zh-tok.txt",
+        "chapter_09.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "也 不",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_04.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_23.zh-tok.txt",
+        "chapter_30.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "就 不",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_31.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "成本 也",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_04.zh-tok.txt",
+        "chapter_05.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_08.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "会 上升",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_05.zh-tok.txt",
+        "chapter_14.zh-tok.txt",
+        "chapter_19.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "的 重要",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_06.zh-tok.txt",
+        "chapter_14.zh-tok.txt",
+        "chapter_17.zh-tok.txt",
+        "chapter_22.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "很 大",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_07.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_23.zh-tok.txt",
+        "chapter_25.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "的 依靠",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_07.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_24.zh-tok.txt",
+        "chapter_33.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "越 多",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_09.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_28.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "电力 市场",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_10.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_26.zh-tok.txt",
+        "chapter_31.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "更 难",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_11.zh-tok.txt",
+        "chapter_19.zh-tok.txt",
+        "chapter_23.zh-tok.txt",
+        "chapter_26.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "也 可能",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_15.zh-tok.txt",
+        "chapter_19.zh-tok.txt",
+        "chapter_25.zh-tok.txt",
+        "chapter_28.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "压力 如果",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_19.zh-tok.txt",
+        "chapter_25.zh-tok.txt",
+        "chapter_30.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "就 要",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_23.zh-tok.txt",
+        "chapter_29.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "是 一",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_28.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "一 层",
+      "token_count": 2,
+      "count": 4,
+      "chapters": [
+        "chapter_28.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "重要 的",
+      "token_count": 2,
+      "count": 3,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_12.zh-tok.txt",
+        "chapter_14.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "的 是",
+      "token_count": 2,
+      "count": 3,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_14.zh-tok.txt",
+        "chapter_26.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "都 是",
+      "token_count": 2,
+      "count": 3,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_25.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "那 篇",
+      "token_count": 2,
+      "count": 3,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_15.zh-tok.txt",
+        "chapter_27.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "文章 的",
+      "token_count": 2,
+      "count": 3,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_15.zh-tok.txt",
+        "chapter_27.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "危机 让",
+      "token_count": 2,
+      "count": 3,
+      "chapters": [
+        "chapter_01.zh-tok.txt",
+        "chapter_32.zh-tok.txt",
+        "chapter_33.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "它 可以",
+      "token_count": 2,
+      "count": 3,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_09.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "石油 天然气",
+      "token_count": 2,
+      "count": 3,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_06.zh-tok.txt",
+        "chapter_22.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "因为 中国",
+      "token_count": 2,
+      "count": 3,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_18.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "电力 和",
+      "token_count": 2,
+      "count": 3,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_03.zh-tok.txt",
+        "chapter_21.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "所以 能源",
+      "token_count": 2,
+      "count": 3,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_13.zh-tok.txt",
+        "chapter_29.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "政策 不是",
+      "token_count": 2,
+      "count": 3,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_07.zh-tok.txt",
+        "chapter_32.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "不是 只",
+      "token_count": 2,
+      "count": 3,
+      "chapters": [
+        "chapter_02.zh-tok.txt",
+        "chapter_22.zh-tok.txt",
+        "chapter_27.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "这些 都",
+      "token_count": 2,
+      "count": 3,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_25.zh-tok.txt",
+        "chapter_30.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "很 难",
+      "token_count": 2,
+      "count": 3,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_20.zh-tok.txt",
+        "chapter_25.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "有 一个",
+      "token_count": 2,
+      "count": 3,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_09.zh-tok.txt",
+        "chapter_32.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "先 保证",
+      "token_count": 2,
+      "count": 3,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_21.zh-tok.txt",
+        "chapter_33.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "保证 供应",
+      "token_count": 2,
+      "count": 3,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_07.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "这 也",
+      "token_count": 2,
+      "count": 3,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_13.zh-tok.txt",
+        "chapter_21.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "系统 里",
+      "token_count": 2,
+      "count": 3,
+      "chapters": [
+        "chapter_03.zh-tok.txt",
+        "chapter_11.zh-tok.txt",
+        "chapter_20.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "是 安全",
+      "token_count": 2,
+      "count": 3,
+      "chapters": [
+        "chapter_04.zh-tok.txt",
+        "chapter_13.zh-tok.txt",
+        "chapter_22.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    },
+    {
+      "phrase": "很 高",
+      "token_count": 2,
+      "count": 3,
+      "chapters": [
+        "chapter_04.zh-tok.txt",
+        "chapter_20.zh-tok.txt",
+        "chapter_23.zh-tok.txt"
+      ],
+      "warning_level": "low"
+    }
+  ],
+  "phrase_repetition_warning": true
+}
