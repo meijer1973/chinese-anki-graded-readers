@@ -52,9 +52,10 @@ class NovelPipelineTests(unittest.TestCase):
 
     def test_unknown_chinese_word_detection(self) -> None:
         report = validate_text("猫 在 家里 。", self.known_words)
-        self.assertTrue(report["valid"])
+        self.assertFalse(report["valid"])
         self.assertEqual(report["unknown_token_frequency"], {"猫": 1})
         self.assertEqual(report["forbidden_unknown_tokens_over_limit"], 0)
+        self.assertFalse(report["known_token_percent_allowed"])
 
     def test_punctuation_ignored(self) -> None:
         report = validate_text("我， 看 朋友!", self.known_words)
@@ -63,13 +64,13 @@ class NovelPipelineTests(unittest.TestCase):
 
     def test_repeated_unknown_counts(self) -> None:
         report = validate_text("猫 猫 我", self.known_words)
-        self.assertTrue(report["valid"])
+        self.assertFalse(report["valid"])
         self.assertEqual(report["unknown_token_count"], 2)
         self.assertEqual(report["unknown_token_frequency"]["猫"], 2)
 
     def test_accidental_unsegmented_chinese_string_is_unknown(self) -> None:
         report = validate_text("我看你 。", self.known_words)
-        self.assertTrue(report["valid"])
+        self.assertFalse(report["valid"])
         self.assertEqual(report["unknown_token_frequency"], {"我看你": 1})
 
     def test_unknown_budget_failure_after_five_tokens(self) -> None:

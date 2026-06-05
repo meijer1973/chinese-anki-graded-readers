@@ -8,7 +8,7 @@ The rule is:
 Diagnose first. Classify vocabulary second. Rewrite last.
 ```
 
-Do not treat `98%` readable coverage as automatic validity. Repo-valid adapted manuscripts must still use the normal vocabulary layers, keep forbidden unknowns visible, and stay within the configured per-chapter budget.
+Do not treat `98%` readable coverage as automatic validity. Repo-valid adapted manuscripts must still use the normal vocabulary layers, keep forbidden unknowns visible, stay within the configured per-chapter budget, and pass the normal 98% known-token / 2% approved non-core validation gates.
 
 ## Rights Gate
 

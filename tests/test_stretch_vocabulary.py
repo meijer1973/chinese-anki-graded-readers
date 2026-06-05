@@ -73,6 +73,8 @@ class StretchVocabularyTests(unittest.TestCase):
             "journalism_crime_pack": self.journalism,
             "urban_objects_pack": self.urban,
             "proper_nouns_path": self.proper,
+            "min_known_token_percent": 0,
+            "max_total_stretch_token_percent": 100,
         }
 
     def approve_quality(self, manuscript: Path) -> None:
@@ -122,9 +124,10 @@ class StretchVocabularyTests(unittest.TestCase):
     def test_personal_known_word_is_unknown_without_profile(self) -> None:
         chapters = self.chapters_dir("我 犹豫 了 。\n")
         report = validate_book(chapters, self.known)
-        self.assertTrue(report["valid"])
+        self.assertFalse(report["valid"])
         self.assertEqual(report["personal_known_tokens"], 0)
         self.assertEqual(report["forbidden_unknown_tokens"], 1)
+        self.assertFalse(report["known_token_percent_allowed"])
 
     def test_known_character_compound_layer_is_audited_separately(self) -> None:
         chapters = self.chapters_dir("旧城门 看 你 。\n")
@@ -149,9 +152,10 @@ class StretchVocabularyTests(unittest.TestCase):
             known_character_compounds_path=self.high_frequency_characters,
             known_character_compound_limit=2,
         )
-        self.assertTrue(report["valid"])
+        self.assertFalse(report["valid"])
         self.assertEqual(report["high_frequency_character_compound_tokens"], 0)
         self.assertEqual(report["forbidden_unknown_tokens"], 1)
+        self.assertFalse(report["known_token_percent_allowed"])
 
     def test_known_character_compound_layer_does_not_override_exact_core_words(self) -> None:
         vocab = load_layered_vocabulary(
@@ -194,7 +198,7 @@ class StretchVocabularyTests(unittest.TestCase):
         blocked = validate_book(chapters, self.known)
         self.assertTrue(allowed["valid"])
         self.assertEqual(allowed["proper_noun_tokens"], 1)
-        self.assertTrue(blocked["valid"])
+        self.assertFalse(blocked["valid"])
         self.assertEqual(blocked["proper_noun_tokens"], 0)
         self.assertEqual(blocked["forbidden_unknown_tokens"], 1)
 
@@ -264,6 +268,8 @@ class StretchVocabularyTests(unittest.TestCase):
             chapters,
             ROOT / "data" / "known_words.txt",
             extra_packs=[ROOT / "data" / "stretch_packs" / "business_economics_60.txt"],
+            min_known_token_percent=0,
+            max_total_stretch_token_percent=100,
         )
         self.assertTrue(report["valid"])
         self.assertEqual(report["business_economics_stretch_tokens"], 1)
@@ -274,8 +280,25 @@ class StretchVocabularyTests(unittest.TestCase):
             chapters,
             ROOT / "data" / "known_words.txt",
             extra_packs=[ROOT / "data" / "stretch_packs" / "business_economics_60.txt"],
+            min_known_token_percent=0,
+            max_total_stretch_token_percent=100,
         )
         self.assertGreater(report["stretch_token_percent"], 0)
+
+    def test_default_policy_blocks_high_stretch_share(self) -> None:
+        chapters = self.chapters_dir("我 看 魔法 。\n")
+        report = validate_book(chapters, self.known, genre_pack=self.genre)
+        self.assertFalse(report["valid"])
+        self.assertEqual(report["max_total_stretch_token_percent"], 2.0)
+        self.assertFalse(report["stretch_token_percent_allowed"])
+        self.assertTrue(any(warning["type"] == "stretch_token_share_above_limit" for warning in report["warnings"]))
+
+    def test_default_policy_allows_two_percent_stretch_share(self) -> None:
+        chapters = self.chapters_dir(" ".join(["我"] * 49 + ["魔法"]) + " 。\n")
+        report = validate_book(chapters, self.known, genre_pack=self.genre)
+        self.assertTrue(report["valid"])
+        self.assertEqual(report["known_token_percent"], 98.0)
+        self.assertEqual(report["stretch_token_percent"], 2.0)
 
     def test_layer_counts_are_correct(self) -> None:
         chapters = self.chapters_dir("林安 是 快递员 。\n我 在 上海 看 魔法 。\n你 沉默 了 。\n林安 采访 你 。\n")
@@ -420,6 +443,8 @@ class StretchVocabularyTests(unittest.TestCase):
                 str(manuscript / "epub" / "public.epub"),
                 "--known",
                 str(ROOT / "data" / "known_words.txt"),
+                "--min-known-token-percent",
+                "0",
                 "--report",
                 str(public_report_path),
             ],

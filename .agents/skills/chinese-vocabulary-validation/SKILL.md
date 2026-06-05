@@ -5,7 +5,7 @@ description: Mechanically validate space-tokenized Chinese chapters or books aga
 
 # Chinese Vocabulary Validation
 
-Treat validation as mechanical and auditable. Near matches do not count. A token is counted by its exact layer when it is in core known words or an approved layer. Forbidden unknown tokens are allowed only up to the configured per-chapter budget, currently 5, and every one must be reported.
+Treat validation as mechanical and auditable. Near matches do not count. A token is counted by its exact layer when it is in core known words or an approved layer. Extensive-reading validation requires at least 98% known tokens and at most 2% approved non-core tokens by default. Approved non-core tokens include stretch layers, book-specific words, and listed proper nouns. Forbidden unknown tokens are allowed only up to the configured per-chapter budget, currently 5, and every one must be reported; they still reduce known-token coverage.
 
 Before validating, state the vocabulary profile:
 
@@ -37,7 +37,7 @@ Run:
 python scripts/validate_book.py --known data/known_words.txt --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json
 ```
 
-Fail the workflow if any chapter has `forbidden_unknown_tokens_over_limit > 0`.
+Fail the workflow if any chapter has `forbidden_unknown_tokens_over_limit > 0`, `known_token_percent_allowed == false`, or `stretch_token_percent_allowed == false`.
 
 For layered reports, listed proper nouns count as the proper-noun layer and do not spend the forbidden-unknown budget.
 
@@ -63,6 +63,6 @@ The `--known-character-compounds` flag defaults to `data/learner_profiles/marcel
 - If a token appears in both core and a stretch pack, count it as core.
 - If a token appears in both personal-known and a stretch pack, count it as personal-known.
 - If a token is not in any exact word layer but every Hanzi character in it is within the enabled top-N ranked character set, count it as `high_frequency_character_compound`, not as an invisible unknown.
-- Pass validation only when forbidden unknowns are at or below the configured per-chapter budget.
+- Pass validation only when forbidden unknowns are at or below the configured per-chapter budget, known-token coverage is at least 98%, and approved non-core/stretch-token share is at most 2%.
 - Warn on too many new stretch words in one chapter, stretch words used only once, low core coverage, excessive stretch-token share, repeated phrase overuse, and narrow vocabulary.
 - Do not forgive proper nouns unless they are listed in `proper_nouns.txt`.

@@ -47,7 +47,8 @@
     "unknown_token_policy": "A chapter may keep up to 5 forbidden unknown tokens when they improve natural prose. Treat this as breathing room, not a target.",
     "proper_nouns_do_not_count_against_unknown_budget": true,
     "target_core_coverage_percent": null,
-    "max_total_stretch_token_percent": null,
+    "min_known_token_percent": 98,
+    "max_total_stretch_token_percent": 2,
     "max_new_stretch_words_per_chapter": 15,
     "min_repetitions_for_key_stretch_words": 3,
     "warn_if_stretch_word_used_once": true
@@ -108,7 +109,9 @@
     "require_normal_reader_score_at_least": 7,
     "public_quality_literary_critic_score_at_least": 8,
     "public_quality_normal_reader_score_at_least": 8,
-    "token_and_coverage_counts_are_diagnostics_only": true,
+    "token_and_coverage_counts_are_diagnostics_only": false,
+    "known_token_percent_acceptance_gate": 98,
+    "approved_non_core_token_percent_acceptance_gate": 2,
     "reject_padding_for_counts": true
   },
   "quality_gate": {

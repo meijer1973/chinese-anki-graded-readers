@@ -8,7 +8,9 @@ try:
         DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT,
         DEFAULT_KNOWN_WORDS,
         DEFAULT_MARCEL_HIGH_FREQUENCY_CHARACTERS,
+        DEFAULT_MAX_TOTAL_STRETCH_TOKEN_PERCENT,
         DEFAULT_MAX_FORBIDDEN_UNKNOWN_TOKENS_PER_CHAPTER,
+        DEFAULT_MIN_KNOWN_TOKEN_PERCENT,
         DEFAULT_PUNCTUATION,
         chapter_files,
         quality_approval_status,
@@ -23,7 +25,9 @@ except ModuleNotFoundError:
         DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT,
         DEFAULT_KNOWN_WORDS,
         DEFAULT_MARCEL_HIGH_FREQUENCY_CHARACTERS,
+        DEFAULT_MAX_TOTAL_STRETCH_TOKEN_PERCENT,
         DEFAULT_MAX_FORBIDDEN_UNKNOWN_TOKENS_PER_CHAPTER,
+        DEFAULT_MIN_KNOWN_TOKEN_PERCENT,
         DEFAULT_PUNCTUATION,
         chapter_files,
         quality_approval_status,
@@ -217,6 +221,16 @@ def main() -> int:
     parser.add_argument("--proper-nouns")
     parser.add_argument("--extra-pack", action="append", default=[])
     parser.add_argument(
+        "--min-known-token-percent",
+        type=float,
+        default=DEFAULT_MIN_KNOWN_TOKEN_PERCENT,
+    )
+    parser.add_argument(
+        "--max-total-stretch-token-percent",
+        type=float,
+        default=DEFAULT_MAX_TOTAL_STRETCH_TOKEN_PERCENT,
+    )
+    parser.add_argument(
         "--require-source-fidelity",
         action="store_true",
         help="Require quality/source_fidelity_report.md with Fidelity decision: PASS for adapted manuscripts.",
@@ -249,6 +263,8 @@ def main() -> int:
         book_specific_words_path=args.book_specific,
         proper_nouns_path=args.proper_nouns,
         extra_packs=args.extra_pack,
+        min_known_token_percent=args.min_known_token_percent,
+        max_total_stretch_token_percent=args.max_total_stretch_token_percent,
         max_forbidden_unknown_tokens_per_chapter=args.max_forbidden_unknown_tokens_per_chapter,
     )
     write_json(manuscript / "vocabulary_report.json", validation)
@@ -288,6 +304,11 @@ def main() -> int:
             args.max_forbidden_unknown_tokens_per_chapter,
         ),
         "stretch_token_percent": validation.get("stretch_token_percent", 0),
+        "min_known_token_percent": validation.get("min_known_token_percent"),
+        "known_token_percent": validation.get("known_token_percent", 0),
+        "known_token_percent_allowed": validation.get("known_token_percent_allowed", True),
+        "max_total_stretch_token_percent": validation.get("max_total_stretch_token_percent"),
+        "stretch_token_percent_allowed": validation.get("stretch_token_percent_allowed", True),
         **planning_status,
         **preflight_status,
         **fidelity_status,
@@ -312,10 +333,16 @@ def main() -> int:
     write_json(quality / "quality_gate_summary.json", summary)
     print(
         "valid_vocabulary={valid_vocabulary} unknown_tokens={unknown_token_count} "
+        "known_percent={known_token_percent} known_percent_ok={known_token_percent_allowed} "
+        "stretch_percent={stretch_token_percent} stretch_percent_ok={stretch_token_percent_allowed} "
         "high_frequency_character_compound_tokens={high_frequency_character_compound_tokens} "
         "planning_files_present={planning} quality_approved={approved} ready_for_epub={ready}".format(
             valid_vocabulary=summary["valid_vocabulary"],
             unknown_token_count=summary["unknown_token_count"],
+            known_token_percent=summary["known_token_percent"],
+            known_token_percent_allowed=summary["known_token_percent_allowed"],
+            stretch_token_percent=summary["stretch_token_percent"],
+            stretch_token_percent_allowed=summary["stretch_token_percent_allowed"],
             high_frequency_character_compound_tokens=summary["high_frequency_character_compound_tokens"],
             planning=summary["planning_files_present"],
             approved=status["approved"],

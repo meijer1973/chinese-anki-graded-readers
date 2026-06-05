@@ -109,6 +109,8 @@ The report distinguishes:
 
 Personal-known words and high-frequency character compounds are allowed in Marcel personalized mode, but they are not stretch words and do not count as core frequency coverage.
 
+For Marcel personalized extensive reading, `personal_known_tokens` and `high_frequency_character_compound_tokens` count toward the 98% known-token floor. They do not count toward the 2% approved non-core/stretch ceiling.
+
 ## Policy
 
 - Do not use rare personal-known words merely because they are available.

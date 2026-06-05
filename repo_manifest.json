@@ -9,6 +9,21 @@
     "purpose": "Chinese Anki deck tooling plus controlled-vocabulary Chinese graded-reader fiction generation."
   },
   "freshness_rule": "Refresh RESEARCH_AGENT_MAP.md, AGENT_GITHUB_ENTRY.md, reports/url-index.md, and reports/github-agent-index.md whenever repository paths, workflows, scripts, skills, agents, or manuscript conventions change. Commit and push accepted tracked work to origin before calling it done unless the user explicitly says not to or Git/validation blocks publication.",
+  "default_vocabulary_policy": {
+    "min_known_token_percent": 98,
+    "max_approved_non_core_token_percent": 2,
+    "approved_non_core_layers": [
+      "general_fiction_stretch",
+      "genre_stretch",
+      "setting_stretch",
+      "profession_stretch",
+      "journalism_crime_stretch",
+      "business_economics_stretch",
+      "book_specific_stretch",
+      "proper_noun"
+    ],
+    "max_forbidden_unknown_tokens_per_chapter": 5
+  },
   "human_entry_points": [
     "README.md",
     "AGENTS.md",

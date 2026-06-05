@@ -11,7 +11,7 @@ Use this skill for EPUB-to-graded-reader adaptation. Do not use it for original 
 
 Diagnose first, classify vocabulary second, rewrite last.
 
-Do not treat 98% readable coverage as repo validity. A final adapted manuscript must still validate under the repo vocabulary layers and stay within the configured per-chapter forbidden-unknown budget.
+Do not treat 98% readable coverage as repo validity. A final adapted manuscript must still validate under the repo vocabulary layers, stay within the configured per-chapter forbidden-unknown budget, and pass the normal 98% known-token / 2% approved non-core validation gates.
 
 ## Rights Gate
 

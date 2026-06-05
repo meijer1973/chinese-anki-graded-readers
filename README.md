@@ -49,7 +49,7 @@ The canonical story source is space-tokenized Chinese:
 我 看到 你 在 这里 。
 ```
 
-The validator checks core known words, approved stretch packs, book-specific words, proper nouns, and a small per-chapter unknown-token budget. See:
+The validator checks core known words, approved stretch packs, book-specific words, proper nouns, known-token coverage, approved non-core token share, and a small per-chapter unknown-token budget. Default extensive-reading gates are at least 98% known tokens and at most 2% approved non-core tokens. See:
 
 - `docs/novel-generation.md`
 - `docs/personal-known-vocabulary.md`

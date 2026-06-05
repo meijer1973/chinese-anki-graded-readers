@@ -10,14 +10,15 @@ It also supports source-aligned EPUB-to-graded-reader adaptation. Adaptation is 
 
 1. Vocabulary validity is necessary but not sufficient.
 2. Canonical manuscript text is space-tokenized Chinese, for example `我 看到 你 在 这里 。`
-3. Prefer the approved vocabulary layers; allow at most 5 reported forbidden unknown tokens per chapter for natural prose and necessary ideas.
-4. Future novels must aim for narrative interest within the allowed vocabulary, not bland minimal correctness.
-5. Check vocabulary after every chapter and save JSON validation reports.
-6. Check continuity after every chapter and update `continuity_log.md`.
-7. Keep `creative_preflight.md`, a novel bible, and an outline before drafting, unless using documented `discovery-with-control` mode.
-8. Do not overwrite previous manuscripts unless explicitly instructed.
-9. Every real manuscript must pass vocabulary validation, continuity review, literary critic review, normal reader review, and lead reviewer decision.
-10. EPUB export must be generated only after the whole-book validator passes and `quality/lead_quality_decision.md` explicitly contains `Final decision: PASS`.
+3. Extensive-reading validity requires at least 98% known-token coverage and at most 2% approved non-core tokens by default. Approved non-core tokens include stretch layers, book-specific words, and listed proper nouns.
+4. Prefer the approved vocabulary layers; allow at most 5 reported forbidden unknown tokens per chapter for natural prose and necessary ideas, but unknowns still reduce known-token coverage.
+5. Future novels must aim for narrative interest within the allowed vocabulary, not bland minimal correctness.
+6. Check vocabulary after every chapter and save JSON validation reports.
+7. Check continuity after every chapter and update `continuity_log.md`.
+8. Keep `creative_preflight.md`, a novel bible, and an outline before drafting, unless using documented `discovery-with-control` mode.
+9. Do not overwrite previous manuscripts unless explicitly instructed.
+10. Every real manuscript must pass vocabulary validation, continuity review, literary critic review, normal reader review, and lead reviewer decision.
+11. EPUB export must be generated only after the whole-book validator passes and `quality/lead_quality_decision.md` explicitly contains `Final decision: PASS`.
 
 ### Vocabulary Layers
 
@@ -36,19 +37,19 @@ The validator distinguishes these layers:
 - proper nouns
 - forbidden unknown tokens
 
-Do not move from controlled vocabulary to random leakage. The policy is `0 invisible unknown words`: every unknown is counted, reported, and reviewed, but each chapter may keep up to 5 forbidden unknown tokens when that preserves better prose or a necessary idea. Approved personal-known words are allowed only when the manuscript is explicitly built in a learner-profile mode such as Marcel personalized mode. Marcel personalized mode may also enable the auditable high-frequency character-compound layer with `--known-character-compounds --known-character-compound-limit 300`; this counts tokens made only from the first 300 ranked characters as `high_frequency_character_compound`, not as core, stretch, or invisible unknowns. Approved stretch words are allowed when they are listed in the configured pack, manuscript `book_specific_words.txt`, or manuscript `proper_nouns.txt`. Proper nouns do not spend the five-token unknown budget when listed in `proper_nouns.txt`. If a token appears in both core and another layer, count it as core. If a token appears in personal-known and stretch, count it as personal-known.
+Do not move from controlled vocabulary to random leakage. The policy is `0 invisible unknown words`: every unknown is counted, reported, and reviewed, but each chapter may keep up to 5 forbidden unknown tokens when that preserves better prose or a necessary idea. Extensive reading is the default: validation fails when known-token coverage is below 98% or approved non-core token share is above 2%. Approved personal-known words are allowed only when the manuscript is explicitly built in a learner-profile mode such as Marcel personalized mode. Marcel personalized mode may also enable the auditable high-frequency character-compound layer with `--known-character-compounds --known-character-compound-limit 300`; this counts tokens made only from the first 300 ranked characters as `high_frequency_character_compound`, not as core, stretch, or invisible unknowns. Approved stretch words are allowed when they are listed in the configured pack, manuscript `book_specific_words.txt`, or manuscript `proper_nouns.txt`, but they must stay within the 2% approved non-core ceiling unless the user explicitly chooses a non-extensive-reading diagnostic mode. Proper nouns do not spend the five-token unknown budget when listed in `proper_nouns.txt`, but they count as approved non-core tokens for the 2% ceiling. If a token appears in both core and another layer, count it as core. If a token appears in personal-known and stretch, count it as personal-known.
 
 ### Personal-Known Learner Profiles
 
 Keep personal-known vocabulary separate from the ranked frequency list. `data/known_words.txt` remains frequency-core; `data/learner_profiles/marcel/personal_known_words.txt` is a generated validator allowlist for words Marcel already recognizes. `data/learner_profiles/marcel/high_frequency_characters.txt` is a ranked character source for the derived high-frequency character-compound layer; start with the first 300 characters and increase only in small reviewed steps. Hand-edit `data/learner_profiles/marcel/personal_known_words.tsv`, then regenerate the `.txt`, metadata, and audit files with `scripts/sync_personal_known_words.py`.
 
-Use public mode for general graded readers: core known words plus approved stretch packs. Use Marcel personalized mode only when requested or when the project config says so: core known words plus `--personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 300` plus approved stretch packs. Reports must keep `personal_known_tokens` and `high_frequency_character_compound_tokens` separate from core and stretch tokens.
+Use public mode for general graded readers: core known words plus approved stretch packs under the 98% known / 2% approved non-core default. Use Marcel personalized mode only when requested or when the project config says so: core known words plus `--personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 300` plus approved stretch packs. Reports must keep `personal_known_tokens` and `high_frequency_character_compound_tokens` separate from core and stretch tokens; these personalized layers count toward known-token coverage for Marcel, not toward stretch load.
 
 ### Creative Quality
 
 Future novels should be ambitious inside the controlled vocabulary. Prefer scenes with a concrete situation, a character want, pressure or conflict, a change by the end of the scene, and a reason for the reader to continue. Avoid conservative, flat, repetitive fiction and repeated dialogue loops such as `我 不 知道`, `你 怎么 了`, or `我们 要 走` unless repetition serves the story.
 
-Track vocabulary breadth, but treat counts as diagnostics, not acceptance gates. Reports should include total tokens, unique used words, percentage of the known list used, top frequent words, repeated phrase warnings, chapter-level unique-token counts, and unused known words. There is no default chapter count and no chapter word-count requirement. Do not add text solely to satisfy length, vocabulary coverage, or stretch-word metrics.
+Track vocabulary breadth, but treat breadth counts as diagnostics, not acceptance gates. The 98% known-token floor and 2% approved non-core ceiling are acceptance gates. Reports should include total tokens, unique used words, percentage of the known list used, top frequent words, repeated phrase warnings, chapter-level unique-token counts, and unused known words. There is no default chapter count and no chapter word-count requirement. Do not add text solely to satisfy length, vocabulary coverage, or stretch-word metrics.
 
 Before vocabulary planning, create `manuscripts/<project-slug>/creative_preflight.md` with 3-5 premise or scene alternatives, rejected ideas, chosen story shape, reader question, main pressure, planned reversals, and variation budget. Future manuscripts should run `scripts/prose_variety_report.py` and use `docs/style-bank-controlled-chinese.md` plus the prose-variety polish skill when repeated visible frames remain.
 
@@ -147,13 +148,13 @@ All Chinese creative output intended for graded readers must follow these rules:
 
 1. Generate story text from the active known-word list in `data/known_words.txt`.
 2. The canonical draft format is space-tokenized Chinese, for example `我 看到 你 在 这里 。`.
-3. Prefer exact known, stretch, book-specific, or proper-noun tokens. A chapter may retain up to 5 forbidden unknown tokens when they are useful and auditable; do not use the budget as a target.
+3. Prefer exact known tokens. Stretch, book-specific, and proper-noun tokens are allowed only inside the default 2% approved non-core ceiling. A chapter may retain up to 5 forbidden unknown tokens when they are useful and auditable, but unknowns still reduce the 98% known-token coverage; do not use the budget as a target.
 4. Check vocabulary after every chapter with `scripts/validate_chapter.py`.
 5. Check continuity after every chapter and update `continuity_log.md`.
 6. Keep a `novel_bible.md` before drafting starts.
 7. Save validation reports as JSON beside chapters and at whole-book level.
 8. Do not overwrite previous manuscripts unless explicitly instructed. Create a new `manuscripts/<project-slug>/` folder or ask before replacing files.
-9. EPUB export must be generated only after `scripts/validate_book.py` passes with no chapter above the configured forbidden-unknown budget and `quality/lead_quality_decision.md` explicitly says `Final decision: PASS`.
+9. EPUB export must be generated only after `scripts/validate_book.py` passes with no chapter above the configured forbidden-unknown budget, known-token coverage at or above 98%, approved non-core token share at or below 2%, and `quality/lead_quality_decision.md` explicitly says `Final decision: PASS`.
 10. Keep tokenized `.zh-tok.txt` source files as the auditable source of truth even if EPUB display text removes spaces.
 
 Creative quality rules:
@@ -179,7 +180,7 @@ Story-shape policy:
 - A book may have as many chapters as the story needs.
 - Do not inflate chapters after validation to hit a token count.
 - Do not add unused city, role, fantasy, or object words merely to improve metrics.
-- Do not rewrite natural sentences mechanically just to force the unknown-token count to zero when the chapter is within the five-token budget.
+- Do not rewrite natural sentences mechanically just to force the unknown-token count to zero when the chapter is still above 98% known-token coverage and within the five-token budget.
 - Expansion is allowed only when it fixes a named story problem: unclear motivation, missing transition, weak conflict, confusing setting movement, underdeveloped emotional turn, or unresolved continuity.
 - Padding for word count, vocabulary breadth, stretch exposure, or chapter count is a quality failure.
 
@@ -213,6 +214,8 @@ When completing a novel-generation task, the final response must report:
 - total word-token count
 - unique used words
 - vocabulary profile, personal-known token count, and high-frequency character-compound token count when used
+- known-token percentage
+- approved non-core/stretch-token percentage
 - unknown-token count
 - forbidden unknown tokens over the configured per-chapter limit
 - validation command run

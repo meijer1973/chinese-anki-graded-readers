@@ -3,10 +3,10 @@
 The old workflow allowed only core known words. That remains available, but some genres need a small controlled expansion. The new rule is:
 
 ```text
-0 invisible unknown words, approved stretch words allowed, up to 5 reported forbidden unknown tokens per chapter.
+0 invisible unknown words, at least 98% known tokens, at most 2% approved non-core tokens, up to 5 reported forbidden unknown tokens per chapter.
 ```
 
-Do not use random unknown words. Prefer tokens from approved layers. A chapter may keep a few unknown tokens as learning friction when they are useful, but they are always counted and reviewed.
+Do not use random unknown words. Prefer exact known tokens. Stretch, book-specific, and proper-noun tokens are allowed only as a small controlled load. A chapter may keep a few unknown tokens as learning friction when they are useful, but they are always counted, reviewed, and included in the known-token percentage.
 
 ## Layers
 
@@ -25,7 +25,7 @@ Do not use random unknown words. Prefer tokens from approved layers. A chapter m
 
 Pack names are aspirational sizes. Starter packs are intentionally smaller than 100 or 150 when good entries are not ready. Add durable, reusable words rather than filler.
 
-Proper nouns are the right place for character, place, and organization names. Listed proper nouns are counted as the proper-noun layer, not as forbidden unknowns.
+Proper nouns are the right place for character, place, and organization names. Listed proper nouns are counted as the proper-noun layer, not as forbidden unknowns. They still count as approved non-core tokens for the 2% extensive-reading ceiling.
 
 Personal-known words and high-frequency character compounds are not stretch words. They are vocabulary a named learner already recognizes and should be tracked under `personal_known_tokens` or `high_frequency_character_compound_tokens`, not as new learning targets. See `docs/personal-known-vocabulary.md`.
 
@@ -105,7 +105,7 @@ Before each chapter, create `manuscripts/<slug>/planning/chapter_XX_vocab_plan.m
 - fantasy function
 - learning function
 
-Stretch words should be repeated enough to become learnable. Track them in `stretch_word_exposure.md` with target repetitions, actual repetitions, chapters used, exposure status, and Anki status.
+Stretch words should be repeated enough to become learnable, but the whole manuscript must remain extensive-reading friendly. Track them in `stretch_word_exposure.md` with target repetitions, actual repetitions, chapters used, exposure status, and Anki status, while keeping total approved non-core token share at or below 2%.
 
 ## Validation
 
@@ -117,7 +117,7 @@ python scripts/validate_book.py --known data/known_words.txt --chapters manuscri
 
 Add `--personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 300` for Marcel personalized readers. Omit those flags for public graded-reader mode.
 
-The report counts tokens by layer, forbidden unknowns, forbidden unknowns over the per-chapter limit, core coverage, personal-known token use, high-frequency character-compound token use, stretch-token share, stretch words used once, stretch words by chapter, and new stretch words by chapter.
+The report counts tokens by layer, forbidden unknowns, forbidden unknowns over the per-chapter limit, known-token coverage, personal-known token use, high-frequency character-compound token use, approved non-core/stretch-token share, stretch words used once, stretch words by chapter, and new stretch words by chapter. Default validation fails below 98% known tokens or above 2% approved non-core tokens.
 
 Use `scripts/plot_affordance_report.py` before planning a case-heavy premise:
 

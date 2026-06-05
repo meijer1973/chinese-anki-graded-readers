@@ -6,7 +6,9 @@ from novel_tools import (
     DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT,
     DEFAULT_KNOWN_WORDS,
     DEFAULT_MARCEL_HIGH_FREQUENCY_CHARACTERS,
+    DEFAULT_MAX_TOTAL_STRETCH_TOKEN_PERCENT,
     DEFAULT_MAX_FORBIDDEN_UNKNOWN_TOKENS_PER_CHAPTER,
+    DEFAULT_MIN_KNOWN_TOKEN_PERCENT,
     DEFAULT_PUNCTUATION,
     validate_book,
     write_json,
@@ -44,7 +46,18 @@ def main() -> int:
     parser.add_argument("--proper-nouns")
     parser.add_argument("--extra-pack", action="append", default=[])
     parser.add_argument("--target-core-coverage-percent", type=float)
-    parser.add_argument("--max-total-stretch-token-percent", type=float)
+    parser.add_argument(
+        "--min-known-token-percent",
+        type=float,
+        default=DEFAULT_MIN_KNOWN_TOKEN_PERCENT,
+        help="Require at least this percentage of tokens to be known/personal-known/known-character compounds.",
+    )
+    parser.add_argument(
+        "--max-total-stretch-token-percent",
+        type=float,
+        default=DEFAULT_MAX_TOTAL_STRETCH_TOKEN_PERCENT,
+        help="Require approved non-core tokens, including stretch layers and proper nouns, at or below this percentage.",
+    )
     parser.add_argument("--max-new-stretch-words-per-chapter", type=int)
     parser.add_argument(
         "--max-forbidden-unknown-tokens-per-chapter",
@@ -71,6 +84,7 @@ def main() -> int:
         proper_nouns_path=args.proper_nouns,
         extra_packs=args.extra_pack,
         target_core_coverage_percent=args.target_core_coverage_percent,
+        min_known_token_percent=args.min_known_token_percent,
         max_total_stretch_token_percent=args.max_total_stretch_token_percent,
         max_new_stretch_words_per_chapter=args.max_new_stretch_words_per_chapter,
         max_forbidden_unknown_tokens_per_chapter=args.max_forbidden_unknown_tokens_per_chapter,
@@ -81,9 +95,10 @@ def main() -> int:
         "unique_words={unique_token_count} vocabulary_profile={vocabulary_profile} "
         "personal_known_tokens={personal_known_tokens} "
         "high_frequency_character_compound_tokens={high_frequency_character_compound_tokens} "
+        "known_percent={known_token_percent} known_percent_ok={known_token_percent_allowed} "
         "unknown_tokens={unknown_token_count} "
         "unknown_over_limit={forbidden_unknown_tokens_over_limit} "
-        "stretch_percent={stretch_token_percent}".format(**report)
+        "stretch_percent={stretch_token_percent} stretch_percent_ok={stretch_token_percent_allowed}".format(**report)
     )
     return 0 if report["valid"] else 1
 

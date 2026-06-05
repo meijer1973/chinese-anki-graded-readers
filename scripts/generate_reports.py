@@ -7,7 +7,9 @@ from novel_tools import (
     DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT,
     DEFAULT_KNOWN_WORDS,
     DEFAULT_MARCEL_HIGH_FREQUENCY_CHARACTERS,
+    DEFAULT_MAX_TOTAL_STRETCH_TOKEN_PERCENT,
     DEFAULT_MAX_FORBIDDEN_UNKNOWN_TOKENS_PER_CHAPTER,
+    DEFAULT_MIN_KNOWN_TOKEN_PERCENT,
     DEFAULT_PUNCTUATION,
     chapter_files,
     validate_book,
@@ -52,6 +54,16 @@ def main() -> int:
     parser.add_argument("--proper-nouns")
     parser.add_argument("--extra-pack", action="append", default=[])
     parser.add_argument(
+        "--min-known-token-percent",
+        type=float,
+        default=DEFAULT_MIN_KNOWN_TOKEN_PERCENT,
+    )
+    parser.add_argument(
+        "--max-total-stretch-token-percent",
+        type=float,
+        default=DEFAULT_MAX_TOTAL_STRETCH_TOKEN_PERCENT,
+    )
+    parser.add_argument(
         "--max-forbidden-unknown-tokens-per-chapter",
         type=int,
         default=DEFAULT_MAX_FORBIDDEN_UNKNOWN_TOKENS_PER_CHAPTER,
@@ -73,6 +85,8 @@ def main() -> int:
         "book_specific_words_path": args.book_specific,
         "proper_nouns_path": args.proper_nouns,
         "extra_packs": args.extra_pack,
+        "min_known_token_percent": args.min_known_token_percent,
+        "max_total_stretch_token_percent": args.max_total_stretch_token_percent,
         "max_forbidden_unknown_tokens_per_chapter": args.max_forbidden_unknown_tokens_per_chapter,
     }
     for chapter in chapter_files(chapters_dir):
@@ -86,8 +100,12 @@ def main() -> int:
         "unique_words={unique_token_count} vocabulary_profile={vocabulary_profile} "
         "personal_known_tokens={personal_known_tokens} "
         "high_frequency_character_compound_tokens={high_frequency_character_compound_tokens} "
+        "known_percent={known_token_percent} known_percent_ok={known_token_percent_allowed} "
         "unknown_tokens={unknown_token_count} "
-        "unknown_over_limit={forbidden_unknown_tokens_over_limit}".format(**book_report)
+        "unknown_over_limit={forbidden_unknown_tokens_over_limit} "
+        "stretch_percent={stretch_token_percent} stretch_percent_ok={stretch_token_percent_allowed}".format(
+            **book_report
+        )
     )
     return 0 if book_report["valid"] else 1
 

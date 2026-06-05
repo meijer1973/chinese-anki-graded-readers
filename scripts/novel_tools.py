@@ -26,6 +26,8 @@ DEFAULT_PROFESSIONS_PACK = DEFAULT_STRETCH_PACKS_DIR / "professions_social_roles
 DEFAULT_URBAN_OBJECTS_PACK = DEFAULT_STRETCH_PACKS_DIR / "urban_objects_100.txt"
 DEFAULT_JOURNALISM_CRIME_PACK = DEFAULT_STRETCH_PACKS_DIR / "journalism_crime_50.txt"
 DEFAULT_MAX_FORBIDDEN_UNKNOWN_TOKENS_PER_CHAPTER = 5
+DEFAULT_MIN_KNOWN_TOKEN_PERCENT = 98.0
+DEFAULT_MAX_TOTAL_STRETCH_TOKEN_PERCENT = 2.0
 
 DEFAULT_PUNCTUATION_CHARS = set(
     " \t\r\n"
@@ -298,7 +300,8 @@ def validate_text(
     vocabulary: dict | None = None,
     chapter_name: str | None = None,
     target_core_coverage_percent: float | None = None,
-    max_total_stretch_token_percent: float | None = None,
+    min_known_token_percent: float | None = DEFAULT_MIN_KNOWN_TOKEN_PERCENT,
+    max_total_stretch_token_percent: float | None = DEFAULT_MAX_TOTAL_STRETCH_TOKEN_PERCENT,
     max_forbidden_unknown_tokens_per_chapter: int = DEFAULT_MAX_FORBIDDEN_UNKNOWN_TOKENS_PER_CHAPTER,
 ) -> dict:
     if vocabulary is None:
@@ -369,11 +372,23 @@ def validate_text(
                 "actual_percent": round(core_coverage_percent, 2),
             }
         )
+    known_token_percent_allowed = min_known_token_percent is None or known_token_percent >= min_known_token_percent
+    if not known_token_percent_allowed:
+        warnings.append(
+            {
+                "type": "known_token_share_below_minimum",
+                "minimum_percent": min_known_token_percent,
+                "actual_percent": round(known_token_percent, 2),
+            }
+        )
+    stretch_token_percent_allowed = (
+        max_total_stretch_token_percent is None or stretch_token_percent <= max_total_stretch_token_percent
+    )
     if max_total_stretch_token_percent is not None and stretch_token_percent > max_total_stretch_token_percent:
         warnings.append(
             {
-                "type": "stretch_token_share_above_target",
-                "target_percent": max_total_stretch_token_percent,
+                "type": "stretch_token_share_above_limit",
+                "limit_percent": max_total_stretch_token_percent,
                 "actual_percent": round(stretch_token_percent, 2),
             }
         )
@@ -420,7 +435,11 @@ def validate_text(
             "forbidden_unknown_tokens_allowed": unknowns_over_limit == 0,
             "core_coverage_percent": round(core_coverage_percent, 2),
             "known_token_percent": round(known_token_percent, 2),
+            "min_known_token_percent": min_known_token_percent,
+            "known_token_percent_allowed": known_token_percent_allowed,
             "stretch_token_percent": round(stretch_token_percent, 2),
+            "max_total_stretch_token_percent": max_total_stretch_token_percent,
+            "stretch_token_percent_allowed": stretch_token_percent_allowed,
             "unique_core_words_used": len(unique_by_layer[CORE_LAYER]),
             "unique_personal_known_words_used": len(unique_by_layer[PERSONAL_KNOWN_LAYER]),
             "unique_high_frequency_character_compounds_used": len(
@@ -438,7 +457,7 @@ def validate_text(
             "warnings": warnings,
         }
     )
-    valid = unknowns_over_limit == 0
+    valid = unknowns_over_limit == 0 and known_token_percent_allowed and stretch_token_percent_allowed
     result.update(
         {
             "valid": valid,
@@ -486,7 +505,8 @@ def validate_chapter(
     proper_nouns_path: str | Path | None = None,
     extra_packs: Iterable[str | Path] | None = None,
     target_core_coverage_percent: float | None = None,
-    max_total_stretch_token_percent: float | None = None,
+    min_known_token_percent: float | None = DEFAULT_MIN_KNOWN_TOKEN_PERCENT,
+    max_total_stretch_token_percent: float | None = DEFAULT_MAX_TOTAL_STRETCH_TOKEN_PERCENT,
     max_forbidden_unknown_tokens_per_chapter: int = DEFAULT_MAX_FORBIDDEN_UNKNOWN_TOKENS_PER_CHAPTER,
 ) -> dict:
     chapter = Path(chapter_path)
@@ -515,6 +535,7 @@ def validate_chapter(
         vocabulary=vocabulary,
         chapter_name=chapter.name,
         target_core_coverage_percent=target_core_coverage_percent,
+        min_known_token_percent=min_known_token_percent,
         max_total_stretch_token_percent=max_total_stretch_token_percent,
         max_forbidden_unknown_tokens_per_chapter=max_forbidden_unknown_tokens_per_chapter,
     )
@@ -571,7 +592,8 @@ def validate_book(
     proper_nouns_path: str | Path | None = None,
     extra_packs: Iterable[str | Path] | None = None,
     target_core_coverage_percent: float | None = None,
-    max_total_stretch_token_percent: float | None = None,
+    min_known_token_percent: float | None = DEFAULT_MIN_KNOWN_TOKEN_PERCENT,
+    max_total_stretch_token_percent: float | None = DEFAULT_MAX_TOTAL_STRETCH_TOKEN_PERCENT,
     max_new_stretch_words_per_chapter: int | None = None,
     max_forbidden_unknown_tokens_per_chapter: int = DEFAULT_MAX_FORBIDDEN_UNKNOWN_TOKENS_PER_CHAPTER,
 ) -> dict:
@@ -614,6 +636,7 @@ def validate_book(
             vocabulary=vocabulary,
             chapter_name=chapter.name,
             target_core_coverage_percent=target_core_coverage_percent,
+            min_known_token_percent=min_known_token_percent,
             max_total_stretch_token_percent=max_total_stretch_token_percent,
             max_forbidden_unknown_tokens_per_chapter=max_forbidden_unknown_tokens_per_chapter,
         )
@@ -667,11 +690,23 @@ def validate_book(
                 "actual_percent": round(core_coverage_percent, 2),
             }
         )
+    known_token_percent_allowed = min_known_token_percent is None or known_token_percent >= min_known_token_percent
+    if not known_token_percent_allowed:
+        warnings.append(
+            {
+                "type": "known_token_share_below_minimum",
+                "minimum_percent": min_known_token_percent,
+                "actual_percent": round(known_token_percent, 2),
+            }
+        )
+    stretch_token_percent_allowed = (
+        max_total_stretch_token_percent is None or stretch_token_percent <= max_total_stretch_token_percent
+    )
     if max_total_stretch_token_percent is not None and stretch_token_percent > max_total_stretch_token_percent:
         warnings.append(
             {
-                "type": "stretch_token_share_above_target",
-                "target_percent": max_total_stretch_token_percent,
+                "type": "stretch_token_share_above_limit",
+                "limit_percent": max_total_stretch_token_percent,
                 "actual_percent": round(stretch_token_percent, 2),
             }
         )
@@ -690,7 +725,9 @@ def validate_book(
     report = {
         "schema_version": 5,
         "generated_at": utc_now(),
-        "valid": all(report["valid"] for report in chapter_reports),
+        "valid": all(report["valid"] for report in chapter_reports)
+        and known_token_percent_allowed
+        and stretch_token_percent_allowed,
         "known_words_path": str(Path(known_path)),
         "known_word_count": len(known_words),
         "personal_known_words_path": vocabulary.get("personal_known_words_path"),
@@ -717,7 +754,11 @@ def validate_book(
         "forbidden_unknown_token_frequency": dict(sorted(aggregate_unknown.items())),
         "core_coverage_percent": round(core_coverage_percent, 2),
         "known_token_percent": round(known_token_percent, 2),
+        "min_known_token_percent": min_known_token_percent,
+        "known_token_percent_allowed": known_token_percent_allowed,
         "stretch_token_percent": round(stretch_token_percent, 2),
+        "max_total_stretch_token_percent": max_total_stretch_token_percent,
+        "stretch_token_percent_allowed": stretch_token_percent_allowed,
         "unique_core_words_used": len({token for token in aggregate_unique if token_layers.get(token) == CORE_LAYER}),
         "unique_personal_known_words_used": len(
             {token for token in aggregate_unique if token_layers.get(token) == PERSONAL_KNOWN_LAYER}
@@ -1136,6 +1177,8 @@ def build_epub(
     book_specific_words_path: str | Path | None = None,
     proper_nouns_path: str | Path | None = None,
     extra_packs: Iterable[str | Path] | None = None,
+    min_known_token_percent: float | None = DEFAULT_MIN_KNOWN_TOKEN_PERCENT,
+    max_total_stretch_token_percent: float | None = DEFAULT_MAX_TOTAL_STRETCH_TOKEN_PERCENT,
     max_forbidden_unknown_tokens_per_chapter: int = DEFAULT_MAX_FORBIDDEN_UNKNOWN_TOKENS_PER_CHAPTER,
     remove_spaces: bool = True,
     include_validation_appendix: bool = True,
@@ -1159,13 +1202,31 @@ def build_epub(
         book_specific_words_path=book_specific_words_path,
         proper_nouns_path=proper_nouns_path,
         extra_packs=extra_packs,
+        min_known_token_percent=min_known_token_percent,
+        max_total_stretch_token_percent=max_total_stretch_token_percent,
         max_forbidden_unknown_tokens_per_chapter=max_forbidden_unknown_tokens_per_chapter,
     )
     if not validation["valid"]:
+        reasons = []
+        if validation["forbidden_unknown_tokens_over_limit"]:
+            reasons.append(
+                f"{validation['forbidden_unknown_tokens_over_limit']} forbidden unknown token(s) over the "
+                f"per-chapter limit of {validation['max_forbidden_unknown_tokens_per_chapter']}"
+            )
+        if not validation.get("known_token_percent_allowed", True):
+            reasons.append(
+                f"known-token share {validation['known_token_percent']}% below "
+                f"{validation['min_known_token_percent']}%"
+            )
+        if not validation.get("stretch_token_percent_allowed", True):
+            reasons.append(
+                f"approved non-core token share {validation['stretch_token_percent']}% above "
+                f"{validation['max_total_stretch_token_percent']}%"
+            )
+        if not reasons:
+            reasons.append("see vocabulary_report.json warnings")
         raise ValueError(
-            "Cannot build EPUB because vocabulary validation failed: "
-            f"{validation['forbidden_unknown_tokens_over_limit']} forbidden unknown token(s) over the "
-            f"per-chapter limit of {validation['max_forbidden_unknown_tokens_per_chapter']}"
+            "Cannot build EPUB because vocabulary validation failed: " + "; ".join(reasons)
         )
     quality_status = ensure_quality_approval(manuscript) if require_quality_approval else quality_approval_status(manuscript)
 
@@ -1240,7 +1301,10 @@ code { font-family: monospace; }
 <p>Vocabulary profile: <code>{validation.get('vocabulary_profile', 'public')}</code></p>
 <p>Personal known tokens: <code>{validation.get('personal_known_tokens', 0)}</code></p>
 <p>High-frequency character-compound tokens: <code>{validation.get('high_frequency_character_compound_tokens', 0)}</code></p>
+<p>Known-token percent: <code>{validation['known_token_percent']}</code></p>
+<p>Minimum known-token percent: <code>{validation['min_known_token_percent']}</code></p>
 <p>Stretch-token percent: <code>{validation['stretch_token_percent']}</code></p>
+<p>Maximum approved non-core token percent: <code>{validation['max_total_stretch_token_percent']}</code></p>
 <p>Unknown-token count: <code>{validation['unknown_token_count']}</code></p>
 <p>Allowed forbidden unknown tokens per chapter: <code>{validation['max_forbidden_unknown_tokens_per_chapter']}</code></p>
 <p>Forbidden unknown tokens over limit: <code>{validation['forbidden_unknown_tokens_over_limit']}</code></p>
@@ -1255,6 +1319,12 @@ code { font-family: monospace; }
         "unique_token_count": validation["unique_token_count"],
         "core_known_tokens": validation["core_known_tokens"],
         "vocabulary_profile": validation.get("vocabulary_profile", "public"),
+        "known_token_percent": validation.get("known_token_percent", 0),
+        "min_known_token_percent": validation.get("min_known_token_percent"),
+        "known_token_percent_allowed": validation.get("known_token_percent_allowed", True),
+        "stretch_token_percent": validation.get("stretch_token_percent", 0),
+        "max_total_stretch_token_percent": validation.get("max_total_stretch_token_percent"),
+        "stretch_token_percent_allowed": validation.get("stretch_token_percent_allowed", True),
         "learner_profile_name": validation.get("learner_profile_name"),
         "personal_known_tokens": validation.get("personal_known_tokens", 0),
         "personal_known_word_count": validation.get("personal_known_word_count", 0),
