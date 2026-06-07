@@ -80,7 +80,7 @@ https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/AG
 - Assuming validation quality equals literary quality.
 - Missing the extensive-reading vocabulary gate: default validation requires at least 98% known tokens and at most 2% approved non-core tokens.
 - Forgetting to pass stretch packs, `book_specific_words.txt`, and `proper_nouns.txt` when validating layered manuscripts.
-- Forgetting `--known-character-compounds --known-character-compound-limit 300` for Marcel personalized manuscripts that use the high-frequency character-compound layer.
+- Forgetting `--known-character-compounds --known-character-compound-limit 400` for Marcel personalized manuscripts that use the high-frequency character-compound layer.
 - Treating unknown-token allowance as a target. It is only breathing room.
 - Planning a new 林安 sequel before the previous accepted story has updated `series/an-lin/series_update_log.md`.
 - Leaving completed tracked work only in a local checkout. Remote writer agents read GitHub, so pushed commits are the handoff.

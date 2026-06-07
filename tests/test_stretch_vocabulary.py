@@ -11,6 +11,7 @@ from pathlib import Path
 from scripts.export_stretch_words_for_anki import FIELDS, export_candidates
 from scripts.novel_tools import (
     BUSINESS_ECONOMICS_LAYER,
+    DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT,
     GENERAL_FICTION_LAYER,
     GENRE_LAYER,
     JOURNALISM_CRIME_LAYER,
@@ -63,6 +64,9 @@ class StretchVocabularyTests(unittest.TestCase):
         for index, text in enumerate(chapter_texts, start=1):
             (chapters / f"chapter_{index:02d}.zh-tok.txt").write_text(text, encoding="utf-8")
         return chapters
+
+    def test_default_known_character_compound_limit_is_400(self) -> None:
+        self.assertEqual(DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT, 400)
 
     def layered_kwargs(self) -> dict:
         return {

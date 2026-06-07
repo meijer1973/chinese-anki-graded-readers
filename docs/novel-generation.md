@@ -27,7 +27,7 @@ For future expansion, change only the limit:
 
 ```powershell
 python scripts/sync_known_words.py --limit 2000
-python scripts/sync_known_words.py --limit 3000
+python scripts/sync_known_words.py --limit 4000
 python scripts/sync_known_words.py --limit 5000
 ```
 
@@ -68,7 +68,7 @@ Marcel personalized mode may also use a derived high-frequency character-compoun
 data/learner_profiles/marcel/high_frequency_characters.txt
 ```
 
-Enable it with `--known-character-compounds --known-character-compound-limit 300`. This starts conservatively with the first 300 ranked characters. Later increases should be small and reviewed.
+Enable it with `--known-character-compounds --known-character-compound-limit 400`. This starts conservatively with the first 400 ranked characters. Later increases should be small and reviewed.
 
 Do not merge personal-known words or high-frequency character compounds into `data/known_words.txt`. Validation reports count `personal_known_tokens` and `high_frequency_character_compound_tokens` separately from `core_known_tokens` and stretch tokens.
 
@@ -113,7 +113,7 @@ The default strict mode uses only `data/known_words.txt`. The richer controlled 
 
 - core known words: `data/known_words.txt`
 - learner-profile personal-known words: `data/learner_profiles/marcel/personal_known_words.txt`, enabled with `--personal-known` only for personalized readers
-- learner-profile high-frequency character compounds: `data/learner_profiles/marcel/high_frequency_characters.txt`, enabled with `--known-character-compounds --known-character-compound-limit 300` only for personalized readers
+- learner-profile high-frequency character compounds: `data/learner_profiles/marcel/high_frequency_characters.txt`, enabled with `--known-character-compounds --known-character-compound-limit 400` only for personalized readers
 - general fiction stretch words: `data/stretch_packs/general_fiction_100.txt`
 - genre stretch words: `data/stretch_packs/low_fantasy_150.txt`
 - setting stretch words: `data/stretch_packs/shanghai_setting_150.txt`
@@ -372,15 +372,15 @@ Use the same `--personal-known` and known-character-compound options consistentl
 ```powershell
 $personal = "data/learner_profiles/marcel/personal_known_words.txt"
 
-python scripts/validate_chapter.py --known data/known_words.txt --personal-known $personal --known-character-compounds --known-character-compound-limit 300 --chapter manuscripts/<slug>/chapters/chapter_01.zh-tok.txt --out manuscripts/<slug>/chapters/chapter_01.validation.json --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
+python scripts/validate_chapter.py --known data/known_words.txt --personal-known $personal --known-character-compounds --known-character-compound-limit 400 --chapter manuscripts/<slug>/chapters/chapter_01.zh-tok.txt --out manuscripts/<slug>/chapters/chapter_01.validation.json --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 
-python scripts/validate_book.py --known data/known_words.txt --personal-known $personal --known-character-compounds --known-character-compound-limit 300 --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
+python scripts/validate_book.py --known data/known_words.txt --personal-known $personal --known-character-compounds --known-character-compound-limit 400 --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 
-python scripts/generate_reports.py --manuscript manuscripts/<slug> --known data/known_words.txt --personal-known $personal --known-character-compounds --known-character-compound-limit 300 --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
+python scripts/generate_reports.py --manuscript manuscripts/<slug> --known data/known_words.txt --personal-known $personal --known-character-compounds --known-character-compound-limit 400 --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 
-python scripts/run_quality_gate.py --manuscript manuscripts/<slug> --known data/known_words.txt --personal-known $personal --known-character-compounds --known-character-compound-limit 300 --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
+python scripts/run_quality_gate.py --manuscript manuscripts/<slug> --known data/known_words.txt --personal-known $personal --known-character-compounds --known-character-compound-limit 400 --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 
-python scripts/build_epub.py --manuscript manuscripts/<slug> --title "<title>" --out manuscripts/<slug>/epub/<slug>.epub --report manuscripts/<slug>/epub/build_report.json --personal-known $personal --known-character-compounds --known-character-compound-limit 300 --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
+python scripts/build_epub.py --manuscript manuscripts/<slug> --title "<title>" --out manuscripts/<slug>/epub/<slug>.epub --report manuscripts/<slug>/epub/build_report.json --personal-known $personal --known-character-compounds --known-character-compound-limit 400 --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 ```
 
 ## Build EPUB
