@@ -65,8 +65,8 @@ class StretchVocabularyTests(unittest.TestCase):
             (chapters / f"chapter_{index:02d}.zh-tok.txt").write_text(text, encoding="utf-8")
         return chapters
 
-    def test_default_known_character_compound_limit_is_400(self) -> None:
-        self.assertEqual(DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT, 400)
+    def test_default_known_character_compound_limit_is_450(self) -> None:
+        self.assertEqual(DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT, 450)
 
     def layered_kwargs(self) -> dict:
         return {
@@ -212,7 +212,7 @@ class StretchVocabularyTests(unittest.TestCase):
 
     def test_low_fantasy_pack_is_loaded(self) -> None:
         vocab = load_layered_vocabulary(ROOT / "data" / "known_words.txt", genre_pack=ROOT / "data" / "stretch_packs" / "low_fantasy_150.txt")
-        self.assertEqual(vocab["token_layers"]["魔法"], GENRE_LAYER)
+        self.assertEqual(vocab["token_layers"]["幻想"], GENRE_LAYER)
 
     def test_low_fantasy_pack_has_150_non_core_words(self) -> None:
         fantasy_pack = ROOT / "data" / "stretch_packs" / "low_fantasy_150.txt"

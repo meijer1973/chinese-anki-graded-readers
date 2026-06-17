@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-05-30T21:17:24Z",
+  "generated_at": "2026-06-17T15:37:05Z",
   "profile_name": "marcel",
   "profile_dir": "data\\learner_profiles\\marcel",
   "source_tsv_path": "data\\learner_profiles\\marcel\\personal_known_words.tsv",
@@ -18,7 +18,7 @@
     "personal_known_is_not_stretch": true
   },
   "word_count": 1647,
-  "generated_personal_known_word_count": 1218,
+  "generated_personal_known_word_count": 1056,
   "words": [
     {
       "word": "一分",
@@ -150,9 +150,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 10,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -210,9 +210,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 14,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -243,7 +243,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "上次",
@@ -363,7 +363,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "不少",
@@ -510,9 +510,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 34,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -780,9 +780,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 52,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -825,9 +825,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 55,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -1248,7 +1248,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "亲人",
@@ -1398,7 +1398,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "人选",
@@ -1455,9 +1455,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 97,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -1485,9 +1485,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 99,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -1560,9 +1560,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 104,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -1653,7 +1653,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "伊",
@@ -1695,9 +1695,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 113,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -1713,7 +1713,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "会员",
@@ -1803,7 +1803,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "伤口",
@@ -1815,9 +1815,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 121,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -1935,9 +1935,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 129,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -1953,7 +1953,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "你家",
@@ -2070,9 +2070,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 138,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -2088,7 +2088,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "保留",
@@ -2205,9 +2205,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 147,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -2223,7 +2223,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "假",
@@ -2628,7 +2628,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "公众",
@@ -2718,7 +2718,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "公民",
@@ -2748,7 +2748,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "公里",
@@ -2790,9 +2790,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 186,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -2835,9 +2835,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 189,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -3255,9 +3255,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 217,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -3300,9 +3300,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 220,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -3390,9 +3390,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 226,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -3510,9 +3510,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 234,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -3615,9 +3615,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 241,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -3675,9 +3675,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 245,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -3753,7 +3753,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "剧",
@@ -3888,7 +3888,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "劲",
@@ -3945,9 +3945,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 263,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -4053,7 +4053,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "医学",
@@ -4140,9 +4140,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 276,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -4155,9 +4155,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 277,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -4305,9 +4305,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 287,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -4323,7 +4323,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "卫星",
@@ -4350,9 +4350,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 290,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -4395,9 +4395,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 293,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -4668,7 +4668,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "发送",
@@ -4755,9 +4755,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 317,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -4803,7 +4803,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "古",
@@ -4920,9 +4920,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 328,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -5055,9 +5055,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 337,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -5073,7 +5073,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "各种",
@@ -5100,9 +5100,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 340,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -5148,7 +5148,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "合法",
@@ -5163,7 +5163,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "同一个",
@@ -5190,9 +5190,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 346,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -5403,7 +5403,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "周五",
@@ -5868,7 +5868,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "啤酒",
@@ -5910,9 +5910,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 394,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -6078,7 +6078,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "团队",
@@ -6090,9 +6090,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 406,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -6240,9 +6240,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 416,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -6258,7 +6258,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "地址",
@@ -6333,7 +6333,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "地面",
@@ -6495,9 +6495,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 433,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -6525,9 +6525,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 435,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -6540,9 +6540,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 436,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -6633,7 +6633,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "多谢",
@@ -6678,7 +6678,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "夜班",
@@ -6813,7 +6813,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "大脑",
@@ -6825,9 +6825,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 455,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -6840,9 +6840,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 456,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -6885,9 +6885,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 459,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -6990,9 +6990,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 466,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -7080,9 +7080,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 472,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -7290,9 +7290,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 486,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -7308,7 +7308,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "好玩",
@@ -7623,7 +7623,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "安全",
@@ -7740,9 +7740,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 516,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -7905,9 +7905,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 527,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -8085,9 +8085,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 539,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -8115,9 +8115,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 541,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -8463,7 +8463,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "尸",
@@ -8475,9 +8475,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 565,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -8550,9 +8550,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 570,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -8598,7 +8598,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "屏幕",
@@ -8688,7 +8688,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "左",
@@ -8745,9 +8745,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 583,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -8793,7 +8793,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "市长",
@@ -8808,7 +8808,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "帅",
@@ -8910,9 +8910,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 594,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -8940,9 +8940,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 596,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -8955,9 +8955,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 597,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -9093,7 +9093,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "年代",
@@ -9120,9 +9120,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 608,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -9135,9 +9135,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 609,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -9198,7 +9198,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "幻觉",
@@ -9273,7 +9273,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "库",
@@ -9300,9 +9300,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 620,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -9330,9 +9330,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 622,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -9405,9 +9405,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 627,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -9453,7 +9453,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "开火",
@@ -9600,9 +9600,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 640,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -9630,9 +9630,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 642,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -9723,7 +9723,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "待会儿",
@@ -9798,7 +9798,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "德",
@@ -9825,9 +9825,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 655,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -10020,9 +10020,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 668,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -10083,7 +10083,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "性",
@@ -10125,9 +10125,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 675,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -10188,7 +10188,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "恐怕",
@@ -10248,7 +10248,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "情人",
@@ -10350,9 +10350,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 690,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -10485,9 +10485,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 699,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -10770,9 +10770,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 718,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -10860,9 +10860,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 724,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -10923,7 +10923,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "打球",
@@ -10965,9 +10965,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 731,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -11163,7 +11163,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "抛",
@@ -11205,9 +11205,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 747,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -11235,9 +11235,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 749,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -11310,9 +11310,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 754,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -11403,7 +11403,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "拖",
@@ -11640,9 +11640,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 776,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -11730,9 +11730,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 782,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -11775,9 +11775,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 785,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -11865,9 +11865,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 791,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -11883,7 +11883,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "搬家",
@@ -11970,9 +11970,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 798,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -12000,9 +12000,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 800,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -12138,7 +12138,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "政府",
@@ -12168,7 +12168,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "故意",
@@ -12300,9 +12300,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 820,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -12765,9 +12765,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 851,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -12795,9 +12795,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 853,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -12855,9 +12855,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 857,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -13020,9 +13020,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 868,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -13185,9 +13185,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 879,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -13500,9 +13500,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 900,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -13518,7 +13518,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "杀",
@@ -13635,9 +13635,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 909,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -13893,7 +13893,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "样",
@@ -13935,9 +13935,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 929,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -14013,7 +14013,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "梦游",
@@ -14103,7 +14103,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "楼",
@@ -14163,7 +14163,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "欢乐",
@@ -14370,9 +14370,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 958,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -14493,7 +14493,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "水平",
@@ -14628,7 +14628,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "没事",
@@ -14673,7 +14673,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "油",
@@ -14685,9 +14685,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 979,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -14850,9 +14850,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 990,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -15093,7 +15093,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "温暖",
@@ -15108,7 +15108,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "渴望",
@@ -15180,9 +15180,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1012,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -15195,9 +15195,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1013,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -15285,9 +15285,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1019,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -15375,9 +15375,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1025,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -15390,9 +15390,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1026,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -15540,9 +15540,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1036,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -15630,9 +15630,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1042,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -15810,9 +15810,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1054,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -15855,9 +15855,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1057,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -15873,7 +15873,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "犯罪现场",
@@ -16065,9 +16065,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1071,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -16143,7 +16143,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "班",
@@ -16248,7 +16248,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "生命",
@@ -16335,9 +16335,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1089,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -16383,7 +16383,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "电池",
@@ -16620,9 +16620,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1108,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -16650,9 +16650,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1110,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -16773,7 +16773,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "盒",
@@ -16800,9 +16800,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1120,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -16980,9 +16980,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1132,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -17013,7 +17013,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "眼",
@@ -17043,7 +17043,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "眼泪",
@@ -17073,7 +17073,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "眼里",
@@ -17175,9 +17175,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1145,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -17385,9 +17385,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1159,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -17448,7 +17448,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "祝贺",
@@ -17475,9 +17475,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1165,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -17490,9 +17490,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1166,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -17580,9 +17580,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1172,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -17655,9 +17655,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1177,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -17703,7 +17703,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "稳定",
@@ -17760,9 +17760,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1184,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -17790,9 +17790,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1186,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -17823,7 +17823,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "窗外",
@@ -17838,7 +17838,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "窗户",
@@ -17850,9 +17850,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1190,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -17913,7 +17913,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "笑话",
@@ -17925,9 +17925,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1195,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -17955,9 +17955,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1197,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -18093,7 +18093,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "箱",
@@ -18120,9 +18120,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1208,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -18135,9 +18135,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1209,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -18345,9 +18345,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1223,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -18420,9 +18420,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1228,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -18555,9 +18555,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1237,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -18678,7 +18678,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "网络",
@@ -18693,7 +18693,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "罗",
@@ -18750,9 +18750,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1250,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -18795,9 +18795,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1253,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -18813,7 +18813,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "老公",
@@ -18978,7 +18978,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "聊",
@@ -19110,9 +19110,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1274,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -19275,9 +19275,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1285,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -19320,9 +19320,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1288,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -19365,9 +19365,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1291,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -19413,7 +19413,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "自动",
@@ -19488,7 +19488,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "舌头",
@@ -19545,9 +19545,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1303,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -19575,9 +19575,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1305,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -19590,9 +19590,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1306,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -19635,9 +19635,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1309,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -19755,9 +19755,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1317,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -19890,9 +19890,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1326,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -20040,9 +20040,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1336,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -20103,7 +20103,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "表面",
@@ -20343,7 +20343,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "观看",
@@ -20370,9 +20370,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1358,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -20430,9 +20430,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1362,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -20553,7 +20553,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "警告",
@@ -20583,7 +20583,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "警方",
@@ -20928,7 +20928,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "话",
@@ -21213,7 +21213,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "财富",
@@ -21255,9 +21255,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1417,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -21273,7 +21273,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "贴",
@@ -21465,9 +21465,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1431,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -21630,9 +21630,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1442,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -21690,9 +21690,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1446,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -21840,9 +21840,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1456,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -21858,7 +21858,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "车站",
@@ -21873,7 +21873,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "转移",
@@ -22125,9 +22125,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1475,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -22305,9 +22305,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1487,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -22335,9 +22335,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1489,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -22410,9 +22410,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1494,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -22470,9 +22470,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1498,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -22563,7 +22563,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "速",
@@ -22590,9 +22590,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1506,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -22605,9 +22605,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1507,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -22773,7 +22773,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "郎",
@@ -22815,9 +22815,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1521,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -23103,7 +23103,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "银行",
@@ -23178,7 +23178,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "长大",
@@ -23250,9 +23250,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1550,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -23310,9 +23310,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1554,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -23595,9 +23595,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1573,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -23760,9 +23760,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1584,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -23880,9 +23880,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1592,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -23943,7 +23943,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "领带",
@@ -24105,9 +24105,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1607,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -24138,7 +24138,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "饮料",
@@ -24165,9 +24165,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1611,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -24240,9 +24240,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1616,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -24270,9 +24270,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1618,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -24375,9 +24375,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1625,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -24450,9 +24450,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1630,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -24510,9 +24510,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1634,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -24690,9 +24690,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1646,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -24723,7 +24723,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     }
   ]
 }

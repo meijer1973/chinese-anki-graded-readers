@@ -1,6 +1,6 @@
 # GitHub Agent File Index - Chinese Anki And Graded Readers
 
-Generated: 2026-06-05T19:26:39Z
+Generated: 2026-06-17T15:37:48Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 

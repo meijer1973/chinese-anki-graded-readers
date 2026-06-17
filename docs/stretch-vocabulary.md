@@ -12,7 +12,7 @@ Do not use random unknown words. Prefer exact known tokens. Stretch, book-specif
 
 - Core known words: `data/known_words.txt`
 - Personal known words: `data/learner_profiles/marcel/personal_known_words.txt`, enabled only with `--personal-known`
-- High-frequency character compounds: `data/learner_profiles/marcel/high_frequency_characters.txt`, enabled only for Marcel personalized readers with `--known-character-compounds --known-character-compound-limit 400`
+- High-frequency character compounds: `data/learner_profiles/marcel/high_frequency_characters.txt`, enabled only for Marcel personalized readers with `--known-character-compounds --known-character-compound-limit 450`
 - General fiction: `data/stretch_packs/general_fiction_100.txt`
 - Low fantasy: `data/stretch_packs/low_fantasy_150.txt`
 - Shanghai setting: `data/stretch_packs/shanghai_setting_150.txt`
@@ -37,7 +37,7 @@ This pack is intentionally genre-neutral. It should help a writer vary scenes wi
 
 ## Journalism / Crime Pack
 
-Use `journalism_crime_50.txt` for 林安-style stories where the protagonist is a journalist or crime reporter. It adds durable terms such as `采访`, `报道`, `文章`, `编辑`, `来源`, `文件`, `案件`, `嫌犯`, `证人`, `动机`, `警察局`, `跟踪`, `观察`, `确认`, and `保密`.
+Use `journalism_crime_50.txt` for 林安-style stories where the protagonist is a journalist or crime reporter. It adds durable terms such as `采访`, `在场`, `审判`, `文章`, `编辑`, `来源`, `作证`, `嫌犯`, `被告`, `动机`, `警察局`, `人质`, `观察`, `观点`, and `保密`.
 
 This pack should make scenes possible, not merely decorate them. A chapter using it should show at least one real journalism or crime function: interviewing, confirming a source, protecting a witness, deciding whether to publish, following a suspect, comparing testimony, or checking files.
 
@@ -115,14 +115,14 @@ Use layered validation:
 python scripts/validate_book.py --known data/known_words.txt --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 ```
 
-Add `--personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 400` for Marcel personalized readers. Omit those flags for public graded-reader mode.
+Add `--personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 450` for Marcel personalized readers. Omit those flags for public graded-reader mode.
 
 The report counts tokens by layer, forbidden unknowns, forbidden unknowns over the per-chapter limit, known-token coverage, personal-known token use, high-frequency character-compound token use, approved non-core/stretch-token share, stretch words used once, stretch words by chapter, and new stretch words by chapter. Default validation fails below 98% known tokens or above 2% approved non-core tokens.
 
 Use `scripts/plot_affordance_report.py` before planning a case-heavy premise:
 
 ```powershell
-python scripts/plot_affordance_report.py --known data/known_words.txt --packs data/stretch_packs/general_fiction_100.txt data/stretch_packs/low_fantasy_150.txt data/stretch_packs/shanghai_setting_150.txt data/stretch_packs/journalism_crime_50.txt --required 采访 文章 编辑 来源 嫌犯 证人 动机 --out manuscripts/<slug>/quality/plot_affordance_report.json
+python scripts/plot_affordance_report.py --known data/known_words.txt --packs data/stretch_packs/general_fiction_100.txt data/stretch_packs/low_fantasy_150.txt data/stretch_packs/shanghai_setting_150.txt data/stretch_packs/journalism_crime_50.txt --required 采访 文章 编辑 来源 嫌犯 作证 动机 --out manuscripts/<slug>/quality/plot_affordance_report.json
 ```
 
 This report classifies the available vocabulary into story affordance categories such as action verbs, crime nouns, evidence nouns, journalism nouns, movement/location words, conflict verbs, fantasy mechanism words, and dialogue alternatives. It is planning evidence, not an acceptance gate.

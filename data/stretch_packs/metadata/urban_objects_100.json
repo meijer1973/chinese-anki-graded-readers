@@ -260,16 +260,16 @@
       "recommended_repetition_count": 3
     },
     {
-      "word": "钟",
-      "pinyin": "zhong1",
-      "english": "handleless cup; goblet; (bound form) to concentrate (one's affection etc); a (large) bell (CL:架[jia4]); clock (CL:座[zuo4]); amount of time; o'clock (CL:點|点[dian3],分[fen1],秒[miao3]) (as in 三點",
+      "word": "椅子",
+      "pinyin": "yi3 zi5",
+      "english": "chair",
       "part_of_speech": "urban object",
       "pack": "urban_objects_100",
       "priority": 2,
       "notes": "Generated starter metadata for urban_objects_100; review during future curation.",
-      "example_zh_tok": "林安 看到 一个 钟 。",
-      "example_zh_natural": "林安看到一个钟。",
-      "example_en": "Lin An sees a 钟.",
+      "example_zh_tok": "林安 看到 一个 椅子 。",
+      "example_zh_natural": "林安看到一个椅子。",
+      "example_en": "Lin An sees a 椅子.",
       "story_affordance": "Adds concrete objects for clues, movement, or atmosphere.",
       "difficulty_note": "Starter metadata; verify nuance before promoting this word into the core known list.",
       "recommended_repetition_count": 3

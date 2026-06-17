@@ -70,7 +70,7 @@ python scripts/profile_adaptation_vocabulary.py `
   --known data/known_words.txt `
   --personal-known data/learner_profiles/marcel/personal_known_words.txt `
   --known-character-compounds `
-  --known-character-compound-limit 400 `
+  --known-character-compound-limit 450 `
   --general-fiction-pack data/stretch_packs/general_fiction_100.txt `
   --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt
 ```
@@ -178,7 +178,7 @@ python scripts/run_quality_gate.py `
   --known data/known_words.txt `
   --personal-known data/learner_profiles/marcel/personal_known_words.txt `
   --known-character-compounds `
-  --known-character-compound-limit 400 `
+  --known-character-compound-limit 450 `
   --require-source-fidelity
 ```
 

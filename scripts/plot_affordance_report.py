@@ -28,6 +28,7 @@ CATEGORIES: dict[str, set[str]] = {
         "发布",
         "发表",
         "报警",
+        "作证",
     },
     "emotion_words": {
         "爱",
@@ -55,6 +56,11 @@ CATEGORIES: dict[str, set[str]] = {
         "凶器",
         "警方",
         "警察局",
+        "谋杀案",
+        "被告",
+        "人质",
+        "车祸",
+        "警报",
     },
     "evidence_nouns": {
         "证据",
@@ -71,6 +77,7 @@ CATEGORIES: dict[str, set[str]] = {
         "血迹",
         "痕迹",
         "证词",
+        "签名",
     },
     "journalism_nouns": {
         "采访",
@@ -85,6 +92,12 @@ CATEGORIES: dict[str, set[str]] = {
         "网站",
         "记者",
         "线人",
+        "在场",
+        "审判",
+        "联络",
+        "网络",
+        "观点",
+        "通话",
     },
     "movement_location_words": {
         "上海",
@@ -133,6 +146,10 @@ CATEGORIES: dict[str, set[str]] = {
         "保密",
         "举报",
         "透露",
+        "合法",
+        "辩护",
+        "证实",
+        "表明",
     },
     "fantasy_mechanism_words": {
         "雨票",

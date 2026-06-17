@@ -26,7 +26,7 @@ The validator distinguishes these layers:
 
 - core known words from `data/known_words.txt`
 - learner-profile personal-known words, such as `data/learner_profiles/marcel/personal_known_words.txt`
-- learner-profile high-frequency character compounds, such as Marcel's top 400 ranked characters in `data/learner_profiles/marcel/high_frequency_characters.txt`
+- learner-profile high-frequency character compounds, such as Marcel's top 450 ranked characters in `data/learner_profiles/marcel/high_frequency_characters.txt`
 - general fiction stretch words
 - genre stretch words
 - setting stretch words
@@ -37,13 +37,13 @@ The validator distinguishes these layers:
 - proper nouns
 - forbidden unknown tokens
 
-Do not move from controlled vocabulary to random leakage. The policy is `0 invisible unknown words`: every unknown is counted, reported, and reviewed, but each chapter may keep up to 5 forbidden unknown tokens when that preserves better prose or a necessary idea. Extensive reading is the default: validation fails when known-token coverage is below 98% or approved non-core token share is above 2%. Approved personal-known words are allowed only when the manuscript is explicitly built in a learner-profile mode such as Marcel personalized mode. Marcel personalized mode may also enable the auditable high-frequency character-compound layer with `--known-character-compounds --known-character-compound-limit 400`; this counts tokens made only from the first 400 ranked characters as `high_frequency_character_compound`, not as core, stretch, or invisible unknowns. Approved stretch words are allowed when they are listed in the configured pack, manuscript `book_specific_words.txt`, or manuscript `proper_nouns.txt`, but they must stay within the 2% approved non-core ceiling unless the user explicitly chooses a non-extensive-reading diagnostic mode. Proper nouns do not spend the five-token unknown budget when listed in `proper_nouns.txt`, but they count as approved non-core tokens for the 2% ceiling. If a token appears in both core and another layer, count it as core. If a token appears in personal-known and stretch, count it as personal-known.
+Do not move from controlled vocabulary to random leakage. The policy is `0 invisible unknown words`: every unknown is counted, reported, and reviewed, but each chapter may keep up to 5 forbidden unknown tokens when that preserves better prose or a necessary idea. Extensive reading is the default: validation fails when known-token coverage is below 98% or approved non-core token share is above 2%. Approved personal-known words are allowed only when the manuscript is explicitly built in a learner-profile mode such as Marcel personalized mode. Marcel personalized mode may also enable the auditable high-frequency character-compound layer with `--known-character-compounds --known-character-compound-limit 450`; this counts tokens made only from the first 450 ranked characters as `high_frequency_character_compound`, not as core, stretch, or invisible unknowns. Approved stretch words are allowed when they are listed in the configured pack, manuscript `book_specific_words.txt`, or manuscript `proper_nouns.txt`, but they must stay within the 2% approved non-core ceiling unless the user explicitly chooses a non-extensive-reading diagnostic mode. Proper nouns do not spend the five-token unknown budget when listed in `proper_nouns.txt`, but they count as approved non-core tokens for the 2% ceiling. If a token appears in both core and another layer, count it as core. If a token appears in personal-known and stretch, count it as personal-known.
 
 ### Personal-Known Learner Profiles
 
-Keep personal-known vocabulary separate from the ranked frequency list. `data/known_words.txt` remains frequency-core; `data/learner_profiles/marcel/personal_known_words.txt` is a generated validator allowlist for words Marcel already recognizes. `data/learner_profiles/marcel/high_frequency_characters.txt` is a ranked character source for the derived high-frequency character-compound layer; start with the first 400 characters and increase only in small reviewed steps. Hand-edit `data/learner_profiles/marcel/personal_known_words.tsv`, then regenerate the `.txt`, metadata, and audit files with `scripts/sync_personal_known_words.py`.
+Keep personal-known vocabulary separate from the ranked frequency list. `data/known_words.txt` remains frequency-core; `data/learner_profiles/marcel/personal_known_words.txt` is a generated validator allowlist for words Marcel already recognizes. `data/learner_profiles/marcel/high_frequency_characters.txt` is a ranked character source for the derived high-frequency character-compound layer; start with the first 450 characters and increase only in small reviewed steps. Hand-edit `data/learner_profiles/marcel/personal_known_words.tsv`, then regenerate the `.txt`, metadata, and audit files with `scripts/sync_personal_known_words.py`.
 
-Use public mode for general graded readers: core known words plus approved stretch packs under the 98% known / 2% approved non-core default. Use Marcel personalized mode only when requested or when the project config says so: core known words plus `--personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 400` plus approved stretch packs. Reports must keep `personal_known_tokens` and `high_frequency_character_compound_tokens` separate from core and stretch tokens; these personalized layers count toward known-token coverage for Marcel, not toward stretch load.
+Use public mode for general graded readers: core known words plus approved stretch packs under the 98% known / 2% approved non-core default. Use Marcel personalized mode only when requested or when the project config says so: core known words plus `--personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 450` plus approved stretch packs. Reports must keep `personal_known_tokens` and `high_frequency_character_compound_tokens` separate from core and stretch tokens; these personalized layers count toward known-token coverage for Marcel, not toward stretch load.
 
 ### Creative Quality
 
@@ -114,7 +114,7 @@ Use the minimal-intervention cascade: classify proper nouns and personal-known w
 - `downloads/`, `SUBTLEX-CH-CHR/`, and `SUBTLEX-CH-WF/` are source/reference data directories.
 - `data/known_words.txt` is the active machine-readable known-word list for restricted-vocabulary fiction. It is generated from the ranked source list by `scripts/sync_known_words.py`.
 - `data/learner_profiles/marcel/` contains Marcel's personal-known learner profile. Use `personal_known_words.tsv` as the editable source and `personal_known_words.txt` as the generated validator layer.
-- `data/learner_profiles/marcel/high_frequency_characters.txt` contains Marcel's ranked known-character source for the optional `--known-character-compounds` layer; current default limit is 400.
+- `data/learner_profiles/marcel/high_frequency_characters.txt` contains Marcel's ranked known-character source for the optional `--known-character-compounds` layer; current default limit is 450.
 - `series/an-lin/` contains the living series memory package for the 林安 journalist urban-fantasy crime series: bible, chronology, character registry, mechanism registry, open threads, recurring objects/locations, sequel constraints, and update log.
 - `data/stretch_packs/journalism_crime_50.txt` contains reviewed journalism/crime stretch words for 林安-style crime reporting stories.
 - `data/stretch_packs/business_economics_60.txt` contains reviewed business/economics stretch words for concrete shops, money, prices, customers, costs, risk, and simple market-decision stories. Pass it with `--extra-pack`.
@@ -190,7 +190,7 @@ Default workflow:
 
 ```powershell
 $env:PYTHONIOENCODING='utf-8'
-python scripts/sync_known_words.py --limit 1700
+python scripts/sync_known_words.py --limit 2000
 python scripts/validate_chapter.py --known data/known_words.txt --chapter manuscripts/<slug>/chapters/chapter_01.zh-tok.txt --out manuscripts/<slug>/chapters/chapter_01.validation.json
 python scripts/validate_book.py --known data/known_words.txt --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json
 python scripts/run_quality_gate.py --manuscript manuscripts/<slug> --known data/known_words.txt
@@ -203,7 +203,7 @@ For accepted 林安 series manuscripts, update `series/an-lin/` after the EPUB s
 python scripts/check_series_memory_update.py --manuscript manuscripts/<slug> --series-dir series/an-lin --require-epub-build
 ```
 
-For Marcel personalized mode, add `--personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 400` to validation, quality-gate, report-generation, and EPUB commands.
+For Marcel personalized mode, add `--personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 450` to validation, quality-gate, report-generation, and EPUB commands.
 
 For future known-word expansion, regenerate `data/known_words.txt` with a larger `--limit` such as `2000`, `3000`, or `5000`; the validators and manuscript layout do not change.
 

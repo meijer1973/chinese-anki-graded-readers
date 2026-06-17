@@ -9,7 +9,7 @@
   "baseline_notes": "Quality comes first. Do not add text solely to meet a word, chapter, vocabulary coverage, or stretch-word target.",
   "writing_mode": "outline-first",
   "known_words_path": "data/known_words.txt",
-  "known_word_limit": 1700,
+  "known_word_limit": 2000,
   "learner_profile": {
     "mode": "public",
     "profile_name": null,
@@ -19,19 +19,19 @@
       "profile_name": "marcel",
       "personal_known_words_path": "data/learner_profiles/marcel/personal_known_words.txt",
       "known_character_compounds_path": "data/learner_profiles/marcel/high_frequency_characters.txt",
-      "known_character_compound_limit": 400,
+      "known_character_compound_limit": 450,
       "sync_source_tsv": "data/learner_profiles/marcel/personal_known_words.tsv",
       "audit_path": "data/learner_profiles/marcel/personal_known_audit.json"
     },
-    "policy": "Public mode omits personal-known words and derived character compounds. Marcel personalized mode enables --personal-known plus --known-character-compounds --known-character-compound-limit 400 and reports personal_known_tokens and high_frequency_character_compound_tokens separately from core and stretch."
+    "policy": "Public mode omits personal-known words and derived character compounds. Marcel personalized mode enables --personal-known plus --known-character-compounds --known-character-compound-limit 450 and reports personal_known_tokens and high_frequency_character_compound_tokens separately from core and stretch."
   },
   "vocabulary_policy": {
     "core_known_words_path": "data/known_words.txt",
     "personal_known_words_path": null,
     "personal_known_usage": "Set to data/learner_profiles/marcel/personal_known_words.txt only for Marcel personalized readers; pass it to scripts with --personal-known.",
     "known_character_compounds_path": null,
-    "known_character_compounds_usage": "Set to data/learner_profiles/marcel/high_frequency_characters.txt only for Marcel personalized readers; pass it with --known-character-compounds and keep the current limit at 400 until reviewed.",
-    "known_character_compound_limit": 400,
+    "known_character_compounds_usage": "Set to data/learner_profiles/marcel/high_frequency_characters.txt only for Marcel personalized readers; pass it with --known-character-compounds and keep the current limit at 450 until reviewed.",
+    "known_character_compound_limit": 450,
     "general_fiction_pack": "data/stretch_packs/general_fiction_100.txt",
     "genre_pack": "data/stretch_packs/low_fantasy_150.txt",
     "setting_pack": "data/stretch_packs/shanghai_setting_150.txt",

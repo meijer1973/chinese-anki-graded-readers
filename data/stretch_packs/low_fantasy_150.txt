@@ -1,10 +1,10 @@
 # Easy low-fantasy / urban-fantasy stretch words.
 # Reusable fantasy terms for one strange object, one hidden rule, one secret place, or one small supernatural danger.
-魔法
+幻想
 灵气
 符
 咒语
-鬼魂
+龙
 精怪
 妖怪
 幻影
@@ -18,7 +18,7 @@
 夜行
 预言
 诅咒
-神秘
+公主
 梦境
 镜中
 门后
@@ -125,7 +125,7 @@
 野兽
 巨兽
 妖兽
-怪物
+剑
 复活
 轮回
 转世
