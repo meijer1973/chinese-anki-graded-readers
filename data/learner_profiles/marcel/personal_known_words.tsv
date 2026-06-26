@@ -17,7 +17,9 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 上次	shang4 ci4	last time	lingqs (7).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 上车	shang4 che1	to get on or into (a bus, train, car etc)	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 下次	xia4 ci4	next time	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
-不仅仅	bu4 jin3 jin3	not only; not just	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+不仅	bu4 jin3	not just; not limited to; (as a correlative conjunction) not only (..., but also ...)	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+不仅仅	bu4 jin3 jin3	not only; not just	chinese_words_from_lingqs 2000-3000.md; manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+不免	bu4 mian3	inevitably	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 不准	bu4 zhun3	not to allow; to forbid; to prohibit	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 不够	bu4 gou4	not enough; insufficient; inadequate	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 不妙	bu4 miao4	(of a turn of events) not too encouraging; far from good; anything but reassuring	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
@@ -54,6 +56,7 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 主席	zhu3 xi2	chairperson; premier; chairman	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 主要	zhu3 yao4	main; principal; major; primary	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 举	ju3	to lift; to hold up; to cite; to enumerate; to act	lingqs (7).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+乃至	nai3 zhi4	and even; to go so far as to	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 之	zhi1	(possessive particle, literary equivalent of 的[de5]); him; her; it	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 之下	zhi1 xia4	under; beneath; less than	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 之内	zhi1 nei4	inside; within	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
@@ -105,6 +108,9 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 代替	dai4 ti4	to replace; to take the place of	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 令	ling4	used in 脊令[ji2 ling2]; used in 令狐[Ling2 hu2]; to order; to command; an order	personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 以上	yi3 shang4	that level or higher; that amount or more; the above-mentioned; (used to indicate that one has completed one's remarks) That is all.	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+以便	yi3 bian4	so that; so as to; in order to	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+以免	yi3 mian3	in order to avoid; so as not to	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+以致	yi3 zhi4	to such an extent as to; down to; up to	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 价钱	jia4 qian2	price	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 任	ren4	to assign; to appoint; to take up a post; office; responsibility	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 企业	qi3 ye4	company; firm; enterprise; corporation	personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
@@ -129,6 +135,8 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 作品	zuo4 pin3	work (of art); opus	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 作家	zuo4 jia1	author	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 你家	ni3 jia1		chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+例如	li4 ru2	for example; for instance; such as	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+依据	yi1 ju4	according to; basis; foundation	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 依靠	yi1 kao4	to rely on sth (for support etc); to depend on	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 侧	ce4	the side; to incline towards; to lean; inclined; lateral	chinese_words_from_lingqs 3000-4000.md; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 保	bao3	Bulgaria (abbr. for 保加利亞|保加利亚[Bao3 jia1 li4 ya4]); to defend; to protect; to keep; to guarantee; to ensure; (old) civil administration unit in the baojia 保甲[bao3 jia3] system	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
@@ -145,8 +153,10 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 修好	xiu1 hao3	to repair (sth broken); to restore (sth damaged); to establish friendly relations with; (literary) to do meritorious deeds	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 俱乐部	ju4 le4 bu4	(loanword) club (the organization or its premises)	lingqs (8).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 倍	bei4	(two, three etc) -fold; times (multiplier); double; to increase or multiply	lingqs (7).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+倘若	tang3 ruo4	if; supposing; in case	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 借口	jie4 kou3	to use as an excuse; excuse; pretext	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 假	jia3	used in 假掰[gei1 bai1]; fake; false; artificial; to borrow	personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+假如	jia3 ru2	if	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 做梦	zuo4 meng4	to dream; to have a dream; (fig.) to indulge in wishful thinking	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 做法	zuo4 fa3	way of handling sth; method for making; work method; recipe; practice	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 停下	ting2 xia4	to stop	lingqs (8).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
@@ -159,6 +169,7 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 傻瓜	sha3 gua1	idiot; fool	lingqs (8).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 充满	chong1 man3	full of; brimming with; very full; permeated	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 免	mian3	to excuse sb; to exempt; to remove or dismiss from office; to avoid; to avert	chinese_words_from_lingqs 3000-4000.md; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+免得	mian3 de5	so as not to; so as to avoid	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 免费	mian3 fei4	free (of charge)	lingqs (7).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 兔子	tu4 zi5	hare; rabbit	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 党	dang3	party; association; club; society	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
@@ -211,10 +222,12 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 冲动	chong1 dong4	to have an urge; to be impetuous; impulse; urge	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 冲突	chong1 tu1	conflict; to conflict; clash of opposing forces; collision (of interests); contention	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 决赛	jue2 sai4	finals (of a competition)	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+况且	kuang4 qie3	moreover; besides; in addition; furthermore	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 冷	leng3	cold	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 准备	zhun3 bei4	preparation; to prepare; to intend; to be about to; reserve (fund)	personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 准时	zhun3 shi2	on time; punctual; on schedule	chinese_words_from_lingqs 3000-4000.md; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 凭	ping2	to lean against; to rely on; on the basis of; no matter (how, what etc); proof	lingqs (8).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+凭借	ping2 jie4	to rely on; to depend on; by means of; thanks to; sth that one relies on	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 出名	chu1 ming2	well-known for sth; to become well known; to make one's mark; to lend one's name (to an event, endeavor etc)	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 出生	chu1 sheng1	to be born	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 出租车	chu1 zu1 che1	taxi	lingqs (7).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
@@ -290,6 +303,7 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 印	yin4	to print; to mark; to engrave; a seal; a print	lingqs (7).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 印象	yin4 xiang4	impression (sth that stays in one's mind); a memory	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 危机	wei1 ji1	crisis	chinese_words_from_lingqs 2000-3000.md; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+即便	ji2 bian4	even if; even though; right away; immediately	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 卷	juan3	to roll up; (fig.) to sweep up; to engulf; to drag into (a situation); (slang) to compete to an unhealthy degree; hypercompetitive; a roll; scroll	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 厂	chang3	"""cliff"" radical in Chinese characters (Kangxi radical 27), occurring in 原, 历, 压 etc; factory; yard; depot; workhouse"	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 厉害	li4 hai4	(used to describe sb or sth that makes a very strong impression, whether favorable or unfavorable) terrible; intense; severe; devastating; amazing; awesome; outstanding; (of a person) stern	lingqs (7).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
@@ -303,6 +317,7 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 参议员	can1 yi4 yuan2	senator	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 双手	shuang1 shou3	both hands	personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 反	fan3	contrary; in reverse; inside out or upside down; to reverse; to return	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+反倒	fan3 dao4	(coll.) but on the contrary; but instead	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 发出	fa1 chu1	to issue (an order, decree etc); to send out; to dispatch; to produce (a sound); to let out (a laugh)	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 发射	fa1 she4	to shoot (a projectile); to fire (a rocket); to launch; to emit (a particle); to discharge	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 发展	fa1 zhan3	development; growth; to develop; to grow; to expand	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
@@ -322,6 +337,7 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 古巴	gu3 ba1	Cuba	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 古怪	gu3 guai4	strange; weird; eccentric; bizarre	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 古老	gu3 lao3	ancient; old; age-old	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+另一方面	ling4 yi4 fang1 mian4	on the other hand; another aspect	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 只不过	zhi3 bu4 guo4	only; merely; nothing but; no more than; it's just that ...	lingqs (8).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 可不	ke3 bu4	see 可不是[ke3 bu5 shi4]	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 可悲	ke3 bei1	lamentable	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
@@ -406,6 +422,7 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 团队	tuan2 dui4	team	lingqs (7).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 困境	kun4 jing4	predicament; plight	personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 困扰	kun4 rao3	to perplex; to disturb; to cause complications	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+固然	gu4 ran2	admittedly (it's true that...)	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 国王	guo2 wang2	king	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 国际	guo2 ji4	international	chinese_words_from_lingqs 2000-3000.md; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 图	tu2	diagram; picture; drawing; chart; map	chinese_words_from_lingqs 2000-3000.md; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
@@ -431,6 +448,7 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 城墙	cheng2 qiang2	city wall	personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 城里	cheng2 li3		chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 基	ji1	(bound form) base; foundation; (bound form) radical (chemistry); (bound form) gay (loanword from English into Cantonese, Jyutping: gei1, followed by orthographic borrowing from Cantonese)	lingqs (7).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+基于	ji1 yu2	because of; on the basis of; in view of; on account of	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 基地	ji1 di4	al-Qaeda; base (of operations, industrial, military, research etc)	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 基本	ji1 ben3	basic; fundamental; main; elementary	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 塔	ta3	pagoda (abbr. for 塔婆[ta3 po2], a loanword from Sanskrit stūpa); tower; pylon (CL:座[zuo4]); (loanword) (pastry) tart	lingqs (7).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
@@ -453,6 +471,7 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 大师	da4 shi1	great master; master	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 大楼	da4 lou2	building (a relatively large, multistory one)	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 大脑	da4 nao3	brain; cerebrum	lingqs (8).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+大致	da4 zhi4	more or less; roughly; approximately	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 大街	da4 jie1	street; main street	lingqs (7).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 大赛	da4 sai4	grand contest	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 大道	da4 dao4	main street; avenue	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
@@ -559,6 +578,7 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 小说	xiao3 shuo1	novel; fiction	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 小鬼	xiao3 gui3	little demon (term of endearment for a child); mischievous child; imp	personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 尖叫	jian1 jiao4	to screech; to shriek	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+尚未	shang4 wei4	not yet; still not	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 尝	chang2	to taste; to try (food); to experience; (literary) ever; once; to taste; to experience (variant of 嘗|尝[chang2])	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 尝尝	chang2 chang2		chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 尴尬	gan1 ga4	awkward; embarrassed	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
@@ -675,6 +695,7 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 怪物	guai4 wu4	monster; freak; eccentric person	lingqs (8).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 总	zong3	(bound form) general; overall; to sum up; in every case; always; invariably; anyway; after all; eventually; sooner or later; surely	personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 总经理	zong3 jing1 li3	general manager; CEO	personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+总而言之	zong3 er2 yan2 zhi1	in short; in a word; in brief	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 总部	zong3 bu4	general headquarters	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 恋爱	lian4 ai4	(romantic) love; in love; to have an affair	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 恐怕	kong3 pa4	fear; to dread; I'm afraid that...; perhaps; maybe	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
@@ -768,12 +789,17 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 指挥	zhi3 hui1	to conduct; to command; to direct; conductor (of an orchestra)	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 指挥官	zhi3 hui1 guan1	commander	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 指甲	zhi3 jia3	fingernail	chinese_words_from_lingqs 3000-4000.md; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+按照	an4 zhao4	according to; in accordance with; on the basis of	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 挑	tiao1	to carry on a shoulder pole; to choose; to pick; to nitpick; to raise	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 挑选	tiao1 xuan3	to choose; to select	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 挖	wa1	to dig; to excavate; to scoop out	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 挡	dang3	to resist; to obstruct; to hinder; to keep off; to block (a blow)	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 挤出	ji3 chu1	to squeeze out; to extrude; to drain; to find the time; to burst out	personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+换句话说	huan4 ju4 hua4 shuo1	in other words	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+换言之	huan4 yan2 zhi1	in other words	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 据	ju4	used in 拮据[jie2 ju1]; according to; to act in accordance with; to depend on; to seize	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+据此	ju4 ci3	accordingly; in view of the above	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+据说	ju4 shuo1	it is said that; reportedly	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 掌	zhang3	palm of the hand; sole of the foot; paw; horseshoe; to slap	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 排名	pai2 ming2	to rank (1st, 2nd etc); ranking	personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 接下来	jie1 xia4 lai2	to accept; to take; next; following	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
@@ -893,6 +919,7 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 期间	qi1 jian1	period of time; time; time period; period	chinese_words_from_lingqs 2000-3000.md; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 木	mu4	(bound form) tree; (bound form) wood; unresponsive; numb; wooden	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 未	wei4	not yet; did not; have not; not; 8th earthly branch: 1-3 p.m., 6th solar month (7th July-6th August), year of the Sheep	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+未必	wei4 bi4	not necessarily; maybe not	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 本人	ben3 ren2	I; me; myself; oneself; yourself; himself; herself; the person concerned	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 术	shu4	method; technique; various genera of flowers of Asteracea family (daisies and chrysanthemums), including Atractylis lancea	chinese_words_from_lingqs 2000-3000.md; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 机	ji1	(bound form) machine; mechanism; (bound form) aircraft; (bound form) an opportunity; (bound form) crucial point; pivot; (bound form) quick-witted; flexible	lingqs (7).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
@@ -959,6 +986,7 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 毒气	du2 qi4	poison gas; toxic gas; manifestation of passion, anger etc (Buddhism)	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 比如说	bi3 ru2 shuo1	for example	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 毕业	bi4 ye4	graduation; to graduate; to finish school	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+毕竟	bi4 jing4	after all; all in all; when all is said and done; in the final analysis	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 毛	mao2	hair; feather; down; wool; mildew	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 毛病	mao2 bing4	fault; defect; shortcomings; ailment	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 民	min2	(bound form) the people; inhabitants of a country	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
@@ -1129,6 +1157,7 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 相互	xiang1 hu4	each other; mutual	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 相似	xiang1 si4	similar; alike	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 相机	xiang4 ji1	camera (abbr. for 照相機|照相机[zhao4 xiang4 ji1]); at the opportune moment; as the circumstances allow	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+相较于	xiang1 jiao4 yu2		manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 看法	kan4 fa3	way of looking at a thing; view; opinion	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 真实	zhen1 shi2	true; real	personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 真心	zhen1 xin1	wholeheartedness; sincerity	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
@@ -1225,6 +1254,7 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 级	ji2	level; grade; rank; step (of stairs)	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 纪念	ji4 nian4	to commemorate; to honor the memory of; memento; keepsake; souvenir	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 纯	chun2	pure; simple; unmixed; genuine	personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+纵然	zong4 ran2	even if; even though	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 纸	zhi3	paper (CL:張|张[zhang1],沓[da2])	lingqs (7).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 线	xian4	thread; string; wire; line; (after a number) tier (unofficial ranking of a Chinese city)	personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 线索	xian4 suo3	trail; clues; thread (of a story)	personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
@@ -1236,6 +1266,7 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 经理	jing1 li3	manager; director	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 经验	jing1 yan4	experience; to go through; to experience	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 绕	rao4	to wind; to coil (thread); to rotate around; to spiral; to move around	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+继而	ji4 er2	then; afterwards	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 维持	wei2 chi2	to keep; to maintain; to preserve	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 绿	lv4	used in names; green; (slang) (derived from 綠帽子|绿帽子[lu:4 mao4 zi5]) to cheat on (one's spouse or boyfriend or girlfriend)	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 绿色	lv4 se4	green	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
@@ -1327,6 +1358,7 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 虎	hu3	tiger	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 虫	chong2	lower form of animal life, including insects, insect larvae, worms and similar creatures; (fig.) person with a particular undesirable characteristic	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 虫子	chong2 zi5	insect; bug; worm	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+虽说	sui1 shuo1	though; although	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 蛋	dan4	egg; oval-shaped thing	lingqs (7).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 蛋糕	dan4 gao1	cake	lingqs (7).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 蜜蜂	mi4 feng1	bee; honeybee	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
@@ -1393,6 +1425,7 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 评论	ping2 lun4	to comment on; to discuss; comment; commentary	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 试验	shi4 yan4	experiment; test; to experiment; experimental	chinese_words_from_lingqs 2000-3000.md; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 诚实	cheng2 shi2	honest	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+诚然	cheng2 ran2	indeed; true! (I agree with you)	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 话	hua4	dialect; language; spoken words; speech; talk	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 话题	hua4 ti2	subject (of a talk or conversation); topic	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 语	yu3	dialect; language; speech; (literary) to tell; to let (sb) know	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
@@ -1466,6 +1499,7 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 辣	la4	hot (spicy); pungent; (of chili pepper, raw onions etc) to sting; to burn	lingqs (7).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 边上	bian1 shang4		chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 达	da2	to attain; to reach; to amount to; to communicate; eminent	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+迄今	qi4 jin1	so far; to date; until now	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 过分	guo4 fen4	excessive; undue; unduly; overly	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 过度	guo4 du4	excessive; over-; excess; going too far; extravagant	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 过程	guo4 cheng2	course of events; process	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
@@ -1531,6 +1565,7 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 量	liang4	to measure; capacity; quantity; amount; to estimate	chinese_words_from_lingqs 3000-4000.md; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 金	jin1	Jurchen Jin dynasty (1115–1234); gold; chemical element Au; generic term for lustrous and ductile metals; money	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 金钱	jin1 qian2	money; currency	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+鉴于	jian4 yu2	in view of; seeing that; considering; whereas	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 钟	zhong1	handleless cup; goblet; (bound form) to concentrate (one's affection etc); a (large) bell (CL:架[jia4]); clock (CL:座[zuo4]); amount of time; o'clock (CL:點|点[dian3],分[fen1],秒[miao3]) (as in 三點	lingqs (7).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 钢琴	gang1 qin2	piano	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 钥匙	yao4 shi5	key	personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
@@ -1561,11 +1596,15 @@ word	pinyin	meaning	source	status	reading_confidence	allow_in_personal_readers	n
 险	xian3	danger; dangerous; rugged	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 陷入	xian4 ru4	to sink into; to get caught up in; to land in (a predicament)	chinese_words_from_lingqs 2000-3000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 随	sui2	to follow; to comply with; varying according to...; to allow; subsequently	lingqs (7).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+随之	sui2 zhi1	thereupon; subsequently; accordingly	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+随后	sui2 hou4	afterward; later; subsequently; following that	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 随意	sui2 yi4	as one wishes; according to one's wishes; at will; voluntary; conscious	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 随时	sui2 shi2	at any time; at all times; at the right time; whenever necessary	lingqs (7).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+随着	sui2 zhe5	along with; in the wake of; following	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 隐藏	yin3 cang2	to hide; to conceal; to mask; to shelter; to harbor (i.e. keep sth hidden)	chinese_words_from_lingqs 2000-3000.md; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 隔	ge2	to separate; to partition; to stand or lie between; at a distance from; after or at an interval of	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 难以	nan2 yi3	hard to (predict, imagine etc)	chinese_words_from_lingqs 2000-3000.md; lingqs (7).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
+难免	nan2 mian3	hard to avoid; difficult to escape from; will inevitably	manual connective import 2026-06-26	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 难受	nan2 shou4	to feel unwell; to suffer pain; to be difficult to bear	chinese_words_from_lingqs 3000-4000.md	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 难过	nan2 guo4	to feel sad; to feel unwell; (of life) to be difficult	lingqs (6).csv; personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
 集体	ji2 ti3	collective (decision); joint (effort); a group; a team; en masse	personal words 1100-2000.txt	known_passive	4	yes	Imported as a personal-known candidate; review status/confidence before broad use.
