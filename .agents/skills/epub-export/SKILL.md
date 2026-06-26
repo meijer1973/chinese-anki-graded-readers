@@ -18,7 +18,7 @@ python scripts/build_epub.py --manuscript manuscripts/<slug> --title "<title>" -
 ## Marcel Personalized Command
 
 ```powershell
-python scripts/build_epub.py --manuscript manuscripts/<slug> --title "<title>" --out manuscripts/<slug>/epub/<slug>.epub --report manuscripts/<slug>/epub/build_report.json --personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 450
+python scripts/build_epub.py --manuscript manuscripts/<slug> --title "<title>" --out manuscripts/<slug>/epub/<slug>.epub --report manuscripts/<slug>/epub/build_report.json --personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 500
 ```
 
 Add the same stretch pack arguments used during validation, such as `--journalism-crime-pack data/stretch_packs/journalism_crime_50.txt`, `--genre-pack`, `--setting-pack`, `--profession-pack`, `--urban-objects-pack`, `--book-specific`, `--proper-nouns`, and any `--extra-pack`.

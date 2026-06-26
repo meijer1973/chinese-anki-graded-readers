@@ -65,8 +65,8 @@ class StretchVocabularyTests(unittest.TestCase):
             (chapters / f"chapter_{index:02d}.zh-tok.txt").write_text(text, encoding="utf-8")
         return chapters
 
-    def test_default_known_character_compound_limit_is_450(self) -> None:
-        self.assertEqual(DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT, 450)
+    def test_default_known_character_compound_limit_is_500(self) -> None:
+        self.assertEqual(DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT, 500)
 
     def layered_kwargs(self) -> dict:
         return {
@@ -212,7 +212,7 @@ class StretchVocabularyTests(unittest.TestCase):
 
     def test_low_fantasy_pack_is_loaded(self) -> None:
         vocab = load_layered_vocabulary(ROOT / "data" / "known_words.txt", genre_pack=ROOT / "data" / "stretch_packs" / "low_fantasy_150.txt")
-        self.assertEqual(vocab["token_layers"]["幻想"], GENRE_LAYER)
+        self.assertEqual(vocab["token_layers"]["圣诞老人"], GENRE_LAYER)
 
     def test_low_fantasy_pack_has_150_non_core_words(self) -> None:
         fantasy_pack = ROOT / "data" / "stretch_packs" / "low_fantasy_150.txt"
@@ -240,7 +240,7 @@ class StretchVocabularyTests(unittest.TestCase):
             ROOT / "data" / "known_words.txt",
             extra_packs=[ROOT / "data" / "stretch_packs" / "business_economics_60.txt"],
         )
-        self.assertEqual(vocab["token_layers"]["市场"], BUSINESS_ECONOMICS_LAYER)
+        self.assertEqual(vocab["token_layers"]["经济"], BUSINESS_ECONOMICS_LAYER)
 
     def test_business_economics_pack_has_no_core_or_prior_pack_duplicates(self) -> None:
         business_pack = ROOT / "data" / "stretch_packs" / "business_economics_60.txt"
@@ -267,7 +267,7 @@ class StretchVocabularyTests(unittest.TestCase):
         self.assertFalse(set(general_words) & other_words)
 
     def test_business_economics_sample_token_validates_with_extra_pack(self) -> None:
-        chapters = self.chapters_dir("市场 会 影响 生意 。\n")
+        chapters = self.chapters_dir("经济 会 影响 生意 。\n")
         report = validate_book(
             chapters,
             ROOT / "data" / "known_words.txt",
@@ -279,7 +279,7 @@ class StretchVocabularyTests(unittest.TestCase):
         self.assertEqual(report["business_economics_stretch_tokens"], 1)
 
     def test_business_economics_extra_pack_counts_as_stretch(self) -> None:
-        chapters = self.chapters_dir("市场 会 影响 生意 。\n")
+        chapters = self.chapters_dir("经济 会 影响 生意 。\n")
         report = validate_book(
             chapters,
             ROOT / "data" / "known_words.txt",
@@ -367,7 +367,7 @@ class StretchVocabularyTests(unittest.TestCase):
         with out.open(encoding="utf-8") as fh:
             rows = list(csv.DictReader(fh, delimiter="\t"))
         words = {row["Hanzi"] for row in rows}
-        self.assertIn("市场", words)
+        self.assertIn("经济", words)
         self.assertIn("价格", words)
         self.assertTrue(all(row["Pack"] == "business_economics_60" for row in rows))
         self.assertTrue(all(row["Layer"] == BUSINESS_ECONOMICS_LAYER for row in rows))

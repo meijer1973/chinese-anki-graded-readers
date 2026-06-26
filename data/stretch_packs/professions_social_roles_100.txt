@@ -1,19 +1,19 @@
 # Profession and social-role stretch words.
 # Use these to give characters roles that affect plot behavior.
 画家
-上尉
+主任
 音乐家
-作家
-保姆
+中尉
+新娘
 店主
 厨师
 服务员
-助手
+战士
 清洁工
-市长
+设计师
 摄影师
 舞者
-犯人
+艺术家
 工人
 乘客
 陌生人
@@ -24,7 +24,7 @@
 租客
 管理员
 导游
-助理
+主管
 警卫
 校长
 房客
