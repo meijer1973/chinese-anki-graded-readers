@@ -50,6 +50,12 @@ PACK_DEFAULTS = {
         "example_en": "Lin An sees a {word}.",
         "story_affordance": "Adds concrete objects for clues, movement, or atmosphere.",
     },
+    "journalism_crime_50": {
+        "part_of_speech": "journalism/crime word",
+        "example_template": "林安 用 {word} 查 这个 案子 。",
+        "example_en": "Lin An uses this journalism/crime clue to investigate the case.",
+        "story_affordance": "Supports reporting, evidence, source protection, investigation, or case pressure.",
+    },
     "business_economics_60": {
         "part_of_speech": "business/economics word",
         "example_template": "这个 {word} 会 影响 生意 。",

@@ -21,9 +21,11 @@ from scripts.novel_tools import (
     SETTING_LAYER,
     build_epub,
     check_epub_structure,
+    is_known_character_compound,
     load_known_words,
     load_layered_vocabulary,
     load_optional_words,
+    load_ranked_characters,
     validate_book,
     validate_text,
 )
@@ -208,7 +210,7 @@ class StretchVocabularyTests(unittest.TestCase):
 
     def test_shanghai_setting_pack_is_loaded(self) -> None:
         vocab = load_layered_vocabulary(ROOT / "data" / "known_words.txt", setting_pack=ROOT / "data" / "stretch_packs" / "shanghai_setting_150.txt")
-        self.assertEqual(vocab["token_layers"]["上海"], SETTING_LAYER)
+        self.assertEqual(vocab["token_layers"]["外滩"], SETTING_LAYER)
 
     def test_low_fantasy_pack_is_loaded(self) -> None:
         vocab = load_layered_vocabulary(ROOT / "data" / "known_words.txt", genre_pack=ROOT / "data" / "stretch_packs" / "low_fantasy_150.txt")
@@ -252,6 +254,38 @@ class StretchVocabularyTests(unittest.TestCase):
                 prior_words.update(load_optional_words(pack))
         self.assertFalse(business_words & core_words)
         self.assertFalse(business_words & prior_words)
+
+    def test_stretch_packs_match_targets_without_known_layer_duplicates(self) -> None:
+        stretch_dir = ROOT / "data" / "stretch_packs"
+        core_words = set(load_known_words(ROOT / "data" / "known_words.txt"))
+        high_frequency_characters = set(
+            load_ranked_characters(
+                ROOT / "data" / "learner_profiles" / "marcel" / "high_frequency_characters.txt",
+                DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT,
+            )
+        )
+        seen: dict[str, str] = {}
+
+        for pack in sorted(stretch_dir.glob("*.txt")):
+            words = load_optional_words(pack)
+            target = int(pack.stem.rsplit("_", 1)[-1])
+            duplicate_words = sorted(word for word in set(words) if words.count(word) > 1)
+            core_duplicates = sorted(set(words) & core_words)
+            character_compound_duplicates = sorted(
+                word for word in words if is_known_character_compound(word, high_frequency_characters)
+            )
+            cross_pack_duplicates = sorted(
+                f"{word} in {pack.name} and {seen[word]}" for word in words if word in seen
+            )
+
+            self.assertEqual(len(words), target, pack.name)
+            self.assertFalse(duplicate_words, pack.name)
+            self.assertFalse(core_duplicates, pack.name)
+            self.assertFalse(character_compound_duplicates, pack.name)
+            self.assertFalse(cross_pack_duplicates, pack.name)
+
+            for word in words:
+                seen[word] = pack.name
 
     def test_general_fiction_pack_has_100_non_core_words(self) -> None:
         general_pack = ROOT / "data" / "stretch_packs" / "general_fiction_100.txt"

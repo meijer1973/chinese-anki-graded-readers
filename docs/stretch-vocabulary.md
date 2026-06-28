@@ -23,7 +23,7 @@ Do not use random unknown words. Prefer exact known tokens. Stretch, book-specif
 - Book-specific: `manuscripts/<slug>/book_specific_words.txt`
 - Proper nouns: `manuscripts/<slug>/proper_nouns.txt`
 
-Pack names are aspirational sizes. Starter packs are intentionally smaller than 100 or 150 when good entries are not ready. Add durable, reusable words rather than filler.
+Pack names are maintained target sizes. When core known words or high-frequency character compounds expand, audit the packs, remove words now covered by those earlier layers, and add durable reusable replacements rather than filler.
 
 Proper nouns are the right place for character, place, and organization names. Listed proper nouns are counted as the proper-noun layer, not as forbidden unknowns. They still count as approved non-core tokens for the 2% extensive-reading ceiling.
 
