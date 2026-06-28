@@ -13,13 +13,13 @@ Do not use random unknown words. Prefer exact known tokens. Stretch, book-specif
 - Core known words: `data/known_words.txt`
 - Personal known words: `data/learner_profiles/marcel/personal_known_words.txt`, enabled only with `--personal-known`
 - High-frequency character compounds: `data/learner_profiles/marcel/high_frequency_characters.txt`, enabled only for Marcel personalized readers with `--known-character-compounds --known-character-compound-limit 500`
-- General fiction: `data/stretch_packs/general_fiction_100.txt`
+- General fiction: `data/stretch_packs/general_fiction_150.txt`
 - Low fantasy: `data/stretch_packs/low_fantasy_150.txt`
 - Shanghai setting: `data/stretch_packs/shanghai_setting_150.txt`
 - Professions/social roles: `data/stretch_packs/professions_social_roles_100.txt`
 - Urban objects: `data/stretch_packs/urban_objects_100.txt`
 - Journalism/crime: `data/stretch_packs/journalism_crime_50.txt`
-- Business/economics: `data/stretch_packs/business_economics_60.txt`
+- Business/economics: `data/stretch_packs/business_economics_150.txt`
 - Book-specific: `manuscripts/<slug>/book_specific_words.txt`
 - Proper nouns: `manuscripts/<slug>/proper_nouns.txt`
 
@@ -31,7 +31,7 @@ Personal-known words and high-frequency character compounds are not stretch word
 
 ## General Fiction Pack
 
-Use `general_fiction_100.txt` for reusable fiction craft vocabulary: memory, hesitation, emotional pressure, dialogue movement, small actions, body-language cues, and ordinary scene texture.
+Use `general_fiction_150.txt` for reusable fiction craft vocabulary: memory, hesitation, emotional pressure, dialogue movement, small actions, body-language cues, and ordinary scene texture.
 
 This pack is intentionally genre-neutral. It should help a writer vary scenes without reaching immediately for a specialized topic pack. Good uses include showing a character hesitate, look away, speak quietly, remember something, misread another person, or notice a room/window/sound detail. Do not use these words as random decoration; each word should make a sentence more natural or a scene easier to follow.
 
@@ -58,14 +58,14 @@ Do not add a function pack until entries are reviewed for usefulness, metadata, 
 
 ## Business / Economics Pack
 
-Use `business_economics_60.txt` for nonfiction or case-based stories about shops, companies, money, customers, prices, costs, wages, banks, risk, and simple market decisions.
+Use `business_economics_150.txt` for nonfiction or case-based stories about shops, companies, money, customers, prices, costs, wages, banks, risk, and simple market decisions.
 
 This pack is for concrete business/economic situations, not dense textbook exposition. Prefer scenes where a character must choose, pay, sell, hire, borrow, compare, lose money, gain trust, or understand why a business problem happened.
 
 Pass this reusable pack with `--extra-pack`:
 
 ```powershell
-python scripts/validate_book.py --known data/known_words.txt --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json --extra-pack data/stretch_packs/business_economics_60.txt
+python scripts/validate_book.py --known data/known_words.txt --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json --extra-pack data/stretch_packs/business_economics_150.txt
 ```
 
 ## Low Fantasy / Shanghai Use
@@ -112,7 +112,7 @@ Stretch words should be repeated enough to become learnable, but the whole manus
 Use layered validation:
 
 ```powershell
-python scripts/validate_book.py --known data/known_words.txt --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
+python scripts/validate_book.py --known data/known_words.txt --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json --general-fiction-pack data/stretch_packs/general_fiction_150.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 ```
 
 Add `--personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 500` for Marcel personalized readers. Omit those flags for public graded-reader mode.
@@ -122,7 +122,7 @@ The report counts tokens by layer, forbidden unknowns, forbidden unknowns over t
 Use `scripts/plot_affordance_report.py` before planning a case-heavy premise:
 
 ```powershell
-python scripts/plot_affordance_report.py --known data/known_words.txt --packs data/stretch_packs/general_fiction_100.txt data/stretch_packs/low_fantasy_150.txt data/stretch_packs/shanghai_setting_150.txt data/stretch_packs/journalism_crime_50.txt --required 采访 编辑 来源 查出 法院 当事人 局长 --out manuscripts/<slug>/quality/plot_affordance_report.json
+python scripts/plot_affordance_report.py --known data/known_words.txt --packs data/stretch_packs/general_fiction_150.txt data/stretch_packs/low_fantasy_150.txt data/stretch_packs/shanghai_setting_150.txt data/stretch_packs/journalism_crime_50.txt --required 采访 编辑 来源 查出 法院 当事人 局长 --out manuscripts/<slug>/quality/plot_affordance_report.json
 ```
 
 This report classifies the available vocabulary into story affordance categories such as action verbs, crime nouns, evidence nouns, journalism nouns, movement/location words, conflict verbs, fantasy mechanism words, and dialogue alternatives. It is planning evidence, not an acceptance gate.

@@ -117,7 +117,7 @@ Use the minimal-intervention cascade: classify proper nouns and personal-known w
 - `data/learner_profiles/marcel/high_frequency_characters.txt` contains Marcel's ranked known-character source for the optional `--known-character-compounds` layer; current default limit is 500.
 - `series/an-lin/` contains the living series memory package for the 林安 journalist urban-fantasy crime series: bible, chronology, character registry, mechanism registry, open threads, recurring objects/locations, sequel constraints, and update log.
 - `data/stretch_packs/journalism_crime_50.txt` contains reviewed journalism/crime stretch words for 林安-style crime reporting stories.
-- `data/stretch_packs/business_economics_60.txt` contains reviewed business/economics stretch words for concrete shops, money, prices, customers, costs, risk, and simple market-decision stories. Pass it with `--extra-pack`.
+- `data/stretch_packs/business_economics_150.txt` contains reviewed business/economics stretch words for concrete shops, money, prices, customers, costs, risk, and simple market-decision stories. Pass it with `--extra-pack`.
 - `configs/novel_generation.default.json` is the default configuration template for graded-reader novel projects.
 - `AGENT_GITHUB_ENTRY.md`, `RESEARCH_AGENT_MAP.md`, `RESEARCH_AGENT_PROMPT.md`, and `repo_manifest.json` are the GitHub-facing machine-readable/research-agent entry points.
 - `reports/github-agent-index.md`, `reports/github-agent-index.json`, and `reports/url-index.md` are generated inventories for remote agents; refresh them with `python scripts/build_agent_index.py`.

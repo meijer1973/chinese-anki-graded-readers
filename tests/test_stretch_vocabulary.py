@@ -240,12 +240,12 @@ class StretchVocabularyTests(unittest.TestCase):
     def test_business_economics_pack_is_loaded_as_extra_pack(self) -> None:
         vocab = load_layered_vocabulary(
             ROOT / "data" / "known_words.txt",
-            extra_packs=[ROOT / "data" / "stretch_packs" / "business_economics_60.txt"],
+            extra_packs=[ROOT / "data" / "stretch_packs" / "business_economics_150.txt"],
         )
         self.assertEqual(vocab["token_layers"]["经济"], BUSINESS_ECONOMICS_LAYER)
 
     def test_business_economics_pack_has_no_core_or_prior_pack_duplicates(self) -> None:
-        business_pack = ROOT / "data" / "stretch_packs" / "business_economics_60.txt"
+        business_pack = ROOT / "data" / "stretch_packs" / "business_economics_150.txt"
         business_words = set(load_optional_words(business_pack))
         core_words = set(load_known_words(ROOT / "data" / "known_words.txt"))
         prior_words: set[str] = set()
@@ -287,16 +287,16 @@ class StretchVocabularyTests(unittest.TestCase):
             for word in words:
                 seen[word] = pack.name
 
-    def test_general_fiction_pack_has_100_non_core_words(self) -> None:
-        general_pack = ROOT / "data" / "stretch_packs" / "general_fiction_100.txt"
+    def test_general_fiction_pack_has_150_non_core_words(self) -> None:
+        general_pack = ROOT / "data" / "stretch_packs" / "general_fiction_150.txt"
         general_words = load_optional_words(general_pack)
         core_words = set(load_known_words(ROOT / "data" / "known_words.txt"))
         other_words: set[str] = set()
         for pack in (ROOT / "data" / "stretch_packs").glob("*.txt"):
             if pack != general_pack:
                 other_words.update(load_optional_words(pack))
-        self.assertEqual(len(general_words), 100)
-        self.assertEqual(len(set(general_words)), 100)
+        self.assertEqual(len(general_words), 150)
+        self.assertEqual(len(set(general_words)), 150)
         self.assertFalse(set(general_words) & core_words)
         self.assertFalse(set(general_words) & other_words)
 
@@ -305,7 +305,7 @@ class StretchVocabularyTests(unittest.TestCase):
         report = validate_book(
             chapters,
             ROOT / "data" / "known_words.txt",
-            extra_packs=[ROOT / "data" / "stretch_packs" / "business_economics_60.txt"],
+            extra_packs=[ROOT / "data" / "stretch_packs" / "business_economics_150.txt"],
             min_known_token_percent=0,
             max_total_stretch_token_percent=100,
         )
@@ -317,7 +317,7 @@ class StretchVocabularyTests(unittest.TestCase):
         report = validate_book(
             chapters,
             ROOT / "data" / "known_words.txt",
-            extra_packs=[ROOT / "data" / "stretch_packs" / "business_economics_60.txt"],
+            extra_packs=[ROOT / "data" / "stretch_packs" / "business_economics_150.txt"],
             min_known_token_percent=0,
             max_total_stretch_token_percent=100,
         )
@@ -393,7 +393,7 @@ class StretchVocabularyTests(unittest.TestCase):
     def test_anki_candidate_export_includes_business_economics_pack(self) -> None:
         out = self.root / "business_candidates.tsv"
         export_candidates(
-            [ROOT / "data" / "stretch_packs" / "business_economics_60.txt"],
+            [ROOT / "data" / "stretch_packs" / "business_economics_150.txt"],
             core_path=ROOT / "data" / "known_words.txt",
             metadata_dir=ROOT / "data" / "stretch_packs" / "metadata",
             out_path=out,
@@ -403,7 +403,7 @@ class StretchVocabularyTests(unittest.TestCase):
         words = {row["Hanzi"] for row in rows}
         self.assertIn("经济", words)
         self.assertIn("价格", words)
-        self.assertTrue(all(row["Pack"] == "business_economics_60" for row in rows))
+        self.assertTrue(all(row["Pack"] == "business_economics_150" for row in rows))
         self.assertTrue(all(row["Layer"] == BUSINESS_ECONOMICS_LAYER for row in rows))
 
     def test_personal_known_sync_generates_allowed_profile_words(self) -> None:

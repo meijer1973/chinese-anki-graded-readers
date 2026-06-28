@@ -71,7 +71,7 @@ python scripts/profile_adaptation_vocabulary.py `
   --personal-known data/learner_profiles/marcel/personal_known_words.txt `
   --known-character-compounds `
   --known-character-compound-limit 500 `
-  --general-fiction-pack data/stretch_packs/general_fiction_100.txt `
+  --general-fiction-pack data/stretch_packs/general_fiction_150.txt `
   --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt
 ```
 

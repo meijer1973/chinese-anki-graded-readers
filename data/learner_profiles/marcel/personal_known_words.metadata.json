@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-26T14:53:02Z",
+  "generated_at": "2026-06-28T11:25:47Z",
   "profile_name": "marcel",
   "profile_dir": "data\\learner_profiles\\marcel",
   "source_tsv_path": "data\\learner_profiles\\marcel\\personal_known_words.tsv",
@@ -393,7 +393,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "不少",
@@ -618,7 +618,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "个性",
@@ -633,7 +633,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "中",
@@ -828,7 +828,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "主席",
@@ -1323,7 +1323,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "亲爱",
@@ -1578,7 +1578,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "他人",
@@ -2223,7 +2223,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "保险",
@@ -2448,7 +2448,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "健康",
@@ -2493,7 +2493,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "偷走",
@@ -2913,7 +2913,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "公里",
@@ -4758,7 +4758,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "双手",
@@ -4893,7 +4893,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "发送",
@@ -5508,7 +5508,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "后退",
@@ -5613,7 +5613,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "员",
@@ -5913,7 +5913,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "哈哈",
@@ -6093,7 +6093,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "商店",
@@ -6273,7 +6273,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "回头",
@@ -6483,7 +6483,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "地区",
@@ -6633,7 +6633,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "坏人",
@@ -6648,7 +6648,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "坏蛋",
@@ -7263,7 +7263,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "太阳",
@@ -7818,7 +7818,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "学会",
@@ -7938,7 +7938,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "完全",
@@ -7983,7 +7983,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "官",
@@ -8103,7 +8103,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "客",
@@ -8913,7 +8913,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "州",
@@ -9528,7 +9528,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "幽默",
@@ -9978,7 +9978,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "形",
@@ -10023,7 +10023,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "待会儿",
@@ -10923,7 +10923,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "战场",
@@ -10953,7 +10953,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "战斗",
@@ -11148,7 +11148,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "手指",
@@ -12588,7 +12588,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "救命",
@@ -12618,7 +12618,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "救救",
@@ -13923,7 +13923,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "杀",
@@ -14193,7 +14193,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "查看",
@@ -14283,7 +14283,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "校长",
@@ -15078,7 +15078,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "河",
@@ -16248,7 +16248,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "特工",
@@ -16818,7 +16818,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "电流",
@@ -17448,7 +17448,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "眼",
@@ -17478,7 +17478,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "眼泪",
@@ -17508,7 +17508,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "眼里",
@@ -17628,7 +17628,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "知",
@@ -18828,7 +18828,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "纯",
@@ -19728,7 +19728,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "脏",
@@ -19953,7 +19953,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "舌头",
@@ -21948,7 +21948,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "走开",
@@ -22368,7 +22368,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": true
+      "also_in_stretch_pack": false
     },
     {
       "word": "转移",
@@ -23658,7 +23658,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "错过",
@@ -23883,7 +23883,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "降落",
@@ -24243,7 +24243,7 @@
       "included_in_personal_known_words_txt": true,
       "inclusion_reason": "included",
       "already_core": false,
-      "also_in_stretch_pack": false
+      "also_in_stretch_pack": true
     },
     {
       "word": "露",

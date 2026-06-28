@@ -114,13 +114,13 @@ The default strict mode uses only `data/known_words.txt`. The richer controlled 
 - core known words: `data/known_words.txt`
 - learner-profile personal-known words: `data/learner_profiles/marcel/personal_known_words.txt`, enabled with `--personal-known` only for personalized readers
 - learner-profile high-frequency character compounds: `data/learner_profiles/marcel/high_frequency_characters.txt`, enabled with `--known-character-compounds --known-character-compound-limit 500` only for personalized readers
-- general fiction stretch words: `data/stretch_packs/general_fiction_100.txt`
+- general fiction stretch words: `data/stretch_packs/general_fiction_150.txt`
 - genre stretch words: `data/stretch_packs/low_fantasy_150.txt`
 - setting stretch words: `data/stretch_packs/shanghai_setting_150.txt`
 - profession/social-role stretch words: `data/stretch_packs/professions_social_roles_100.txt`
 - urban object stretch words: `data/stretch_packs/urban_objects_100.txt`
 - journalism/crime stretch words: `data/stretch_packs/journalism_crime_50.txt`
-- business/economics stretch words: `data/stretch_packs/business_economics_60.txt`, passed as `--extra-pack` when a story needs concrete shops, money, prices, costs, customers, wages, risk, or simple market decisions
+- business/economics stretch words: `data/stretch_packs/business_economics_150.txt`, passed as `--extra-pack` when a story needs concrete shops, money, prices, costs, customers, wages, risk, or simple market decisions
 - manuscript `book_specific_words.txt`
 - manuscript `proper_nouns.txt`
 
@@ -163,7 +163,7 @@ For `low_fantasy_urban_shanghai`, the planner must also create selected vocabula
 
 For 林安 journalist/crime stories, include the journalism/crime pack and make sure the outline has real story functions: interview, source verification, publication pressure, witness protection, suspect pressure, and a simple fantasy mechanism that changes the case.
 
-For business/economics readers, pass `data/stretch_packs/business_economics_60.txt` with `--extra-pack`. Use it for concrete cases such as a shop under rent pressure, a customer choosing between products, a company deciding whether to hire, or a journalist explaining why a local business failed.
+For business/economics readers, pass `data/stretch_packs/business_economics_150.txt` with `--extra-pack`. Use it for concrete cases such as a shop under rent pressure, a customer choosing between products, a company deciding whether to hire, or a journalist explaining why a local business failed.
 
 ## Adapt An Existing EPUB
 
@@ -288,7 +288,7 @@ python scripts/validate_chapter.py --known data/known_words.txt --chapter manusc
 Layered low-fantasy Shanghai validation:
 
 ```powershell
-python scripts/validate_chapter.py --known data/known_words.txt --chapter manuscripts/<slug>/chapters/chapter_01.zh-tok.txt --out manuscripts/<slug>/chapters/chapter_01.validation.json --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
+python scripts/validate_chapter.py --known data/known_words.txt --chapter manuscripts/<slug>/chapters/chapter_01.zh-tok.txt --out manuscripts/<slug>/chapters/chapter_01.validation.json --general-fiction-pack data/stretch_packs/general_fiction_150.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 ```
 
 For Marcel personalized readers, add this option to chapter, book, report, quality-gate, and EPUB commands:
@@ -338,7 +338,7 @@ These reports provide evidence for reviewers. They do not make literary decision
 Before planning a case-heavy story, run the plot affordance report to see whether the active vocabulary can support the premise:
 
 ```powershell
-python scripts/plot_affordance_report.py --known data/known_words.txt --packs data/stretch_packs/general_fiction_100.txt data/stretch_packs/low_fantasy_150.txt data/stretch_packs/shanghai_setting_150.txt data/stretch_packs/professions_social_roles_100.txt data/stretch_packs/journalism_crime_50.txt --required 采访 编辑 来源 查出 法院 当事人 局长 --out manuscripts/<slug>/quality/plot_affordance_report.json
+python scripts/plot_affordance_report.py --known data/known_words.txt --packs data/stretch_packs/general_fiction_150.txt data/stretch_packs/low_fantasy_150.txt data/stretch_packs/shanghai_setting_150.txt data/stretch_packs/professions_social_roles_100.txt data/stretch_packs/journalism_crime_50.txt --required 采访 编辑 来源 查出 法院 当事人 局长 --out manuscripts/<slug>/quality/plot_affordance_report.json
 ```
 
 ## Validate the Whole Book
@@ -372,15 +372,15 @@ Use the same `--personal-known` and known-character-compound options consistentl
 ```powershell
 $personal = "data/learner_profiles/marcel/personal_known_words.txt"
 
-python scripts/validate_chapter.py --known data/known_words.txt --personal-known $personal --known-character-compounds --known-character-compound-limit 500 --chapter manuscripts/<slug>/chapters/chapter_01.zh-tok.txt --out manuscripts/<slug>/chapters/chapter_01.validation.json --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
+python scripts/validate_chapter.py --known data/known_words.txt --personal-known $personal --known-character-compounds --known-character-compound-limit 500 --chapter manuscripts/<slug>/chapters/chapter_01.zh-tok.txt --out manuscripts/<slug>/chapters/chapter_01.validation.json --general-fiction-pack data/stretch_packs/general_fiction_150.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 
-python scripts/validate_book.py --known data/known_words.txt --personal-known $personal --known-character-compounds --known-character-compound-limit 500 --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
+python scripts/validate_book.py --known data/known_words.txt --personal-known $personal --known-character-compounds --known-character-compound-limit 500 --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json --general-fiction-pack data/stretch_packs/general_fiction_150.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 
-python scripts/generate_reports.py --manuscript manuscripts/<slug> --known data/known_words.txt --personal-known $personal --known-character-compounds --known-character-compound-limit 500 --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
+python scripts/generate_reports.py --manuscript manuscripts/<slug> --known data/known_words.txt --personal-known $personal --known-character-compounds --known-character-compound-limit 500 --general-fiction-pack data/stretch_packs/general_fiction_150.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 
-python scripts/run_quality_gate.py --manuscript manuscripts/<slug> --known data/known_words.txt --personal-known $personal --known-character-compounds --known-character-compound-limit 500 --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
+python scripts/run_quality_gate.py --manuscript manuscripts/<slug> --known data/known_words.txt --personal-known $personal --known-character-compounds --known-character-compound-limit 500 --general-fiction-pack data/stretch_packs/general_fiction_150.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 
-python scripts/build_epub.py --manuscript manuscripts/<slug> --title "<title>" --out manuscripts/<slug>/epub/<slug>.epub --report manuscripts/<slug>/epub/build_report.json --personal-known $personal --known-character-compounds --known-character-compound-limit 500 --general-fiction-pack data/stretch_packs/general_fiction_100.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
+python scripts/build_epub.py --manuscript manuscripts/<slug> --title "<title>" --out manuscripts/<slug>/epub/<slug>.epub --report manuscripts/<slug>/epub/build_report.json --personal-known $personal --known-character-compounds --known-character-compound-limit 500 --general-fiction-pack data/stretch_packs/general_fiction_150.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 ```
 
 ## Build EPUB

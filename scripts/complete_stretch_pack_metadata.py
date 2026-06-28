@@ -20,7 +20,7 @@ except ModuleNotFoundError:
 DEFAULT_METADATA_DIR = ROOT / "data" / "stretch_packs" / "metadata"
 
 PACK_DEFAULTS = {
-    "general_fiction_100": {
+    "general_fiction_150": {
         "part_of_speech": "fiction word",
         "example_template": "这个 {word} 很 重要 。",
         "example_en": "This {word} is important.",
@@ -56,7 +56,7 @@ PACK_DEFAULTS = {
         "example_en": "Lin An uses this journalism/crime clue to investigate the case.",
         "story_affordance": "Supports reporting, evidence, source protection, investigation, or case pressure.",
     },
-    "business_economics_60": {
+    "business_economics_150": {
         "part_of_speech": "business/economics word",
         "example_template": "这个 {word} 会 影响 生意 。",
         "example_en": "This business factor affects the business.",
@@ -95,13 +95,18 @@ def completed_entry(word: str, pack_name: str, existing: dict, entries_by_word: 
         },
     )
     example_zh_tok = existing.get("example_zh_tok") or defaults["example_template"].format(word=word)
-    notes = existing.get("notes") or f"Generated starter metadata for {pack_name}; review during future curation."
+    existing_notes = existing.get("notes") or ""
+    notes = (
+        existing_notes
+        if existing_notes and not existing_notes.startswith("Generated starter metadata for ")
+        else f"Generated starter metadata for {pack_name}; review during future curation."
+    )
     return {
         "word": word,
         "pinyin": existing.get("pinyin") or build_anki_chinese.generated_pinyin(word),
         "english": existing.get("english") or entry_english(word, entries_by_word),
         "part_of_speech": existing.get("part_of_speech") or defaults["part_of_speech"],
-        "pack": existing.get("pack") or pack_name,
+        "pack": pack_name,
         "priority": existing.get("priority") or 2,
         "notes": notes,
         "example_zh_tok": example_zh_tok,
