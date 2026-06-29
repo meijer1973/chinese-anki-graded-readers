@@ -39,7 +39,7 @@ class StretchVocabularyTests(unittest.TestCase):
         self.known = self.root / "known_words.txt"
         self.known.write_text("我\n你\n在\n看\n是\n了\n说\n好\n\n", encoding="utf-8")
         self.general = self.root / "general.txt"
-        self.genre = self.root / "low_fantasy.txt"
+        self.genre = self.root / "fantasy.txt"
         self.setting = self.root / "shanghai_setting.txt"
         self.profession = self.root / "professions.txt"
         self.journalism = self.root / "journalism_crime.txt"
@@ -212,20 +212,20 @@ class StretchVocabularyTests(unittest.TestCase):
         vocab = load_layered_vocabulary(ROOT / "data" / "known_words.txt", setting_pack=ROOT / "data" / "stretch_packs" / "shanghai_setting_150.txt")
         self.assertEqual(vocab["token_layers"]["外滩"], SETTING_LAYER)
 
-    def test_low_fantasy_pack_is_loaded(self) -> None:
-        vocab = load_layered_vocabulary(ROOT / "data" / "known_words.txt", genre_pack=ROOT / "data" / "stretch_packs" / "low_fantasy_150.txt")
+    def test_fantasy_pack_is_loaded(self) -> None:
+        vocab = load_layered_vocabulary(ROOT / "data" / "known_words.txt", genre_pack=ROOT / "data" / "stretch_packs" / "fantasy_200.txt")
         self.assertEqual(vocab["token_layers"]["魔术"], GENRE_LAYER)
 
-    def test_low_fantasy_pack_has_150_non_core_words(self) -> None:
-        fantasy_pack = ROOT / "data" / "stretch_packs" / "low_fantasy_150.txt"
+    def test_fantasy_pack_has_200_non_core_words(self) -> None:
+        fantasy_pack = ROOT / "data" / "stretch_packs" / "fantasy_200.txt"
         fantasy_words = load_optional_words(fantasy_pack)
         core_words = set(load_known_words(ROOT / "data" / "known_words.txt"))
         other_words: set[str] = set()
         for pack in (ROOT / "data" / "stretch_packs").glob("*.txt"):
             if pack != fantasy_pack:
                 other_words.update(load_optional_words(pack))
-        self.assertEqual(len(fantasy_words), 150)
-        self.assertEqual(len(set(fantasy_words)), 150)
+        self.assertEqual(len(fantasy_words), 200)
+        self.assertEqual(len(set(fantasy_words)), 200)
         self.assertFalse(set(fantasy_words) & core_words)
         self.assertFalse(set(fantasy_words) & other_words)
 

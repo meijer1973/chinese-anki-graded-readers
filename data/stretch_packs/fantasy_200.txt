@@ -1,5 +1,5 @@
-# Easy low-fantasy / urban-fantasy stretch words.
-# Reusable fantasy terms for one strange object, one hidden rule, one secret place, or one small supernatural danger.
+# Fantasy stretch words.
+# Reusable fantasy terms for urban fantasy, ancient sword sects, rituals, weapons, courts, and supernatural places.
 灵气
 符
 咒语
@@ -150,3 +150,53 @@
 闪电
 诡异
 女巫
+宗门
+门派
+剑宗
+剑派
+山门
+宗主
+师尊
+掌门
+剑阁
+剑修
+丹炉
+藏经阁
+灵器
+秘法
+修行
+修炼
+境界
+练气
+筑基
+金丹
+元婴
+飞升
+灵脉
+灵矿
+灵丹
+丹药
+炼丹
+炼器
+符箓
+禁制
+盟主
+仙剑
+剑阵
+剑诀
+剑谱
+剑意
+剑招
+御剑
+佩剑
+剑鞘
+剑锋
+祭祀
+供奉
+祖师
+王朝
+朝廷
+皇族
+武林
+宰相
+侠客

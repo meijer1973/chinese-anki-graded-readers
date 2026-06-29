@@ -14,7 +14,7 @@ Do not use random unknown words. Prefer exact known tokens. Stretch, book-specif
 - Personal known words: `data/learner_profiles/marcel/personal_known_words.txt`, enabled only with `--personal-known`
 - High-frequency character compounds: `data/learner_profiles/marcel/high_frequency_characters.txt`, enabled only for Marcel personalized readers with `--known-character-compounds --known-character-compound-limit 500`
 - General fiction: `data/stretch_packs/general_fiction_150.txt`
-- Fantasy: `data/stretch_packs/low_fantasy_150.txt`
+- Fantasy: `data/stretch_packs/fantasy_200.txt`
 - Shanghai setting: `data/stretch_packs/shanghai_setting_150.txt`
 - Professions/social roles: `data/stretch_packs/professions_social_roles_100.txt`
 - Urban objects: `data/stretch_packs/urban_objects_100.txt`
@@ -70,7 +70,7 @@ python scripts/validate_book.py --known data/known_words.txt --chapters manuscri
 
 ## Fantasy / Shanghai Use
 
-The `low_fantasy_150.txt` pack is a reusable fantasy vocabulary layer; it does not force a specific story shape.
+The `fantasy_200.txt` pack is a reusable fantasy vocabulary layer; it does not force a specific story shape.
 
 Fantasy stories may use low, high, urban, epic, mystery, political, battle, creature-focused, or hybrid structures. Cast size, setting pattern, magic-system complexity, and scope are planning choices, not repo-wide rules.
 
@@ -104,7 +104,7 @@ Stretch words should be repeated enough to become learnable, but the whole manus
 Use layered validation:
 
 ```powershell
-python scripts/validate_book.py --known data/known_words.txt --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json --general-fiction-pack data/stretch_packs/general_fiction_150.txt --genre-pack data/stretch_packs/low_fantasy_150.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
+python scripts/validate_book.py --known data/known_words.txt --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json --general-fiction-pack data/stretch_packs/general_fiction_150.txt --genre-pack data/stretch_packs/fantasy_200.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 ```
 
 Add `--personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 500` for Marcel personalized readers. Omit those flags for public graded-reader mode.
@@ -114,7 +114,7 @@ The report counts tokens by layer, forbidden unknowns, forbidden unknowns over t
 Use `scripts/plot_affordance_report.py` before planning a case-heavy premise:
 
 ```powershell
-python scripts/plot_affordance_report.py --known data/known_words.txt --packs data/stretch_packs/general_fiction_150.txt data/stretch_packs/low_fantasy_150.txt data/stretch_packs/shanghai_setting_150.txt data/stretch_packs/journalism_crime_50.txt --required 采访 编辑 来源 查出 法院 当事人 局长 --out manuscripts/<slug>/quality/plot_affordance_report.json
+python scripts/plot_affordance_report.py --known data/known_words.txt --packs data/stretch_packs/general_fiction_150.txt data/stretch_packs/fantasy_200.txt data/stretch_packs/shanghai_setting_150.txt data/stretch_packs/journalism_crime_50.txt --required 采访 编辑 来源 查出 法院 当事人 局长 --out manuscripts/<slug>/quality/plot_affordance_report.json
 ```
 
 This report classifies the available vocabulary into story affordance categories such as action verbs, crime nouns, evidence nouns, journalism nouns, movement/location words, conflict verbs, fantasy mechanism words, and dialogue alternatives. It is planning evidence, not an acceptance gate.
