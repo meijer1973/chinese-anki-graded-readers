@@ -1,10 +1,8 @@
 # Easy low-fantasy / urban-fantasy stretch words.
 # Reusable fantasy terms for one strange object, one hidden rule, one secret place, or one small supernatural danger.
-圣诞老人
 灵气
 符
 咒语
-海盗
 妖怪
 幻影
 法术
@@ -14,8 +12,6 @@
 灵灯
 灵路
 夜行
-预言
-诅咒
 梦境
 镜中
 忘忧
@@ -105,7 +101,6 @@
 野兽
 巨兽
 妖兽
-传奇
 复活
 轮回
 化身
@@ -116,7 +111,6 @@
 施法
 守护
 预感
-传说
 誓言
 劫难
 宿命
@@ -150,3 +144,9 @@
 灵泉
 魔纹
 魂火
+魔术
+精灵
+怪兽
+闪电
+诡异
+女巫

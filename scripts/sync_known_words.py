@@ -61,7 +61,7 @@ def main() -> int:
         help="Ranked graded-reader word source. Defaults to High frequency words 0-10000.txt.",
     )
     parser.add_argument("--out", default=str(ROOT / "data" / "known_words.txt"))
-    parser.add_argument("--limit", type=int, default=2500, help="Number of ranked words to mark known. Use 0 for all words.")
+    parser.add_argument("--limit", type=int, default=3500, help="Number of ranked words to mark known. Use 0 for all words.")
     parser.add_argument("--metadata", default=str(ROOT / "data" / "known_words.metadata.json"))
     args = parser.parse_args()
 

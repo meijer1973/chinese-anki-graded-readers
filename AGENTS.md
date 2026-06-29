@@ -191,7 +191,7 @@ Default workflow:
 
 ```powershell
 $env:PYTHONIOENCODING='utf-8'
-python scripts/sync_known_words.py --limit 2500
+python scripts/sync_known_words.py --limit 3500
 python scripts/validate_chapter.py --known data/known_words.txt --chapter manuscripts/<slug>/chapters/chapter_01.zh-tok.txt --out manuscripts/<slug>/chapters/chapter_01.validation.json
 python scripts/validate_book.py --known data/known_words.txt --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json
 python scripts/run_quality_gate.py --manuscript manuscripts/<slug> --known data/known_words.txt
@@ -206,7 +206,7 @@ python scripts/check_series_memory_update.py --manuscript manuscripts/<slug> --s
 
 For Marcel personalized mode, add `--personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 500` to validation, quality-gate, report-generation, and EPUB commands.
 
-For future known-word expansion, regenerate `data/known_words.txt` from `High frequency words 0-10000.txt` with a larger `--limit` such as `3000`, `4000`, or `5000`; the validators and manuscript layout do not change.
+For future known-word expansion, regenerate `data/known_words.txt` from `High frequency words 0-10000.txt` with a larger `--limit` such as `4000` or `5000`; the validators and manuscript layout do not change.
 
 When completing a novel-generation task, the final response must report:
 

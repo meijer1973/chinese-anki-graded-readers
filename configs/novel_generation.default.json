@@ -9,7 +9,7 @@
   "baseline_notes": "Quality comes first. Do not add text solely to meet a word, chapter, vocabulary coverage, or stretch-word target.",
   "writing_mode": "outline-first",
   "known_words_path": "data/known_words.txt",
-  "known_word_limit": 2500,
+  "known_word_limit": 3500,
   "learner_profile": {
     "mode": "public",
     "profile_name": null,

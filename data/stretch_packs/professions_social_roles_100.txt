@@ -1,24 +1,15 @@
 # Profession and social-role stretch words.
 # Use these to give characters roles that affect plot behavior.
 画家
-中尉
-新娘
 店主
 厨师
 清洁工
-设计师
-摄影师
-艺术家
-乘客
-陌生人
 店员
 修理工
 快递员
 外卖员
 租客
 导游
-警卫
-校长
 房客
 摊主
 书店老板
@@ -60,7 +51,6 @@
 消防员
 月嫂
 保洁员
-阿姨
 亲戚
 房产中介
 实习生
@@ -100,3 +90,13 @@
 烘焙师
 花艺师
 兽医
+修女
+祖母
+老爹
+前妻
+小偷
+秘书
+承包商
+侍者
+密探
+社长

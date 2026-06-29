@@ -14,19 +14,19 @@ The active machine-readable vocabulary file is:
 data/known_words.txt
 ```
 
-It is generated from `High frequency words 0-10000.txt`, which is one Chinese word or phrase per line in ranked order. The current graded-reader default is the first 2500 entries. This graded-reader source is separate from `word list chinese.txt`, which remains the Anki deck source and live Anki frequency-rank input.
+It is generated from `High frequency words 0-10000.txt`, which is one Chinese word or phrase per line in ranked order. The current graded-reader default is the first 3500 entries. This graded-reader source is separate from `word list chinese.txt`, which remains the Anki deck source and live Anki frequency-rank input.
 
 Regenerate the active known list after the ranked list or known-word threshold changes:
 
 ```powershell
 $env:PYTHONIOENCODING='utf-8'
-python scripts/sync_known_words.py --limit 2500
+python scripts/sync_known_words.py --limit 3500
 ```
 
 For future expansion, change only the limit:
 
 ```powershell
-python scripts/sync_known_words.py --limit 2500
+python scripts/sync_known_words.py --limit 3500
 python scripts/sync_known_words.py --limit 4000
 python scripts/sync_known_words.py --limit 5000
 ```
@@ -43,7 +43,7 @@ python scripts/load_known_words.py --known data/known_words.txt
 
 Use public mode when a book should represent only the frequency-core level plus approved stretch words.
 
-Use Marcel personalized mode when the book is for Marcel and may use words he already recognizes outside the top 2500. The personal-known layer is generated from:
+Use Marcel personalized mode when the book is for Marcel and may use words he already recognizes outside the top 3500. The personal-known layer is generated from:
 
 ```text
 data/learner_profiles/marcel/personal_known_words.tsv
