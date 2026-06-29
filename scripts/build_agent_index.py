@@ -141,6 +141,7 @@ def write_url_index(paths: list[str]) -> None:
         "docs/series-memory.md",
         "scripts/check_series_memory_update.py",
         "configs/novel_generation.default.json",
+        "High frequency words 0-10000.txt",
         "data/known_words.metadata.json",
         "data/known_words.txt",
         "anki/stretch_word_candidates.tsv",

@@ -14,7 +14,7 @@ The active machine-readable vocabulary file is:
 data/known_words.txt
 ```
 
-It is generated from `word list chinese.txt`, which is one Chinese word or phrase per line in ranked order. The current graded-reader default is the first 2500 entries. This is separate from live Anki card scheduling policy.
+It is generated from `High frequency words 0-10000.txt`, which is one Chinese word or phrase per line in ranked order. The current graded-reader default is the first 2500 entries. This graded-reader source is separate from `word list chinese.txt`, which remains the Anki deck source and live Anki frequency-rank input.
 
 Regenerate the active known list after the ranked list or known-word threshold changes:
 

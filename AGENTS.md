@@ -100,7 +100,8 @@ Use the minimal-intervention cascade: classify proper nouns and personal-known w
 
 ## Repository Map
 
-- `word list chinese.txt` is the ranked source list. One Chinese word or phrase per line. The line order is the frequency rank used by later scripts.
+- `word list chinese.txt` is the ranked Anki deck source list. One Chinese word or phrase per line. The line order is the frequency rank used by Anki deck scripts.
+- `High frequency words 0-10000.txt` is the ranked graded-reader source list. One Chinese word or phrase per line. `scripts/sync_known_words.py` uses this file, not the Anki deck source, to generate `data/known_words.txt`.
 - `build_anki_chinese.py` enriches the word list with pinyin, meanings, and example sentences, then writes TSV files. It does not edit Anki.
 - `sentence_example_overrides.py` contains curated example sentences and pinyin fixes. Prefer editing this file when improving sentence quality.
 - `apply_meaning_cleanup_updates.py` contains the current meaning cleanup rules and concise meaning overrides. It can update live Anki meaning fields through AnkiConnect.
@@ -112,7 +113,7 @@ Use the minimal-intervention cascade: classify proper nouns and personal-known w
 - `anki_chinese_import.tsv` is the regenerated TSV without a header for Anki import.
 - `data/` contains compressed source datasets used by the builder: CC-CEDICT and Tatoeba Mandarin-English exports.
 - `downloads/`, `SUBTLEX-CH-CHR/`, and `SUBTLEX-CH-WF/` are source/reference data directories.
-- `data/known_words.txt` is the active machine-readable known-word list for restricted-vocabulary fiction. It is generated from the ranked source list by `scripts/sync_known_words.py`.
+- `data/known_words.txt` is the active machine-readable known-word list for restricted-vocabulary fiction. It is generated from `High frequency words 0-10000.txt` by `scripts/sync_known_words.py`.
 - `data/learner_profiles/marcel/` contains Marcel's personal-known learner profile. Use `personal_known_words.tsv` as the editable source and `personal_known_words.txt` as the generated validator layer.
 - `data/learner_profiles/marcel/high_frequency_characters.txt` contains Marcel's ranked known-character source for the optional `--known-character-compounds` layer; current default limit is 500.
 - `series/an-lin/` contains the living series memory package for the 林安 journalist urban-fantasy crime series: bible, chronology, character registry, mechanism registry, open threads, recurring objects/locations, sequel constraints, and update log.
@@ -205,7 +206,7 @@ python scripts/check_series_memory_update.py --manuscript manuscripts/<slug> --s
 
 For Marcel personalized mode, add `--personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 500` to validation, quality-gate, report-generation, and EPUB commands.
 
-For future known-word expansion, regenerate `data/known_words.txt` with a larger `--limit` such as `3000`, `4000`, or `5000`; the validators and manuscript layout do not change.
+For future known-word expansion, regenerate `data/known_words.txt` from `High frequency words 0-10000.txt` with a larger `--limit` such as `3000`, `4000`, or `5000`; the validators and manuscript layout do not change.
 
 When completing a novel-generation task, the final response must report:
 
@@ -227,6 +228,7 @@ When completing a novel-generation task, the final response must report:
 Hand-edit these:
 
 - `word list chinese.txt`
+- `High frequency words 0-10000.txt`
 - `sentence_example_overrides.py`
 - Script logic in `*.py`
 - novel planning files in `manuscripts/<project-slug>/`

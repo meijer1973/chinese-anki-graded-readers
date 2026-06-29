@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-26T14:48:28Z",
+  "generated_at": "2026-06-29T07:47:41Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 1087,
+  "file_count": 1088,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -176,6 +176,11 @@
       "category": "maps/prompts"
     },
     {
+      "path": "High frequency words 0-10000.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/High frequency words 0-10000.txt",
+      "category": "root"
+    },
+    {
       "path": "README.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/README.md",
       "category": "maps/prompts"
@@ -301,13 +306,13 @@
       "category": "data"
     },
     {
-      "path": "data/stretch_packs/business_economics_60.txt",
-      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/business_economics_60.txt",
+      "path": "data/stretch_packs/business_economics_150.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/business_economics_150.txt",
       "category": "data"
     },
     {
-      "path": "data/stretch_packs/general_fiction_100.txt",
-      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/general_fiction_100.txt",
+      "path": "data/stretch_packs/general_fiction_150.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/general_fiction_150.txt",
       "category": "data"
     },
     {
@@ -321,13 +326,13 @@
       "category": "data"
     },
     {
-      "path": "data/stretch_packs/metadata/business_economics_60.json",
-      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/business_economics_60.json",
+      "path": "data/stretch_packs/metadata/business_economics_150.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/business_economics_150.json",
       "category": "data"
     },
     {
-      "path": "data/stretch_packs/metadata/general_fiction_100.json",
-      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/general_fiction_100.json",
+      "path": "data/stretch_packs/metadata/general_fiction_150.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/general_fiction_150.json",
       "category": "data"
     },
     {

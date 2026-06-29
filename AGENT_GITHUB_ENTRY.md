@@ -24,7 +24,7 @@ Read that file first for repository access, exact paths, raw URLs, and task rout
 | How should remote agents traverse the repo? | `RESEARCH_AGENT_MAP.md` |
 | What prompt should a remote research agent use? | `RESEARCH_AGENT_PROMPT.md` |
 | What machine-readable manifest describes the repo? | `repo_manifest.json` |
-| How is a known-word list generated? | `scripts/sync_known_words.py`, `data/known_words.metadata.json` |
+| How is a known-word list generated? | `High frequency words 0-10000.txt`, `scripts/sync_known_words.py`, `data/known_words.metadata.json` |
 | How is a chapter validated? | `scripts/validate_chapter.py`, `scripts/novel_tools.py` |
 | How is a whole manuscript validated? | `scripts/validate_book.py`, `scripts/generate_reports.py` |
 | How is quality reviewed? | `docs/quality-review.md`, `.agents/skills/chinese-lead-quality-review/SKILL.md` |

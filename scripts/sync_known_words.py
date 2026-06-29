@@ -7,10 +7,13 @@ from pathlib import Path
 from novel_tools import ROOT, utc_now
 
 
+DEFAULT_GRADED_READER_SOURCE = ROOT / "High frequency words 0-10000.txt"
+
+
 def read_ranked_words(source: Path) -> list[str]:
     words: list[str] = []
     seen: set[str] = set()
-    for line_number, raw_line in enumerate(source.read_text(encoding="utf-8").splitlines(), start=1):
+    for line_number, raw_line in enumerate(source.read_text(encoding="utf-8-sig").splitlines(), start=1):
         word = raw_line.strip()
         if not word:
             continue
@@ -38,7 +41,11 @@ def sync_known_words(source: Path, out: Path, limit: int, metadata: Path | None 
         "source_word_count": len(ranked_words),
         "known_word_count": len(selected),
         "limit": limit,
-        "derivation": "First N ranked entries from word list chinese.txt. Current graded-reader default N=2500; Anki card scheduling policy is managed separately.",
+        "derivation": (
+            "First N ranked entries from High frequency words 0-10000.txt. "
+            "This graded-reader source is separate from word list chinese.txt, "
+            "which remains the Anki deck source."
+        ),
     }
     if metadata:
         metadata.parent.mkdir(parents=True, exist_ok=True)
@@ -47,8 +54,12 @@ def sync_known_words(source: Path, out: Path, limit: int, metadata: Path | None 
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Generate data/known_words.txt from the ranked Chinese word list.")
-    parser.add_argument("--source", default=str(ROOT / "word list chinese.txt"))
+    parser = argparse.ArgumentParser(description="Generate data/known_words.txt from the graded-reader ranked word list.")
+    parser.add_argument(
+        "--source",
+        default=str(DEFAULT_GRADED_READER_SOURCE),
+        help="Ranked graded-reader word source. Defaults to High frequency words 0-10000.txt.",
+    )
     parser.add_argument("--out", default=str(ROOT / "data" / "known_words.txt"))
     parser.add_argument("--limit", type=int, default=2500, help="Number of ranked words to mark known. Use 0 for all words.")
     parser.add_argument("--metadata", default=str(ROOT / "data" / "known_words.metadata.json"))

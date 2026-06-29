@@ -16,7 +16,7 @@ See `anki/anki_field_schema.md` for the stretch candidate field mapping.
 
 ## New-Card Learning Order
 
-`word list chinese.txt` remains the frequency-ranked source list. Do not hand-mix appended single-character closure notes into the middle unless the frequency-rank meaning is explicitly redesigned.
+`word list chinese.txt` remains the frequency-ranked source list for the Anki deck. Graded-reader core known words are generated separately from `High frequency words 0-10000.txt`. Do not hand-mix appended single-character closure notes into the Anki source list unless the frequency-rank meaning is explicitly redesigned.
 
 Single-character coverage and study order are handled separately:
 

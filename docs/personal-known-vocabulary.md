@@ -2,7 +2,7 @@
 
 Personal-known words are a learner-profile layer for words Marcel already recognizes with low cognitive load, even when they are outside the current frequency-core list. Marcel personalized mode also has an auditable high-frequency character-compound layer for tokens made entirely from the first 500 ranked known characters.
 
-Do not merge these words into `data/known_words.txt`. That file remains the first N ranked frequency entries from `word list chinese.txt`. Personal-known words answer a different question: "Can this learner read this word comfortably?"
+Do not merge these words into `data/known_words.txt`. That file remains the first N ranked frequency entries from `High frequency words 0-10000.txt`. Personal-known words answer a different question: "Can this learner read this word comfortably?"
 
 ## Layers
 

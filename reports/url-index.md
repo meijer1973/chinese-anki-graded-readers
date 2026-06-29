@@ -21,6 +21,7 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/series-memory.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/check_series_memory_update.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/configs/novel_generation.default.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/High frequency words 0-10000.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/known_words.metadata.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/known_words.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/stretch_word_candidates.tsv
@@ -46,6 +47,7 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/series-memory.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/check_series_memory_update.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/configs/novel_generation.default.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/High frequency words 0-10000.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/known_words.metadata.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/known_words.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/stretch_word_candidates.tsv
@@ -101,12 +103,12 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/learner_profiles/marcel/personal_known_words.tsv
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/learner_profiles/marcel/personal_known_words.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/punctuation_allowlist.txt
-- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/business_economics_60.txt
-- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/general_fiction_100.txt
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/business_economics_150.txt
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/general_fiction_150.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/journalism_crime_50.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/low_fantasy_150.txt
-- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/business_economics_60.json
-- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/general_fiction_100.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/business_economics_150.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/general_fiction_150.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/journalism_crime_50.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/low_fantasy_150.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/professions_social_roles_100.json

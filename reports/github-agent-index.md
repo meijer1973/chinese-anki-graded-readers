@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki And Graded Readers
 
-Generated: 2026-06-26T14:48:28Z
+Generated: 2026-06-29T07:47:41Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 1087
+Files indexed: 1088
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -142,12 +142,12 @@ Count: 28
 - data/learner_profiles/marcel/personal_known_words.tsv
 - data/learner_profiles/marcel/personal_known_words.txt
 - data/punctuation_allowlist.txt
-- data/stretch_packs/business_economics_60.txt
-- data/stretch_packs/general_fiction_100.txt
+- data/stretch_packs/business_economics_150.txt
+- data/stretch_packs/general_fiction_150.txt
 - data/stretch_packs/journalism_crime_50.txt
 - data/stretch_packs/low_fantasy_150.txt
-- data/stretch_packs/metadata/business_economics_60.json
-- data/stretch_packs/metadata/general_fiction_100.json
+- data/stretch_packs/metadata/business_economics_150.json
+- data/stretch_packs/metadata/general_fiction_150.json
 - data/stretch_packs/metadata/journalism_crime_50.json
 - data/stretch_packs/metadata/low_fantasy_150.json
 - data/stretch_packs/metadata/professions_social_roles_100.json
@@ -1150,9 +1150,10 @@ Count: 10
 
 ## root
 
-Count: 4
+Count: 5
 
 - .gitattributes
 - .gitignore
+- High frequency words 0-10000.txt
 - high frequency characters.txt
 - word list chinese.txt
