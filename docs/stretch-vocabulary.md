@@ -14,7 +14,7 @@ Do not use random unknown words. Prefer exact known tokens. Stretch, book-specif
 - Personal known words: `data/learner_profiles/marcel/personal_known_words.txt`, enabled only with `--personal-known`
 - High-frequency character compounds: `data/learner_profiles/marcel/high_frequency_characters.txt`, enabled only for Marcel personalized readers with `--known-character-compounds --known-character-compound-limit 500`
 - General fiction: `data/stretch_packs/general_fiction_150.txt`
-- Low fantasy: `data/stretch_packs/low_fantasy_150.txt`
+- Fantasy: `data/stretch_packs/low_fantasy_150.txt`
 - Shanghai setting: `data/stretch_packs/shanghai_setting_150.txt`
 - Professions/social roles: `data/stretch_packs/professions_social_roles_100.txt`
 - Urban objects: `data/stretch_packs/urban_objects_100.txt`
@@ -68,21 +68,13 @@ Pass this reusable pack with `--extra-pack`:
 python scripts/validate_book.py --known data/known_words.txt --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json --extra-pack data/stretch_packs/business_economics_150.txt
 ```
 
-## Low Fantasy / Shanghai Use
+## Fantasy / Shanghai Use
 
-Use easy low fantasy:
+The `low_fantasy_150.txt` pack is a reusable fantasy vocabulary layer; it does not force a specific story shape.
 
-- one strange object
-- one secret place
-- one hidden rule
-- one small danger
-- one mystery
-- normal Shanghai life plus a small fantasy layer
-- small cast and repeated locations
+Fantasy stories may use low, high, urban, epic, mystery, political, battle, creature-focused, or hybrid structures. Cast size, setting pattern, magic-system complexity, and scope are planning choices, not repo-wide rules.
 
-`low_fantasy_150.txt` now includes a fuller set of reusable fantasy mechanisms, forces, places, objects, and creature classes. These words can support fairy/devil-style inspiration, but the graded-reader default is still low fantasy: choose a few recurring terms and make them matter.
-
-Avoid epic fantasy scale, many invented names, many monsters, complicated politics, and one-off magical terms.
+The control point is vocabulary, not fantasy scale. Magic systems, invented places, factions, monsters, politics, and battles are allowed when the needed words are in core, personal-known, stretch, book-specific, or proper-noun layers and are introduced clearly enough for the reader.
 
 ## Chapter Planning
 

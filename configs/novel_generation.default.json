@@ -59,7 +59,7 @@
   "export_remove_spaces": true,
   "include_validation_appendix": true,
   "genre": {
-    "mode": "low_fantasy_urban_shanghai",
+    "mode": "fantasy_urban_shanghai",
     "series_bible_path": "series/an-lin/series_bible.md",
     "series_chronology_path": "series/an-lin/chronology.md",
     "series_character_registry_path": "series/an-lin/character_registry.md",
@@ -67,10 +67,8 @@
     "series_open_threads_path": "series/an-lin/open_threads.md",
     "series_constraints_path": "series/an-lin/sequel_constraints.md",
     "series_update_log_path": "series/an-lin/series_update_log.md",
-    "avoid_epic_fantasy": true,
-    "prefer_one_strange_object": true,
-    "prefer_one_secret_place": true,
-    "prefer_small_cast": true
+    "fantasy_scope": "flexible",
+    "fantasy_scope_policy": "Fantasy subtype, scale, cast size, location pattern, magic complexity, factions, monsters, politics, and battle pressure are story choices when the needed vocabulary is covered by core, personal-known, stretch, book-specific, or proper-noun layers."
   },
   "setting": {
     "primary_city": "上海",
@@ -89,12 +87,11 @@
     "workplace",
     "friendship",
     "mystery-lite",
-    "easy low fantasy",
+    "fantasy",
     "urban fantasy set in Shanghai"
   ],
   "forbidden_genres_or_topics": [
-    "epic fantasy with many kingdoms",
-    "high fantasy with unavailable terminology",
+    "genres that require extensive unavailable terminology unless the needed words are added through approved layers",
     "technical science fiction",
     "dense legal thriller",
     "war story unless the known list supports it"

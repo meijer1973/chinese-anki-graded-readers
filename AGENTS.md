@@ -53,11 +53,11 @@ Track vocabulary breadth, but treat breadth counts as diagnostics, not acceptanc
 
 Before vocabulary planning, create `manuscripts/<project-slug>/creative_preflight.md` with 3-5 premise or scene alternatives, rejected ideas, chosen story shape, reader question, main pressure, planned reversals, and variation budget. Future manuscripts should run `scripts/prose_variety_report.py` and use `docs/style-bank-controlled-chinese.md` plus the prose-variety polish skill when repeated visible frames remain.
 
-### Low Fantasy / Shanghai Mode
+### Fantasy / Shanghai Mode
 
-For `low_fantasy_urban_shanghai`, prefer easy low fantasy: normal city life plus one impossible thing. Use one strange object, one secret place, one hidden rule, one small danger, one mystery, a small cast, repeated locations, and clear emotional stakes. Avoid large invented worlds, kingdoms, races, battle-heavy plots, lore dumps, complicated politics, many monsters, and vocabulary that appears once and disappears.
+Fantasy stories may choose their own scale and structure. Do not force a narrow fantasy subtype, fixed cast size, fixed location pattern, minimal magic system, or ban on epic scope. Large-scale worldbuilding, complex magic, political pressure, battles, monsters, and invented institutions are allowed when the story has enough approved vocabulary to make them readable and mechanically auditable.
 
-Every real novel in this mode should include at least 3 distinct professions or social roles, at least 4 recurring non-home/non-school/non-hospital locations, at least 2 characters whose role affects the plot, and at least 1 location that changes meaning over the story.
+Fantasy planning should still name the core story pressure, relevant setting logic, recurring roles or factions, important locations, and any fantasy mechanisms the reader must understand. Vocabulary limits are enforced by validation, not by a mandatory fantasy subtype.
 
 ### 林安 Series Continuity
 

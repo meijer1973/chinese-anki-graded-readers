@@ -54,7 +54,7 @@ For 林安 sequels, the vocabulary plan must also include case function, journal
 - Use journalism/crime stretch vocabulary for real story actions: interviewing, confirming sources, checking files, protecting witnesses, publishing or withholding articles, following suspects, and comparing testimony.
 - Use Shanghai/urban locations to create scene texture when that setting is configured.
 - Use varied professions and social roles; avoid every scene depending on teachers, doctors, students, police, school, hospital, or home.
-- Use low fantasy sparingly but meaningfully: one strange object, one secret place, one hidden rule, and a small danger are usually enough.
+- Use fantasy elements in the amount and scale the chosen story needs. Keep the fantasy vocabulary approved, repeated where useful, and clear in context.
 - Do not add paragraphs solely to increase word count, vocabulary breadth, or stretch-word repetition.
 - Any expansion pass must name the story problem it fixes.
 - Do not use pinyin, English, or near matches unless the exact token is explicitly allowed.

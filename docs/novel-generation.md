@@ -159,7 +159,7 @@ The planner should create:
 - recurring phrases inside the known vocabulary
 - risky concepts likely to cause vocabulary violations
 
-For `low_fantasy_urban_shanghai`, the planner must also create selected vocabulary packs, book-specific stretch words, proper nouns, a setting map, recurring locations, character professions/social roles, fantasy rule, strange object or place, central mystery, stretch-word introduction schedule, and quality risks.
+For fantasy manuscripts, the planner should create selected vocabulary packs, book-specific stretch words, proper nouns, a setting map when useful, recurring locations or factions when useful, character professions/social roles, fantasy mechanisms or rules, central conflict or mystery, stretch-word introduction schedule, and quality risks. Fantasy subtype, scale, cast size, setting pattern, and magic-system complexity are chosen per story rather than fixed by repository rules.
 
 For 林安 journalist/crime stories, include the journalism/crime pack and make sure the outline has real story functions: interview, source verification, publication pressure, witness protection, suspect pressure, and a simple fantasy mechanism that changes the case.
 
@@ -460,7 +460,7 @@ Add `--require-epub-build` when the EPUB should already exist. The next 林安 s
 20. Build EPUB only after lead reviewer approves.
 21. For series manuscripts, update and verify the living series memory package before planning the next book.
 
-For `low_fantasy_urban_shanghai`, the outline and reviews should check that the story feels like a normal person in Shanghai discovering one impossible thing. Avoid epic scale, lore dumps, many monsters, and stretch words used once as decoration.
+For fantasy manuscripts, the outline and reviews should check that the fantasy premise is clear, engaging, and supportable with the approved vocabulary layers. Epic scale, multiple fantasy elements, politics, battles, and monsters are allowed; the review concern is whether the reader can follow them and whether stretch words are introduced intentionally rather than used once as decoration.
 
 ## Review the Final Report
 

@@ -30,16 +30,15 @@ Create or update these files under `manuscripts/<project-slug>/`:
 - Infer what plots are possible from the available vocabulary.
 - State whether the manuscript is public mode or learner-profile personalized mode. If it uses Marcel personalized mode, treat `data/learner_profiles/marcel/personal_known_words.txt` and enabled top-500 high-frequency character compounds as allowed known layers but keep them separate from core and stretch in reports.
 - Prefer emotionally coherent plots with real pressure, choices, reversals, and curiosity over concepts that require unavailable words.
-- For about 1100 known words, domestic drama, school life, workplace, travel, friendship, family, mystery-lite, and small urban fantasy/crime conflict are viable, but they still need tension and chapter hooks.
+- For about 1100 known words, domestic drama, school life, workplace, travel, friendship, family, mystery-lite, fantasy, and crime conflict are viable when the required vocabulary is present, but they still need tension and chapter hooks.
 - For larger lists, allow more complex genres only when the needed nouns, verbs, and abstract terms are present.
-- Avoid plots requiring many unavailable legal, technical, medical, political, or epic-fantasy terms unless those exact tokens exist in core, configured personal-known, or approved stretch layers.
+- Any genre, including high or epic fantasy, may be planned when the needed legal, technical, medical, political, fantasy, or worldbuilding terms exist in core, configured personal-known, approved stretch, book-specific, or proper-noun layers.
 - Do not force a chapter count. Let chapter breaks follow the story's natural turns.
 - Do not plan to a chapter word-count requirement. Chapter length is a story-shape decision, not a quota.
 - Prefer the smallest chapter count that gives the premise, conflict, reversal, and ending enough room.
-- If the config uses `low_fantasy_urban_shanghai`, plan easy low fantasy: normal Shanghai life plus one impossible thing.
-- Prefer one strange object, one secret place, one hidden rule, one small danger, one mystery, a small cast, repeated locations, repeated magical terms, and clear emotional stakes.
-- Avoid large invented worlds, kingdoms, races, large magic systems, lore dumps, complicated politics, many monsters, battle-heavy plots, and vocabulary that appears once and disappears.
-- Include at least 3 distinct professions or social roles, at least 4 recurring locations beyond school/hospital/home, at least 2 characters whose role affects plot behavior, and at least 1 location that changes meaning over the story.
+- For fantasy projects, choose the fantasy scale and structure that best fits the story and available vocabulary. Do not force a narrow subtype, fixed cast size, fixed location pattern, or minimal magic system.
+- Large-scale worldbuilding, invented peoples or institutions, complex magic systems, politics, monsters, and battle-driven plots are allowed when the vocabulary plan makes them readable and auditable.
+- Include professions, social roles, recurring locations, factions, institutions, fantasy mechanisms, or changing places when they serve the chosen story.
 - For journalist/crime stories, use `data/stretch_packs/journalism_crime_50.txt` and plan concrete reporting functions: interview, source verification, publication pressure, witness protection, suspect pressure, and file/evidence handling.
 - For sequels, include a variation budget. Name at least three ways this book differs from the previous one without rebooting continuity.
 
@@ -67,8 +66,7 @@ Include:
 - proper noun list
 - setting map and recurring locations
 - character professions or social roles
-- fantasy rule
-- strange object or strange place
+- fantasy mechanisms, rules, forces, objects, places, factions, or institutions when relevant
 - central mystery
 - stretch-word introduction schedule
 - quality risks
@@ -80,7 +78,7 @@ Include:
 
 Reject outline ideas that are only safe, flat, or repetitive. Vocabulary limits are a constraint, not an excuse for dull scenes.
 
-For Shanghai low fantasy, the premise must be concrete and charged. It should feel like "a normal person in Shanghai discovers one impossible thing," not an epic fantasy frame. The final premise must be expressible using core words plus approved stretch vocabulary.
+For fantasy manuscripts, the premise must be concrete and charged. It may be low, urban, high, epic, political, battle-oriented, creature-focused, or hybrid fantasy, as long as the final premise is expressible using core words plus approved vocabulary layers.
 
 ## Discovery Mode
 
