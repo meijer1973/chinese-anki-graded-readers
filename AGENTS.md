@@ -45,6 +45,8 @@ Keep personal-known vocabulary separate from the ranked frequency list. `data/kn
 
 Use public mode for general graded readers: core known words plus approved stretch packs under the 98% known / 2% approved non-core default. Use Marcel personalized mode only when requested or when the project config says so: core known words plus `--personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 500` plus approved stretch packs. Reports must keep `personal_known_tokens` and `high_frequency_character_compound_tokens` separate from core and stretch tokens; these personalized layers count toward known-token coverage for Marcel, not toward stretch load.
 
+Stretch packs should normally avoid duplicating core known words or Marcel's high-frequency character-compound layer. If a reusable public-mode genre term is essential despite that overlap, list it in `data/stretch_packs/known_character_compound_overlap_allowlist.json` with a rationale so future audits keep the exception visible.
+
 ### Creative Quality
 
 Future novels should be ambitious inside the controlled vocabulary. Prefer scenes with a concrete situation, a character want, pressure or conflict, a change by the end of the scene, and a reason for the reader to continue. Avoid conservative, flat, repetitive fiction and repeated dialogue loops such as `我 不 知道`, `你 怎么 了`, or `我们 要 走` unless repetition serves the story.
@@ -116,6 +118,8 @@ Use the minimal-intervention cascade: classify proper nouns and personal-known w
 - `data/known_words.txt` is the active machine-readable known-word list for restricted-vocabulary fiction. It is generated from `High frequency words 0-10000.txt` by `scripts/sync_known_words.py`.
 - `data/learner_profiles/marcel/` contains Marcel's personal-known learner profile. Use `personal_known_words.tsv` as the editable source and `personal_known_words.txt` as the generated validator layer.
 - `data/learner_profiles/marcel/high_frequency_characters.txt` contains Marcel's ranked known-character source for the optional `--known-character-compounds` layer; current default limit is 500.
+- `data/stretch_packs/fantasy_225.txt` contains reviewed reusable fantasy stretch words for urban fantasy, high fantasy, sword-sect/cultivation stories, politics, battles, monsters, magic mechanisms, and invented institutions. Use it with `--genre-pack`.
+- `data/stretch_packs/known_character_compound_overlap_allowlist.json` documents rare public-mode stretch-pack terms that intentionally overlap Marcel's optional high-frequency character-compound layer.
 - `series/an-lin/` contains the living series memory package for the 林安 journalist urban-fantasy crime series: bible, chronology, character registry, mechanism registry, open threads, recurring objects/locations, sequel constraints, and update log.
 - `data/stretch_packs/journalism_crime_50.txt` contains reviewed journalism/crime stretch words for 林安-style crime reporting stories.
 - `data/stretch_packs/business_economics_150.txt` contains reviewed business/economics stretch words for concrete shops, money, prices, customers, costs, risk, and simple market-decision stories. Pass it with `--extra-pack`.

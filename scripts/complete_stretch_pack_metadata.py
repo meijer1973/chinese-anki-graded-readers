@@ -26,7 +26,7 @@ PACK_DEFAULTS = {
         "example_en": "This {word} is important.",
         "story_affordance": "Supports emotional movement, conflict, memory, or character choice.",
     },
-    "fantasy_200": {
+    "fantasy_225": {
         "part_of_speech": "fantasy term",
         "example_template": "这个 {word} 出现 了 。",
         "example_en": "This {word} appeared.",
@@ -87,6 +87,7 @@ def entry_english(word: str, entries_by_word: dict) -> str:
 def normalize_notes(notes: str, pack_name: str) -> str:
     return (
         notes.replace("low_fantasy_150", pack_name)
+        .replace("fantasy_200", pack_name)
         .replace("low-fantasy", "fantasy")
         .replace("low fantasy", "fantasy")
         .replace("urban-fantasy", "fantasy")

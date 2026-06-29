@@ -46,7 +46,7 @@ Notes
 - `ExampleSentenceZhNatural` -> `Example`
 - `ExampleSentenceEnglish` -> `Example Meaning`
 - `Pack`, `Layer`, `Priority`, `SourceBook`, `FirstChapter`, `Status`, and `Notes` -> review-only metadata unless a future migration adds fields.
-- `Source` should identify the pack and optional source book, such as `stretch:fantasy_200`.
+- `Source` should identify the pack and optional source book, such as `stretch:fantasy_225`.
 - `Frequency Rank` should remain blank until the word is promoted into the ranked core list.
 
 When metadata includes `story_affordance`, `difficulty_note`, or `recommended_repetition_count`, the export script folds those values into `Notes` so the reviewer can see why the word exists and how often it should recur.

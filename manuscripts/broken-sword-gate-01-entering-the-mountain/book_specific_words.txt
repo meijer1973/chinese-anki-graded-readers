@@ -1,0 +1,7 @@
+# Book-specific terms for Volume 1.
+# Keep these out of the reusable fantasy pack unless they prove broadly useful.
+试剑台
+后山
+后山禁地
+祖师残魂
+王都

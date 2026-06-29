@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-29T09:10:14Z",
+  "generated_at": "2026-06-29T10:09:35Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 1088,
+  "file_count": 1109,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -311,8 +311,8 @@
       "category": "data"
     },
     {
-      "path": "data/stretch_packs/fantasy_200.txt",
-      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/fantasy_200.txt",
+      "path": "data/stretch_packs/fantasy_225.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/fantasy_225.txt",
       "category": "data"
     },
     {
@@ -326,13 +326,18 @@
       "category": "data"
     },
     {
+      "path": "data/stretch_packs/known_character_compound_overlap_allowlist.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/known_character_compound_overlap_allowlist.json",
+      "category": "data"
+    },
+    {
       "path": "data/stretch_packs/metadata/business_economics_150.json",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/business_economics_150.json",
       "category": "data"
     },
     {
-      "path": "data/stretch_packs/metadata/fantasy_200.json",
-      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/fantasy_200.json",
+      "path": "data/stretch_packs/metadata/fantasy_225.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/fantasy_225.json",
       "category": "data"
     },
     {
@@ -438,6 +443,61 @@
     {
       "path": "manuscripts/README.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/README.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/broken-sword-gate-01-entering-the-mountain/book_specific_words.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/broken-sword-gate-01-entering-the-mountain/book_specific_words.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/broken-sword-gate-01-entering-the-mountain/chapters/.gitkeep",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/broken-sword-gate-01-entering-the-mountain/chapters/.gitkeep",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/broken-sword-gate-01-entering-the-mountain/characters.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/broken-sword-gate-01-entering-the-mountain/characters.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/broken-sword-gate-01-entering-the-mountain/continuity_log.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/broken-sword-gate-01-entering-the-mountain/continuity_log.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/broken-sword-gate-01-entering-the-mountain/creative_preflight.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/broken-sword-gate-01-entering-the-mountain/creative_preflight.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/broken-sword-gate-01-entering-the-mountain/novel_bible.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/broken-sword-gate-01-entering-the-mountain/novel_bible.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/broken-sword-gate-01-entering-the-mountain/outline.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/broken-sword-gate-01-entering-the-mountain/outline.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/broken-sword-gate-01-entering-the-mountain/planning/chapter_01_vocab_plan.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/broken-sword-gate-01-entering-the-mountain/planning/chapter_01_vocab_plan.md",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/broken-sword-gate-01-entering-the-mountain/proper_nouns.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/broken-sword-gate-01-entering-the-mountain/proper_nouns.txt",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/broken-sword-gate-01-entering-the-mountain/quality/.gitkeep",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/broken-sword-gate-01-entering-the-mountain/quality/.gitkeep",
+      "category": "manuscripts"
+    },
+    {
+      "path": "manuscripts/broken-sword-gate-01-entering-the-mountain/stretch_word_exposure.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/broken-sword-gate-01-entering-the-mountain/stretch_word_exposure.md",
       "category": "manuscripts"
     },
     {
@@ -5403,6 +5463,51 @@
     {
       "path": "series/an-lin/series_update_log.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/an-lin/series_update_log.md",
+      "category": "series"
+    },
+    {
+      "path": "series/broken-sword-gate/character_registry.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/broken-sword-gate/character_registry.md",
+      "category": "series"
+    },
+    {
+      "path": "series/broken-sword-gate/chronology.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/broken-sword-gate/chronology.md",
+      "category": "series"
+    },
+    {
+      "path": "series/broken-sword-gate/mechanism_registry.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/broken-sword-gate/mechanism_registry.md",
+      "category": "series"
+    },
+    {
+      "path": "series/broken-sword-gate/open_threads.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/broken-sword-gate/open_threads.md",
+      "category": "series"
+    },
+    {
+      "path": "series/broken-sword-gate/recurring_locations.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/broken-sword-gate/recurring_locations.md",
+      "category": "series"
+    },
+    {
+      "path": "series/broken-sword-gate/recurring_objects.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/broken-sword-gate/recurring_objects.md",
+      "category": "series"
+    },
+    {
+      "path": "series/broken-sword-gate/sequel_constraints.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/broken-sword-gate/sequel_constraints.md",
+      "category": "series"
+    },
+    {
+      "path": "series/broken-sword-gate/series_bible.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/broken-sword-gate/series_bible.md",
+      "category": "series"
+    },
+    {
+      "path": "series/broken-sword-gate/series_update_log.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/broken-sword-gate/series_update_log.md",
       "category": "series"
     },
     {

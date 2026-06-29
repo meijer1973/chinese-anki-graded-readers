@@ -112,7 +112,8 @@ Machine-readable:
     "data/learner_profiles/marcel/personal_known_audit.json",
     "data/punctuation_allowlist.txt",
     "data/stretch_packs/general_fiction_150.txt",
-    "data/stretch_packs/fantasy_200.txt",
+    "data/stretch_packs/fantasy_225.txt",
+    "data/stretch_packs/known_character_compound_overlap_allowlist.json",
     "data/stretch_packs/shanghai_setting_150.txt",
     "data/stretch_packs/professions_social_roles_100.txt",
     "data/stretch_packs/urban_objects_100.txt",
@@ -135,6 +136,18 @@ Machine-readable:
     "series/an-lin/open_threads.md",
     "series/an-lin/sequel_constraints.md",
     "series/an-lin/series_update_log.md",
+    "series/broken-sword-gate/series_bible.md",
+    "series/broken-sword-gate/chronology.md",
+    "series/broken-sword-gate/character_registry.md",
+    "series/broken-sword-gate/mechanism_registry.md",
+    "series/broken-sword-gate/open_threads.md",
+    "series/broken-sword-gate/sequel_constraints.md",
+    "series/broken-sword-gate/series_update_log.md",
+    "manuscripts/broken-sword-gate-01-entering-the-mountain/creative_preflight.md",
+    "manuscripts/broken-sword-gate-01-entering-the-mountain/novel_bible.md",
+    "manuscripts/broken-sword-gate-01-entering-the-mountain/outline.md",
+    "manuscripts/broken-sword-gate-01-entering-the-mountain/proper_nouns.txt",
+    "manuscripts/broken-sword-gate-01-entering-the-mountain/book_specific_words.txt",
     "anki/stretch_word_candidates.tsv",
     "manuscripts/shanghai-rain-gate-crime/vocabulary_report.json",
     "manuscripts/shanghai-rain-gate-crime/quality/quality_gate_summary.json",
@@ -182,7 +195,8 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/learner_profiles/marcel/personal_known_words.metadata.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/learner_profiles/marcel/personal_known_audit.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/general_fiction_150.txt
-- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/fantasy_200.txt
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/fantasy_225.txt
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/known_character_compound_overlap_allowlist.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/shanghai_setting_150.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/professions_social_roles_100.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/urban_objects_100.txt
@@ -205,6 +219,18 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/an-lin/open_threads.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/an-lin/sequel_constraints.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/an-lin/series_update_log.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/broken-sword-gate/series_bible.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/broken-sword-gate/chronology.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/broken-sword-gate/character_registry.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/broken-sword-gate/mechanism_registry.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/broken-sword-gate/open_threads.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/broken-sword-gate/sequel_constraints.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/series/broken-sword-gate/series_update_log.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/broken-sword-gate-01-entering-the-mountain/creative_preflight.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/broken-sword-gate-01-entering-the-mountain/novel_bible.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/broken-sword-gate-01-entering-the-mountain/outline.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/broken-sword-gate-01-entering-the-mountain/proper_nouns.txt
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/broken-sword-gate-01-entering-the-mountain/book_specific_words.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/novel-generation.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/personal-known-vocabulary.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/adaptation-workflow.md
@@ -395,5 +421,5 @@ python scripts/build_agent_index.py
 Validate the current story trial:
 
 ```powershell
-python scripts/generate_reports.py --manuscript manuscripts/shanghai-rain-ticket --known data/known_words.txt --general-fiction-pack data/stretch_packs/general_fiction_150.txt --genre-pack data/stretch_packs/fantasy_200.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --book-specific manuscripts/shanghai-rain-ticket/book_specific_words.txt --proper-nouns manuscripts/shanghai-rain-ticket/proper_nouns.txt
+python scripts/generate_reports.py --manuscript manuscripts/shanghai-rain-ticket --known data/known_words.txt --general-fiction-pack data/stretch_packs/general_fiction_150.txt --genre-pack data/stretch_packs/fantasy_225.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --book-specific manuscripts/shanghai-rain-ticket/book_specific_words.txt --proper-nouns manuscripts/shanghai-rain-ticket/proper_nouns.txt
 ```

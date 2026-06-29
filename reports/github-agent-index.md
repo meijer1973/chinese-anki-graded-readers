@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki And Graded Readers
 
-Generated: 2026-06-29T09:10:14Z
+Generated: 2026-06-29T10:09:35Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 1088
+Files indexed: 1109
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -126,7 +126,7 @@ Count: 1
 
 ## data
 
-Count: 28
+Count: 29
 
 - data/cedict_ts.u8.gz
 - data/cmn-eng_links.tsv.bz2
@@ -143,11 +143,12 @@ Count: 28
 - data/learner_profiles/marcel/personal_known_words.txt
 - data/punctuation_allowlist.txt
 - data/stretch_packs/business_economics_150.txt
-- data/stretch_packs/fantasy_200.txt
+- data/stretch_packs/fantasy_225.txt
 - data/stretch_packs/general_fiction_150.txt
 - data/stretch_packs/journalism_crime_50.txt
+- data/stretch_packs/known_character_compound_overlap_allowlist.json
 - data/stretch_packs/metadata/business_economics_150.json
-- data/stretch_packs/metadata/fantasy_200.json
+- data/stretch_packs/metadata/fantasy_225.json
 - data/stretch_packs/metadata/general_fiction_150.json
 - data/stretch_packs/metadata/journalism_crime_50.json
 - data/stretch_packs/metadata/professions_social_roles_100.json
@@ -172,9 +173,20 @@ Count: 1
 
 ## manuscripts
 
-Count: 950
+Count: 961
 
 - manuscripts/README.md
+- manuscripts/broken-sword-gate-01-entering-the-mountain/book_specific_words.txt
+- manuscripts/broken-sword-gate-01-entering-the-mountain/chapters/.gitkeep
+- manuscripts/broken-sword-gate-01-entering-the-mountain/characters.md
+- manuscripts/broken-sword-gate-01-entering-the-mountain/continuity_log.md
+- manuscripts/broken-sword-gate-01-entering-the-mountain/creative_preflight.md
+- manuscripts/broken-sword-gate-01-entering-the-mountain/novel_bible.md
+- manuscripts/broken-sword-gate-01-entering-the-mountain/outline.md
+- manuscripts/broken-sword-gate-01-entering-the-mountain/planning/chapter_01_vocab_plan.md
+- manuscripts/broken-sword-gate-01-entering-the-mountain/proper_nouns.txt
+- manuscripts/broken-sword-gate-01-entering-the-mountain/quality/.gitkeep
+- manuscripts/broken-sword-gate-01-entering-the-mountain/stretch_word_exposure.md
 - manuscripts/china-energy-policy-hormuz-long-read/README.md
 - manuscripts/china-energy-policy-hormuz-long-read/book_specific_words.txt
 - manuscripts/china-energy-policy-hormuz-long-read/chapters/chapter_01.validation.json
@@ -1135,7 +1147,7 @@ Count: 3
 
 ## series
 
-Count: 10
+Count: 19
 
 - series/an-lin/approved_series_words.txt
 - series/an-lin/character_registry.md
@@ -1147,6 +1159,15 @@ Count: 10
 - series/an-lin/sequel_constraints.md
 - series/an-lin/series_bible.md
 - series/an-lin/series_update_log.md
+- series/broken-sword-gate/character_registry.md
+- series/broken-sword-gate/chronology.md
+- series/broken-sword-gate/mechanism_registry.md
+- series/broken-sword-gate/open_threads.md
+- series/broken-sword-gate/recurring_locations.md
+- series/broken-sword-gate/recurring_objects.md
+- series/broken-sword-gate/sequel_constraints.md
+- series/broken-sword-gate/series_bible.md
+- series/broken-sword-gate/series_update_log.md
 
 ## root
 

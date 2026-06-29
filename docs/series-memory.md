@@ -24,6 +24,21 @@ series/an-lin/
   series_update_log.md
 ```
 
+For the 断剑山门 / Broken Sword Gate series, the active package is:
+
+```text
+series/broken-sword-gate/
+  series_bible.md
+  chronology.md
+  character_registry.md
+  mechanism_registry.md
+  open_threads.md
+  recurring_locations.md
+  recurring_objects.md
+  sequel_constraints.md
+  series_update_log.md
+```
+
 Use the files this way:
 
 - `series_bible.md`: stable promise, protagonist, genre, and current arc pressure.

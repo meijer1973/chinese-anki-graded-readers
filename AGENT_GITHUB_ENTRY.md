@@ -36,6 +36,7 @@ Read that file first for repository access, exact paths, raw URLs, and task rout
 | What is the latest accepted 林安 manuscript? | `manuscripts/shanghai-mirror-street-case/` |
 | What is the energy-policy long-read? | `manuscripts/china-energy-policy-hormuz-long-read/` |
 | What is the current standalone story trial? | `manuscripts/shanghai-rain-ticket/` |
+| What is the sword-sect fantasy series scaffold? | `series/broken-sword-gate/`, `manuscripts/broken-sword-gate-01-entering-the-mountain/` |
 
 ## Access Layer
 
