@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-29T10:09:35Z",
+  "generated_at": "2026-06-29T10:21:11Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
   "file_count": 1109,
@@ -311,8 +311,8 @@
       "category": "data"
     },
     {
-      "path": "data/stretch_packs/fantasy_225.txt",
-      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/fantasy_225.txt",
+      "path": "data/stretch_packs/fantasy_232.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/fantasy_232.txt",
       "category": "data"
     },
     {
@@ -336,8 +336,8 @@
       "category": "data"
     },
     {
-      "path": "data/stretch_packs/metadata/fantasy_225.json",
-      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/fantasy_225.json",
+      "path": "data/stretch_packs/metadata/fantasy_232.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/metadata/fantasy_232.json",
       "category": "data"
     },
     {

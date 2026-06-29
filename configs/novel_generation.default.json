@@ -33,7 +33,7 @@
     "known_character_compounds_usage": "Set to data/learner_profiles/marcel/high_frequency_characters.txt only for Marcel personalized readers; pass it with --known-character-compounds and keep the current limit at 500 until reviewed.",
     "known_character_compound_limit": 500,
     "general_fiction_pack": "data/stretch_packs/general_fiction_150.txt",
-    "genre_pack": "data/stretch_packs/fantasy_225.txt",
+    "genre_pack": "data/stretch_packs/fantasy_232.txt",
     "setting_pack": "data/stretch_packs/shanghai_setting_150.txt",
     "profession_pack": "data/stretch_packs/professions_social_roles_100.txt",
     "urban_objects_pack": "data/stretch_packs/urban_objects_100.txt",

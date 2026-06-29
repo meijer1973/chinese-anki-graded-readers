@@ -7,7 +7,7 @@
 ## Reader Level And Vocabulary
 
 - Core known words: `data/known_words.txt`, currently 3,500 entries.
-- Stretch packs: `data/stretch_packs/general_fiction_150.txt`, `data/stretch_packs/fantasy_225.txt`.
+- Stretch packs: `data/stretch_packs/general_fiction_150.txt`, `data/stretch_packs/fantasy_232.txt`.
 - Book-specific words: `book_specific_words.txt`.
 - Proper nouns: `proper_nouns.txt`.
 - Default validation target: at least 98% known-token coverage and at most 2% approved non-core tokens.

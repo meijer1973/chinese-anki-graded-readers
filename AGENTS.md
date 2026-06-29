@@ -118,7 +118,7 @@ Use the minimal-intervention cascade: classify proper nouns and personal-known w
 - `data/known_words.txt` is the active machine-readable known-word list for restricted-vocabulary fiction. It is generated from `High frequency words 0-10000.txt` by `scripts/sync_known_words.py`.
 - `data/learner_profiles/marcel/` contains Marcel's personal-known learner profile. Use `personal_known_words.tsv` as the editable source and `personal_known_words.txt` as the generated validator layer.
 - `data/learner_profiles/marcel/high_frequency_characters.txt` contains Marcel's ranked known-character source for the optional `--known-character-compounds` layer; current default limit is 500.
-- `data/stretch_packs/fantasy_225.txt` contains reviewed reusable fantasy stretch words for urban fantasy, high fantasy, sword-sect/cultivation stories, politics, battles, monsters, magic mechanisms, and invented institutions. Use it with `--genre-pack`.
+- `data/stretch_packs/fantasy_232.txt` contains reviewed reusable fantasy stretch words for urban fantasy, high fantasy, sword-sect/cultivation stories, politics, battles, monsters, magic mechanisms, and invented institutions. Use it with `--genre-pack`.
 - `data/stretch_packs/known_character_compound_overlap_allowlist.json` documents rare public-mode stretch-pack terms that intentionally overlap Marcel's optional high-frequency character-compound layer.
 - `series/an-lin/` contains the living series memory package for the 林安 journalist urban-fantasy crime series: bible, chronology, character registry, mechanism registry, open threads, recurring objects/locations, sequel constraints, and update log.
 - `data/stretch_packs/journalism_crime_50.txt` contains reviewed journalism/crime stretch words for 林安-style crime reporting stories.

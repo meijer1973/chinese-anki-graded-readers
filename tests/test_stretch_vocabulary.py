@@ -213,19 +213,19 @@ class StretchVocabularyTests(unittest.TestCase):
         self.assertEqual(vocab["token_layers"]["外滩"], SETTING_LAYER)
 
     def test_fantasy_pack_is_loaded(self) -> None:
-        vocab = load_layered_vocabulary(ROOT / "data" / "known_words.txt", genre_pack=ROOT / "data" / "stretch_packs" / "fantasy_225.txt")
+        vocab = load_layered_vocabulary(ROOT / "data" / "known_words.txt", genre_pack=ROOT / "data" / "stretch_packs" / "fantasy_232.txt")
         self.assertEqual(vocab["token_layers"]["魔术"], GENRE_LAYER)
 
-    def test_fantasy_pack_has_225_non_core_words(self) -> None:
-        fantasy_pack = ROOT / "data" / "stretch_packs" / "fantasy_225.txt"
+    def test_fantasy_pack_has_232_non_core_words(self) -> None:
+        fantasy_pack = ROOT / "data" / "stretch_packs" / "fantasy_232.txt"
         fantasy_words = load_optional_words(fantasy_pack)
         core_words = set(load_known_words(ROOT / "data" / "known_words.txt"))
         other_words: set[str] = set()
         for pack in (ROOT / "data" / "stretch_packs").glob("*.txt"):
             if pack != fantasy_pack:
                 other_words.update(load_optional_words(pack))
-        self.assertEqual(len(fantasy_words), 225)
-        self.assertEqual(len(set(fantasy_words)), 225)
+        self.assertEqual(len(fantasy_words), 232)
+        self.assertEqual(len(set(fantasy_words)), 232)
         self.assertFalse(set(fantasy_words) & core_words)
         self.assertFalse(set(fantasy_words) & other_words)
 

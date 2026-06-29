@@ -73,7 +73,7 @@ After editing the TSV, regenerate the validator list and audit files:
 
 ```powershell
 $env:PYTHONIOENCODING='utf-8'
-python scripts/sync_personal_known_words.py --profile data/learner_profiles/marcel --core data/known_words.txt --stretch-pack data/stretch_packs/general_fiction_150.txt --stretch-pack data/stretch_packs/fantasy_225.txt --stretch-pack data/stretch_packs/shanghai_setting_150.txt --stretch-pack data/stretch_packs/professions_social_roles_100.txt --stretch-pack data/stretch_packs/urban_objects_100.txt --stretch-pack data/stretch_packs/journalism_crime_50.txt --stretch-pack data/stretch_packs/business_economics_150.txt
+python scripts/sync_personal_known_words.py --profile data/learner_profiles/marcel --core data/known_words.txt --stretch-pack data/stretch_packs/general_fiction_150.txt --stretch-pack data/stretch_packs/fantasy_232.txt --stretch-pack data/stretch_packs/shanghai_setting_150.txt --stretch-pack data/stretch_packs/professions_social_roles_100.txt --stretch-pack data/stretch_packs/urban_objects_100.txt --stretch-pack data/stretch_packs/journalism_crime_50.txt --stretch-pack data/stretch_packs/business_economics_150.txt
 ```
 
 Inspect:
@@ -95,7 +95,7 @@ Use Marcel personalized mode by adding:
 Example:
 
 ```powershell
-python scripts/validate_book.py --known data/known_words.txt --personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 500 --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json --general-fiction-pack data/stretch_packs/general_fiction_150.txt --genre-pack data/stretch_packs/fantasy_225.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
+python scripts/validate_book.py --known data/known_words.txt --personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 500 --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json --general-fiction-pack data/stretch_packs/general_fiction_150.txt --genre-pack data/stretch_packs/fantasy_232.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 ```
 
 The report distinguishes:

@@ -7,7 +7,7 @@
 - The emotional center is truth versus sect honor.
 - Cultivation stages stay limited by default: 练气, 筑基, 金丹, 元婴.
 - Each volume must have a concrete story turn, not only training.
-- Public-mode manuscripts must rely on `data/known_words.txt`, `data/stretch_packs/general_fiction_150.txt`, `data/stretch_packs/fantasy_225.txt`, manuscript book-specific words, and proper nouns.
+- Public-mode manuscripts must rely on `data/known_words.txt`, `data/stretch_packs/general_fiction_150.txt`, `data/stretch_packs/fantasy_232.txt`, manuscript book-specific words, and proper nouns.
 - Proper nouns for people, organizations, and named places belong in `proper_nouns.txt`.
 - Central non-name terms not useful across fantasy projects belong in `book_specific_words.txt`.
 

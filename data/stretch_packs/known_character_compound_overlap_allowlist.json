@@ -1,5 +1,5 @@
 {
-  "fantasy_225.txt": {
+  "fantasy_232.txt": {
     "rationale": "These sect hierarchy and relationship terms are essential for public-mode sword-sect fantasy. They duplicate Marcel's optional high-frequency character-compound layer, but public readers do not have that layer enabled.",
     "words": [
       "弟子",
@@ -7,9 +7,12 @@
       "师兄",
       "师姐",
       "师弟",
+      "同门",
       "外门",
       "内门",
       "拜师",
+      "入门",
+      "师父",
       "出关"
     ]
   }

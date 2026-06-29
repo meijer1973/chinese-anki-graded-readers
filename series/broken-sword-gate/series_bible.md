@@ -7,7 +7,7 @@
 - English working title: `The Broken Sword Gate`
 - Genre: ancient sword-sect cultivation fantasy with wuxia discipline.
 - Default vocabulary mode: public controlled mode unless a manuscript explicitly chooses Marcel personalized mode.
-- Default packs: `data/stretch_packs/general_fiction_150.txt` and `data/stretch_packs/fantasy_225.txt`.
+- Default packs: `data/stretch_packs/general_fiction_150.txt` and `data/stretch_packs/fantasy_232.txt`.
 - Core promise: a weak new disciple enters a declining sword sect, receives a broken sword, and learns that loyalty to a sect may require exposing the sect's founding lie.
 
 This continuity is not a low-fantasy continuity. It may use sect politics, cultivation stages, rival factions, court pressure, battles, monsters, invented institutions, and complex magic when the words are in core, stretch, book-specific, proper-noun, or configured learner-profile layers.
