@@ -58,6 +58,7 @@ Common surfaces:
 - `.agents/skills/` and `.codex/agents/` for role-specific agent behavior.
 - `High frequency words 0-10000.txt`, `data/known_words.txt`, `data/learner_profiles/marcel/high_frequency_characters.txt`, and `data/stretch_packs/` for active vocabulary policy.
 - `series/an-lin/` and `docs/series-memory.md` for living series continuity.
+- `docs/completion-response-template.md` for completed-book and EPUB delivery format.
 - `manuscripts/<slug>/` for manuscript artifacts.
 - `tests/` for expected validator and EPUB behavior.
 
@@ -90,3 +91,5 @@ Return:
 - evidence used, with exact paths or URLs
 - commands or scripts relevant to the question
 - important uncertainties or generated/local surfaces that should not be treated as source
+
+For completed books, EPUBs, or validation-ready manuscripts, use `docs/completion-response-template.md` instead of improvising the final response shape.

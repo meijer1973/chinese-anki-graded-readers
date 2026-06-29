@@ -227,6 +227,8 @@ When completing a novel-generation task, the final response must report:
 - quality review decision
 - whether EPUB build succeeded
 
+Use `docs/completion-response-template.md` for the final response format when delivering a completed book, EPUB, source package, or validation-ready manuscript. Put output links or paths first, then a compact validation metrics table, then content summary, source/factual notes when relevant, package contents, and limitations.
+
 ## Generated vs Hand-Edited Files
 
 Hand-edit these:

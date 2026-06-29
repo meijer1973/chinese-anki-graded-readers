@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-29T10:21:11Z",
+  "generated_at": "2026-06-29T11:10:21Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 1109,
+  "file_count": 1110,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -388,6 +388,11 @@
     {
       "path": "docs/anki-integration.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/anki-integration.md",
+      "category": "docs"
+    },
+    {
+      "path": "docs/completion-response-template.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/completion-response-template.md",
       "category": "docs"
     },
     {

@@ -54,6 +54,7 @@ The validator checks core known words, approved stretch packs, book-specific wor
 - `docs/novel-generation.md`
 - `docs/personal-known-vocabulary.md`
 - `docs/adaptation-workflow.md`
+- `docs/completion-response-template.md`
 - `docs/creative-preflight.md`
 - `docs/style-bank-controlled-chinese.md`
 - `docs/stretch-vocabulary.md`

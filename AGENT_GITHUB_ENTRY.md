@@ -28,6 +28,7 @@ Read that file first for repository access, exact paths, raw URLs, and task rout
 | How is a chapter validated? | `scripts/validate_chapter.py`, `scripts/novel_tools.py` |
 | How is a whole manuscript validated? | `scripts/validate_book.py`, `scripts/generate_reports.py` |
 | How is quality reviewed? | `docs/quality-review.md`, `.agents/skills/chinese-lead-quality-review/SKILL.md` |
+| How should completed book responses be formatted? | `docs/completion-response-template.md` |
 | How is series memory updated after an accepted story? | `docs/series-memory.md`, `scripts/check_series_memory_update.py` |
 | How is EPUB built? | `scripts/build_epub.py`, `.agents/skills/epub-export/SKILL.md` |
 | How do stretch words flow toward Anki? | `docs/anki-integration.md`, `scripts/export_stretch_words_for_anki.py` |

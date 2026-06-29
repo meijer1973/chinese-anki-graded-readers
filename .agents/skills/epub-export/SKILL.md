@@ -32,3 +32,4 @@ The builder runs validation and quality approval checks again before writing. It
 - Include a title page/table of contents structure, chapters, and the validation appendix by default.
 - Display text may remove token spaces for readability, but the `.zh-tok.txt` source remains canonical.
 - Run the EPUB structural check and report path, chapter count, total tokens, unique words, vocabulary profile, personal-known token count and high-frequency character-compound token count when used, unknown tokens, lead quality decision, and build status.
+- Format the final delivery with `docs/completion-response-template.md`: delivered title and files first, then the metrics table, content summary, package contents, and limitations.

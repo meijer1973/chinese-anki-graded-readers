@@ -464,13 +464,17 @@ For fantasy manuscripts, the outline and reviews should check that the fantasy p
 
 ## Review the Final Report
 
-The final Codex response for a generated book must include:
+Use `docs/completion-response-template.md` for the final Codex response when delivering a completed book, EPUB, source package, or validation-ready manuscript. The response should begin with the delivered title and files/paths, then include a compact metrics table, a short content summary, source/factual notes when relevant, package contents, and limitations.
+
+The final response for a generated book must include:
 
 - output file path
 - chapter count
 - total word-token count
 - unique used words
 - vocabulary profile, personal-known token count, and high-frequency character-compound token count when used
+- known-token percentage
+- approved non-core/stretch-token percentage
 - unknown-token count
 - forbidden unknown tokens over the configured per-chapter limit
 - validation command run

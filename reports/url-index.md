@@ -118,6 +118,7 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/professions_social_roles_100.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/shanghai_setting_150.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/urban_objects_100.txt
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/completion-response-template.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/machine-readable-repository.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/personal-known-vocabulary.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/ensure_single_character_notes.py

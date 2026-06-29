@@ -82,6 +82,7 @@ Human-readable:
 - `docs/novel-generation.md`
 - `docs/personal-known-vocabulary.md`
 - `docs/adaptation-workflow.md`
+- `docs/completion-response-template.md`
 - `docs/creative-preflight.md`
 - `docs/style-bank-controlled-chinese.md`
 - `docs/stretch-vocabulary.md`
@@ -234,6 +235,7 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/novel-generation.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/personal-known-vocabulary.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/adaptation-workflow.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/completion-response-template.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/creative-preflight.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/style-bank-controlled-chinese.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/stretch-vocabulary.md
@@ -286,6 +288,7 @@ Use these anchors before free-form browsing.
   "novel_generation_docs": "docs/novel-generation.md",
   "personal_known_docs": "docs/personal-known-vocabulary.md",
   "adaptation_workflow_docs": "docs/adaptation-workflow.md",
+  "completion_response_template": "docs/completion-response-template.md",
   "creative_preflight_docs": "docs/creative-preflight.md",
   "style_bank_docs": "docs/style-bank-controlled-chinese.md",
   "stretch_vocabulary_docs": "docs/stretch-vocabulary.md",
@@ -377,6 +380,7 @@ Use these anchors before free-form browsing.
 | Polish prose variety | `.agents/skills/chinese-prose-variety-polish/SKILL.md`, `docs/style-bank-controlled-chinese.md`, `scripts/prose_variety_report.py` |
 | Review literary quality | `.agents/skills/chinese-literary-critic/SKILL.md`, `.agents/skills/chinese-normal-reader-review/SKILL.md`, `.agents/skills/chinese-lead-quality-review/SKILL.md` |
 | Export EPUB | `scripts/build_epub.py`, `.agents/skills/epub-export/SKILL.md` |
+| Format a completed-book or EPUB response | `docs/completion-response-template.md` |
 | Prepare stretch words for Anki | `docs/anki-integration.md`, `scripts/export_stretch_words_for_anki.py` |
 | Audit or schedule Anki new-card distribution | `docs/anki-integration.md`, `scripts/audit_anki_card_distribution.py`, `scripts/schedule_anki_learning_order.py` |
 | Complete stretch-pack metadata | `scripts/complete_stretch_pack_metadata.py`, `data/stretch_packs/metadata/` |
