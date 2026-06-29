@@ -414,6 +414,8 @@ python scripts/build_epub.py --manuscript manuscripts/<slug> --title "<title>" -
 
 The EPUB builder runs whole-book validation and checks lead quality approval again before writing. By default it removes token spaces for display readability and includes a validation appendix explaining that the canonical source is the `.zh-tok.txt` files.
 
+A completed book delivery must be final-quality reviewed prose, not an intermediate draft. The source must remain properly chapterized under `manuscripts/<slug>/chapters/chapter_XX.zh-tok.txt`, and any EPUB delivery must be built from those chapters with a real table of contents, chapter entries, and validation appendix. A flat text file or draft bundle is not a completed EPUB.
+
 ## Post-Story Series Memory Update
 
 For series manuscripts, do not rely on memory after a book is accepted. Use `docs/series-memory.md`.
@@ -465,6 +467,8 @@ For fantasy manuscripts, the outline and reviews should check that the fantasy p
 ## Review the Final Report
 
 Use `docs/completion-response-template.md` for the final Codex response when delivering a completed book, EPUB, source package, or validation-ready manuscript. The response should begin with the delivered title and files/paths, then include a compact metrics table, a short content summary, source/factual notes when relevant, package contents, and limitations.
+
+Use completion language only when the manuscript is fit for end-level final delivery: chapterized source is present, validation evidence is saved, required reviews are complete, lead quality says `Final decision: PASS`, and the EPUB has been built when the task calls for an EPUB. Label any earlier artifact as a draft, polish pass, validation package, or blocked delivery instead.
 
 The final response for a generated book must include:
 

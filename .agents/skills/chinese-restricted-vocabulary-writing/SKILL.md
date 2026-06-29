@@ -34,6 +34,7 @@ For 林安 sequels, the vocabulary plan must also include case function, journal
 
 ## Drafting Rules
 
+- Write toward end-level final delivery quality from the first chapter. A vocabulary-valid first pass is not enough; revise for story movement, prose variety, clear scene pressure, and readability before treating a chapter as done.
 - Use only exact tokens from core known words and approved vocabulary layers. In Marcel personalized mode, personal-known words and enabled high-frequency character compounds are approved known vocabulary for that learner profile.
 - Prefer approved vocabulary, but do not mangle natural sentences solely to force zero unknowns. Each chapter may keep up to 5 reported forbidden unknown tokens when they are useful, intentional, and not confusing.
 - Use punctuation freely from `data/punctuation_allowlist.txt`.

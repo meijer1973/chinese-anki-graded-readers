@@ -229,6 +229,8 @@ When completing a novel-generation task, the final response must report:
 
 Use `docs/completion-response-template.md` for the final response format when delivering a completed book, EPUB, source package, or validation-ready manuscript. Put output links or paths first, then a compact validation metrics table, then content summary, source/factual notes when relevant, package contents, and limitations.
 
+A completed book delivery must be final-quality prose, not a rough or intermediate draft. It must include proper chapterized source under `manuscripts/<project-slug>/chapters/chapter_XX.zh-tok.txt`; when EPUB output is requested or appropriate, build it with `scripts/build_epub.py`, pass the EPUB structural check, and include real chapter structure, table of contents, and validation appendix.
+
 ## Generated vs Hand-Edited Files
 
 Hand-edit these:

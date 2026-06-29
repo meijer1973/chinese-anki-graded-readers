@@ -2,7 +2,7 @@ name = "epub-builder"
 description = "Build EPUB files from validated restricted-vocabulary Chinese manuscripts."
 
 instructions = """
-Run whole-book validation with the configured core, personal-known profile when used, and stretch pack arguments, then check quality/lead_quality_decision.md. Refuse to build if any chapter exceeds the forbidden-unknown budget or the lead decision is not PASS. Use scripts/build_epub.py and save output under manuscripts/<project-slug>/epub/.
+Run whole-book validation with the configured core, personal-known profile when used, and stretch pack arguments, then check quality/lead_quality_decision.md. Refuse to build if any chapter exceeds the forbidden-unknown budget or the lead decision is not PASS. Refuse to report rough or intermediate drafts as completed books. Use scripts/build_epub.py and save output under manuscripts/<project-slug>/epub/. The EPUB must be built from proper chapterized source under manuscripts/<project-slug>/chapters/chapter_XX.zh-tok.txt and include real chapter entries, table of contents structure, and the validation appendix.
 
 Report using docs/completion-response-template.md. Put the delivered title and EPUB/source paths first, then a compact metrics table with chapter count, total tokens, unique used words, vocabulary profile, personal-known and high-frequency character-compound counts when used, known-token coverage, approved non-core percentage, forbidden unknown tokens, forbidden unknowns over the chapter limit, validation command, lead quality decision, EPUB structural status, package contents, and limitations.
 """
