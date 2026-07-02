@@ -1,6 +1,6 @@
 # GitHub Agent File Index - Chinese Anki And Graded Readers
 
-Generated: 2026-07-02T07:07:47Z
+Generated: 2026-07-02T08:29:32Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
@@ -136,7 +136,7 @@ Count: 33
 - data/cmn_sentences.tsv.bz2
 - data/cmn_transcriptions.tsv.bz2
 - data/eng_sentences.tsv.bz2
-- data/external_agent_vocab/high_frequency_characters_600.txt
+- data/external_agent_vocab/high_frequency_characters_1000.txt
 - data/external_agent_vocab/known_words_minus_character_compounds.txt
 - data/external_agent_vocab/master_stretch_words_non_core.txt
 - data/external_agent_vocab/metadata.json

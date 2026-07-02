@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-29T10:21:06Z",
+  "generated_at": "2026-07-02T08:25:42Z",
   "profile_name": "marcel",
   "profile_dir": "data\\learner_profiles\\marcel",
   "source_tsv_path": "data\\learner_profiles\\marcel\\personal_known_words.tsv",
@@ -18,7 +18,7 @@
     "personal_known_is_not_stretch": true
   },
   "word_count": 1686,
-  "generated_personal_known_word_count": 375,
+  "generated_personal_known_word_count": 129,
   "words": [
     {
       "word": "一分",
@@ -45,9 +45,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 3,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -75,9 +75,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 5,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -165,9 +165,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 11,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -195,9 +195,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 13,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -270,9 +270,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 18,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -375,9 +375,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 25,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -570,9 +570,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 38,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -585,9 +585,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 39,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -1110,9 +1110,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 74,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -1140,9 +1140,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 76,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -1215,9 +1215,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 81,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -1305,9 +1305,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 87,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -1365,9 +1365,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 91,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -1380,9 +1380,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 92,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -1410,9 +1410,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 94,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -1545,9 +1545,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 103,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -1620,9 +1620,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 108,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -1650,9 +1650,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 110,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -1740,9 +1740,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 116,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -1770,9 +1770,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 118,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -1815,9 +1815,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 121,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -1875,9 +1875,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 125,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -1935,9 +1935,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 129,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -2070,9 +2070,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 138,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -2100,9 +2100,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 140,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -2145,9 +2145,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 143,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -2160,9 +2160,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 144,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -2250,9 +2250,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 150,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -2295,9 +2295,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 153,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -2415,9 +2415,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 161,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -2565,9 +2565,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 171,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -2655,9 +2655,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 177,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -2670,9 +2670,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 178,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -2760,9 +2760,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 184,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -2775,9 +2775,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 185,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -2925,9 +2925,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 195,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -2940,9 +2940,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 196,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -3030,9 +3030,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 202,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -3285,9 +3285,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 219,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -3345,9 +3345,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 223,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -3420,9 +3420,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 228,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -3465,9 +3465,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 231,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -3540,9 +3540,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 236,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -3615,9 +3615,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 241,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -3630,9 +3630,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 242,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -3675,9 +3675,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 245,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -3855,9 +3855,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 257,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -3900,9 +3900,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 260,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -3915,9 +3915,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 261,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -4005,9 +4005,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 267,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -4155,9 +4155,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 277,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -4200,9 +4200,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 280,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -4305,9 +4305,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 287,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -4410,9 +4410,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 294,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -4620,9 +4620,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 308,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -4710,9 +4710,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 314,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -4770,9 +4770,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 318,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -4905,9 +4905,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 327,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -5010,9 +5010,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 334,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -5085,9 +5085,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 339,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -5415,9 +5415,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 361,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -5445,9 +5445,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 363,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -5520,9 +5520,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 368,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -5760,9 +5760,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 384,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -5895,9 +5895,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 393,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -5910,9 +5910,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 394,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -6000,9 +6000,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 400,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -6300,9 +6300,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 420,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -6345,9 +6345,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 423,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -6540,9 +6540,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 436,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -6600,9 +6600,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 440,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -6765,9 +6765,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 451,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -7305,9 +7305,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 487,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -7350,9 +7350,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 490,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -7380,9 +7380,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 492,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -7635,9 +7635,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 509,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -7695,9 +7695,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 513,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -7800,9 +7800,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 520,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -7905,9 +7905,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 527,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -8040,9 +8040,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 536,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -8235,9 +8235,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 549,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -8250,9 +8250,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 550,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -8265,9 +8265,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 551,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -8325,9 +8325,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 555,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -8385,9 +8385,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 559,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -8580,9 +8580,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 572,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -8910,9 +8910,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 594,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -8985,9 +8985,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 599,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -9180,10 +9180,10 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 612,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
-      "also_in_stretch_pack": true
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
+      "also_in_stretch_pack": false
     },
     {
       "word": "常",
@@ -9315,9 +9315,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 621,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -9450,9 +9450,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 630,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -9540,9 +9540,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 636,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -9720,9 +9720,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 648,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -9735,9 +9735,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 649,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -9825,9 +9825,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 655,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -10035,9 +10035,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 669,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -10050,9 +10050,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 670,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -10350,9 +10350,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 690,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -10410,9 +10410,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 694,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -10770,9 +10770,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 718,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -10875,9 +10875,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 725,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -10935,9 +10935,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 729,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -10995,9 +10995,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 733,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -11100,9 +11100,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 740,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -11250,9 +11250,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 750,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -11295,9 +11295,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 753,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -11325,9 +11325,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 755,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -11355,9 +11355,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 757,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -11565,9 +11565,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 771,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -11865,9 +11865,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 791,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -11910,9 +11910,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 794,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -12030,9 +12030,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 802,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -12135,9 +12135,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 809,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -12195,9 +12195,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 813,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -12240,9 +12240,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 816,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -12285,9 +12285,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 819,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -12300,9 +12300,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 820,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -12450,9 +12450,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 830,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -12555,9 +12555,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 837,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -12705,9 +12705,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 847,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -12855,9 +12855,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 857,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -12945,9 +12945,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 863,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -13050,9 +13050,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 870,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -13170,9 +13170,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 878,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -13215,9 +13215,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 881,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -13335,9 +13335,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 889,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -13350,9 +13350,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 890,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -13395,9 +13395,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 893,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -13440,9 +13440,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 896,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -13710,9 +13710,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 914,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -14025,9 +14025,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 935,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -14205,9 +14205,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 947,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -14280,9 +14280,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 952,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -14385,9 +14385,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 959,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -14580,9 +14580,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 972,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -14700,9 +14700,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 980,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -14790,9 +14790,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 986,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -14880,9 +14880,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 992,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -14955,9 +14955,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 997,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -14985,9 +14985,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 999,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -15000,9 +15000,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1000,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -15135,9 +15135,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1009,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -15300,9 +15300,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1020,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -15390,9 +15390,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1026,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -15480,9 +15480,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1032,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -15525,9 +15525,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1035,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -15555,9 +15555,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1037,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -15690,9 +15690,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1046,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -15720,9 +15720,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1048,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -15750,9 +15750,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1050,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -15840,9 +15840,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1056,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -15870,9 +15870,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1058,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -15915,9 +15915,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1061,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -15930,9 +15930,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1062,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -16200,9 +16200,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1080,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -16215,9 +16215,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1081,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -16500,9 +16500,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1100,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -16545,9 +16545,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1103,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -16665,9 +16665,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1111,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -16740,9 +16740,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1116,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -16770,9 +16770,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1118,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -16815,9 +16815,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1121,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -16920,9 +16920,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1128,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -16965,9 +16965,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1131,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -17010,9 +17010,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1134,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -17115,9 +17115,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1141,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -17130,9 +17130,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1142,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -17250,9 +17250,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1150,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -17325,9 +17325,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1155,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -17370,9 +17370,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1158,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -17385,9 +17385,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1159,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -17445,9 +17445,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1163,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -17490,9 +17490,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1166,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -17520,9 +17520,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1168,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -17625,9 +17625,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1175,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -17655,9 +17655,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1177,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -17700,9 +17700,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1180,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -17730,9 +17730,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1182,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -17850,9 +17850,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1190,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -17940,9 +17940,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1196,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -17985,9 +17985,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1199,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -18045,9 +18045,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1203,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -18060,9 +18060,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1204,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -18255,9 +18255,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1217,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -18300,9 +18300,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1220,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -18330,9 +18330,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1222,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -18345,10 +18345,10 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1223,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
-      "also_in_stretch_pack": true
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
+      "also_in_stretch_pack": false
     },
     {
       "word": "笑话",
@@ -18645,9 +18645,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1243,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -18705,9 +18705,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1247,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -18840,9 +18840,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1256,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -19185,9 +19185,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1279,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -19200,10 +19200,10 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1280,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
-      "also_in_stretch_pack": true
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
+      "also_in_stretch_pack": false
     },
     {
       "word": "罪犯",
@@ -19380,9 +19380,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1292,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -19725,9 +19725,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1315,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -20280,9 +20280,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1352,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -20295,9 +20295,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1353,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -20310,9 +20310,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1354,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -20370,9 +20370,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1358,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -20460,9 +20460,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1364,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -20490,9 +20490,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1366,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -20535,9 +20535,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1369,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -20550,9 +20550,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1370,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -20700,9 +20700,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1380,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -20775,9 +20775,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1385,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -20805,9 +20805,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1387,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -20835,9 +20835,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1389,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -20880,9 +20880,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1392,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -20985,9 +20985,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1399,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -21000,9 +21000,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1400,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -21090,9 +21090,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1406,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -21150,9 +21150,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1410,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -21675,9 +21675,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1445,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -21690,9 +21690,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1446,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -21720,9 +21720,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1448,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -21975,9 +21975,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1465,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -22170,9 +22170,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1478,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -22215,9 +22215,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1481,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -22290,9 +22290,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1486,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -22365,9 +22365,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1491,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -22410,9 +22410,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1494,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -22455,9 +22455,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1497,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -22500,9 +22500,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1500,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -22560,9 +22560,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1504,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -22665,9 +22665,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1511,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -22680,9 +22680,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1512,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -22800,9 +22800,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1520,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -22830,9 +22830,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1522,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -23055,9 +23055,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1537,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -23085,9 +23085,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1539,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -23235,9 +23235,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1549,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -23295,9 +23295,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1553,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -23310,9 +23310,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1554,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -23400,9 +23400,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1560,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -23520,9 +23520,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1568,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -23760,9 +23760,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1584,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": true
     },
     {
@@ -23910,9 +23910,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1594,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -23925,9 +23925,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1595,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -23940,9 +23940,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1596,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -24120,9 +24120,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1608,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -24195,9 +24195,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1613,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -24270,9 +24270,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1618,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -24315,9 +24315,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1621,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -24540,9 +24540,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1636,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -24570,9 +24570,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1638,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -25245,9 +25245,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1683,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {
@@ -25260,9 +25260,9 @@
       "allow_in_personal_readers": "yes",
       "notes": "Imported as a personal-known candidate; review status/confidence before broad use.",
       "source_line": 1684,
-      "included_in_personal_known_words_txt": true,
-      "inclusion_reason": "included",
-      "already_core": false,
+      "included_in_personal_known_words_txt": false,
+      "inclusion_reason": "already_core",
+      "already_core": true,
       "also_in_stretch_pack": false
     },
     {

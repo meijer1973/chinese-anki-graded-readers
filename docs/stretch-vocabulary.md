@@ -12,7 +12,7 @@ Do not use random unknown words. Prefer exact known tokens. Stretch, book-specif
 
 - Core known words: `data/known_words.txt`
 - Personal known words: `data/learner_profiles/marcel/personal_known_words.txt`, enabled only with `--personal-known`
-- High-frequency character compounds: `data/learner_profiles/marcel/high_frequency_characters.txt`, enabled only for Marcel personalized readers with `--known-character-compounds --known-character-compound-limit 600`
+- High-frequency character compounds: `data/learner_profiles/marcel/high_frequency_characters.txt`, enabled only for Marcel personalized readers with `--known-character-compounds --known-character-compound-limit 1000`
 - General fiction: `data/stretch_packs/general_fiction_150.txt`
 - Fantasy: `data/stretch_packs/fantasy_232.txt`
 - Shanghai setting: `data/stretch_packs/shanghai_setting_150.txt`
@@ -23,7 +23,7 @@ Do not use random unknown words. Prefer exact known tokens. Stretch, book-specif
 - Book-specific: `manuscripts/<slug>/book_specific_words.txt`
 - Proper nouns: `manuscripts/<slug>/proper_nouns.txt`
 
-Pack names are maintained target sizes. When core known words or high-frequency character compounds expand, audit the packs, remove words now covered by those earlier layers, and add durable reusable replacements rather than filler. Rare public-mode exceptions belong in `data/stretch_packs/known_character_compound_overlap_allowlist.json` with a rationale; use this only when a reusable genre term is essential without Marcel's personalized character-compound layer.
+Pack names are maintained target sizes for reusable public-mode story affordances. With larger Marcel personalized layers, individual pack files may contain words that are now core known words or high-frequency character compounds for Marcel; the validator counts those earlier layers first. The strict non-core/non-compound surface for remote Marcel-personalized drafting is `data/external_agent_vocab/master_stretch_words_non_core.txt`, generated from all packs after removing words already covered by core known words or the character-compound layer.
 
 Proper nouns are the right place for character, place, and organization names. Listed proper nouns are counted as the proper-noun layer, not as forbidden unknowns. They still count as approved non-core tokens for the 2% extensive-reading ceiling.
 
@@ -31,9 +31,9 @@ Personal-known words and high-frequency character compounds are not stretch word
 
 ## External Agent Master List
 
-Remote Marcel-personalized writer agents do not need to download every individual stretch pack just to do a first-pass token screen. Use `docs/external-agent-vocabulary.md` and `data/external_agent_vocab/master_stretch_words_non_core.txt`, which is generated from all reusable stretch packs after removing words already covered by the active known-word list or the top-600 high-frequency character-compound layer.
+Remote Marcel-personalized writer agents do not need to download every individual stretch pack just to do a first-pass token screen. Use `docs/external-agent-vocabulary.md` and `data/external_agent_vocab/master_stretch_words_non_core.txt`, which is generated from all reusable stretch packs after removing words already covered by the active known-word list or the top-1000 high-frequency character-compound layer.
 
-The compact master list is for drafting and lightweight screening. Official validation still passes the relevant individual stretch packs, `book_specific_words.txt`, and `proper_nouns.txt` to the repo validators so layer counts and final reports remain auditable.
+The compact master list is for drafting and lightweight screening. Official validation still passes the relevant individual stretch packs, `book_specific_words.txt`, and `proper_nouns.txt` to the repo validators so layer counts and final reports remain auditable. After any known-word or character-compound limit increase, regenerate the bundle and run `python scripts/build_external_agent_vocab_bundle.py --check`.
 
 ## General Fiction Pack
 
@@ -113,7 +113,7 @@ Use layered validation:
 python scripts/validate_book.py --known data/known_words.txt --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json --general-fiction-pack data/stretch_packs/general_fiction_150.txt --genre-pack data/stretch_packs/fantasy_232.txt --setting-pack data/stretch_packs/shanghai_setting_150.txt --profession-pack data/stretch_packs/professions_social_roles_100.txt --urban-objects-pack data/stretch_packs/urban_objects_100.txt --journalism-crime-pack data/stretch_packs/journalism_crime_50.txt --book-specific manuscripts/<slug>/book_specific_words.txt --proper-nouns manuscripts/<slug>/proper_nouns.txt
 ```
 
-Add `--personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 600` for Marcel personalized readers. Omit those flags for public graded-reader mode.
+Add `--personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 1000` for Marcel personalized readers. Omit those flags for public graded-reader mode.
 
 The report counts tokens by layer, forbidden unknowns, forbidden unknowns over the per-chapter limit, known-token coverage, personal-known token use, high-frequency character-compound token use, approved non-core/stretch-token share, stretch words used once, stretch words by chapter, and new stretch words by chapter. Default validation fails below 98% known tokens or above 2% approved non-core tokens.
 

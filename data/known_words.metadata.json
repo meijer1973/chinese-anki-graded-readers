@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-06-29T08:01:21Z",
+  "generated_at": "2026-07-02T08:23:26Z",
   "source_path": "C:\\Projects\\anki\\High frequency words 0-10000.txt",
   "output_path": "C:\\Projects\\anki\\data\\known_words.txt",
   "source_word_count": 10001,
-  "known_word_count": 3500,
-  "limit": 3500,
+  "known_word_count": 5000,
+  "limit": 5000,
   "derivation": "First N ranked entries from High frequency words 0-10000.txt. This graded-reader source is separate from word list chinese.txt, which remains the Anki deck source."
 }

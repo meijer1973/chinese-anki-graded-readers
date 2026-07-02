@@ -15,10 +15,10 @@ Write one chapter at a time. The canonical format is space-tokenized Chinese:
 
 - Choose and state the vocabulary profile before drafting:
   - Public mode = core known words plus approved stretch/book/proper-noun layers only.
-  - Marcel personalized mode = core known words plus `data/learner_profiles/marcel/personal_known_words.txt`, optional top-600 high-frequency character compounds, plus approved stretch/book/proper-noun layers.
+  - Marcel personalized mode = core known words plus `data/learner_profiles/marcel/personal_known_words.txt`, optional top-1000 high-frequency character compounds, plus approved stretch/book/proper-noun layers.
 - Read `data/known_words.txt`.
 - If the project uses Marcel personalized mode, read `data/learner_profiles/marcel/personal_known_words.txt` and count those words as the `personal_known` layer, not as stretch.
-- If Marcel personalized mode enables known-character compounds, use `data/learner_profiles/marcel/high_frequency_characters.txt` with limit 600 and keep those tokens separate as `high_frequency_character_compound`, not core or stretch.
+- If Marcel personalized mode enables known-character compounds, use `data/learner_profiles/marcel/high_frequency_characters.txt` with limit 1000 and keep those tokens separate as `high_frequency_character_compound`, not core or stretch.
 - When working as an external/remote writer agent in Marcel personalized mode, use `docs/external-agent-vocabulary.md` and the three files in `data/external_agent_vocab/` for quick drafting preflight: character compounds first, compact known words second, compact master non-core stretch words third.
 - Read the configured approved stretch packs, manuscript `book_specific_words.txt`, and `proper_nouns.txt` when present.
 - Read the manuscript `novel_bible.md`, `outline.md`, `characters.md`, and `continuity_log.md`.
@@ -91,7 +91,7 @@ python scripts/validate_chapter.py --known data/known_words.txt --chapter manusc
 For Marcel personalized mode, also include:
 
 ```powershell
---personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 600
+--personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 1000
 ```
 
 After each chapter, run vocabulary validation, repair forbidden unknowns that exceed the budget or weaken clarity, run vocabulary usage evidence, update `continuity_log.md`, update `stretch_word_exposure.md`, and check whether stretch words are being repeated enough to become learnable rather than decorative.

@@ -68,8 +68,8 @@ class StretchVocabularyTests(unittest.TestCase):
             (chapters / f"chapter_{index:02d}.zh-tok.txt").write_text(text, encoding="utf-8")
         return chapters
 
-    def test_default_known_character_compound_limit_is_600(self) -> None:
-        self.assertEqual(DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT, 600)
+    def test_default_known_character_compound_limit_is_1000(self) -> None:
+        self.assertEqual(DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT, 1000)
 
     def layered_kwargs(self) -> dict:
         return {
@@ -274,20 +274,23 @@ class StretchVocabularyTests(unittest.TestCase):
         self.assertEqual(vocab["token_layers"]["外滩"], SETTING_LAYER)
 
     def test_fantasy_pack_is_loaded(self) -> None:
-        vocab = load_layered_vocabulary(ROOT / "data" / "known_words.txt", genre_pack=ROOT / "data" / "stretch_packs" / "fantasy_232.txt")
-        self.assertEqual(vocab["token_layers"]["魔术"], GENRE_LAYER)
+        fantasy_pack = ROOT / "data" / "stretch_packs" / "fantasy_232.txt"
+        vocab = load_layered_vocabulary(ROOT / "data" / "known_words.txt", genre_pack=fantasy_pack)
+        genre_words = [
+            word for word in load_optional_words(fantasy_pack) if vocab["token_layers"].get(word) == GENRE_LAYER
+        ]
+        self.assertTrue(genre_words)
+        self.assertEqual(vocab["token_layers"][genre_words[0]], GENRE_LAYER)
 
-    def test_fantasy_pack_has_232_non_core_words(self) -> None:
+    def test_fantasy_pack_has_232_unique_words(self) -> None:
         fantasy_pack = ROOT / "data" / "stretch_packs" / "fantasy_232.txt"
         fantasy_words = load_optional_words(fantasy_pack)
-        core_words = set(load_known_words(ROOT / "data" / "known_words.txt"))
         other_words: set[str] = set()
         for pack in (ROOT / "data" / "stretch_packs").glob("*.txt"):
             if pack != fantasy_pack:
                 other_words.update(load_optional_words(pack))
         self.assertEqual(len(fantasy_words), 232)
         self.assertEqual(len(set(fantasy_words)), 232)
-        self.assertFalse(set(fantasy_words) & core_words)
         self.assertFalse(set(fantasy_words) & other_words)
 
     def test_profession_pack_is_loaded(self) -> None:
@@ -305,78 +308,64 @@ class StretchVocabularyTests(unittest.TestCase):
         )
         self.assertEqual(vocab["token_layers"]["利润"], BUSINESS_ECONOMICS_LAYER)
 
-    def test_business_economics_pack_has_no_core_or_prior_pack_duplicates(self) -> None:
+    def test_business_economics_pack_has_no_prior_pack_duplicates(self) -> None:
         business_pack = ROOT / "data" / "stretch_packs" / "business_economics_150.txt"
         business_words = set(load_optional_words(business_pack))
-        core_words = set(load_known_words(ROOT / "data" / "known_words.txt"))
         prior_words: set[str] = set()
         for pack in (ROOT / "data" / "stretch_packs").glob("*.txt"):
             if pack != business_pack:
                 prior_words.update(load_optional_words(pack))
-        self.assertFalse(business_words & core_words)
         self.assertFalse(business_words & prior_words)
 
-    def test_stretch_packs_match_targets_without_known_layer_duplicates(self) -> None:
+    def test_stretch_packs_match_targets_without_pack_duplicates(self) -> None:
         stretch_dir = ROOT / "data" / "stretch_packs"
+        seen: dict[str, str] = {}
+
+        for pack in sorted(stretch_dir.glob("*.txt")):
+            words = load_optional_words(pack)
+            target = int(pack.stem.rsplit("_", 1)[-1])
+            duplicate_words = sorted(word for word in set(words) if words.count(word) > 1)
+            cross_pack_duplicates = sorted(
+                f"{word} in {pack.name} and {seen[word]}" for word in words if word in seen
+            )
+
+            self.assertEqual(len(words), target, pack.name)
+            self.assertFalse(duplicate_words, pack.name)
+            self.assertFalse(cross_pack_duplicates, pack.name)
+
+            for word in words:
+                seen[word] = pack.name
+
+    def test_external_agent_master_stretch_words_are_non_core_and_non_compound(self) -> None:
+        master_words = load_optional_words(ROOT / "data" / "external_agent_vocab" / "master_stretch_words_non_core.txt")
         core_words = set(load_known_words(ROOT / "data" / "known_words.txt"))
-        overlap_allowlist_path = stretch_dir / "known_character_compound_overlap_allowlist.json"
-        overlap_allowlist_payload = json.loads(overlap_allowlist_path.read_text(encoding="utf-8"))
-        overlap_allowlist = {
-            pack_name: set(entry.get("words", entry) if isinstance(entry, dict) else entry)
-            for pack_name, entry in overlap_allowlist_payload.items()
-        }
         high_frequency_characters = set(
             load_ranked_characters(
                 ROOT / "data" / "learner_profiles" / "marcel" / "high_frequency_characters.txt",
                 DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT,
             )
         )
-        seen: dict[str, str] = {}
+        pack_words: set[str] = set()
+        for pack in (ROOT / "data" / "stretch_packs").glob("*.txt"):
+            pack_words.update(load_optional_words(pack))
 
-        for pack in sorted(stretch_dir.glob("*.txt")):
-            words = load_optional_words(pack)
-            target = int(pack.stem.rsplit("_", 1)[-1])
-            allowed_character_compound_overlaps = overlap_allowlist.get(pack.name, set())
-            duplicate_words = sorted(word for word in set(words) if words.count(word) > 1)
-            core_duplicates = sorted(set(words) & core_words)
-            character_compound_duplicates = sorted(
-                word
-                for word in words
-                if is_known_character_compound(word, high_frequency_characters)
-                and word not in allowed_character_compound_overlaps
-            )
-            cross_pack_duplicates = sorted(
-                f"{word} in {pack.name} and {seen[word]}" for word in words if word in seen
-            )
-            unused_overlap_allowlist = sorted(allowed_character_compound_overlaps - set(words))
-            unnecessary_overlap_allowlist = sorted(
-                word
-                for word in allowed_character_compound_overlaps & set(words)
-                if not is_known_character_compound(word, high_frequency_characters)
-            )
+        self.assertEqual(len(master_words), len(set(master_words)))
+        self.assertTrue(set(master_words) <= pack_words)
+        self.assertFalse(set(master_words) & core_words)
+        self.assertFalse(
+            [word for word in master_words if is_known_character_compound(word, high_frequency_characters)]
+        )
+        self.assertFalse(check_external_agent_vocab_bundle())
 
-            self.assertEqual(len(words), target, pack.name)
-            self.assertFalse(duplicate_words, pack.name)
-            self.assertFalse(core_duplicates, pack.name)
-            self.assertFalse(character_compound_duplicates, pack.name)
-            self.assertFalse(unused_overlap_allowlist, pack.name)
-            self.assertFalse(unnecessary_overlap_allowlist, pack.name)
-            self.assertFalse(cross_pack_duplicates, pack.name)
-
-            for word in words:
-                seen[word] = pack.name
-
-    def test_general_fiction_pack_has_150_non_core_words(self) -> None:
+    def test_general_fiction_pack_has_150_unique_words(self) -> None:
         general_pack = ROOT / "data" / "stretch_packs" / "general_fiction_150.txt"
         general_words = load_optional_words(general_pack)
-        core_words = set(load_known_words(ROOT / "data" / "known_words.txt"))
         other_words: set[str] = set()
         for pack in (ROOT / "data" / "stretch_packs").glob("*.txt"):
             if pack != general_pack:
                 other_words.update(load_optional_words(pack))
         self.assertEqual(len(general_words), 150)
         self.assertEqual(len(set(general_words)), 150)
-        self.assertFalse(set(general_words) & core_words)
         self.assertFalse(set(general_words) & other_words)
 
     def test_business_economics_sample_token_validates_with_extra_pack(self) -> None:
@@ -537,9 +526,10 @@ class StretchVocabularyTests(unittest.TestCase):
 
     def test_epub_cli_uses_personal_known_profile_when_supplied(self) -> None:
         personal_path = ROOT / "data" / "learner_profiles" / "marcel" / "personal_known_words.txt"
-        personal_token = "分散"
-        self.assertIn(personal_token, load_optional_words(personal_path))
-        self.assertNotIn(personal_token, load_known_words(ROOT / "data" / "known_words.txt"))
+        known_words = set(load_known_words(ROOT / "data" / "known_words.txt"))
+        personal_candidates = [word for word in load_optional_words(personal_path) if word not in known_words]
+        self.assertTrue(personal_candidates)
+        personal_token = personal_candidates[0]
 
         manuscript = self.root / "personal_manuscript"
         chapters = manuscript / "chapters"
