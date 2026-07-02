@@ -15,7 +15,7 @@ Write one chapter at a time. The canonical format is space-tokenized Chinese:
 
 - Choose and state the vocabulary profile before drafting:
   - Public mode = core known words plus approved stretch/book/proper-noun layers only.
-  - Marcel personalized mode = core known words plus `data/learner_profiles/marcel/personal_known_words.txt`, optional top-1000 high-frequency character compounds, plus approved stretch/book/proper-noun layers.
+  - Marcel personalized mode = core known words plus `data/learner_profiles/marcel/personal_known_words.txt`, optional top-2100 high-frequency character compounds, plus approved stretch/book/proper-noun layers.
 - Read `data/known_words.txt`.
 - If the project uses Marcel personalized mode, read `data/learner_profiles/marcel/personal_known_words.txt` and count those words as the `personal_known` layer, not as stretch.
 - If Marcel personalized mode enables known-character compounds, use `data/learner_profiles/marcel/high_frequency_characters.txt` with limit 1000 and keep those tokens separate as `high_frequency_character_compound`, not core or stretch.
@@ -92,7 +92,7 @@ python scripts/validate_chapter.py --known data/known_words.txt --chapter manusc
 For Marcel personalized mode, also include:
 
 ```powershell
---personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 1000
+--personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 2100
 ```
 
 After each chapter, run vocabulary validation, repair forbidden unknowns that exceed the budget or weaken clarity, run vocabulary usage evidence, update `continuity_log.md`, update `stretch_word_exposure.md`, and check whether stretch words are being repeated enough to become learnable rather than decorative.

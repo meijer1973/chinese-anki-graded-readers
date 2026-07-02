@@ -19,19 +19,19 @@
       "profile_name": "marcel",
       "personal_known_words_path": "data/learner_profiles/marcel/personal_known_words.txt",
       "known_character_compounds_path": "data/learner_profiles/marcel/high_frequency_characters.txt",
-      "known_character_compound_limit": 1000,
+      "known_character_compound_limit": 2100,
       "sync_source_tsv": "data/learner_profiles/marcel/personal_known_words.tsv",
       "audit_path": "data/learner_profiles/marcel/personal_known_audit.json"
     },
-    "policy": "Public mode omits personal-known words and derived character compounds. Marcel personalized mode enables --personal-known plus --known-character-compounds --known-character-compound-limit 1000 and reports personal_known_tokens and high_frequency_character_compound_tokens separately from core and stretch."
+    "policy": "Public mode omits personal-known words and derived character compounds. Marcel personalized mode enables --personal-known plus --known-character-compounds --known-character-compound-limit 2100 and reports personal_known_tokens and high_frequency_character_compound_tokens separately from core and stretch."
   },
   "vocabulary_policy": {
     "core_known_words_path": "data/known_words.txt",
     "personal_known_words_path": null,
     "personal_known_usage": "Set to data/learner_profiles/marcel/personal_known_words.txt only for Marcel personalized readers; pass it to scripts with --personal-known.",
     "known_character_compounds_path": null,
-    "known_character_compounds_usage": "Set to data/learner_profiles/marcel/high_frequency_characters.txt only for Marcel personalized readers; pass it with --known-character-compounds and keep the current limit at 1000 until reviewed.",
-    "known_character_compound_limit": 1000,
+    "known_character_compounds_usage": "Set to data/learner_profiles/marcel/high_frequency_characters.txt only for Marcel personalized readers; pass it with --known-character-compounds and keep the current limit at 2100 until reviewed.",
+    "known_character_compound_limit": 2100,
     "easy_character_compounds_path": "data/learner_profiles/marcel/high_frequency_characters.txt",
     "easy_character_compound_limit": 500,
     "max_easy_character_compound_token_percent": 95,

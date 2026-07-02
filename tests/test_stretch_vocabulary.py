@@ -68,8 +68,8 @@ class StretchVocabularyTests(unittest.TestCase):
             (chapters / f"chapter_{index:02d}.zh-tok.txt").write_text(text, encoding="utf-8")
         return chapters
 
-    def test_default_known_character_compound_limit_is_1000(self) -> None:
-        self.assertEqual(DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT, 1000)
+    def test_default_known_character_compound_limit_is_2100(self) -> None:
+        self.assertEqual(DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT, 2100)
 
     def layered_kwargs(self) -> dict:
         return {
