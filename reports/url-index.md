@@ -96,7 +96,7 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/cmn_sentences.tsv.bz2
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/cmn_transcriptions.tsv.bz2
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/eng_sentences.tsv.bz2
-- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/external_agent_vocab/high_frequency_characters_500.txt
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/external_agent_vocab/high_frequency_characters_600.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/external_agent_vocab/known_words_minus_character_compounds.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/external_agent_vocab/master_stretch_words_non_core.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/external_agent_vocab/metadata.json

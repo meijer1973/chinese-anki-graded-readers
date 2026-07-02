@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-02T06:48:20Z",
+  "generated_at": "2026-07-02T07:07:47Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
   "file_count": 1116,
@@ -261,8 +261,8 @@
       "category": "data"
     },
     {
-      "path": "data/external_agent_vocab/high_frequency_characters_500.txt",
-      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/external_agent_vocab/high_frequency_characters_500.txt",
+      "path": "data/external_agent_vocab/high_frequency_characters_600.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/external_agent_vocab/high_frequency_characters_600.txt",
       "category": "data"
     },
     {

@@ -28,7 +28,7 @@ Create or update these files under `manuscripts/<project-slug>/`:
 
 - Start with creative preflight before vocabulary planning. Generate 3-5 premise or scene-strategy alternatives, reject weak ideas, and choose the strongest story shape before mapping it to allowed words.
 - Infer what plots are possible from the available vocabulary.
-- State whether the manuscript is public mode or learner-profile personalized mode. If it uses Marcel personalized mode, treat `data/learner_profiles/marcel/personal_known_words.txt` and enabled top-500 high-frequency character compounds as allowed known layers but keep them separate from core and stretch in reports.
+- State whether the manuscript is public mode or learner-profile personalized mode. If it uses Marcel personalized mode, treat `data/learner_profiles/marcel/personal_known_words.txt` and enabled top-600 high-frequency character compounds as allowed known layers but keep them separate from core and stretch in reports.
 - Prefer emotionally coherent plots with real pressure, choices, reversals, and curiosity over concepts that require unavailable words.
 - For about 1100 known words, domestic drama, school life, workplace, travel, friendship, family, mystery-lite, fantasy, and crime conflict are viable when the required vocabulary is present, but they still need tension and chapter hooks.
 - For larger lists, allow more complex genres only when the needed nouns, verbs, and abstract terms are present.

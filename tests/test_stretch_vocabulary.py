@@ -9,7 +9,7 @@ import unittest
 from pathlib import Path
 
 from scripts.export_stretch_words_for_anki import FIELDS, export_candidates
-from scripts.build_external_agent_vocab_bundle import build_external_agent_vocab_bundle
+from scripts.build_external_agent_vocab_bundle import build_external_agent_vocab_bundle, check_external_agent_vocab_bundle
 from scripts.novel_tools import (
     BUSINESS_ECONOMICS_LAYER,
     DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT,
@@ -68,8 +68,8 @@ class StretchVocabularyTests(unittest.TestCase):
             (chapters / f"chapter_{index:02d}.zh-tok.txt").write_text(text, encoding="utf-8")
         return chapters
 
-    def test_default_known_character_compound_limit_is_500(self) -> None:
-        self.assertEqual(DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT, 500)
+    def test_default_known_character_compound_limit_is_600(self) -> None:
+        self.assertEqual(DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT, 600)
 
     def layered_kwargs(self) -> dict:
         return {
@@ -195,7 +195,7 @@ class StretchVocabularyTests(unittest.TestCase):
 
         compact_known = load_optional_words(out_dir / "known_words_minus_character_compounds.txt")
         master_stretch = load_optional_words(out_dir / "master_stretch_words_non_core.txt")
-        compact_characters = load_optional_words(out_dir / "high_frequency_characters_500.txt")
+        compact_characters = load_optional_words(out_dir / "high_frequency_characters_3.txt")
 
         self.assertEqual(compact_characters, ["旧", "城", "门"])
         self.assertEqual(compact_known, ["我", "需要"])
@@ -204,6 +204,35 @@ class StretchVocabularyTests(unittest.TestCase):
         self.assertEqual(payload["counts"]["stretch_words_removed_as_known_count"], 1)
         self.assertEqual(payload["counts"]["stretch_words_removed_as_character_compounds_count"], 1)
         self.assertEqual(payload["counts"]["duplicate_stretch_word_count"], 1)
+
+    def test_external_agent_vocab_bundle_check_reports_stale_character_file(self) -> None:
+        known = self.root / "bundle_known_words.txt"
+        known.write_text("我\n旧城门\n需要\n", encoding="utf-8")
+        characters = self.root / "bundle_high_frequency_characters.txt"
+        characters.write_text("旧\n城\n门\n我\n", encoding="utf-8")
+        packs = self.root / "bundle_packs"
+        packs.mkdir()
+        (packs / "general.txt").write_text("旧城门\n魔法\n", encoding="utf-8")
+        out_dir = self.root / "bundle"
+
+        build_external_agent_vocab_bundle(
+            known_path=known,
+            characters_path=characters,
+            character_limit=3,
+            stretch_dir=packs,
+            out_dir=out_dir,
+        )
+        (out_dir / "high_frequency_characters_2.txt").write_text("旧\n城\n", encoding="utf-8")
+
+        issues = check_external_agent_vocab_bundle(
+            known_path=known,
+            characters_path=characters,
+            character_limit=3,
+            stretch_dir=packs,
+            out_dir=out_dir,
+        )
+
+        self.assertTrue(any("stale character bundle file" in issue for issue in issues))
 
     def test_same_token_in_core_and_personal_counts_as_core(self) -> None:
         personal = self.root / "personal_core_overlap.txt"

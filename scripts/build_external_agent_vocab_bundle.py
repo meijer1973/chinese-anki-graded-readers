@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import json
 from pathlib import Path
 
 try:
@@ -36,6 +37,10 @@ except ModuleNotFoundError:
 DEFAULT_OUT_DIR = ROOT / "data" / "external_agent_vocab"
 
 
+def character_bundle_filename(character_limit: int) -> str:
+    return f"high_frequency_characters_{character_limit}.txt"
+
+
 def repo_relative(path: Path) -> str:
     try:
         return path.relative_to(ROOT).as_posix()
@@ -52,7 +57,7 @@ def stretch_pack_paths(stretch_dir: Path) -> list[Path]:
     return sorted(path for path in stretch_dir.glob("*.txt") if path.is_file())
 
 
-def build_external_agent_vocab_bundle(
+def compute_external_agent_vocab_bundle(
     *,
     known_path: Path = DEFAULT_KNOWN_WORDS,
     characters_path: Path = DEFAULT_MARCEL_HIGH_FREQUENCY_CHARACTERS,
@@ -93,15 +98,10 @@ def build_external_agent_vocab_bundle(
                 continue
             master_stretch_words.append(word)
 
-    out_dir.mkdir(parents=True, exist_ok=True)
-    characters_out = out_dir / "high_frequency_characters_500.txt"
+    characters_out = out_dir / character_bundle_filename(character_limit)
     known_out = out_dir / "known_words_minus_character_compounds.txt"
     stretch_out = out_dir / "master_stretch_words_non_core.txt"
     metadata_out = out_dir / "metadata.json"
-
-    write_word_list(characters_out, ranked_characters)
-    write_word_list(known_out, known_words_minus_character_compounds)
-    write_word_list(stretch_out, master_stretch_words)
 
     payload = {
         "generated_at": utc_now(),
@@ -112,7 +112,7 @@ def build_external_agent_vocab_bundle(
         ),
         "validation_order": [
             "Strip allowlisted punctuation from each whitespace-separated token.",
-            "If every Hanzi character in the token is listed in high_frequency_characters_500.txt, classify it as high_frequency_character_compound.",
+            f"If every Hanzi character in the token is listed in {character_bundle_filename(character_limit)}, classify it as high_frequency_character_compound.",
             "Otherwise exact-match known_words_minus_character_compounds.txt.",
             "Otherwise exact-match master_stretch_words_non_core.txt.",
             "Otherwise exact-match manuscript book_specific_words.txt or proper_nouns.txt when present.",
@@ -153,8 +153,97 @@ def build_external_agent_vocab_bundle(
             "scripts/validate_book.py, scripts/run_quality_gate.py, and scripts/build_epub.py using the configured repo arguments."
         ),
     }
-    write_json(metadata_out, payload)
+    lists = {
+        "high_frequency_characters": ranked_characters,
+        "known_words_minus_character_compounds": known_words_minus_character_compounds,
+        "master_stretch_words_non_core": master_stretch_words,
+    }
+    paths = {
+        "high_frequency_characters": characters_out,
+        "known_words_minus_character_compounds": known_out,
+        "master_stretch_words_non_core": stretch_out,
+        "metadata": metadata_out,
+    }
+    return payload, lists, paths
+
+
+def build_external_agent_vocab_bundle(
+    *,
+    known_path: Path = DEFAULT_KNOWN_WORDS,
+    characters_path: Path = DEFAULT_MARCEL_HIGH_FREQUENCY_CHARACTERS,
+    character_limit: int = DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT,
+    stretch_dir: Path = DEFAULT_STRETCH_PACKS_DIR,
+    out_dir: Path = DEFAULT_OUT_DIR,
+) -> dict:
+    payload, lists, paths = compute_external_agent_vocab_bundle(
+        known_path=known_path,
+        characters_path=characters_path,
+        character_limit=character_limit,
+        stretch_dir=stretch_dir,
+        out_dir=out_dir,
+    )
+    out_dir.mkdir(parents=True, exist_ok=True)
+    write_word_list(paths["high_frequency_characters"], lists["high_frequency_characters"])
+    write_word_list(paths["known_words_minus_character_compounds"], lists["known_words_minus_character_compounds"])
+    write_word_list(paths["master_stretch_words_non_core"], lists["master_stretch_words_non_core"])
+    write_json(paths["metadata"], payload)
     return payload
+
+
+def read_generated_word_list(path: Path) -> list[str]:
+    if not path.exists():
+        return []
+    return [line.strip() for line in path.read_text(encoding="utf-8").splitlines() if line.strip()]
+
+
+def comparable_metadata(payload: dict) -> dict:
+    return {key: value for key, value in payload.items() if key != "generated_at"}
+
+
+def check_external_agent_vocab_bundle(
+    *,
+    known_path: Path = DEFAULT_KNOWN_WORDS,
+    characters_path: Path = DEFAULT_MARCEL_HIGH_FREQUENCY_CHARACTERS,
+    character_limit: int = DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT,
+    stretch_dir: Path = DEFAULT_STRETCH_PACKS_DIR,
+    out_dir: Path = DEFAULT_OUT_DIR,
+) -> list[str]:
+    payload, expected_lists, paths = compute_external_agent_vocab_bundle(
+        known_path=known_path,
+        characters_path=characters_path,
+        character_limit=character_limit,
+        stretch_dir=stretch_dir,
+        out_dir=out_dir,
+    )
+    issues: list[str] = []
+    expected_character_path = paths["high_frequency_characters"]
+    for stale_path in sorted(out_dir.glob("high_frequency_characters_*.txt")):
+        if stale_path != expected_character_path:
+            issues.append(f"stale character bundle file: {repo_relative(stale_path)}")
+
+    for key, expected_words in expected_lists.items():
+        path = paths[key]
+        if not path.exists():
+            issues.append(f"missing generated file: {repo_relative(path)}")
+            continue
+        actual_words = read_generated_word_list(path)
+        if actual_words != expected_words:
+            issues.append(
+                f"{repo_relative(path)} mismatch: expected {len(expected_words)} entries, found {len(actual_words)}"
+            )
+
+    metadata_path = paths["metadata"]
+    if not metadata_path.exists():
+        issues.append(f"missing generated file: {repo_relative(metadata_path)}")
+    else:
+        try:
+            actual_metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            issues.append(f"{repo_relative(metadata_path)} is invalid JSON: {exc}")
+        else:
+            if comparable_metadata(actual_metadata) != comparable_metadata(payload):
+                issues.append(f"{repo_relative(metadata_path)} metadata does not match current generated bundle")
+    return issues
 
 
 def main() -> int:
@@ -168,7 +257,23 @@ def main() -> int:
     parser.add_argument("--character-limit", type=int, default=DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT)
     parser.add_argument("--stretch-dir", default=str(DEFAULT_STRETCH_PACKS_DIR))
     parser.add_argument("--out-dir", default=str(DEFAULT_OUT_DIR))
+    parser.add_argument("--check", action="store_true", help="Verify generated files match the current inputs.")
     args = parser.parse_args()
+
+    if args.check:
+        issues = check_external_agent_vocab_bundle(
+            known_path=Path(args.known),
+            characters_path=Path(args.characters),
+            character_limit=args.character_limit,
+            stretch_dir=Path(args.stretch_dir),
+            out_dir=Path(args.out_dir),
+        )
+        if issues:
+            for issue in issues:
+                print(f"ERROR: {issue}")
+            return 1
+        print("external_agent_vocab_bundle: OK")
+        return 0
 
     payload = build_external_agent_vocab_bundle(
         known_path=Path(args.known),
