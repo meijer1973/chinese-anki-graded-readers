@@ -126,7 +126,7 @@ The validator ignores punctuation and whitespace, then checks every remaining st
 
 The minimum-difficulty gate reports `easy_character_compound_token_percent`. A token counts toward this share when every Hanzi character in it is within the first 500 ranked characters from `data/learner_profiles/marcel/high_frequency_characters.txt`, regardless of whether the token is core, personal-known, stretch, proper noun, or unknown. Keep this share at or below 95%.
 
-Soft target, not a hard gate: when natural, use some words from ranks 2501-5000 of `data/known_words.txt` and some character compounds that require character ranks 501-1000. This helps prevent books that technically fit the 5000-word ceiling but read like a much lower-level book. Do not pad, distort dialogue, or insert vocabulary only to satisfy this suggestion.
+Soft target, not a hard gate: when natural, use some words from the upper 50% of the active known-word list and some character compounds that require characters from the upper 50% of the enabled character-compound band. This helps prevent books that technically fit the current ceiling but read like a much lower-level book. Do not pad, distort dialogue, or insert vocabulary only to satisfy this suggestion.
 
 ## Vocabulary Layers
 

@@ -21,7 +21,7 @@ Use this screening order:
 
 This keeps external downloads small and avoids checking the same token against both the high-frequency character-compound layer and the known-word or stretch-word lists.
 
-Also track minimum difficulty while drafting. Count every token whose Hanzi characters all appear in the first 500 lines of `high_frequency_characters_1000.txt`; this is `easy_character_compound_token_percent` in repository validation. The hard ceiling is **95%**. As a soft target only, use some compact known words from the upper half of the current 5000-word baseline and some character compounds that need characters from lines 501-1000 when they fit the story naturally.
+Also track minimum difficulty while drafting. Count every token whose Hanzi characters all appear in the first 500 lines of `high_frequency_characters_1000.txt`; this is `easy_character_compound_token_percent` in repository validation. The hard ceiling is **95%**. As a soft target only, use some compact known words from the upper 50% of the active known-word baseline and some character compounds that need characters from the upper 50% of the enabled character-compound band when they fit the story naturally.
 
 The compact bundle is a drafting and lightweight screening surface. Final manuscript reports remain authoritative only when generated with the repository validators, for example:
 

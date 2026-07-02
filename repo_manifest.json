@@ -15,7 +15,9 @@
     "max_easy_character_compound_token_percent": 95,
     "easy_character_compound_limit": 500,
     "easy_character_compounds_path": "data/learner_profiles/marcel/high_frequency_characters.txt",
-    "soft_difficulty_targets": "Use some rank 2501-5000 known words and some character compounds requiring character ranks 501-1000 when natural; this is not a hard gate.",
+    "soft_difficulty_target_known_words": "upper_50_percent_of_active_known_word_list",
+    "soft_difficulty_target_character_compounds": "upper_50_percent_of_enabled_character_compound_band",
+    "soft_difficulty_targets": "When natural, use some words from the upper 50% of the active known-word list and some character compounds that require characters from the upper 50% of the enabled character-compound band; this is not a hard gate.",
     "approved_non_core_layers": [
       "general_fiction_stretch",
       "genre_stretch",

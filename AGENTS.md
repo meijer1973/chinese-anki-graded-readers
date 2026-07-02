@@ -63,7 +63,7 @@ Future novels should be ambitious inside the controlled vocabulary. Prefer scene
 
 Track vocabulary breadth, but treat breadth counts as diagnostics, not acceptance gates. The 98% known-token floor, 2% approved non-core ceiling, and 95% first-500 character-compound ceiling are acceptance gates. Reports should include total tokens, unique used words, percentage of the known list used, top frequent words, repeated phrase warnings, chapter-level unique-token counts, and unused known words. There is no default chapter count and no chapter word-count requirement. Do not add text solely to satisfy length, vocabulary coverage, or stretch-word metrics.
 
-Minimum difficulty is also an acceptance gate: `easy_character_compound_token_percent` must stay at or below 95%, where the easy band means tokens made only from the first 500 ranked high-frequency characters. As a soft craft target, use some words from ranks 2501-5000 of `data/known_words.txt` and some character compounds that require ranks 501-1000 of `data/learner_profiles/marcel/high_frequency_characters.txt` when they fit naturally. Do not pad or force awkward vocabulary just to hit this suggestion.
+Minimum difficulty is also an acceptance gate: `easy_character_compound_token_percent` must stay at or below 95%, where the easy band means tokens made only from the first 500 ranked high-frequency characters. As a soft craft target, use some words from the upper 50% of the active known-word list and some character compounds that require characters from the upper 50% of the enabled character-compound band when they fit naturally. Do not pad or force awkward vocabulary just to hit this suggestion.
 
 Before vocabulary planning, create `manuscripts/<project-slug>/creative_preflight.md` with 3-5 premise or scene alternatives, rejected ideas, chosen story shape, reader question, main pressure, planned reversals, and variation budget. Future manuscripts should run `scripts/prose_variety_report.py` and use `docs/style-bank-controlled-chinese.md` plus the prose-variety polish skill when repeated visible frames remain.
 
@@ -182,7 +182,7 @@ Creative quality rules:
 3. Do not write overly conservative, flat, or repetitive fiction.
 4. Future novels must aim for narrative interest within the allowed vocabulary.
 5. Prefer scenes with a concrete situation, a character want, pressure or conflict, a change by the end, and some reason for the reader to continue.
-6. Use more of the available known-word list where natural, including some rank 2501-5000 words and some character compounds that require rank 501-1000 characters when they serve the scene.
+6. Use more of the available known-word list where natural, including some upper-50% known words and some character compounds that require upper-50% enabled character-compound characters when they serve the scene.
 7. Track vocabulary breadth.
 8. Avoid using the same small group of words for the entire book.
 9. Avoid repeated dialogue loops such as `我 不 知道`, `你 怎么 了`, and `我们 要 走` unless the repetition is narratively justified.
