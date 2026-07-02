@@ -25,6 +25,7 @@ Read that file first for repository access, exact paths, raw URLs, and task rout
 | What prompt should a remote research agent use? | `RESEARCH_AGENT_PROMPT.md` |
 | What machine-readable manifest describes the repo? | `repo_manifest.json` |
 | How is a known-word list generated? | `High frequency words 0-10000.txt`, `scripts/sync_known_words.py`, `data/known_words.metadata.json` |
+| What should external writer agents download for quick vocabulary preflight? | `docs/external-agent-vocabulary.md`, `data/external_agent_vocab/` |
 | How is a chapter validated? | `scripts/validate_chapter.py`, `scripts/novel_tools.py` |
 | How is a whole manuscript validated? | `scripts/validate_book.py`, `scripts/generate_reports.py` |
 | How is quality reviewed? | `docs/quality-review.md`, `.agents/skills/chinese-lead-quality-review/SKILL.md` |
@@ -83,6 +84,7 @@ https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/AG
 - Missing the extensive-reading vocabulary gate: default validation requires at least 98% known tokens and at most 2% approved non-core tokens.
 - Forgetting to pass stretch packs, `book_specific_words.txt`, and `proper_nouns.txt` when validating layered manuscripts.
 - Forgetting `--known-character-compounds --known-character-compound-limit 500` for Marcel personalized manuscripts that use the high-frequency character-compound layer.
+- Making remote writer agents download all vocabulary surfaces for first-pass screening instead of using `data/external_agent_vocab/`.
 - Treating unknown-token allowance as a target. It is only breathing room.
 - Planning a new 林安 sequel before the previous accepted story has updated `series/an-lin/series_update_log.md`.
 - Leaving completed tracked work only in a local checkout. Remote writer agents read GitHub, so pushed commits are the handoff.

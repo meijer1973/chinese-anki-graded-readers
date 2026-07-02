@@ -9,6 +9,7 @@ import unittest
 from pathlib import Path
 
 from scripts.export_stretch_words_for_anki import FIELDS, export_candidates
+from scripts.build_external_agent_vocab_bundle import build_external_agent_vocab_bundle
 from scripts.novel_tools import (
     BUSINESS_ECONOMICS_LAYER,
     DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT,
@@ -172,6 +173,37 @@ class StretchVocabularyTests(unittest.TestCase):
         self.assertEqual(vocab["token_layers"]["看"], "core_known")
         self.assertEqual(report["core_known_tokens"], 3)
         self.assertEqual(report["high_frequency_character_compound_tokens"], 0)
+
+    def test_external_agent_vocab_bundle_removes_earlier_layer_overlaps(self) -> None:
+        known = self.root / "bundle_known_words.txt"
+        known.write_text("我\n旧城门\n需要\n", encoding="utf-8")
+        characters = self.root / "bundle_high_frequency_characters.txt"
+        characters.write_text("旧\n城\n门\n我\n", encoding="utf-8")
+        packs = self.root / "bundle_packs"
+        packs.mkdir()
+        (packs / "general.txt").write_text("旧城门\n需要\n魔法\n", encoding="utf-8")
+        (packs / "fantasy.txt").write_text("魔法\n山门\n", encoding="utf-8")
+        out_dir = self.root / "bundle"
+
+        payload = build_external_agent_vocab_bundle(
+            known_path=known,
+            characters_path=characters,
+            character_limit=3,
+            stretch_dir=packs,
+            out_dir=out_dir,
+        )
+
+        compact_known = load_optional_words(out_dir / "known_words_minus_character_compounds.txt")
+        master_stretch = load_optional_words(out_dir / "master_stretch_words_non_core.txt")
+        compact_characters = load_optional_words(out_dir / "high_frequency_characters_500.txt")
+
+        self.assertEqual(compact_characters, ["旧", "城", "门"])
+        self.assertEqual(compact_known, ["我", "需要"])
+        self.assertEqual(master_stretch, ["魔法", "山门"])
+        self.assertEqual(payload["counts"]["known_words_covered_by_character_compounds_count"], 1)
+        self.assertEqual(payload["counts"]["stretch_words_removed_as_known_count"], 1)
+        self.assertEqual(payload["counts"]["stretch_words_removed_as_character_compounds_count"], 1)
+        self.assertEqual(payload["counts"]["duplicate_stretch_word_count"], 1)
 
     def test_same_token_in_core_and_personal_counts_as_core(self) -> None:
         personal = self.root / "personal_core_overlap.txt"

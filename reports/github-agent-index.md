@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki And Graded Readers
 
-Generated: 2026-06-29T11:14:45Z
+Generated: 2026-07-02T06:48:20Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 1110
+Files indexed: 1116
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -58,12 +58,13 @@ Count: 30
 
 ## docs
 
-Count: 11
+Count: 12
 
 - docs/adaptation-workflow.md
 - docs/anki-integration.md
 - docs/completion-response-template.md
 - docs/creative-preflight.md
+- docs/external-agent-vocabulary.md
 - docs/machine-readable-repository.md
 - docs/novel-generation.md
 - docs/personal-known-vocabulary.md
@@ -74,7 +75,7 @@ Count: 11
 
 ## scripts
 
-Count: 42
+Count: 43
 
 - add_missing_single_character_notes.py
 - apply_meaning_cleanup_updates.py
@@ -88,6 +89,7 @@ Count: 42
 - scripts/audit_anki_card_distribution.py
 - scripts/build_agent_index.py
 - scripts/build_epub.py
+- scripts/build_external_agent_vocab_bundle.py
 - scripts/build_reading_copy.py
 - scripts/check_series_memory_update.py
 - scripts/complete_stretch_pack_metadata.py
@@ -127,13 +129,17 @@ Count: 1
 
 ## data
 
-Count: 29
+Count: 33
 
 - data/cedict_ts.u8.gz
 - data/cmn-eng_links.tsv.bz2
 - data/cmn_sentences.tsv.bz2
 - data/cmn_transcriptions.tsv.bz2
 - data/eng_sentences.tsv.bz2
+- data/external_agent_vocab/high_frequency_characters_500.txt
+- data/external_agent_vocab/known_words_minus_character_compounds.txt
+- data/external_agent_vocab/master_stretch_words_non_core.txt
+- data/external_agent_vocab/metadata.json
 - data/known_words.metadata.json
 - data/known_words.txt
 - data/learner_profiles/marcel/high_frequency_characters.txt

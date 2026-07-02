@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-06-29T11:14:45Z",
+  "generated_at": "2026-07-02T06:48:20Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 1110,
+  "file_count": 1116,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -261,6 +261,26 @@
       "category": "data"
     },
     {
+      "path": "data/external_agent_vocab/high_frequency_characters_500.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/external_agent_vocab/high_frequency_characters_500.txt",
+      "category": "data"
+    },
+    {
+      "path": "data/external_agent_vocab/known_words_minus_character_compounds.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/external_agent_vocab/known_words_minus_character_compounds.txt",
+      "category": "data"
+    },
+    {
+      "path": "data/external_agent_vocab/master_stretch_words_non_core.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/external_agent_vocab/master_stretch_words_non_core.txt",
+      "category": "data"
+    },
+    {
+      "path": "data/external_agent_vocab/metadata.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/external_agent_vocab/metadata.json",
+      "category": "data"
+    },
+    {
       "path": "data/known_words.metadata.json",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/known_words.metadata.json",
       "category": "data"
@@ -398,6 +418,11 @@
     {
       "path": "docs/creative-preflight.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/creative-preflight.md",
+      "category": "docs"
+    },
+    {
+      "path": "docs/external-agent-vocabulary.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/external-agent-vocabulary.md",
       "category": "docs"
     },
     {
@@ -5303,6 +5328,11 @@
     {
       "path": "scripts/build_epub.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/build_epub.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/build_external_agent_vocab_bundle.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/build_external_agent_vocab_bundle.py",
       "category": "scripts"
     },
     {

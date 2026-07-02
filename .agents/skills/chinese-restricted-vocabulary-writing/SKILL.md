@@ -19,6 +19,7 @@ Write one chapter at a time. The canonical format is space-tokenized Chinese:
 - Read `data/known_words.txt`.
 - If the project uses Marcel personalized mode, read `data/learner_profiles/marcel/personal_known_words.txt` and count those words as the `personal_known` layer, not as stretch.
 - If Marcel personalized mode enables known-character compounds, use `data/learner_profiles/marcel/high_frequency_characters.txt` with limit 500 and keep those tokens separate as `high_frequency_character_compound`, not core or stretch.
+- When working as an external/remote writer agent in Marcel personalized mode, use `docs/external-agent-vocabulary.md` and the three files in `data/external_agent_vocab/` for quick drafting preflight: character compounds first, compact known words second, compact master non-core stretch words third.
 - Read the configured approved stretch packs, manuscript `book_specific_words.txt`, and `proper_nouns.txt` when present.
 - Read the manuscript `novel_bible.md`, `outline.md`, `characters.md`, and `continuity_log.md`.
 - Read `creative_preflight.md` when present. Preserve the chosen story shape, reader question, and variation budget.

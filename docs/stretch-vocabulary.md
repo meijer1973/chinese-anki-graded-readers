@@ -29,6 +29,12 @@ Proper nouns are the right place for character, place, and organization names. L
 
 Personal-known words and high-frequency character compounds are not stretch words. They are vocabulary a named learner already recognizes and should be tracked under `personal_known_tokens` or `high_frequency_character_compound_tokens`, not as new learning targets. See `docs/personal-known-vocabulary.md`.
 
+## External Agent Master List
+
+Remote Marcel-personalized writer agents do not need to download every individual stretch pack just to do a first-pass token screen. Use `docs/external-agent-vocabulary.md` and `data/external_agent_vocab/master_stretch_words_non_core.txt`, which is generated from all reusable stretch packs after removing words already covered by the active known-word list or the top-500 high-frequency character-compound layer.
+
+The compact master list is for drafting and lightweight screening. Official validation still passes the relevant individual stretch packs, `book_specific_words.txt`, and `proper_nouns.txt` to the repo validators so layer counts and final reports remain auditable.
+
 ## General Fiction Pack
 
 Use `general_fiction_150.txt` for reusable fiction craft vocabulary: memory, hesitation, emotional pressure, dialogue movement, small actions, body-language cues, and ordinary scene texture.

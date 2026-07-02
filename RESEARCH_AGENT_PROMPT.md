@@ -56,7 +56,8 @@ Common surfaces:
 - `docs/` for workflows and policy.
 - `scripts/` for validators, reports, EPUB adaptation intake/profiling, EPUB export, and Anki candidate export.
 - `.agents/skills/` and `.codex/agents/` for role-specific agent behavior.
-- `High frequency words 0-10000.txt`, `data/known_words.txt`, `data/learner_profiles/marcel/high_frequency_characters.txt`, and `data/stretch_packs/` for active vocabulary policy.
+- `High frequency words 0-10000.txt`, `data/known_words.txt`, `data/learner_profiles/marcel/high_frequency_characters.txt`, `data/stretch_packs/`, and `data/external_agent_vocab/` for active vocabulary policy.
+- `docs/external-agent-vocabulary.md` for the compact three-file vocabulary bundle remote Marcel-personalized writer agents should use for first-pass token screening.
 - `series/an-lin/` and `docs/series-memory.md` for living series continuity.
 - `docs/completion-response-template.md` for completed-book and EPUB delivery format.
 - `manuscripts/<slug>/` for manuscript artifacts.

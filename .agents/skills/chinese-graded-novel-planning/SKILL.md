@@ -5,7 +5,7 @@ description: Plan complete Chinese graded-reader novels under a restricted known
 
 # Chinese Graded Novel Planning
 
-Plan before drafting. Read `data/known_words.txt` first, then inspect any project config, learner-profile personal-known list and high-frequency character-compound setting if configured, selected stretch packs, proper nouns, book-specific words, and existing manuscript files.
+Plan before drafting. Read `data/known_words.txt` first, then inspect any project config, learner-profile personal-known list and high-frequency character-compound setting if configured, selected stretch packs, proper nouns, book-specific words, and existing manuscript files. For remote Marcel-personalized planning, `docs/external-agent-vocabulary.md` provides a compact three-file vocabulary bundle for fast feasibility checks before downloading individual packs.
 
 For 林安 series work, read `series/an-lin/series_bible.md`, `series/an-lin/character_registry.md`, `series/an-lin/chronology.md`, `series/an-lin/mechanism_registry.md`, `series/an-lin/open_threads.md`, `series/an-lin/recurring_locations.md`, `series/an-lin/recurring_objects.md`, `series/an-lin/sequel_constraints.md`, and `series/an-lin/series_update_log.md` before planning. Treat 林安 as the journalist/crime-reporter protagonist and 陈雨 as the recurring police contact unless the user explicitly requests a reboot.
 

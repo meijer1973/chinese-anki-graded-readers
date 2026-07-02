@@ -45,6 +45,16 @@ Keep personal-known vocabulary separate from the ranked frequency list. `data/kn
 
 Use public mode for general graded readers: core known words plus approved stretch packs under the 98% known / 2% approved non-core default. Use Marcel personalized mode only when requested or when the project config says so: core known words plus `--personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 500` plus approved stretch packs. Reports must keep `personal_known_tokens` and `high_frequency_character_compound_tokens` separate from core and stretch tokens; these personalized layers count toward known-token coverage for Marcel, not toward stretch load.
 
+### External Agent Vocabulary Bundle
+
+Remote writer agents drafting for Marcel personalized mode should start with `docs/external-agent-vocabulary.md` and the compact three-file bundle under `data/external_agent_vocab/`:
+
+1. `high_frequency_characters_500.txt`
+2. `known_words_minus_character_compounds.txt`
+3. `master_stretch_words_non_core.txt`
+
+For lightweight preflight, check tokens in that order: first high-frequency character compounds, then the compact known-word list, then the compact master non-core stretch list, then project-local `book_specific_words.txt` and `proper_nouns.txt`. This avoids making external agents download every individual stretch pack or re-check words already covered by the character-compound layer. Regenerate the bundle with `python scripts/build_external_agent_vocab_bundle.py` whenever `data/known_words.txt`, the character-compound limit, or reusable stretch packs change. The compact bundle is for drafting and external screening; final repository validation still uses `scripts/validate_chapter.py`, `scripts/validate_book.py`, `scripts/run_quality_gate.py`, and `scripts/build_epub.py` with the configured full arguments.
+
 Stretch packs should normally avoid duplicating core known words or Marcel's high-frequency character-compound layer. If a reusable public-mode genre term is essential despite that overlap, list it in `data/stretch_packs/known_character_compound_overlap_allowlist.json` with a rationale so future audits keep the exception visible.
 
 ### Creative Quality
@@ -118,6 +128,7 @@ Use the minimal-intervention cascade: classify proper nouns and personal-known w
 - `data/known_words.txt` is the active machine-readable known-word list for restricted-vocabulary fiction. It is generated from `High frequency words 0-10000.txt` by `scripts/sync_known_words.py`.
 - `data/learner_profiles/marcel/` contains Marcel's personal-known learner profile. Use `personal_known_words.tsv` as the editable source and `personal_known_words.txt` as the generated validator layer.
 - `data/learner_profiles/marcel/high_frequency_characters.txt` contains Marcel's ranked known-character source for the optional `--known-character-compounds` layer; current default limit is 500.
+- `data/external_agent_vocab/` contains the generated compact three-file vocabulary bundle for remote Marcel-personalized drafting: top-500 high-frequency characters, known words with character-compound-covered terms removed, and a master non-core stretch list.
 - `data/stretch_packs/fantasy_232.txt` contains reviewed reusable fantasy stretch words for urban fantasy, high fantasy, sword-sect/cultivation stories, politics, battles, monsters, magic mechanisms, and invented institutions. Use it with `--genre-pack`.
 - `data/stretch_packs/known_character_compound_overlap_allowlist.json` documents rare public-mode stretch-pack terms that intentionally overlap Marcel's optional high-frequency character-compound layer.
 - `series/an-lin/` contains the living series memory package for the 林安 journalist urban-fantasy crime series: bible, chronology, character registry, mechanism registry, open threads, recurring objects/locations, sequel constraints, and update log.
@@ -127,7 +138,7 @@ Use the minimal-intervention cascade: classify proper nouns and personal-known w
 - `AGENT_GITHUB_ENTRY.md`, `RESEARCH_AGENT_MAP.md`, `RESEARCH_AGENT_PROMPT.md`, and `repo_manifest.json` are the GitHub-facing machine-readable/research-agent entry points.
 - `reports/github-agent-index.md`, `reports/github-agent-index.json`, and `reports/url-index.md` are generated inventories for remote agents; refresh them with `python scripts/build_agent_index.py`.
 - `manuscripts/<project-slug>/` contains novel bibles, outlines, canonical tokenized chapters, validation reports, continuity logs, and EPUB exports.
-- `scripts/load_known_words.py`, `scripts/sync_personal_known_words.py`, `scripts/import_personal_known_words.py`, `scripts/validate_chapter.py`, `scripts/validate_book.py`, `scripts/generate_reports.py`, `scripts/vocabulary_usage_report.py`, `scripts/repeated_phrase_report.py`, `scripts/run_quality_gate.py`, `scripts/check_series_memory_update.py`, and `scripts/build_epub.py` inspect, validate, review-prep, report, verify series-memory updates, and export restricted-vocabulary manuscripts.
+- `scripts/load_known_words.py`, `scripts/sync_personal_known_words.py`, `scripts/import_personal_known_words.py`, `scripts/build_external_agent_vocab_bundle.py`, `scripts/validate_chapter.py`, `scripts/validate_book.py`, `scripts/generate_reports.py`, `scripts/vocabulary_usage_report.py`, `scripts/repeated_phrase_report.py`, `scripts/run_quality_gate.py`, `scripts/check_series_memory_update.py`, and `scripts/build_epub.py` inspect, validate, review-prep, report, verify series-memory updates, and export restricted-vocabulary manuscripts.
 - `scripts/import_epub_for_adaptation.py`, `scripts/profile_adaptation_vocabulary.py`, and `scripts/adaptation_tools.py` support source-aligned EPUB intake and vocabulary-pressure diagnostics before any graded-reader adaptation is drafted.
 - `scripts/prose_variety_report.py` reports repeated dialogue tags, repeated sentence frames, and other style-polish risks. `scripts/build_reading_copy.py` creates noncanonical natural-text review copies.
 - `.agents/skills/` and `.codex/agents/` contain repo-local Codex workflows and role definitions for novel planning, chapter writing, validation, continuity editing, literary review, reader review, lead quality review, and EPUB export.
@@ -250,6 +261,8 @@ Usually do not hand-edit these, because scripts regenerate them:
 - `meaning_field_suggestions_summary.md`
 - `data/known_words.txt`
 - `data/known_words.metadata.json`
+- `data/external_agent_vocab/*.txt`
+- `data/external_agent_vocab/metadata.json`
 - `manuscripts/<project-slug>/**/*.validation.json`
 - `manuscripts/<project-slug>/vocabulary_report.json`
 - `manuscripts/<project-slug>/quality/vocabulary_usage_report.json`

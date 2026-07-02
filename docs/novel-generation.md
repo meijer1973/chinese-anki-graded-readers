@@ -72,6 +72,22 @@ Enable it with `--known-character-compounds --known-character-compound-limit 500
 
 Do not merge personal-known words or high-frequency character compounds into `data/known_words.txt`. Validation reports count `personal_known_tokens` and `high_frequency_character_compound_tokens` separately from `core_known_tokens` and stretch tokens.
 
+## External Agent Vocabulary Bundle
+
+For Marcel-personalized external writer agents, use the compact bundle documented in `docs/external-agent-vocabulary.md` before downloading individual vocabulary files. The three drafting/preflight files are:
+
+- `data/external_agent_vocab/high_frequency_characters_500.txt`
+- `data/external_agent_vocab/known_words_minus_character_compounds.txt`
+- `data/external_agent_vocab/master_stretch_words_non_core.txt`
+
+External agents should check tokens against those files in that order: character compound first, compact known word second, compact master stretch word third. This keeps the quick screening list small and removes terms already covered by the high-frequency character-compound layer. Final validation still uses the normal repository validator commands and configured pack arguments.
+
+Regenerate the bundle after vocabulary changes:
+
+```powershell
+python scripts/build_external_agent_vocab_bundle.py
+```
+
 ## Manuscript Layout
 
 Create each new project under:

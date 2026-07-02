@@ -9,6 +9,7 @@ This repository maintains a Chinese vocabulary Anki deck and a controlled-vocabu
 - Keep curated sentence and pinyin fixes in `sentence_example_overrides.py`.
 - Maintain the active graded-reader known-word file in `data/known_words.txt`, generated from `High frequency words 0-10000.txt`.
 - Maintain learner-profile personal-known vocabulary under `data/learner_profiles/marcel/` for Marcel-personalized readers.
+- Provide compact external-agent vocabulary files under `data/external_agent_vocab/` for Marcel-personalized drafting preflight.
 - Generate restricted-vocabulary Chinese manuscripts under `manuscripts/<slug>/`.
 - Adapt existing Chinese EPUBs into source-aligned graded readers through `docs/adaptation-workflow.md`, `scripts/import_epub_for_adaptation.py`, and `scripts/profile_adaptation_vocabulary.py`.
 - Use `creative_preflight.md` and the controlled Chinese style bank before token-level chapter planning.
@@ -53,6 +54,7 @@ The validator checks core known words, approved stretch packs, book-specific wor
 
 - `docs/novel-generation.md`
 - `docs/personal-known-vocabulary.md`
+- `docs/external-agent-vocabulary.md`
 - `docs/adaptation-workflow.md`
 - `docs/completion-response-template.md`
 - `docs/creative-preflight.md`

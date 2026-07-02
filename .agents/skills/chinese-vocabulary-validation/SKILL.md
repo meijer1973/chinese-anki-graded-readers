@@ -49,6 +49,8 @@ For Marcel personalized readers, pass the learner-profile layer:
 
 The `--known-character-compounds` flag defaults to `data/learner_profiles/marcel/high_frequency_characters.txt`. It is a conservative, auditable Marcel-specific layer: top 500 ranked characters now, with later increases made by changing only the limit.
 
+For external Marcel-personalized drafting or quick token screening, prefer the compact bundle documented in `docs/external-agent-vocabulary.md`: `data/external_agent_vocab/high_frequency_characters_500.txt`, `data/external_agent_vocab/known_words_minus_character_compounds.txt`, and `data/external_agent_vocab/master_stretch_words_non_core.txt`. Check high-frequency character compounds first, then compact known words, then compact non-core stretch words. Do not treat that bundle as the final report; run the validator scripts for authoritative JSON evidence.
+
 ## Parsing Contract
 
 - Load known words from `data/known_words.txt`.

@@ -26,6 +26,7 @@ Repository boundaries:
 - The graded-reader ranked source is `High frequency words 0-10000.txt`.
 - The active known-word file for stories is `data/known_words.txt`, generated from the graded-reader source by `scripts/sync_known_words.py`.
 - Marcel personalized readers may also use `data/learner_profiles/marcel/personal_known_words.txt`, generated from the editable TSV in the same folder, plus `data/learner_profiles/marcel/high_frequency_characters.txt` with the current `--known-character-compound-limit 500`.
+- Remote Marcel-personalized writer agents can use the compact three-file vocabulary bundle in `data/external_agent_vocab/` for first-pass screening: check `high_frequency_characters_500.txt` first, then `known_words_minus_character_compounds.txt`, then `master_stretch_words_non_core.txt`.
 - Extensive-reading validation defaults require at least 98% known tokens and at most 2% approved non-core tokens. Approved non-core tokens include stretch layers, book-specific words, and listed proper nouns.
 - Canonical story text is always space-tokenized `chapters/*.zh-tok.txt`.
 - Final EPUB files and build reports for accepted manuscripts are tracked under `manuscripts/<slug>/epub/`.
@@ -81,6 +82,7 @@ Human-readable:
 - `RESEARCH_AGENT_MAP.md`
 - `docs/novel-generation.md`
 - `docs/personal-known-vocabulary.md`
+- `docs/external-agent-vocabulary.md`
 - `docs/adaptation-workflow.md`
 - `docs/completion-response-template.md`
 - `docs/creative-preflight.md`
@@ -106,6 +108,10 @@ Machine-readable:
     "High frequency words 0-10000.txt",
     "data/known_words.metadata.json",
     "data/known_words.txt",
+    "data/external_agent_vocab/high_frequency_characters_500.txt",
+    "data/external_agent_vocab/known_words_minus_character_compounds.txt",
+    "data/external_agent_vocab/master_stretch_words_non_core.txt",
+    "data/external_agent_vocab/metadata.json",
     "data/learner_profiles/marcel/personal_known_words.tsv",
     "data/learner_profiles/marcel/personal_known_words.txt",
     "data/learner_profiles/marcel/high_frequency_characters.txt",
@@ -126,6 +132,7 @@ Machine-readable:
     "scripts/import_epub_for_adaptation.py",
     "scripts/profile_adaptation_vocabulary.py",
     "scripts/adaptation_tools.py",
+    "scripts/build_external_agent_vocab_bundle.py",
     "scripts/check_series_memory_update.py",
     "scripts/anki_card_distribution.py",
     "scripts/audit_anki_card_distribution.py",
@@ -190,6 +197,10 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/High frequency words 0-10000.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/known_words.metadata.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/known_words.txt
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/external_agent_vocab/high_frequency_characters_500.txt
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/external_agent_vocab/known_words_minus_character_compounds.txt
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/external_agent_vocab/master_stretch_words_non_core.txt
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/external_agent_vocab/metadata.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/learner_profiles/marcel/personal_known_words.tsv
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/learner_profiles/marcel/personal_known_words.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/learner_profiles/marcel/high_frequency_characters.txt
@@ -209,6 +220,7 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/import_epub_for_adaptation.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/profile_adaptation_vocabulary.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/adaptation_tools.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/build_external_agent_vocab_bundle.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/check_series_memory_update.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/anki_card_distribution.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/audit_anki_card_distribution.py
@@ -234,6 +246,7 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/broken-sword-gate-01-entering-the-mountain/book_specific_words.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/novel-generation.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/personal-known-vocabulary.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/external-agent-vocabulary.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/adaptation-workflow.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/completion-response-template.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/creative-preflight.md
@@ -284,6 +297,10 @@ Use these anchors before free-form browsing.
   "marcel_personal_known_tsv": "data/learner_profiles/marcel/personal_known_words.tsv",
   "marcel_personal_known_words": "data/learner_profiles/marcel/personal_known_words.txt",
   "marcel_high_frequency_characters": "data/learner_profiles/marcel/high_frequency_characters.txt",
+  "external_agent_vocabulary_docs": "docs/external-agent-vocabulary.md",
+  "external_agent_high_frequency_characters": "data/external_agent_vocab/high_frequency_characters_500.txt",
+  "external_agent_compact_known_words": "data/external_agent_vocab/known_words_minus_character_compounds.txt",
+  "external_agent_master_stretch_words": "data/external_agent_vocab/master_stretch_words_non_core.txt",
   "novel_config": "configs/novel_generation.default.json",
   "novel_generation_docs": "docs/novel-generation.md",
   "personal_known_docs": "docs/personal-known-vocabulary.md",
@@ -343,6 +360,7 @@ Use these anchors before free-form browsing.
     "anki",
     "configs",
     "data",
+    "data/external_agent_vocab",
     "data/learner_profiles",
     "data/stretch_packs",
     "docs",
@@ -368,6 +386,7 @@ Use these anchors before free-form browsing.
 | Understand repository rules | `AGENTS.md` |
 | Inspect machine-readable entry points | `repo_manifest.json` |
 | Generate or validate known words | `scripts/sync_known_words.py`, `data/known_words.metadata.json` |
+| Download compact external-agent vocabulary | `docs/external-agent-vocabulary.md`, `data/external_agent_vocab/high_frequency_characters_500.txt`, `data/external_agent_vocab/known_words_minus_character_compounds.txt`, `data/external_agent_vocab/master_stretch_words_non_core.txt` |
 | Sync Marcel personal-known words and review known-character compounds | `docs/personal-known-vocabulary.md`, `scripts/sync_personal_known_words.py`, `data/learner_profiles/marcel/personal_known_words.tsv`, `data/learner_profiles/marcel/high_frequency_characters.txt` |
 | Validate story vocabulary | `scripts/validate_chapter.py`, `scripts/validate_book.py`, `scripts/novel_tools.py` |
 | Adapt an existing EPUB into a graded reader | `docs/adaptation-workflow.md`, `scripts/import_epub_for_adaptation.py`, `scripts/profile_adaptation_vocabulary.py`, `.agents/skills/chinese-source-aligned-adaptation/SKILL.md` |

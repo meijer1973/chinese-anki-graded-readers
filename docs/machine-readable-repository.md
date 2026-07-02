@@ -8,6 +8,7 @@ This repository follows the same broad pattern used in `meijer1973/4veco-platfor
 - `RESEARCH_AGENT_MAP.md`: exact path and raw URL traversal rules.
 - `RESEARCH_AGENT_PROMPT.md`: reusable prompt for remote research agents.
 - `repo_manifest.json`: machine-readable manifest of entry points, namespaces, commands, and generated/local surfaces.
+- `data/external_agent_vocab/`: generated compact vocabulary bundle for external Marcel-personalized writer agents.
 - `reports/url-index.md`: full raw URLs for agents that cannot construct URLs.
 - `reports/github-agent-index.md`: tracked file inventory grouped by repository surface.
 
