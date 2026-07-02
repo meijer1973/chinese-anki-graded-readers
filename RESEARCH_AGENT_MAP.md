@@ -27,7 +27,7 @@ Repository boundaries:
 - The active known-word file for stories is `data/known_words.txt`, generated from the graded-reader source by `scripts/sync_known_words.py`.
 - Marcel personalized readers may also use `data/learner_profiles/marcel/personal_known_words.txt`, generated from the editable TSV in the same folder, plus `data/learner_profiles/marcel/high_frequency_characters.txt` with the current `--known-character-compound-limit 1000`.
 - Remote Marcel-personalized writer agents can use the compact three-file vocabulary bundle in `data/external_agent_vocab/` for first-pass screening: check `high_frequency_characters_1000.txt` first, then `known_words_minus_character_compounds.txt`, then `master_stretch_words_non_core.txt`.
-- Extensive-reading validation defaults require at least 98% known tokens and at most 2% approved non-core tokens. Approved non-core tokens include stretch layers, book-specific words, and listed proper nouns.
+- Extensive-reading validation defaults require at least 98% known tokens, at most 2% approved non-core tokens, and at most 95% first-500 character-compound tokens. Approved non-core tokens include stretch layers, book-specific words, and listed proper nouns.
 - Canonical story text is always space-tokenized `chapters/*.zh-tok.txt`.
 - Final EPUB files and build reports for accepted manuscripts are tracked under `manuscripts/<slug>/epub/`.
 - Live Anki mutation happens only through explicit scripts and should not be assumed safe without reading `AGENTS.md`.

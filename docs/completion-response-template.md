@@ -13,7 +13,7 @@ Files:
 
 [Download/Open the source and manuscript package](<zip path or manuscript folder>)
 
-I checked the current repository rules before building it. The active known-word file is generated from `High frequency words 0-10000.txt`; the active known-word count is **<known_word_count>**. <Vocabulary profile sentence.> The extensive-reading gate remains **>=98% known tokens** and **<=2% approved non-core tokens**, with canonical manuscript text in space-tokenized `chapters/*.zh-tok.txt`.
+I checked the current repository rules before building it. The active known-word file is generated from `High frequency words 0-10000.txt`; the active known-word count is **<known_word_count>**. <Vocabulary profile sentence.> The extensive-reading gate remains **>=98% known tokens**, **<=2% approved non-core tokens**, and **<=95% first-500 character-compound tokens**, with canonical manuscript text in space-tokenized `chapters/*.zh-tok.txt`.
 
 | Item | Result |
 | --- | ---: |
@@ -28,6 +28,7 @@ I checked the current repository rules before building it. The active known-word
 | Character-compound limit | <n or not used> |
 | Known-token coverage | <percent> |
 | Approved non-core percentage | <percent> |
+| First-500 character-compound percentage | <percent> |
 | Forbidden unknown tokens | <n> |
 | Forbidden unknowns over chapter limit | <n> |
 | Validation command | `<command or report path>` |
@@ -52,6 +53,7 @@ Limitations: <state any nonstandard validation, missing repo commit, unavailable
 - Report the active known-word baseline, currently from `data/known_words.metadata.json`.
 - Report vocabulary profile and learner-profile layers when used.
 - Report known-token coverage and approved non-core/stretch percentage.
+- Report first-500 character-compound percentage and whether it is at or below the 95% maximum.
 - Report forbidden unknown tokens and forbidden unknowns over the configured per-chapter limit.
 - Report the validation command run, or the exact validation report path when a remote/sandbox agent cannot run the command directly.
 - Report lead quality decision and EPUB structural check separately.

@@ -111,6 +111,8 @@ Personal-known words and high-frequency character compounds are allowed in Marce
 
 For Marcel personalized extensive reading, `personal_known_tokens` and `high_frequency_character_compound_tokens` count toward the 98% known-token floor. They do not count toward the 2% approved non-core/stretch ceiling.
 
+The minimum-difficulty check is separate: validators also report `easy_character_compound_token_percent`, the share of tokens made only from the first 500 ranked high-frequency characters. That share must stay at or below 95% even when Marcel personalized mode enables the broader top-1000 character-compound layer.
+
 For external writer agents drafting Marcel-personalized books, `docs/external-agent-vocabulary.md` defines a compact three-file preflight bundle. That bundle checks top-1000 high-frequency character compounds first, then known words with character-compound-covered terms removed, then the master non-core stretch list. Use it for drafting convenience, not as a replacement for the final validator commands above.
 
 ## Policy

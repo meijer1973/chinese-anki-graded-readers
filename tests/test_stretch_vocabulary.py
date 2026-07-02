@@ -401,10 +401,44 @@ class StretchVocabularyTests(unittest.TestCase):
 
     def test_default_policy_allows_two_percent_stretch_share(self) -> None:
         chapters = self.chapters_dir(" ".join(["我"] * 49 + ["魔法"]) + " 。\n")
-        report = validate_book(chapters, self.known, genre_pack=self.genre)
+        report = validate_book(
+            chapters,
+            self.known,
+            genre_pack=self.genre,
+            max_easy_character_compound_token_percent=100,
+        )
         self.assertTrue(report["valid"])
         self.assertEqual(report["known_token_percent"], 98.0)
         self.assertEqual(report["stretch_token_percent"], 2.0)
+
+    def test_easy_character_compound_share_above_default_limit_fails(self) -> None:
+        chapters = self.chapters_dir("我 看 你 。\n")
+        report = validate_book(
+            chapters,
+            self.known,
+            easy_character_compounds_path=self.high_frequency_characters,
+            easy_character_compound_limit=6,
+        )
+        self.assertFalse(report["valid"])
+        self.assertEqual(report["easy_character_compound_token_percent"], 100.0)
+        self.assertFalse(report["easy_character_compound_token_percent_allowed"])
+        self.assertTrue(
+            any(warning["type"] == "easy_character_compound_share_above_limit" for warning in report["warnings"])
+        )
+
+    def test_easy_character_compound_share_allows_ninety_five_percent(self) -> None:
+        easy_characters = self.root / "easy_characters.txt"
+        easy_characters.write_text("我\n", encoding="utf-8")
+        chapters = self.chapters_dir(" ".join(["我"] * 19 + ["是"]) + "\n")
+        report = validate_book(
+            chapters,
+            self.known,
+            easy_character_compounds_path=easy_characters,
+            easy_character_compound_limit=1,
+        )
+        self.assertTrue(report["valid"])
+        self.assertEqual(report["easy_character_compound_tokens"], 19)
+        self.assertEqual(report["easy_character_compound_token_percent"], 95.0)
 
     def test_layer_counts_are_correct(self) -> None:
         chapters = self.chapters_dir("林安 是 快递员 。\n我 在 上海 看 魔法 。\n你 沉默 了 。\n林安 采访 你 。\n")

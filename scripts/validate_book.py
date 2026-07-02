@@ -3,9 +3,11 @@ from __future__ import annotations
 import argparse
 
 from novel_tools import (
+    DEFAULT_EASY_CHARACTER_COMPOUND_LIMIT,
     DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT,
     DEFAULT_KNOWN_WORDS,
     DEFAULT_MARCEL_HIGH_FREQUENCY_CHARACTERS,
+    DEFAULT_MAX_EASY_CHARACTER_COMPOUND_TOKEN_PERCENT,
     DEFAULT_MAX_TOTAL_STRETCH_TOKEN_PERCENT,
     DEFAULT_MAX_FORBIDDEN_UNKNOWN_TOKENS_PER_CHAPTER,
     DEFAULT_MIN_KNOWN_TOKEN_PERCENT,
@@ -36,6 +38,17 @@ def main() -> int:
         default=DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT,
         help="Number of ranked characters to use for the derived compound layer. Use 0 for all.",
     )
+    parser.add_argument(
+        "--easy-character-compounds",
+        default=str(DEFAULT_MARCEL_HIGH_FREQUENCY_CHARACTERS),
+        help="Ranked character list used for the minimum-difficulty first-N character-compound ceiling.",
+    )
+    parser.add_argument(
+        "--easy-character-compound-limit",
+        type=int,
+        default=DEFAULT_EASY_CHARACTER_COMPOUND_LIMIT,
+        help="Number of ranked characters treated as the easy character-compound band.",
+    )
     parser.add_argument("--general-fiction-pack")
     parser.add_argument("--genre-pack")
     parser.add_argument("--setting-pack")
@@ -58,6 +71,12 @@ def main() -> int:
         default=DEFAULT_MAX_TOTAL_STRETCH_TOKEN_PERCENT,
         help="Require approved non-core tokens, including stretch layers and proper nouns, at or below this percentage.",
     )
+    parser.add_argument(
+        "--max-easy-character-compound-token-percent",
+        type=float,
+        default=DEFAULT_MAX_EASY_CHARACTER_COMPOUND_TOKEN_PERCENT,
+        help="Require tokens made only from the first easy-character band to stay at or below this percentage.",
+    )
     parser.add_argument("--max-new-stretch-words-per-chapter", type=int)
     parser.add_argument(
         "--max-forbidden-unknown-tokens-per-chapter",
@@ -74,6 +93,8 @@ def main() -> int:
         personal_known_words_path=args.personal_known,
         known_character_compounds_path=args.known_character_compounds,
         known_character_compound_limit=args.known_character_compound_limit,
+        easy_character_compounds_path=args.easy_character_compounds,
+        easy_character_compound_limit=args.easy_character_compound_limit,
         general_fiction_pack=args.general_fiction_pack,
         genre_pack=args.genre_pack,
         setting_pack=args.setting_pack,
@@ -86,6 +107,7 @@ def main() -> int:
         target_core_coverage_percent=args.target_core_coverage_percent,
         min_known_token_percent=args.min_known_token_percent,
         max_total_stretch_token_percent=args.max_total_stretch_token_percent,
+        max_easy_character_compound_token_percent=args.max_easy_character_compound_token_percent,
         max_new_stretch_words_per_chapter=args.max_new_stretch_words_per_chapter,
         max_forbidden_unknown_tokens_per_chapter=args.max_forbidden_unknown_tokens_per_chapter,
     )
@@ -98,7 +120,9 @@ def main() -> int:
         "known_percent={known_token_percent} known_percent_ok={known_token_percent_allowed} "
         "unknown_tokens={unknown_token_count} "
         "unknown_over_limit={forbidden_unknown_tokens_over_limit} "
-        "stretch_percent={stretch_token_percent} stretch_percent_ok={stretch_token_percent_allowed}".format(**report)
+        "stretch_percent={stretch_token_percent} stretch_percent_ok={stretch_token_percent_allowed} "
+        "easy_character_compound_percent={easy_character_compound_token_percent} "
+        "easy_character_compound_percent_ok={easy_character_compound_token_percent_allowed}".format(**report)
     )
     return 0 if report["valid"] else 1
 

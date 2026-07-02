@@ -28,6 +28,8 @@ DEFAULT_JOURNALISM_CRIME_PACK = DEFAULT_STRETCH_PACKS_DIR / "journalism_crime_50
 DEFAULT_MAX_FORBIDDEN_UNKNOWN_TOKENS_PER_CHAPTER = 5
 DEFAULT_MIN_KNOWN_TOKEN_PERCENT = 98.0
 DEFAULT_MAX_TOTAL_STRETCH_TOKEN_PERCENT = 2.0
+DEFAULT_EASY_CHARACTER_COMPOUND_LIMIT = 500
+DEFAULT_MAX_EASY_CHARACTER_COMPOUND_TOKEN_PERCENT = 95.0
 
 DEFAULT_PUNCTUATION_CHARS = set(
     " \t\r\n"
@@ -175,6 +177,8 @@ def load_layered_vocabulary(
     personal_known_words_path: str | Path | None = None,
     known_character_compounds_path: str | Path | None = None,
     known_character_compound_limit: int = DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT,
+    easy_character_compounds_path: str | Path | None = DEFAULT_MARCEL_HIGH_FREQUENCY_CHARACTERS,
+    easy_character_compound_limit: int = DEFAULT_EASY_CHARACTER_COMPOUND_LIMIT,
     genre_pack: str | Path | None = None,
     setting_pack: str | Path | None = None,
     profession_pack: str | Path | None = None,
@@ -187,6 +191,9 @@ def load_layered_vocabulary(
     core_words = load_known_words(core_known_path)
     known_character_compound_characters = set(
         load_ranked_characters(known_character_compounds_path, known_character_compound_limit)
+    )
+    easy_character_compound_characters = set(
+        load_ranked_characters(easy_character_compounds_path, easy_character_compound_limit)
     )
     token_layers: dict[str, str] = {}
     layer_words: dict[str, list[str]] = {layer: [] for layer in LAYER_TOKEN_FIELDS}
@@ -240,6 +247,12 @@ def load_layered_vocabulary(
         ),
         "known_character_compound_limit": known_character_compound_limit,
         "known_character_compound_character_count": len(known_character_compound_characters),
+        "easy_character_compounds_path": (
+            str(Path(easy_character_compounds_path)) if easy_character_compounds_path else None
+        ),
+        "easy_character_compound_limit": easy_character_compound_limit,
+        "easy_character_compound_character_count": len(easy_character_compound_characters),
+        "easy_character_compound_characters": easy_character_compound_characters,
         "layer_words": {layer: sorted(set(words)) for layer, words in layer_words.items()},
         "known_word_count": len(core_words),
         "personal_known_word_count": len(set(layer_words[PERSONAL_KNOWN_LAYER])),
@@ -302,6 +315,7 @@ def validate_text(
     target_core_coverage_percent: float | None = None,
     min_known_token_percent: float | None = DEFAULT_MIN_KNOWN_TOKEN_PERCENT,
     max_total_stretch_token_percent: float | None = DEFAULT_MAX_TOTAL_STRETCH_TOKEN_PERCENT,
+    max_easy_character_compound_token_percent: float | None = DEFAULT_MAX_EASY_CHARACTER_COMPOUND_TOKEN_PERCENT,
     max_forbidden_unknown_tokens_per_chapter: int = DEFAULT_MAX_FORBIDDEN_UNKNOWN_TOKENS_PER_CHAPTER,
 ) -> dict:
     if vocabulary is None:
@@ -313,6 +327,7 @@ def validate_text(
             "known_word_count": known_word_count,
             "allowed_token_count": len(allowed),
             "known_character_compound_characters": set(),
+            "easy_character_compound_characters": set(),
             "duplicate_as_core": [],
             "duplicate_as_earlier_layer": [],
         }
@@ -320,16 +335,20 @@ def validate_text(
         token_layers = vocabulary["token_layers"]
         known_word_count = vocabulary.get("known_word_count", 0)
     known_character_compound_characters = vocabulary.get("known_character_compound_characters", set())
+    easy_character_compound_characters = vocabulary.get("easy_character_compound_characters", set())
     punctuation = punctuation or load_punctuation()
     tokens: list[str] = []
     violations: list[dict] = []
     unknown_counter: Counter[str] = Counter()
     high_frequency_character_compound_counter: Counter[str] = Counter()
+    easy_character_compound_counter: Counter[str] = Counter()
     layer_counts: Counter[str] = Counter()
     unique_by_layer: dict[str, set[str]] = {layer: set() for layer in LAYER_TOKEN_FIELDS}
 
     for line_number, raw_token, token in iter_story_tokens(text, punctuation):
         tokens.append(token)
+        if is_known_character_compound(token, easy_character_compound_characters):
+            easy_character_compound_counter[token] += 1
         layer = classify_token_layer(token, token_layers, known_character_compound_characters)
         if not layer:
             unknown_counter[token] += 1
@@ -354,6 +373,10 @@ def validate_text(
     core_coverage_percent = (layer_counts[CORE_LAYER] / total_tokens * 100) if total_tokens else 0.0
     known_token_percent = (sum(layer_counts[layer] for layer in KNOWN_LAYERS) / total_tokens * 100) if total_tokens else 0.0
     stretch_token_percent = (approved_non_core_count / total_tokens * 100) if total_tokens else 0.0
+    easy_character_compound_tokens = sum(easy_character_compound_counter.values())
+    easy_character_compound_token_percent = (
+        easy_character_compound_tokens / total_tokens * 100
+    ) if total_tokens else 0.0
     warnings: list[dict] = []
     stretch_words_used_once = sorted(token for token, count in stretch_counter.items() if count == 1)
     if stretch_words_used_once:
@@ -390,6 +413,25 @@ def validate_text(
                 "type": "stretch_token_share_above_limit",
                 "limit_percent": max_total_stretch_token_percent,
                 "actual_percent": round(stretch_token_percent, 2),
+            }
+        )
+    easy_character_compound_token_percent_allowed = (
+        max_easy_character_compound_token_percent is None
+        or easy_character_compound_token_percent <= max_easy_character_compound_token_percent
+    )
+    if (
+        max_easy_character_compound_token_percent is not None
+        and easy_character_compound_token_percent > max_easy_character_compound_token_percent
+    ):
+        warnings.append(
+            {
+                "type": "easy_character_compound_share_above_limit",
+                "message": "Too much text is made only from the first ranked character-compound band.",
+                "limit_percent": max_easy_character_compound_token_percent,
+                "actual_percent": round(easy_character_compound_token_percent, 2),
+                "easy_character_compound_limit": vocabulary.get(
+                    "easy_character_compound_limit", DEFAULT_EASY_CHARACTER_COMPOUND_LIMIT
+                ),
             }
         )
 
@@ -440,6 +482,18 @@ def validate_text(
             "stretch_token_percent": round(stretch_token_percent, 2),
             "max_total_stretch_token_percent": max_total_stretch_token_percent,
             "stretch_token_percent_allowed": stretch_token_percent_allowed,
+            "easy_character_compound_tokens": easy_character_compound_tokens,
+            "unique_easy_character_compounds_used": len(easy_character_compound_counter),
+            "easy_character_compound_token_percent": round(easy_character_compound_token_percent, 2),
+            "max_easy_character_compound_token_percent": max_easy_character_compound_token_percent,
+            "easy_character_compound_token_percent_allowed": easy_character_compound_token_percent_allowed,
+            "easy_character_compound_limit": vocabulary.get(
+                "easy_character_compound_limit", DEFAULT_EASY_CHARACTER_COMPOUND_LIMIT
+            ),
+            "easy_character_compound_character_count": vocabulary.get(
+                "easy_character_compound_character_count", 0
+            ),
+            "easy_character_compounds_path": vocabulary.get("easy_character_compounds_path"),
             "unique_core_words_used": len(unique_by_layer[CORE_LAYER]),
             "unique_personal_known_words_used": len(unique_by_layer[PERSONAL_KNOWN_LAYER]),
             "unique_high_frequency_character_compounds_used": len(
@@ -453,11 +507,17 @@ def validate_text(
             "high_frequency_character_compound_frequency": dict(
                 sorted(high_frequency_character_compound_counter.items())
             ),
+            "easy_character_compound_frequency": dict(sorted(easy_character_compound_counter.items())),
             "forbidden_unknown_token_frequency": dict(sorted(unknown_counter.items())),
             "warnings": warnings,
         }
     )
-    valid = unknowns_over_limit == 0 and known_token_percent_allowed and stretch_token_percent_allowed
+    valid = (
+        unknowns_over_limit == 0
+        and known_token_percent_allowed
+        and stretch_token_percent_allowed
+        and easy_character_compound_token_percent_allowed
+    )
     result.update(
         {
             "valid": valid,
@@ -495,6 +555,8 @@ def validate_chapter(
     personal_known_words_path: str | Path | None = None,
     known_character_compounds_path: str | Path | None = None,
     known_character_compound_limit: int = DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT,
+    easy_character_compounds_path: str | Path | None = DEFAULT_MARCEL_HIGH_FREQUENCY_CHARACTERS,
+    easy_character_compound_limit: int = DEFAULT_EASY_CHARACTER_COMPOUND_LIMIT,
     general_fiction_pack: str | Path | None = None,
     genre_pack: str | Path | None = None,
     setting_pack: str | Path | None = None,
@@ -507,6 +569,7 @@ def validate_chapter(
     target_core_coverage_percent: float | None = None,
     min_known_token_percent: float | None = DEFAULT_MIN_KNOWN_TOKEN_PERCENT,
     max_total_stretch_token_percent: float | None = DEFAULT_MAX_TOTAL_STRETCH_TOKEN_PERCENT,
+    max_easy_character_compound_token_percent: float | None = DEFAULT_MAX_EASY_CHARACTER_COMPOUND_TOKEN_PERCENT,
     max_forbidden_unknown_tokens_per_chapter: int = DEFAULT_MAX_FORBIDDEN_UNKNOWN_TOKENS_PER_CHAPTER,
 ) -> dict:
     chapter = Path(chapter_path)
@@ -517,6 +580,8 @@ def validate_chapter(
         personal_known_words_path=personal_known_words_path,
         known_character_compounds_path=known_character_compounds_path,
         known_character_compound_limit=known_character_compound_limit,
+        easy_character_compounds_path=easy_character_compounds_path,
+        easy_character_compound_limit=easy_character_compound_limit,
         general_fiction_pack=general_fiction_pack,
         genre_pack=genre_pack,
         setting_pack=setting_pack,
@@ -537,11 +602,12 @@ def validate_chapter(
         target_core_coverage_percent=target_core_coverage_percent,
         min_known_token_percent=min_known_token_percent,
         max_total_stretch_token_percent=max_total_stretch_token_percent,
+        max_easy_character_compound_token_percent=max_easy_character_compound_token_percent,
         max_forbidden_unknown_tokens_per_chapter=max_forbidden_unknown_tokens_per_chapter,
     )
     report.update(
         {
-            "schema_version": 5,
+            "schema_version": 6,
             "generated_at": utc_now(),
             "chapter_path": str(chapter),
             "known_words_path": str(known),
@@ -552,6 +618,11 @@ def validate_chapter(
             "known_character_compound_limit": vocabulary.get("known_character_compound_limit", 0),
             "known_character_compound_character_count": vocabulary.get(
                 "known_character_compound_character_count", 0
+            ),
+            "easy_character_compounds_path": vocabulary.get("easy_character_compounds_path"),
+            "easy_character_compound_limit": vocabulary.get("easy_character_compound_limit", 0),
+            "easy_character_compound_character_count": vocabulary.get(
+                "easy_character_compound_character_count", 0
             ),
             "vocabulary_profile": vocabulary.get("vocabulary_profile", "public"),
             "learner_profile_name": vocabulary.get("learner_profile_name"),
@@ -582,6 +653,8 @@ def validate_book(
     personal_known_words_path: str | Path | None = None,
     known_character_compounds_path: str | Path | None = None,
     known_character_compound_limit: int = DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT,
+    easy_character_compounds_path: str | Path | None = DEFAULT_MARCEL_HIGH_FREQUENCY_CHARACTERS,
+    easy_character_compound_limit: int = DEFAULT_EASY_CHARACTER_COMPOUND_LIMIT,
     general_fiction_pack: str | Path | None = None,
     genre_pack: str | Path | None = None,
     setting_pack: str | Path | None = None,
@@ -594,6 +667,7 @@ def validate_book(
     target_core_coverage_percent: float | None = None,
     min_known_token_percent: float | None = DEFAULT_MIN_KNOWN_TOKEN_PERCENT,
     max_total_stretch_token_percent: float | None = DEFAULT_MAX_TOTAL_STRETCH_TOKEN_PERCENT,
+    max_easy_character_compound_token_percent: float | None = DEFAULT_MAX_EASY_CHARACTER_COMPOUND_TOKEN_PERCENT,
     max_new_stretch_words_per_chapter: int | None = None,
     max_forbidden_unknown_tokens_per_chapter: int = DEFAULT_MAX_FORBIDDEN_UNKNOWN_TOKENS_PER_CHAPTER,
 ) -> dict:
@@ -603,6 +677,8 @@ def validate_book(
         personal_known_words_path=personal_known_words_path,
         known_character_compounds_path=known_character_compounds_path,
         known_character_compound_limit=known_character_compound_limit,
+        easy_character_compounds_path=easy_character_compounds_path,
+        easy_character_compound_limit=easy_character_compound_limit,
         general_fiction_pack=general_fiction_pack,
         genre_pack=genre_pack,
         setting_pack=setting_pack,
@@ -619,6 +695,7 @@ def validate_book(
     chapter_reports: list[dict] = []
     aggregate_unknown: Counter[str] = Counter()
     aggregate_high_frequency_character_compounds: Counter[str] = Counter()
+    aggregate_easy_character_compounds: Counter[str] = Counter()
     aggregate_unique: set[str] = set()
     layer_counts: Counter[str] = Counter()
     stretch_counts: Counter[str] = Counter()
@@ -638,6 +715,7 @@ def validate_book(
             target_core_coverage_percent=target_core_coverage_percent,
             min_known_token_percent=min_known_token_percent,
             max_total_stretch_token_percent=max_total_stretch_token_percent,
+            max_easy_character_compound_token_percent=max_easy_character_compound_token_percent,
             max_forbidden_unknown_tokens_per_chapter=max_forbidden_unknown_tokens_per_chapter,
         )
         report.update({"chapter_path": str(chapter), "chapter_name": chapter.name})
@@ -646,6 +724,7 @@ def validate_book(
         aggregate_unique.update(report["unique_tokens"])
         aggregate_unknown.update(report["unknown_token_frequency"])
         aggregate_high_frequency_character_compounds.update(report["high_frequency_character_compound_frequency"])
+        aggregate_easy_character_compounds.update(report["easy_character_compound_frequency"])
         for layer, field in LAYER_TOKEN_FIELDS.items():
             layer_counts[layer] += report[field]
         chapter_stretch_words = sorted(
@@ -682,6 +761,10 @@ def validate_book(
     core_coverage_percent = (layer_counts[CORE_LAYER] / total_tokens * 100) if total_tokens else 0.0
     known_token_percent = (sum(layer_counts[layer] for layer in KNOWN_LAYERS) / total_tokens * 100) if total_tokens else 0.0
     stretch_token_percent = (approved_non_core_count / total_tokens * 100) if total_tokens else 0.0
+    easy_character_compound_tokens = sum(aggregate_easy_character_compounds.values())
+    easy_character_compound_token_percent = (
+        easy_character_compound_tokens / total_tokens * 100
+    ) if total_tokens else 0.0
     if target_core_coverage_percent is not None and core_coverage_percent < target_core_coverage_percent:
         warnings.append(
             {
@@ -710,6 +793,25 @@ def validate_book(
                 "actual_percent": round(stretch_token_percent, 2),
             }
         )
+    easy_character_compound_token_percent_allowed = (
+        max_easy_character_compound_token_percent is None
+        or easy_character_compound_token_percent <= max_easy_character_compound_token_percent
+    )
+    if (
+        max_easy_character_compound_token_percent is not None
+        and easy_character_compound_token_percent > max_easy_character_compound_token_percent
+    ):
+        warnings.append(
+            {
+                "type": "easy_character_compound_share_above_limit",
+                "message": "Too much text is made only from the first ranked character-compound band.",
+                "limit_percent": max_easy_character_compound_token_percent,
+                "actual_percent": round(easy_character_compound_token_percent, 2),
+                "easy_character_compound_limit": vocabulary.get(
+                    "easy_character_compound_limit", DEFAULT_EASY_CHARACTER_COMPOUND_LIMIT
+                ),
+            }
+        )
 
     chapters_over_unknown_limit = [
         {
@@ -723,11 +825,12 @@ def validate_book(
     forbidden_unknown_tokens_over_limit = sum(item["over_limit"] for item in chapters_over_unknown_limit)
 
     report = {
-        "schema_version": 5,
+        "schema_version": 6,
         "generated_at": utc_now(),
         "valid": all(report["valid"] for report in chapter_reports)
         and known_token_percent_allowed
-        and stretch_token_percent_allowed,
+        and stretch_token_percent_allowed
+        and easy_character_compound_token_percent_allowed,
         "known_words_path": str(Path(known_path)),
         "known_word_count": len(known_words),
         "personal_known_words_path": vocabulary.get("personal_known_words_path"),
@@ -735,6 +838,9 @@ def validate_book(
         "known_character_compounds_path": vocabulary.get("known_character_compounds_path"),
         "known_character_compound_limit": vocabulary.get("known_character_compound_limit", 0),
         "known_character_compound_character_count": vocabulary.get("known_character_compound_character_count", 0),
+        "easy_character_compounds_path": vocabulary.get("easy_character_compounds_path"),
+        "easy_character_compound_limit": vocabulary.get("easy_character_compound_limit", 0),
+        "easy_character_compound_character_count": vocabulary.get("easy_character_compound_character_count", 0),
         "vocabulary_profile": vocabulary.get("vocabulary_profile", "public"),
         "learner_profile_name": vocabulary.get("learner_profile_name"),
         "allowed_token_count": vocabulary["allowed_token_count"],
@@ -759,6 +865,11 @@ def validate_book(
         "stretch_token_percent": round(stretch_token_percent, 2),
         "max_total_stretch_token_percent": max_total_stretch_token_percent,
         "stretch_token_percent_allowed": stretch_token_percent_allowed,
+        "easy_character_compound_tokens": easy_character_compound_tokens,
+        "unique_easy_character_compounds_used": len(aggregate_easy_character_compounds),
+        "easy_character_compound_token_percent": round(easy_character_compound_token_percent, 2),
+        "max_easy_character_compound_token_percent": max_easy_character_compound_token_percent,
+        "easy_character_compound_token_percent_allowed": easy_character_compound_token_percent_allowed,
         "unique_core_words_used": len({token for token in aggregate_unique if token_layers.get(token) == CORE_LAYER}),
         "unique_personal_known_words_used": len(
             {token for token in aggregate_unique if token_layers.get(token) == PERSONAL_KNOWN_LAYER}
@@ -775,6 +886,7 @@ def validate_book(
         "high_frequency_character_compound_frequency": dict(
             sorted(aggregate_high_frequency_character_compounds.items())
         ),
+        "easy_character_compound_frequency": dict(sorted(aggregate_easy_character_compounds.items())),
         "stretch_words_used_once": stretch_words_used_once,
         "stretch_words_by_chapter": stretch_words_by_chapter,
         "new_stretch_words_by_chapter": new_stretch_words_by_chapter,
@@ -1168,6 +1280,8 @@ def build_epub(
     personal_known_words_path: str | Path | None = None,
     known_character_compounds_path: str | Path | None = None,
     known_character_compound_limit: int = DEFAULT_KNOWN_CHARACTER_COMPOUND_LIMIT,
+    easy_character_compounds_path: str | Path | None = DEFAULT_MARCEL_HIGH_FREQUENCY_CHARACTERS,
+    easy_character_compound_limit: int = DEFAULT_EASY_CHARACTER_COMPOUND_LIMIT,
     general_fiction_pack: str | Path | None = None,
     genre_pack: str | Path | None = None,
     setting_pack: str | Path | None = None,
@@ -1179,6 +1293,7 @@ def build_epub(
     extra_packs: Iterable[str | Path] | None = None,
     min_known_token_percent: float | None = DEFAULT_MIN_KNOWN_TOKEN_PERCENT,
     max_total_stretch_token_percent: float | None = DEFAULT_MAX_TOTAL_STRETCH_TOKEN_PERCENT,
+    max_easy_character_compound_token_percent: float | None = DEFAULT_MAX_EASY_CHARACTER_COMPOUND_TOKEN_PERCENT,
     max_forbidden_unknown_tokens_per_chapter: int = DEFAULT_MAX_FORBIDDEN_UNKNOWN_TOKENS_PER_CHAPTER,
     remove_spaces: bool = True,
     include_validation_appendix: bool = True,
@@ -1193,6 +1308,8 @@ def build_epub(
         personal_known_words_path=personal_known_words_path,
         known_character_compounds_path=known_character_compounds_path,
         known_character_compound_limit=known_character_compound_limit,
+        easy_character_compounds_path=easy_character_compounds_path,
+        easy_character_compound_limit=easy_character_compound_limit,
         general_fiction_pack=general_fiction_pack,
         genre_pack=genre_pack,
         setting_pack=setting_pack,
@@ -1204,6 +1321,7 @@ def build_epub(
         extra_packs=extra_packs,
         min_known_token_percent=min_known_token_percent,
         max_total_stretch_token_percent=max_total_stretch_token_percent,
+        max_easy_character_compound_token_percent=max_easy_character_compound_token_percent,
         max_forbidden_unknown_tokens_per_chapter=max_forbidden_unknown_tokens_per_chapter,
     )
     if not validation["valid"]:
@@ -1222,6 +1340,12 @@ def build_epub(
             reasons.append(
                 f"approved non-core token share {validation['stretch_token_percent']}% above "
                 f"{validation['max_total_stretch_token_percent']}%"
+            )
+        if not validation.get("easy_character_compound_token_percent_allowed", True):
+            reasons.append(
+                f"first-{validation['easy_character_compound_limit']} character-compound token share "
+                f"{validation['easy_character_compound_token_percent']}% above "
+                f"{validation['max_easy_character_compound_token_percent']}%"
             )
         if not reasons:
             reasons.append("see vocabulary_report.json warnings")
@@ -1301,6 +1425,8 @@ code { font-family: monospace; }
 <p>Vocabulary profile: <code>{validation.get('vocabulary_profile', 'public')}</code></p>
 <p>Personal known tokens: <code>{validation.get('personal_known_tokens', 0)}</code></p>
 <p>High-frequency character-compound tokens: <code>{validation.get('high_frequency_character_compound_tokens', 0)}</code></p>
+<p>First-{validation.get('easy_character_compound_limit', 0)} character-compound token percent: <code>{validation.get('easy_character_compound_token_percent', 0)}</code></p>
+<p>Maximum first-{validation.get('easy_character_compound_limit', 0)} character-compound token percent: <code>{validation.get('max_easy_character_compound_token_percent')}</code></p>
 <p>Known-token percent: <code>{validation['known_token_percent']}</code></p>
 <p>Minimum known-token percent: <code>{validation['min_known_token_percent']}</code></p>
 <p>Stretch-token percent: <code>{validation['stretch_token_percent']}</code></p>
@@ -1332,6 +1458,16 @@ code { font-family: monospace; }
         "known_character_compounds_path": validation.get("known_character_compounds_path"),
         "known_character_compound_limit": validation.get("known_character_compound_limit", 0),
         "known_character_compound_character_count": validation.get("known_character_compound_character_count", 0),
+        "easy_character_compounds_path": validation.get("easy_character_compounds_path"),
+        "easy_character_compound_limit": validation.get("easy_character_compound_limit", 0),
+        "easy_character_compound_character_count": validation.get("easy_character_compound_character_count", 0),
+        "easy_character_compound_tokens": validation.get("easy_character_compound_tokens", 0),
+        "unique_easy_character_compounds_used": validation.get("unique_easy_character_compounds_used", 0),
+        "easy_character_compound_token_percent": validation.get("easy_character_compound_token_percent", 0),
+        "max_easy_character_compound_token_percent": validation.get("max_easy_character_compound_token_percent"),
+        "easy_character_compound_token_percent_allowed": validation.get(
+            "easy_character_compound_token_percent_allowed", True
+        ),
         "high_frequency_character_compound_tokens": validation.get(
             "high_frequency_character_compound_tokens", 0
         ),

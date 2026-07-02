@@ -28,7 +28,7 @@ Use one of:
 - `PARTIAL_REWRITE`
 - `COMPLETE_REBUILD`
 
-Recommend `PASS` only if validation has no chapter above the configured forbidden-unknown budget, continuity has no serious contradictions, literary critic score is at least 7, normal reader score is at least 7, and no chapter is clearly filler or padded. Unknowns within budget should be intentional, useful, and not confusing.
+Recommend `PASS` only if validation has no chapter above the configured forbidden-unknown budget, known-token coverage, approved non-core share, and first-500 character-compound share all pass their gates, continuity has no serious contradictions, literary critic score is at least 7, normal reader score is at least 7, and no chapter is clearly filler or padded. Unknowns within budget should be intentional, useful, and not confusing.
 
 Treat this as baseline pass, not necessarily public-quality approval. Public-quality approval requires literary critic score at least 8, normal reader score at least 8, no unresolved prose-variety blockers, and a written reason why the manuscript is strong within the constraints.
 

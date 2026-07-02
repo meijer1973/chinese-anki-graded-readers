@@ -32,6 +32,11 @@
     "known_character_compounds_path": null,
     "known_character_compounds_usage": "Set to data/learner_profiles/marcel/high_frequency_characters.txt only for Marcel personalized readers; pass it with --known-character-compounds and keep the current limit at 1000 until reviewed.",
     "known_character_compound_limit": 1000,
+    "easy_character_compounds_path": "data/learner_profiles/marcel/high_frequency_characters.txt",
+    "easy_character_compound_limit": 500,
+    "max_easy_character_compound_token_percent": 95,
+    "minimum_difficulty_policy": "Validation fails when more than 95% of story tokens are made only from the first 500 ranked high-frequency characters.",
+    "soft_difficulty_targets": "When natural, use some known words from ranks 2501-5000 and some character compounds that require ranked characters 501-1000. This is guidance, not a hard gate.",
     "general_fiction_pack": "data/stretch_packs/general_fiction_150.txt",
     "genre_pack": "data/stretch_packs/fantasy_232.txt",
     "setting_pack": "data/stretch_packs/shanghai_setting_150.txt",
@@ -109,6 +114,7 @@
     "token_and_coverage_counts_are_diagnostics_only": false,
     "known_token_percent_acceptance_gate": 98,
     "approved_non_core_token_percent_acceptance_gate": 2,
+    "first_500_character_compound_token_percent_acceptance_gate": 95,
     "reject_padding_for_counts": true
   },
   "quality_gate": {

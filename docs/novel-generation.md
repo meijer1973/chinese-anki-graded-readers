@@ -122,7 +122,11 @@ The canonical chapter format is space-tokenized Chinese:
 我 看到 你 在 这里 。
 ```
 
-The validator ignores punctuation and whitespace, then checks every remaining story token against the active vocabulary policy. Core words and approved learner-profile layers count as known. Approved stretch words, book-specific words, and listed proper nouns are allowed but count as approved non-core reading load. Extensive-reading validation now requires at least 98% known tokens and at most 2% approved non-core tokens by default. A chapter may also keep up to 5 forbidden unknown tokens when they improve natural prose or carry a necessary idea, but those tokens still reduce known-token coverage and remain counted, line-reported, and reviewable. Do not rely on Chinese segmentation after the fact.
+The validator ignores punctuation and whitespace, then checks every remaining story token against the active vocabulary policy. Core words and approved learner-profile layers count as known. Approved stretch words, book-specific words, and listed proper nouns are allowed but count as approved non-core reading load. Extensive-reading validation now requires at least 98% known tokens, at most 2% approved non-core tokens, and at most 95% first-500 character-compound tokens by default. A chapter may also keep up to 5 forbidden unknown tokens when they improve natural prose or carry a necessary idea, but those tokens still reduce known-token coverage and remain counted, line-reported, and reviewable. Do not rely on Chinese segmentation after the fact.
+
+The minimum-difficulty gate reports `easy_character_compound_token_percent`. A token counts toward this share when every Hanzi character in it is within the first 500 ranked characters from `data/learner_profiles/marcel/high_frequency_characters.txt`, regardless of whether the token is core, personal-known, stretch, proper noun, or unknown. Keep this share at or below 95%.
+
+Soft target, not a hard gate: when natural, use some words from ranks 2501-5000 of `data/known_words.txt` and some character compounds that require character ranks 501-1000. This helps prevent books that technically fit the 5000-word ceiling but read like a much lower-level book. Do not pad, distort dialogue, or insert vocabulary only to satisfy this suggestion.
 
 ## Vocabulary Layers
 
@@ -141,7 +145,7 @@ The default strict mode uses only `data/known_words.txt`. The richer controlled 
 - manuscript `book_specific_words.txt`
 - manuscript `proper_nouns.txt`
 
-The rule is not random leakage. Personal-known words and high-frequency character compounds are recognized vocabulary for a named learner profile, not public core and not new stretch learning targets. Stretch words are approved learning targets and must fit inside the 2% approved non-core ceiling. Proper nouns belong in `proper_nouns.txt` and do not count against the unknown-token budget, but they count as approved non-core tokens for extensive-reading validation. Each chapter may keep up to 5 forbidden unknown tokens, but the budget is breathing room, not a target, and known-token coverage must still stay at or above 98%. If a word appears in both core and another layer, the validator counts it as core. If a word appears in both personal-known and stretch, it counts as personal-known.
+The rule is not random leakage. Personal-known words and high-frequency character compounds are recognized vocabulary for a named learner profile, not public core and not new stretch learning targets. Stretch words are approved learning targets and must fit inside the 2% approved non-core ceiling. Proper nouns belong in `proper_nouns.txt` and do not count against the unknown-token budget, but they count as approved non-core tokens for extensive-reading validation. Each chapter may keep up to 5 forbidden unknown tokens, but the budget is breathing room, not a target, known-token coverage must still stay at or above 98%, and first-500 character-compound share must stay at or below 95%. If a word appears in both core and another layer, the validator counts it as core. If a word appears in both personal-known and stretch, it counts as personal-known.
 
 For the 林安 series, read `series/an-lin/series_bible.md`, `series/an-lin/character_registry.md`, `series/an-lin/chronology.md`, `series/an-lin/mechanism_registry.md`, `series/an-lin/open_threads.md`, `series/an-lin/recurring_locations.md`, `series/an-lin/recurring_objects.md`, `series/an-lin/sequel_constraints.md`, and `series/an-lin/series_update_log.md` before planning. 林安 is the journalist/crime-reporter protagonist in that continuity; do not reset her profession or ignore `manuscripts/shanghai-rain-gate-crime/`.
 
@@ -244,7 +248,7 @@ There is no default chapter count and no chapter word-count requirement.
 
 - Let chapter breaks follow actual story turns.
 - A short complete chapter is better than a padded chapter.
-- Token totals and broad vocabulary-breadth coverage are diagnostics. The 98% known-token floor and 2% approved non-core ceiling are validation gates.
+- Token totals and broad vocabulary-breadth coverage are diagnostics. The 98% known-token floor, 2% approved non-core ceiling, and 95% first-500 character-compound ceiling are validation gates.
 - Do not expand a validated chapter just to hit length, coverage, or stretch-word targets.
 - Add text only to fix a named story problem: unclear motivation, missing transition, weak conflict, confusing setting movement, underdeveloped emotional turn, or continuity gap.
 
@@ -366,7 +370,7 @@ python scripts/validate_book.py --known data/known_words.txt --chapters manuscri
 
 Layered manuscripts should pass the same pack arguments used for chapter validation.
 
-The whole-book report aggregates chapter count, total tokens, unique used words, unknown-token frequencies, `core_known_tokens`, `personal_known_tokens`, known-token percentage, stretch/approved non-core percentage, stretch-layer counts, forbidden unknown tokens over the per-chapter limit, and per-chapter details. By default, `valid` is false if known-token coverage is below 98% or approved non-core token share is above 2%.
+The whole-book report aggregates chapter count, total tokens, unique used words, unknown-token frequencies, `core_known_tokens`, `personal_known_tokens`, known-token percentage, stretch/approved non-core percentage, first-500 character-compound percentage, stretch-layer counts, forbidden unknown tokens over the per-chapter limit, and per-chapter details. By default, `valid` is false if known-token coverage is below 98%, approved non-core token share is above 2%, or first-500 character-compound token share is above 95%.
 
 Build a noncanonical reading copy for human rhythm review:
 

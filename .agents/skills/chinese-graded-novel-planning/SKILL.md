@@ -29,6 +29,7 @@ Create or update these files under `manuscripts/<project-slug>/`:
 - Start with creative preflight before vocabulary planning. Generate 3-5 premise or scene-strategy alternatives, reject weak ideas, and choose the strongest story shape before mapping it to allowed words.
 - Infer what plots are possible from the available vocabulary.
 - State whether the manuscript is public mode or learner-profile personalized mode. If it uses Marcel personalized mode, treat `data/learner_profiles/marcel/personal_known_words.txt` and enabled top-1000 high-frequency character compounds as allowed known layers but keep them separate from core and stretch in reports.
+- Plan enough vocabulary difficulty that the manuscript will not be built almost entirely from the first 500 ranked characters. The hard validation ceiling is 95% first-500 character-compound tokens; the soft planning target is to include natural opportunities for rank 2501-5000 known words and character compounds requiring ranks 501-1000.
 - Prefer emotionally coherent plots with real pressure, choices, reversals, and curiosity over concepts that require unavailable words.
 - For about 1100 known words, domestic drama, school life, workplace, travel, friendship, family, mystery-lite, fantasy, and crime conflict are viable when the required vocabulary is present, but they still need tension and chapter hooks.
 - For larger lists, allow more complex genres only when the needed nouns, verbs, and abstract terms are present.

@@ -40,6 +40,7 @@ For 林安 sequels, the vocabulary plan must also include case function, journal
 - Prefer approved vocabulary, but do not mangle natural sentences solely to force zero unknowns. Each chapter may keep up to 5 reported forbidden unknown tokens when they are useful, intentional, and not confusing.
 - Use punctuation freely from `data/punctuation_allowlist.txt`.
 - Use the known vocabulary actively and naturally.
+- Stay within the minimum-difficulty gate: no more than 95% of tokens should be made only from the first 500 ranked high-frequency characters. As a soft target, use some rank 2501-5000 known words and some character compounds requiring character ranks 501-1000 when they fit the scene.
 - Keep sentences clear and useful for reading practice without becoming bland.
 - Let the scene decide the chapter length. A shorter complete chapter is better than a padded chapter.
 - Prefer concrete scenes over abstract explanation.

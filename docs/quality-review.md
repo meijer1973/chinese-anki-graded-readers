@@ -42,7 +42,7 @@ python scripts/plot_affordance_report.py --known data/known_words.txt --packs da
 
 The reports include token totals, unique-token counts, known-list coverage percentage, chapter-level unique-token counts, unused known words, overused token warnings, and repeated phrase warnings.
 
-Layered validation reports also include core known tokens, personal-known tokens when a learner profile is configured, high-frequency character-compound tokens when enabled, stretch tokens by layer, proper noun tokens, forbidden unknown tokens, forbidden unknowns over the per-chapter budget, known-token percent, the 98% known-token gate, approved non-core/stretch-token percent, the 2% approved non-core gate, stretch words used once, stretch words by chapter, and new stretch words by chapter.
+Layered validation reports also include core known tokens, personal-known tokens when a learner profile is configured, high-frequency character-compound tokens when enabled, stretch tokens by layer, proper noun tokens, forbidden unknown tokens, forbidden unknowns over the per-chapter budget, known-token percent, the 98% known-token gate, approved non-core/stretch-token percent, the 2% approved non-core gate, first-500 character-compound token percent, the 95% first-500 character-compound gate, stretch words used once, stretch words by chapter, and new stretch words by chapter.
 
 When a manuscript uses Marcel personalized mode, reviewers should treat `personal_known_tokens` and `high_frequency_character_compound_tokens` as low-load known vocabulary for Marcel, not as public-level core vocabulary and not as stretch learning load.
 
@@ -52,7 +52,7 @@ The prose variety report checks visible craft risks such as repeated `X 说` fra
 
 ## Story-First Targets
 
-Token totals, unique-token counts, known-list coverage, and stretch-word exposure are evidence for review. The extensive-reading thresholds are acceptance gates: at least 98% known tokens and at most 2% approved non-core tokens.
+Token totals, unique-token counts, known-list coverage, and stretch-word exposure are evidence for review. The extensive-reading thresholds are acceptance gates: at least 98% known tokens, at most 2% approved non-core tokens, and at most 95% first-500 character-compound tokens.
 
 - Do not reject a strong chapter because it is short.
 - Do not accept a padded chapter because it has more tokens.
@@ -107,7 +107,7 @@ Use one of:
 - `PARTIAL_REWRITE`
 - `COMPLETE_REBUILD`
 
-Recommend baseline `PASS` only if vocabulary validation has no chapter above the configured forbidden-unknown budget, currently 5 tokens, known-token coverage is at least 98%, approved non-core token share is at most 2%, continuity has no serious contradictions, literary critic score is at least 7, normal reader score is at least 7, and no chapter is clearly filler or padded. Unknowns within budget should still be intentional, useful, and not confusing.
+Recommend baseline `PASS` only if vocabulary validation has no chapter above the configured forbidden-unknown budget, currently 5 tokens, known-token coverage is at least 98%, approved non-core token share is at most 2%, first-500 character-compound token share is at most 95%, continuity has no serious contradictions, literary critic score is at least 7, normal reader score is at least 7, and no chapter is clearly filler or padded. Unknowns within budget should still be intentional, useful, and not confusing.
 
 Recommend public-quality approval only if literary critic score is at least 8, normal reader score is at least 8, repeated style warnings have been polished or explicitly waived, and the lead reviewer can name why the manuscript is strong within the controlled vocabulary rather than merely acceptable under constraints.
 

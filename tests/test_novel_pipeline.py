@@ -92,7 +92,7 @@ class NovelPipelineTests(unittest.TestCase):
         chapters.mkdir()
         (chapters / "chapter_01.zh-tok.txt").write_text("我 看 朋友 。\n", encoding="utf-8")
         (chapters / "chapter_02.zh-tok.txt").write_text("妈妈 说 好 。\n", encoding="utf-8")
-        report = validate_book(chapters, self.known)
+        report = validate_book(chapters, self.known, max_easy_character_compound_token_percent=100)
         self.assertTrue(report["valid"])
         self.assertEqual(report["chapter_count"], 2)
         self.assertEqual(report["total_tokens"], 6)
@@ -105,7 +105,13 @@ class NovelPipelineTests(unittest.TestCase):
         (chapters / "chapter_01.zh-tok.txt").write_text("我 看 照片 。\n", encoding="utf-8")
         out = manuscript / "epub" / "sample.epub"
         self.approve_quality(manuscript)
-        report = build_epub(manuscript, "Sample", out, known_path=self.known)
+        report = build_epub(
+            manuscript,
+            "Sample",
+            out,
+            known_path=self.known,
+            max_easy_character_compound_token_percent=100,
+        )
         self.assertTrue(out.exists())
         self.assertEqual(report["unknown_token_count"], 0)
 
@@ -116,7 +122,13 @@ class NovelPipelineTests(unittest.TestCase):
         (chapters / "chapter_01.zh-tok.txt").write_text("爸爸 看 照片 。\n", encoding="utf-8")
         out = manuscript / "epub" / "sample.epub"
         self.approve_quality(manuscript)
-        build_epub(manuscript, "Sample", out, known_path=self.known)
+        build_epub(
+            manuscript,
+            "Sample",
+            out,
+            known_path=self.known,
+            max_easy_character_compound_token_percent=100,
+        )
         structure = check_epub_structure(out)
         self.assertEqual(structure["first_entry"], "mimetype")
         self.assertEqual(structure["mimetype"], "application/epub+zip")
@@ -134,7 +146,13 @@ class NovelPipelineTests(unittest.TestCase):
         out = manuscript / "epub" / "sample.epub"
         self.approve_quality(manuscript)
         with self.assertRaises(ValueError):
-            build_epub(manuscript, "Sample", out, known_path=self.known)
+            build_epub(
+                manuscript,
+                "Sample",
+                out,
+                known_path=self.known,
+                max_easy_character_compound_token_percent=100,
+            )
         self.assertFalse(out.exists())
 
     def test_epub_refuses_manuscript_without_quality_approval(self) -> None:
@@ -144,7 +162,13 @@ class NovelPipelineTests(unittest.TestCase):
         (chapters / "chapter_01.zh-tok.txt").write_text("我 看 照片 。\n", encoding="utf-8")
         out = manuscript / "epub" / "sample.epub"
         with self.assertRaises(ValueError):
-            build_epub(manuscript, "Sample", out, known_path=self.known)
+            build_epub(
+                manuscript,
+                "Sample",
+                out,
+                known_path=self.known,
+                max_easy_character_compound_token_percent=100,
+            )
         self.assertFalse(out.exists())
 
     def test_epub_succeeds_after_validation_and_quality_approval(self) -> None:
@@ -154,7 +178,13 @@ class NovelPipelineTests(unittest.TestCase):
         (chapters / "chapter_01.zh-tok.txt").write_text("妈妈 看 照片 。\n", encoding="utf-8")
         self.approve_quality(manuscript)
         out = manuscript / "epub" / "sample.epub"
-        report = build_epub(manuscript, "Sample", out, known_path=self.known)
+        report = build_epub(
+            manuscript,
+            "Sample",
+            out,
+            known_path=self.known,
+            max_easy_character_compound_token_percent=100,
+        )
         self.assertTrue(out.exists())
         self.assertTrue(report["quality_approval"]["approved"])
 
@@ -272,7 +302,11 @@ class NovelPipelineTests(unittest.TestCase):
 
     def test_sample_pipeline_still_validates(self) -> None:
         sample = ROOT / "manuscripts" / "sample-known-words"
-        report = validate_book(sample / "chapters", ROOT / "data" / "known_words.txt")
+        report = validate_book(
+            sample / "chapters",
+            ROOT / "data" / "known_words.txt",
+            max_easy_character_compound_token_percent=100,
+        )
         self.assertTrue(report["valid"])
         self.assertEqual(report["unknown_token_count"], 0)
 

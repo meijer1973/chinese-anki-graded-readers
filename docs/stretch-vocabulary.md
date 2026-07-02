@@ -3,7 +3,7 @@
 The old workflow allowed only core known words. That remains available, but some genres need a small controlled expansion. The new rule is:
 
 ```text
-0 invisible unknown words, at least 98% known tokens, at most 2% approved non-core tokens, up to 5 reported forbidden unknown tokens per chapter.
+0 invisible unknown words, at least 98% known tokens, at most 2% approved non-core tokens, at most 95% first-500 character-compound tokens, up to 5 reported forbidden unknown tokens per chapter.
 ```
 
 Do not use random unknown words. Prefer exact known tokens. Stretch, book-specific, and proper-noun tokens are allowed only as a small controlled load. A chapter may keep a few unknown tokens as learning friction when they are useful, but they are always counted, reviewed, and included in the known-token percentage.
@@ -115,7 +115,7 @@ python scripts/validate_book.py --known data/known_words.txt --chapters manuscri
 
 Add `--personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 1000` for Marcel personalized readers. Omit those flags for public graded-reader mode.
 
-The report counts tokens by layer, forbidden unknowns, forbidden unknowns over the per-chapter limit, known-token coverage, personal-known token use, high-frequency character-compound token use, approved non-core/stretch-token share, stretch words used once, stretch words by chapter, and new stretch words by chapter. Default validation fails below 98% known tokens or above 2% approved non-core tokens.
+The report counts tokens by layer, forbidden unknowns, forbidden unknowns over the per-chapter limit, known-token coverage, personal-known token use, high-frequency character-compound token use, first-500 character-compound token share, approved non-core/stretch-token share, stretch words used once, stretch words by chapter, and new stretch words by chapter. Default validation fails below 98% known tokens, above 2% approved non-core tokens, or above 95% first-500 character-compound tokens.
 
 Use `scripts/plot_affordance_report.py` before planning a case-heavy premise:
 

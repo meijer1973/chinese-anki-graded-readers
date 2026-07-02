@@ -12,6 +12,10 @@
   "default_vocabulary_policy": {
     "min_known_token_percent": 98,
     "max_approved_non_core_token_percent": 2,
+    "max_easy_character_compound_token_percent": 95,
+    "easy_character_compound_limit": 500,
+    "easy_character_compounds_path": "data/learner_profiles/marcel/high_frequency_characters.txt",
+    "soft_difficulty_targets": "Use some rank 2501-5000 known words and some character compounds requiring character ranks 501-1000 when natural; this is not a hard gate.",
     "approved_non_core_layers": [
       "general_fiction_stretch",
       "genre_stretch",

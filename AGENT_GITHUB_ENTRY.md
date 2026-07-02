@@ -81,7 +81,7 @@ https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/AG
 - Treating ignored Anki exports or backups as source of truth.
 - Treating EPUB files as canonical story source. The canonical source is `chapters/*.zh-tok.txt`.
 - Assuming validation quality equals literary quality.
-- Missing the extensive-reading vocabulary gate: default validation requires at least 98% known tokens and at most 2% approved non-core tokens.
+- Missing the extensive-reading vocabulary gates: default validation requires at least 98% known tokens, at most 2% approved non-core tokens, and at most 95% first-500 character-compound tokens.
 - Forgetting to pass stretch packs, `book_specific_words.txt`, and `proper_nouns.txt` when validating layered manuscripts.
 - Forgetting `--known-character-compounds --known-character-compound-limit 1000` for Marcel personalized manuscripts that use the high-frequency character-compound layer.
 - Making remote writer agents download all vocabulary surfaces for first-pass screening instead of using `data/external_agent_vocab/`.
