@@ -1,12 +1,12 @@
-# GitHub Agent File Index - Chinese Anki And Graded Readers
+# GitHub Agent File Index - Chinese Anki, Hindi Starter, And Graded Readers
 
-Generated: 2026-07-02T15:18:10Z
+Generated: 2026-07-22T19:30:06Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 1116
+Files indexed: 1133
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -58,13 +58,14 @@ Count: 30
 
 ## docs
 
-Count: 12
+Count: 13
 
 - docs/adaptation-workflow.md
 - docs/anki-integration.md
 - docs/completion-response-template.md
 - docs/creative-preflight.md
 - docs/external-agent-vocabulary.md
+- docs/hindi-anki.md
 - docs/machine-readable-repository.md
 - docs/novel-generation.md
 - docs/personal-known-vocabulary.md
@@ -75,7 +76,7 @@ Count: 12
 
 ## scripts
 
-Count: 43
+Count: 52
 
 - add_missing_single_character_notes.py
 - apply_meaning_cleanup_updates.py
@@ -95,6 +96,10 @@ Count: 43
 - scripts/complete_stretch_pack_metadata.py
 - scripts/export_stretch_words_for_anki.py
 - scripts/generate_reports.py
+- scripts/hindi/__init__.py
+- scripts/hindi/anki_client.py
+- scripts/hindi/setup_hindi_anki.py
+- scripts/hindi/validate_hindi_core_100.py
 - scripts/import_epub_for_adaptation.py
 - scripts/import_personal_known_words.py
 - scripts/import_stretch_words_to_anki.py
@@ -115,8 +120,13 @@ Count: 43
 - sentence_example_overrides.py
 - setup_production_sentence_cards.py
 - suggest_meaning_edits.py
+- tests/hindi_fake_anki.py
 - tests/test_adaptation_workflow.py
 - tests/test_anki_card_distribution.py
+- tests/test_hindi_anki_safety.py
+- tests/test_hindi_anki_setup.py
+- tests/test_hindi_anki_templates.py
+- tests/test_hindi_core_100.py
 - tests/test_novel_pipeline.py
 - tests/test_series_memory_update.py
 - tests/test_stretch_vocabulary.py
@@ -167,9 +177,16 @@ Count: 33
 
 ## anki
 
-Count: 2
+Count: 9
 
 - anki/anki_field_schema.md
+- anki/hindi/hindi_core_100.sources.json
+- anki/hindi/hindi_core_100.tsv
+- anki/hindi/reports/chinese_safety_comparison.json
+- anki/hindi/reports/data_validation_report.json
+- anki/hindi/reports/hindi_anki_apply_report.json
+- anki/hindi/reports/hindi_anki_dry_run.json
+- anki/hindi/reports/hindi_anki_verification.json
 - anki/stretch_word_candidates.tsv
 
 ## adaptations

@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-02T15:18:10Z",
+  "generated_at": "2026-07-22T19:30:06Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 1116,
+  "file_count": 1133,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -208,6 +208,41 @@
     {
       "path": "anki/anki_field_schema.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/anki_field_schema.md",
+      "category": "anki"
+    },
+    {
+      "path": "anki/hindi/hindi_core_100.sources.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/hindi/hindi_core_100.sources.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/hindi/hindi_core_100.tsv",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/hindi/hindi_core_100.tsv",
+      "category": "anki"
+    },
+    {
+      "path": "anki/hindi/reports/chinese_safety_comparison.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/hindi/reports/chinese_safety_comparison.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/hindi/reports/data_validation_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/hindi/reports/data_validation_report.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/hindi/reports/hindi_anki_apply_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/hindi/reports/hindi_anki_apply_report.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/hindi/reports/hindi_anki_dry_run.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/hindi/reports/hindi_anki_dry_run.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/hindi/reports/hindi_anki_verification.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/hindi/reports/hindi_anki_verification.json",
       "category": "anki"
     },
     {
@@ -423,6 +458,11 @@
     {
       "path": "docs/external-agent-vocabulary.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/external-agent-vocabulary.md",
+      "category": "docs"
+    },
+    {
+      "path": "docs/hindi-anki.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/hindi-anki.md",
       "category": "docs"
     },
     {
@@ -5361,6 +5401,26 @@
       "category": "scripts"
     },
     {
+      "path": "scripts/hindi/__init__.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/hindi/__init__.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/hindi/anki_client.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/hindi/anki_client.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/hindi/setup_hindi_anki.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/hindi/setup_hindi_anki.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/hindi/validate_hindi_core_100.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/hindi/validate_hindi_core_100.py",
+      "category": "scripts"
+    },
+    {
       "path": "scripts/import_epub_for_adaptation.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/import_epub_for_adaptation.py",
       "category": "scripts"
@@ -5556,6 +5616,11 @@
       "category": "scripts"
     },
     {
+      "path": "tests/hindi_fake_anki.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/hindi_fake_anki.py",
+      "category": "scripts"
+    },
+    {
       "path": "tests/test_adaptation_workflow.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_adaptation_workflow.py",
       "category": "scripts"
@@ -5563,6 +5628,26 @@
     {
       "path": "tests/test_anki_card_distribution.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_anki_card_distribution.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_hindi_anki_safety.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_hindi_anki_safety.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_hindi_anki_setup.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_hindi_anki_setup.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_hindi_anki_templates.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_hindi_anki_templates.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_hindi_core_100.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_hindi_core_100.py",
       "category": "scripts"
     },
     {

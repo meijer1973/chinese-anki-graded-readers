@@ -1,9 +1,10 @@
 # GitHub Agent Entry - Chinese Anki And Graded Readers
 
-This repository contains two connected systems:
+This repository contains two connected Chinese systems and one independent additional deck:
 
 1. Chinese vocabulary Anki deck tooling.
 2. A controlled-vocabulary Chinese graded-reader fiction pipeline.
+3. A completely separate Hindi Anki starter deck.
 
 It is intended to be readable by humans and remote coding/research agents working from GitHub.
 
@@ -34,6 +35,7 @@ Read that file first for repository access, exact paths, raw URLs, and task rout
 | How is EPUB built? | `scripts/build_epub.py`, `.agents/skills/epub-export/SKILL.md` |
 | How do stretch words flow toward Anki? | `docs/anki-integration.md`, `scripts/export_stretch_words_for_anki.py` |
 | How is Anki new-card order kept mixed? | `docs/anki-integration.md`, `scripts/audit_anki_card_distribution.py`, `scripts/schedule_anki_learning_order.py` |
+| How is the separate Hindi starter deck validated or installed? | `docs/hindi-anki.md`, `anki/hindi/hindi_core_100.tsv`, `scripts/hindi/setup_hindi_anki.py` |
 | What is the first series manuscript? | `manuscripts/shanghai-rain-gate-crime/` |
 | What is the latest accepted 林安 manuscript? | `manuscripts/shanghai-mirror-street-case/` |
 | What is the energy-policy long-read? | `manuscripts/china-energy-policy-hormuz-long-read/` |

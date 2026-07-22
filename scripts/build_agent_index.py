@@ -82,7 +82,7 @@ def write_github_agent_index(paths: list[str]) -> None:
         grouped[category_for(path)].append(path)
 
     lines = [
-        "# GitHub Agent File Index - Chinese Anki And Graded Readers",
+        "# GitHub Agent File Index - Chinese Anki, Hindi Starter, And Graded Readers",
         "",
         f"Generated: {utc_now()}",
         "",
@@ -137,6 +137,11 @@ def write_url_index(paths: list[str]) -> None:
         "docs/style-bank-controlled-chinese.md",
         "docs/stretch-vocabulary.md",
         "docs/anki-integration.md",
+        "docs/hindi-anki.md",
+        "anki/hindi/hindi_core_100.tsv",
+        "anki/hindi/hindi_core_100.sources.json",
+        "scripts/hindi/validate_hindi_core_100.py",
+        "scripts/hindi/setup_hindi_anki.py",
         "docs/quality-review.md",
         "docs/series-memory.md",
         "scripts/check_series_memory_update.py",

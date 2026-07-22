@@ -65,6 +65,12 @@ anki/stretch_word_import_log.json
 anki/stretch_words_added_to_anki.tsv
 anki/learning_order_plan.tsv
 
+# Local live-state evidence for the isolated Hindi deck. These files contain
+# personal collection IDs, scheduling state, or full note-field snapshots.
+anki/hindi/reports/chinese_safety_before.json
+anki/hindi/reports/chinese_safety_after.json
+anki/hindi/reports/hindi_managed_notes_before_update.tsv
+
 # Generated manuscript EPUB builds
 # Track final EPUB artifacts and build reports for accepted manuscripts, but keep
 # exploded/intermediate EPUB contents local.

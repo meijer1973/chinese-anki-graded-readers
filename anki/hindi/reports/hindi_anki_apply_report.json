@@ -1,0 +1,109 @@
+{
+  "card_order": {
+    "method": "already-correct",
+    "repositioned": 0
+  },
+  "chinese_safety_after_sha256": "cc2dd0f87d6ec5b9e080f772276086911fdf67787729dbd9c0be3da66e9dc9eb",
+  "chinese_safety_before_sha256": "cc2dd0f87d6ec5b9e080f772276086911fdf67787729dbd9c0be3da66e9dc9eb",
+  "chinese_safety_identical": true,
+  "deck": "Hindi",
+  "hindi_only_option_keys_changed": [],
+  "mode": "apply",
+  "mutation_log": [],
+  "new_cards_per_day": 5,
+  "note_changes": {
+    "added": 0,
+    "tagged": 0,
+    "updated": 0
+  },
+  "note_type": "Hindi Vocabulary",
+  "options_config_id": 1784748424556,
+  "options_preset": "Hindi - 5 new cards",
+  "plan": {
+    "deck": "Hindi",
+    "expected_final_counts": {
+      "Sentence Recognition": 100,
+      "Word Recognition": 100,
+      "cards": 200,
+      "new_cards_per_day": 5,
+      "notes": 100,
+      "production_cards": 0,
+      "production_like_templates": 0,
+      "templates": 2
+    },
+    "inherited_config_id": 1784748424556,
+    "note_type": "Hindi Vocabulary",
+    "options_preset": "Hindi - 5 new cards",
+    "proposed_mutations": {
+      "add_missing_tags_note_count": 0,
+      "add_note_count": 0,
+      "add_words": [],
+      "assign_options_preset_to": [],
+      "clone_options_preset": false,
+      "create_deck": false,
+      "create_note_type": false,
+      "hindi_only_option_keys_to_change": [],
+      "reposition_new_cards_in_rank_template_order": true,
+      "update_note_count": 0,
+      "update_styling": false,
+      "update_templates": false,
+      "update_words": []
+    },
+    "protected_default_config_id": 1
+  },
+  "status": "PASS",
+  "verification": {
+    "card_order_ok": true,
+    "deck": "Hindi",
+    "deck_exists": true,
+    "default_config_id": 1,
+    "errors": [],
+    "field_names": [
+      "Word",
+      "Pronunciation",
+      "Meaning",
+      "Part of Speech",
+      "Example",
+      "Example Pronunciation",
+      "Example Meaning",
+      "Source",
+      "Labels",
+      "Frequency Rank",
+      "Notes"
+    ],
+    "managed_note_count": 100,
+    "new_card_count_in_order_check": 200,
+    "new_cards_per_day": 5,
+    "new_gather_priority": 0,
+    "new_sort_order": 1,
+    "note_type": "Hindi Vocabulary",
+    "note_type_exists": true,
+    "notes_with_pos_tag": 100,
+    "notes_with_standard_tags": 100,
+    "options_config_id": 1784748424556,
+    "options_preset": "Hindi - 5 new cards",
+    "production_cards": 0,
+    "production_like_template_count": 0,
+    "production_like_templates": [],
+    "rank_values_complete": true,
+    "required_field_counts": {
+      "Example": 100,
+      "Example Meaning": 100,
+      "Example Pronunciation": 100,
+      "Frequency Rank": 100,
+      "Labels": 100,
+      "Meaning": 100,
+      "Pronunciation": 100
+    },
+    "sentence_recognition_cards": 100,
+    "separate_options_preset": true,
+    "status": "PASS",
+    "template_count": 2,
+    "template_names": [
+      "Word Recognition",
+      "Sentence Recognition"
+    ],
+    "total_cards": 200,
+    "word_recognition_cards": 100
+  }
+}

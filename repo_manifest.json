@@ -6,7 +6,7 @@
     "github_url": "https://github.com/meijer1973/chinese-anki-graded-readers",
     "default_branch": "main",
     "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-    "purpose": "Chinese Anki deck tooling plus controlled-vocabulary Chinese graded-reader fiction generation."
+    "purpose": "Chinese Anki deck tooling, an independent Hindi Anki starter deck, and controlled-vocabulary Chinese graded-reader fiction generation."
   },
   "freshness_rule": "Refresh RESEARCH_AGENT_MAP.md, AGENT_GITHUB_ENTRY.md, reports/url-index.md, and reports/github-agent-index.md whenever repository paths, workflows, scripts, skills, agents, or manuscript conventions change. Commit and push accepted tracked work to origin before calling it done unless the user explicitly says not to or Git/validation blocks publication.",
   "default_vocabulary_policy": {
@@ -45,6 +45,7 @@
     "docs/style-bank-controlled-chinese.md",
     "docs/stretch-vocabulary.md",
     "docs/anki-integration.md",
+    "docs/hindi-anki.md",
     "docs/quality-review.md",
     "docs/series-memory.md"
   ],
@@ -100,6 +101,11 @@
     "manuscripts/broken-sword-gate-01-entering-the-mountain/proper_nouns.txt",
     "manuscripts/broken-sword-gate-01-entering-the-mountain/book_specific_words.txt",
     "anki/stretch_word_candidates.tsv",
+    "anki/hindi/hindi_core_100.tsv",
+    "anki/hindi/hindi_core_100.sources.json",
+    "scripts/hindi/validate_hindi_core_100.py",
+    "scripts/hindi/anki_client.py",
+    "scripts/hindi/setup_hindi_anki.py",
     "manuscripts/shanghai-rain-gate-crime/vocabulary_report.json",
     "manuscripts/shanghai-rain-gate-crime/quality/quality_gate_summary.json",
     "manuscripts/shanghai-spirit-lamp-case/vocabulary_report.json",
@@ -153,6 +159,15 @@
       "scripts/export_stretch_words_for_anki.py",
       "scripts/import_stretch_words_to_anki.py",
       "scripts/complete_stretch_pack_metadata.py"
+    ],
+    "hindi_anki": [
+      "docs/hindi-anki.md",
+      "anki/hindi/hindi_core_100.tsv",
+      "anki/hindi/hindi_core_100.sources.json",
+      "anki/hindi/reports",
+      "scripts/hindi/anki_client.py",
+      "scripts/hindi/setup_hindi_anki.py",
+      "scripts/hindi/validate_hindi_core_100.py"
     ],
     "novel_pipeline": [
       "scripts/novel_tools.py",
@@ -215,7 +230,12 @@
       "tests/test_novel_pipeline.py",
       "tests/test_anki_card_distribution.py",
       "tests/test_stretch_vocabulary.py",
-      "tests/test_series_memory_update.py"
+      "tests/test_series_memory_update.py",
+      "tests/test_hindi_core_100.py",
+      "tests/test_hindi_anki_templates.py",
+      "tests/test_hindi_anki_setup.py",
+      "tests/test_hindi_anki_safety.py",
+      "tests/hindi_fake_anki.py"
     ],
     "generated_indexes": [
       "reports/github-agent-index.md",
@@ -231,6 +251,10 @@
     "validate_marcel_with_known_character_compounds": "python scripts/validate_book.py --known data/known_words.txt --personal-known data/learner_profiles/marcel/personal_known_words.txt --known-character-compounds --known-character-compound-limit 2100 --chapters manuscripts/<slug>/chapters --out manuscripts/<slug>/vocabulary_report.json",
     "validate_sample_book": "python scripts/validate_book.py --known data/known_words.txt --chapters manuscripts/sample-known-words/chapters --out manuscripts/sample-known-words/vocabulary_report.json",
     "check_series_memory_update": "python scripts/check_series_memory_update.py --manuscript manuscripts/<slug> --series-dir series/an-lin",
+    "validate_hindi_core_100": "python scripts/hindi/validate_hindi_core_100.py",
+    "dry_run_hindi_anki": "python scripts/hindi/setup_hindi_anki.py --dry-run",
+    "apply_hindi_anki": "python scripts/hindi/setup_hindi_anki.py --apply",
+    "verify_hindi_anki": "python scripts/hindi/setup_hindi_anki.py --verify-only",
     "generate_agent_indexes": "python scripts/build_agent_index.py",
     "publish_completed_work": "git status --short; git add -A; git commit -m \"<concise change summary>\"; git push origin <current-branch>"
   },
@@ -238,6 +262,9 @@
     "anki_chinese_import.tsv",
     "anki_chinese_review.tsv",
     "*_backup.tsv",
+    "anki/hindi/reports/chinese_safety_before.json",
+    "anki/hindi/reports/chinese_safety_after.json",
+    "anki/hindi/reports/hindi_managed_notes_before_update.tsv",
     "0. Manuscripts from writer agent/",
     "0. epubs for conversion/",
     "0. personal known words/",
