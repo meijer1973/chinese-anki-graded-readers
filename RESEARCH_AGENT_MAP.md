@@ -1,4 +1,4 @@
-# Research Agent Map - Chinese Anki And Graded Readers
+# Research Agent Map - Chinese Anki, Independent Language Starters, And Graded Readers
 
 Agent-executable access and traversal specification for the `chinese-anki-graded-readers` repository.
 
@@ -18,6 +18,7 @@ This repository answers:
 - how personal-known vocabulary, high-frequency character compounds, approved stretch vocabulary, and proper nouns are handled
 - how stretch words become Anki candidates
 - how the independent Hindi Core 100 Anki deck is validated, installed, and protected from Chinese mutations
+- how the independent Spanish Core 100 Anki deck is validated, installed, and protected from both Chinese and Hindi mutations
 - how living series memory is updated after accepted stories
 - which story text is canonical and which artifacts are generated
 
@@ -33,6 +34,7 @@ Repository boundaries:
 - Final EPUB files and build reports for accepted manuscripts are tracked under `manuscripts/<slug>/epub/`.
 - Live Anki mutation happens only through explicit scripts and should not be assumed safe without reading `AGENTS.md`.
 - The Hindi starter deck is a separate top-level deck and note type. Its source of truth is `anki/hindi/hindi_core_100.tsv`; start with `docs/hindi-anki.md` and never route it through Chinese mutation scripts.
+- The Spanish starter deck is a separate top-level deck and note type. Its source of truth is `anki/spanish/spanish_core_100.tsv`; start with `docs/spanish-anki.md` and never route it through Chinese or Hindi mutation scripts.
 
 ## Access Layer
 
@@ -92,6 +94,7 @@ Human-readable:
 - `docs/stretch-vocabulary.md`
 - `docs/anki-integration.md`
 - `docs/hindi-anki.md`
+- `docs/spanish-anki.md`
 - `docs/quality-review.md`
 - `docs/series-memory.md`
 - `.agents/skills/chinese-graded-novel-planning/SKILL.md`
@@ -165,6 +168,11 @@ Machine-readable:
     "scripts/hindi/validate_hindi_core_100.py",
     "scripts/hindi/anki_client.py",
     "scripts/hindi/setup_hindi_anki.py",
+    "anki/spanish/spanish_core_100.tsv",
+    "anki/spanish/spanish_core_100.sources.json",
+    "scripts/spanish/validate_spanish_core_100.py",
+    "scripts/spanish/anki_client.py",
+    "scripts/spanish/setup_spanish_anki.py",
     "manuscripts/shanghai-rain-gate-crime/vocabulary_report.json",
     "manuscripts/shanghai-rain-gate-crime/quality/quality_gate_summary.json",
     "manuscripts/shanghai-spirit-lamp-case/vocabulary_report.json",
@@ -267,6 +275,12 @@ entry_points (full URLs):
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/hindi/validate_hindi_core_100.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/hindi/anki_client.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/hindi/setup_hindi_anki.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/spanish-anki.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/spanish_core_100.tsv
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/spanish_core_100.sources.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/spanish/validate_spanish_core_100.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/spanish/anki_client.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/spanish/setup_spanish_anki.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/quality-review.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/series-memory.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/shanghai-rain-gate-crime/vocabulary_report.json
@@ -328,6 +342,10 @@ Use these anchors before free-form browsing.
   "hindi_core_100_tsv": "anki/hindi/hindi_core_100.tsv",
   "hindi_core_100_validator": "scripts/hindi/validate_hindi_core_100.py",
   "hindi_anki_setup": "scripts/hindi/setup_hindi_anki.py",
+  "spanish_anki_docs": "docs/spanish-anki.md",
+  "spanish_core_100_tsv": "anki/spanish/spanish_core_100.tsv",
+  "spanish_core_100_validator": "scripts/spanish/validate_spanish_core_100.py",
+  "spanish_anki_setup": "scripts/spanish/setup_spanish_anki.py",
   "quality_docs": "docs/quality-review.md",
   "series_memory_docs": "docs/series-memory.md",
   "validator_core": "scripts/novel_tools.py",
@@ -421,6 +439,7 @@ Use these anchors before free-form browsing.
 | Prepare stretch words for Anki | `docs/anki-integration.md`, `scripts/export_stretch_words_for_anki.py` |
 | Audit or schedule Anki new-card distribution | `docs/anki-integration.md`, `scripts/audit_anki_card_distribution.py`, `scripts/schedule_anki_learning_order.py` |
 | Validate, install, or verify the independent Hindi starter deck | `docs/hindi-anki.md`, `anki/hindi/hindi_core_100.tsv`, `scripts/hindi/validate_hindi_core_100.py`, `scripts/hindi/setup_hindi_anki.py` |
+| Validate, install, or verify the independent Spanish starter deck | `docs/spanish-anki.md`, `anki/spanish/spanish_core_100.tsv`, `scripts/spanish/validate_spanish_core_100.py`, `scripts/spanish/setup_spanish_anki.py` |
 | Complete stretch-pack metadata | `scripts/complete_stretch_pack_metadata.py`, `data/stretch_packs/metadata/` |
 | Plan business/economics readers | `docs/stretch-vocabulary.md`, `data/stretch_packs/business_economics_150.txt`, pass it with `--extra-pack` |
 | Inspect business/economics nonfiction example | `manuscripts/small-shop-survival-economics`, `manuscripts/small-shop-survival-economics/vocabulary_report.json` |

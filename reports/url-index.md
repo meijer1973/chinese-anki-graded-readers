@@ -22,6 +22,11 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/hindi/hindi_core_100.sources.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/hindi/validate_hindi_core_100.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/hindi/setup_hindi_anki.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/spanish-anki.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/spanish_core_100.tsv
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/spanish_core_100.sources.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/spanish/validate_spanish_core_100.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/spanish/setup_spanish_anki.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/quality-review.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/series-memory.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/check_series_memory_update.py
@@ -53,6 +58,11 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/hindi/hindi_core_100.sources.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/hindi/validate_hindi_core_100.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/hindi/setup_hindi_anki.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/spanish-anki.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/spanish_core_100.tsv
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/spanish_core_100.sources.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/spanish/validate_spanish_core_100.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/spanish/setup_spanish_anki.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/quality-review.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/series-memory.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/check_series_memory_update.py
@@ -103,6 +113,12 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/hindi/reports/hindi_anki_apply_report.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/hindi/reports/hindi_anki_dry_run.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/hindi/reports/hindi_anki_verification.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/reports/chinese_safety_comparison.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/reports/data_validation_report.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/reports/hindi_safety_comparison.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/reports/spanish_anki_apply_report.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/reports/spanish_anki_dry_run.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/reports/spanish_anki_verification.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/apply_meaning_cleanup_updates.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/apply_sentence_example_updates.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/build_anki_chinese.py
@@ -1130,6 +1146,8 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/repeated_phrase_report.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/run_quality_gate.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/schedule_anki_learning_order.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/spanish/__init__.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/spanish/anki_client.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/sync_known_words.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/sync_personal_known_words.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/validate_book.py
@@ -1158,6 +1176,7 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/setup_production_sentence_cards.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/suggest_meaning_edits.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/hindi_fake_anki.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/spanish_fake_anki.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_adaptation_workflow.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_anki_card_distribution.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_hindi_anki_safety.py
@@ -1166,5 +1185,9 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_hindi_core_100.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_novel_pipeline.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_series_memory_update.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_spanish_anki_safety.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_spanish_anki_setup.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_spanish_anki_templates.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_spanish_core_100.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_stretch_vocabulary.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/word list chinese.txt

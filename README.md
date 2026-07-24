@@ -1,12 +1,13 @@
-# Chinese Anki, Hindi Starter, And Graded Reader Tools
+# Chinese Anki, Hindi And Spanish Starters, And Graded Reader Tools
 
-This repository maintains a Chinese vocabulary Anki deck, a completely separate Hindi starter deck, and a controlled-vocabulary fiction pipeline for generating auditable Chinese graded-reader stories.
+This repository maintains a Chinese vocabulary Anki deck, completely separate Hindi and Spanish starter decks, and a controlled-vocabulary fiction pipeline for generating auditable Chinese graded-reader stories.
 
 ## Main Workflows
 
 - Build Anki TSV exports from `word list chinese.txt` with `build_anki_chinese.py`.
 - Keep Anki new-card order mixed with `scripts/audit_anki_card_distribution.py` and `scripts/schedule_anki_learning_order.py`.
 - Build and safely install the isolated 100-note Hindi starter deck with `docs/hindi-anki.md` and `scripts/hindi/setup_hindi_anki.py`.
+- Build and safely install the isolated 100-note Spanish starter deck with `docs/spanish-anki.md` and `scripts/spanish/setup_spanish_anki.py`.
 - Keep curated sentence and pinyin fixes in `sentence_example_overrides.py`.
 - Maintain the active graded-reader known-word file in `data/known_words.txt`, generated from `High frequency words 0-10000.txt`.
 - Maintain learner-profile personal-known vocabulary under `data/learner_profiles/marcel/` for Marcel-personalized readers.
@@ -70,6 +71,8 @@ The validator checks core known words, approved stretch packs, book-specific wor
 The live Anki collection is not mutated by ordinary exports. Scripts that update Anki through AnkiConnect are documented in `AGENTS.md`.
 
 The independent Hindi Core 100 workflow is documented in `docs/hindi-anki.md`. Its TSV, note type, templates, options preset, tags, reports, and guarded AnkiConnect setup are separate from every Chinese resource.
+
+The independent Spanish Core 100 workflow is documented in `docs/spanish-anki.md`. It also snapshots and protects both Chinese and Hindi resources before any Spanish-only live mutation.
 
 Generated import files, live-collection backups, local downloads, and old trial manuscripts are intentionally ignored by Git.
 

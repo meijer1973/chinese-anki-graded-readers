@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-22T19:30:06Z",
+  "generated_at": "2026-07-24T14:17:45Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 1133,
+  "file_count": 1151,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -243,6 +243,46 @@
     {
       "path": "anki/hindi/reports/hindi_anki_verification.json",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/hindi/reports/hindi_anki_verification.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/spanish/reports/chinese_safety_comparison.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/reports/chinese_safety_comparison.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/spanish/reports/data_validation_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/reports/data_validation_report.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/spanish/reports/hindi_safety_comparison.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/reports/hindi_safety_comparison.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/spanish/reports/spanish_anki_apply_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/reports/spanish_anki_apply_report.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/spanish/reports/spanish_anki_dry_run.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/reports/spanish_anki_dry_run.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/spanish/reports/spanish_anki_verification.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/reports/spanish_anki_verification.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/spanish/spanish_core_100.sources.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/spanish_core_100.sources.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/spanish/spanish_core_100.tsv",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/spanish_core_100.tsv",
       "category": "anki"
     },
     {
@@ -488,6 +528,11 @@
     {
       "path": "docs/series-memory.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/series-memory.md",
+      "category": "docs"
+    },
+    {
+      "path": "docs/spanish-anki.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/spanish-anki.md",
       "category": "docs"
     },
     {
@@ -5481,6 +5526,26 @@
       "category": "scripts"
     },
     {
+      "path": "scripts/spanish/__init__.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/spanish/__init__.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/spanish/anki_client.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/spanish/anki_client.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/spanish/setup_spanish_anki.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/spanish/setup_spanish_anki.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/spanish/validate_spanish_core_100.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/spanish/validate_spanish_core_100.py",
+      "category": "scripts"
+    },
+    {
       "path": "scripts/sync_known_words.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/sync_known_words.py",
       "category": "scripts"
@@ -5621,6 +5686,11 @@
       "category": "scripts"
     },
     {
+      "path": "tests/spanish_fake_anki.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/spanish_fake_anki.py",
+      "category": "scripts"
+    },
+    {
       "path": "tests/test_adaptation_workflow.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_adaptation_workflow.py",
       "category": "scripts"
@@ -5658,6 +5728,26 @@
     {
       "path": "tests/test_series_memory_update.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_series_memory_update.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_spanish_anki_safety.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_spanish_anki_safety.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_spanish_anki_setup.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_spanish_anki_setup.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_spanish_anki_templates.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_spanish_anki_templates.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_spanish_core_100.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_spanish_core_100.py",
       "category": "scripts"
     },
     {

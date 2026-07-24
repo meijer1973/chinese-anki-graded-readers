@@ -1,12 +1,12 @@
-# GitHub Agent File Index - Chinese Anki, Hindi Starter, And Graded Readers
+# GitHub Agent File Index - Chinese Anki, Hindi And Spanish Starters, And Graded Readers
 
-Generated: 2026-07-22T19:30:06Z
+Generated: 2026-07-24T14:17:45Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 1133
+Files indexed: 1151
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -58,7 +58,7 @@ Count: 30
 
 ## docs
 
-Count: 13
+Count: 14
 
 - docs/adaptation-workflow.md
 - docs/anki-integration.md
@@ -71,12 +71,13 @@ Count: 13
 - docs/personal-known-vocabulary.md
 - docs/quality-review.md
 - docs/series-memory.md
+- docs/spanish-anki.md
 - docs/stretch-vocabulary.md
 - docs/style-bank-controlled-chinese.md
 
 ## scripts
 
-Count: 52
+Count: 61
 
 - add_missing_single_character_notes.py
 - apply_meaning_cleanup_updates.py
@@ -112,6 +113,10 @@ Count: 52
 - scripts/repeated_phrase_report.py
 - scripts/run_quality_gate.py
 - scripts/schedule_anki_learning_order.py
+- scripts/spanish/__init__.py
+- scripts/spanish/anki_client.py
+- scripts/spanish/setup_spanish_anki.py
+- scripts/spanish/validate_spanish_core_100.py
 - scripts/sync_known_words.py
 - scripts/sync_personal_known_words.py
 - scripts/validate_book.py
@@ -121,6 +126,7 @@ Count: 52
 - setup_production_sentence_cards.py
 - suggest_meaning_edits.py
 - tests/hindi_fake_anki.py
+- tests/spanish_fake_anki.py
 - tests/test_adaptation_workflow.py
 - tests/test_anki_card_distribution.py
 - tests/test_hindi_anki_safety.py
@@ -129,6 +135,10 @@ Count: 52
 - tests/test_hindi_core_100.py
 - tests/test_novel_pipeline.py
 - tests/test_series_memory_update.py
+- tests/test_spanish_anki_safety.py
+- tests/test_spanish_anki_setup.py
+- tests/test_spanish_anki_templates.py
+- tests/test_spanish_core_100.py
 - tests/test_stretch_vocabulary.py
 
 ## configs
@@ -177,7 +187,7 @@ Count: 33
 
 ## anki
 
-Count: 9
+Count: 17
 
 - anki/anki_field_schema.md
 - anki/hindi/hindi_core_100.sources.json
@@ -187,6 +197,14 @@ Count: 9
 - anki/hindi/reports/hindi_anki_apply_report.json
 - anki/hindi/reports/hindi_anki_dry_run.json
 - anki/hindi/reports/hindi_anki_verification.json
+- anki/spanish/reports/chinese_safety_comparison.json
+- anki/spanish/reports/data_validation_report.json
+- anki/spanish/reports/hindi_safety_comparison.json
+- anki/spanish/reports/spanish_anki_apply_report.json
+- anki/spanish/reports/spanish_anki_dry_run.json
+- anki/spanish/reports/spanish_anki_verification.json
+- anki/spanish/spanish_core_100.sources.json
+- anki/spanish/spanish_core_100.tsv
 - anki/stretch_word_candidates.tsv
 
 ## adaptations

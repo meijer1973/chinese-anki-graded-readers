@@ -71,6 +71,14 @@ anki/hindi/reports/chinese_safety_before.json
 anki/hindi/reports/chinese_safety_after.json
 anki/hindi/reports/hindi_managed_notes_before_update.tsv
 
+# Local live-state evidence for the isolated Spanish deck. These files contain
+# personal collection IDs, scheduling state, or full protected-deck snapshots.
+anki/spanish/reports/chinese_safety_before.json
+anki/spanish/reports/chinese_safety_after.json
+anki/spanish/reports/hindi_safety_before.json
+anki/spanish/reports/hindi_safety_after.json
+anki/spanish/reports/spanish_managed_notes_before_update.tsv
+
 # Generated manuscript EPUB builds
 # Track final EPUB artifacts and build reports for accepted manuscripts, but keep
 # exploded/intermediate EPUB contents local.
