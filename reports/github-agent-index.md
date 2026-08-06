@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki, Hindi And Spanish Starters, And Graded Readers
 
-Generated: 2026-07-24T14:17:45Z
+Generated: 2026-08-06T14:54:32Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 1151
+Files indexed: 1169
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -58,10 +58,11 @@ Count: 30
 
 ## docs
 
-Count: 14
+Count: 15
 
 - docs/adaptation-workflow.md
 - docs/anki-integration.md
+- docs/china-knowledge-anki.md
 - docs/completion-response-template.md
 - docs/creative-preflight.md
 - docs/external-agent-vocabulary.md
@@ -77,7 +78,7 @@ Count: 14
 
 ## scripts
 
-Count: 61
+Count: 71
 
 - add_missing_single_character_notes.py
 - apply_meaning_cleanup_updates.py
@@ -94,6 +95,11 @@ Count: 61
 - scripts/build_external_agent_vocab_bundle.py
 - scripts/build_reading_copy.py
 - scripts/check_series_memory_update.py
+- scripts/china_knowledge/__init__.py
+- scripts/china_knowledge/anki_client.py
+- scripts/china_knowledge/config.py
+- scripts/china_knowledge/setup_china_knowledge_anki.py
+- scripts/china_knowledge/validate_china_knowledge.py
 - scripts/complete_stretch_pack_metadata.py
 - scripts/export_stretch_words_for_anki.py
 - scripts/generate_reports.py
@@ -125,10 +131,15 @@ Count: 61
 - sentence_example_overrides.py
 - setup_production_sentence_cards.py
 - suggest_meaning_edits.py
+- tests/china_knowledge_fake_anki.py
 - tests/hindi_fake_anki.py
 - tests/spanish_fake_anki.py
 - tests/test_adaptation_workflow.py
 - tests/test_anki_card_distribution.py
+- tests/test_china_knowledge_data.py
+- tests/test_china_knowledge_safety.py
+- tests/test_china_knowledge_setup.py
+- tests/test_china_knowledge_templates.py
 - tests/test_hindi_anki_safety.py
 - tests/test_hindi_anki_setup.py
 - tests/test_hindi_anki_templates.py
@@ -140,6 +151,12 @@ Count: 61
 - tests/test_spanish_anki_templates.py
 - tests/test_spanish_core_100.py
 - tests/test_stretch_vocabulary.py
+
+## tests
+
+Count: 1
+
+- tests/fixtures/china_knowledge_sample.tsv
 
 ## configs
 
@@ -187,9 +204,15 @@ Count: 33
 
 ## anki
 
-Count: 17
+Count: 23
 
 - anki/anki_field_schema.md
+- anki/china_knowledge/china_knowledge.sources.json
+- anki/china_knowledge/china_knowledge_400.tsv
+- anki/china_knowledge/generated/china_knowledge_import.json
+- anki/china_knowledge/reports/china_knowledge_offline_preview.json
+- anki/china_knowledge/reports/data_validation_report.json
+- anki/china_knowledge/reports/editorial_review.md
 - anki/hindi/hindi_core_100.sources.json
 - anki/hindi/hindi_core_100.tsv
 - anki/hindi/reports/chinese_safety_comparison.json

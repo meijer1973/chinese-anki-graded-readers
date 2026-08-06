@@ -1,0 +1,37 @@
+{
+  "bilingual_number_warnings": [],
+  "duplicate_warnings": {
+    "duplicate_chinese_questions": [],
+    "duplicate_english_questions": [],
+    "duplicate_ids": [],
+    "near_duplicate_chinese": [],
+    "near_duplicate_english": []
+  },
+  "errors": [],
+  "notes_missing_source_dates": 0,
+  "notes_per_category": {
+    "culture": 45,
+    "economy": 55,
+    "geography": 65,
+    "government": 35,
+    "history": 90,
+    "language": 25,
+    "science_technology_environment": 45,
+    "society": 40
+  },
+  "notes_per_difficulty": {
+    "advanced": 19,
+    "foundation": 215,
+    "intermediate": 166
+  },
+  "notes_with_bilingual_explanations": 400,
+  "source_count": 39,
+  "sources": "C:\\Projects\\anki\\anki\\china_knowledge\\china_knowledge.sources.json",
+  "status": "PASS",
+  "time_sensitive_notes": 16,
+  "total_notes": 400,
+  "tsv": "C:\\Projects\\anki\\anki\\china_knowledge\\china_knowledge_400.tsv",
+  "validation_failure_count": 0,
+  "warning_count": 0,
+  "warnings": []
+}

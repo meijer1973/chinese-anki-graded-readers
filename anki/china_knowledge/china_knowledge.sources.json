@@ -1,0 +1,312 @@
+{
+  "schema_version": 1,
+  "access_date": "2026-08-06",
+  "editorial_policy": "Each TSV row cites one or more source IDs from this catalog. Questions, answers, and explanations are independently written bilingual summaries; source wording is not copied. Durable formulations are preferred, and volatile claims carry an as_of tag and a date in the question or answer.",
+  "sources": {
+    "BEIDOU_SYSTEM": {
+      "title": "BeiDou Navigation Satellite System: System Overview",
+      "organization": "China Satellite Navigation Office",
+      "url": "https://en.beidou.gov.cn/SYSTEMS/System/",
+      "kind": "official",
+      "checked_on": "2026-08-06"
+    },
+    "CNSA_SPACE_2021": {
+      "title": "China's Space Program: A 2021 Perspective",
+      "organization": "China National Space Administration and State Council Information Office",
+      "url": "https://www.cnsa.gov.cn/english/n6465645/n6465648/c6813088/content.html",
+      "kind": "official white paper",
+      "published": "2022-01-28",
+      "checked_on": "2026-08-06"
+    },
+    "GOV_ADMIN": {
+      "title": "Administrative division",
+      "organization": "State Council Information Office of the People's Republic of China",
+      "url": "https://english.scio.gov.cn/m/chinafacts/2017-04/17/content_40632751.htm",
+      "kind": "official",
+      "published": "2017-04-17",
+      "checked_on": "2026-08-06"
+    },
+    "GOV_LOCAL_GOVERNMENT": {
+      "title": "Local People's Governments at All Levels",
+      "organization": "State Council Information Office of the People's Republic of China",
+      "url": "https://english.scio.gov.cn/featured/chinakeywords/2024-12/10/content_117925512.htm",
+      "kind": "official",
+      "published": "2024-12-10",
+      "checked_on": "2026-08-06"
+    },
+    "IEA_CHINA_ENERGY": {
+      "title": "An Energy Sector Roadmap to Carbon Neutrality in China: Executive Summary",
+      "organization": "International Energy Agency",
+      "url": "https://www.iea.org/reports/an-energy-sector-roadmap-to-carbon-neutrality-in-china/executive-summary",
+      "kind": "international organization",
+      "published": "2021-09-01",
+      "checked_on": "2026-08-06"
+    },
+    "IEA_EV_2026": {
+      "title": "Global EV Outlook 2026: Manufacturing and Trade",
+      "organization": "International Energy Agency",
+      "url": "https://www.iea.org/reports/global-ev-outlook-2026/manufacturing-and-trade",
+      "kind": "international organization",
+      "published": "2026-01-01",
+      "checked_on": "2026-08-06"
+    },
+    "IEA_SOLAR": {
+      "title": "Solar PV Global Supply Chains: Executive Summary",
+      "organization": "International Energy Agency",
+      "url": "https://www.iea.org/reports/solar-pv-global-supply-chains/executive-summary",
+      "kind": "international organization",
+      "published": "2022-07-01",
+      "checked_on": "2026-08-06"
+    },
+    "IMF_REFORM": {
+      "title": "Why Is China Growing So Fast?",
+      "organization": "International Monetary Fund",
+      "url": "https://www.imf.org/external/pubs/ft/issues8/index.htm",
+      "kind": "international organization analysis",
+      "published": "1997-06-01",
+      "checked_on": "2026-08-06"
+    },
+    "IMF_SEZ": {
+      "title": "People's Republic of China: Selected Issues — Opening to Foreign Direct Investment",
+      "organization": "International Monetary Fund",
+      "url": "https://www.elibrary.imf.org/view/journals/002/1997/072/article-A005-en.xml",
+      "kind": "international organization analysis",
+      "published": "1997-01-01",
+      "checked_on": "2026-08-06"
+    },
+    "LOC_CHINA_STUDY": {
+      "title": "China: A Country Study",
+      "organization": "Federal Research Division, Library of Congress",
+      "url": "https://www.loc.gov/item/87600493/",
+      "kind": "government research reference",
+      "published": "1988-01-01",
+      "checked_on": "2026-08-06"
+    },
+    "MET_CALLIGRAPHY": {
+      "title": "Chinese Calligraphy",
+      "organization": "The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/essays/chinese-calligraphy",
+      "kind": "museum scholarly essay",
+      "published": "2008-06-01",
+      "checked_on": "2026-08-06"
+    },
+    "MET_CHINA_EARLY": {
+      "title": "China, 1000 B.C.–1 A.D.",
+      "organization": "The Metropolitan Museum of Art, Heilbrunn Timeline of Art History",
+      "url": "https://www.metmuseum.org/toah/ht/04/eac.html",
+      "kind": "museum scholarly chronology",
+      "published": "2000-10-01",
+      "checked_on": "2026-08-06"
+    },
+    "MET_CHINA_MEDIEVAL": {
+      "title": "China, 1000–1400 A.D.",
+      "organization": "The Metropolitan Museum of Art, Heilbrunn Timeline of Art History",
+      "url": "https://www.metmuseum.org/toah/ht/07/eac.html",
+      "kind": "museum scholarly chronology",
+      "published": "2001-10-01",
+      "checked_on": "2026-08-06"
+    },
+    "MET_CHINA_MODERN": {
+      "title": "Modern Chinese Painting, 1860–1980",
+      "organization": "The Metropolitan Museum of Art",
+      "url": "https://resources.metmuseum.org/resources/metpublications/pdf/Modern_Chinese_Painting_1860_1980_The_Metropolitan_Museum_of_Art_Bulletin_v_58_no_3_Winter_2001.pdf",
+      "kind": "museum scholarly publication",
+      "published": "2001-01-01",
+      "checked_on": "2026-08-06"
+    },
+    "MET_PAINTING": {
+      "title": "Chinese Painting",
+      "organization": "The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/essays/chinese-painting",
+      "kind": "museum scholarly essay",
+      "published": "2008-06-01",
+      "checked_on": "2026-08-06"
+    },
+    "MET_POETRY_PAINTING": {
+      "title": "Vision and Verse: The Poetry of Chinese Painting",
+      "organization": "The Metropolitan Museum of Art",
+      "url": "https://www.metmuseum.org/exhibitions/vision-and-verse-the-poetry-of-chinese-painting",
+      "kind": "museum scholarly exhibition",
+      "published": "2024-02-01",
+      "checked_on": "2026-08-06"
+    },
+    "MEE_GEOGRAPHY": {
+      "title": "China's Third National Communication on Climate Change: National Circumstances",
+      "organization": "Ministry of Ecology and Environment of the People's Republic of China",
+      "url": "https://english.mee.gov.cn/Resources/Reports/reports/201907/P020190702566752327206.pdf",
+      "kind": "official report",
+      "published": "2019-07-02",
+      "checked_on": "2026-08-06"
+    },
+    "MOE_COMPULSORY": {
+      "title": "Compulsory Education Law of the People's Republic of China",
+      "organization": "Ministry of Education of the People's Republic of China",
+      "url": "https://en.moe.gov.cn/Resources/Laws_and_Policies/201506/t20150626_191391.html",
+      "kind": "official law",
+      "published": "2009-07-23",
+      "checked_on": "2026-08-06"
+    },
+    "MOE_GAOKAO": {
+      "title": "MOE introduces measures to strengthen 2025 college admissions",
+      "organization": "Ministry of Education of the People's Republic of China",
+      "url": "https://en.moe.gov.cn/news/press_releases/202503/t20250304_1181263.html",
+      "kind": "official",
+      "published": "2025-02-20",
+      "checked_on": "2026-08-06"
+    },
+    "MOE_LANGUAGE_2026": {
+      "title": "Law of the People's Republic of China on the Standard Spoken and Written Chinese Language (2025 revision)",
+      "organization": "Ministry of Education of the People's Republic of China",
+      "url": "https://www.moe.gov.cn/jyb_sjzl/sjzl_zcfg/zcfg_jyfl/202606/t20260605_1438880.html",
+      "kind": "official law",
+      "published": "2026-06-05",
+      "checked_on": "2026-08-06"
+    },
+    "NATGEO_HUANGHE": {
+      "title": "Huang He Valley",
+      "organization": "National Geographic Society",
+      "url": "https://education.nationalgeographic.org/resource/huang-he-valley/",
+      "kind": "educational reference",
+      "published": "2026-07-22",
+      "checked_on": "2026-08-06"
+    },
+    "NBS_CENSUS_2020": {
+      "title": "Communiqué of the Seventh National Population Census (No. 3)",
+      "organization": "National Bureau of Statistics of China",
+      "url": "https://www.stats.gov.cn/english/PressRelease/202105/t20210510_1817188.html",
+      "kind": "official statistics",
+      "published": "2021-05-11",
+      "checked_on": "2026-08-06"
+    },
+    "NBS_YEARBOOK_2025": {
+      "title": "China Statistical Yearbook 2025: Editor's Notes",
+      "organization": "National Bureau of Statistics of China",
+      "url": "https://www.stats.gov.cn/sj/ndsj/2025/html/notee.htm",
+      "kind": "official statistics",
+      "published": "2025-01-01",
+      "checked_on": "2026-08-06"
+    },
+    "NPC_CONSTITUTION": {
+      "title": "Constitution of the People's Republic of China",
+      "organization": "National People's Congress of the People's Republic of China",
+      "url": "https://www.npc.gov.cn/englishnpc/constitution2019/201911/t20191120_384295.html",
+      "kind": "official constitution",
+      "published": "2019-11-20",
+      "checked_on": "2026-08-06"
+    },
+    "NPC_LANGUAGE": {
+      "title": "Law of the People's Republic of China on the Standard Spoken and Written Chinese Language",
+      "organization": "National People's Congress of the People's Republic of China",
+      "url": "https://www.npc.gov.cn/zgrdw/englishnpc/Law/2007-12/11/content_1383540.htm",
+      "kind": "official law",
+      "published": "2000-10-31",
+      "checked_on": "2026-08-06"
+    },
+    "NPC_STATE_STRUCTURE": {
+      "title": "State Structure of the People's Republic of China",
+      "organization": "National People's Congress of the People's Republic of China",
+      "url": "https://www.npc.gov.cn/zgrdw/englishnpc/stateStructure/node_3826.htm",
+      "kind": "official",
+      "checked_on": "2026-08-06"
+    },
+    "OECD_EDUCATION": {
+      "title": "Benchmarking the Performance of China's Education System",
+      "organization": "Organisation for Economic Co-operation and Development",
+      "url": "https://www.oecd.org/en/publications/benchmarking-the-performance-of-china-s-education-system_4ab33702-en.html",
+      "kind": "international organization analysis",
+      "published": "2020-10-01",
+      "checked_on": "2026-08-06"
+    },
+    "SEP_CONFUCIUS": {
+      "title": "Confucius",
+      "organization": "Stanford Encyclopedia of Philosophy",
+      "url": "https://plato.stanford.edu/entries/confucius/",
+      "kind": "academic reference",
+      "published": "2023-01-01",
+      "checked_on": "2026-08-06"
+    },
+    "SMITHSONIAN_TEA": {
+      "title": "Tea Culture in China",
+      "organization": "Smithsonian National Museum of Asian Art",
+      "url": "https://asia-archive.si.edu/learn/for-educators/teaching-china-with-the-smithsonian/lesson-plans/tea-culture-in-china/",
+      "kind": "museum educational reference",
+      "checked_on": "2026-08-06"
+    },
+    "STATE_1911": {
+      "title": "The Chinese Revolution of 1911",
+      "organization": "Office of the Historian, U.S. Department of State",
+      "url": "https://history.state.gov/milestones/1899-1913/chinese-rev",
+      "kind": "government historical reference",
+      "checked_on": "2026-08-06"
+    },
+    "UNESCO_ICH_CHINA": {
+      "title": "China — Elements on the Lists of Intangible Cultural Heritage",
+      "organization": "UNESCO",
+      "url": "https://ich.unesco.org/en/state/china-CN?cp=CN&info=elements-on-the-lists&topic=en-state",
+      "kind": "international organization cultural register",
+      "checked_on": "2026-08-06"
+    },
+    "UNESCO_SPRING_FESTIVAL": {
+      "title": "Spring festival, social practices of the Chinese people in celebration of traditional new year",
+      "organization": "UNESCO",
+      "url": "https://ich.unesco.org/en/RL/spring-festival-social-practices-of-the-chinese-people-in-celebration-of-traditional-new-year-02126",
+      "kind": "international organization cultural register",
+      "published": "2024-12-01",
+      "checked_on": "2026-08-06"
+    },
+    "USGS_CHINA_MINERALS_2026": {
+      "title": "Production of Mineral Commodities and Geospatial Map of the Mineral Industries and Related Infrastructure of China",
+      "organization": "U.S. Geological Survey",
+      "url": "https://pubs.usgs.gov/publication/ofr20261018/full",
+      "kind": "government scientific report",
+      "published": "2026-07-01",
+      "checked_on": "2026-08-06"
+    },
+    "WB_BRI": {
+      "title": "Belt and Road Economics: Opportunities and Risks of Transport Corridors",
+      "organization": "World Bank",
+      "url": "https://openknowledge.worldbank.org/server/api/core/bitstreams/5ebc10e0-36bb-518a-8f21-980202176558/content",
+      "kind": "international organization analysis",
+      "published": "2019-01-01",
+      "checked_on": "2026-08-06"
+    },
+    "WB_CHINA_OVERVIEW": {
+      "title": "China Overview",
+      "organization": "World Bank",
+      "url": "https://www.worldbank.org/ext/en/country/china",
+      "kind": "international organization overview",
+      "checked_on": "2026-08-06"
+    },
+    "WB_HSR": {
+      "title": "China's Experience with High Speed Rail Offers Lessons for Other Countries",
+      "organization": "World Bank",
+      "url": "https://www.worldbank.org/en/news/press-release/2019/07/08/chinas-experience-with-high-speed-rail-offers-lessons-for-other-countries",
+      "kind": "international organization analysis",
+      "published": "2019-07-08",
+      "checked_on": "2026-08-06"
+    },
+    "WB_URBAN": {
+      "title": "Urban China: Toward Efficient, Inclusive, and Sustainable Urbanization",
+      "organization": "World Bank and Development Research Center of the State Council",
+      "url": "https://www.worldbank.org/en/country/china/publication/urban-china-toward-efficient-inclusive-sustainable-urbanization",
+      "kind": "joint institutional report",
+      "published": "2014-03-25",
+      "checked_on": "2026-08-06"
+    },
+    "WB_WATER": {
+      "title": "Watershed: A New Era of Water Governance in China",
+      "organization": "World Bank",
+      "url": "https://documents.worldbank.org/curated/en/335591575652785348/pdf/Watershed-A-New-Era-of-Water-Governance-in-China-Thematic-Report.pdf",
+      "kind": "international organization analysis",
+      "published": "2019-01-01",
+      "checked_on": "2026-08-06"
+    },
+    "WTO_CHINA": {
+      "title": "China and the WTO — Member Information",
+      "organization": "World Trade Organization",
+      "url": "https://www.wto.org/english/thewto_e/countries_e/china_e.htm",
+      "kind": "international organization official record",
+      "checked_on": "2026-08-06"
+    }
+  }
+}

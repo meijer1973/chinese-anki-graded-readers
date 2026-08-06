@@ -6,7 +6,7 @@
     "github_url": "https://github.com/meijer1973/chinese-anki-graded-readers",
     "default_branch": "main",
     "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-    "purpose": "Chinese Anki deck tooling, independent Hindi and Spanish Anki starter decks, and controlled-vocabulary Chinese graded-reader fiction generation."
+    "purpose": "Chinese Anki deck tooling, independent Hindi and Spanish Anki starter decks, a bilingual China Common Knowledge deck, and controlled-vocabulary Chinese graded-reader fiction generation."
   },
   "freshness_rule": "Refresh RESEARCH_AGENT_MAP.md, AGENT_GITHUB_ENTRY.md, reports/url-index.md, and reports/github-agent-index.md whenever repository paths, workflows, scripts, skills, agents, or manuscript conventions change. Commit and push accepted tracked work to origin before calling it done unless the user explicitly says not to or Git/validation blocks publication.",
   "default_vocabulary_policy": {
@@ -47,6 +47,7 @@
     "docs/anki-integration.md",
     "docs/hindi-anki.md",
     "docs/spanish-anki.md",
+    "docs/china-knowledge-anki.md",
     "docs/quality-review.md",
     "docs/series-memory.md"
   ],
@@ -112,6 +113,12 @@
     "scripts/spanish/validate_spanish_core_100.py",
     "scripts/spanish/anki_client.py",
     "scripts/spanish/setup_spanish_anki.py",
+    "anki/china_knowledge/china_knowledge_400.tsv",
+    "anki/china_knowledge/china_knowledge.sources.json",
+    "anki/china_knowledge/generated/china_knowledge_import.json",
+    "scripts/china_knowledge/validate_china_knowledge.py",
+    "scripts/china_knowledge/anki_client.py",
+    "scripts/china_knowledge/setup_china_knowledge_anki.py",
     "manuscripts/shanghai-rain-gate-crime/vocabulary_report.json",
     "manuscripts/shanghai-rain-gate-crime/quality/quality_gate_summary.json",
     "manuscripts/shanghai-spirit-lamp-case/vocabulary_report.json",
@@ -183,6 +190,23 @@
       "scripts/spanish/anki_client.py",
       "scripts/spanish/setup_spanish_anki.py",
       "scripts/spanish/validate_spanish_core_100.py"
+    ],
+    "china_knowledge_anki": [
+      "docs/china-knowledge-anki.md",
+      "anki/china_knowledge/china_knowledge_400.tsv",
+      "anki/china_knowledge/china_knowledge.sources.json",
+      "anki/china_knowledge/generated/china_knowledge_import.json",
+      "anki/china_knowledge/reports",
+      "scripts/china_knowledge/anki_client.py",
+      "scripts/china_knowledge/config.py",
+      "scripts/china_knowledge/setup_china_knowledge_anki.py",
+      "scripts/china_knowledge/validate_china_knowledge.py",
+      "tests/fixtures/china_knowledge_sample.tsv",
+      "tests/test_china_knowledge_data.py",
+      "tests/test_china_knowledge_templates.py",
+      "tests/test_china_knowledge_setup.py",
+      "tests/test_china_knowledge_safety.py",
+      "tests/china_knowledge_fake_anki.py"
     ],
     "novel_pipeline": [
       "scripts/novel_tools.py",
@@ -279,6 +303,12 @@
     "dry_run_spanish_anki": "python scripts/spanish/setup_spanish_anki.py --dry-run",
     "apply_spanish_anki": "python scripts/spanish/setup_spanish_anki.py --apply",
     "verify_spanish_anki": "python scripts/spanish/setup_spanish_anki.py --verify-only",
+    "validate_china_knowledge_400": "python scripts/china_knowledge/validate_china_knowledge.py",
+    "generate_china_knowledge_import": "python scripts/china_knowledge/validate_china_knowledge.py --write-import anki/china_knowledge/generated/china_knowledge_import.json",
+    "preview_china_knowledge_offline": "python scripts/china_knowledge/setup_china_knowledge_anki.py --offline-preview",
+    "dry_run_china_knowledge_anki": "python scripts/china_knowledge/setup_china_knowledge_anki.py --dry-run",
+    "apply_china_knowledge_anki": "python scripts/china_knowledge/setup_china_knowledge_anki.py --apply",
+    "verify_china_knowledge_anki": "python scripts/china_knowledge/setup_china_knowledge_anki.py --verify-only",
     "generate_agent_indexes": "python scripts/build_agent_index.py",
     "publish_completed_work": "git status --short; git add -A; git commit -m \"<concise change summary>\"; git push origin <current-branch>"
   },
@@ -294,6 +324,10 @@
     "anki/spanish/reports/hindi_safety_before.json",
     "anki/spanish/reports/hindi_safety_after.json",
     "anki/spanish/reports/spanish_managed_notes_before_update.tsv",
+    "anki/china_knowledge/reports/china_knowledge_anki_apply_report.json",
+    "anki/china_knowledge/reports/china_knowledge_anki_dry_run.json",
+    "anki/china_knowledge/reports/china_knowledge_anki_verification.json",
+    "anki/china_knowledge/reports/china_knowledge_managed_notes_before_update.tsv",
     "0. Manuscripts from writer agent/",
     "0. epubs for conversion/",
     "0. personal known words/",

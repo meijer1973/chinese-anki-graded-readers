@@ -1,0 +1,16 @@
+{
+  "active_template_count": 1,
+  "assumption": "target deck and note type do not yet exist; live Anki was not queried",
+  "deck": "China Knowledge",
+  "expected_card_count": 400,
+  "mode": "offline-preview",
+  "mutations_performed": 0,
+  "new_cards_per_day": 5,
+  "note_type": "China Knowledge Bilingual",
+  "options_preset": "China Knowledge - 5 new cards",
+  "status": "PASS",
+  "would_create": 400,
+  "would_reject": 0,
+  "would_skip_unchanged": 0,
+  "would_update": 0
+}

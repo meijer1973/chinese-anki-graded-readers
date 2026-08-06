@@ -79,6 +79,13 @@ anki/spanish/reports/hindi_safety_before.json
 anki/spanish/reports/hindi_safety_after.json
 anki/spanish/reports/spanish_managed_notes_before_update.tsv
 
+# Local live-state evidence for the isolated China Knowledge deck. Keep the
+# reproducible validation/offline-preview reports tracked, but not collection IDs.
+anki/china_knowledge/reports/china_knowledge_anki_apply_report.json
+anki/china_knowledge/reports/china_knowledge_anki_dry_run.json
+anki/china_knowledge/reports/china_knowledge_anki_verification.json
+anki/china_knowledge/reports/china_knowledge_managed_notes_before_update.tsv
+
 # Generated manuscript EPUB builds
 # Track final EPUB artifacts and build reports for accepted manuscripts, but keep
 # exploded/intermediate EPUB contents local.

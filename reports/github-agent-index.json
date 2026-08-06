@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-24T14:17:45Z",
+  "generated_at": "2026-08-06T14:54:32Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 1151,
+  "file_count": 1169,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -208,6 +208,36 @@
     {
       "path": "anki/anki_field_schema.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/anki_field_schema.md",
+      "category": "anki"
+    },
+    {
+      "path": "anki/china_knowledge/china_knowledge.sources.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/china_knowledge/china_knowledge.sources.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/china_knowledge/china_knowledge_400.tsv",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/china_knowledge/china_knowledge_400.tsv",
+      "category": "anki"
+    },
+    {
+      "path": "anki/china_knowledge/generated/china_knowledge_import.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/china_knowledge/generated/china_knowledge_import.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/china_knowledge/reports/china_knowledge_offline_preview.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/china_knowledge/reports/china_knowledge_offline_preview.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/china_knowledge/reports/data_validation_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/china_knowledge/reports/data_validation_report.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/china_knowledge/reports/editorial_review.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/china_knowledge/reports/editorial_review.md",
       "category": "anki"
     },
     {
@@ -483,6 +513,11 @@
     {
       "path": "docs/anki-integration.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/anki-integration.md",
+      "category": "docs"
+    },
+    {
+      "path": "docs/china-knowledge-anki.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/china-knowledge-anki.md",
       "category": "docs"
     },
     {
@@ -5431,6 +5466,31 @@
       "category": "scripts"
     },
     {
+      "path": "scripts/china_knowledge/__init__.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/china_knowledge/__init__.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/china_knowledge/anki_client.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/china_knowledge/anki_client.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/china_knowledge/config.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/china_knowledge/config.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/china_knowledge/setup_china_knowledge_anki.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/china_knowledge/setup_china_knowledge_anki.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/china_knowledge/validate_china_knowledge.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/china_knowledge/validate_china_knowledge.py",
+      "category": "scripts"
+    },
+    {
       "path": "scripts/complete_stretch_pack_metadata.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/complete_stretch_pack_metadata.py",
       "category": "scripts"
@@ -5681,6 +5741,16 @@
       "category": "scripts"
     },
     {
+      "path": "tests/china_knowledge_fake_anki.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/china_knowledge_fake_anki.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/fixtures/china_knowledge_sample.tsv",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/fixtures/china_knowledge_sample.tsv",
+      "category": "tests"
+    },
+    {
       "path": "tests/hindi_fake_anki.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/hindi_fake_anki.py",
       "category": "scripts"
@@ -5698,6 +5768,26 @@
     {
       "path": "tests/test_anki_card_distribution.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_anki_card_distribution.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_china_knowledge_data.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_china_knowledge_data.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_china_knowledge_safety.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_china_knowledge_safety.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_china_knowledge_setup.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_china_knowledge_setup.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_china_knowledge_templates.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_china_knowledge_templates.py",
       "category": "scripts"
     },
     {
