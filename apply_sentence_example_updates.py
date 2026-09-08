@@ -6,6 +6,8 @@ from pathlib import Path
 from typing import Any
 from urllib.request import Request, urlopen
 
+from scripts.first_frost.content import manifest_by_word
+
 
 ROOT = Path(__file__).resolve().parent
 SOURCE_TSV = ROOT / "anki_chinese_review.tsv"
@@ -16,6 +18,9 @@ ANKI_CONNECT_URL = "http://127.0.0.1:8765"
 DECK_QUERY = "deck:Default"
 
 EXAMPLE_FIELDS = ["Example", "Example Pinyin", "Example Meaning", "Source"]
+PILOT_SOURCE_BY_WORD = {
+    word: row["Source"] for word, row in manifest_by_word().items()
+}
 
 
 def clean(value: str) -> str:
@@ -43,6 +48,23 @@ def anki(action: str, params: dict[str, Any] | None = None) -> Any:
 
 def note_field(note: dict[str, Any], name: str) -> str:
     return clean(note.get("fields", {}).get(name, {}).get("value", ""))
+
+
+def merge_source(existing: str, addition: str) -> str:
+    existing = clean(existing)
+    addition = clean(addition)
+    if not existing:
+        return addition
+    parts = [clean(part) for part in existing.split(" | ")]
+    return existing if addition in parts else f"{existing} | {addition}"
+
+
+def source_fields_for_note(note: dict[str, Any], source: dict[str, str]) -> dict[str, str]:
+    fields = {field: source[field] for field in EXAMPLE_FIELDS}
+    pilot_source = PILOT_SOURCE_BY_WORD.get(note_field(note, "Word"))
+    if pilot_source:
+        fields["Source"] = merge_source(note_field(note, "Source"), pilot_source)
+    return fields
 
 
 def load_source_rows() -> dict[str, dict[str, str]]:
@@ -121,7 +143,7 @@ def apply_updates(notes: list[dict[str, Any]], source_by_word: dict[str, dict[st
             missing_source.append(word)
             continue
 
-        fields = {field: source[field] for field in EXAMPLE_FIELDS}
+        fields = source_fields_for_note(note, source)
         if any(note_field(note, field) != value for field, value in fields.items()):
             changed_words.append(word)
             if note_field(note, "Sentence Card"):
@@ -159,7 +181,8 @@ def verify(source_by_word: dict[str, dict[str, str]]) -> dict[str, Any]:
         if not source:
             mismatches.append(word)
             continue
-        if any(note_field(note, field) != source[field] for field in EXAMPLE_FIELDS):
+        fields = source_fields_for_note(note, source)
+        if any(note_field(note, field) != fields[field] for field in EXAMPLE_FIELDS):
             mismatches.append(word)
 
     return {"mismatch_count": len(mismatches), "mismatches_preview": mismatches[:20]}

@@ -10,6 +10,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 import setup_production_sentence_cards as card_setup  # noqa: E402
+from scripts.anki_priority import priority_new_card_ids  # noqa: E402
 from scripts.anki_card_distribution import (  # noqa: E402
     DISTRIBUTION_REPORT,
     LEARNING_ORDER_PLAN,
@@ -30,7 +31,8 @@ from scripts.anki_card_distribution import (  # noqa: E402
 PENDING_TAG = "single_character_release_pending"
 ACTIVE_TAG = "single_character_release_active"
 SCHEDULE_TAG = "single_character_scheduled"
-ACTIVE_CARD_ORDS = {0, 2}
+# The managed Chinese model contains only Word Recognition and Sentence Recognition.
+ACTIVE_CARD_ORDS = {0, 1}
 
 
 def chunked(values: list[int], size: int) -> Iterable[list[int]]:
@@ -251,6 +253,40 @@ def apply_learning_order_to_anki(words: list[str], config: ScheduleConfig) -> di
             except Exception as fallback_exc:  # pragma: no cover - depends on AnkiConnect version
                 reposition_error = f"{exc}; fallback failed: {fallback_exc}"
 
+    # Pilot priority is stored as a note tag, so a later global reschedule can
+    # restore the reviewed cohort to the front without changing review cards.
+    tagged_priority_card_ids = priority_new_card_ids(
+        notes,
+        note_cards_after_unsuspend,
+        active_card_ords=ACTIVE_CARD_ORDS,
+    )
+    priority_repositioned_count = 0
+    if tagged_priority_card_ids:
+        try:
+            card_setup.anki(
+                "reposition",
+                {
+                    "cards": tagged_priority_card_ids,
+                    "startingFrom": 0,
+                    "step": 1,
+                    "randomize": False,
+                    "shiftPosition": True,
+                },
+            )
+            priority_repositioned_count = len(tagged_priority_card_ids)
+        except Exception as exc:  # pragma: no cover - depends on AnkiConnect version
+            try:
+                set_new_card_due_order(tagged_priority_card_ids)
+                priority_repositioned_count = len(tagged_priority_card_ids)
+                if reposition_error:
+                    reposition_error += f"; tagged priority used due-field fallback ({exc})"
+                else:
+                    reposition_error = f"tagged priority used due-field fallback ({exc})"
+            except Exception as fallback_exc:  # pragma: no cover - depends on AnkiConnect version
+                if reposition_error:
+                    reposition_error += "; "
+                reposition_error += f"tagged priority failed: {exc}; fallback failed: {fallback_exc}"
+
     live_audit = audit_distribution(active_live_words, run_threshold=config.run_threshold, window_sizes=(config.window_size,))
     live_window = live_audit["window_distribution"].get(str(config.window_size), {})
     return {
@@ -265,6 +301,7 @@ def apply_learning_order_to_anki(words: list[str], config: ScheduleConfig) -> di
         "cn_to_en_cards_unsuspended": len(cn_to_en_cards_to_unsuspend),
         "cn_to_en_new_cards_still_suspended": cn_to_en_new_cards_still_suspended,
         "new_cards_repositioned": repositioned_count,
+        "tagged_priority_cards_repositioned": priority_repositioned_count,
         "queue_order_method": queue_order_method,
         "live_longest_single_character_run": live_audit["longest_consecutive_single_character_run"]["length"],
         "live_window_max_single_character_cards": live_window.get("max_single_character_cards"),

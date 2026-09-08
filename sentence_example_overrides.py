@@ -879,3 +879,9 @@ SENTENCE_PINYIN_OVERRIDES: dict[str, str] = {
     "她教我中文。": "ta1 jiao1 wo3 zhong1 wen2。",
     "耶，我赢了！": "ye5，wo3 ying2 le5！",
 }
+
+
+# Keep reviewed reading-pilot sentences authoritative during normal TSV rebuilds.
+from scripts.first_frost.content import install_sentence_overrides  # noqa: E402
+
+install_sentence_overrides(SENTENCE_EXAMPLE_OVERRIDES, SENTENCE_PINYIN_OVERRIDES)
