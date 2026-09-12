@@ -31,6 +31,7 @@
     "max_forbidden_unknown_tokens_per_chapter": 5
   },
   "human_entry_points": [
+    "docs/first-frost-character-pilot.md",
     "README.md",
     "AGENTS.md",
     "AGENT_GITHUB_ENTRY.md",
@@ -52,6 +53,9 @@
     "docs/series-memory.md"
   ],
   "machine_entry_points": [
+    "anki/first_frost/character_pilot.json",
+    "scripts/first_frost/character_pilot.py",
+    "scripts/first_frost/character_content.py",
     "repo_manifest.json",
     "configs/novel_generation.default.json",
     "High frequency words 0-10000.txt",

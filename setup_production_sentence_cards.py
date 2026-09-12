@@ -20,6 +20,7 @@ MODEL_NAME = "Chinese Vocabulary"
 PRODUCTION_FIELD = "Production Card"
 SENTENCE_FIELD = "Sentence Card"
 RANK_FIELD = "Frequency Rank"
+MEANING_RECALL_TEMPLATE_NAME = "Meaning Recall"
 
 SENTENCE_TEMPLATE = {
     "Name": "Sentence Recognition",
@@ -228,20 +229,46 @@ def ensure_sentence_template() -> None:
         anki("updateModelStyling", {"model": {"name": MODEL_NAME, "css": styling.rstrip() + "\n" + CSS_APPEND + "\n"}})
 
 
-def production_cards_to_suspend(cards: list[dict[str, Any]]) -> list[int]:
-    return [int(card["cardId"]) for card in cards if int(card["ord"]) == 1 and int(card["queue"]) >= 0]
+def remove_meaning_recall_template() -> bool:
+    templates = anki("modelTemplates", {"modelName": MODEL_NAME})
+    if MEANING_RECALL_TEMPLATE_NAME not in templates:
+        return False
+    anki(
+        "modelTemplateRemove",
+        {
+            "modelName": MODEL_NAME,
+            "templateName": MEANING_RECALL_TEMPLATE_NAME,
+        },
+    )
+    return True
 
 
-def chinese_to_english_cards_to_unsuspend(cards: list[dict[str, Any]]) -> list[int]:
-    return [int(card["cardId"]) for card in cards if int(card["ord"]) in {0, 2} and int(card["queue"]) < 0]
+def recognition_template_ords() -> set[int]:
+    templates = anki("modelTemplates", {"modelName": MODEL_NAME})
+    names = list(templates)
+    required = {"Word Recognition", "Sentence Recognition"}
+    missing = sorted(required - set(names))
+    unwanted = sorted(set(names) - required)
+    if missing:
+        raise RuntimeError(f"Missing recognition card templates: {missing}")
+    if unwanted:
+        raise RuntimeError(f"Unexpected card templates remain: {unwanted}")
+    return {names.index(name) for name in required}
 
 
-def suspend_cards(card_ids: list[int]) -> None:
-    for start in range(0, len(card_ids), 500):
-        anki("suspend", {"cards": card_ids[start : start + 500]})
+def recognition_cards_to_unsuspend(cards: list[dict[str, Any]], active_ords: set[int]) -> list[int]:
+    return [
+        int(card["cardId"])
+        for card in cards
+        if int(card["ord"]) in active_ords and int(card["queue"]) < 0
+    ]
 
 
-def unsuspend_cards(card_ids: list[int]) -> None:
+def unsuspend_cards(card_ids: list[int], *, explicitly_requested: bool = False) -> None:
+    # Global model maintenance must preserve selective suspension. Targeted
+    # workflows use their own reviewed IDs or explicitly opt in here.
+    if not explicitly_requested:
+        return
     for start in range(0, len(card_ids), 500):
         anki("unsuspend", {"cards": card_ids[start : start + 500]})
 
@@ -291,15 +318,15 @@ def verify() -> dict[str, Any]:
     }
 
 
-def write_report(result: dict[str, Any], suspended_count: int, unsuspended_cn_to_en_count: int) -> None:
+def write_report(result: dict[str, Any], removed_meaning_recall: bool, unsuspended_recognition_count: int) -> None:
     lines = [
         "# Production And Sentence Card Setup Report",
         "",
-        "Standard word-recognition meaning cards are active for every note.",
+        "Existing recognition-card suspension and burial are preserved.",
         "Sentence cards are enabled for every note with `Example` and `Example Meaning` fields.",
-        "Production / meaning-recall cards are suspended by this script.",
-        f"Suspended production cards: {suspended_count}",
-        f"Unsuspended Chinese-to-English cards: {unsuspended_cn_to_en_count}",
+        "The Meaning Recall template is absent; no production/meaning-recall cards are generated.",
+        f"Meaning Recall template removed this run: {removed_meaning_recall}",
+        f"Unsuspended recognition cards: {unsuspended_recognition_count}",
         "",
         f"Notes: {result['notes']}",
         f"Cards: {result['cards']}",
@@ -335,16 +362,19 @@ def main() -> None:
     ensure_fields()
     update_note_flags(notes_before, ranks)
     ensure_sentence_template()
+    removed_meaning_recall = remove_meaning_recall_template()
 
-    cards_after_template = load_cards()
-    cards_to_suspend = production_cards_to_suspend(cards_after_template)
-    suspend_cards(cards_to_suspend)
-    cards_after_suspend = load_cards()
-    cn_to_en_cards_to_restore = chinese_to_english_cards_to_unsuspend(cards_after_suspend)
-    unsuspend_cards(cn_to_en_cards_to_restore)
+    active_ords = recognition_template_ords()
+    cards_after_templates = load_cards()
+    recognition_cards_to_restore = recognition_cards_to_unsuspend(cards_after_templates, active_ords)
+    unsuspend_cards(recognition_cards_to_restore)
 
     result = verify()
-    write_report(result, suspended_count=len(cards_to_suspend), unsuspended_cn_to_en_count=len(cn_to_en_cards_to_restore))
+    write_report(
+        result,
+        removed_meaning_recall=removed_meaning_recall,
+        unsuspended_recognition_count=0,
+    )
     print(json.dumps(result, ensure_ascii=False, indent=2))
 
 

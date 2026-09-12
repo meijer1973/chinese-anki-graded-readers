@@ -1,0 +1,107 @@
+{
+  "scope": "First ten character candidates; explicit selection and live suspended Word Recognition audit required",
+  "recommendations_sha256": "01a83b1a83c6cd287a881820b10bde50a308954e1cb761aecee4f26ba801b8c7",
+  "frequency_table_sha256": "296fafc21a154bf3a76bd39ecf9ec78c1f908e10fb62b86628be08362c85c531",
+  "notes": [
+    {
+      "Word": "唇",
+      "Example": "她咬了咬唇，还是没把那句话说出口。",
+      "Example Pinyin": "ta1 yao3 le5 yao3 chun2，hai2 shi4 mei2 ba3 na4 ju4 hua4 shuo1 chu1 kou3。",
+      "Example Meaning": "She bit her lip but still did not say those words.",
+      "Source": "reading-target:First Frost; example:original character pilot (user-provided recommendations)",
+      "Priority": 1,
+      "Book Count": 376,
+      "Chapters Present": 86
+    },
+    {
+      "Word": "视",
+      "Example": "两人的视线碰在一起，她先移开了眼。",
+      "Example Pinyin": "liang3 ren2 de5 shi4 xian4 peng4 zai4 yi4 qi3，ta1 xian1 yi2 kai1 le5 yan3。",
+      "Example Meaning": "Their eyes met, and she was the first to look away.",
+      "Source": "reading-target:First Frost; example:original character pilot (user-provided recommendations)",
+      "Priority": 2,
+      "Book Count": 328,
+      "Chapters Present": 85
+    },
+    {
+      "Word": "扯",
+      "Example": "她扯住他的衣角，不让他走。",
+      "Example Pinyin": "ta1 che3 zhu4 ta1 de5 yi1 jiao3，bu2 rang4 ta1 zou3。",
+      "Example Meaning": "She held onto the corner of his clothing and would not let him leave.",
+      "Source": "reading-target:First Frost; example:original character pilot (user-provided recommendations)",
+      "Priority": 3,
+      "Book Count": 271,
+      "Chapters Present": 81
+    },
+    {
+      "Word": "绪",
+      "Example": "她努力控制自己的情绪，不想在他面前哭。",
+      "Example Pinyin": "ta1 nu3 li4 kong4 zhi4 zi4 ji3 de5 qing2 xu4，bu4 xiang3 zai4 ta1 mian4 qian2 ku1。",
+      "Example Meaning": "She tried to control her emotions; she did not want to cry in front of him.",
+      "Source": "reading-target:First Frost; example:original character pilot (user-provided recommendations)",
+      "Priority": 4,
+      "Book Count": 207,
+      "Chapters Present": 80
+    },
+    {
+      "Word": "稍",
+      "Example": "他靠近时，她稍稍往后退了一步。",
+      "Example Pinyin": "ta1 kao4 jin4 shi2，ta1 shao1 shao1 wang3 hou4 tui4 le5 yi2 bu4。",
+      "Example Meaning": "As he came closer, she moved back a little.",
+      "Source": "reading-target:First Frost; example:original character pilot (user-provided recommendations)",
+      "Priority": 5,
+      "Book Count": 238,
+      "Chapters Present": 72
+    },
+    {
+      "Word": "懒",
+      "Example": "他懒懒地靠在门边，问她今天去了哪里。",
+      "Example Pinyin": "ta1 lan3 lan3 de5 kao4 zai4 men2 bian1，wen4 ta1 jin1 tian1 qu4 le5 na3 li3。",
+      "Example Meaning": "He leaned languidly by the door and asked where she had been that day.",
+      "Source": "reading-target:First Frost; example:original character pilot (user-provided recommendations)",
+      "Priority": 6,
+      "Book Count": 179,
+      "Chapters Present": 75
+    },
+    {
+      "Word": "淡",
+      "Example": "她淡淡地说了声谢谢，没有再看他。",
+      "Example Pinyin": "ta1 dan4 dan4 de5 shuo1 le5 sheng1 xie4 xie5，mei2 you3 zai4 kan4 ta1。",
+      "Example Meaning": "She thanked him in a subdued voice and did not look at him again.",
+      "Source": "reading-target:First Frost; example:original character pilot (user-provided recommendations)",
+      "Priority": 7,
+      "Book Count": 163,
+      "Chapters Present": 72
+    },
+    {
+      "Word": "察",
+      "Example": "他察觉她一直没说话，便问她是不是累了。",
+      "Example Pinyin": "ta1 cha2 jue2 ta1 yi4 zhi2 mei2 shuo1 hua4，bian4 wen4 ta1 shi4 bu2 shi4 lei4 le5。",
+      "Example Meaning": "He noticed that she had not said a word and asked whether she was tired.",
+      "Source": "reading-target:First Frost; example:original character pilot (user-provided recommendations)",
+      "Priority": 8,
+      "Book Count": 140,
+      "Chapters Present": 73
+    },
+    {
+      "Word": "渐",
+      "Example": "和他住在一起后，她渐渐不再怕黑。",
+      "Example Pinyin": "he2 ta1 zhu4 zai4 yi4 qi3 hou4，ta1 jian4 jian4 bu2 zai4 pa4 hei1。",
+      "Example Meaning": "After they began living together, she gradually stopped being afraid of the dark.",
+      "Source": "reading-target:First Frost; example:original character pilot (user-provided recommendations)",
+      "Priority": 9,
+      "Book Count": 313,
+      "Chapters Present": 74
+    },
+    {
+      "Word": "弯",
+      "Example": "听见她叫自己的名字，他的嘴角弯了起来。",
+      "Example Pinyin": "ting1 jian4 ta1 jiao4 zi4 ji3 de5 ming2 zi5，ta1 de5 zui3 jiao3 wan1 le5 qi3 lai2。",
+      "Example Meaning": "When he heard her call his name, the corners of his mouth curved into a smile.",
+      "Source": "reading-target:First Frost; example:original character pilot (user-provided recommendations)",
+      "Priority": 10,
+      "Book Count": 118,
+      "Chapters Present": 65
+    }
+  ]
+}

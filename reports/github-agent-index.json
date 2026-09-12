@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-08-06T14:54:32Z",
+  "generated_at": "2026-09-12T16:22:24Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 1169,
+  "file_count": 1187,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -238,6 +238,41 @@
     {
       "path": "anki/china_knowledge/reports/editorial_review.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/china_knowledge/reports/editorial_review.md",
+      "category": "anki"
+    },
+    {
+      "path": "anki/first_frost/character_pilot.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/first_frost/character_pilot.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/first_frost/first_frost_pilot_notes.tsv",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/first_frost/first_frost_pilot_notes.tsv",
+      "category": "anki"
+    },
+    {
+      "path": "anki/first_frost/local_results/.gitignore",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/first_frost/local_results/.gitignore",
+      "category": "anki"
+    },
+    {
+      "path": "anki/first_frost/reports/first_frost_pilot_apply_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/first_frost/reports/first_frost_pilot_apply_report.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/first_frost/reports/first_frost_pilot_dry_run.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/first_frost/reports/first_frost_pilot_dry_run.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/first_frost/reports/first_frost_pilot_idempotence_dry_run.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/first_frost/reports/first_frost_pilot_idempotence_dry_run.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/first_frost/reports/first_frost_pilot_verification.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/first_frost/reports/first_frost_pilot_verification.json",
       "category": "anki"
     },
     {
@@ -533,6 +568,16 @@
     {
       "path": "docs/external-agent-vocabulary.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/external-agent-vocabulary.md",
+      "category": "docs"
+    },
+    {
+      "path": "docs/first-frost-character-pilot.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/first-frost-character-pilot.md",
+      "category": "docs"
+    },
+    {
+      "path": "docs/first-frost-reading-pilot.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/first-frost-reading-pilot.md",
       "category": "docs"
     },
     {
@@ -5436,6 +5481,11 @@
       "category": "scripts"
     },
     {
+      "path": "scripts/anki_priority.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/anki_priority.py",
+      "category": "scripts"
+    },
+    {
       "path": "scripts/audit_anki_card_distribution.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/audit_anki_card_distribution.py",
       "category": "scripts"
@@ -5498,6 +5548,36 @@
     {
       "path": "scripts/export_stretch_words_for_anki.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/export_stretch_words_for_anki.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/first_frost/__init__.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/first_frost/__init__.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/first_frost/character_content.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/first_frost/character_content.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/first_frost/character_pilot.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/first_frost/character_pilot.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/first_frost/content.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/first_frost/content.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/first_frost/setup_first_frost_pilot.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/first_frost/setup_first_frost_pilot.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/first_frost/validate_first_frost_pilot.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/first_frost/validate_first_frost_pilot.py",
       "category": "scripts"
     },
     {
@@ -5771,6 +5851,11 @@
       "category": "scripts"
     },
     {
+      "path": "tests/test_character_pilot.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_character_pilot.py",
+      "category": "scripts"
+    },
+    {
       "path": "tests/test_china_knowledge_data.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_china_knowledge_data.py",
       "category": "scripts"
@@ -5788,6 +5873,11 @@
     {
       "path": "tests/test_china_knowledge_templates.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_china_knowledge_templates.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_first_frost_pilot.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_first_frost_pilot.py",
       "category": "scripts"
     },
     {

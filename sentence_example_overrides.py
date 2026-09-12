@@ -885,3 +885,8 @@ SENTENCE_PINYIN_OVERRIDES: dict[str, str] = {
 from scripts.first_frost.content import install_sentence_overrides  # noqa: E402
 
 install_sentence_overrides(SENTENCE_EXAMPLE_OVERRIDES, SENTENCE_PINYIN_OVERRIDES)
+
+# Character-pilot originals are independent of the earlier whole-word pilot.
+from scripts.first_frost.character_content import install_character_overrides  # noqa: E402
+
+install_character_overrides(SENTENCE_EXAMPLE_OVERRIDES, SENTENCE_PINYIN_OVERRIDES)

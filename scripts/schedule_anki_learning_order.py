@@ -136,14 +136,8 @@ def apply_learning_order_to_anki(words: list[str], config: ScheduleConfig) -> di
     note_cards = cards_by_note(cards)
     notes_by_word = {card_setup.note_field(note, "Word"): note for note in notes if card_setup.note_field(note, "Word")}
 
-    cn_to_en_cards_to_unsuspend = [
-        int(card["cardId"])
-        for card in cards
-        if int(card.get("ord", -1)) in ACTIVE_CARD_ORDS and int(card.get("queue", 0)) < 0
-    ]
-    for batch in chunked(cn_to_en_cards_to_unsuspend, 500):
-        if batch:
-            card_setup.unsuspend_cards(batch)
+    # Scheduling changes order, never the user's suspension/burial choices.
+    cn_to_en_cards_to_unsuspend: list[int] = []
 
     pending_tag_note_ids = [int(note["noteId"]) for note in notes if PENDING_TAG in note_tags(note)]
     anki_remove_tags(pending_tag_note_ids, PENDING_TAG)

@@ -25,7 +25,11 @@ python scripts/audit_anki_card_distribution.py
 python scripts/schedule_anki_learning_order.py
 ```
 
-The scheduler writes `anki/learning_order_plan.tsv` and `single_character_distribution_report.md`. It keeps Chinese-to-English cards unsuspended, then sets new-card due order so single-character and multi-character notes are interleaved as evenly as the available queue allows. `Frequency Rank` continues to mean the source-list rank; learning order is a generated plan, not a replacement rank.
+The scheduler writes `anki/learning_order_plan.tsv` and `single_character_distribution_report.md`. It preserves existing suspension and burial, then sets active new-card due order so single-character and multi-character notes are interleaved as evenly as the available queue allows. `Frequency Rank` continues to mean the source-list rank; learning order is a generated plan, not a replacement rank.
+
+For a selective reading-character batch, use `docs/first-frost-character-pilot.md`.
+Updating the example on a word-card back does not authorize unsuspending its
+sentence card. Model setup also preserves existing suspension by default.
 
 ## Export Candidates
 

@@ -7,6 +7,7 @@ from typing import Any
 from urllib.request import Request, urlopen
 
 from scripts.first_frost.content import manifest_by_word
+from scripts.first_frost.character_content import load_characters
 
 
 ROOT = Path(__file__).resolve().parent
@@ -21,6 +22,7 @@ EXAMPLE_FIELDS = ["Example", "Example Pinyin", "Example Meaning", "Source"]
 PILOT_SOURCE_BY_WORD = {
     word: row["Source"] for word, row in manifest_by_word().items()
 }
+PILOT_SOURCE_BY_WORD.update({row['Word']: row['Source'] for row in load_characters()})
 
 
 def clean(value: str) -> str:

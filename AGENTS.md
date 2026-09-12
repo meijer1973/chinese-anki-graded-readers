@@ -148,6 +148,17 @@ Use the minimal-intervention cascade: classify proper nouns and personal-known w
 ## Anki Collection
 
 The live collection scripts assume:
+### Selective recognition practice
+
+The user's suspension choices take precedence over the historical all-active
+policy below. Model setup and the global learning-order scheduler preserve
+existing suspension and burial by default. Unsuspend only explicitly selected
+recognition card IDs; activating a word card does not authorize activating its
+sentence sibling. First Frost character work starts at
+`docs/first-frost-character-pilot.md`; its private audit/backup artifacts stay in
+ignored `anki/first_frost/local_results/`. Never apply the whole-word pilot script
+to a word-only character selection.
+
 
 - AnkiConnect URL: `http://127.0.0.1:8765`
 - Deck query: `deck:Default`
@@ -158,7 +169,7 @@ Current card policy from the latest report:
 
 - Standard word-recognition meaning cards are active for every deck note.
 - Sentence cards are active for every deck note with `Example` and `Example Meaning` fields.
-- Production / meaning-recall cards remain available in the model but are suspended by the setup script.
+- The model has no production / meaning-recall card template. The setup script removes the legacy `Meaning Recall` template and its cards after writing a backup.
 
 ## Chinese Graded-Reader Novel Generation
 
@@ -356,7 +367,7 @@ $env:PYTHONIOENCODING='utf-8'
 python setup_production_sentence_cards.py
 ```
 
-This mutates the live Anki collection. It also manages the `Sentence Recognition` template and card suspension state.
+This mutates the live Anki collection. It manages the `Sentence Recognition` template, removes the legacy `Meaning Recall` template, and preserves existing recognition-card suspension and burial.
 
 Generate meaning-field review suggestions:
 
