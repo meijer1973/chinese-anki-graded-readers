@@ -56,6 +56,7 @@
     "anki/first_frost/character_pilot.json",
     "scripts/first_frost/character_pilot.py",
     "scripts/first_frost/character_content.py",
+    "scripts/first_frost/expand_character_pilot.py",
     "repo_manifest.json",
     "configs/novel_generation.default.json",
     "High frequency words 0-10000.txt",

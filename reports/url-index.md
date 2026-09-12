@@ -1157,6 +1157,7 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/first_frost/character_content.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/first_frost/character_pilot.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/first_frost/content.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/first_frost/expand_character_pilot.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/first_frost/setup_first_frost_pilot.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/first_frost/validate_first_frost_pilot.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/generate_reports.py
@@ -1214,6 +1215,7 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_china_knowledge_safety.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_china_knowledge_setup.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_china_knowledge_templates.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_expand_character_pilot.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_first_frost_pilot.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_hindi_anki_safety.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_hindi_anki_setup.py

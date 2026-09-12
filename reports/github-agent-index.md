@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki, Hindi And Spanish Starters, And Graded Readers
 
-Generated: 2026-09-12T16:22:24Z
+Generated: 2026-09-12T16:29:48Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 1187
+Files indexed: 1189
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -80,7 +80,7 @@ Count: 17
 
 ## scripts
 
-Count: 80
+Count: 82
 
 - add_missing_single_character_notes.py
 - apply_meaning_cleanup_updates.py
@@ -109,6 +109,7 @@ Count: 80
 - scripts/first_frost/character_content.py
 - scripts/first_frost/character_pilot.py
 - scripts/first_frost/content.py
+- scripts/first_frost/expand_character_pilot.py
 - scripts/first_frost/setup_first_frost_pilot.py
 - scripts/first_frost/validate_first_frost_pilot.py
 - scripts/generate_reports.py
@@ -150,6 +151,7 @@ Count: 80
 - tests/test_china_knowledge_safety.py
 - tests/test_china_knowledge_setup.py
 - tests/test_china_knowledge_templates.py
+- tests/test_expand_character_pilot.py
 - tests/test_first_frost_pilot.py
 - tests/test_hindi_anki_safety.py
 - tests/test_hindi_anki_setup.py

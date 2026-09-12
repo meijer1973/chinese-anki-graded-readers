@@ -158,9 +158,9 @@ def audit(state, frequencies, deck, out):
             'duplicates': {w: [n['noteId'] for n in ns] for w, ns in state['by_word'].items() if len(w) == 1 and len(ns) > 1}}
 
 
-def verify(before, after, selected, content):
+def verify(before, after, selected, content, *, unsuspended=None):
     target_ids = {r['note_id']: r['word'] for r in selected}
-    changed_cards = {r['card_id'] for r in selected}
+    changed_cards = ({r['card_id'] for r in selected} if unsuspended is None else set(unsuspended))
     a_notes = {n['noteId']: n for n in after['notes']}
     a_cards = {c['cardId']: c for c in after['cards']}
     errors = []
@@ -202,7 +202,7 @@ def verify(before, after, selected, content):
                 expected['mod'] = current['mod']
         if expected != card_state(current):
             errors.append(f"Unexpected card-state change: {old['cardId']}")
-        if old['cardId'] in changed_cards:
+        if old['cardId'] in {r['card_id'] for r in selected}:
             row = content[target_ids[old['note']]]
             if any(row[k] not in unescape(current['answer']) for k in EXAMPLE_FIELDS):
                 errors.append(f"Rendered word-card example mismatch: {row['Word']}")
@@ -259,7 +259,7 @@ def main():
         parser.error('--apply requires explicit --word selections')
     words = args.word or list(content)
     if len(set(words)) != len(words) or set(words) - set(content):
-        parser.error('Select unique words from the reviewed ten-character manifest')
+        parser.error('Select unique words from the reviewed character manifest')
     before = snapshot(args.deck)
     if args.verify_backup:
         original = json.loads(args.verify_backup.read_text(encoding='utf-8'))

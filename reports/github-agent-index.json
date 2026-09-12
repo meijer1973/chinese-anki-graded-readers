@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-12T16:22:24Z",
+  "generated_at": "2026-09-12T16:29:48Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 1187,
+  "file_count": 1189,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -5571,6 +5571,11 @@
       "category": "scripts"
     },
     {
+      "path": "scripts/first_frost/expand_character_pilot.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/first_frost/expand_character_pilot.py",
+      "category": "scripts"
+    },
+    {
       "path": "scripts/first_frost/setup_first_frost_pilot.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/first_frost/setup_first_frost_pilot.py",
       "category": "scripts"
@@ -5873,6 +5878,11 @@
     {
       "path": "tests/test_china_knowledge_templates.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_china_knowledge_templates.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_expand_character_pilot.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_expand_character_pilot.py",
       "category": "scripts"
     },
     {

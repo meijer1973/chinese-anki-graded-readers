@@ -2,11 +2,13 @@
 
 This workflow implements the first ten recommendations supplied in September 2026:
 唇、视、扯、绪、稍、懒、淡、察、渐、弯. The user approved all eligible suspended matches.
-The next twenty recommendations and twelve source-gap candidates are audit-only.
+The next twenty recommendations and twelve source-gap candidates were initially
+audit-only. The user subsequently approved that entire 32-character extension,
+including creating genuinely missing notes; see the extension workflow below.
 
 ## Content and evidence
 
-`anki/first_frost/character_pilot.json` contains the ten original examples, supplied
+`anki/first_frost/character_pilot.json` now contains all 42 original examples, supplied
 numbered-tone sentence pinyin, translations, and character-count evidence. It was
 transcribed from the supplied `READING_RECOMMENDATIONS.md`; the package's proposed
 TSV, audit script, EPUB, and `analysis_metadata.json` were not supplied locally.
@@ -49,14 +51,14 @@ shāo/shào and 渐 retains its existing readings. Their contextual examples use
 and jiàn respectively. Headword meanings are deliberately not rewritten from a
 single contextual example; 淡/懒 acquire the contextual nuance through translation.
 
-No cards or notes are created. Sentence and production card states, all due
+The initial-batch command creates no cards or notes. Sentence and production card states, all due
 positions, review history, FSRS state exposed by AnkiConnect, and daily limits
 remain unchanged. Original examples appear on the existing word-card backs.
 The command does not run global setup or scheduling routines.
 
 ## Persistence and verification
 
-`sentence_example_overrides.py` loads the ten reviewed examples after the earlier
+`sentence_example_overrides.py` loads all 42 reviewed examples after the earlier
 whole-word pilot. The cohorts have no identical headwords; exact sentence-pinyin
 overrides prevent automatic pronunciation replacement during TSV rebuilds.
 `apply_sentence_example_updates.py` preserves this pilot's original provenance.
@@ -102,3 +104,75 @@ The post-apply dry run reports all ten targets as already active. The twenty
 reserve recommendations and twelve source-gap candidates remain audit-only;
 four gaps now exist in the source and eight remain absent. No independent EPUB
 verification was possible with the supplied files.
+
+## Approved extension: next twenty and historical source gaps
+
+The follow-up request explicitly approves the remaining twenty recommendations
+and all twelve characters in the historical source-gap section. Use
+`scripts/first_frost/expand_character_pilot.py`, not the initial no-creation tool,
+for this fixed 32-character cohort. No extra unfamiliarity screening is inferred
+from source ranks, reader allowlists, or overlap with earlier compound notes.
+
+The live preflight found 24 reusable notes and eight genuinely missing characters:
+眉、瞬、瞥、垂、愣、抿、眸、睫. The July gaps 沉、默、忽、侧 already existed and must
+not be recreated. Append only the eight absent characters to the source tail;
+do not reorder any prior source rows or pretend that the append positions are
+newly measured corpus frequencies. The live `Frequency Rank` follows the actual
+local source position, consistent with existing character-closure conventions.
+
+All 32 examples, supplied sentence pinyin, and translations are preserved in the
+manifest and regenerated TSV. Existing headword fields remain untouched, including
+the multiple readings of 似 and 臂. New notes use dictionary headword data; the
+reviewed concise meanings of 瞬、愣、抿 are persistent `MEANING_OVERRIDES` entries.
+
+```powershell
+python build_anki_chinese.py
+python scripts/first_frost/expand_character_pilot.py
+python scripts/first_frost/expand_character_pilot.py --cohort next-twenty-and-gaps --apply
+```
+
+The first pilot command is a target-scoped read-only dry run. Before applying,
+the extension checks source/TSV uniqueness, exact curated examples, live model-wide
+duplicates, both template names, card/deck conflicts, leeches, and `canAddNotes`.
+It rechecks live and local inputs and saves a timestamped private snapshot/plan.
+`addNotes` uses `allowDuplicate: false`; partial outcomes are logged, never blindly
+retried. Back up the source list before appending, as well as the live data.
+
+Reuse/update existing active reviews without rescheduling them. Unsuspend only
+eligible unseen Word Recognition cards. New notes generate both recognition
+cards, and only their new Sentence Recognition card is suspended. Existing sibling
+states are preserved: the sentence reviews for 盯、低、顿 remain active. No media,
+production practice, model changes, global scheduler, review reset, due-position
+rewrite, or daily-limit changes are authorized by this extension.
+
+The verifier compares all pre-existing cards and Chinese notes and validates the
+exact added note IDs, fields/tags, two-card membership, initial new-card state,
+and rendered word-card examples. Repeat dry runs must propose zero additions,
+updates, or unsuspensions. Private extension backups/reports are kept in
+`anki/first_frost/local_results/expansion_20260912/`.
+
+### Extension result — 2026-09-12
+
+- Reused and updated 24 notes; created eight notes and 16 recognition cards.
+- Unsuspended 21 existing unseen word cards; eight new word cards are active.
+- All 32 extension word cards are active, including the existing reviews for
+  盯、低、顿. Those three reviews and their active sentence siblings were not reset.
+- The 21 existing suspended sentence siblings remain suspended, as do the eight
+  newly created sentence cards. No production cards or media were added.
+- Verification passed across all 9,420 pre-existing cards and 4,510 Chinese notes,
+  plus the eight new notes and 16 cards. No unrelated state, existing due positions,
+  review history, template, or daily-limit changes were found.
+- The post-apply dry run proposes zero updates, additions, or unsuspensions.
+  All 42 curated example triples survive TSV regeneration exactly; character
+  closure is complete and 173 tests passed.
+- No unresolved duplicate, pronunciation, or sense conflicts remain. Contextual
+  new-note definitions for 瞬、愣、抿 were reviewed before creation.
+
+The pre-apply HEAD was `208769f`. The eight new characters were appended at local
+source positions 4313–4320 without changing earlier rows. This checkout also has
+unrelated pre-existing source additions; they remain local/uncommitted. The scoped
+publication includes the four already-local historical-gap source entries as well
+as the eight new entries so the complete 42-character content is rebuildable from
+the published source, without publishing the unrelated intake batch. Source
+positions on that smaller published list differ from this local checkout; never
+rewrite live frequency fields or study order merely to reconcile that difference.

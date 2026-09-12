@@ -23,6 +23,10 @@ TAIWAN_NOISE_RE = re.compile(
 )
 
 MEANING_OVERRIDES: dict[str, str] = {
+    # Reviewed single-character additions for the First Frost reading pilot.
+    "瞬": "blink; instant (in 瞬间)",
+    "愣": "be stunned; stare blankly; distracted",
+    "抿": "press or close the lips lightly; sip; smooth down",
     "打": "da3: to hit; to call; to play; to do/make (verb-object phrases) | da2: dozen",
     "和": "he2: and; with | he4: to join in singing | huo4: to mix",
     "啊": "interjection; sentence-final particle for emphasis or response",
