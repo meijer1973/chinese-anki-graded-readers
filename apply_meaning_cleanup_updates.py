@@ -80,6 +80,7 @@ MEANING_OVERRIDES: dict[str, str] = {
     "喽": "final particle like 了; mild warning/attention particle",
     "丑": "ugly; shameful; clown; second Earthly Branch",
     "巴": "to long for; to cling to; Ba/Sichuan-Chongqing region",
+    "配合": "to coordinate; to cooperate; to work together",
 }
 
 

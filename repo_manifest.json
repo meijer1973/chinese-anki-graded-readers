@@ -32,6 +32,7 @@
   },
   "human_entry_points": [
     "docs/first-frost-character-pilot.md",
+    "docs/chinese-vocabulary-anki.md",
     "README.md",
     "AGENTS.md",
     "AGENT_GITHUB_ENTRY.md",
@@ -54,6 +55,10 @@
   ],
   "machine_entry_points": [
     "anki/first_frost/character_pilot.json",
+    "anki/current_deck_words.txt",
+    "anki/current_deck_words.metadata.json",
+    "scripts/export_current_anki_words.py",
+    "scripts/add_chinese_words_to_anki.py",
     "scripts/first_frost/character_pilot.py",
     "scripts/first_frost/character_content.py",
     "scripts/first_frost/expand_character_pilot.py",

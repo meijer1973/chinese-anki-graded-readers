@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-12T16:29:48Z",
+  "generated_at": "2026-09-14T13:55:40Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 1189,
+  "file_count": 1196,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -238,6 +238,16 @@
     {
       "path": "anki/china_knowledge/reports/editorial_review.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/china_knowledge/reports/editorial_review.md",
+      "category": "anki"
+    },
+    {
+      "path": "anki/current_deck_words.metadata.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/current_deck_words.metadata.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/current_deck_words.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/current_deck_words.txt",
       "category": "anki"
     },
     {
@@ -553,6 +563,11 @@
     {
       "path": "docs/china-knowledge-anki.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/china-knowledge-anki.md",
+      "category": "docs"
+    },
+    {
+      "path": "docs/chinese-vocabulary-anki.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/chinese-vocabulary-anki.md",
       "category": "docs"
     },
     {
@@ -5476,6 +5491,11 @@
       "category": "scripts"
     },
     {
+      "path": "scripts/add_chinese_words_to_anki.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/add_chinese_words_to_anki.py",
+      "category": "scripts"
+    },
+    {
       "path": "scripts/anki_card_distribution.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/anki_card_distribution.py",
       "category": "scripts"
@@ -5543,6 +5563,11 @@
     {
       "path": "scripts/complete_stretch_pack_metadata.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/complete_stretch_pack_metadata.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/export_current_anki_words.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/export_current_anki_words.py",
       "category": "scripts"
     },
     {
@@ -5851,6 +5876,11 @@
       "category": "scripts"
     },
     {
+      "path": "tests/test_add_chinese_words_to_anki.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_add_chinese_words_to_anki.py",
+      "category": "scripts"
+    },
+    {
       "path": "tests/test_anki_card_distribution.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_anki_card_distribution.py",
       "category": "scripts"
@@ -5883,6 +5913,11 @@
     {
       "path": "tests/test_expand_character_pilot.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_expand_character_pilot.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_export_current_anki_words.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_export_current_anki_words.py",
       "category": "scripts"
     },
     {

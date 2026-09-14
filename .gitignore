@@ -58,6 +58,7 @@ missing_single_character_notes_summary.md
 single_character_notes_added.tsv
 single_character_notes_policy_added.tsv
 word_list_before_single_character_notes_backup.txt
+word_list_before_character_closure_backup.txt
 
 # Generated Anki stretch import artifacts
 anki/stretch_word_import_ready.tsv

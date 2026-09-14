@@ -26,6 +26,7 @@ This repository answers:
 Repository boundaries:
 
 - The canonical ranked Anki deck source is `word list chinese.txt`.
+- For actual live-deck membership at the latest export, read `anki/current_deck_words.txt` and `anki/current_deck_words.metadata.json`. Refresh with read-only `scripts/export_current_anki_words.py`. This includes suspended notes and words added outside the ranked source; it is not proof of mastery or a reader allowlist.
 - The graded-reader ranked source is `High frequency words 0-10000.txt`.
 - The active known-word file for stories is `data/known_words.txt`, generated from the graded-reader source by `scripts/sync_known_words.py`.
 - Marcel personalized readers may also use `data/learner_profiles/marcel/personal_known_words.txt`, generated from the editable TSV in the same folder, plus `data/learner_profiles/marcel/high_frequency_characters.txt` with the current `--known-character-compound-limit 2100`.

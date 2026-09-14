@@ -37,6 +37,7 @@ Read that file first for repository access, exact paths, raw URLs, and task rout
 | How is EPUB built? | `scripts/build_epub.py`, `.agents/skills/epub-export/SKILL.md` |
 | How do stretch words flow toward Anki? | `docs/anki-integration.md`, `scripts/export_stretch_words_for_anki.py` |
 | How is Anki new-card order kept mixed? | `docs/anki-integration.md`, `scripts/audit_anki_card_distribution.py`, `scripts/schedule_anki_learning_order.py` |
+| What words are actually in the Chinese Anki deck at the latest export? | `anki/current_deck_words.txt`, `anki/current_deck_words.metadata.json`; refresh with `scripts/export_current_anki_words.py`. Includes suspended cards; not a mastery list |
 | How are selected First Frost character word cards enabled or missing characters added? | `docs/first-frost-character-pilot.md`, `anki/first_frost/character_pilot.json`, `scripts/first_frost/character_pilot.py`, `scripts/first_frost/expand_character_pilot.py`; preserve existing sibling states and suspend new sentence siblings |
 | How is the separate Hindi starter deck validated or installed? | `docs/hindi-anki.md`, `anki/hindi/hindi_core_100.tsv`, `scripts/hindi/setup_hindi_anki.py` |
 | How is the separate Spanish starter deck validated or installed? | `docs/spanish-anki.md`, `anki/spanish/spanish_core_100.tsv`, `scripts/spanish/setup_spanish_anki.py` |

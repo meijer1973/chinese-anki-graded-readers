@@ -45,25 +45,6 @@ CARD_TEMPLATES = [
 {{/Example}}
 """.strip(),
     },
-    {
-        "Name": "Meaning Recall",
-        "Front": """
-<div class="meaning prompt">{{Meaning}}</div>
-{{#Example Meaning}}
-<div class="example-meaning prompt">{{Example Meaning}}</div>
-{{/Example Meaning}}
-""".strip(),
-        "Back": """
-{{FrontSide}}
-<hr id="answer">
-<div class="word">{{Word}}</div>
-<div class="pinyin">{{Pinyin}}</div>
-{{#Example}}
-<div class="example">{{Example}}</div>
-<div class="example-pinyin">{{Example Pinyin}}</div>
-{{/Example}}
-""".strip(),
-    },
 ]
 
 CSS = """
@@ -313,7 +294,6 @@ def write_report(result: dict[str, Any]) -> None:
             "",
             "Created card templates:",
             "- Word Recognition",
-            "- Meaning Recall",
             "",
             "The Sentence Card field is intentionally blank for now. It gives us a clean switch to add sentence cards later without losing the sentence data already stored on each note.",
             "",

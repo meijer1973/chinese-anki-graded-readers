@@ -96,6 +96,18 @@ def ensure_model_fields() -> None:
             fields = anki("modelFieldNames", {"modelName": MODEL_NAME})
 
 
+def ensure_recognition_templates_only() -> None:
+    templates = set(anki("modelTemplates", {"modelName": MODEL_NAME}))
+    required = {"Word Recognition", "Sentence Recognition"}
+    missing = sorted(required - templates)
+    unwanted = sorted(templates - required)
+    if missing or unwanted:
+        raise RuntimeError(
+            f"Incompatible {MODEL_NAME!r} templates; missing={missing}, unwanted={unwanted}. "
+            "Run setup_production_sentence_cards.py first."
+        )
+
+
 def source_tags(row: dict[str, str], example_source: str, meaning_source: str) -> list[str]:
     pack = row.get("Pack", "stretch").replace(" ", "_")
     layer = row.get("Layer", "stretch").replace(" ", "_")
@@ -159,7 +171,7 @@ def enrich_candidate(
         "Example Meaning": example_meaning,
         "Source": source,
         "Production Card": "",
-        "Sentence Card": "",
+        "Sentence Card": "yes",
         "Frequency Rank": "",
         "Pack": row.get("Pack", ""),
         "Layer": row.get("Layer", ""),
@@ -177,22 +189,6 @@ def make_note(fields: dict[str, str], tags: list[str]) -> dict[str, Any]:
         "tags": tags,
         "options": {"allowDuplicate": False, "duplicateScope": "deck", "duplicateScopeOptions": {"deckName": DECK_NAME}},
     }
-
-
-def suspend_production_cards(note_ids: list[int]) -> int:
-    card_ids: list[int] = []
-    for start in range(0, len(note_ids), 100):
-        notes = anki("notesInfo", {"notes": note_ids[start : start + 100]})
-        cards = []
-        for note in notes:
-            cards.extend(note.get("cards", []))
-        if not cards:
-            continue
-        card_info = anki("cardsInfo", {"cards": cards})
-        card_ids.extend(int(card["cardId"]) for card in card_info if int(card.get("ord", -1)) == 1)
-    for start in range(0, len(card_ids), 500):
-        anki("suspend", {"cards": card_ids[start : start + 500]})
-    return len(card_ids)
 
 
 def write_added(rows: list[dict[str, str]]) -> None:
@@ -285,6 +281,7 @@ def import_stretch_words(candidate_path: str | Path, *, dry_run: bool = False) -
 
     if not dry_run and notes:
         ensure_model_fields()
+        ensure_recognition_templates_only()
         for start in range(0, len(notes), 50):
             batch = notes[start : start + 50]
             result = anki("addNotes", {"notes": batch})
@@ -299,7 +296,6 @@ def import_stretch_words(candidate_path: str | Path, *, dry_run: bool = False) -
                 added_rows.append(row)
                 added_note_ids.append(int(note_id))
 
-    suspended_production_cards = 0 if dry_run else suspend_production_cards(added_note_ids)
     if not dry_run:
         write_added(added_rows)
         write_import_ready(added_rows)
@@ -317,7 +313,7 @@ def import_stretch_words(candidate_path: str | Path, *, dry_run: bool = False) -
         "already_in_anki_count": len(skipped_existing),
         "to_add_count": len(enriched),
         "added_count": len(added_rows),
-        "suspended_production_cards": suspended_production_cards,
+        "meaning_recall_cards_created": 0,
         "meaning_sources": meaning_sources,
         "example_sources": example_sources,
         "skipped_existing": skipped_existing,
@@ -397,7 +393,9 @@ def verify_candidates(candidate_path: str | Path, *, write_files: bool = True) -
                 card_ids.extend(note.get("cards", []))
             if card_ids:
                 production_cards.extend(
-                    card for card in anki("cardsInfo", {"cards": card_ids}) if int(card.get("ord", -1)) == 1
+                    card
+                    for card in anki("cardsInfo", {"cards": card_ids})
+                    if int(card.get("ord", -1)) not in {0, 1}
                 )
 
     suspended_production = [card for card in production_cards if int(card.get("queue", 0)) < 0]

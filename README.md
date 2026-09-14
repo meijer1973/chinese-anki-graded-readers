@@ -4,7 +4,17 @@ This repository maintains a Chinese vocabulary Anki deck, completely separate Hi
 
 ## Main Workflows
 
+The latest live Chinese-deck inventory is
+[`anki/current_deck_words.txt`](anki/current_deck_words.txt): one unique word per
+line, exported directly from Default / Chinese Vocabulary, including suspended
+notes. See [`export metadata`](anki/current_deck_words.metadata.json) for the date,
+counts, and verification hash. It is deck membership, **not** a mastery or frequency
+list. Refresh it with `python scripts/export_current_anki_words.py` while Anki is
+open; this command does not change Anki. The ranked source and generated import
+TSVs are not a complete inventory of live notes added through other workflows.
+
 - Build Anki TSV exports from `word list chinese.txt` with `build_anki_chinese.py`.
+- Add reviewed Chinese vocabulary notes with duplicate protection by following `docs/chinese-vocabulary-anki.md` and using `scripts/add_chinese_words_to_anki.py`.
 - Keep Anki new-card order mixed with `scripts/audit_anki_card_distribution.py` and `scripts/schedule_anki_learning_order.py`.
 - Build and safely install the isolated 100-note Hindi starter deck with `docs/hindi-anki.md` and `scripts/hindi/setup_hindi_anki.py`.
 - Build and safely install the isolated 100-note Spanish starter deck with `docs/spanish-anki.md` and `scripts/spanish/setup_spanish_anki.py`.

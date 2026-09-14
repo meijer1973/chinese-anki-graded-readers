@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki, Hindi And Spanish Starters, And Graded Readers
 
-Generated: 2026-09-12T16:29:48Z
+Generated: 2026-09-14T13:55:40Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 1189
+Files indexed: 1196
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -58,11 +58,12 @@ Count: 30
 
 ## docs
 
-Count: 17
+Count: 18
 
 - docs/adaptation-workflow.md
 - docs/anki-integration.md
 - docs/china-knowledge-anki.md
+- docs/chinese-vocabulary-anki.md
 - docs/completion-response-template.md
 - docs/creative-preflight.md
 - docs/external-agent-vocabulary.md
@@ -80,7 +81,7 @@ Count: 17
 
 ## scripts
 
-Count: 82
+Count: 86
 
 - add_missing_single_character_notes.py
 - apply_meaning_cleanup_updates.py
@@ -90,6 +91,7 @@ Count: 82
 - migrate_chinese_notes.py
 - scripts/__init__.py
 - scripts/adaptation_tools.py
+- scripts/add_chinese_words_to_anki.py
 - scripts/anki_card_distribution.py
 - scripts/anki_priority.py
 - scripts/audit_anki_card_distribution.py
@@ -104,6 +106,7 @@ Count: 82
 - scripts/china_knowledge/setup_china_knowledge_anki.py
 - scripts/china_knowledge/validate_china_knowledge.py
 - scripts/complete_stretch_pack_metadata.py
+- scripts/export_current_anki_words.py
 - scripts/export_stretch_words_for_anki.py
 - scripts/first_frost/__init__.py
 - scripts/first_frost/character_content.py
@@ -145,6 +148,7 @@ Count: 82
 - tests/hindi_fake_anki.py
 - tests/spanish_fake_anki.py
 - tests/test_adaptation_workflow.py
+- tests/test_add_chinese_words_to_anki.py
 - tests/test_anki_card_distribution.py
 - tests/test_character_pilot.py
 - tests/test_china_knowledge_data.py
@@ -152,6 +156,7 @@ Count: 82
 - tests/test_china_knowledge_setup.py
 - tests/test_china_knowledge_templates.py
 - tests/test_expand_character_pilot.py
+- tests/test_export_current_anki_words.py
 - tests/test_first_frost_pilot.py
 - tests/test_hindi_anki_safety.py
 - tests/test_hindi_anki_setup.py
@@ -217,7 +222,7 @@ Count: 33
 
 ## anki
 
-Count: 30
+Count: 32
 
 - anki/anki_field_schema.md
 - anki/china_knowledge/china_knowledge.sources.json
@@ -226,6 +231,8 @@ Count: 30
 - anki/china_knowledge/reports/china_knowledge_offline_preview.json
 - anki/china_knowledge/reports/data_validation_report.json
 - anki/china_knowledge/reports/editorial_review.md
+- anki/current_deck_words.metadata.json
+- anki/current_deck_words.txt
 - anki/first_frost/character_pilot.json
 - anki/first_frost/first_frost_pilot_notes.tsv
 - anki/first_frost/local_results/.gitignore
