@@ -17,6 +17,29 @@ from scripts.spanish.validate_spanish_core_100 import DEFAULT_TSV, load_rows
 
 
 class SpanishAnkiSetupTests(unittest.TestCase):
+    def test_rerun_clones_preset_shared_with_unlisted_deck(self) -> None:
+        fake = FakeAnki()
+        with tempfile.TemporaryDirectory() as tmp:
+            self.make_manager(fake, Path(tmp)).apply()
+            shared = fake.deck_config_ids[DECK_NAME]
+            fake.decks['French'] = 99
+            fake.deck_config_ids['French'] = shared
+            fake.configs[shared]['new']['perDay'] = 15
+            before = copy.deepcopy(fake.configs[shared])
+            verification = self.make_manager(fake, Path(tmp)).verify_live()
+            self.assertEqual('FAIL', verification['status'])
+            self.assertIn('Spanish shares an options preset with another deck', verification['errors'])
+            plan = self.make_manager(fake, Path(tmp)).dry_run()
+            report = self.make_manager(fake, Path(tmp)).apply()
+            private_id = fake.deck_config_ids[DECK_NAME]
+            self.make_manager(fake, Path(tmp)).apply()
+            self.assertEqual(private_id, fake.deck_config_ids[DECK_NAME])
+        self.assertEqual('PASS', report['status'])
+        self.assertNotEqual(shared, fake.deck_config_ids[DECK_NAME])
+        self.assertEqual(shared, fake.deck_config_ids['French'])
+        self.assertEqual(before, fake.configs[shared])
+        self.assertTrue(plan['proposed_mutations']['clone_options_preset'])
+
     @classmethod
     def setUpClass(cls) -> None:
         cls.rows, _header, _findings = load_rows(DEFAULT_TSV)

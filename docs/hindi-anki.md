@@ -7,6 +7,8 @@ This repository also stores an independent Hindi language-learning deck. It is n
 - Deck: `Hindi`
 - Note type: `Hindi Vocabulary`
 - Options preset: `Hindi - 5 new cards`
+- If that name is already used by another deck, a private preset with a unique
+  `(private <id>)` suffix is created instead; subsequent runs reuse that private preset.
 - Templates: `Word Recognition`, `Sentence Recognition`
 - Managed tags: `hindi`, `hindi::core_100`, and one normalized `pos::*` tag
 
@@ -101,6 +103,13 @@ If Anki or AnkiConnect is unavailable, validation still works and the live comma
 ## Five Cards Per Day
 
 The script inspects the preset inherited by the new top-level `Hindi` deck, clones it to `Hindi - 5 new cards`, assigns the clone only to Hindi, and sets `new.perDay` to `5`. This means five new cards per day, not five notes. Because each note has two recognition cards, the complete collection still contains 100 notes and 200 cards.
+
+Before editing a preset, both planning and application enumerate every deck's
+preset, including decks outside the Chinese safety snapshot. Any preset used by
+another deck must be cloned. All other deck configurations are checked unchanged
+before saving and after configuration; an uninspectable deck causes a safe stop.
+Standalone verification also rejects any shared preset. The common ownership
+checks live in `scripts/anki_deck_options.py` and are also used by Spanish.
 
 Other learning, relearning, lapse, review, FSRS, and burying settings are preserved. For deterministic display, Hindi alone uses deck/ascending-position gathering and `Order gathered` sorting. The latter is required so each rank's Word Recognition card can immediately precede its Sentence Recognition card. The maximum review-card limit is not changed.
 

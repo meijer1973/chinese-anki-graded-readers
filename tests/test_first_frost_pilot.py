@@ -293,3 +293,36 @@ def test_apply_preserves_review_schedule_and_verifies_cohort(tmp_path: Path) -> 
     for card_id, old in before.items():
         for key in ("type", "queue", "due", "interval", "factor", "reps"):
             assert fake.cards[card_id][key] == old[key]
+
+
+def test_rerun_after_study_uses_current_schedule_and_preserves_initial_backup(tmp_path: Path) -> None:
+    fake = FakeAnki(reviewed_word='原谅')
+    backup = tmp_path / 'backup.tsv'
+    apply_pilot(manifest_path=MANIFEST_PATH, backup_path=backup, call_anki=fake)
+    historical = backup.read_bytes()
+    fake.cards[5000].update(due=200, reps=5, interval=20)
+    # Also graduate a card that was created by the original installation.
+    fake.cards[5002].update(type=2, queue=2, due=201, reps=1, interval=3)
+    before = copy.deepcopy(fake.cards)
+    report = apply_pilot(manifest_path=MANIFEST_PATH, backup_path=backup, call_anki=fake)
+    assert report['status'] == 'PASS'
+    assert fake.cards == before
+    assert backup.read_bytes() == historical
+    assert Path(report['this_run_backup']).exists()
+
+
+def test_rerun_still_detects_schedule_damage_during_current_apply(tmp_path: Path) -> None:
+    fake = FakeAnki()
+    backup = tmp_path / 'backup.tsv'
+    apply_pilot(manifest_path=MANIFEST_PATH, backup_path=backup, call_anki=fake)
+    fake.cards[5000].update(type=2, queue=2, due=201, reps=1, interval=3)
+    fake.notes[1000]['fields']['Example']['value'] = 'needs update'
+
+    def damaging_call(action, params=None):
+        result = fake(action, params)
+        if action == 'updateNoteFields':
+            fake.cards[5000]['due'] += 1
+        return result
+
+    with pytest.raises(FirstFrostPilotError, match='Reviewed card schedules changed'):
+        apply_pilot(manifest_path=MANIFEST_PATH, backup_path=backup, call_anki=damaging_call)

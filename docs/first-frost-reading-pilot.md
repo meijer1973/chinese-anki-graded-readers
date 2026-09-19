@@ -11,7 +11,7 @@ This pilot uses the existing `Default` deck and `Chinese Vocabulary` note type. 
 - Keep exactly the existing `Word Recognition` and `Sentence Recognition` templates. Do not add production cards.
 - Never alter a reviewed or learning card's queue, due date, interval, ease, repetitions, or lapses.
 - Unsuspend only unseen pilot recognition cards. Prioritize those unseen cards ahead of the active generic new-card queue.
-- Keep priority persistent through tags of the form `pilot_first_frost_priority_NNN`; the global learning-order scheduler reapplies tagged priority after its normal ordering pass.
+- Keep priority persistent through tags of the form `pilot_first_frost_priority_NNN`; the global learning-order scheduler builds one complete queue with tagged priority cards first and assigns collision-free positions, including in the due-field fallback. It reads the queue back and fails if membership, order, or position uniqueness is wrong.
 - Keep the unranked support characters `勉`, `慎`, and `谨` separate from the 60-note pilot. Their six unseen cards remain suspended.
 
 ## Commands
@@ -38,6 +38,15 @@ python scripts/first_frost/setup_first_frost_pilot.py
 ```
 
 Normal `build_anki_chinese.py` rebuilds import the reviewed pilot examples and exact sentence pinyin from the tracked manifest. `apply_sentence_example_updates.py` merges pilot provenance instead of replacing an existing `Source` value.
+
+Every application also writes a timestamped `*_backup.tsv` beside the original
+backup before mutating Anki. Review-schedule and protected-field preservation are
+checked against this fresh per-run snapshot, including cards learned since the
+initial installation. The original backup remains unchanged for historical
+counts and recovery. Apply reports identify both `backup` and `this_run_backup`.
+These backups remain local/ignored. `--verify-only` checks current cohort content,
+card shape, and priority; it does not compare today's schedules to installation
+day or claim that no study has happened. Its preservation-check flags are false.
 
 ## Applied result
 

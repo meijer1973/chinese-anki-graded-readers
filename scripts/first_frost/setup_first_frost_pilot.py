@@ -5,6 +5,7 @@ import csv
 import json
 import sys
 from collections import defaultdict
+from datetime import datetime, timezone
 from html import unescape
 from pathlib import Path
 from typing import Any, Callable, Iterable
@@ -838,6 +839,8 @@ def verify_live(
         "rendered_card_preview_mismatch_count": len(rendered_preview_mismatches),
         "pilot_priority_correct": priority_ok,
         "reviewed_schedule_mismatch_count": len(schedule_mismatches),
+        "reviewed_schedule_preservation_checked": reviewed_schedule_before is not None,
+        "protected_note_preservation_checked": protected_note_before is not None,
         "protected_note_field_mismatch_count": len(protected_field_mismatches),
         "source_provenance_mismatch_count": len(source_provenance_mismatches),
         "notes_with_removed_existing_tags": len(removed_existing_tags),
@@ -873,7 +876,11 @@ def apply_pilot(
             target_words,
             support_words,
         )
-    original_reviewed_schedule = reviewed_schedule_from_backup(backup_path)
+    # Keep the original backup for historical counts, but protect the state at
+    # the start of THIS apply. Normal study between runs is not installer damage.
+    stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%S%fZ')
+    run_backup = backup_path.with_name(f'{backup_path.stem}_{stamp}_backup.tsv')
+    write_backup(run_backup, internal['state']['notes'], internal['cards_by_note'], target_words, support_words)
 
     update_notes(internal["updates"], call_anki)
     added_target_ids = add_notes(internal["target_additions"], call_anki)
@@ -940,8 +947,8 @@ def apply_pilot(
     verification = verify_live(
         manifest_path=manifest_path,
         call_anki=call_anki,
-        reviewed_schedule_before=original_reviewed_schedule or internal["reviewed_schedule_before"],
-        protected_note_before=protected_note_state_from_backup(backup_path),
+        reviewed_schedule_before=reviewed_schedule_from_backup(run_backup),
+        protected_note_before=protected_note_state_from_backup(run_backup),
     )
     if verification["status"] != "PASS":
         raise FirstFrostPilotError("Post-apply verification failed: " + "; ".join(verification["errors"]))
@@ -960,6 +967,7 @@ def apply_pilot(
         "status": "PASS",
         "mode": "apply",
         "backup": str(backup_path),
+        "this_run_backup": str(run_backup),
         "backup_reused_from_initial_apply": backup_already_existed,
         "reused_target_notes": baseline["target_notes"],
         "updated_reused_target_notes": baseline["target_notes_needing_update"],
@@ -1023,8 +1031,9 @@ def main() -> int:
             report = verify_live(
                 manifest_path=args.manifest,
                 call_anki=call_anki,
-                reviewed_schedule_before=reviewed_schedule_from_backup(args.backup),
-                protected_note_before=protected_note_state_from_backup(args.backup),
+                # This is a current-cohort check, not a comparison with the
+                # installation-day review schedule. Apply verifies preservation
+                # against its own fresh pre-mutation snapshot.
             )
             default_report = REPORT_DIR / "first_frost_pilot_verification.json"
         elif args.apply:

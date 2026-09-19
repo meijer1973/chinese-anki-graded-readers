@@ -59,6 +59,7 @@
     "anki/current_deck_words.metadata.json",
     "scripts/export_current_anki_words.py",
     "scripts/add_chinese_words_to_anki.py",
+    "scripts/anki_deck_options.py",
     "scripts/first_frost/character_pilot.py",
     "scripts/first_frost/character_content.py",
     "scripts/first_frost/expand_character_pilot.py",

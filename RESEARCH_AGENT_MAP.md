@@ -35,6 +35,7 @@ Repository boundaries:
 - Canonical story text is always space-tokenized `chapters/*.zh-tok.txt`.
 - Final EPUB files and build reports for accepted manuscripts are tracked under `manuscripts/<slug>/epub/`.
 - Live Anki mutation happens only through explicit scripts and should not be assumed safe without reading `AGENTS.md`.
+- Hindi/Spanish preset isolation checks every deck through `scripts/anki_deck_options.py`, not only the named protected decks. Shared presets must be cloned before settings changes; other deck configurations must remain unchanged.
 - Selective First Frost character practice: `docs/first-frost-character-pilot.md`, `anki/first_frost/character_pilot.json`, and `scripts/first_frost/character_pilot.py`. The explicitly approved next-twenty/source-gap extension uses `scripts/first_frost/expand_character_pilot.py`: reuse existing notes, create only genuine gaps, suspend new sentence siblings, and preserve all existing schedules. Private audit outputs are ignored under `anki/first_frost/local_results/`.
 - The Hindi starter deck is a separate top-level deck and note type. Its source of truth is `anki/hindi/hindi_core_100.tsv`; start with `docs/hindi-anki.md` and never route it through Chinese mutation scripts.
 - The Spanish starter deck is a separate top-level deck and note type. Its source of truth is `anki/spanish/spanish_core_100.tsv`; start with `docs/spanish-anki.md` and never route it through Chinese or Hindi mutation scripts.

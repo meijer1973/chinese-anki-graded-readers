@@ -16,6 +16,9 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from scripts.anki_deck_options import (  # noqa: E402
+    other_deck_configs, assert_other_configs_unchanged, managed_preset, clone_preset_name,
+)
 from scripts.spanish.anki_client import (  # noqa: E402
     ANKI_CONNECT_URL,
     AnkiClient,
@@ -551,6 +554,7 @@ class SpanishAnkiSetup:
 
         inherited_config = state["config"] or chinese_snapshot["deck_config"]
         inherited_config_id = int(inherited_config["id"])
+        other_config_ids = {int(c['id']) for c in other_deck_configs(self.client.read, DECK_NAME, SpanishSetupError).values()}
         protected_config_ids = {
             int(snapshot["deck_config"]["id"])
             for snapshot in (chinese_snapshot, hindi_snapshot)
@@ -558,8 +562,9 @@ class SpanishAnkiSetup:
         }
         needs_clone = (
             state["config"] is None
-            or inherited_config.get("name") != OPTIONS_PRESET_NAME
+            or not managed_preset(inherited_config.get("name"), OPTIONS_PRESET_NAME)
             or inherited_config_id in protected_config_ids
+            or inherited_config_id in other_config_ids
         )
         option_changes = []
         if int(inherited_config.get("new", {}).get("perDay", -1)) != 5:
@@ -675,14 +680,21 @@ class SpanishAnkiSetup:
             for config in protected_configs_before.values()
             if isinstance(config, dict) and config.get("id") is not None
         }
+        others_before = other_deck_configs(self.client.read, DECK_NAME, SpanishSetupError)
+        protected_ids.update(int(c['id']) for c in others_before.values())
+        self.client.guard.protected_config_ids.update(protected_ids)
 
-        if inherited.get("name") == OPTIONS_PRESET_NAME and inherited_id not in protected_ids:
+        if managed_preset(inherited.get("name"), OPTIONS_PRESET_NAME) and inherited_id not in protected_ids:
             spanish_config_id = inherited_id
+            preset_name = inherited['name']
+            self.client.guard.spanish_preset = preset_name
             self.client.guard.register_spanish_config(spanish_config_id)
         else:
+            preset_name = clone_preset_name(OPTIONS_PRESET_NAME, others_before)
+            self.client.guard.spanish_preset = preset_name
             cloned = self.client.mutate(
                 "cloneDeckConfigId",
-                {"name": OPTIONS_PRESET_NAME, "cloneFrom": inherited_id},
+                {"name": preset_name, "cloneFrom": inherited_id},
             )
             if cloned is False or cloned is None:
                 raise SpanishSetupError(
@@ -702,7 +714,7 @@ class SpanishAnkiSetup:
                 raise SpanishSetupError("failed to assign the cloned options preset only to deck Spanish")
 
         config = self.client.read("getDeckConfig", {"deck": DECK_NAME})
-        if int(config["id"]) != spanish_config_id or config.get("name") != OPTIONS_PRESET_NAME:
+        if int(config["id"]) != spanish_config_id or config.get("name") != preset_name:
             raise SpanishSetupError("Spanish did not retain the independently cloned options preset")
 
         updated = copy.deepcopy(config)
@@ -720,15 +732,17 @@ class SpanishAnkiSetup:
             changed.append("newSortOrder")
 
         if changed:
+            assert_other_configs_unchanged(self.client.read, DECK_NAME, others_before, spanish_config_id, SpanishSetupError)
             saved = self.client.mutate("saveDeckConfig", {"config": updated})
             if saved is not True:
                 raise SpanishSetupError("failed to save the independent Spanish options preset")
         self.spanish_only_option_changes = changed
 
         final = self.client.read("getDeckConfig", {"deck": DECK_NAME})
+        assert_other_configs_unchanged(self.client.read, DECK_NAME, others_before, spanish_config_id, SpanishSetupError)
         if int(final["id"]) in protected_ids:
             raise SpanishSetupError("Spanish still shares a protected Chinese/Hindi options preset")
-        if final.get("name") != OPTIONS_PRESET_NAME or int(final["new"]["perDay"]) != 5:
+        if final.get("name") != preset_name or int(final["new"]["perDay"]) != 5:
             raise SpanishSetupError("Spanish preset verification failed")
         if int(final.get("newGatherPriority", -1)) != 0 or int(final.get("newSortOrder", -1)) != 1:
             raise SpanishSetupError("Spanish new-card display order is not deterministic")
@@ -995,13 +1009,14 @@ class SpanishAnkiSetup:
             for value in (chinese_config, hindi_config)
             if isinstance(value, dict)
         }
+        protected_config_ids.update(int(c['id']) for c in other_deck_configs(self.client.read, DECK_NAME, SpanishSetupError).values())
         if not config:
             errors.append("Spanish options preset is unavailable")
         else:
-            if config.get("name") != OPTIONS_PRESET_NAME:
+            if not managed_preset(config.get("name"), OPTIONS_PRESET_NAME):
                 errors.append(f"Spanish preset name is {config.get('name')!r}")
             if int(config.get("id", -1)) in protected_config_ids:
-                errors.append("Spanish shares a protected Chinese/Hindi options preset")
+                errors.append("Spanish shares an options preset with another deck")
             if int(config.get("new", {}).get("perDay", -1)) != 5:
                 errors.append("Spanish new cards/day is not 5")
             if int(config.get("newGatherPriority", -1)) != 0:

@@ -124,10 +124,25 @@ def set_new_card_due_order(card_ids: list[int], *, starting_from: int = 0) -> No
         for index, card_id in enumerate(card_ids)
     ]
     for start in range(0, len(actions), 100):
-        results = card_setup.anki("multi", {"actions": actions[start : start + 100]})
+        batch = actions[start : start + 100]
+        results = card_setup.anki("multi", {"actions": batch})
+        if not isinstance(results, list) or len(results) != len(batch):
+            raise RuntimeError("Invalid new-card due-order response")
         for result in results:
-            if isinstance(result, dict) and result.get("error"):
-                raise RuntimeError(result["error"])
+            if isinstance(result, dict):
+                if result.get("error"):
+                    raise RuntimeError(result["error"])
+                result = result.get("result")
+            if result != [True]:
+                raise RuntimeError(f"New-card due update failed: {result!r}")
+
+
+def verify_new_card_queue(expected_ids: list[int], cards: list[dict[str, Any]]) -> None:
+    active = [card for card in cards if is_new_card(card, include_suspended=False)]
+    ordered = sorted(active, key=lambda card: (int(card['due']), int(card['cardId'])))
+    if ([int(card['cardId']) for card in ordered] != expected_ids
+            or len({int(card['due']) for card in active}) != len(active)):
+        raise RuntimeError("New-card queue verification failed: order, membership, or due-position collision")
 
 
 def apply_learning_order_to_anki(words: list[str], config: ScheduleConfig) -> dict[str, Any]:
@@ -221,6 +236,17 @@ def apply_learning_order_to_anki(words: list[str], config: ScheduleConfig) -> di
         and int(card.get("queue", 0)) < 0
     )
     reposition_card_ids = card_ids_for_words(active_live_words, notes_by_word, note_cards_after_unsuspend)
+    # Build one complete queue. Repositioning priority cards separately makes
+    # their fallback positions collide with ordinary cards already at 0..N.
+    tagged_priority_card_ids = priority_new_card_ids(
+        notes, note_cards_after_unsuspend, active_card_ords=ACTIVE_CARD_ORDS,
+    )
+    remaining_ids = [
+        int(card['cardId']) for card in sorted(
+            cards_after_unsuspend, key=lambda card: (int(card['due']), int(card['cardId']))
+        ) if is_new_card(card, include_suspended=False)
+    ]
+    reposition_card_ids = list(dict.fromkeys(tagged_priority_card_ids + reposition_card_ids + remaining_ids))
     repositioned_count = 0
     reposition_error = ""
     queue_order_method = ""
@@ -233,9 +259,10 @@ def apply_learning_order_to_anki(words: list[str], config: ScheduleConfig) -> di
                     "startingFrom": 0,
                     "step": 1,
                     "randomize": False,
-                    "shiftPosition": True,
+                    "shiftPosition": False,
                 },
             )
+            verify_new_card_queue(reposition_card_ids, card_setup.load_cards())
             repositioned_count = len(reposition_card_ids)
             queue_order_method = "reposition"
         except Exception as exc:  # pragma: no cover - depends on AnkiConnect version
@@ -243,43 +270,12 @@ def apply_learning_order_to_anki(words: list[str], config: ScheduleConfig) -> di
                 set_new_card_due_order(reposition_card_ids)
                 repositioned_count = len(reposition_card_ids)
                 queue_order_method = "setSpecificValueOfCard:due"
-                reposition_error = f"reposition unsupported; used due-field fallback ({exc})"
-            except Exception as fallback_exc:  # pragma: no cover - depends on AnkiConnect version
-                reposition_error = f"{exc}; fallback failed: {fallback_exc}"
+                reposition_error = f"reposition unavailable or queue verification failed; used due-field fallback ({exc})"
+            except Exception as fallback_exc:
+                raise RuntimeError(f"New-card queue update failed: {exc}; fallback failed: {fallback_exc}") from fallback_exc
 
-    # Pilot priority is stored as a note tag, so a later global reschedule can
-    # restore the reviewed cohort to the front without changing review cards.
-    tagged_priority_card_ids = priority_new_card_ids(
-        notes,
-        note_cards_after_unsuspend,
-        active_card_ords=ACTIVE_CARD_ORDS,
-    )
-    priority_repositioned_count = 0
-    if tagged_priority_card_ids:
-        try:
-            card_setup.anki(
-                "reposition",
-                {
-                    "cards": tagged_priority_card_ids,
-                    "startingFrom": 0,
-                    "step": 1,
-                    "randomize": False,
-                    "shiftPosition": True,
-                },
-            )
-            priority_repositioned_count = len(tagged_priority_card_ids)
-        except Exception as exc:  # pragma: no cover - depends on AnkiConnect version
-            try:
-                set_new_card_due_order(tagged_priority_card_ids)
-                priority_repositioned_count = len(tagged_priority_card_ids)
-                if reposition_error:
-                    reposition_error += f"; tagged priority used due-field fallback ({exc})"
-                else:
-                    reposition_error = f"tagged priority used due-field fallback ({exc})"
-            except Exception as fallback_exc:  # pragma: no cover - depends on AnkiConnect version
-                if reposition_error:
-                    reposition_error += "; "
-                reposition_error += f"tagged priority failed: {exc}; fallback failed: {fallback_exc}"
+    verify_new_card_queue(reposition_card_ids, card_setup.load_cards())
+    priority_repositioned_count = len(tagged_priority_card_ids)
 
     live_audit = audit_distribution(active_live_words, run_threshold=config.run_threshold, window_sizes=(config.window_size,))
     live_window = live_audit["window_distribution"].get(str(config.window_size), {})
@@ -297,6 +293,7 @@ def apply_learning_order_to_anki(words: list[str], config: ScheduleConfig) -> di
         "new_cards_repositioned": repositioned_count,
         "tagged_priority_cards_repositioned": priority_repositioned_count,
         "queue_order_method": queue_order_method,
+        "queue_order_verified": True,
         "live_longest_single_character_run": live_audit["longest_consecutive_single_character_run"]["length"],
         "live_window_max_single_character_cards": live_window.get("max_single_character_cards"),
         "first_pending_single_characters": [],

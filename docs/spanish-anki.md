@@ -7,6 +7,8 @@ This repository stores an independent Spanish language-learning deck alongside, 
 - Deck: `Spanish`
 - Note type: `Spanish Vocabulary`
 - Options preset: `Spanish - 5 new cards`
+- If that name is already used by another deck, a private preset with a unique
+  `(private <id>)` suffix is created instead; subsequent runs reuse that private preset.
 - Templates: `Word Recognition`, `Sentence Recognition`
 - Managed tags: `spanish`, `spanish::core_100`, and one normalized `pos::*` tag
 
@@ -120,6 +122,12 @@ If Anki or AnkiConnect is unavailable, data validation still works and the live 
 ## Five New Cards Per Day
 
 The script inspects the preset inherited by the new top-level `Spanish` deck, clones it to `Spanish - 5 new cards`, assigns the clone only to Spanish, and sets `new.perDay` to `5`. This means five new cards per day, not five notes. The complete starter collection contains 100 notes and 200 cards.
+
+Preset ownership is checked against every deck, not just Chinese and Hindi.
+Planning/application clone a preset shared with any other deck; checks before
+saving and afterward verify that every other deck retains its full configuration.
+An uninspectable deck causes a safe stop. Standalone verification rejects shared
+presets too. These checks use `scripts/anki_deck_options.py`.
 
 Other learning, relearning, lapse, review, FSRS, and burying settings are preserved. Spanish alone uses deck/ascending-position gathering and `Order gathered` sorting so every rank's Word Recognition card precedes its Sentence Recognition card. The maximum review-card limit is not changed.
 

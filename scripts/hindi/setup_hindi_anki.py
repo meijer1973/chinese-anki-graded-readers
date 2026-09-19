@@ -16,6 +16,9 @@ ROOT = Path(__file__).resolve().parents[2]
 if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
+from scripts.anki_deck_options import (  # noqa: E402
+    other_deck_configs, assert_other_configs_unchanged, managed_preset, clone_preset_name,
+)
 from scripts.hindi.anki_client import (  # noqa: E402
     ANKI_CONNECT_URL,
     AnkiClient,
@@ -489,10 +492,12 @@ class HindiAnkiSetup:
 
         inherited_config = state["config"] or chinese_snapshot["deck_config"]
         inherited_config_id = int(inherited_config["id"])
+        other_config_ids = {int(c['id']) for c in other_deck_configs(self.client.read, DECK_NAME, HindiSetupError).values()}
         needs_clone = (
             state["config"] is None
-            or inherited_config.get("name") != OPTIONS_PRESET_NAME
+            or not managed_preset(inherited_config.get("name"), OPTIONS_PRESET_NAME)
             or inherited_config_id == int(chinese_snapshot["deck_config"]["id"])
+            or inherited_config_id in other_config_ids
         )
         option_changes = []
         if int(inherited_config.get("new", {}).get("perDay", -1)) != 5:
@@ -599,22 +604,29 @@ class HindiAnkiSetup:
             raise HindiSetupError("could not inspect the options preset inherited by deck Hindi")
         inherited_id = int(inherited["id"])
         protected_id = int(default_config_before["id"])
+        others_before = other_deck_configs(self.client.read, DECK_NAME, HindiSetupError)
+        protected_ids = {protected_id, *(int(c['id']) for c in others_before.values())}
+        self.client.guard.protected_config_ids.update(protected_ids)
 
-        if inherited.get("name") == OPTIONS_PRESET_NAME and inherited_id != protected_id:
+        if managed_preset(inherited.get("name"), OPTIONS_PRESET_NAME) and inherited_id not in protected_ids:
             hindi_config_id = inherited_id
+            preset_name = inherited['name']
+            self.client.guard.hindi_preset = preset_name
             self.client.guard.register_hindi_config(hindi_config_id)
         else:
+            preset_name = clone_preset_name(OPTIONS_PRESET_NAME, others_before)
+            self.client.guard.hindi_preset = preset_name
             cloned = self.client.mutate(
                 "cloneDeckConfigId",
-                {"name": OPTIONS_PRESET_NAME, "cloneFrom": inherited_id},
+                {"name": preset_name, "cloneFrom": inherited_id},
             )
             if cloned is False or cloned is None:
                 raise HindiSetupError(
                     "AnkiConnect cannot safely clone an independent Hindi options preset; apply aborted"
                 )
             hindi_config_id = int(cloned)
-            if hindi_config_id == protected_id:
-                raise HindiSetupError("cloned Hindi preset unexpectedly reused the protected Default preset")
+            if hindi_config_id in protected_ids:
+                raise HindiSetupError("cloned Hindi preset unexpectedly reused another deck's preset")
             self.client.guard.register_hindi_config(hindi_config_id)
             assigned = self.client.mutate(
                 "setDeckConfigId",
@@ -624,7 +636,7 @@ class HindiAnkiSetup:
                 raise HindiSetupError("failed to assign the cloned options preset only to deck Hindi")
 
         config = self.client.read("getDeckConfig", {"deck": DECK_NAME})
-        if int(config["id"]) != hindi_config_id or config.get("name") != OPTIONS_PRESET_NAME:
+        if int(config["id"]) != hindi_config_id or config.get("name") != preset_name:
             raise HindiSetupError("Hindi did not retain the independently cloned options preset")
 
         updated = copy.deepcopy(config)
@@ -642,6 +654,7 @@ class HindiAnkiSetup:
             changed.append("newSortOrder")
 
         if changed:
+            assert_other_configs_unchanged(self.client.read, DECK_NAME, others_before, hindi_config_id, HindiSetupError)
             saved = self.client.mutate("saveDeckConfig", {"config": updated})
             if saved is not True:
                 raise HindiSetupError("failed to save the independent Hindi options preset")
@@ -650,13 +663,14 @@ class HindiAnkiSetup:
         final = self.client.read("getDeckConfig", {"deck": DECK_NAME})
         if int(final["id"]) == protected_id:
             raise HindiSetupError("Hindi still shares the protected Default options preset")
-        if final.get("name") != OPTIONS_PRESET_NAME or int(final["new"]["perDay"]) != 5:
+        if final.get("name") != preset_name or int(final["new"]["perDay"]) != 5:
             raise HindiSetupError("Hindi preset verification failed")
         if int(final.get("newGatherPriority", -1)) != 0 or int(final.get("newSortOrder", -1)) != 1:
             raise HindiSetupError("Hindi new-card display order is not deterministic")
         current_default = self.client.read("getDeckConfig", {"deck": CHINESE_DECK_NAME})
         if current_default != default_config_before:
             raise HindiSetupError("Default/Chinese options changed while creating the Hindi preset")
+        assert_other_configs_unchanged(self.client.read, DECK_NAME, others_before, hindi_config_id, HindiSetupError)
         return final
 
     def write_hindi_backup(self, notes: list[dict[str, Any]]) -> None:
@@ -908,13 +922,14 @@ class HindiAnkiSetup:
 
         config = state["config"] or {}
         default_config = self.client.read("getDeckConfig", {"deck": CHINESE_DECK_NAME})
+        other_config_ids = {int(c['id']) for c in other_deck_configs(self.client.read, DECK_NAME, HindiSetupError).values()}
         if not config:
             errors.append("Hindi options preset is unavailable")
         else:
-            if config.get("name") != OPTIONS_PRESET_NAME:
+            if not managed_preset(config.get("name"), OPTIONS_PRESET_NAME):
                 errors.append(f"Hindi preset name is {config.get('name')!r}")
-            if int(config.get("id", -1)) == int(default_config.get("id", -1)):
-                errors.append("Hindi shares the Default/Chinese options preset")
+            if int(config.get("id", -1)) in other_config_ids:
+                errors.append("Hindi shares an options preset with another deck")
             if int(config.get("new", {}).get("perDay", -1)) != 5:
                 errors.append("Hindi new cards/day is not 5")
             if int(config.get("newGatherPriority", -1)) != 0:
@@ -952,7 +967,7 @@ class HindiAnkiSetup:
             "options_config_id": config.get("id"),
             "default_config_id": default_config.get("id"),
             "separate_options_preset": bool(config)
-            and int(config.get("id", -1)) != int(default_config.get("id", -1)),
+            and int(config.get("id", -1)) not in other_config_ids,
             "new_cards_per_day": config.get("new", {}).get("perDay") if config else None,
             "new_gather_priority": config.get("newGatherPriority") if config else None,
             "new_sort_order": config.get("newSortOrder") if config else None,

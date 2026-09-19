@@ -1144,6 +1144,7 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/adaptation_tools.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/add_chinese_words_to_anki.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/anki_card_distribution.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/anki_deck_options.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/anki_priority.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/audit_anki_card_distribution.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/build_agent_index.py
@@ -1229,6 +1230,7 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_hindi_anki_templates.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_hindi_core_100.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_novel_pipeline.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_scheduler_priority.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_series_memory_update.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_spanish_anki_safety.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_spanish_anki_setup.py

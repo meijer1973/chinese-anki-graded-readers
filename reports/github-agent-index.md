@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki, Hindi And Spanish Starters, And Graded Readers
 
-Generated: 2026-09-14T13:55:40Z
+Generated: 2026-09-19T08:45:43Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 1196
+Files indexed: 1198
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -81,7 +81,7 @@ Count: 18
 
 ## scripts
 
-Count: 86
+Count: 88
 
 - add_missing_single_character_notes.py
 - apply_meaning_cleanup_updates.py
@@ -93,6 +93,7 @@ Count: 86
 - scripts/adaptation_tools.py
 - scripts/add_chinese_words_to_anki.py
 - scripts/anki_card_distribution.py
+- scripts/anki_deck_options.py
 - scripts/anki_priority.py
 - scripts/audit_anki_card_distribution.py
 - scripts/build_agent_index.py
@@ -163,6 +164,7 @@ Count: 86
 - tests/test_hindi_anki_templates.py
 - tests/test_hindi_core_100.py
 - tests/test_novel_pipeline.py
+- tests/test_scheduler_priority.py
 - tests/test_series_memory_update.py
 - tests/test_spanish_anki_safety.py
 - tests/test_spanish_anki_setup.py
