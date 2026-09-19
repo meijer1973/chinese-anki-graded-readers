@@ -23,6 +23,15 @@ TAIWAN_NOISE_RE = re.compile(
 )
 
 MEANING_OVERRIDES: dict[str, str] = {
+    # User-requested characters; 郝 intentionally keeps its useful surname sense.
+    "郝": "Hao (Chinese family name)",
+    "眯": "mi1: to squint; to doze | mi2: to get dust or grit in the eyes",
+    "哄": "hong1: noisy laughter; hubbub | hong3: to coax; to soothe; to deceive | hong4: uproar; to make a commotion",
+    "迅": "rapid; swift (in compounds such as 迅速)",
+    "颠": "to jolt; to turn upside down; to topple; top or summit",
+    "悠": "leisurely; long or distant; to swing or sway",
+    "寝": "to sleep or rest; bedroom (in compounds such as 寝室)",
+    "锅": "pot; pan; wok",
     # Reviewed single-character additions for the First Frost reading pilot.
     "瞬": "blink; instant (in 瞬间)",
     "愣": "be stunned; stare blankly; distracted",

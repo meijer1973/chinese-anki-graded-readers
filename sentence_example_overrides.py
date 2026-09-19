@@ -2,6 +2,14 @@ from __future__ import annotations
 
 
 SENTENCE_EXAMPLE_OVERRIDES: dict[str, tuple[str, str]] = {
+    "郝": ("郝老师今天来上课。", "Teacher Hao is coming to teach today."),
+    "眯": ("阳光太强，她眯起了眼睛。", "The sunlight was too bright, so she narrowed her eyes."),
+    "哄": ("妈妈正在哄孩子睡觉。", "Mom is soothing the child to sleep."),
+    "迅": ("他迅速关上了门。", "He quickly closed the door."),
+    "颠": ("这条路不平，车颠得很厉害。", "This road is uneven, and the car jolts badly."),
+    "悠": ("他悠闲地坐在窗边喝茶。", "He sits leisurely by the window drinking tea."),
+    "寝": ("她回寝室休息了。", "She went back to her dorm room to rest."),
+    "锅": ("锅里的汤已经热了。", "The soup in the pot is hot now."),
     "的": ("这是我的书。", "This is my book."),
     "我": ("我今天很忙。", "I am busy today."),
     "你": ("你想喝水吗？", "Do you want to drink water?"),
@@ -889,6 +897,14 @@ SENTENCE_EXAMPLE_OVERRIDES: dict[str, tuple[str, str]] = {
 
 
 SENTENCE_PINYIN_OVERRIDES: dict[str, str] = {
+    "郝老师今天来上课。": "hao3 lao3 shi1 jin1 tian1 lai2 shang4 ke4。",
+    "阳光太强，她眯起了眼睛。": "yang2 guang1 tai4 qiang2，ta1 mi1 qi3 le5 yan3 jing5。",
+    "妈妈正在哄孩子睡觉。": "ma1 ma5 zheng4 zai4 hong3 hai2 zi5 shui4 jiao4。",
+    "他迅速关上了门。": "ta1 xun4 su4 guan1 shang4 le5 men2。",
+    "这条路不平，车颠得很厉害。": "zhe4 tiao2 lu4 bu4 ping2，che1 dian1 de5 hen3 li4 hai5。",
+    "他悠闲地坐在窗边喝茶。": "ta1 you1 xian2 de5 zuo4 zai4 chuang1 bian1 he1 cha2。",
+    "她回寝室休息了。": "ta1 hui2 qin3 shi4 xiu1 xi5 le5。",
+    "锅里的汤已经热了。": "guo1 li3 de5 tang1 yi3 jing1 re4 le5。",
     "你说得对。": "ni3 shuo1 de5 dui4。",
     "他跑得很快。": "ta1 pao3 de5 hen3 kuai4。",
     "我认为你说得对。": "wo3 ren4 wei2 ni3 shuo1 de5 dui4。",

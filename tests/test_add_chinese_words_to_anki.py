@@ -32,6 +32,22 @@ def source_row(word: str = "新词") -> dict[str, str]:
 
 
 class AddChineseWordsToAnkiTests(unittest.TestCase):
+    def test_requested_characters_have_persistent_reviewed_fields(self) -> None:
+        from apply_meaning_cleanup_updates import cleaned_meaning
+        from sentence_example_overrides import SENTENCE_EXAMPLE_OVERRIDES, SENTENCE_PINYIN_OVERRIDES
+
+        words = build_anki_chinese.read_words()
+        for word in "郝眯哄迅颠悠寝锅":
+            self.assertEqual(1, words.count(word))
+            example, translation = SENTENCE_EXAMPLE_OVERRIDES[word]
+            self.assertIn(word, example)
+            self.assertTrue(translation)
+            self.assertEqual(SENTENCE_PINYIN_OVERRIDES[example], build_anki_chinese.generated_pinyin(example))
+            self.assertNotEqual("Needs review", cleaned_meaning(word, "Needs review"))
+        self.assertEqual("Hao (Chinese family name)", cleaned_meaning("郝", "ancient place name; surname Hao"))
+        self.assertIn("mi1", build_anki_chinese.generated_pinyin(SENTENCE_EXAMPLE_OVERRIDES["眯"][0]))
+        self.assertIn("hong3", build_anki_chinese.generated_pinyin(SENTENCE_EXAMPLE_OVERRIDES["哄"][0]))
+
     def test_ranked_word_loader_rejects_duplicate_source_entries(self) -> None:
         with tempfile.TemporaryDirectory() as temp_dir:
             path = Path(temp_dir) / "words.txt"
