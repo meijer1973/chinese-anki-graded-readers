@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "dataset": "Hindi Core 100",
+  "access_date": "2026-07-22",
+  "source_title": "Shabd: A Psycholinguistic Database for Hindi",
+  "dataset_or_project_identifier": "OSF xfbhd; DOI 10.3758/s13428-021-01625-2",
+  "source_organization_or_authors": "Ark Verma, Vivek Sikarwar, Himanshu Yadav, Ranjith Jaganathan, and Pawan Kumar; Language & Cognition Lab, IIT Kanpur",
+  "source_license_or_redistribution_terms": "The OSF project declares CC0 1.0 Universal. The IIIT Hyderabad KCIS page does not state a license for the downloadable frequency-list files; those lists were used only for independent rank comparison, not copied as deck content.",
+  "sources": [
+    {
+      "role": "primary frequency source",
+      "title": "Shabd: A Psycholinguistic Database for Hindi",
+      "authors": [
+        "Ark Verma",
+        "Vivek Sikarwar",
+        "Himanshu Yadav",
+        "Ranjith Jaganathan",
+        "Pawan Kumar"
+      ],
+      "organization": "Language & Cognition Lab, IIT Kanpur",
+      "publication": "Behavior Research Methods 54 (2022), 830-844",
+      "doi": "10.3758/s13428-021-01625-2",
+      "project_identifier": "OSF xfbhd",
+      "project_url": "https://osf.io/xfbhd/",
+      "dataset_file": "Shabd_corpus_v1.1.zip / Corpus_Processing_Outcomes/word_count_96122.txt",
+      "corpus_description": "A 1.4-billion-token corpus drawn from electronic Hindi newspapers and news websites. The archive includes a frequency-sorted list of 96,122 forms occurring at least 100 times and a hand-screened database of about 34,000 words.",
+      "license": "CC0 1.0 Universal",
+      "license_url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    },
+    {
+      "role": "independent frequency comparison",
+      "title": "KCIS Resources: Hindi tourism and health word frequency lists",
+      "organization": "Language Technologies Research Centre, IIIT Hyderabad",
+      "funding_note": "The resource page states that annotation was funded by KCIS, DeiTY, Government of India.",
+      "resource_url": "https://ltrc.iiit.ac.in/showfile.php?filename=downloads%2Fkolhi%2F",
+      "files": [
+        "https://ltrc.iiit.ac.in/downloads/kolhi/data/hindi_tourism_word_frequency_list.txt",
+        "https://ltrc.iiit.ac.in/downloads/kolhi/data/hindi_diseases_word_frequency_list.txt"
+      ],
+      "license": "No license or redistribution statement was displayed on the resource page at access time; only ranks and broad frequency agreement were used."
+    }
+  ],
+  "selection_procedure": [
+    "Loaded the official Shabd v1.1 frequency-sorted 96,122-form list and reviewed the first 300 raw entries, exceeding the requested initial 150-200-item candidate review.",
+    "Compared plausible function words and high-frequency forms against both public IIIT Hyderabad KCIS Hindi word-frequency lists (tourism and health domains).",
+    "Kept high-frequency grammatical surface forms, including copulas, case markers, particles, auxiliaries, and common completed or habitual verb forms, because recognition of encountered Hindi is the deck's goal.",
+    "Extended beyond the news-heavy top ranks only when needed for indispensable beginner pronouns, question words, everyday verbs, adjectives, adverbs, and nouns; every retained form has a source rank recorded in the TSV.",
+    "Balanced the final 100 across function words, pronouns, question words, verbs and verb forms, modifiers, and everyday nouns, then assigned a learner-oriented final Frequency Rank from 1 through 100.",
+    "Wrote and reviewed every English gloss, grammar note, pronunciation, Hindi example, example pronunciation, and translation specifically for this deck."
+  ],
+  "exclusions": [
+    "punctuation and typographic tokens",
+    "bare Arabic or Devanagari numeral tokens",
+    "malformed encoding and mojibake",
+    "Latin-script web and corpus artifacts such as com and jagran",
+    "dates and corpus-processing markers",
+    "proper names, surnames, place names, and political or highly news-specific named entities",
+    "exact duplicate forms in the Shabd database",
+    "specialist medical, administrative, crime, and election vocabulary unsuitable for a first 100-card learner set",
+    "redundant inflected variants when they would crowd out a more essential grammatical or everyday form"
+  ],
+  "conflicting_rankings": "No synthetic average was calculated across the very large Shabd newspaper corpus and the two small domain-specific IIIT lists. Shabd rank was preferred when the exact form was present. For short function words absent from the Shabd 96,122-form file, an exact IIIT rank was recorded. Cross-source agreement raised confidence; disagreement was resolved by beginner recognition value, grammatical coverage, and avoidance of news-domain distortion.",
+  "romanization_convention": {
+    "name": "IAST-influenced practical Hindi pronunciation",
+    "long_vowels": "ā, ī, and ū mark long vowels.",
+    "retroflexes": "ṭ, ḍ, and ṇ mark retroflex stops/nasals; ṛ marks the flap written ड़.",
+    "aspiration": "Aspiration is explicit: kh, gh, chh, jh, ṭh, ḍh, th, dh, ph, and bh.",
+    "nasalization": "A tilde on the pronounced vowel marks vowel nasalization, for example mẽ, maĩ, haĩ, and kahā̃.",
+    "schwa_deletion": "Pronunciations reflect standard modern Hindi schwa deletion, for example करना karnā, पहले pahle, देखना dekhnā, and रहना rahnā.",
+    "sh_and_ssa": "श and ष are both represented as sh in ordinary modern pronunciation; conjunct spellings are rendered for the spoken sequence, for example कक्षा kakshā.",
+    "spoken_demonstratives": "यह and वह are represented by their ordinary spoken pronunciations yeh and vo when used as pronouns or determiners.",
+    "scope": "This is learner-friendly pronunciation guidance, not strict phonemic transcription or IPA. The same conventions are used in Word and complete-sentence pronunciation fields."
+  },
+  "independent_content_confirmation": "All definitions, grammar notes, pronunciations, Hindi example sentences, sentence pronunciations, and English translations in hindi_core_100.tsv were independently written or curated for this deck. No corpus, dictionary, learner-site, audio, or proprietary editorial sentence was copied.",
+  "editorial_content_independently_written": true
+}

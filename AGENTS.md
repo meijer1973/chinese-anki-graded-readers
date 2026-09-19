@@ -115,8 +115,10 @@ Use the minimal-intervention cascade: classify proper nouns and personal-known w
 ## Repository Map
 
 - `word list chinese.txt` is the ranked Anki deck source list. One Chinese word or phrase per line. The line order is the frequency rank used by Anki deck scripts.
+- `anki/current_deck_words.txt` is the latest exported inventory of all unique Word fields in the live Default / Chinese Vocabulary deck, including suspended notes; it is not a known-word list or ranked source. Refresh with the read-only `scripts/export_current_anki_words.py` and publish it with `anki/current_deck_words.metadata.json`, which records the export time, counts, duplicate findings, and hashes.
 - `High frequency words 0-10000.txt` is the ranked graded-reader source list. One Chinese word or phrase per line. `scripts/sync_known_words.py` uses this file, not the Anki deck source, to generate `data/known_words.txt`.
 - `build_anki_chinese.py` enriches the word list with pinyin, meanings, and example sentences, then writes TSV files. It does not edit Anki.
+- `scripts/add_chinese_words_to_anki.py` is the guarded ordinary-word importer. It dry-runs by default, requires explicitly named words, rejects duplicate source rows and duplicate live notes, skips a word already present once, and uses `allowDuplicate: false` when applying.
 - `sentence_example_overrides.py` contains curated example sentences and pinyin fixes. Prefer editing this file when improving sentence quality.
 - `apply_meaning_cleanup_updates.py` contains the current meaning cleanup rules and concise meaning overrides. It can update live Anki meaning fields through AnkiConnect.
 - `add_missing_single_character_notes.py` appends proposed missing single-character notes to the source word list, rebuilds TSVs, adds the notes to Anki, and reruns card flag setup.
@@ -147,6 +149,17 @@ Use the minimal-intervention cascade: classify proper nouns and personal-known w
 
 ## Anki Collection
 
+### Selective recognition practice
+
+The user's suspension choices take precedence over the historical all-active
+policy below. Model setup and the global learning-order scheduler preserve
+existing suspension and burial by default. Unsuspend only explicitly selected
+recognition card IDs; activating a word card does not authorize activating its
+sentence sibling. First Frost character work starts at
+`docs/first-frost-character-pilot.md`; its private audit/backup artifacts stay in
+ignored `anki/first_frost/local_results/`. Never apply the whole-word pilot script
+to a word-only character selection.
+
 The live collection scripts assume:
 
 - AnkiConnect URL: `http://127.0.0.1:8765`
@@ -158,7 +171,7 @@ Current card policy from the latest report:
 
 - Standard word-recognition meaning cards are active for every deck note.
 - Sentence cards are active for every deck note with `Example` and `Example Meaning` fields.
-- Production / meaning-recall cards remain available in the model but are suspended by the setup script.
+- The model has no production / meaning-recall card template. The setup script removes the legacy `Meaning Recall` template and its cards after writing a backup.
 
 ## Chinese Graded-Reader Novel Generation
 
@@ -322,6 +335,16 @@ python apply_sentence_example_updates.py
 
 This updates only `Example`, `Example Pinyin`, `Example Meaning`, and `Source`. It writes `sentence_examples_before_update_backup.tsv` first and reports to `sentence_examples_update_report.md`.
 
+Add a reviewed ordinary Chinese word to live Anki with duplicate protection:
+
+```powershell
+$env:PYTHONIOENCODING='utf-8'
+python scripts/add_chinese_words_to_anki.py --word 新词
+python scripts/add_chinese_words_to_anki.py --word 新词 --apply
+```
+
+The first command is a read-only dry run. The apply command adds only explicitly requested words that are unique in both source files and absent from the live deck. See `docs/chinese-vocabulary-anki.md` for the complete source, review, model-normalization, import, character-closure, and scheduling procedure.
+
 Add proposed missing single-character notes:
 
 ```powershell
@@ -356,7 +379,7 @@ $env:PYTHONIOENCODING='utf-8'
 python setup_production_sentence_cards.py
 ```
 
-This mutates the live Anki collection. It also manages the `Sentence Recognition` template and card suspension state.
+This mutates the live Anki collection. It manages the `Sentence Recognition` template, removes the legacy `Meaning Recall` template, and preserves existing recognition-card suspension and burial.
 
 Generate meaning-field review suggestions:
 
@@ -396,7 +419,7 @@ For word-list additions:
 Fast syntax check:
 
 ```powershell
-python -m py_compile build_anki_chinese.py sentence_example_overrides.py apply_sentence_example_updates.py apply_meaning_cleanup_updates.py add_missing_single_character_notes.py ensure_single_character_notes.py migrate_chinese_notes.py setup_production_sentence_cards.py suggest_meaning_edits.py
+python -m py_compile build_anki_chinese.py sentence_example_overrides.py apply_sentence_example_updates.py apply_meaning_cleanup_updates.py add_missing_single_character_notes.py ensure_single_character_notes.py migrate_chinese_notes.py setup_production_sentence_cards.py suggest_meaning_edits.py scripts/add_chinese_words_to_anki.py
 ```
 
 After rebuilding, inspect the report:

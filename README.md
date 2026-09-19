@@ -1,11 +1,24 @@
-# Chinese Anki And Graded Reader Tools
+# Chinese Anki, Language Starters, China Knowledge, And Graded Reader Tools
 
-This repository maintains a Chinese vocabulary Anki deck and a controlled-vocabulary fiction pipeline for generating auditable Chinese graded-reader stories.
+This repository maintains a Chinese vocabulary Anki deck, completely separate Hindi and Spanish starter decks, a bilingual China Common Knowledge deck, and a controlled-vocabulary fiction pipeline for generating auditable Chinese graded-reader stories.
 
 ## Main Workflows
 
+The latest live Chinese-deck inventory is
+[`anki/current_deck_words.txt`](anki/current_deck_words.txt): one unique word per
+line, exported directly from Default / Chinese Vocabulary, including suspended
+notes. See [`export metadata`](anki/current_deck_words.metadata.json) for the date,
+counts, and verification hash. It is deck membership, **not** a mastery or frequency
+list. Refresh it with `python scripts/export_current_anki_words.py` while Anki is
+open; this command does not change Anki. The ranked source and generated import
+TSVs are not a complete inventory of live notes added through other workflows.
+
 - Build Anki TSV exports from `word list chinese.txt` with `build_anki_chinese.py`.
+- Add reviewed Chinese vocabulary notes with duplicate protection by following `docs/chinese-vocabulary-anki.md` and using `scripts/add_chinese_words_to_anki.py`.
 - Keep Anki new-card order mixed with `scripts/audit_anki_card_distribution.py` and `scripts/schedule_anki_learning_order.py`.
+- Build and safely install the isolated 100-note Hindi starter deck with `docs/hindi-anki.md` and `scripts/hindi/setup_hindi_anki.py`.
+- Build and safely install the isolated 100-note Spanish starter deck with `docs/spanish-anki.md` and `scripts/spanish/setup_spanish_anki.py`.
+- Validate and safely install the isolated 400-note bilingual China Common Knowledge deck with `docs/china-knowledge-anki.md` and `scripts/china_knowledge/setup_china_knowledge_anki.py`.
 - Keep curated sentence and pinyin fixes in `sentence_example_overrides.py`.
 - Maintain the active graded-reader known-word file in `data/known_words.txt`, generated from `High frequency words 0-10000.txt`.
 - Maintain learner-profile personal-known vocabulary under `data/learner_profiles/marcel/` for Marcel-personalized readers.
@@ -67,6 +80,12 @@ The validator checks core known words, approved stretch packs, book-specific wor
 ## Anki Pipeline
 
 The live Anki collection is not mutated by ordinary exports. Scripts that update Anki through AnkiConnect are documented in `AGENTS.md`.
+
+The independent Hindi Core 100 workflow is documented in `docs/hindi-anki.md`. Its TSV, note type, templates, options preset, tags, reports, and guarded AnkiConnect setup are separate from every Chinese resource.
+
+The independent Spanish Core 100 workflow is documented in `docs/spanish-anki.md`. It also snapshots and protects both Chinese and Hindi resources before any Spanish-only live mutation.
+
+The independent China Common Knowledge workflow is documented in `docs/china-knowledge-anki.md`. Its 400 bilingual knowledge notes use one recognition card each, a dedicated five-new-cards preset, stable IDs, sourced explanations, and runtime protection for the Chinese, Hindi, and Spanish resources.
 
 Generated import files, live-collection backups, local downloads, and old trial manuscripts are intentionally ignored by Git.
 

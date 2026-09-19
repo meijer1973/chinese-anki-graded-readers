@@ -93,6 +93,16 @@ MANUAL_ENTRIES: dict[str, tuple[str, str]] = {
     "小妞": ("xiao3 niu1", "girl; chick (colloquial, sometimes impolite)"),
     "墙上": ("qiang2 shang4", "on the wall"),
     "手中": ("shou3 zhong1", "in one's hand; in hand"),
+    "帮帮": ("bang1 bang1", "to help; to give someone a hand (reduplicated form)"),
+    "汤米": ("tang1 mi3", "Tommy (person name)"),
+    "镇上": ("zhen4 shang4", "in town; in the town"),
+    "我家": ("wo3 jia1", "my home; my family"),
+    "小姑娘": ("xiao3 gu1 niang5", "young girl; young woman"),
+    "放到": ("fang4 dao4", "to put or place in, on, or at"),
+    "好样": ("hao3 yang4", "admirable; worthy of praise (usually 好样的)"),
+    "第六": ("di4 liu4", "sixth"),
+    "迈克": ("mai4 ke4", "Mike (person name)"),
+    "其他人": ("qi2 ta1 ren2", "other people; everyone else"),
 }
 
 MANUAL_EXAMPLES: dict[str, tuple[str, str]] = {
@@ -204,14 +214,26 @@ def generated_pinyin(text: str) -> str:
     return re.sub(r"\s+([。！？!?，,；;：:）】》”])", r"\1", joined)
 
 
-def read_words() -> list[str]:
+def read_words(path: Path = WORD_LIST) -> list[str]:
     words: list[str] = []
-    seen: set[str] = set()
-    for line in WORD_LIST.read_text(encoding="utf-8-sig").splitlines():
+    first_line_by_word: dict[str, int] = {}
+    duplicates: list[str] = []
+    for line_number, line in enumerate(path.read_text(encoding="utf-8-sig").splitlines(), start=1):
         word = line.strip()
-        if word and word not in seen:
-            words.append(word)
-            seen.add(word)
+        if not word:
+            continue
+        if word in first_line_by_word:
+            duplicates.append(
+                f"{word!r} on lines {first_line_by_word[word]} and {line_number}"
+            )
+            continue
+        words.append(word)
+        first_line_by_word[word] = line_number
+
+    if duplicates:
+        raise RuntimeError(
+            f"Duplicate words in {path}: " + "; ".join(duplicates[:20])
+        )
     return words
 
 

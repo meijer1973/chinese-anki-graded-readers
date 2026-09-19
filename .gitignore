@@ -58,12 +58,34 @@ missing_single_character_notes_summary.md
 single_character_notes_added.tsv
 single_character_notes_policy_added.tsv
 word_list_before_single_character_notes_backup.txt
+word_list_before_character_closure_backup.txt
 
 # Generated Anki stretch import artifacts
 anki/stretch_word_import_ready.tsv
 anki/stretch_word_import_log.json
 anki/stretch_words_added_to_anki.tsv
 anki/learning_order_plan.tsv
+
+# Local live-state evidence for the isolated Hindi deck. These files contain
+# personal collection IDs, scheduling state, or full note-field snapshots.
+anki/hindi/reports/chinese_safety_before.json
+anki/hindi/reports/chinese_safety_after.json
+anki/hindi/reports/hindi_managed_notes_before_update.tsv
+
+# Local live-state evidence for the isolated Spanish deck. These files contain
+# personal collection IDs, scheduling state, or full protected-deck snapshots.
+anki/spanish/reports/chinese_safety_before.json
+anki/spanish/reports/chinese_safety_after.json
+anki/spanish/reports/hindi_safety_before.json
+anki/spanish/reports/hindi_safety_after.json
+anki/spanish/reports/spanish_managed_notes_before_update.tsv
+
+# Local live-state evidence for the isolated China Knowledge deck. Keep the
+# reproducible validation/offline-preview reports tracked, but not collection IDs.
+anki/china_knowledge/reports/china_knowledge_anki_apply_report.json
+anki/china_knowledge/reports/china_knowledge_anki_dry_run.json
+anki/china_knowledge/reports/china_knowledge_anki_verification.json
+anki/china_knowledge/reports/china_knowledge_managed_notes_before_update.tsv
 
 # Generated manuscript EPUB builds
 # Track final EPUB artifacts and build reports for accepted manuscripts, but keep

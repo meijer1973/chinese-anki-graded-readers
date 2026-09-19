@@ -1,9 +1,12 @@
 # GitHub Agent Entry - Chinese Anki And Graded Readers
 
-This repository contains two connected systems:
+This repository contains two connected Chinese systems and three independent additional decks:
 
 1. Chinese vocabulary Anki deck tooling.
 2. A controlled-vocabulary Chinese graded-reader fiction pipeline.
+3. A completely separate Hindi Anki starter deck.
+4. A completely separate Spanish Anki starter deck.
+5. A completely separate bilingual China Common Knowledge deck.
 
 It is intended to be readable by humans and remote coding/research agents working from GitHub.
 
@@ -34,6 +37,12 @@ Read that file first for repository access, exact paths, raw URLs, and task rout
 | How is EPUB built? | `scripts/build_epub.py`, `.agents/skills/epub-export/SKILL.md` |
 | How do stretch words flow toward Anki? | `docs/anki-integration.md`, `scripts/export_stretch_words_for_anki.py` |
 | How is Anki new-card order kept mixed? | `docs/anki-integration.md`, `scripts/audit_anki_card_distribution.py`, `scripts/schedule_anki_learning_order.py` |
+| How are Hindi/Spanish options kept private from every other deck? | `scripts/anki_deck_options.py`, `docs/hindi-anki.md`, `docs/spanish-anki.md`; shared preset detection and private cloning |
+| What words are actually in the Chinese Anki deck at the latest export? | `anki/current_deck_words.txt`, `anki/current_deck_words.metadata.json`; refresh with `scripts/export_current_anki_words.py`. Includes suspended cards; not a mastery list |
+| How are selected First Frost character word cards enabled or missing characters added? | `docs/first-frost-character-pilot.md`, `anki/first_frost/character_pilot.json`, `scripts/first_frost/character_pilot.py`, `scripts/first_frost/expand_character_pilot.py`; preserve existing sibling states and suspend new sentence siblings |
+| How is the separate Hindi starter deck validated or installed? | `docs/hindi-anki.md`, `anki/hindi/hindi_core_100.tsv`, `scripts/hindi/setup_hindi_anki.py` |
+| How is the separate Spanish starter deck validated or installed? | `docs/spanish-anki.md`, `anki/spanish/spanish_core_100.tsv`, `scripts/spanish/setup_spanish_anki.py` |
+| How is the bilingual China Common Knowledge deck validated or installed? | `docs/china-knowledge-anki.md`, `anki/china_knowledge/china_knowledge_400.tsv`, `scripts/china_knowledge/setup_china_knowledge_anki.py` |
 | What is the first series manuscript? | `manuscripts/shanghai-rain-gate-crime/` |
 | What is the latest accepted 林安 manuscript? | `manuscripts/shanghai-mirror-street-case/` |
 | What is the energy-policy long-read? | `manuscripts/china-energy-policy-hormuz-long-read/` |

@@ -1,0 +1,117 @@
+{
+  "card_order": {
+    "method": "already-correct",
+    "repositioned": 0
+  },
+  "chinese_safety_after_sha256": "39e46b5e49c079eee61651821358062357682b510d751c0299bc419f37cf20e2",
+  "chinese_safety_before_sha256": "39e46b5e49c079eee61651821358062357682b510d751c0299bc419f37cf20e2",
+  "chinese_safety_identical": true,
+  "deck": "Spanish",
+  "hindi_safety_after_sha256": "ee0dcc5df109811cf821e3862c0a20e84bba33f4a57e0f0e27486bb3c82ad18b",
+  "hindi_safety_before_sha256": "ee0dcc5df109811cf821e3862c0a20e84bba33f4a57e0f0e27486bb3c82ad18b",
+  "hindi_safety_identical": true,
+  "mode": "apply",
+  "mutation_log": [],
+  "new_cards_per_day": 5,
+  "note_changes": {
+    "added": 0,
+    "tagged": 0,
+    "updated": 0
+  },
+  "note_type": "Spanish Vocabulary",
+  "options_config_id": 1784902394297,
+  "options_preset": "Spanish - 5 new cards",
+  "plan": {
+    "deck": "Spanish",
+    "expected_final_counts": {
+      "Sentence Recognition": 100,
+      "Word Recognition": 100,
+      "cards": 200,
+      "new_cards_per_day": 5,
+      "notes": 100,
+      "production_cards": 0,
+      "production_like_templates": 0,
+      "templates": 2
+    },
+    "inherited_config_id": 1784902394297,
+    "note_type": "Spanish Vocabulary",
+    "options_preset": "Spanish - 5 new cards",
+    "proposed_mutations": {
+      "add_missing_tags_note_count": 0,
+      "add_note_count": 0,
+      "add_words": [],
+      "assign_options_preset_to": [],
+      "clone_options_preset": false,
+      "create_deck": false,
+      "create_note_type": false,
+      "reposition_new_cards_in_rank_template_order": true,
+      "spanish_only_option_keys_to_change": [],
+      "update_note_count": 0,
+      "update_styling": false,
+      "update_templates": false,
+      "update_words": []
+    },
+    "protected_config_ids": [
+      1,
+      1784748424556
+    ]
+  },
+  "spanish_only_option_keys_changed": [],
+  "status": "PASS",
+  "verification": {
+    "card_order_ok": true,
+    "chinese_config_id": 1,
+    "deck": "Spanish",
+    "deck_exists": true,
+    "errors": [],
+    "field_names": [
+      "Word",
+      "IPA",
+      "Meaning",
+      "Part of Speech",
+      "Lemma",
+      "Example",
+      "Example IPA",
+      "Example Meaning",
+      "Source",
+      "Labels",
+      "Frequency Rank",
+      "Notes"
+    ],
+    "hindi_config_id": 1784748424556,
+    "managed_note_count": 100,
+    "new_card_count_in_order_check": 200,
+    "new_cards_per_day": 5,
+    "new_gather_priority": 0,
+    "new_sort_order": 1,
+    "note_type": "Spanish Vocabulary",
+    "note_type_exists": true,
+    "notes_with_pos_tag": 100,
+    "notes_with_standard_tags": 100,
+    "options_config_id": 1784902394297,
+    "options_preset": "Spanish - 5 new cards",
+    "production_cards": 0,
+    "production_like_template_count": 0,
+    "production_like_templates": [],
+    "rank_values_complete": true,
+    "required_field_counts": {
+      "Example": 100,
+      "Example IPA": 100,
+      "Example Meaning": 100,
+      "Frequency Rank": 100,
+      "IPA": 100,
+      "Labels": 100,
+      "Meaning": 100
+    },
+    "sentence_recognition_cards": 100,
+    "separate_options_preset": true,
+    "status": "PASS",
+    "template_count": 2,
+    "template_names": [
+      "Word Recognition",
+      "Sentence Recognition"
+    ],
+    "total_cards": 200,
+    "word_recognition_cards": 100
+  }
+}

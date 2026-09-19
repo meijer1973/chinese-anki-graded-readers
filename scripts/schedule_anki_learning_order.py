@@ -10,6 +10,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 import setup_production_sentence_cards as card_setup  # noqa: E402
+from scripts.anki_priority import priority_new_card_ids  # noqa: E402
 from scripts.anki_card_distribution import (  # noqa: E402
     DISTRIBUTION_REPORT,
     LEARNING_ORDER_PLAN,
@@ -30,7 +31,8 @@ from scripts.anki_card_distribution import (  # noqa: E402
 PENDING_TAG = "single_character_release_pending"
 ACTIVE_TAG = "single_character_release_active"
 SCHEDULE_TAG = "single_character_scheduled"
-ACTIVE_CARD_ORDS = {0, 2}
+# The managed Chinese model contains only Word Recognition and Sentence Recognition.
+ACTIVE_CARD_ORDS = {0, 1}
 
 
 def chunked(values: list[int], size: int) -> Iterable[list[int]]:
@@ -122,10 +124,25 @@ def set_new_card_due_order(card_ids: list[int], *, starting_from: int = 0) -> No
         for index, card_id in enumerate(card_ids)
     ]
     for start in range(0, len(actions), 100):
-        results = card_setup.anki("multi", {"actions": actions[start : start + 100]})
+        batch = actions[start : start + 100]
+        results = card_setup.anki("multi", {"actions": batch})
+        if not isinstance(results, list) or len(results) != len(batch):
+            raise RuntimeError("Invalid new-card due-order response")
         for result in results:
-            if isinstance(result, dict) and result.get("error"):
-                raise RuntimeError(result["error"])
+            if isinstance(result, dict):
+                if result.get("error"):
+                    raise RuntimeError(result["error"])
+                result = result.get("result")
+            if result != [True]:
+                raise RuntimeError(f"New-card due update failed: {result!r}")
+
+
+def verify_new_card_queue(expected_ids: list[int], cards: list[dict[str, Any]]) -> None:
+    active = [card for card in cards if is_new_card(card, include_suspended=False)]
+    ordered = sorted(active, key=lambda card: (int(card['due']), int(card['cardId'])))
+    if ([int(card['cardId']) for card in ordered] != expected_ids
+            or len({int(card['due']) for card in active}) != len(active)):
+        raise RuntimeError("New-card queue verification failed: order, membership, or due-position collision")
 
 
 def apply_learning_order_to_anki(words: list[str], config: ScheduleConfig) -> dict[str, Any]:
@@ -134,14 +151,8 @@ def apply_learning_order_to_anki(words: list[str], config: ScheduleConfig) -> di
     note_cards = cards_by_note(cards)
     notes_by_word = {card_setup.note_field(note, "Word"): note for note in notes if card_setup.note_field(note, "Word")}
 
-    cn_to_en_cards_to_unsuspend = [
-        int(card["cardId"])
-        for card in cards
-        if int(card.get("ord", -1)) in ACTIVE_CARD_ORDS and int(card.get("queue", 0)) < 0
-    ]
-    for batch in chunked(cn_to_en_cards_to_unsuspend, 500):
-        if batch:
-            card_setup.unsuspend_cards(batch)
+    # Scheduling changes order, never the user's suspension/burial choices.
+    cn_to_en_cards_to_unsuspend: list[int] = []
 
     pending_tag_note_ids = [int(note["noteId"]) for note in notes if PENDING_TAG in note_tags(note)]
     anki_remove_tags(pending_tag_note_ids, PENDING_TAG)
@@ -225,6 +236,17 @@ def apply_learning_order_to_anki(words: list[str], config: ScheduleConfig) -> di
         and int(card.get("queue", 0)) < 0
     )
     reposition_card_ids = card_ids_for_words(active_live_words, notes_by_word, note_cards_after_unsuspend)
+    # Build one complete queue. Repositioning priority cards separately makes
+    # their fallback positions collide with ordinary cards already at 0..N.
+    tagged_priority_card_ids = priority_new_card_ids(
+        notes, note_cards_after_unsuspend, active_card_ords=ACTIVE_CARD_ORDS,
+    )
+    remaining_ids = [
+        int(card['cardId']) for card in sorted(
+            cards_after_unsuspend, key=lambda card: (int(card['due']), int(card['cardId']))
+        ) if is_new_card(card, include_suspended=False)
+    ]
+    reposition_card_ids = list(dict.fromkeys(tagged_priority_card_ids + reposition_card_ids + remaining_ids))
     repositioned_count = 0
     reposition_error = ""
     queue_order_method = ""
@@ -237,9 +259,10 @@ def apply_learning_order_to_anki(words: list[str], config: ScheduleConfig) -> di
                     "startingFrom": 0,
                     "step": 1,
                     "randomize": False,
-                    "shiftPosition": True,
+                    "shiftPosition": False,
                 },
             )
+            verify_new_card_queue(reposition_card_ids, card_setup.load_cards())
             repositioned_count = len(reposition_card_ids)
             queue_order_method = "reposition"
         except Exception as exc:  # pragma: no cover - depends on AnkiConnect version
@@ -247,9 +270,12 @@ def apply_learning_order_to_anki(words: list[str], config: ScheduleConfig) -> di
                 set_new_card_due_order(reposition_card_ids)
                 repositioned_count = len(reposition_card_ids)
                 queue_order_method = "setSpecificValueOfCard:due"
-                reposition_error = f"reposition unsupported; used due-field fallback ({exc})"
-            except Exception as fallback_exc:  # pragma: no cover - depends on AnkiConnect version
-                reposition_error = f"{exc}; fallback failed: {fallback_exc}"
+                reposition_error = f"reposition unavailable or queue verification failed; used due-field fallback ({exc})"
+            except Exception as fallback_exc:
+                raise RuntimeError(f"New-card queue update failed: {exc}; fallback failed: {fallback_exc}") from fallback_exc
+
+    verify_new_card_queue(reposition_card_ids, card_setup.load_cards())
+    priority_repositioned_count = len(tagged_priority_card_ids)
 
     live_audit = audit_distribution(active_live_words, run_threshold=config.run_threshold, window_sizes=(config.window_size,))
     live_window = live_audit["window_distribution"].get(str(config.window_size), {})
@@ -265,7 +291,9 @@ def apply_learning_order_to_anki(words: list[str], config: ScheduleConfig) -> di
         "cn_to_en_cards_unsuspended": len(cn_to_en_cards_to_unsuspend),
         "cn_to_en_new_cards_still_suspended": cn_to_en_new_cards_still_suspended,
         "new_cards_repositioned": repositioned_count,
+        "tagged_priority_cards_repositioned": priority_repositioned_count,
         "queue_order_method": queue_order_method,
+        "queue_order_verified": True,
         "live_longest_single_character_run": live_audit["longest_consecutive_single_character_run"]["length"],
         "live_window_max_single_character_cards": live_window.get("max_single_character_cards"),
         "first_pending_single_characters": [],

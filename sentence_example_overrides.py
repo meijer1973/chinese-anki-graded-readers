@@ -863,6 +863,28 @@ SENTENCE_EXAMPLE_OVERRIDES: dict[str, tuple[str, str]] = {
     "汀": ("小船停在河边的沙汀上。", "The small boat stopped on the sandbar by the river."),
     "坎": ("门口有一道小坎。", "There is a small threshold at the doorway."),
     "肾": ("医生说他的肾需要检查。", "The doctor said his kidneys need to be checked."),
+    "治安": ("这个地区的治安很好。", "Public safety in this area is good."),
+    "标记": ("我在地图上做了一个标记。", "I made a mark on the map."),
+    "女郎": ("那位年轻女郎正在等车。", "That young woman is waiting for the bus."),
+    "造型": ("她的新造型很特别。", "Her new look is very distinctive."),
+    "孩儿": ("这孩儿非常聪明。", "This child is very clever."),
+    "探长": ("探长正在调查这个案子。", "The detective is investigating this case."),
+    "开火": ("警察命令他们不要开火。", "The police ordered them not to open fire."),
+    "配合": ("请配合我们的工作。", "Please cooperate with our work."),
+    "好样": ("大家都说他是好样的。", "Everyone says he is admirable."),
+    "补偿": ("公司会补偿你的损失。", "The company will compensate you for your loss."),
+    "犹太": ("他正在学习犹太历史。", "He is studying Jewish history."),
+    "带子": ("请把这条带子系紧。", "Please fasten this strap."),
+    "亲眼": ("这是我亲眼看到的。", "This is what I saw with my own eyes."),
+    "疑犯": ("警察正在寻找那名疑犯。", "The police are looking for the suspect."),
+    "黑帮": ("警方正在调查这个黑帮。", "The police are investigating this gang."),
+    "买卖": ("这笔买卖对双方都有利。", "This deal benefits both sides."),
+    "乖乖": ("孩子乖乖地坐在椅子上。", "The child sat obediently on the chair."),
+    "凯文": ("凯文今天没有来上课。", "Kevin did not come to class today."),
+    "忏": ("他正在教堂里忏悔。", "He is confessing in the church."),
+    "忏悔": ("她真心忏悔自己的错误。", "She sincerely regrets her mistake."),
+    "印第安": ("这本书介绍印第安文化。", "This book introduces Native American culture."),
+    "码头": ("船已经离开码头。", "The ship has already left the dock."),
 }
 
 
@@ -879,3 +901,14 @@ SENTENCE_PINYIN_OVERRIDES: dict[str, str] = {
     "她教我中文。": "ta1 jiao1 wo3 zhong1 wen2。",
     "耶，我赢了！": "ye5，wo3 ying2 le5！",
 }
+
+
+# Keep reviewed reading-pilot sentences authoritative during normal TSV rebuilds.
+from scripts.first_frost.content import install_sentence_overrides  # noqa: E402
+
+install_sentence_overrides(SENTENCE_EXAMPLE_OVERRIDES, SENTENCE_PINYIN_OVERRIDES)
+
+# Character-pilot originals are independent of the earlier whole-word pilot.
+from scripts.first_frost.character_content import install_character_overrides  # noqa: E402
+
+install_character_overrides(SENTENCE_EXAMPLE_OVERRIDES, SENTENCE_PINYIN_OVERRIDES)

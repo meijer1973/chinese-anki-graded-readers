@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-07-02T15:18:10Z",
+  "generated_at": "2026-09-19T08:45:43Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 1116,
+  "file_count": 1198,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -211,6 +211,156 @@
       "category": "anki"
     },
     {
+      "path": "anki/china_knowledge/china_knowledge.sources.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/china_knowledge/china_knowledge.sources.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/china_knowledge/china_knowledge_400.tsv",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/china_knowledge/china_knowledge_400.tsv",
+      "category": "anki"
+    },
+    {
+      "path": "anki/china_knowledge/generated/china_knowledge_import.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/china_knowledge/generated/china_knowledge_import.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/china_knowledge/reports/china_knowledge_offline_preview.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/china_knowledge/reports/china_knowledge_offline_preview.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/china_knowledge/reports/data_validation_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/china_knowledge/reports/data_validation_report.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/china_knowledge/reports/editorial_review.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/china_knowledge/reports/editorial_review.md",
+      "category": "anki"
+    },
+    {
+      "path": "anki/current_deck_words.metadata.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/current_deck_words.metadata.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/current_deck_words.txt",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/current_deck_words.txt",
+      "category": "anki"
+    },
+    {
+      "path": "anki/first_frost/character_pilot.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/first_frost/character_pilot.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/first_frost/first_frost_pilot_notes.tsv",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/first_frost/first_frost_pilot_notes.tsv",
+      "category": "anki"
+    },
+    {
+      "path": "anki/first_frost/local_results/.gitignore",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/first_frost/local_results/.gitignore",
+      "category": "anki"
+    },
+    {
+      "path": "anki/first_frost/reports/first_frost_pilot_apply_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/first_frost/reports/first_frost_pilot_apply_report.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/first_frost/reports/first_frost_pilot_dry_run.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/first_frost/reports/first_frost_pilot_dry_run.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/first_frost/reports/first_frost_pilot_idempotence_dry_run.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/first_frost/reports/first_frost_pilot_idempotence_dry_run.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/first_frost/reports/first_frost_pilot_verification.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/first_frost/reports/first_frost_pilot_verification.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/hindi/hindi_core_100.sources.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/hindi/hindi_core_100.sources.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/hindi/hindi_core_100.tsv",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/hindi/hindi_core_100.tsv",
+      "category": "anki"
+    },
+    {
+      "path": "anki/hindi/reports/chinese_safety_comparison.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/hindi/reports/chinese_safety_comparison.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/hindi/reports/data_validation_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/hindi/reports/data_validation_report.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/hindi/reports/hindi_anki_apply_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/hindi/reports/hindi_anki_apply_report.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/hindi/reports/hindi_anki_dry_run.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/hindi/reports/hindi_anki_dry_run.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/hindi/reports/hindi_anki_verification.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/hindi/reports/hindi_anki_verification.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/spanish/reports/chinese_safety_comparison.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/reports/chinese_safety_comparison.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/spanish/reports/data_validation_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/reports/data_validation_report.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/spanish/reports/hindi_safety_comparison.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/reports/hindi_safety_comparison.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/spanish/reports/spanish_anki_apply_report.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/reports/spanish_anki_apply_report.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/spanish/reports/spanish_anki_dry_run.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/reports/spanish_anki_dry_run.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/spanish/reports/spanish_anki_verification.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/reports/spanish_anki_verification.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/spanish/spanish_core_100.sources.json",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/spanish_core_100.sources.json",
+      "category": "anki"
+    },
+    {
+      "path": "anki/spanish/spanish_core_100.tsv",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/spanish/spanish_core_100.tsv",
+      "category": "anki"
+    },
+    {
       "path": "anki/stretch_word_candidates.tsv",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/anki/stretch_word_candidates.tsv",
       "category": "anki"
@@ -411,6 +561,16 @@
       "category": "docs"
     },
     {
+      "path": "docs/china-knowledge-anki.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/china-knowledge-anki.md",
+      "category": "docs"
+    },
+    {
+      "path": "docs/chinese-vocabulary-anki.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/chinese-vocabulary-anki.md",
+      "category": "docs"
+    },
+    {
       "path": "docs/completion-response-template.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/completion-response-template.md",
       "category": "docs"
@@ -423,6 +583,21 @@
     {
       "path": "docs/external-agent-vocabulary.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/external-agent-vocabulary.md",
+      "category": "docs"
+    },
+    {
+      "path": "docs/first-frost-character-pilot.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/first-frost-character-pilot.md",
+      "category": "docs"
+    },
+    {
+      "path": "docs/first-frost-reading-pilot.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/first-frost-reading-pilot.md",
+      "category": "docs"
+    },
+    {
+      "path": "docs/hindi-anki.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/hindi-anki.md",
       "category": "docs"
     },
     {
@@ -448,6 +623,11 @@
     {
       "path": "docs/series-memory.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/series-memory.md",
+      "category": "docs"
+    },
+    {
+      "path": "docs/spanish-anki.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/spanish-anki.md",
       "category": "docs"
     },
     {
@@ -5311,8 +5491,23 @@
       "category": "scripts"
     },
     {
+      "path": "scripts/add_chinese_words_to_anki.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/add_chinese_words_to_anki.py",
+      "category": "scripts"
+    },
+    {
       "path": "scripts/anki_card_distribution.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/anki_card_distribution.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/anki_deck_options.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/anki_deck_options.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/anki_priority.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/anki_priority.py",
       "category": "scripts"
     },
     {
@@ -5346,8 +5541,38 @@
       "category": "scripts"
     },
     {
+      "path": "scripts/china_knowledge/__init__.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/china_knowledge/__init__.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/china_knowledge/anki_client.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/china_knowledge/anki_client.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/china_knowledge/config.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/china_knowledge/config.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/china_knowledge/setup_china_knowledge_anki.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/china_knowledge/setup_china_knowledge_anki.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/china_knowledge/validate_china_knowledge.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/china_knowledge/validate_china_knowledge.py",
+      "category": "scripts"
+    },
+    {
       "path": "scripts/complete_stretch_pack_metadata.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/complete_stretch_pack_metadata.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/export_current_anki_words.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/export_current_anki_words.py",
       "category": "scripts"
     },
     {
@@ -5356,8 +5581,63 @@
       "category": "scripts"
     },
     {
+      "path": "scripts/first_frost/__init__.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/first_frost/__init__.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/first_frost/character_content.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/first_frost/character_content.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/first_frost/character_pilot.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/first_frost/character_pilot.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/first_frost/content.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/first_frost/content.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/first_frost/expand_character_pilot.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/first_frost/expand_character_pilot.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/first_frost/setup_first_frost_pilot.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/first_frost/setup_first_frost_pilot.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/first_frost/validate_first_frost_pilot.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/first_frost/validate_first_frost_pilot.py",
+      "category": "scripts"
+    },
+    {
       "path": "scripts/generate_reports.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/generate_reports.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/hindi/__init__.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/hindi/__init__.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/hindi/anki_client.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/hindi/anki_client.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/hindi/setup_hindi_anki.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/hindi/setup_hindi_anki.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/hindi/validate_hindi_core_100.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/hindi/validate_hindi_core_100.py",
       "category": "scripts"
     },
     {
@@ -5418,6 +5698,26 @@
     {
       "path": "scripts/schedule_anki_learning_order.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/schedule_anki_learning_order.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/spanish/__init__.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/spanish/__init__.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/spanish/anki_client.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/spanish/anki_client.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/spanish/setup_spanish_anki.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/spanish/setup_spanish_anki.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/spanish/validate_spanish_core_100.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/spanish/validate_spanish_core_100.py",
       "category": "scripts"
     },
     {
@@ -5556,8 +5856,33 @@
       "category": "scripts"
     },
     {
+      "path": "tests/china_knowledge_fake_anki.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/china_knowledge_fake_anki.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/fixtures/china_knowledge_sample.tsv",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/fixtures/china_knowledge_sample.tsv",
+      "category": "tests"
+    },
+    {
+      "path": "tests/hindi_fake_anki.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/hindi_fake_anki.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/spanish_fake_anki.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/spanish_fake_anki.py",
+      "category": "scripts"
+    },
+    {
       "path": "tests/test_adaptation_workflow.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_adaptation_workflow.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_add_chinese_words_to_anki.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_add_chinese_words_to_anki.py",
       "category": "scripts"
     },
     {
@@ -5566,13 +5891,98 @@
       "category": "scripts"
     },
     {
+      "path": "tests/test_character_pilot.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_character_pilot.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_china_knowledge_data.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_china_knowledge_data.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_china_knowledge_safety.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_china_knowledge_safety.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_china_knowledge_setup.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_china_knowledge_setup.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_china_knowledge_templates.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_china_knowledge_templates.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_expand_character_pilot.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_expand_character_pilot.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_export_current_anki_words.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_export_current_anki_words.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_first_frost_pilot.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_first_frost_pilot.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_hindi_anki_safety.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_hindi_anki_safety.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_hindi_anki_setup.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_hindi_anki_setup.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_hindi_anki_templates.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_hindi_anki_templates.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_hindi_core_100.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_hindi_core_100.py",
+      "category": "scripts"
+    },
+    {
       "path": "tests/test_novel_pipeline.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_novel_pipeline.py",
       "category": "scripts"
     },
     {
+      "path": "tests/test_scheduler_priority.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_scheduler_priority.py",
+      "category": "scripts"
+    },
+    {
       "path": "tests/test_series_memory_update.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_series_memory_update.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_spanish_anki_safety.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_spanish_anki_safety.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_spanish_anki_setup.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_spanish_anki_setup.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_spanish_anki_templates.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_spanish_anki_templates.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_spanish_core_100.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_spanish_core_100.py",
       "category": "scripts"
     },
     {
