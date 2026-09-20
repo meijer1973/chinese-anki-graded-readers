@@ -30,8 +30,8 @@ additions/removals and publish both files together. Deck membership does not mea
 the learner knows the word. Never use this inventory to silently expand reader
 allowlists or replace the ranked source.
 
-The 19 September 2026 export has 4,526 unique words / notes and 9,052 cards. Its
-198 words absent from the 4,328-entry ranked source demonstrate why the source
+The 20 September 2026 export has 4,603 unique words / notes and 9,206 cards. Its
+198 words absent from the 4,405-entry ranked source demonstrate why the source
 list alone is not a full live-deck inventory; all ranked-source words are present.
 
 ## 1. Add The Ranked Source Word

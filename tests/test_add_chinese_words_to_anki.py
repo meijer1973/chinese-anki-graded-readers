@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import csv
+import re
 import tempfile
 import unittest
 from pathlib import Path
@@ -32,6 +33,32 @@ def source_row(word: str = "新词") -> dict[str, str]:
 
 
 class AddChineseWordsToAnkiTests(unittest.TestCase):
+    def test_september_20_character_batch_has_persistent_reviewed_content(self) -> None:
+        from apply_meaning_cleanup_updates import MEANING_OVERRIDES, cleaned_meaning
+        from sentence_example_overrides import SENTENCE_EXAMPLE_OVERRIDES, SENTENCE_PINYIN_OVERRIDES
+
+        targets = "叠叹氓蹭瞪闺丫咧娇屈槽啪慨憋抄啧嘻夕汪稚皱兮卦媳嫖暑柳樱讪凑嘱坑愁扶拧柱柿畅瘸盼筷兼匆厘厮吭呲呸咆咐哗哮嗓娼寒彤恍悟悻拽摞斜歪洒漆癖秃耿脊腮衷蹑阑阔鸽伺侃"
+        self.assertEqual(77, len(set(targets)))
+        words = build_anki_chinese.read_words()
+        for word in targets:
+            with self.subTest(word=word):
+                self.assertEqual(1, words.count(word))
+                example, translation = SENTENCE_EXAMPLE_OVERRIDES[word]
+                self.assertIn(word, example)
+                self.assertTrue(translation)
+                pinyin = SENTENCE_PINYIN_OVERRIDES[example]
+                self.assertEqual(pinyin, build_anki_chinese.generated_pinyin(example))
+                self.assertEqual(len(re.findall(r"[\u3400-\u9fff]", example)),
+                                 len(re.findall(r"[a-zA-ZüÜ:]+[1-5]", pinyin)))
+                self.assertEqual(MEANING_OVERRIDES[word], cleaned_meaning(word, "Needs review"))
+        for word, expected in {
+            "氓": "mang2", "咧": "lie3", "拧": "ning3", "吭": "keng1",
+            "呲": "zi1", "哗": "hua1", "拽": "zhuai4", "伺": "ci4 hou5",
+            "彤": "hong2 tong1 tong1", "咐": "fen1 fu5",
+        }.items():
+            with self.subTest(context_reading=word):
+                self.assertIn(expected, SENTENCE_PINYIN_OVERRIDES[SENTENCE_EXAMPLE_OVERRIDES[word][0]])
+
     def test_requested_characters_have_persistent_reviewed_fields(self) -> None:
         from apply_meaning_cleanup_updates import cleaned_meaning
         from sentence_example_overrides import SENTENCE_EXAMPLE_OVERRIDES, SENTENCE_PINYIN_OVERRIDES
