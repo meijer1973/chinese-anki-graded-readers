@@ -2,6 +2,13 @@
 
 This is the reviewed procedure for adding ordinary ranked Chinese vocabulary notes to the live Anki collection. It manages the `Default` deck and the `Chinese Vocabulary` note type.
 
+The scope includes all Default subdecks. Since 21 September 2026, single-character
+word cards belong in `Default::Single characters` (95% retention), sentence cards
+in `Default::Sentences` (80%), and multi-character word cards remain in Default
+(existing 90%). See [subdeck routing and rollback](chinese-subdecks-fsrs.md).
+Imports still start in Default: route reviewed new cards afterward without
+changing their suspension or schedules. Duplicate checks must include children.
+
 The note type generates only two card types:
 
 - `Word Recognition`
@@ -30,7 +37,7 @@ additions/removals and publish both files together. Deck membership does not mea
 the learner knows the word. Never use this inventory to silently expand reader
 allowlists or replace the ranked source.
 
-The 20 September 2026 export has 4,603 unique words / notes and 9,206 cards. Its
+The 21 September 2026 export has 4,603 unique words / notes and 9,206 cards. Its
 198 words absent from the 4,405-entry ranked source demonstrate why the source
 list alone is not a full live-deck inventory; all ranked-source words are present.
 

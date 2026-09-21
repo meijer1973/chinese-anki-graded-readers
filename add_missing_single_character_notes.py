@@ -140,7 +140,7 @@ def anki_note(source_row: dict[str, str], rank: int, priority: str) -> dict[str,
         "modelName": MODEL_NAME,
         "fields": fields,
         "tags": source_tags(source_row, priority),
-        "options": {"allowDuplicate": False, "duplicateScope": "deck", "duplicateScopeOptions": {"deckName": DECK_NAME}},
+        "options": {"allowDuplicate": False, "duplicateScope": "deck", "duplicateScopeOptions": {"deckName": DECK_NAME, "checkChildren": True}},
     }
 
 

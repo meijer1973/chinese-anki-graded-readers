@@ -38,6 +38,15 @@ def test_selection_uses_named_template_and_excludes_buried_leech_and_duplicates(
     assert pilot.select(data, ['唇'], 'Default', known=['唇'])[0]['status'] == 'user-known'
 
 
+def test_selection_accepts_existing_subdeck_word_card():
+    data = state()
+    data['cards'][1]['deckName'] = 'Default::Single characters'
+    data['cards'][2]['deckName'] = 'Default::Sentences'
+    assert pilot.select(data, ['唇'], 'Default')[0]['card_id'] == 12
+    data['cards'][1]['deckName'] = 'DefaultOther'
+    assert pilot.select(data, ['唇'], 'Default')[0]['status'] == 'deck-conflict'
+
+
 def test_scoped_apply_backs_up_before_mutation_and_preserves_other_cards(monkeypatch, tmp_path):
     live = state()
     before = copy.deepcopy(live)

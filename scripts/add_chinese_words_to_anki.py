@@ -215,7 +215,7 @@ def make_note(row: dict[str, str], rank: int) -> dict[str, Any]:
         "options": {
             "allowDuplicate": False,
             "duplicateScope": "deck",
-            "duplicateScopeOptions": {"deckName": DECK_NAME},
+            "duplicateScopeOptions": {"deckName": DECK_NAME, "checkChildren": True},
         },
     }
 

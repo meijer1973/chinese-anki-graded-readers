@@ -149,6 +149,28 @@ Use the minimal-intervention cascade: classify proper nouns and personal-known w
 
 ## Anki Collection
 
+### Card-level subdeck routing
+
+Read `docs/chinese-subdecks-fsrs.md` before changing Chinese deck membership or
+retention. The existing `Default` parent remains the combined entry point:
+single-character Word Recognition cards use `Default::Single characters` (95%
+deck-specific retention), Sentence Recognition cards use `Default::Sentences`
+(80%), and multi-character word cards retain their original location/target
+(currently Default, 90%). Sibling cards stay on the same note but may use
+different decks. The model and ranked vocabulary source remain unchanged.
+
+`deck:Default` queries include children; exact equality checks on live card deck
+names are inappropriate for Chinese-scope validation. Deck-scoped duplicate
+checks must set `checkChildren: true`. Future imports still start in Default:
+use the backup-gated, dry-run-first `scripts/reorganize_chinese_subdecks.py`
+procedure afterward; routing is not automatic. Do not use a fixed word-template
+deck override, because that template serves both single- and multi-character
+headwords. Preserve each card's suspension/burial and all scheduling/history.
+Anki 26.09.2 supports deck retention overrides; do not clone shared presets or
+reschedule existing cards unnecessarily. The current new-card gather setting
+remains Deck; cross-category Ascending position gathering requires an explicit
+preference change. Keep full backups and private per-run manifests outside Git.
+
 ### Selective recognition practice
 
 The user's suspension choices take precedence over the historical all-active

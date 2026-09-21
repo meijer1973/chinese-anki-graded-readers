@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 from scripts.first_frost import character_pilot as p  # noqa: E402
 from scripts.first_frost.character_content import load_characters  # noqa: E402
+from scripts.chinese_card_categories import in_deck_scope  # noqa: E402
 
 WORDS = p.RESERVES + p.GAPS
 DECK = 'Default'
@@ -68,7 +69,7 @@ def plan(before, content):
             note = before['by_word'][word][0]
             # Do not move filtered-deck or sibling cards out of another deck.
             cards = [c for c in before['cards'] if c['note'] == note['noteId']]
-            if len(cards) != 2 or any(c['deckName'] != DECK or c.get('odid', 0) for c in cards):
+            if len(cards) != 2 or any(not in_deck_scope(c['deckName'], DECK) or c.get('odid', 0) for c in cards):
                 conflicts.append({'word': word, 'status': 'sibling-card-or-deck-conflict'})
                 continue
             fields = {**{k: row[k] for k in p.EXAMPLE_FIELDS},
@@ -126,7 +127,7 @@ def verify(before, after, proposed, content, added_ids, created_cards):
                     errors.append(f'New card timestamp went backwards: {word}')
                 expected['mod'] = current.get('mod')
             if (p.card_state(current) != expected or current.get('reps') != 0
-                    or current.get('type') != 0 or current.get('deckName') != DECK):
+                    or current.get('type') != 0 or not in_deck_scope(current.get('deckName', ''), DECK)):
                 errors.append(f'Unexpected new card state: {word}')
             if not sentence and any(content[word][k] not in p.unescape(current.get('answer', '')) for k in p.EXAMPLE_FIELDS):
                 errors.append(f'New rendered word-card example mismatch: {word}')

@@ -169,6 +169,7 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/shanghai_setting_150.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/data/stretch_packs/urban_objects_100.txt
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/china-knowledge-anki.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/chinese-subdecks-fsrs.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/chinese-vocabulary-anki.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/completion-response-template.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/external-agent-vocabulary.md
@@ -1138,6 +1139,7 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/stretch_word_exposure.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/vocabulary_report.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/migrate_chinese_notes.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/reports/chinese-subdeck-migration-20260921.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/reports/github-agent-index.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/reports/url-index.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/__init__.py
@@ -1156,6 +1158,7 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/china_knowledge/config.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/china_knowledge/setup_china_knowledge_anki.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/china_knowledge/validate_china_knowledge.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/chinese_card_categories.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/complete_stretch_pack_metadata.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/export_current_anki_words.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/export_stretch_words_for_anki.py
@@ -1178,6 +1181,7 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/profile_adaptation_vocabulary.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/promote_stretch_words.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/prose_variety_report.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/reorganize_chinese_subdecks.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/repeated_phrase_report.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/run_quality_gate.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/schedule_anki_learning_order.py
@@ -1222,6 +1226,7 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_china_knowledge_safety.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_china_knowledge_setup.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_china_knowledge_templates.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_chinese_subdecks.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_expand_character_pilot.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_export_current_anki_words.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_first_frost_pilot.py

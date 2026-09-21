@@ -17,6 +17,7 @@ if str(ROOT) not in sys.path:
     sys.path.insert(0, str(ROOT))
 
 from scripts.first_frost.content import MANIFEST_PATH, clean, load_manifest  # noqa: E402
+from scripts.chinese_card_categories import in_deck_scope  # noqa: E402
 from scripts.first_frost.validate_first_frost_pilot import validate_manifest  # noqa: E402
 
 
@@ -258,7 +259,7 @@ def new_note_payload(
         "options": {
             "allowDuplicate": False,
             "duplicateScope": "deck",
-            "duplicateScopeOptions": {"deckName": DECK_NAME},
+            "duplicateScopeOptions": {"deckName": DECK_NAME, "checkChildren": True},
         },
     }
 
@@ -375,7 +376,7 @@ def build_plan(
         if ords != [0, 1]:
             existing_card_shape_conflicts.append({"word": row["Word"], "card_ords": ords})
         decks = sorted({clean(str(card.get("deckName", ""))) for card in cards})
-        if decks != [DECK_NAME]:
+        if not decks or not all(in_deck_scope(deck, DECK_NAME) for deck in decks):
             existing_deck_conflicts.append({"word": row["Word"], "decks": decks})
         desired_fields = desired_pilot_fields(row, note)
         missing_tags = pilot_tags(row) - note_tags(note)
@@ -747,7 +748,7 @@ def verify_live(
                     rendered_preview_mismatches.append(f"{row['Word']}: Sentence Recognition render")
             else:
                 production_cards += 1
-            if clean(str(card.get("deckName", ""))) != DECK_NAME:
+            if not in_deck_scope(clean(str(card.get("deckName", ""))), DECK_NAME):
                 errors.append(f"{row['Word']}: recognition card is outside {DECK_NAME}")
             if int(card.get("type", -1)) == 0:
                 if int(card.get("queue", -1)) < 0:

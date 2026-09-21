@@ -139,6 +139,7 @@ class AddChineseWordsToAnkiTests(unittest.TestCase):
         self.assertEqual("", note["fields"]["Production Card"])
         self.assertEqual("20", note["fields"]["Frequency Rank"])
         self.assertFalse(note["options"]["allowDuplicate"])
+        self.assertTrue(note["options"]["duplicateScopeOptions"]["checkChildren"])
 
     def test_model_validation_rejects_meaning_recall_template(self) -> None:
         def fake_anki(action: str, params: dict | None = None):

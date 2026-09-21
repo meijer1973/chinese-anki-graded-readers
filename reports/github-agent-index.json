@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-09-19T08:58:27Z",
+  "generated_at": "2026-09-21T09:02:29Z",
   "repository": "meijer1973/chinese-anki-graded-readers",
   "raw_base_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/",
-  "file_count": 1198,
+  "file_count": 1203,
   "files": [
     {
       "path": ".agents/skills/chinese-continuity-editing/SKILL.md",
@@ -563,6 +563,11 @@
     {
       "path": "docs/china-knowledge-anki.md",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/china-knowledge-anki.md",
+      "category": "docs"
+    },
+    {
+      "path": "docs/chinese-subdecks-fsrs.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/docs/chinese-subdecks-fsrs.md",
       "category": "docs"
     },
     {
@@ -5466,6 +5471,11 @@
       "category": "maps/prompts"
     },
     {
+      "path": "reports/chinese-subdeck-migration-20260921.md",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/reports/chinese-subdeck-migration-20260921.md",
+      "category": "reports"
+    },
+    {
       "path": "reports/github-agent-index.json",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/reports/github-agent-index.json",
       "category": "reports"
@@ -5563,6 +5573,11 @@
     {
       "path": "scripts/china_knowledge/validate_china_knowledge.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/china_knowledge/validate_china_knowledge.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/chinese_card_categories.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/chinese_card_categories.py",
       "category": "scripts"
     },
     {
@@ -5683,6 +5698,11 @@
     {
       "path": "scripts/prose_variety_report.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/prose_variety_report.py",
+      "category": "scripts"
+    },
+    {
+      "path": "scripts/reorganize_chinese_subdecks.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/reorganize_chinese_subdecks.py",
       "category": "scripts"
     },
     {
@@ -5913,6 +5933,11 @@
     {
       "path": "tests/test_china_knowledge_templates.py",
       "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_china_knowledge_templates.py",
+      "category": "scripts"
+    },
+    {
+      "path": "tests/test_chinese_subdecks.py",
+      "raw_url": "https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/tests/test_chinese_subdecks.py",
       "category": "scripts"
     },
     {

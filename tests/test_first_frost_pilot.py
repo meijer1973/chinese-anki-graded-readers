@@ -271,8 +271,13 @@ def test_model_wide_duplicate_conflict_stops_before_mutation() -> None:
     assert fake.mutations == []
 
 
-def test_apply_preserves_review_schedule_and_verifies_cohort(tmp_path: Path) -> None:
+@pytest.mark.parametrize("subdecks", [False, True])
+def test_apply_preserves_review_schedule_and_verifies_cohort(tmp_path: Path, subdecks: bool) -> None:
     fake = FakeAnki(reviewed_word="原谅")
+    if subdecks:
+        for card in fake.cards.values():
+            if card["ord"] == 1:
+                card["deckName"] = "Default::Sentences"
     before = {
         card_id: copy.deepcopy(card)
         for card_id, card in fake.cards.items()

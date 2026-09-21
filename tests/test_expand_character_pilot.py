@@ -42,6 +42,16 @@ def test_plan_reuses_review_and_rejects_duplicates(environment, monkeypatch):
         expand.plan(live, content)
 
 
+def test_plan_reuses_note_with_siblings_in_separate_subdecks(environment, monkeypatch):
+    live, content = environment
+    live['cards'][0]['deckName'] = 'Default::Single characters'
+    live['cards'][1]['deckName'] = 'Default::Sentences'
+    monkeypatch.setattr(p, 'call', lambda action, **kw: [True] * len(kw['notes']))
+    proposed = expand.plan(live, content)
+    assert proposed['summary']['reused_notes'] == 1
+    assert proposed['summary']['new_notes'] == 1
+
+
 @pytest.mark.parametrize('review', [False, True])
 def test_apply_backups_reuses_and_creates_only_scoped_cards(environment, monkeypatch, tmp_path, review):
     live, content = environment

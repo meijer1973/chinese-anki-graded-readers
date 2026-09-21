@@ -187,7 +187,7 @@ def make_note(fields: dict[str, str], tags: list[str]) -> dict[str, Any]:
         "modelName": MODEL_NAME,
         "fields": {field: fields[field] for field in REQUIRED_MODEL_FIELDS},
         "tags": tags,
-        "options": {"allowDuplicate": False, "duplicateScope": "deck", "duplicateScopeOptions": {"deckName": DECK_NAME}},
+        "options": {"allowDuplicate": False, "duplicateScope": "deck", "duplicateScopeOptions": {"deckName": DECK_NAME, "checkChildren": True}},
     }
 
 

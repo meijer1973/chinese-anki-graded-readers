@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki, Hindi And Spanish Starters, And Graded Readers
 
-Generated: 2026-09-19T08:58:27Z
+Generated: 2026-09-21T09:02:29Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 1198
+Files indexed: 1203
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -58,11 +58,12 @@ Count: 30
 
 ## docs
 
-Count: 18
+Count: 19
 
 - docs/adaptation-workflow.md
 - docs/anki-integration.md
 - docs/china-knowledge-anki.md
+- docs/chinese-subdecks-fsrs.md
 - docs/chinese-vocabulary-anki.md
 - docs/completion-response-template.md
 - docs/creative-preflight.md
@@ -81,7 +82,7 @@ Count: 18
 
 ## scripts
 
-Count: 88
+Count: 91
 
 - add_missing_single_character_notes.py
 - apply_meaning_cleanup_updates.py
@@ -106,6 +107,7 @@ Count: 88
 - scripts/china_knowledge/config.py
 - scripts/china_knowledge/setup_china_knowledge_anki.py
 - scripts/china_knowledge/validate_china_knowledge.py
+- scripts/chinese_card_categories.py
 - scripts/complete_stretch_pack_metadata.py
 - scripts/export_current_anki_words.py
 - scripts/export_stretch_words_for_anki.py
@@ -130,6 +132,7 @@ Count: 88
 - scripts/profile_adaptation_vocabulary.py
 - scripts/promote_stretch_words.py
 - scripts/prose_variety_report.py
+- scripts/reorganize_chinese_subdecks.py
 - scripts/repeated_phrase_report.py
 - scripts/run_quality_gate.py
 - scripts/schedule_anki_learning_order.py
@@ -156,6 +159,7 @@ Count: 88
 - tests/test_china_knowledge_safety.py
 - tests/test_china_knowledge_setup.py
 - tests/test_china_knowledge_templates.py
+- tests/test_chinese_subdecks.py
 - tests/test_expand_character_pilot.py
 - tests/test_export_current_anki_words.py
 - tests/test_first_frost_pilot.py
@@ -1233,8 +1237,9 @@ Count: 961
 
 ## reports
 
-Count: 3
+Count: 4
 
+- reports/chinese-subdeck-migration-20260921.md
 - reports/github-agent-index.json
 - reports/github-agent-index.md
 - reports/url-index.md

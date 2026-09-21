@@ -20,6 +20,7 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 from scripts.first_frost.character_content import load_characters  # noqa: E402
+from scripts.chinese_card_categories import in_deck_scope  # noqa: E402
 
 MODEL = 'Chinese Vocabulary'
 TAGS = {'reading::first_frost', 'pilot::characters'}
@@ -102,7 +103,7 @@ def select(state, requested, deck, known=()):
             else:
                 card = word_cards[0]
                 item['card_id'] = card['cardId']
-                if card['deckName'] != deck:
+                if not in_deck_scope(card['deckName'], deck):
                     item['status'] = 'deck-conflict'
                 elif 'leech' in note['tags'] or card['lapses'] >= 8:
                     item['status'] = 'leech-needs-review'
@@ -129,7 +130,7 @@ def audit(state, frequencies, deck, out):
     rows = []
     for card in state['cards']:
         note = notes.get(card['note'])
-        if not note or card['queue'] != -1 or card['deckName'] != deck:
+        if not note or card['queue'] != -1 or not in_deck_scope(card['deckName'], deck):
             continue
         word = field(note, 'Word').strip()
         if (len(word) != 1 or word not in counts or int(counts[word]['Book Count']) <= 0
