@@ -23,6 +23,40 @@ TAIWAN_NOISE_RE = re.compile(
 )
 
 MEANING_OVERRIDES: dict[str, str] = {
+    # User-selected reading characters, 2026-09-23. CC-CEDICT and Zdic;
+    # compound uses are labeled rather than treated as standalone meanings.
+    "豫": "in 犹豫: to hesitate; at ease (literary); abbreviation for Henan",
+    "稀": "sparse; rare; thin or watery",
+    "僻": "remote; out of the way; eccentric (in compounds)",
+    "凿": "to chisel; to bore or dig; chisel; certain (in 确凿)",
+    "删": "to delete; to remove (text)",
+    "吴": "Wu (surname; historic state and region in eastern China)",
+    "吼": "to roar; to howl; to shout loudly",
+    "呗": "bei5: final particle suggesting an obvious course or reluctant agreement | bai4: Buddhist chanting",
+    "啃": "to gnaw; to nibble",
+    "啰": "luo1: in 啰嗦, wordy; nagging | luo2: in 啰唣, to make a fuss | luo5: final exclamatory particle",
+    "嗡": "buzz; hum; drone (sound)",
+    "嗦": "to suck; in 啰嗦, wordy; in 哆嗦, to shiver (neutral tone in these compounds)",
+    "噗": "puff; pop; plop (sound, including a sudden burst of laughter)",
+    "嚏": "sneeze (usually 喷嚏)",
+    "塌": "to collapse; to cave in; to sag",
+    "奢": "extravagant; luxurious (in compounds)",
+    "寥": "very few; sparse; empty; lonely (in compounds)",
+    "寺": "Buddhist temple; religious building (in compounds)",
+    "屑": "crumbs; fragments; scraps; to consider worth doing (usually in 不屑)",
+    "弊": "drawback; harm; malpractice; fraud",
+    "彦": "a talented and virtuous person (literary; often used in names)",
+    "怂": "song3: in 怂恿, to urge or incite; frightened (literary) | song2: cowardly (dialectal variant)",
+    "恒": "constant; lasting; perseverance (in 恒心)",
+    "恤": "to sympathize; to show concern; to give relief or compensation",
+    "惰": "lazy; idle (usually 懒惰)",
+    "捏": "to pinch; to hold between the fingers; to shape by hand; to fabricate",
+    "掐": "to pinch; to nip off; to grip tightly",
+    "斤": "jin; catty (unit of weight: 500 grams in mainland China)",
+    "斩": "to chop; to cut off; to behead",
+    "朕": "I; me (an emperor's way of referring to himself)",
+    "梢": "tip; end (of a branch, hair, etc.)",
+    "氛": "air; atmosphere (in 气氛 or 氛围)",
     # Reviewed reading-character additions, 2026-09-20. Polyphonic senses were
     # checked against CC-CEDICT and https://www.zdic.net/hans/<character>.
     "叠": "to fold; to pile up; to overlap",
