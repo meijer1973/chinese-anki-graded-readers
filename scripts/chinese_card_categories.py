@@ -43,7 +43,7 @@ def is_single_han(value: str) -> bool:
 
 
 def classify(model: str, template: dict, fields: dict[str, str]) -> tuple[str, str]:
-    """Return single/sentence/keep/ambiguous, without modifying any field."""
+    """Return single/sentence/multi/ambiguous, without modifying any field."""
     if model != "Chinese Vocabulary":
         return "ambiguous", "Unreviewed note model"
     front = template.get("qfmt", "")
@@ -57,5 +57,5 @@ def classify(model: str, template: dict, fields: dict[str, str]) -> tuple[str, s
     if is_single_han(word):
         return "single", "Word Recognition tests exactly one Han character"
     if len(word) > 1 and all(is_single_han(c) for c in word):
-        return "keep", "Word Recognition tests multiple Han characters"
+        return "multi", "Word Recognition tests multiple Han characters"
     return "ambiguous", "Headword contains annotations, alternatives, or a non-Han target"

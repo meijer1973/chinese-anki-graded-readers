@@ -4,8 +4,9 @@ This is the reviewed procedure for adding ordinary ranked Chinese vocabulary not
 
 The scope includes all Default subdecks. Since 21 September 2026, single-character
 word cards belong in `Default::Single characters` (95% retention), sentence cards
-in `Default::Sentences` (80%), and multi-character word cards remain in Default
-(existing 90%). See [subdeck routing and rollback](chinese-subdecks-fsrs.md).
+in `Default::Sentences` (80%), and, since 24 September 2026, multi-character word
+cards in `Default::Multi-character words` (90%). Default is the combined study
+parent and is empty after routing. See [subdeck routing and rollback](chinese-subdecks-fsrs.md).
 Imports still start in Default: route reviewed new cards afterward without
 changing their suspension or schedules. Duplicate checks must include children.
 

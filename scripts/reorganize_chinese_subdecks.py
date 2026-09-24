@@ -16,7 +16,11 @@ from pathlib import Path
 from scripts.chinese_card_categories import classify, in_deck_scope
 
 TABLES = ("cards", "notes", "revlog", "fields", "templates", "notetypes", "tags", "graves")
-TARGETS = {"single": ("Single characters", 95), "sentence": ("Sentences", 80)}
+TARGETS = {
+    "single": ("Single characters", 95),
+    "sentence": ("Sentences", 80),
+    "multi": ("Multi-character words", 90),
+}
 
 
 def require(condition, message):

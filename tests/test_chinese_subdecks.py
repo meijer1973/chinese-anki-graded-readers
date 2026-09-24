@@ -32,16 +32,18 @@ def snapshot():
 def moved_snapshot(before):
     after = copy.deepcopy(before)
     after["decks"] += [{"id": 3, "name": "Default::Single characters", "conf": 1, "dyn": 0, "desiredRetention": 95},
-                       {"id": 4, "name": "Default::Sentences", "conf": 1, "dyn": 0, "desiredRetention": 80}]
+                       {"id": 4, "name": "Default::Sentences", "conf": 1, "dyn": 0, "desiredRetention": 80},
+                       {"id": 5, "name": "Default::Multi-character words", "conf": 1, "dyn": 0, "desiredRetention": 90}]
     after["tables"]["cards"]["rows"][0][2] = 3
     after["tables"]["cards"]["rows"][1][2] = 4
+    after["tables"]["cards"]["rows"][2][2] = 5
     return after
 
 
 class CategoriesTest(unittest.TestCase):
     def test_word_with_back_example_is_not_sentence(self):
         self.assertEqual(classify("Chinese Vocabulary", WORD, {"Word": "字"})[0], "single")
-        self.assertEqual(classify("Chinese Vocabulary", WORD, {"Word": "词语"})[0], "keep")
+        self.assertEqual(classify("Chinese Vocabulary", WORD, {"Word": "词语"})[0], "multi")
 
     def test_markup_whitespace_entities_and_extended_han(self):
         for word in (" <b>字</b> ", "&#23383;", "𠮷", "<style>x</style>字"):
@@ -70,11 +72,26 @@ class CategoriesTest(unittest.TestCase):
 class MigrationTest(unittest.TestCase):
     def test_card_level_siblings_suspension_burial_and_other_deck(self):
         plan = make_plan(snapshot())
-        self.assertEqual(plan["counts"], {"single": 1, "sentence": 1, "keep": 1})
-        self.assertEqual(plan["moves"], {"single": 1, "sentence": 1})
+        self.assertEqual(plan["counts"], {"single": 1, "sentence": 1, "multi": 1})
+        self.assertEqual(plan["moves"], {"single": 1, "sentence": 1, "multi": 1})
         self.assertEqual(plan["suspended"], {"single": 1})
         self.assertEqual(plan["buried"], 1)
         self.assertEqual(plan["rows"][0]["note_id"], plan["rows"][1]["note_id"])
+
+    def test_third_subdeck_moves_only_remaining_parent_word_cards(self):
+        before = moved_snapshot(snapshot())
+        before["decks"] = [d for d in before["decks"] if d["id"] != 5]
+        before["tables"]["cards"]["rows"][2][2] = 1
+        plan = make_plan(before)
+        self.assertEqual(plan["moves"], {"multi": 1})
+        self.assertEqual([r["card_id"] for r in plan["rows"] if r["move"]], [103])
+        after = copy.deepcopy(before)
+        after["decks"].append({"id": 5, "name": "Default::Multi-character words", "conf": 1,
+                               "dyn": 0, "desiredRetention": 90})
+        after["tables"]["cards"]["rows"][2][2] = 5
+        verify_change(before, after, plan, {d["name"]: d["id"] for d in after["decks"]})
+        self.assertFalse(any(row[2] == 1 for row in after["tables"]["cards"]["rows"]))
+        self.assertEqual(make_plan(after)["moves"], {})
 
     def test_filtered_home_membership_is_detected_but_not_moved(self):
         before = snapshot()
@@ -99,11 +116,13 @@ class MigrationTest(unittest.TestCase):
 
     def test_memory_due_flags_and_suspension_changes_are_rejected(self):
         before = snapshot()
-        for index, value in [(5, 0), (6, 100), (7, 21), (8, '{"s":1.235}')]:
-            after = moved_snapshot(before)
-            after["tables"]["cards"]["rows"][0][index] = value
-            with self.assertRaisesRegex(RuntimeError, "Card state"):
-                verify_change(before, after, make_plan(before), {d["name"]: d["id"] for d in after["decks"]})
+        for row_index in (0, 2):
+            for index, value in [(5, 1), (6, 100), (7, 21), (8, '{"s":1.235}')]:
+                with self.subTest(card=row_index, field=index):
+                    after = moved_snapshot(before)
+                    after["tables"]["cards"]["rows"][row_index][index] = value
+                    with self.assertRaisesRegex(RuntimeError, "Card state"):
+                        verify_change(before, after, make_plan(before), {d["name"]: d["id"] for d in after["decks"]})
 
     def test_history_content_and_other_settings_are_rejected(self):
         before = snapshot()

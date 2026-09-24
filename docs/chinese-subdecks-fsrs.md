@@ -1,22 +1,25 @@
 # Chinese subdecks and FSRS
 
-The 21 September 2026 migration keeps the existing `Chinese Vocabulary` note
-model and `Default` parent. These are card destinations, not separate note types:
+The 21 September 2026 migration and 24 September third-subdeck extension keep
+the existing `Chinese Vocabulary` note model and `Default` parent. These are
+card destinations, not separate note types:
 
 | Cards | Location | Desired retention |
 | --- | --- | --- |
 | Single-Han-character Word Recognition | `Default::Single characters` | 95% deck override |
 | Sentence Recognition | `Default::Sentences` | 80% deck override |
-| Multi-character Word Recognition | Existing location, currently `Default` | Existing 90% |
+| Multi-character Word Recognition | `Default::Multi-character words` | 90% deck override, preserving the former parent target |
 
 One note's two cards can live in different decks. Study **Default** for the
 combined collection; Anki uses each card's home-deck scheduling options.
+All classified Chinese cards live in the three children; Default is an empty
+parent after routing. Newly imported cards stay there only until routing runs.
 Nothing is unsuspended by routing. Preserve the user's word-only/sentence-only
 choices. No notes/cards, templates, ranks, reader allowlists, or media are added.
 
 ## Current configuration
 
-Anki 26.09.2 supports deck-specific retention. Both children use the original
+Anki 26.09.2 supports deck-specific retention. All three children use the original
 Default preset and fitted FSRS parameters, with only their deck retention
 overridden. The original 10-new/500-review daily limits, learning steps 1/10
 minutes, relearning step 10 minutes, and sibling-burying preferences remain.
@@ -136,6 +139,11 @@ including the raw FSRS `data` field, remains byte-for-byte unchanged except the
 deck ID and native sync metadata. Non-card tables are compared exactly.
 
 ## Exact rollback for the 21 September migration
+
+The later third-subdeck extension has its own full backup and preservation
+report in [the 24 September report](../reports/three-chinese-subdecks-2026-09-24.md).
+Use the backup for the intended change; the older package below predates later
+vocabulary additions and reviews.
 
 Backup:
 `C:\Users\meije\Downloads\Anki-subdeck-migration-20260921\collection-before-migration-20260921-104354.colpkg`

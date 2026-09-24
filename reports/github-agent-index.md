@@ -1,12 +1,12 @@
 # GitHub Agent File Index - Chinese Anki, Hindi And Spanish Starters, And Graded Readers
 
-Generated: 2026-09-21T09:02:29Z
+Generated: 2026-09-24T14:25:32Z
 
 Purpose: lightweight orientation for agents browsing through GitHub. This inventory lists git-trackable files by repository surface.
 
 Repository: `https://github.com/meijer1973/chinese-anki-graded-readers`
 Raw base URL: `https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/`
-Files indexed: 1203
+Files indexed: 1206
 
 Skipped directories: `.git`, `.mypy_cache`, `.pytest_cache`, `.ruff_cache`, `SUBTLEX-CH-CHR`, `SUBTLEX-CH-WF`, `__pycache__`, `downloads`
 
@@ -1237,11 +1237,14 @@ Count: 961
 
 ## reports
 
-Count: 4
+Count: 7
 
+- reports/character-additions-2026-09-23.md
 - reports/chinese-subdeck-migration-20260921.md
 - reports/github-agent-index.json
 - reports/github-agent-index.md
+- reports/lingq-word-selection-2026-09-24.md
+- reports/three-chinese-subdecks-2026-09-24.md
 - reports/url-index.md
 
 ## series

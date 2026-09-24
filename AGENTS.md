@@ -155,8 +155,9 @@ Read `docs/chinese-subdecks-fsrs.md` before changing Chinese deck membership or
 retention. The existing `Default` parent remains the combined entry point:
 single-character Word Recognition cards use `Default::Single characters` (95%
 deck-specific retention), Sentence Recognition cards use `Default::Sentences`
-(80%), and multi-character word cards retain their original location/target
-(currently Default, 90%). Sibling cards stay on the same note but may use
+(80%), and multi-character Word Recognition cards use
+`Default::Multi-character words` (90%). Default is an empty combined parent
+after routing; new imports start there temporarily. Sibling cards stay on the same note but may use
 different decks. The model and ranked vocabulary source remain unchanged.
 
 `deck:Default` queries include children; exact equality checks on live card deck

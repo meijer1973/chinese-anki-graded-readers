@@ -1139,8 +1139,11 @@ Single-fetch entry point for external research agents that need literal raw GitH
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/stretch_word_exposure.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/manuscripts/stretch-layer-fixture/vocabulary_report.json
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/migrate_chinese_notes.py
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/reports/character-additions-2026-09-23.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/reports/chinese-subdeck-migration-20260921.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/reports/github-agent-index.json
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/reports/lingq-word-selection-2026-09-24.md
+- https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/reports/three-chinese-subdecks-2026-09-24.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/reports/url-index.md
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/__init__.py
 - https://raw.githubusercontent.com/meijer1973/chinese-anki-graded-readers/main/scripts/adaptation_tools.py
