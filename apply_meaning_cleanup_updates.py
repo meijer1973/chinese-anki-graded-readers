@@ -23,6 +23,16 @@ TAIWAN_NOISE_RE = re.compile(
 )
 
 MEANING_OVERRIDES: dict[str, str] = {
+    # Missing live-deck word components, 2026-09-26.
+    "润": "moist; to moisten; to lubricate; profit (in compounds such as 利润)",
+    "傅": "instructor; master (bound form, as in 师傅)",
+    "妖": "demon; monster; bewitching",
+    "巷": "lane; alley",
+    "摊": "to spread out; market stall",
+    "浦": "riverbank; shore (often in place names)",
+    "砖": "brick; tile",
+    "蓄": "to store up; to accumulate; to grow (a beard)",
+    "贷": "to lend; to borrow; loan",
     # LingQ selections, 2026-09-24: independently curated meanings and original examples.
     "外遇": "extramarital affair",
     "体重": "body weight",

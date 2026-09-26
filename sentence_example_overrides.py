@@ -2,6 +2,16 @@ from __future__ import annotations
 
 
 SENTENCE_EXAMPLE_OVERRIDES: dict[str, tuple[str, str]] = {
+    # Missing live-deck word components, 2026-09-26.
+    "润": ("喝点水，润润嗓子。", "Drink some water to moisten your throat."),
+    "傅": ("师傅，请在前面停车。", "Driver, please stop up ahead."),
+    "妖": ("故事里的妖怪住在山洞里。", "The monster in the story lives in a cave."),
+    "巷": ("这条小巷很安静。", "This little alley is very quiet."),
+    "摊": ("他把地图摊在桌上。", "He spread the map out on the table."),
+    "浦": ("我们沿着黄浦江散步。", "We walked along the Huangpu River."),
+    "砖": ("这面墙是用红砖砌的。", "This wall is built of red bricks."),
+    "蓄": ("他开始蓄胡子了。", "He has started growing a beard."),
+    "贷": ("他向银行贷款买房。", "He took out a bank loan to buy a home."),
     # LingQ selections, 2026-09-24: independently curated meanings and original examples.
     "外遇": ("她发现丈夫有外遇。", "She discovered that her husband was having an affair."),
     "体重": ("我的体重最近没有变化。", "My weight has not changed recently."),
@@ -1150,6 +1160,7 @@ SENTENCE_EXAMPLE_OVERRIDES: dict[str, tuple[str, str]] = {
 
 
 SENTENCE_PINYIN_OVERRIDES: dict[str, str] = {
+    "师傅，请在前面停车。": "shi1 fu5，qing3 zai4 qian2 mian4 ting2 che1。",
     # Reviewed LingQ example readings, 2026-09-24.
     "她发现丈夫有外遇。": "ta1 fa1 xian4 zhang4 fu5 you3 wai4 yu4。",
     "我们中途停下来休息了一会儿。": "wo3 men5 zhong1 tu2 ting2 xia4 lai2 xiu1 xi5 le5 yi2 hui4 er5。",
