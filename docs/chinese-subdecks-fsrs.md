@@ -31,11 +31,26 @@ reset. Existing due dates, intervals, steps, stored memory state, queue position
 and history remain unchanged. The new retention targets take effect gradually
 when cards receive their next real reviews.
 
-New-card gathering remains **Deck** (the pre-migration setting). Consequently,
-parent study may gather categories in deck order even though the existing random
-due positions are unchanged. To preserve a shuffled cross-category new queue,
-an explicitly approved option is **Ascending position** gathering, without
-repositioning cards or changing limits. Do not silently change this preference.
+New-card gathering is **Ascending position**, explicitly approved and applied
+on 29 September 2026. Default now gathers across subdecks using their existing
+new-card positions, without repositioning cards or changing limits. Preserve
+this preference in future imports and routing. It does not assign an equal
+daily quota to each category.
+
+Previously, **Deck** gathering visited subdecks alphabetically. Multi-character
+words could consume the parent's entire 10-card allowance before Sentences or
+Single characters were considered. The 29 September audit confirmed 10 new
+multi-character cards and zero new cards from the other two categories that
+day, despite active new cards waiting in all three. The setting change applies
+to future gathering; it does not reset the completed daily allowance.
+
+Only the shared Chinese preset's `newGatherPriority` changed, from `0` (Deck)
+to `1` (Ascending position), through AnkiConnect's native configuration save.
+Before/after verification preserved all 10,134 cards, 5,267 notes, and 16,244
+review entries linked to current cards; other settings and China Knowledge's
+separate preset were unchanged. Normal sync succeeded. Private configuration
+backups and verification are under ignored
+`anki/first_frost/local_results/subdeck_gather_audit_20260929/apply_145117/`.
 
 ## Future notes and duplicate protection
 

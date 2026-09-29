@@ -168,9 +168,11 @@ procedure afterward; routing is not automatic. Do not use a fixed word-template
 deck override, because that template serves both single- and multi-character
 headwords. Preserve each card's suspension/burial and all scheduling/history.
 Anki 26.09.2 supports deck retention overrides; do not clone shared presets or
-reschedule existing cards unnecessarily. The current new-card gather setting
-remains Deck; cross-category Ascending position gathering requires an explicit
-preference change. Keep full backups and private per-run manifests outside Git.
+reschedule existing cards unnecessarily. The current new-card gather setting is
+Ascending position, explicitly approved on 29 September 2026, so Default gathers
+across subdecks by existing new-card positions. Preserve this preference and the
+combined 10-new-card daily limit. Keep full backups and private per-run manifests
+outside Git.
 
 ### Selective recognition practice
 
