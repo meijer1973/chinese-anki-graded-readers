@@ -28,18 +28,28 @@ book, increasing coverage from 595,091 / 613,213 (97.044746%) to
 word cards, including suspended cards, rather than mastery or active-card-only
 coverage. It excludes punctuation, Latin letters, digits, and navigation text.
 
-## Subdeck routing status
+## Completed subdeck routing
 
-Pending: the new cards remain temporarily in Default. The Windows computer-use
-tool twice reported `failed to activate captured window`; the subsequently
-opened Anki browser exposed accessibility text but a black screenshot.
-The user has been asked to bring Anki to the foreground. No deck moves have
-been attempted without the required full collection backup and restore test.
+After restoring access to Anki's window, completed the full backup, isolated
+restore verification, dry run, trial move, no-op repeat, live dry run, and live
+move from `docs/chinese-subdecks-fsrs.md`. All verification reports passed.
 
-Once the window is accessible, finish the standard backup, restore verification,
-trial, repeat, and live routing procedure in `docs/chinese-subdecks-fsrs.md`.
-The prepared plan is exactly 81 word cards to `Default::Single characters`
-and 81 sentence cards to `Default::Sentences`, preserving their queue states.
+- Moved 81 active word cards to `Default::Single characters`: **2,337 total**.
+- Moved 81 suspended sentence cards to `Default::Sentences`: **4,867 total**.
+- `Default::Multi-character words` remains at **2,530 cards**.
+- Default has no cards directly in the parent after routing.
+- Preserved all 10,134 collection cards' scheduling and memory state, all
+  17,504 review-log entries, and the existing note contents and deck settings.
+- Verified the 81 word cards remain active and all 81 sentence siblings remain
+  suspended. Normal sync succeeded after routing.
+
+Full collection backup, with Include media enabled:
+`C:\Users\meije\Downloads\Anki-smile-81-routing-20260929\collection-before-routing-20260929.colpkg`.
+Size: 1,624,663 bytes. SHA-256:
+`6e6df29e1da46807563c0306a03997ddd9d423403269aa8e02254268fecdb4e7`.
+The media manifest was empty. The separate restore-test profile has no sync
+credentials. Private restore evidence and trial/live manifests remain beside
+the full backup.
 
 ## Verification and retained local artifacts
 
@@ -55,9 +65,10 @@ and 81 sentence cards to `Default::Sentences`, preserving their queue states.
 Private import manifests, before/after snapshots, exact new IDs, and the
 pre-import scheduled deck backup remain under ignored
 `anki/first_frost/local_results/smile_81_additions_20260929/`.
-The deck backup is an `.apkg`; it is not used as a substitute for the full
-`.colpkg` required before subdeck routing. Prepared routing helpers remain in
-the local Downloads folder `Anki-smile-81-routing-20260929`.
+The pre-import deck backup is an `.apkg`; it was not used as a substitute for
+the full `.colpkg` verified before subdeck routing. Routing helpers and full
+backup evidence remain in the local Downloads folder
+`Anki-smile-81-routing-20260929`.
 
 ## Added characters, in book-frequency order
 
