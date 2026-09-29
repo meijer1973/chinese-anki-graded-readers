@@ -46,6 +46,21 @@ FIELDS = [
     "Tags",
 ]
 
+# Prioritize common readings when dictionary ordering favors rare senses.
+WORD_PINYIN_OVERRIDES: dict[str, str] = {
+    "岳": "yue4",
+    "咔": "ka1 / ka3",
+    "帖": "tie3 / tie4 / tie1",
+    "咋": "za3 / zha1",
+    "虾": "xia1",
+    "爪": "zhua3 / zhao3",
+    "桓": "huan2",
+    "哑": "ya3 / ya1",
+    "雀": "que4",
+    "粥": "zhou1",
+    "咳": "ke2 / hai1",
+}
+
 MANUAL_ENTRIES: dict[str, tuple[str, str]] = {
     "很多": ("hen3 duo1", "many; a lot of"),
     "来说": ("lai2 shuo1", "as far as ... is concerned; speaking in terms of"),
@@ -508,6 +523,7 @@ def main() -> None:
             meaning_tag = "needs_meaning_review"
             missing_exact_meaning += 1
 
+        pinyin = WORD_PINYIN_OVERRIDES.get(word, pinyin)
         meaning = cleaned_meaning(word, meaning)
 
         example = find_example(word, example_records, char_index)
