@@ -48,6 +48,22 @@ FIELDS = [
 
 # Prioritize common readings when dictionary ordering favors rare senses.
 WORD_PINYIN_OVERRIDES: dict[str, str] = {
+    # Second user-selected vocabulary batch, 2026-10-19.
+    "笼子": "long2 zi5",
+    "咽": "yan4 / yan1 / ye4",
+    "玫瑰": "mei2 gui5",
+    "刘": "liu2",
+    "梁": "liang2",
+    "出息": "chu1 xi5",
+    "吾": "wu2",
+    "奥运": "ao4 yun4",
+    "奥运会": "ao4 yun4 hui4",
+    "下载": "xia4 zai4",
+    "戚": "qi1",
+    "屏住": "bing3 zhu4",
+    "本次": "ben3 ci4",
+    "曝光": "bao4 guang1",
+    "曝": "bao4 / pu4",
     # User-selected vocabulary additions, 2026-10-19.
     "丝毫": "si1 hao2",
     "结实": "jie1 shi5",
@@ -304,6 +320,9 @@ WORD_PINYIN_OVERRIDES: dict[str, str] = {
 }
 
 MANUAL_ENTRIES: dict[str, tuple[str, str]] = {
+    # Second user-selected vocabulary batch, 2026-10-19.
+    "屏住": ("bing3 zhu4", "to hold back; to hold (one's breath)"),
+    "本次": ("ben3 ci4", "this time; this occasion; this current event"),
     # User-selected vocabulary additions, 2026-10-19.
     "丝毫": ("si1 hao2", "the slightest amount; a bit (usually with a negative)"),
     "结实": ("jie1 shi5", "sturdy; strong; durable"),
