@@ -2,6 +2,30 @@ from __future__ import annotations
 
 
 SENTENCE_EXAMPLE_OVERRIDES: dict[str, tuple[str, str]] = {
+    # User-selected novel characters, 2026-10-20.
+    "灿": ("她脸上露出了灿烂的笑容。", "A bright smile appeared on her face."),
+    "眶": ("她的眼眶里含着泪水。", "Her eyes were brimming with tears."),
+    "荧": ("黑暗中亮起了绿色的荧光。", "A green fluorescent glow appeared in the darkness."),
+    "蹬": ("他用力蹬着自行车。", "He was pedaling the bicycle hard."),
+    "凝": ("她凝视着窗外的雨。", "She gazed intently at the rain outside the window."),
+    "咫": ("出口近在咫尺，我们却过不去。", "The exit was very close, but we could not get through."),
+    "哧": ("她扑哧一声笑了出来。", "She let out a giggle."),
+    "拱": ("小猪用鼻子拱开了门。", "The piglet nudged the door open with its snout."),
+    "梳": ("她每天早上都梳头发。", "She combs her hair every morning."),
+    "沸": ("锅里的水已经沸腾了。", "The water in the pot has come to a boil."),
+    "渔": ("渔民清早就出海了。", "The fishermen went out to sea early in the morning."),
+    "烬": ("火灭了，只剩下一堆灰烬。", "The fire went out, leaving only a pile of ashes."),
+    "皙": ("她的皮肤很白皙。", "Her skin is very fair."),
+    "卿": ("古代皇帝常称大臣为卿。", "In ancient times, emperors often addressed their ministers as qing."),
+    "嘤": ("小鸟在树上嘤嘤地叫。", "The little bird chirped softly in the tree."),
+    "拇": ("他向我竖起了大拇指。", "He gave me a thumbs-up."),
+    "肆": ("他在别人面前放肆地大笑。", "He laughed without restraint in front of others."),
+    "锡": ("这个杯子是用锡做的。", "This cup is made of tin."),
+    "丘": ("小屋后面有一座山丘。", "There is a small hill behind the cottage."),
+    "惚": ("他没睡好，整天神情恍惚。", "He had not slept well and looked dazed all day."),
+    "戛": ("音乐突然戛然而止。", "The music suddenly stopped short."),
+    "撅": ("她撅着嘴，一句话也不说。", "She pouted and did not say a word."),
+    "撸": ("他撸起袖子，开始洗碗。", "He rolled up his sleeves and started washing the dishes."),
     # Second user-selected vocabulary batch, 2026-10-19.
     "打手": ("他雇了几个打手来威胁店主。", "He hired several thugs to threaten the shopkeeper."),
     "惊慌": ("听见巨响，她惊慌地站了起来。", "Hearing the loud noise, she stood up in alarm."),
@@ -1598,6 +1622,30 @@ SENTENCE_EXAMPLE_OVERRIDES: dict[str, tuple[str, str]] = {
 
 
 SENTENCE_PINYIN_OVERRIDES: dict[str, str] = {
+    # User-selected novel characters, 2026-10-20.
+    "她脸上露出了灿烂的笑容。": "ta1 lian3 shang4 lu4 chu1 le5 can4 lan4 de5 xiao4 rong2。",
+    "她的眼眶里含着泪水。": "ta1 de5 yan3 kuang4 li3 han2 zhe5 lei4 shui3。",
+    "黑暗中亮起了绿色的荧光。": "hei1 an4 zhong1 liang4 qi3 le5 lü4 se4 de5 ying2 guang1。",
+    "他用力蹬着自行车。": "ta1 yong4 li4 deng1 zhe5 zi4 xing2 che1。",
+    "她凝视着窗外的雨。": "ta1 ning2 shi4 zhe5 chuang1 wai4 de5 yu3。",
+    "出口近在咫尺，我们却过不去。": "chu1 kou3 jin4 zai4 zhi3 chi3， wo3 men5 que4 guo4 bu5 qu4。",
+    "她扑哧一声笑了出来。": "ta1 pu1 chi1 yi4 sheng1 xiao4 le5 chu1 lai5。",
+    "小猪用鼻子拱开了门。": "xiao3 zhu1 yong4 bi2 zi5 gong3 kai1 le5 men2。",
+    "她每天早上都梳头发。": "ta1 mei3 tian1 zao3 shang5 dou1 shu1 tou2 fa5。",
+    "锅里的水已经沸腾了。": "guo1 li3 de5 shui3 yi3 jing1 fei4 teng2 le5。",
+    "渔民清早就出海了。": "yu2 min2 qing1 zao3 jiu4 chu1 hai3 le5。",
+    "火灭了，只剩下一堆灰烬。": "huo3 mie4 le5， zhi3 sheng4 xia4 yi4 dui1 hui1 jin4。",
+    "她的皮肤很白皙。": "ta1 de5 pi2 fu1 hen3 bai2 xi1。",
+    "古代皇帝常称大臣为卿。": "gu3 dai4 huang2 di4 chang2 cheng1 da4 chen2 wei2 qing1。",
+    "小鸟在树上嘤嘤地叫。": "xiao3 niao3 zai4 shu4 shang4 ying1 ying1 de5 jiao4。",
+    "他向我竖起了大拇指。": "ta1 xiang4 wo3 shu4 qi3 le5 da4 mu3 zhi3。",
+    "他在别人面前放肆地大笑。": "ta1 zai4 bie2 ren5 mian4 qian2 fang4 si4 de5 da4 xiao4。",
+    "这个杯子是用锡做的。": "zhe4 ge5 bei1 zi5 shi4 yong4 xi1 zuo4 de5。",
+    "小屋后面有一座山丘。": "xiao3 wu1 hou4 mian4 you3 yi2 zuo4 shan1 qiu1。",
+    "他没睡好，整天神情恍惚。": "ta1 mei2 shui4 hao3， zheng3 tian1 shen2 qing2 huang3 hu1。",
+    "音乐突然戛然而止。": "yin1 yue4 tu1 ran2 jia2 ran2 er2 zhi3。",
+    "她撅着嘴，一句话也不说。": "ta1 jue1 zhe5 zui3， yi2 ju4 hua4 ye3 bu4 shuo1。",
+    "他撸起袖子，开始洗碗。": "ta1 lu1 qi3 xiu4 zi5， kai1 shi3 xi3 wan3。",
     # Second user-selected vocabulary batch, 2026-10-19.
     "他雇了几个打手来威胁店主。": "ta1 gu4 le5 ji3 ge4 da3 shou5 lai2 wei1 xie2 dian4 zhu3。",
     "听见巨响，她惊慌地站了起来。": "ting1 jian4 ju4 xiang3， ta1 jing1 huang1 de5 zhan4 le5 qi3 lai2。",

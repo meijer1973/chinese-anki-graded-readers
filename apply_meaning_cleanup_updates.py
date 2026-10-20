@@ -23,6 +23,30 @@ TAIWAN_NOISE_RE = re.compile(
 )
 
 MEANING_OVERRIDES: dict[str, str] = {
+    # User-selected novel characters, 2026-10-20.
+    "灿": "bright; brilliant; splendid",
+    "眶": "eye socket; rim of the eye",
+    "荧": "glimmering; faint light; fluorescent (in compounds)",
+    "蹬": "to push with the foot; to pedal; to tread on",
+    "凝": "to congeal; to concentrate; to gaze intently",
+    "咫": "an ancient unit of length; a very short distance (in 咫尺)",
+    "哧": "a giggling, hissing or ripping sound",
+    "拱": "to arch; to cup the hands in greeting; to nudge with the snout",
+    "梳": "to comb; comb (in compounds)",
+    "沸": "to boil; to seethe",
+    "渔": "to fish; fishing (in compounds)",
+    "烬": "ashes; cinders; embers (in compounds)",
+    "皙": "fair-skinned; of light complexion (literary)",
+    "卿": "high official; an old form of address or endearment",
+    "嘤": "chirping; a soft whimpering sound",
+    "拇": "thumb; big toe",
+    "肆": "unrestrained; wanton; shop (literary); four (formal numeral)",
+    "锡": "tin (metal); to bestow (literary)",
+    "丘": "mound; small hill",
+    "惚": "dazed; absent-minded (used in 恍惚)",
+    "戛": "to tap; to scrape; abruptly (in 戛然而止)",
+    "撅": "to stick out; to pout",
+    "撸": "to stroke or rub along; to roll up (sleeves; colloquial)",
     # Second user-selected vocabulary batch, 2026-10-19.
     "打手": "hired thug; hired muscle",
     "咚": "thud; boom; knock (sound)",

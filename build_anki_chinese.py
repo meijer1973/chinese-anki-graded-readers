@@ -48,6 +48,30 @@ FIELDS = [
 
 # Prioritize common readings when dictionary ordering favors rare senses.
 WORD_PINYIN_OVERRIDES: dict[str, str] = {
+    # User-selected novel characters, 2026-10-20.
+    "灿": "can4",
+    "眶": "kuang4",
+    "荧": "ying2",
+    "蹬": "deng1",
+    "凝": "ning2",
+    "咫": "zhi3",
+    "哧": "chi1",
+    "拱": "gong3",
+    "梳": "shu1",
+    "沸": "fei4",
+    "渔": "yu2",
+    "烬": "jin4",
+    "皙": "xi1",
+    "卿": "qing1",
+    "嘤": "ying1",
+    "拇": "mu3",
+    "肆": "si4",
+    "锡": "xi1",
+    "丘": "qiu1",
+    "惚": "hu1",
+    "戛": "jia2",
+    "撅": "jue1",
+    "撸": "lu1",
     # Second user-selected vocabulary batch, 2026-10-19.
     "笼子": "long2 zi5",
     "咽": "yan4 / yan1 / ye4",
